@@ -84,6 +84,9 @@ jobs:
     needs: [build-linux, build-windows, build-macos]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
@@ -94,10 +97,12 @@ jobs:
           mkdir -p release/linux
           mkdir -p release/windows
           mkdir -p release/macos
+          mkdir -p release/include
           cp artifacts/s2binlib-linux-x86_64/libs2binlib.a release/linux/
           cp artifacts/s2binlib-windows-x86_64/s2binlib.lib release/windows/
           cp artifacts/s2binlib-windows-x86_64/libs2binlib.a release/windows/
           cp artifacts/s2binlib-macos-universal/libs2binlib.a release/macos/
+          cp s2binlib.h release/include/
 
       - name: Upload combined release artifacts
         uses: actions/upload-artifact@v4
