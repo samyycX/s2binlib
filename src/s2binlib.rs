@@ -27,8 +27,8 @@ pub struct S2BinLib {
     manual_base_addresses: HashMap<String, u64>,
     /// Cached cross-references: binary_name -> (target_va -> Vec<xref_va>)
     xrefs_cache: HashMap<String, HashMap<u64, Vec<u64>>>,
-    /// Trampolines: binary_name -> (va -> JitTrampoline)
-    trampolines: HashMap<String, HashMap<u64, JitTrampoline>> 
+    /// Trampolines: (mem_address -> JitTrampoline)
+    trampolines: HashMap<u64, JitTrampoline> 
 }
 
 
@@ -746,13 +746,9 @@ impl S2BinLib {
       self.binaries.clear();
     }
 
-    pub fn install_trampoline(&mut self, binary_name: &str, mem_address: u64) -> Result<()> {
-      let va = self.mem_address_to_va(binary_name, mem_address)?;
-      let binary_trampolines = self.trampolines
-        .entry(binary_name.to_string())
-        .or_insert_with(HashMap::new);
+    pub fn install_trampoline(&mut self, mem_address: u64) -> Result<()> {
 
-      if let Some(_) = binary_trampolines.get(&va) {
+      if let Some(_) = self.trampolines.get(&mem_address) {
         return Ok(());
       }
 
@@ -767,10 +763,7 @@ impl S2BinLib {
         std::ptr::write(mem_address as *mut u64, trampoline.address() );
       }
 
-      self.trampolines
-        .get_mut(binary_name)
-        .expect("Binary name must exist")
-        .insert(va, trampoline);
+      self.trampolines.insert(mem_address, trampoline);
 
       Ok(())
     }

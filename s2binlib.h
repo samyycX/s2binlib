@@ -743,9 +743,6 @@ int s2binlib_unload_all_binaries(void);
  * If a trampoline is already installed at the same address, this function does nothing
  * and returns success.
  * 
- * If the binary is not yet loaded, it will be loaded automatically.
- * 
- * @param binary_name Name of the binary (e.g., "server", "client")
  * @param mem_address Runtime memory address where to install the trampoline
  * 
  * @return 0 on success
@@ -762,12 +759,12 @@ int s2binlib_unload_all_binaries(void);
  * 
  * @example
  *     uint64_t vtable_ptr = ...; // Get vtable pointer
- *     int result = s2binlib_install_trampoline("server", vtable_ptr);
+ *     int result = s2binlib_install_trampoline(vtable_ptr);
  *     if (result == 0) {
  *         printf("Trampoline installed successfully\n");
  *     }
  */
-int s2binlib_install_trampoline(const char* binary_name, uint64_t mem_address);
+int s2binlib_install_trampoline(uint64_t mem_address);
 
 #ifdef __cplusplus
 }

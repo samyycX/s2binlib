@@ -2013,10 +2013,7 @@ pub extern "C" fn s2binlib_unload_all_binaries() -> i32 {
 /// If a trampoline is already installed at the same address, this function does nothing
 /// and returns success.
 /// 
-/// If the binary is not yet loaded, it will be loaded automatically.
-/// 
 /// # Parameters
-/// * `binary_name` - Name of the binary (e.g., "server", "client") (null-terminated C string)
 /// * `mem_address` - Runtime memory address where to install the trampoline
 /// 
 /// # Returns
@@ -2040,44 +2037,28 @@ pub extern "C" fn s2binlib_unload_all_binaries() -> i32 {
 /// # Example
 /// ```c
 /// uint64_t vtable_ptr = ...; // Get vtable pointer
-/// int result = s2binlib_install_trampoline("server", vtable_ptr);
+/// int result = s2binlib_install_trampoline(vtable_ptr);
 /// if (result == 0) {
 ///     printf("Trampoline installed successfully\n");
 /// }
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_install_trampoline(
-    binary_name: *const c_char,
     mem_address: u64,
 ) -> i32 {
-    unsafe {
-        if binary_name.is_null() {
-            return -2;
-        }
+      let s2binlib_mutex = match S2BINLIB.get() {
+          Some(m) => m,
+          None => return -1,
+      };
 
-        let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
-            Ok(s) => s,
-            Err(_) => return -2,
-        };
+      let mut s2binlib = match s2binlib_mutex.lock() {
+          Ok(lib) => lib,
+          Err(_) => return -5,
+      };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
-        };
-
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
-        };
-
-        if !s2binlib.is_binary_loaded(binary_name_str) {
-            s2binlib.load_binary(binary_name_str);
-        }
-
-        match s2binlib.install_trampoline(binary_name_str, mem_address) {
-            Ok(_) => 0,
-            Err(_) => -3,
-        }
-    }
+      match s2binlib.install_trampoline(mem_address) {
+          Ok(_) => 0,
+          Err(_) => -3,
+      }
 }
 
