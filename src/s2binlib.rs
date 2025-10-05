@@ -125,107 +125,14 @@ impl S2BinLib {
       }
     }
     pub fn new(game_path: &str, game_type: &str, os: &str) -> Self {
-        let mut result = Self { 
+        Self { 
           game_path: PathBuf::from(game_path),
           game_type: game_type.to_string(),
           os: os.to_string(),
           binaries: HashMap::new(),
           manual_base_addresses: HashMap::new(),
           xrefs_cache: HashMap::new()
-        };
-
-        if game_type == "csgo" {
-          result.load_binary("amd_ags_x64");
-          result.load_binary("animationsystem");
-          result.load_binary("assetpreview");
-          result.load_binary("ati_compress_wrapper");
-          result.load_binary("bugreporter_filequeue");
-          result.load_binary("cairo");
-          result.load_binary("d3dcompiler_47");
-          result.load_binary("dbghelp");
-          result.load_binary("embree3");
-          result.load_binary("engine2");
-          result.load_binary("filesystem_stdio");
-          result.load_binary("gfsdk_aftermath_lib.x64");
-          result.load_binary("helpsystem");
-          result.load_binary("imemanager");
-          result.load_binary("inputsystem");
-          result.load_binary("libavcodec-58");
-          result.load_binary("libavformat-58");
-          result.load_binary("libavresample-4");
-          result.load_binary("libavutil-56");
-          result.load_binary("libfbxsdk_2020_3_1");
-          result.load_binary("libfontconfig-1");
-          result.load_binary("libfreetype-6");
-          result.load_binary("libglib-2.0-0");
-          result.load_binary("libgmodule-2.0-0");
-          result.load_binary("libgobject-2.0-0");
-          result.load_binary("libgthread-2.0-0");
-          result.load_binary("libmpg123-0");
-          result.load_binary("libpango-1.0-0");
-          result.load_binary("libpangoft2-1.0-0");
-          result.load_binary("libswscale-5");
-          result.load_binary("localize");
-          result.load_binary("materialsystem2");
-          result.load_binary("meshsystem");
-          result.load_binary("navsystem");
-          result.load_binary("networksystem");
-          result.load_binary("p4lib");
-          result.load_binary("panorama");
-          result.load_binary("panoramauiclient");
-          result.load_binary("panorama_text_pango");
-          result.load_binary("particles");
-          result.load_binary("phonon");
-          result.load_binary("phonon4");
-          result.load_binary("physicsbuilder");
-          result.load_binary("propertyeditor");
-          result.load_binary("pulse_system");
-          result.load_binary("Qt5Concurrent");
-          result.load_binary("Qt5Core");
-          result.load_binary("Qt5Gui");
-          result.load_binary("Qt5Widgets");
-          result.load_binary("qtadvanceddocking-qt5");
-          result.load_binary("rendersystemdx11");
-          result.load_binary("rendersystemempty");
-          result.load_binary("rendersystemvulkan");
-          result.load_binary("resourcecompiler");
-          result.load_binary("resourcesystem");
-          result.load_binary("scenefilecache");
-          result.load_binary("scenesystem");
-          result.load_binary("schemasystem");
-          result.load_binary("SDL3");
-          result.load_binary("soundsystem");
-          result.load_binary("steamaudio");
-          result.load_binary("steamnetworkingsockets");
-          result.load_binary("steam_api64");
-          result.load_binary("symsrv");
-          result.load_binary("tier0");
-          result.load_binary("toolframework2");
-          result.load_binary("v8");
-          result.load_binary("v8system");
-          result.load_binary("v8_icui18n");
-          result.load_binary("v8_icuuc");
-          result.load_binary("v8_libbase");
-          result.load_binary("v8_libplatform");
-          result.load_binary("v8_zlib");
-          result.load_binary("valve_avi");
-          result.load_binary("valve_webm");
-          result.load_binary("valve_wmf");
-          result.load_binary("vconcomm");
-          result.load_binary("vfx_dx11");
-          result.load_binary("video64");
-          result.load_binary("visbuilder");
-          result.load_binary("vphysics2");
-          result.load_binary("vscript");
-          result.load_binary("worldrenderer");
-          
-          result.load_binary("server");
-          result.load_binary("client");
-          result.load_binary("matchmaking");
-          result.load_binary("host");
-        };
-
-        result
+        }
     }
 
     /// Manually set the base address for a module from a pointer
