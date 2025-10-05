@@ -1,9 +1,8 @@
-
 use std::os::raw::{c_void, c_char};
 
 #[cfg(target_os = "windows")]
 unsafe fn get_module_base_windows(ptr: usize) -> u64 {
-    use std::{mem::MaybeUninit, os::raw::c_void};
+    use std::{mem::MaybeUninit};
 
     #[repr(C)]
     struct MemoryBasicInformation {
