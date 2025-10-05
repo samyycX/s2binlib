@@ -2,6 +2,7 @@ mod s2binlib;
 mod pattern;
 mod flags;
 mod memory;
+pub mod jit;
 pub mod c_bindings;
 
 pub use s2binlib::*;
@@ -16,7 +17,7 @@ mod tests {
 
     #[test]
     fn test_s2binlib() -> Result<()> {
-        let mut s2binlib = S2BinLib::new("F:/cs2server/game", "csgo", "linux");
+        let mut s2binlib = S2BinLib::new("/mnt/f/cs2server/game", "csgo", "linux");
 
         s2binlib.load_binary("server");
 

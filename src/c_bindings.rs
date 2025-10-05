@@ -2004,3 +2004,80 @@ pub extern "C" fn s2binlib_unload_all_binaries() -> i32 {
     0
 }
 
+/// Install a JIT trampoline at a memory address
+/// 
+/// Creates a JIT trampoline that can be used to hook or intercept function calls.
+/// This function reads the original function pointer at the specified memory address,
+/// creates a trampoline, and replaces the original pointer with the trampoline address.
+/// 
+/// If a trampoline is already installed at the same address, this function does nothing
+/// and returns success.
+/// 
+/// If the binary is not yet loaded, it will be loaded automatically.
+/// 
+/// # Parameters
+/// * `binary_name` - Name of the binary (e.g., "server", "client") (null-terminated C string)
+/// * `mem_address` - Runtime memory address where to install the trampoline
+/// 
+/// # Returns
+/// * 0 on success
+/// * -1 if S2BinLib not initialized
+/// * -2 if invalid parameters
+/// * -3 if failed to install trampoline
+/// * -5 if internal error
+/// 
+/// # Safety
+/// This function is unsafe because it:
+/// - Dereferences raw pointers
+/// - Modifies memory at the specified address
+/// - Changes memory protection flags
+/// 
+/// The caller must ensure that:
+/// - The memory address is valid and writable
+/// - The address points to an 8-byte function pointer
+/// - No other threads are accessing the memory during the operation
+/// 
+/// # Example
+/// ```c
+/// uint64_t vtable_ptr = ...; // Get vtable pointer
+/// int result = s2binlib_install_trampoline("server", vtable_ptr);
+/// if (result == 0) {
+///     printf("Trampoline installed successfully\n");
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_install_trampoline(
+    binary_name: *const c_char,
+    mem_address: u64,
+) -> i32 {
+    unsafe {
+        if binary_name.is_null() {
+            return -2;
+        }
+
+        let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let s2binlib_mutex = match S2BINLIB.get() {
+            Some(m) => m,
+            None => return -1,
+        };
+
+        let mut s2binlib = match s2binlib_mutex.lock() {
+            Ok(lib) => lib,
+            Err(_) => return -5,
+        };
+
+        if !s2binlib.is_binary_loaded(binary_name_str) {
+            s2binlib.load_binary(binary_name_str);
+        }
+
+        match s2binlib.install_trampoline(binary_name_str, mem_address) {
+            Ok(_) => 0,
+            Err(_) => -3,
+        }
+    }
+}
+

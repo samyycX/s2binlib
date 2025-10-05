@@ -733,6 +733,42 @@ int s2binlib_unload_binary(const char* binary_name);
  */
 int s2binlib_unload_all_binaries(void);
 
+/**
+ * Install a JIT trampoline at a memory address
+ * 
+ * Creates a JIT trampoline that can be used to hook or intercept function calls.
+ * This function reads the original function pointer at the specified memory address,
+ * creates a trampoline, and replaces the original pointer with the trampoline address.
+ * 
+ * If a trampoline is already installed at the same address, this function does nothing
+ * and returns success.
+ * 
+ * If the binary is not yet loaded, it will be loaded automatically.
+ * 
+ * @param binary_name Name of the binary (e.g., "server", "client")
+ * @param mem_address Runtime memory address where to install the trampoline
+ * 
+ * @return 0 on success
+ *         -1 if S2BinLib not initialized
+ *         -2 if invalid parameters
+ *         -3 if failed to install trampoline
+ *         -5 if internal error
+ * 
+ * @warning This function modifies memory at the specified address and changes
+ *          memory protection flags. The caller must ensure that:
+ *          - The memory address is valid and writable
+ *          - The address points to an 8-byte function pointer
+ *          - No other threads are accessing the memory during the operation
+ * 
+ * @example
+ *     uint64_t vtable_ptr = ...; // Get vtable pointer
+ *     int result = s2binlib_install_trampoline("server", vtable_ptr);
+ *     if (result == 0) {
+ *         printf("Trampoline installed successfully\n");
+ *     }
+ */
+int s2binlib_install_trampoline(const char* binary_name, uint64_t mem_address);
+
 #ifdef __cplusplus
 }
 #endif

@@ -4,7 +4,7 @@ use anyhow::Result;
 use object::{read::pe::ImageOptionalHeader, Object, ObjectSection, ObjectSymbol};
 use iced_x86::{Decoder, DecoderOptions, Instruction, OpKind, Register};
 
-use crate::{find_pattern_simd, is_executable, memory::get_module_base_from_pointer, };
+use crate::{find_pattern_simd, is_executable, jit::JitTrampoline, memory::{get_module_base_from_pointer, set_mem_access} };
 
 #[cfg(target_os = "windows")]
 use std::ffi::CString;
@@ -26,7 +26,9 @@ pub struct S2BinLib {
     binaries: HashMap<String, Vec<u8>>,
     manual_base_addresses: HashMap<String, u64>,
     /// Cached cross-references: binary_name -> (target_va -> Vec<xref_va>)
-    xrefs_cache: HashMap<String, HashMap<u64, Vec<u64>>>
+    xrefs_cache: HashMap<String, HashMap<u64, Vec<u64>>>,
+    /// Trampolines: binary_name -> (va -> JitTrampoline)
+    trampolines: HashMap<String, HashMap<u64, JitTrampoline>> 
 }
 
 
@@ -131,7 +133,8 @@ impl S2BinLib {
           os: os.to_string(),
           binaries: HashMap::new(),
           manual_base_addresses: HashMap::new(),
-          xrefs_cache: HashMap::new()
+          xrefs_cache: HashMap::new(),
+          trampolines: HashMap::new()
         }
     }
 
@@ -741,6 +744,35 @@ impl S2BinLib {
 
     pub fn unload_all_binaries(&mut self) {
       self.binaries.clear();
+    }
+
+    pub fn install_trampoline(&mut self, binary_name: &str, mem_address: u64) -> Result<()> {
+      let va = self.mem_address_to_va(binary_name, mem_address)?;
+      let binary_trampolines = self.trampolines
+        .entry(binary_name.to_string())
+        .or_insert_with(HashMap::new);
+
+      if let Some(_) = binary_trampolines.get(&va) {
+        return Ok(());
+      }
+
+
+      let original_func_ptr = unsafe { std::ptr::read(mem_address as *const u64) };
+
+      let trampoline = JitTrampoline::new(original_func_ptr)?;
+
+      set_mem_access(mem_address, 8)?;
+
+      unsafe {
+        std::ptr::write(mem_address as *mut u64, trampoline.address() );
+      }
+
+      self.trampolines
+        .get_mut(binary_name)
+        .expect("Binary name must exist")
+        .insert(va, trampoline);
+
+      Ok(())
     }
 
 }

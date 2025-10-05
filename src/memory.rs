@@ -1,4 +1,9 @@
-use std::os::raw::{c_void, c_char};
+use std::os::raw::c_void;
+
+#[cfg(target_os = "linux")]
+use std::os::raw::c_char;
+
+use anyhow::Result;
 
 #[cfg(target_os = "windows")]
 unsafe fn get_module_base_windows(ptr: usize) -> u64 {
@@ -38,7 +43,7 @@ unsafe fn get_module_base_windows(ptr: usize) -> u64 {
     }
 
     let mbi = unsafe { mbi.assume_init() };
-    unsafe { mbi.allocation_base as u64 }
+    mbi.allocation_base as u64
 }
 
 
@@ -111,4 +116,11 @@ pub fn get_module_base_from_pointer(ptr: u64) -> u64 {
           -1 // Unsupported platform
       }
   }
+}
+#[allow(dead_code)]
+pub fn set_mem_access(ptr: u64, size: usize) -> Result<()> {
+    unsafe {
+        let addr = ptr as *const u8;
+        region::protect(addr, size, region::Protection::READ_WRITE_EXECUTE).map_err(|e| anyhow::anyhow!("Failed to change memory protection: {}", e))
+    }
 }
