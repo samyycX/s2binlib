@@ -24,13 +24,13 @@ jobs:
           
       - name: Rust version
         run: |
-          source $HOME/.cargo/env
+          . $HOME/.cargo/env
           rustc --version
           cargo --version
 
       - name: Build release
         run: |
-          source $HOME/.cargo/env
+          . $HOME/.cargo/env
           cargo build --release
 
       - name: Upload Linux artifact
