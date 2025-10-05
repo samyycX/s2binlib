@@ -115,7 +115,6 @@ pub unsafe fn matches_sse2(data: &[u8], pattern: &[u8], mask: &[u8]) -> bool {
             let pattern_chunk = _mm_loadu_si128(pattern.as_ptr().add(offset) as *const __m128i);
             let mask_chunk = _mm_loadu_si128(mask.as_ptr().add(offset) as *const __m128i);
 
-            // XOR data和pattern，然后AND mask
             let xor = _mm_xor_si128(data_chunk, pattern_chunk);
             let masked = _mm_and_si128(xor, mask_chunk);
             

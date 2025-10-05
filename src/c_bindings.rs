@@ -1913,3 +1913,94 @@ pub extern "C" fn s2binlib_get_xrefs_cached(
         }
     }
 }
+
+/// Unload a specific binary from memory
+/// 
+/// Removes the specified binary from the internal cache, freeing up memory.
+/// This is useful when you no longer need a particular binary.
+/// 
+/// # Parameters
+/// * `binary_name` - Name of the binary to unload (e.g., "server", "client") (null-terminated C string)
+/// 
+/// # Returns
+/// * 0 on success
+/// * -1 if S2BinLib not initialized
+/// * -2 if invalid parameters
+/// * -5 if internal error (mutex lock failed)
+/// 
+/// # Safety
+/// This function is unsafe because it dereferences raw pointers.
+/// The caller must ensure that the pointer is valid and points to a null-terminated C string.
+/// 
+/// # Example
+/// ```c
+/// int result = s2binlib_unload_binary("server");
+/// if (result == 0) {
+///     printf("Binary unloaded successfully\n");
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_unload_binary(
+    binary_name: *const c_char
+) -> i32 {
+    unsafe {
+        if binary_name.is_null() {
+            return -2;
+        }
+
+        let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let s2binlib_mutex = match S2BINLIB.get() {
+            Some(m) => m,
+            None => return -1,
+        };
+
+        let mut s2binlib = match s2binlib_mutex.lock() {
+            Ok(lib) => lib,
+            Err(_) => return -5,
+        };
+
+        s2binlib.unload_binary(binary_name_str);
+        0
+    }
+}
+
+/// Unload all binaries from memory
+/// 
+/// Removes all loaded binaries from the internal cache, freeing up memory.
+/// This is useful for cleanup operations or when you need to start fresh.
+/// 
+/// # Returns
+/// * 0 on success
+/// * -1 if S2BinLib not initialized
+/// * -5 if internal error (mutex lock failed)
+/// 
+/// # Safety
+/// This function is safe to call at any time after initialization.
+/// 
+/// # Example
+/// ```c
+/// int result = s2binlib_unload_all_binaries();
+/// if (result == 0) {
+///     printf("All binaries unloaded successfully\n");
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_unload_all_binaries() -> i32 {
+    let s2binlib_mutex = match S2BINLIB.get() {
+        Some(m) => m,
+        None => return -1,
+    };
+
+    let mut s2binlib = match s2binlib_mutex.lock() {
+        Ok(lib) => lib,
+        Err(_) => return -5,
+    };
+
+    s2binlib.unload_all_binaries();
+    0
+}
+

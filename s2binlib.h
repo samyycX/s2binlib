@@ -694,6 +694,45 @@ int s2binlib_get_xrefs_count(const char* binary_name, uint64_t target_va);
  */
 int s2binlib_get_xrefs_cached(const char* binary_name, uint64_t target_va, uint64_t* buffer, size_t buffer_size);
 
+/**
+ * Unload a specific binary from memory
+ * 
+ * Removes the specified binary from the internal cache, freeing up memory.
+ * This is useful when you no longer need a particular binary.
+ * 
+ * @param binary_name Name of the binary to unload (e.g., "server", "client")
+ * 
+ * @return 0 on success
+ *         -1 if S2BinLib not initialized
+ *         -2 if invalid parameters
+ *         -5 if internal error (mutex lock failed)
+ * 
+ * @example
+ *     int result = s2binlib_unload_binary("server");
+ *     if (result == 0) {
+ *         printf("Binary unloaded successfully\n");
+ *     }
+ */
+int s2binlib_unload_binary(const char* binary_name);
+
+/**
+ * Unload all binaries from memory
+ * 
+ * Removes all loaded binaries from the internal cache, freeing up memory.
+ * This is useful for cleanup operations or when you need to start fresh.
+ * 
+ * @return 0 on success
+ *         -1 if S2BinLib not initialized
+ *         -5 if internal error (mutex lock failed)
+ * 
+ * @example
+ *     int result = s2binlib_unload_all_binaries();
+ *     if (result == 0) {
+ *         printf("All binaries unloaded successfully\n");
+ *     }
+ */
+int s2binlib_unload_all_binaries(void);
+
 #ifdef __cplusplus
 }
 #endif

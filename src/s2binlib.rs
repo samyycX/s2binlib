@@ -708,4 +708,12 @@ impl S2BinLib {
             .and_then(|map| map.get(&target_va))
     }
 
+    pub fn unload_binary(&mut self, binary_name: &str) {
+      self.binaries.remove(binary_name);
+    }
+
+    pub fn unload_all_binaries(&mut self) {
+      self.binaries.clear();
+    }
+
 }
