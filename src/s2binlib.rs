@@ -337,6 +337,17 @@ impl S2BinLib {
       }
     }
 
+    fn read_string(&self, binary_name: &str, file_offset: u64) -> Result<String> {
+      let binary_data = self.get_binary(binary_name)?;
+      let mut bytes = vec![];
+      let mut file_offset = file_offset;
+      while binary_data[file_offset as usize] != 0 {
+        bytes.push(binary_data[file_offset as usize]);
+        file_offset += 1;
+      }
+      Ok(String::from_utf8_lossy(&bytes).to_string())
+    }
+
     fn get_binary_name_by_ptr(&self, ptr: u64) -> Result<String> {
       for (binary_name, binary_data) in self.binaries.iter() {
         let base_address = self.get_module_base_address(binary_name)?;
@@ -352,6 +363,7 @@ impl S2BinLib {
         let decorated_name = self.decorate_rtti_type_descriptor_name(vtable_name);
 
         let type_descriptor_name = self.find_pattern_string_in_section(binary_name, ".data", &decorated_name)?;
+
         let rtti_type_descriptor = self.file_offset_to_va(binary_name, type_descriptor_name)? - 0x10 - self.get_image_base(binary_name)?;
 
         let rtti_type_descriptor_ptr_pattern = rtti_type_descriptor.to_le_bytes().to_vec();
@@ -380,14 +392,29 @@ impl S2BinLib {
         let binary_data = self.get_binary(binary_name)?;
         let decorated_name = self.decorate_rtti_type_descriptor_name(vtable_name);
 
-        // Find type info name in .rodata section
-        let type_info_name = self.find_pattern_string_in_section(binary_name, ".rodata", &decorated_name)?;
+        let data_range = self.get_section_range(binary_name, ".rodata")?;
+
+        let offset = data_range.0;
+
+        let mut type_info_name = find_pattern_simd(&binary_data[offset as usize..], &decorated_name.as_bytes(), &vec![])?;
+        type_info_name += offset;
+        while type_info_name != 0 {
+
+          let type_info_name_str = self.read_string(binary_name, type_info_name)?;
+
+          if type_info_name_str == decorated_name {
+            break;
+          }
+          let last_type_descriptor_name = type_info_name + 1;
+          type_info_name = find_pattern_simd(&binary_data[last_type_descriptor_name as usize..], &decorated_name.as_bytes(), &vec![])?;
+          type_info_name += last_type_descriptor_name;
+        }
         
         // Find reference to type name in .data.rel.ro section (8-byte pointer)
         let type_info_name_va = self.file_offset_to_va(binary_name, type_info_name)?;
         let type_info_name_ptr_pattern = type_info_name_va.to_le_bytes();
         
-        let reference_type_name = self.find_pattern_bytes_in_section(binary_name, ".data.rel.ro", &type_info_name_ptr_pattern)?;
+        let reference_type_name = self.find_pattern_bytes_in_section(binary_name, ".data.rel.ro", &type_info_name_ptr_pattern[0..4])?;
         
         // Offset back by 0x8 to get typeinfo
         let type_info = reference_type_name - 0x8;
