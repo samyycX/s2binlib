@@ -43,8 +43,8 @@ int main() {
   s2binlib_initialize("/home/csgo/cs2server/game", "csgo");
 
   // If you are using metamod, relocate these modules because its modified
-	GET_V_IFACE_ANY(GetServerFactory, g_pSource2Server, ISource2Server, SOURCE2SERVER_INTERFACE_VERSION);
-	GET_V_IFACE_CURRENT(GetEngineFactory, g_pEngineServer2, IVEngineServer2, SOURCE2ENGINETOSERVER_INTERFACE_VERSION);
+  GET_V_IFACE_ANY(GetServerFactory, g_pSource2Server, ISource2Server, SOURCE2SERVER_INTERFACE_VERSION);
+  GET_V_IFACE_CURRENT(GetEngineFactory, g_pEngineServer2, IVEngineServer2, SOURCE2ENGINETOSERVER_INTERFACE_VERSION);
   s2binlib_set_module_base_from_pointer("server", g_pSource2Server);
   s2binlib_set_module_base_from_pointer("engine2", g_pEngineServer2);
 
