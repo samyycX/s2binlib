@@ -82,6 +82,7 @@ jobs:
         uses: gittools/actions/gitversion/execute@v1.1.1
         with:
           useConfigFile: true
+          configFilePath: gitversion.yml
 
       - name: Display GitVersion outputs
         run: |
