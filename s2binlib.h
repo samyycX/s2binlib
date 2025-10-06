@@ -83,6 +83,95 @@ int s2binlib_pattern_scan(const char* binary_name, const char* pattern, void** r
 int s2binlib_pattern_scan_va(const char* binary_name, const char* pattern, void** result);
 
 /**
+ * Callback function type for pattern_scan_all functions
+ * 
+ * @param index The index of the current match (0-based)
+ * @param address The found address (VA or memory address depending on the function)
+ * @param user_data User-provided data pointer
+ * @return true to stop searching (found what you need), false to continue searching
+ */
+typedef bool (*s2binlib_pattern_scan_callback)(size_t index, void* address, void* user_data);
+
+/**
+ * Find all occurrences of a pattern in a binary and return their virtual addresses
+ * 
+ * Scans the binary for all occurrences of the specified byte pattern and calls
+ * the callback function for each match found. The callback receives virtual addresses (VA).
+ * 
+ * If the binary is not yet loaded, it will be loaded automatically.
+ * 
+ * @param binary_name Name of the binary to scan
+ * @param pattern Byte pattern with wildcards (e.g., "48 89 5C 24 ? 48 89 74")
+ * @param callback Function pointer that will be called for each match
+ * @param user_data User-provided pointer passed to each callback invocation
+ * 
+ * @return 0 on success (at least one match found)
+ *         -1 if S2BinLib not initialized
+ *         -2 if invalid parameters
+ *         -3 if failed to load binary
+ *         -4 if pattern not found
+ *         -5 if internal error
+ * 
+ * @note The callback should return true to stop searching, false to continue
+ * 
+ * @example
+ *     bool my_callback(size_t index, void* address, void* user_data) {
+ *         printf("Match #%zu found at VA: %p\n", index, address);
+ *         int* count = (int*)user_data;
+ *         (*count)++;
+ *         return false; // Continue searching
+ *     }
+ * 
+ *     int count = 0;
+ *     int result = s2binlib_pattern_scan_all_va("server", "48 89 5C 24 ?", my_callback, &count);
+ *     if (result == 0) {
+ *         printf("Found %d matches\n", count);
+ *     }
+ */
+int s2binlib_pattern_scan_all_va(const char* binary_name, const char* pattern, 
+                                  s2binlib_pattern_scan_callback callback, void* user_data);
+
+/**
+ * Find all occurrences of a pattern in a binary and return their memory addresses
+ * 
+ * Scans the binary for all occurrences of the specified byte pattern and calls
+ * the callback function for each match found. The callback receives memory addresses
+ * (adjusted with module base address).
+ * 
+ * If the binary is not yet loaded, it will be loaded automatically.
+ * 
+ * @param binary_name Name of the binary to scan
+ * @param pattern Byte pattern with wildcards (e.g., "48 89 5C 24 ? 48 89 74")
+ * @param callback Function pointer that will be called for each match
+ * @param user_data User-provided pointer passed to each callback invocation
+ * 
+ * @return 0 on success (at least one match found)
+ *         -1 if S2BinLib not initialized
+ *         -2 if invalid parameters
+ *         -3 if failed to load binary
+ *         -4 if pattern not found
+ *         -5 if internal error
+ * 
+ * @note The callback should return true to stop searching, false to continue
+ * 
+ * @example
+ *     bool my_callback(size_t index, void* address, void* user_data) {
+ *         printf("Match #%zu found at memory address: %p\n", index, address);
+ *         int* count = (int*)user_data;
+ *         (*count)++;
+ *         return false; // Continue searching
+ *     }
+ * 
+ *     int count = 0;
+ *     int result = s2binlib_pattern_scan_all("server", "48 89 5C 24 ?", my_callback, &count);
+ *     if (result == 0) {
+ *         printf("Found %d matches\n", count);
+ *     }
+ */
+int s2binlib_pattern_scan_all(const char* binary_name, const char* pattern, 
+                               s2binlib_pattern_scan_callback callback, void* user_data);
+
+/**
  * Find a vtable by class name in the specified binary
  * 
  * If the binary is not yet loaded, it will be loaded automatically.

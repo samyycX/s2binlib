@@ -1,6 +1,6 @@
 use std::{collections::HashMap, fs, path::PathBuf};
 
-use anyhow::Result;
+use anyhow::{anyhow, Result};
 use object::{read::pe::ImageOptionalHeader, Object, ObjectSection, ObjectSymbol};
 use iced_x86::{Decoder, DecoderOptions, Instruction, OpKind, Register};
 
@@ -498,6 +498,41 @@ impl S2BinLib {
     pub fn pattern_scan(&self, binary_name: &str, pattern_string: &str) -> Result<u64> {
       let result = self.find_pattern_va(binary_name, pattern_string)?;
       Ok(self.va_to_mem_address(binary_name, result)?)
+    }
+
+    pub fn pattern_scan_all_va(&self, binary_name: &str, pattern_string: &str, callback: impl Fn(usize, u64) -> bool) -> Result<()> {
+      let binary_data = self.get_binary(binary_name)?;
+      let pattern = pattern_string.split(" ").map(|x| if x == "?" { 0u8 } else { u8::from_str_radix(x, 16).unwrap() }).collect::<Vec<u8>>();
+      let pattern_wildcard = pattern_string.split(" ").enumerate().filter(|(_, x)| *x == "?").map(|(index, _)| index).collect::<Vec<usize>>();
+      
+      let mut offset = 0;
+      let mut match_index = 0;
+      while offset + pattern.len() < binary_data.len() {
+        let result = find_pattern_simd(&binary_data[offset..], &pattern, &pattern_wildcard)?;
+
+        if result == 0 {
+          return Ok(());
+        }
+
+        offset += result as usize;
+
+        if callback(match_index, self.file_offset_to_va(binary_name, offset as u64)?) {
+          return Ok(());
+        }
+        
+        match_index += 1;
+        offset += 1;
+      }
+
+      Err(anyhow::anyhow!("Pattern not found."))
+    }
+
+    pub fn pattern_scan_all(&self, binary_name: &str, pattern_string: &str, callback: impl Fn(usize, u64) -> bool) -> Result<()> {
+      // pre check error
+      let _ = self.get_module_base_address(binary_name)?;
+      let _ = self.get_image_base(binary_name)?;
+
+      self.pattern_scan_all_va(binary_name, pattern_string, |index, x | callback(index, self.va_to_mem_address(binary_name, x).unwrap()) )
     }
 
     
