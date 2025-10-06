@@ -2071,3 +2071,223 @@ pub extern "C" fn s2binlib_install_trampoline(
       }
 }
 
+/// Follow cross-reference from memory address to memory address
+/// 
+/// This function reads the instruction at the given memory address,
+/// decodes it using iced-x86, and returns the target address if the
+/// instruction contains a valid cross-reference.
+/// 
+/// Valid xrefs include:
+/// - RIP-relative memory operands (e.g., lea rax, [rip+0x1000])
+/// - Near branches (call, jmp, jcc)
+/// - Absolute memory operands
+/// 
+/// # Parameters
+/// * `mem_address` - Runtime memory address to analyze
+/// * `target_address_out` - Pointer to store the target address
+/// 
+/// # Returns
+/// * 0 on success (target address written to target_address_out)
+/// * -1 if S2BinLib not initialized
+/// * -2 if invalid parameters
+/// * -3 if no valid xref found or invalid instruction
+/// * -5 if internal error
+/// 
+/// # Safety
+/// This function is unsafe because it:
+/// - Dereferences raw pointers
+/// - Reads memory at the specified address
+/// 
+/// The caller must ensure that:
+/// - The memory address is valid and readable
+/// - The address points to executable code
+/// 
+/// # Example
+/// ```c
+/// void* instruction_addr = ...; // Address of an instruction
+/// void* target_addr;
+/// int result = s2binlib_follow_xref_mem_to_mem(instruction_addr, &target_addr);
+/// if (result == 0) {
+///     printf("Xref target: %p\n", target_addr);
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_follow_xref_mem_to_mem(
+    mem_address: *const c_void,
+    target_address_out: *mut *mut c_void,
+) -> i32 {
+    if mem_address.is_null() || target_address_out.is_null() {
+        return -2;
+    }
+
+    let s2binlib_mutex = match S2BINLIB.get() {
+        Some(m) => m,
+        None => return -1,
+    };
+
+    let s2binlib = match s2binlib_mutex.lock() {
+        Ok(lib) => lib,
+        Err(_) => return -5,
+    };
+
+    match s2binlib.follow_xref_mem_to_mem(mem_address as u64) {
+        Ok(target) => {
+            unsafe {
+                *target_address_out = target as *mut c_void;
+            }
+            0
+        },
+        Err(_) => -3,
+    }
+}
+
+/// Follow cross-reference from virtual address to memory address
+/// 
+/// This function reads the instruction at the given virtual address from the file,
+/// decodes it using iced-x86, and returns the target memory address if the
+/// instruction contains a valid cross-reference.
+/// 
+/// Valid xrefs include:
+/// - RIP-relative memory operands (e.g., lea rax, [rip+0x1000])
+/// - Near branches (call, jmp, jcc)
+/// - Absolute memory operands
+/// 
+/// # Parameters
+/// * `binary_name` - Name of the binary (null-terminated C string)
+/// * `va` - Virtual address to analyze
+/// * `target_address_out` - Pointer to store the target memory address
+/// 
+/// # Returns
+/// * 0 on success (target address written to target_address_out)
+/// * -1 if S2BinLib not initialized
+/// * -2 if invalid parameters
+/// * -3 if failed to load binary or no valid xref found
+/// * -5 if internal error
+/// 
+/// # Safety
+/// This function is unsafe because it dereferences raw pointers.
+/// The caller must ensure that the pointers are valid.
+/// 
+/// # Example
+/// ```c
+/// void* target_addr;
+/// int result = s2binlib_follow_xref_va_to_mem("server", 0x140001000, &target_addr);
+/// if (result == 0) {
+///     printf("Xref target: %p\n", target_addr);
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_follow_xref_va_to_mem(
+    binary_name: *const c_char,
+    va: u64,
+    target_address_out: *mut *mut c_void,
+) -> i32 {
+    unsafe {
+        if binary_name.is_null() || target_address_out.is_null() {
+            return -2;
+        }
+
+        let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let s2binlib_mutex = match S2BINLIB.get() {
+            Some(m) => m,
+            None => return -1,
+        };
+
+        let mut s2binlib = match s2binlib_mutex.lock() {
+            Ok(lib) => lib,
+            Err(_) => return -5,
+        };
+
+        if !s2binlib.is_binary_loaded(binary_name_str) {
+            s2binlib.load_binary(binary_name_str);
+        }
+
+        match s2binlib.follow_xref_va_to_mem(binary_name_str, va) {
+            Ok(target) => {
+                *target_address_out = target as *mut c_void;
+                0
+            },
+            Err(_) => -3,
+        }
+    }
+}
+
+/// Follow cross-reference from virtual address to virtual address
+/// 
+/// This function reads the instruction at the given virtual address from the file,
+/// decodes it using iced-x86, and returns the target virtual address if the
+/// instruction contains a valid cross-reference.
+/// 
+/// Valid xrefs include:
+/// - RIP-relative memory operands (e.g., lea rax, [rip+0x1000])
+/// - Near branches (call, jmp, jcc)
+/// - Absolute memory operands
+/// 
+/// # Parameters
+/// * `binary_name` - Name of the binary (null-terminated C string)
+/// * `va` - Virtual address to analyze
+/// * `target_va_out` - Pointer to store the target virtual address
+/// 
+/// # Returns
+/// * 0 on success (target VA written to target_va_out)
+/// * -1 if S2BinLib not initialized
+/// * -2 if invalid parameters
+/// * -3 if failed to load binary or no valid xref found
+/// * -5 if internal error
+/// 
+/// # Safety
+/// This function is unsafe because it dereferences raw pointers.
+/// The caller must ensure that the pointers are valid.
+/// 
+/// # Example
+/// ```c
+/// uint64_t target_va;
+/// int result = s2binlib_follow_xref_va_to_va("server", 0x140001000, &target_va);
+/// if (result == 0) {
+///     printf("Xref target VA: 0x%llX\n", target_va);
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_follow_xref_va_to_va(
+    binary_name: *const c_char,
+    va: u64,
+    target_va_out: *mut u64,
+) -> i32 {
+    unsafe {
+        if binary_name.is_null() || target_va_out.is_null() {
+            return -2;
+        }
+
+        let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let s2binlib_mutex = match S2BINLIB.get() {
+            Some(m) => m,
+            None => return -1,
+        };
+
+        let mut s2binlib = match s2binlib_mutex.lock() {
+            Ok(lib) => lib,
+            Err(_) => return -5,
+        };
+
+        if !s2binlib.is_binary_loaded(binary_name_str) {
+            s2binlib.load_binary(binary_name_str);
+        }
+
+        match s2binlib.follow_xref_va_to_va(binary_name_str, va) {
+            Ok(target) => {
+                *target_va_out = target;
+                0
+            },
+            Err(_) => -3,
+        }
+    }
+}
+

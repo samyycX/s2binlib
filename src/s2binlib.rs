@@ -769,4 +769,130 @@ impl S2BinLib {
       Ok(address)
     }
 
+    pub fn follow_xref_mem_to_mem(&self, mem_address: u64) -> Result<u64> {
+        const MAX_INSTR_LEN: usize = 15;
+        let mut instruction_bytes = [0u8; MAX_INSTR_LEN];
+        
+        unsafe {
+            std::ptr::copy_nonoverlapping(
+                mem_address as *const u8,
+                instruction_bytes.as_mut_ptr(),
+                MAX_INSTR_LEN,
+            );
+        }
+        
+        let mut decoder = Decoder::with_ip(
+            64,
+            &instruction_bytes,
+            mem_address,
+            DecoderOptions::NONE,
+        );
+        
+        let mut instruction = Instruction::default();
+        decoder.decode_out(&mut instruction);
+        
+        if instruction.is_invalid() {
+            return Err(anyhow::anyhow!("Invalid instruction at address 0x{:X}", mem_address));
+        }
+        
+        for i in 0..instruction.op_count() {
+            let op_kind = instruction.op_kind(i);
+            
+            match op_kind {
+                OpKind::Memory => {
+                    if instruction.is_ip_rel_memory_operand() {
+                        let target_address = instruction.ip_rel_memory_address();
+                        return Ok(target_address);
+                    } else if instruction.memory_base() == Register::None 
+                           && instruction.memory_index() == Register::None {
+                        let displacement = instruction.memory_displacement64();
+                        if displacement != 0 {
+                            return Ok(displacement);
+                        }
+                    }
+                }
+                
+                OpKind::NearBranch16 | OpKind::NearBranch32 | OpKind::NearBranch64 => {
+                    let target_address = instruction.near_branch_target();
+                    return Ok(target_address);
+                }
+                
+                
+                _ => {}
+            }
+        }
+        
+        Err(anyhow::anyhow!(
+            "No valid xref found in instruction at address 0x{:X}", 
+            mem_address
+        ))
+    }
+
+    pub fn follow_xref_va_to_mem(&self, binary_name: &str, va: u64) -> Result<u64> {
+      let mem_address = self.va_to_mem_address(binary_name, va)?;
+      self.follow_xref_mem_to_mem(mem_address)
+    }
+
+    pub fn follow_xref_va_to_va(&self, binary_name: &str, va: u64) -> Result<u64> {
+        let file_offset = self.va_to_file_offset(binary_name, va)?;
+        let binary_data = self.get_binary(binary_name)?;
+        
+        const MAX_INSTR_LEN: usize = 15;
+        
+        if file_offset as usize + MAX_INSTR_LEN > binary_data.len() {
+            return Err(anyhow::anyhow!(
+                "Instruction at VA 0x{:X} extends beyond binary data",
+                va
+            ));
+        }
+        
+        let instruction_bytes = &binary_data[file_offset as usize..file_offset as usize + MAX_INSTR_LEN];
+        
+        
+        let mut decoder = Decoder::with_ip(
+            64,
+            instruction_bytes,
+            va,
+            DecoderOptions::NONE,
+        );
+        
+        let mut instruction = Instruction::default();
+        decoder.decode_out(&mut instruction);
+        
+        if instruction.is_invalid() {
+            return Err(anyhow::anyhow!("Invalid instruction at VA 0x{:X}", va));
+        }
+        
+        for i in 0..instruction.op_count() {
+            let op_kind = instruction.op_kind(i);
+            
+            match op_kind {
+                OpKind::Memory => {
+                    if instruction.is_ip_rel_memory_operand() {
+                        let target_address = instruction.ip_rel_memory_address();
+                        return Ok(target_address);
+                    } else if instruction.memory_base() == Register::None 
+                           && instruction.memory_index() == Register::None {
+                        let displacement = instruction.memory_displacement64();
+                        if displacement != 0 {
+                            return Ok(displacement);
+                        }
+                    }
+                }
+                
+                OpKind::NearBranch16 | OpKind::NearBranch32 | OpKind::NearBranch64 => {
+                    let target_address = instruction.near_branch_target();
+                    return Ok(target_address);
+                }
+
+                _ => {}
+            }
+        }
+        
+        Err(anyhow::anyhow!(
+            "No valid xref found in instruction at VA 0x{:X}", 
+            va
+        ))
+    }
+
 }

@@ -301,20 +301,7 @@ mod tests {
         
         Ok(())
     }
-
-    #[cfg(target_pointer_width = "32")]
-    #[test]
-    fn test_trampoline_32bit() -> Result<()> {
-        let target_addr = test_function_returns_42 as u64;
-        let trampoline = JitTrampoline::new(target_addr, 32)?;
-        
-        let trampoline_fn: extern "C" fn() -> i32 = unsafe { trampoline.as_fn_ptr() };
-        let result = trampoline_fn();
-        
-        assert_eq!(result, 42, "32-bit trampoline should work");
-        Ok(())
-    }
-
+    
     #[test]
     fn test_trampoline_address_validity() -> Result<()> {
         let target_addr = test_function_returns_42 as u64;

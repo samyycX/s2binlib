@@ -4,11 +4,12 @@ version = "0.1.0"
 edition = "2024"
 
 [lib]
-crate-type = ["staticlib"]
+crate-type = ["staticlib", "cdylib"]
 
 [profile.release]
 opt-level = 3
 lto = true
+debug = true
 
 [dependencies]
 anyhow = "1.0.100"

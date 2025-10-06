@@ -768,6 +768,104 @@ int s2binlib_unload_all_binaries(void);
  */
 int s2binlib_install_trampoline(void* mem_address, void** trampoline_address_out);
 
+/**
+ * @brief Follow cross-reference from memory address to memory address
+ * 
+ * This function reads the instruction at the given memory address,
+ * decodes it using iced-x86, and returns the target address if the
+ * instruction contains a valid cross-reference.
+ * 
+ * Valid xrefs include:
+ * - RIP-relative memory operands (e.g., lea rax, [rip+0x1000])
+ * - Near branches (call, jmp, jcc)
+ * - Absolute memory operands
+ * 
+ * @param mem_address Runtime memory address to analyze
+ * @param target_address_out Pointer to store the target address
+ * 
+ * @return 0 on success (target address written to target_address_out)
+ *         -1 if S2BinLib not initialized
+ *         -2 if invalid parameters
+ *         -3 if no valid xref found or invalid instruction
+ *         -5 if internal error
+ * 
+ * @warning This function reads memory at the specified address.
+ *          The caller must ensure that:
+ *          - The memory address is valid and readable
+ *          - The address points to executable code
+ * 
+ * @example
+ *     void* instruction_addr = ...; // Address of an instruction
+ *     void* target_addr;
+ *     int result = s2binlib_follow_xref_mem_to_mem(instruction_addr, &target_addr);
+ *     if (result == 0) {
+ *         printf("Xref target: %p\n", target_addr);
+ *     }
+ */
+int s2binlib_follow_xref_mem_to_mem(const void* mem_address, void** target_address_out);
+
+/**
+ * @brief Follow cross-reference from virtual address to memory address
+ * 
+ * This function reads the instruction at the given virtual address from the file,
+ * decodes it using iced-x86, and returns the target memory address if the
+ * instruction contains a valid cross-reference.
+ * 
+ * Valid xrefs include:
+ * - RIP-relative memory operands (e.g., lea rax, [rip+0x1000])
+ * - Near branches (call, jmp, jcc)
+ * - Absolute memory operands
+ * 
+ * @param binary_name Name of the binary (e.g., "server", "client")
+ * @param va Virtual address to analyze
+ * @param target_address_out Pointer to store the target memory address
+ * 
+ * @return 0 on success (target address written to target_address_out)
+ *         -1 if S2BinLib not initialized
+ *         -2 if invalid parameters
+ *         -3 if failed to load binary or no valid xref found
+ *         -5 if internal error
+ * 
+ * @example
+ *     void* target_addr;
+ *     int result = s2binlib_follow_xref_va_to_mem("server", 0x140001000, &target_addr);
+ *     if (result == 0) {
+ *         printf("Xref target: %p\n", target_addr);
+ *     }
+ */
+int s2binlib_follow_xref_va_to_mem(const char* binary_name, uint64_t va, void** target_address_out);
+
+/**
+ * @brief Follow cross-reference from virtual address to virtual address
+ * 
+ * This function reads the instruction at the given virtual address from the file,
+ * decodes it using iced-x86, and returns the target virtual address if the
+ * instruction contains a valid cross-reference.
+ * 
+ * Valid xrefs include:
+ * - RIP-relative memory operands (e.g., lea rax, [rip+0x1000])
+ * - Near branches (call, jmp, jcc)
+ * - Absolute memory operands
+ * 
+ * @param binary_name Name of the binary (e.g., "server", "client")
+ * @param va Virtual address to analyze
+ * @param target_va_out Pointer to store the target virtual address
+ * 
+ * @return 0 on success (target VA written to target_va_out)
+ *         -1 if S2BinLib not initialized
+ *         -2 if invalid parameters
+ *         -3 if failed to load binary or no valid xref found
+ *         -5 if internal error
+ * 
+ * @example
+ *     uint64_t target_va;
+ *     int result = s2binlib_follow_xref_va_to_va("server", 0x140001000, &target_va);
+ *     if (result == 0) {
+ *         printf("Xref target VA: 0x%llX\n", target_va);
+ *     }
+ */
+int s2binlib_follow_xref_va_to_va(const char* binary_name, uint64_t va, uint64_t* target_va_out);
+
 #ifdef __cplusplus
 }
 #endif
