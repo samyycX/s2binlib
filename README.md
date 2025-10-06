@@ -2,6 +2,8 @@
 
 A static library that helps resolving memory from binary file and map to absolute memory address, targeting source 2 game engine.
 
+This library mainly read data from original binary file instead of from memory, which solves the issue that utilities like patter scan may fail if the memory is modified or hooked.
+
 ## Features
 
 - SIMD Optimized pattern scan
