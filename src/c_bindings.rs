@@ -1,4 +1,4 @@
-use std::ffi::{CStr, c_char};
+use std::ffi::{CStr, c_char, c_void};
 use std::sync::Mutex;
 use once_cell::sync::OnceCell;
 
@@ -93,17 +93,17 @@ pub extern "C" fn s2binlib_initialize(
 /// 
 /// # Example
 /// ```c
-/// uint64_t address;
+/// void* address;
 /// int result = s2binlib_pattern_scan("server", "48 89 5C 24 ? 48 89 74", &address);
 /// if (result == 0) {
-///     printf("Found at: 0x%llx\n", address);
+///     printf("Found at: %p\n", address);
 /// }
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_pattern_scan(
     binary_name: *const c_char,
     pattern: *const c_char,
-    result: *mut u64,
+    result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         // Validate input pointers
@@ -142,7 +142,7 @@ pub extern "C" fn s2binlib_pattern_scan(
         // Perform pattern scan
         match s2binlib.pattern_scan(binary_name_str, pattern_str) {
             Ok(addr) => {
-                *result = addr;
+                *result = addr as *mut c_void;
                 0
             }
             Err(_) => -4,
@@ -173,17 +173,17 @@ pub extern "C" fn s2binlib_pattern_scan(
 /// 
 /// # Example
 /// ```c
-/// uint64_t vtable_addr;
+/// void* vtable_addr;
 /// int result = s2binlib_find_vtable("server", "CBaseEntity", &vtable_addr);
 /// if (result == 0) {
-///     printf("VTable at: 0x%llx\n", vtable_addr);
+///     printf("VTable at: %p\n", vtable_addr);
 /// }
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_find_vtable(
     binary_name: *const c_char,
     vtable_name: *const c_char,
-    result: *mut u64,
+    result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         // Validate input pointers
@@ -222,7 +222,7 @@ pub extern "C" fn s2binlib_find_vtable(
         // Find vtable
         match s2binlib.find_vtable(binary_name_str, vtable_name_str) {
             Ok(addr) => {
-                *result = addr;
+                *result = addr as *mut c_void;
                 0
             }
             Err(_) => -4,
@@ -252,17 +252,17 @@ pub extern "C" fn s2binlib_find_vtable(
 /// 
 /// # Example
 /// ```c
-/// uint64_t symbol_addr;
+/// void* symbol_addr;
 /// int result = s2binlib_find_symbol("server", "CreateInterface", &symbol_addr);
 /// if (result == 0) {
-///     printf("Symbol at: 0x%llx\n", symbol_addr);
+///     printf("Symbol at: %p\n", symbol_addr);
 /// }
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_find_symbol(
     binary_name: *const c_char,
     symbol_name: *const c_char,
-    result: *mut u64,
+    result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         // Validate input pointers
@@ -301,7 +301,7 @@ pub extern "C" fn s2binlib_find_symbol(
         // Find symbol
         match s2binlib.find_symbol(binary_name_str, symbol_name_str) {
             Ok(addr) => {
-                *result = addr;
+                *result = addr as *mut c_void;
                 0
             }
             Err(_) => -3,
@@ -339,7 +339,7 @@ pub extern "C" fn s2binlib_find_symbol(
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_set_module_base_from_pointer(
     binary_name: *const c_char,
-    pointer: u64
+    pointer: *mut c_void
 ) -> i32 {
     unsafe {
         // Validate input pointers
@@ -366,7 +366,7 @@ pub extern "C" fn s2binlib_set_module_base_from_pointer(
         };
 
         // Set the base address for the module
-        s2binlib.set_module_base_from_pointer(binary_name_str, pointer);
+        s2binlib.set_module_base_from_pointer(binary_name_str, pointer as u64);
         0
     }
 }
@@ -445,16 +445,16 @@ pub extern "C" fn s2binlib_clear_module_base_address(
 /// 
 /// # Example
 /// ```c
-/// uint64_t base_addr;
+/// void* base_addr;
 /// int result = s2binlib_get_module_base_address("server", &base_addr);
 /// if (result == 0) {
-///     printf("Module base: 0x%llx\n", base_addr);
+///     printf("Module base: %p\n", base_addr);
 /// }
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_get_module_base_address(
     binary_name: *const c_char,
-    result: *mut u64,
+    result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || result.is_null() {
@@ -478,7 +478,7 @@ pub extern "C" fn s2binlib_get_module_base_address(
 
         match s2binlib.get_module_base_address(binary_name_str) {
             Ok(addr) => {
-                *result = addr;
+                *result = addr as *mut c_void;
                 0
             }
             Err(_) => -3,
@@ -688,17 +688,17 @@ pub extern "C" fn s2binlib_get_binary_path(
 /// 
 /// # Example
 /// ```c
-/// uint64_t vtable_va;
+/// void* vtable_va;
 /// int result = s2binlib_find_vtable_va("server", "CBaseEntity", &vtable_va);
 /// if (result == 0) {
-///     printf("VTable VA: 0x%llx\n", vtable_va);
+///     printf("VTable VA: %p\n", vtable_va);
 /// }
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_find_vtable_va(
     binary_name: *const c_char,
     vtable_name: *const c_char,
-    result: *mut u64,
+    result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
@@ -731,7 +731,7 @@ pub extern "C" fn s2binlib_find_vtable_va(
 
         match s2binlib.find_vtable_va(binary_name_str, vtable_name_str) {
             Ok(addr) => {
-                *result = addr;
+                *result = addr as *mut c_void;
                 0
             }
             Err(_) => -4,
@@ -768,17 +768,17 @@ pub extern "C" fn s2binlib_find_vtable_va(
 /// 
 /// # Example
 /// ```c
-/// uint64_t va;
+/// void* va;
 /// int result = s2binlib_pattern_scan_va("server", "48 89 5C 24 ?", &va);
 /// if (result == 0) {
-///     printf("Pattern found at VA: 0x%llx\n", va);
+///     printf("Pattern found at VA: %p\n", va);
 /// }
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_pattern_scan_va(
     binary_name: *const c_char,
     pattern: *const c_char,
-    result: *mut u64,
+    result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || pattern.is_null() || result.is_null() {
@@ -811,7 +811,7 @@ pub extern "C" fn s2binlib_pattern_scan_va(
 
         match s2binlib.pattern_scan_va(binary_name_str, pattern_str) {
             Ok(addr) => {
-                *result = addr;
+                *result = addr as *mut c_void;
                 0
             }
             Err(_) => -4,
@@ -844,17 +844,17 @@ pub extern "C" fn s2binlib_pattern_scan_va(
 /// 
 /// # Example
 /// ```c
-/// uint64_t export_va;
+/// void* export_va;
 /// int result = s2binlib_find_export_va("server", "CreateInterface", &export_va);
 /// if (result == 0) {
-///     printf("Export VA: 0x%llx\n", export_va);
+///     printf("Export VA: %p\n", export_va);
 /// }
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_find_export_va(
     binary_name: *const c_char,
     export_name: *const c_char,
-    result: *mut u64,
+    result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || export_name.is_null() || result.is_null() {
@@ -887,7 +887,7 @@ pub extern "C" fn s2binlib_find_export_va(
 
         match s2binlib.find_export_va(binary_name_str, export_name_str) {
             Ok(addr) => {
-                *result = addr;
+                *result = addr as *mut c_void;
                 0
             }
             Err(_) => -4,
@@ -920,17 +920,17 @@ pub extern "C" fn s2binlib_find_export_va(
 /// 
 /// # Example
 /// ```c
-/// uint64_t export_addr;
+/// void* export_addr;
 /// int result = s2binlib_find_export("server", "CreateInterface", &export_addr);
 /// if (result == 0) {
-///     printf("Export at: 0x%llx\n", export_addr);
+///     printf("Export at: %p\n", export_addr);
 /// }
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_find_export(
     binary_name: *const c_char,
     export_name: *const c_char,
-    result: *mut u64,
+    result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || export_name.is_null() || result.is_null() {
@@ -963,7 +963,7 @@ pub extern "C" fn s2binlib_find_export(
 
         match s2binlib.find_export(binary_name_str, export_name_str) {
             Ok(addr) => {
-                *result = addr;
+                *result = addr as *mut c_void;
                 0
             }
             Err(_) => -4,
@@ -995,17 +995,17 @@ pub extern "C" fn s2binlib_find_export(
 /// 
 /// # Example
 /// ```c
-/// uint64_t symbol_va;
+/// void* symbol_va;
 /// int result = s2binlib_find_symbol_va("server", "_Z13CreateInterfacev", &symbol_va);
 /// if (result == 0) {
-///     printf("Symbol VA: 0x%llx\n", symbol_va);
+///     printf("Symbol VA: %p\n", symbol_va);
 /// }
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_find_symbol_va(
     binary_name: *const c_char,
     symbol_name: *const c_char,
-    result: *mut u64,
+    result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || symbol_name.is_null() || result.is_null() {
@@ -1038,7 +1038,7 @@ pub extern "C" fn s2binlib_find_symbol_va(
 
         match s2binlib.find_symbol_va(binary_name_str, symbol_name_str) {
             Ok(addr) => {
-                *result = addr;
+                *result = addr as *mut c_void;
                 0
             }
             Err(_) => -3,
@@ -1290,10 +1290,10 @@ pub extern "C" fn s2binlib_read_by_mem_address(
 /// 
 /// # Example
 /// ```c
-/// uint64_t vfunc_va;
+/// void* vfunc_va;
 /// int result = s2binlib_find_vfunc_by_vtbname_va("server", "CBaseEntity", 5, &vfunc_va);
 /// if (result == 0) {
-///     printf("VFunc VA: 0x%llx\n", vfunc_va);
+///     printf("VFunc VA: %p\n", vfunc_va);
 /// }
 /// ```
 #[unsafe(no_mangle)]
@@ -1301,7 +1301,7 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname_va(
     binary_name: *const c_char,
     vtable_name: *const c_char,
     vfunc_index: usize,
-    result: *mut u64,
+    result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
@@ -1334,7 +1334,7 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname_va(
 
         match s2binlib.find_vfunc_by_vtbname_va(binary_name_str, vtable_name_str, vfunc_index) {
             Ok(addr) => {
-                *result = addr;
+                *result = addr as *mut c_void;
                 0
             }
             Err(_) => -4,
@@ -1368,10 +1368,10 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname_va(
 /// 
 /// # Example
 /// ```c
-/// uint64_t vfunc_addr;
+/// void* vfunc_addr;
 /// int result = s2binlib_find_vfunc_by_vtbname("server", "CBaseEntity", 5, &vfunc_addr);
 /// if (result == 0) {
-///     printf("VFunc at: 0x%llx\n", vfunc_addr);
+///     printf("VFunc at: %p\n", vfunc_addr);
 /// }
 /// ```
 #[unsafe(no_mangle)]
@@ -1379,7 +1379,7 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname(
     binary_name: *const c_char,
     vtable_name: *const c_char,
     vfunc_index: usize,
-    result: *mut u64,
+    result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
@@ -1412,7 +1412,7 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname(
 
         match s2binlib.find_vfunc_by_vtbname(binary_name_str, vtable_name_str, vfunc_index) {
             Ok(addr) => {
-                *result = addr;
+                *result = addr as *mut c_void;
                 0
             }
             Err(_) => -4,
@@ -1444,17 +1444,17 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname(
 /// 
 /// # Example
 /// ```c
-/// uint64_t vfunc_va;
+/// void* vfunc_va;
 /// int result = s2binlib_find_vfunc_by_vtbptr_va(vtable_ptr, 5, &vfunc_va);
 /// if (result == 0) {
-///     printf("VFunc VA: 0x%llx\n", vfunc_va);
+///     printf("VFunc VA: %p\n", vfunc_va);
 /// }
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_find_vfunc_by_vtbptr_va(
-    vtable_ptr: u64,
+    vtable_ptr: *mut c_void,
     vfunc_index: usize,
-    result: *mut u64,
+    result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         if result.is_null() {
@@ -1471,9 +1471,9 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr_va(
             Err(_) => return -5,
         };
 
-        match s2binlib.find_vfunc_by_vtbptr_va(vtable_ptr, vfunc_index) {
+        match s2binlib.find_vfunc_by_vtbptr_va(vtable_ptr as u64, vfunc_index) {
             Ok(addr) => {
-                *result = addr;
+                *result = addr as *mut c_void;
                 0
             }
             Err(_) => -4,
@@ -1505,17 +1505,17 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr_va(
 /// 
 /// # Example
 /// ```c
-/// uint64_t vfunc_addr;
+/// void* vfunc_addr;
 /// int result = s2binlib_find_vfunc_by_vtbptr(vtable_ptr, 5, &vfunc_addr);
 /// if (result == 0) {
-///     printf("VFunc at: 0x%llx\n", vfunc_addr);
+///     printf("VFunc at: %p\n", vfunc_addr);
 /// }
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_find_vfunc_by_vtbptr(
-    vtable_ptr: u64,
+    vtable_ptr: *mut c_void,
     vfunc_index: usize,
-    result: *mut u64,
+    result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         if result.is_null() {
@@ -1532,9 +1532,9 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr(
             Err(_) => return -5,
         };
 
-        match s2binlib.find_vfunc_by_vtbptr(vtable_ptr, vfunc_index) {
+        match s2binlib.find_vfunc_by_vtbptr(vtable_ptr as u64, vfunc_index) {
             Ok(addr) => {
-                *result = addr;
+                *result = addr as *mut c_void;
                 0
             }
             Err(_) => -4,
@@ -1567,17 +1567,17 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr(
 /// 
 /// # Example
 /// ```c
-/// uint64_t string_va;
+/// void* string_va;
 /// int result = s2binlib_find_string_va("server", "CBaseEntity", &string_va);
 /// if (result == 0) {
-///     printf("String VA: 0x%llx\n", string_va);
+///     printf("String VA: %p\n", string_va);
 /// }
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_find_string_va(
     binary_name: *const c_char,
     string: *const c_char,
-    result: *mut u64,
+    result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || string.is_null() || result.is_null() {
@@ -1610,7 +1610,7 @@ pub extern "C" fn s2binlib_find_string_va(
 
         match s2binlib.find_string_va(binary_name_str, string_str) {
             Ok(addr) => {
-                *result = addr;
+                *result = addr as *mut c_void;
                 0
             }
             Err(_) => -4,
@@ -1643,17 +1643,17 @@ pub extern "C" fn s2binlib_find_string_va(
 /// 
 /// # Example
 /// ```c
-/// uint64_t string_addr;
+/// void* string_addr;
 /// int result = s2binlib_find_string("server", "CBaseEntity", &string_addr);
 /// if (result == 0) {
-///     printf("String at: 0x%llx\n", string_addr);
+///     printf("String at: %p\n", string_addr);
 /// }
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_find_string(
     binary_name: *const c_char,
     string: *const c_char,
-    result: *mut u64,
+    result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || string.is_null() || result.is_null() {
@@ -1686,7 +1686,7 @@ pub extern "C" fn s2binlib_find_string(
 
         match s2binlib.find_string(binary_name_str, string_str) {
             Ok(addr) => {
-                *result = addr;
+                *result = addr as *mut c_void;
                 0
             }
             Err(_) => -4,
@@ -1790,10 +1790,10 @@ pub extern "C" fn s2binlib_dump_xrefs(
 /// s2binlib_dump_xrefs("server");
 /// 
 /// // Get xref count
-/// int count = s2binlib_get_xrefs_count("server", 0x140001000);
+/// int count = s2binlib_get_xrefs_count("server", (void*)0x140001000);
 /// if (count > 0) {
-///     uint64_t* xrefs = malloc(count * sizeof(uint64_t));
-///     s2binlib_get_xrefs_cached("server", 0x140001000, xrefs, count);
+///     void** xrefs = malloc(count * sizeof(void*));
+///     s2binlib_get_xrefs_cached("server", (void*)0x140001000, xrefs, count);
 ///     // Use xrefs
 ///     free(xrefs);
 /// }
@@ -1801,7 +1801,7 @@ pub extern "C" fn s2binlib_dump_xrefs(
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_get_xrefs_count(
     binary_name: *const c_char,
-    target_va: u64,
+    target_va: *mut c_void,
 ) -> i32 {
     unsafe {
         if binary_name.is_null() {
@@ -1823,7 +1823,7 @@ pub extern "C" fn s2binlib_get_xrefs_count(
             Err(_) => return -5,
         };
 
-        match s2binlib.find_xrefs_cached(binary_name_str, target_va) {
+        match s2binlib.find_xrefs_cached(binary_name_str, target_va as u64) {
             Some(xrefs) => xrefs.len() as i32,
             None => -3,
         }
@@ -1860,13 +1860,13 @@ pub extern "C" fn s2binlib_get_xrefs_count(
 /// s2binlib_dump_xrefs("server");
 /// 
 /// // Get xref count
-/// int count = s2binlib_get_xrefs_count("server", 0x140001000);
+/// int count = s2binlib_get_xrefs_count("server", (void*)0x140001000);
 /// if (count > 0) {
-///     uint64_t* xrefs = malloc(count * sizeof(uint64_t));
-///     int result = s2binlib_get_xrefs_cached("server", 0x140001000, xrefs, count);
+///     void** xrefs = malloc(count * sizeof(void*));
+///     int result = s2binlib_get_xrefs_cached("server", (void*)0x140001000, xrefs, count);
 ///     if (result > 0) {
 ///         for (int i = 0; i < result; i++) {
-///             printf("Xref at: 0x%llx\n", xrefs[i]);
+///             printf("Xref at: %p\n", xrefs[i]);
 ///         }
 ///     }
 ///     free(xrefs);
@@ -1875,8 +1875,8 @@ pub extern "C" fn s2binlib_get_xrefs_count(
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_get_xrefs_cached(
     binary_name: *const c_char,
-    target_va: u64,
-    buffer: *mut u64,
+    target_va: *mut c_void,
+    buffer: *mut *mut c_void,
     buffer_size: usize,
 ) -> i32 {
     unsafe {
@@ -1899,14 +1899,16 @@ pub extern "C" fn s2binlib_get_xrefs_cached(
             Err(_) => return -5,
         };
 
-        match s2binlib.find_xrefs_cached(binary_name_str, target_va) {
+        match s2binlib.find_xrefs_cached(binary_name_str, target_va as u64) {
             Some(xrefs) => {
-                if xrefs.len() * 8 > buffer_size {
+                if xrefs.len() * std::mem::size_of::<*mut c_void>() > buffer_size {
                     return -4; // Buffer too small
                 }
                 
                 let copy_count = xrefs.len();
-                std::ptr::copy_nonoverlapping(xrefs.as_ptr(), buffer, copy_count);
+                for (i, addr) in xrefs.iter().enumerate() {
+                    *buffer.add(i) = *addr as *mut c_void;
+                }
                 copy_count as i32
             }
             None => -3,
@@ -2036,16 +2038,17 @@ pub extern "C" fn s2binlib_unload_all_binaries() -> i32 {
 /// 
 /// # Example
 /// ```c
-/// uint64_t vtable_ptr = ...; // Get vtable pointer
-/// int result = s2binlib_install_trampoline(vtable_ptr);
+/// void* vtable_ptr = ...; // Get vtable pointer
+/// void* trampoline_address;
+/// int result = s2binlib_install_trampoline(vtable_ptr, &trampoline_address);
 /// if (result == 0) {
 ///     printf("Trampoline installed successfully\n");
 /// }
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_install_trampoline(
-    mem_address: u64,
-    trampoline_address_out: *mut u64,
+    mem_address: *mut c_void,
+    trampoline_address_out: *mut *mut c_void,
 ) -> i32 {
       let s2binlib_mutex = match S2BINLIB.get() {
           Some(m) => m,
@@ -2057,10 +2060,10 @@ pub extern "C" fn s2binlib_install_trampoline(
           Err(_) => return -5,
       };
 
-      match s2binlib.install_trampoline(mem_address) {
+      match s2binlib.install_trampoline(mem_address as u64) {
           Ok(address) => {
             unsafe {
-              *trampoline_address_out = address;
+              *trampoline_address_out = address as *mut c_void;
             }
             0
           },
