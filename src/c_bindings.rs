@@ -2045,6 +2045,7 @@ pub extern "C" fn s2binlib_unload_all_binaries() -> i32 {
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_install_trampoline(
     mem_address: u64,
+    trampoline_address_out: *mut u64,
 ) -> i32 {
       let s2binlib_mutex = match S2BINLIB.get() {
           Some(m) => m,
@@ -2057,7 +2058,12 @@ pub extern "C" fn s2binlib_install_trampoline(
       };
 
       match s2binlib.install_trampoline(mem_address) {
-          Ok(_) => 0,
+          Ok(address) => {
+            unsafe {
+              *trampoline_address_out = address;
+            }
+            0
+          },
           Err(_) => -3,
       }
 }

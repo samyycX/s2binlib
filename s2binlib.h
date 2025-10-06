@@ -744,6 +744,7 @@ int s2binlib_unload_all_binaries(void);
  * and returns success.
  * 
  * @param mem_address Runtime memory address where to install the trampoline
+ * @param trampoline_address_out Pointer to store the resulting trampoline address
  * 
  * @return 0 on success
  *         -1 if S2BinLib not initialized
@@ -759,12 +760,13 @@ int s2binlib_unload_all_binaries(void);
  * 
  * @example
  *     uint64_t vtable_ptr = ...; // Get vtable pointer
- *     int result = s2binlib_install_trampoline(vtable_ptr);
+ *     uint64_t trampoline_address;
+ *     int result = s2binlib_install_trampoline(vtable_ptr, &trampoline_address);
  *     if (result == 0) {
  *         printf("Trampoline installed successfully\n");
  *     }
  */
-int s2binlib_install_trampoline(uint64_t mem_address);
+int s2binlib_install_trampoline(uint64_t mem_address, uint64_t* trampoline_address_out);
 
 #ifdef __cplusplus
 }

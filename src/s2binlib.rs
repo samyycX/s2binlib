@@ -746,10 +746,10 @@ impl S2BinLib {
       self.binaries.clear();
     }
 
-    pub fn install_trampoline(&mut self, mem_address: u64) -> Result<()> {
+    pub fn install_trampoline(&mut self, mem_address: u64) -> Result<u64> {
 
-      if let Some(_) = self.trampolines.get(&mem_address) {
-        return Ok(());
+      if let Some(trampoline) = self.trampolines.get(&mem_address) {
+        return Ok(trampoline.address());
       }
 
 
@@ -763,9 +763,10 @@ impl S2BinLib {
         std::ptr::write(mem_address as *mut u64, trampoline.address() );
       }
 
+      let address = trampoline.address();
       self.trampolines.insert(mem_address, trampoline);
 
-      Ok(())
+      Ok(address)
     }
 
 }
