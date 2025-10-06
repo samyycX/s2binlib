@@ -819,6 +819,200 @@ pub extern "C" fn s2binlib_pattern_scan_va(
     }
 }
 
+/// Callback function type for pattern_scan_all functions
+/// 
+/// # Parameters
+/// * `index` - The index of the current match (0-based)
+/// * `address` - The found address (VA or memory address depending on the function)
+/// * `user_data` - User-provided data pointer
+/// 
+/// # Returns
+/// * `true` to stop searching (found what you need)
+/// * `false` to continue searching for more matches
+pub type PatternScanCallback = extern "C" fn(index: usize, address: *mut c_void, user_data: *mut c_void) -> bool;
+
+/// Find all occurrences of a pattern in a binary and return their virtual addresses
+/// 
+/// Scans the binary for all occurrences of the specified byte pattern and calls
+/// the callback function for each match found. The callback receives the match index
+/// and virtual addresses (VA).
+/// 
+/// If the binary is not yet loaded, it will be loaded automatically.
+/// 
+/// # Parameters
+/// * `binary_name` - Name of the binary to scan (null-terminated C string)
+/// * `pattern` - Byte pattern to search for, with wildcards (e.g., "48 89 5C 24 ? 48 89 74")
+/// * `callback` - Function pointer that will be called for each match
+/// * `user_data` - User-provided pointer that will be passed to each callback invocation
+/// 
+/// # Returns
+/// * 0 on success (at least one match found)
+/// * -1 if S2BinLib not initialized
+/// * -2 if invalid parameters
+/// * -3 if failed to load binary
+/// * -4 if pattern not found
+/// * -5 if internal error
+/// 
+/// # Callback Return Value
+/// The callback should return:
+/// * `true` to stop searching (if you found what you need)
+/// * `false` to continue searching for more matches
+/// 
+/// # Safety
+/// This function is unsafe because it dereferences raw pointers and calls the callback function.
+/// 
+/// # Example
+/// ```c
+/// bool my_callback(size_t index, void* address, void* user_data) {
+///     printf("Match #%zu found at VA: %p\n", index, address);
+///     int* count = (int*)user_data;
+///     (*count)++;
+///     return false; // Continue searching
+/// }
+/// 
+/// int count = 0;
+/// int result = s2binlib_pattern_scan_all_va("server", "48 89 5C 24 ?", my_callback, &count);
+/// if (result == 0) {
+///     printf("Found %d matches\n", count);
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_pattern_scan_all_va(
+    binary_name: *const c_char,
+    pattern: *const c_char,
+    callback: PatternScanCallback,
+    user_data: *mut c_void,
+) -> i32 {
+    unsafe {
+        if binary_name.is_null() || pattern.is_null() {
+            return -2;
+        }
+
+        let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let pattern_str = match CStr::from_ptr(pattern).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let s2binlib_mutex = match S2BINLIB.get() {
+            Some(m) => m,
+            None => return -1,
+        };
+
+        let mut s2binlib = match s2binlib_mutex.lock() {
+            Ok(lib) => lib,
+            Err(_) => return -5,
+        };
+
+        if !s2binlib.is_binary_loaded(binary_name_str) {
+            s2binlib.load_binary(binary_name_str);
+        }
+
+        match s2binlib.pattern_scan_all_va(binary_name_str, pattern_str, |index, addr| {
+            // Call the C callback function
+            callback(index, addr as *mut c_void, user_data)
+        }) {
+            Ok(_) => 0,
+            Err(_) => -4,
+        }
+    }
+}
+
+/// Find all occurrences of a pattern in a binary and return their memory addresses
+/// 
+/// Scans the binary for all occurrences of the specified byte pattern and calls
+/// the callback function for each match found. The callback receives the match index
+/// and memory addresses (adjusted with module base address).
+/// 
+/// If the binary is not yet loaded, it will be loaded automatically.
+/// 
+/// # Parameters
+/// * `binary_name` - Name of the binary to scan (null-terminated C string)
+/// * `pattern` - Byte pattern to search for, with wildcards (e.g., "48 89 5C 24 ? 48 89 74")
+/// * `callback` - Function pointer that will be called for each match
+/// * `user_data` - User-provided pointer that will be passed to each callback invocation
+/// 
+/// # Returns
+/// * 0 on success (at least one match found)
+/// * -1 if S2BinLib not initialized
+/// * -2 if invalid parameters
+/// * -3 if failed to load binary
+/// * -4 if pattern not found
+/// * -5 if internal error
+/// 
+/// # Callback Return Value
+/// The callback should return:
+/// * `true` to stop searching (if you found what you need)
+/// * `false` to continue searching for more matches
+/// 
+/// # Safety
+/// This function is unsafe because it dereferences raw pointers and calls the callback function.
+/// 
+/// # Example
+/// ```c
+/// bool my_callback(size_t index, void* address, void* user_data) {
+///     printf("Match #%zu found at memory address: %p\n", index, address);
+///     int* count = (int*)user_data;
+///     (*count)++;
+///     return false; // Continue searching
+/// }
+/// 
+/// int count = 0;
+/// int result = s2binlib_pattern_scan_all("server", "48 89 5C 24 ?", my_callback, &count);
+/// if (result == 0) {
+///     printf("Found %d matches\n", count);
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_pattern_scan_all(
+    binary_name: *const c_char,
+    pattern: *const c_char,
+    callback: PatternScanCallback,
+    user_data: *mut c_void,
+) -> i32 {
+    unsafe {
+        if binary_name.is_null() || pattern.is_null() {
+            return -2;
+        }
+
+        let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let pattern_str = match CStr::from_ptr(pattern).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let s2binlib_mutex = match S2BINLIB.get() {
+            Some(m) => m,
+            None => return -1,
+        };
+
+        let mut s2binlib = match s2binlib_mutex.lock() {
+            Ok(lib) => lib,
+            Err(_) => return -5,
+        };
+
+        if !s2binlib.is_binary_loaded(binary_name_str) {
+            s2binlib.load_binary(binary_name_str);
+        }
+
+        match s2binlib.pattern_scan_all(binary_name_str, pattern_str, |index, addr| {
+            // Call the C callback function
+            callback(index, addr as *mut c_void, user_data)
+        }) {
+            Ok(_) => 0,
+            Err(_) => -4,
+        }
+    }
+}
+
 /// Find an exported symbol by name and return its virtual address
 /// 
 /// Searches for an exported symbol in the binary's export table and returns
