@@ -1,4 +1,4 @@
-name: Build and Release
+name: Build Static Libraries
 
 on:
   push:
@@ -8,39 +8,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  version:
-    name: Calculate Version
-    runs-on: ubuntu-latest
-    outputs:
-      semver: ${{ steps.gitversion.outputs.semVer }}
-      fullsemver: ${{ steps.gitversion.outputs.fullSemVer }}
-      majorminorpatch: ${{ steps.gitversion.outputs.majorMinorPatch }}
-      assemblysemver: ${{ steps.gitversion.outputs.assemblySemVer }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # GitVersion needs full history
-
-      - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v4
-        with:
-          versionSpec: '6.x'
-
-      - name: Determine Version
-        id: gitversion
-        uses: gittools/actions/gitversion/execute@v4
-
-      - name: Display GitVersion outputs
-        run: |
-          echo "SemVer: ${{ steps.gitversion.outputs.semVer }}"
-          echo "FullSemVer: ${{ steps.gitversion.outputs.fullSemVer }}"
-          echo "MajorMinorPatch: ${{ steps.gitversion.outputs.majorMinorPatch }}"
-          echo "AssemblySemVer: ${{ steps.gitversion.outputs.assemblySemVer }}"
-
   build-linux:
     name: Build Linux (SteamOS SDK)
-    needs: version
     runs-on: ubuntu-latest
     container:
       image: registry.gitlab.steamos.cloud/steamrt/sniper/sdk
@@ -59,11 +28,6 @@ jobs:
           rustc --version
           cargo --version
 
-      - name: Update Cargo.toml version
-        run: |
-          . $HOME/.cargo/env
-          sed -i 's/^version = .*/version = "${{ needs.version.outputs.majorminorpatch }}"/' Cargo.toml
-
       - name: Build release
         run: |
           . $HOME/.cargo/env
@@ -77,7 +41,6 @@ jobs:
 
   build-windows:
     name: Build Windows
-    needs: version
     runs-on: windows-latest
     steps:
       - name: Checkout code
@@ -85,13 +48,6 @@ jobs:
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
-
-      - name: Update Cargo.toml version
-        shell: pwsh
-        run: |
-          $content = Get-Content Cargo.toml
-          $content = $content -replace '^version = .*', 'version = "${{ needs.version.outputs.majorminorpatch }}"'
-          Set-Content Cargo.toml $content
 
       - name: Build release
         run: cargo build --release
@@ -104,73 +60,91 @@ jobs:
             target/release/s2binlib.lib
             target/release/libs2binlib.a
 
-  create-release:
-    name: Create GitHub Release
-    needs: [version, build-linux, build-windows]
+  create-release-package:
+    name: Create Release Package
+    needs: [build-linux, build-windows]
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
     permissions:
       contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v1.1.1
+        with:
+          versionSpec: '5.x'
+
+      - name: Determine Version
+        id: gitversion
+        uses: gittools/actions/gitversion/execute@v1.1.1
+        with:
+          useConfigFile: true
+
+      - name: Display GitVersion outputs
+        run: |
+          echo "SemVer: ${{ steps.gitversion.outputs.semVer }}"
+          echo "FullSemVer: ${{ steps.gitversion.outputs.fullSemVer }}"
+          echo "MajorMinorPatch: ${{ steps.gitversion.outputs.majorMinorPatch }}"
 
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
           path: artifacts
 
-      - name: Create release directory structure
+      - name: Create release directory
         run: |
           mkdir -p release/linux
           mkdir -p release/windows
           mkdir -p release/include
           cp artifacts/s2binlib-linux-x86_64/libs2binlib.a release/linux/
           cp artifacts/s2binlib-windows-x86_64/s2binlib.lib release/windows/
-          cp artifacts/s2binlib-windows-x86_64/libs2binlib.a release/windows/
+          cp artifacts/s2binlib-windows-x86_64/libs2binlib.a release/windows/libs2binlib.a
           cp s2binlib.h release/include/
-          
+
       - name: Create release archives
         run: |
           cd release
-          tar -czf ../s2binlib-v${{ needs.version.outputs.semver }}-linux-x86_64.tar.gz linux/ include/
-          tar -czf ../s2binlib-v${{ needs.version.outputs.semver }}-windows-x86_64.tar.gz windows/ include/
+          tar -czf ../s2binlib-${{ steps.gitversion.outputs.semVer }}-linux-x86_64.tar.gz linux/ include/
+          tar -czf ../s2binlib-${{ steps.gitversion.outputs.semVer }}-windows-x86_64.tar.gz windows/ include/
           cd ..
-          
-      - name: Generate release notes
-        id: release_notes
-        run: |
-          cat > release_notes.md << 'EOF'
-          ## s2binlib v${{ needs.version.outputs.semver }}
-          
-          ### Downloads
-          - **Linux (x86_64)**: `s2binlib-v${{ needs.version.outputs.semver }}-linux-x86_64.tar.gz`
-          - **Windows (x86_64)**: `s2binlib-v${{ needs.version.outputs.semver }}-windows-x86_64.tar.gz`
-          
-          ### Contents
-          - Static libraries for Linux and Windows
-          - C header file (s2binlib.h)
-          
-          ### Changes
-          See commit history for details.
-          EOF
-
-      - name: Create Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: v${{ needs.version.outputs.semver }}
-          name: Release v${{ needs.version.outputs.semver }}
-          body_path: release_notes.md
-          draft: false
-          prerelease: false
-          files: |
-            s2binlib-v${{ needs.version.outputs.semver }}-linux-x86_64.tar.gz
-            s2binlib-v${{ needs.version.outputs.semver }}-windows-x86_64.tar.gz
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tar -czf s2binlib-${{ steps.gitversion.outputs.semVer }}-all-platforms.tar.gz release/
 
       - name: Upload combined release artifacts
         uses: actions/upload-artifact@v4
         with:
           name: s2binlib-all-platforms
           path: release/
+
+      - name: Create GitHub Release
+        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.gitversion.outputs.semVer }}
+          name: Release v${{ steps.gitversion.outputs.semVer }}
+          body: |
+            ## s2binlib v${{ steps.gitversion.outputs.semVer }}
+            
+            ### 📦 Downloads
+            - `s2binlib-${{ steps.gitversion.outputs.semVer }}-linux-x86_64.tar.gz` - Linux static library
+            - `s2binlib-${{ steps.gitversion.outputs.semVer }}-windows-x86_64.tar.gz` - Windows static library
+            - `s2binlib-${{ steps.gitversion.outputs.semVer }}-all-platforms.tar.gz` - All platforms bundle
+            
+            ### 📋 Changes
+            Auto-generated release from commit ${{ github.sha }}
+            
+            ### 🔧 Build Information
+            - Version: ${{ steps.gitversion.outputs.fullSemVer }}
+            - Commit: ${{ github.sha }}
+            - Branch: ${{ github.ref_name }}
+          files: |
+            s2binlib-${{ steps.gitversion.outputs.semVer }}-linux-x86_64.tar.gz
+            s2binlib-${{ steps.gitversion.outputs.semVer }}-windows-x86_64.tar.gz
+            s2binlib-${{ steps.gitversion.outputs.semVer }}-all-platforms.tar.gz
+            s2binlib.h
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
