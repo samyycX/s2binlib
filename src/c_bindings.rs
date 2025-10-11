@@ -739,6 +739,79 @@ pub extern "C" fn s2binlib_find_vtable_va(
     }
 }
 
+/// Get the number of virtual functions in a vtable
+/// 
+/// Returns the count of virtual functions (vfuncs) in the specified vtable.
+/// This counts valid function pointers in the vtable until it encounters a null
+/// or invalid pointer.
+/// 
+/// If the binary is not yet loaded, it will be loaded automatically.
+/// 
+/// # Parameters
+/// * `binary_name` - Name of the binary to search (e.g., "server", "client") (null-terminated C string)
+/// * `vtable_name` - Name of the vtable/class to search for (null-terminated C string)
+/// * `result` - Pointer to store the resulting count of virtual functions
+/// 
+/// # Returns
+/// * `0` - Success, result contains the vfunc count
+/// * `-1` - S2BinLib not initialized
+/// * `-2` - Invalid input (null pointer or invalid UTF-8)
+/// * `-4` - Operation failed (vtable not found or other error)
+/// * `-5` - Failed to acquire lock
+/// 
+/// # Example
+/// ```c
+/// size_t vfunc_count;
+/// int result = s2binlib_get_vtable_vfunc_count("server", "CBaseEntity", &vfunc_count);
+/// if (result == 0) {
+///     printf("VTable has %zu virtual functions\n", vfunc_count);
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_get_vtable_vfunc_count(
+    binary_name: *const c_char,
+    vtable_name: *const c_char,
+    result: *mut usize,
+) -> i32 {
+    unsafe {
+        if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
+            return -2;
+        }
+
+        let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let vtable_name_str = match CStr::from_ptr(vtable_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let s2binlib_mutex = match S2BINLIB.get() {
+            Some(m) => m,
+            None => return -1,
+        };
+
+        let mut s2binlib = match s2binlib_mutex.lock() {
+            Ok(lib) => lib,
+            Err(_) => return -5,
+        };
+
+        if !s2binlib.is_binary_loaded(binary_name_str) {
+            s2binlib.load_binary(binary_name_str);
+        }
+
+        match s2binlib.get_vtable_vfunc_count(binary_name_str, vtable_name_str) {
+            Ok(count) => {
+                *result = count;
+                0
+            }
+            Err(_) => -4,
+        }
+    }
+}
+
 /// Pattern scan and return the virtual address
 /// 
 /// Scans for a byte pattern in the specified binary and returns the virtual address (VA)
