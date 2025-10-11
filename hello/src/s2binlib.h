@@ -222,6 +222,34 @@ int s2binlib_find_vtable(const char* binary_name, const char* vtable_name, void*
 int s2binlib_find_vtable_va(const char* binary_name, const char* vtable_name, void** result);
 
 /**
+ * Get the number of virtual functions in a vtable
+ * 
+ * Returns the count of virtual functions (vfuncs) in the specified vtable.
+ * This counts valid function pointers in the vtable until it encounters a null
+ * or invalid pointer.
+ * 
+ * If the binary is not yet loaded, it will be loaded automatically.
+ * 
+ * @param binary_name Name of the binary to search (e.g., "server", "client") (null-terminated C string)
+ * @param vtable_name Name of the vtable/class to search for (null-terminated C string)
+ * @param result Pointer to store the resulting count of virtual functions
+ * 
+ * @return 0 on success (count written to result)
+ *         -1 if S2BinLib not initialized
+ *         -2 if invalid input (null pointer or invalid UTF-8)
+ *         -4 if operation failed (vtable not found or other error)
+ *         -5 if failed to acquire lock
+ * 
+ * @example
+ *     size_t vfunc_count;
+ *     int result = s2binlib_get_vtable_vfunc_count("server", "CBaseEntity", &vfunc_count);
+ *     if (result == 0) {
+ *         printf("VTable has %zu virtual functions\n", vfunc_count);
+ *     }
+ */
+int s2binlib_get_vtable_vfunc_count(const char* binary_name, const char* vtable_name, size_t* result);
+
+/**
  * Find a symbol by name in the specified binary
  * 
  * If the binary is not yet loaded, it will be loaded automatically.
