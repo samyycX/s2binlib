@@ -15,14 +15,14 @@ pub fn find_pattern_simd(binary_data: &[u8], pattern: &[u8], pattern_wildcard: &
         }
     }
 
-    // #[cfg(target_arch = "x86_64")]
-    // {
-    //     if is_x86_feature_detected!("avx2") && pattern.len() > 16 {
-    //         return find_pattern_impl_avx2(binary_data, pattern, &wildcard_mask);
-    //     } else if is_x86_feature_detected!("sse2") {
-    //         return find_pattern_impl_sse2(binary_data, pattern, &wildcard_mask);
-    //     }
-    // }
+    #[cfg(target_arch = "x86_64")]
+    {
+        if is_x86_feature_detected!("avx2") && pattern.len() > 16 {
+            return find_pattern_impl_avx2(binary_data, pattern, &wildcard_mask);
+        } else if is_x86_feature_detected!("sse2") {
+            return find_pattern_impl_sse2(binary_data, pattern, &wildcard_mask);
+        }
+    }
 
     find_pattern_scalar(binary_data, pattern, &wildcard_mask)
 }
