@@ -9,7 +9,6 @@ crate-type = ["staticlib"]
 [profile.release]
 opt-level = 3
 lto = true
-debug = true
 
 [dependencies]
 anyhow = "1.0.100"
