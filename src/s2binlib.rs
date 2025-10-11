@@ -1,4 +1,4 @@
-use std::{collections::HashMap, fs, path::PathBuf};
+use std::{collections::{btree_map::VacantEntry, HashMap}, fs, path::PathBuf};
 
 use anyhow::{anyhow, Result};
 use object::{read::pe::ImageOptionalHeader, Object, ObjectSection, ObjectSymbol};
@@ -245,15 +245,15 @@ impl S2BinLib {
         Err(anyhow::anyhow!("va not found in any section."))
     }
 
-    fn is_address_nonexecutable(&self, binary_name: &str, address: u64) -> Result<bool> {
+    fn is_file_offset_executable(&self, binary_name: &str, file_offset: u64) -> Result<bool> {
       let binary_data = self.get_binary(binary_name)?;
       let object = object::File::parse(binary_data)?;
       for section in object.sections() {
         if let Some(file_range) = section.file_range() {
           let section_file_start = file_range.0;
           let section_file_end = file_range.0 + file_range.1;
-          if address >= section_file_start && address < section_file_end {
-            return Ok(!is_executable(section.flags()))
+          if file_offset >= section_file_start && file_offset < section_file_end {
+            return Ok(is_executable(section.flags()))
           }
         }
       };
@@ -464,8 +464,24 @@ impl S2BinLib {
         Err(anyhow::anyhow!("Vtable not found."))
     }
 
+    fn is_valid_va(&self, binary_name: &str, va: u64) -> Result<bool> {
+      let Ok(file_offset) = self.va_to_file_offset(binary_name, va) else {
+        return Ok(false);
+      };
 
-    
+      
+      Ok(file_offset > 0 && file_offset < self.get_binary(binary_name)?.len() as u64)
+    }
+
+    fn is_valid_executable_va(&self, binary_name: &str, va: u64) -> Result<bool> {
+      if !self.is_valid_va(binary_name, va)? {
+        return Ok(false);
+      }
+
+      let file_offset = self.va_to_file_offset(binary_name, va)?;
+      self.is_file_offset_executable(binary_name, file_offset)
+    }
+
 
     fn mem_address_to_va(&self, binary_name: &str, address: u64) -> Result<u64> {
       let base_address = self.get_module_base_address(binary_name)?;
@@ -484,6 +500,24 @@ impl S2BinLib {
             "windows" => self.find_vtable_va_windows(binary_name, vtable_name),
             _ => self.find_vtable_va_linux(binary_name, vtable_name),
         }
+    }
+
+    pub fn get_vtable_vfunc_count(&self, binary_name: &str, vtable_name: &str) -> Result<usize> {
+      let vtable = self.find_vtable_va(binary_name, vtable_name)?;
+      let mut offset = 0;
+
+      loop {
+        let vfunc_va = self.read_by_va(binary_name, vtable + offset, 8)?;
+        let vfunc_va = u64::from_le_bytes(vfunc_va.try_into().unwrap());
+
+        if vfunc_va == 0 || !self.is_valid_executable_va(binary_name, vfunc_va)? {
+          break;
+        }
+
+        // check if its a valid function
+        offset += 8;
+      }
+      Ok(offset as usize / 8)
     }
 
     pub fn find_vtable(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {

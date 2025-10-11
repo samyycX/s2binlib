@@ -15,14 +15,14 @@ pub fn find_pattern_simd(binary_data: &[u8], pattern: &[u8], pattern_wildcard: &
         }
     }
 
-    #[cfg(target_arch = "x86_64")]
-    {
-        if is_x86_feature_detected!("avx2") && pattern.len() > 16 {
-            return find_pattern_impl_avx2(binary_data, pattern, &wildcard_mask);
-        } else if is_x86_feature_detected!("sse2") {
-            return find_pattern_impl_sse2(binary_data, pattern, &wildcard_mask);
-        }
-    }
+    // #[cfg(target_arch = "x86_64")]
+    // {
+    //     if is_x86_feature_detected!("avx2") && pattern.len() > 16 {
+    //         return find_pattern_impl_avx2(binary_data, pattern, &wildcard_mask);
+    //     } else if is_x86_feature_detected!("sse2") {
+    //         return find_pattern_impl_sse2(binary_data, pattern, &wildcard_mask);
+    //     }
+    // }
 
     find_pattern_scalar(binary_data, pattern, &wildcard_mask)
 }
@@ -31,6 +31,9 @@ pub fn find_pattern_simd(binary_data: &[u8], pattern: &[u8], pattern_wildcard: &
 fn find_pattern_impl_avx2(binary_data: &[u8], pattern: &[u8], wildcard_mask: &[u8]) -> Result<u64> {
     unsafe {
         for i in 0..=(binary_data.len() - pattern.len()) {
+            if wildcard_mask[0] == 0xFF && binary_data[i] != pattern[0] {
+                continue;
+            }
             if matches_avx2(&binary_data[i..], pattern, wildcard_mask) {
                 return Ok(i as u64);
             }
@@ -43,6 +46,9 @@ fn find_pattern_impl_avx2(binary_data: &[u8], pattern: &[u8], wildcard_mask: &[u
 fn find_pattern_impl_sse2(binary_data: &[u8], pattern: &[u8], wildcard_mask: &[u8]) -> Result<u64> {
     unsafe {
         for i in 0..=(binary_data.len() - pattern.len()) {
+            if wildcard_mask[0] == 0xFF && binary_data[i] != pattern[0] {
+                continue;
+            }
             if matches_sse2(&binary_data[i..], pattern, wildcard_mask) {
                 return Ok(i as u64);
             }
@@ -53,6 +59,9 @@ fn find_pattern_impl_sse2(binary_data: &[u8], pattern: &[u8], wildcard_mask: &[u
 
 fn find_pattern_scalar(binary_data: &[u8], pattern: &[u8], wildcard_mask: &[u8]) -> Result<u64> {
     for i in 0..=(binary_data.len() - pattern.len()) {
+        if wildcard_mask[0] == 0xFF && binary_data[i] != pattern[0] {
+            continue;
+        }
         if matches_scalar(&binary_data[i..], pattern, wildcard_mask) {
             return Ok(i as u64);
         }
@@ -82,7 +91,7 @@ pub unsafe fn matches_avx2(data: &[u8], pattern: &[u8], mask: &[u8]) -> bool {
             let data_chunk = _mm256_loadu_si256(data.as_ptr().add(offset) as *const __m256i);
             let pattern_chunk = _mm256_loadu_si256(pattern.as_ptr().add(offset) as *const __m256i);
             let mask_chunk = _mm256_loadu_si256(mask.as_ptr().add(offset) as *const __m256i);
-
+            
             let xor = _mm256_xor_si256(data_chunk, pattern_chunk);
             let masked = _mm256_and_si256(xor, mask_chunk);
             
