@@ -7,12 +7,17 @@ target("hello")
 
     set_runtimes("MT")
 
-    add_links(
-        "ntdll",
-        "kernel32",
-        "vendor/s2binlib.lib"
-        )
+    -- add_links(
+    --     "ntdll",
+    --     "kernel32",
+    --     "ws2_32",
+    --     "userenv",
+    --     "vendor/s2binlib.lib"
+    --     )
 
+    add_links(
+        "vendor/libs2binlib.a"
+        )
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
 --
