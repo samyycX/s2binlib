@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [lib]
-crate-type = ["staticlib", "rlib"]
+crate-type = ["staticlib", "dylib", "rlib"]
 
 [profile.release]
 opt-level = 3
