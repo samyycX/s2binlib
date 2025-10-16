@@ -1,15 +1,16 @@
 use std::ffi::{CStr, c_char, c_void};
 use std::sync::Mutex;
-use once_cell::sync::OnceCell;
+use once_cell::sync::Lazy;
 
 use crate::S2BinLib;
 
 /// Global S2BinLib instance
-static S2BINLIB: OnceCell<Mutex<S2BinLib>> = OnceCell::new();
+static S2BINLIB: Lazy<Mutex<Option<S2BinLib>>> = Lazy::new(|| Mutex::new(None));
 
 /// Initialize the global S2BinLib instance
 /// 
 /// The operating system is automatically detected at runtime.
+/// Can be called multiple times to reinitialize with different parameters.
 /// 
 /// # Parameters
 /// * `game_path` - Path to the game directory (null-terminated C string)
@@ -17,8 +18,8 @@ static S2BINLIB: OnceCell<Mutex<S2BinLib>> = OnceCell::new();
 /// 
 /// # Returns
 /// * 0 on success
-/// * -1 if already initialized
 /// * -2 if invalid parameters
+/// * -5 if internal error
 /// 
 /// # Safety
 /// This function is unsafe because it dereferences raw pointers.
@@ -63,10 +64,77 @@ pub extern "C" fn s2binlib_initialize(
         };
 
         // Initialize the global instance
-        match S2BINLIB.set(Mutex::new(S2BinLib::new(game_path_str, game_type_str, os_str))) {
-            Ok(_) => 0,
-            Err(_) => -1, // Already initialized
+        let mut s2binlib = match S2BINLIB.lock() {
+            Ok(lib) => lib,
+            Err(_) => return -5,
+        };
+        
+        *s2binlib = Some(S2BinLib::new(game_path_str, game_type_str, os_str));
+        0
+    }
+}
+
+/// Initialize the global S2BinLib instance with explicit OS parameter
+/// 
+/// Can be called multiple times to reinitialize with different parameters.
+/// 
+/// # Parameters
+/// * `game_path` - Path to the game directory (null-terminated C string)
+/// * `game_type` - Game type identifier (null-terminated C string)
+/// * `os` - Operating system ("windows" or "linux") (null-terminated C string)
+/// 
+/// # Returns
+/// * 0 on success
+/// * -2 if invalid parameters
+/// * -5 if internal error
+/// 
+/// # Safety
+/// This function is unsafe because it dereferences raw pointers.
+/// The caller must ensure that the pointers are valid and point to null-terminated C strings.
+/// 
+/// # Example
+/// ```c
+/// int result = s2binlib_initialize_with_os("C:/Games/MyGame", "dota2", "windows");
+/// if (result != 0) {
+///     // Handle error
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_initialize_with_os(
+    game_path: *const c_char,
+    game_type: *const c_char,
+    os: *const c_char,
+) -> i32 {
+    unsafe {
+        // Validate input pointers
+        if game_path.is_null() || game_type.is_null() || os.is_null() {
+            return -2;
         }
+
+        // Convert C strings to Rust strings
+        let game_path_str = match CStr::from_ptr(game_path).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let game_type_str = match CStr::from_ptr(game_type).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let os_str = match CStr::from_ptr(os).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        // Initialize the global instance
+        let mut s2binlib = match S2BINLIB.lock() {
+            Ok(lib) => lib,
+            Err(_) => return -5,
+        };
+        
+        *s2binlib = Some(S2BinLib::new(game_path_str, game_type_str, os_str));
+        0
     }
 }
 
@@ -111,12 +179,6 @@ pub extern "C" fn s2binlib_pattern_scan(
             return -2;
         }
 
-        // Get the global instance
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1, // Not initialized
-        };
-
         // Convert C strings to Rust strings
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
@@ -128,10 +190,15 @@ pub extern "C" fn s2binlib_pattern_scan(
             Err(_) => return -2,
         };
 
-        // Lock and use the S2BinLib instance
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
+        // Get the global instance
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
             Err(_) => return -5,
+        };
+
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         // Load binary if not already loaded
@@ -191,12 +258,6 @@ pub extern "C" fn s2binlib_find_vtable(
             return -2;
         }
 
-        // Get the global instance
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1, // Not initialized
-        };
-
         // Convert C strings to Rust strings
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
@@ -208,10 +269,15 @@ pub extern "C" fn s2binlib_find_vtable(
             Err(_) => return -2,
         };
 
-        // Lock and use the S2BinLib instance
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
+        // Get the global instance
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
             Err(_) => return -5,
+        };
+
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         // Load binary if not already loaded
@@ -270,12 +336,6 @@ pub extern "C" fn s2binlib_find_symbol(
             return -2;
         }
 
-        // Get the global instance
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1, // Not initialized
-        };
-
         // Convert C strings to Rust strings
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
@@ -287,10 +347,15 @@ pub extern "C" fn s2binlib_find_symbol(
             Err(_) => return -2,
         };
 
-        // Lock and use the S2BinLib instance
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -4,
+        // Get the global instance
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
+        };
+
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         // Load binary if not already loaded
@@ -354,15 +419,14 @@ pub extern "C" fn s2binlib_set_module_base_from_pointer(
         };
 
         // Get the global instance
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        // Lock and use the S2BinLib instance
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         // Set the base address for the module
@@ -408,14 +472,14 @@ pub extern "C" fn s2binlib_clear_module_base_address(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         s2binlib.clear_module_base_address(binary_name_str);
@@ -466,14 +530,14 @@ pub extern "C" fn s2binlib_get_module_base_address(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_ref() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         match s2binlib.get_module_base_address(binary_name_str) {
@@ -522,14 +586,14 @@ pub extern "C" fn s2binlib_is_binary_loaded(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_ref() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if s2binlib.is_binary_loaded(binary_name_str) {
@@ -579,14 +643,14 @@ pub extern "C" fn s2binlib_load_binary(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         s2binlib.load_binary(binary_name_str);
@@ -638,14 +702,14 @@ pub extern "C" fn s2binlib_get_binary_path(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_ref() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         let path = s2binlib.get_binary_path(binary_name_str);
@@ -715,14 +779,14 @@ pub extern "C" fn s2binlib_find_vtable_va(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -788,14 +852,14 @@ pub extern "C" fn s2binlib_get_vtable_vfunc_count(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -868,14 +932,14 @@ pub extern "C" fn s2binlib_pattern_scan_va(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -971,14 +1035,14 @@ pub extern "C" fn s2binlib_pattern_scan_all_va(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1062,14 +1126,14 @@ pub extern "C" fn s2binlib_pattern_scan_all(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1138,14 +1202,14 @@ pub extern "C" fn s2binlib_find_export_va(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1214,14 +1278,14 @@ pub extern "C" fn s2binlib_find_export(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1289,14 +1353,14 @@ pub extern "C" fn s2binlib_find_symbol_va(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1360,14 +1424,14 @@ pub extern "C" fn s2binlib_read_by_file_offset(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1432,14 +1496,14 @@ pub extern "C" fn s2binlib_read_by_va(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1505,14 +1569,14 @@ pub extern "C" fn s2binlib_read_by_mem_address(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1585,14 +1649,14 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname_va(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1663,14 +1727,14 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1728,14 +1792,14 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr_va(
             return -2;
         }
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_ref() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         match s2binlib.find_vfunc_by_vtbptr_va(vtable_ptr as u64, vfunc_index) {
@@ -1789,14 +1853,14 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr(
             return -2;
         }
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_ref() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         match s2binlib.find_vfunc_by_vtbptr(vtable_ptr as u64, vfunc_index) {
@@ -1861,14 +1925,14 @@ pub extern "C" fn s2binlib_find_string_va(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1937,14 +2001,14 @@ pub extern "C" fn s2binlib_find_string(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -2009,14 +2073,14 @@ pub extern "C" fn s2binlib_dump_xrefs(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -2080,14 +2144,14 @@ pub extern "C" fn s2binlib_get_xrefs_count(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_ref() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         match s2binlib.find_xrefs_cached(binary_name_str, target_va as u64) {
@@ -2156,14 +2220,14 @@ pub extern "C" fn s2binlib_get_xrefs_cached(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_ref() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         match s2binlib.find_xrefs_cached(binary_name_str, target_va as u64) {
@@ -2222,14 +2286,14 @@ pub extern "C" fn s2binlib_unload_binary(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         s2binlib.unload_binary(binary_name_str);
@@ -2259,14 +2323,14 @@ pub extern "C" fn s2binlib_unload_binary(
 /// ```
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_unload_all_binaries() -> i32 {
-    let s2binlib_mutex = match S2BINLIB.get() {
-        Some(m) => m,
-        None => return -1,
+    let mut s2binlib_guard = match S2BINLIB.lock() {
+        Ok(guard) => guard,
+        Err(_) => return -5,
     };
 
-    let mut s2binlib = match s2binlib_mutex.lock() {
-        Ok(lib) => lib,
-        Err(_) => return -5,
+    let s2binlib = match s2binlib_guard.as_mut() {
+        Some(lib) => lib,
+        None => return -1,
     };
 
     s2binlib.unload_all_binaries();
@@ -2317,14 +2381,14 @@ pub extern "C" fn s2binlib_install_trampoline(
     mem_address: *mut c_void,
     trampoline_address_out: *mut *mut c_void,
 ) -> i32 {
-      let s2binlib_mutex = match S2BINLIB.get() {
-          Some(m) => m,
-          None => return -1,
+      let mut s2binlib_guard = match S2BINLIB.lock() {
+          Ok(guard) => guard,
+          Err(_) => return -5,
       };
 
-      let mut s2binlib = match s2binlib_mutex.lock() {
-          Ok(lib) => lib,
-          Err(_) => return -5,
+      let s2binlib = match s2binlib_guard.as_mut() {
+          Some(lib) => lib,
+          None => return -1,
       };
 
       match s2binlib.install_trampoline(mem_address as u64) {
@@ -2387,14 +2451,14 @@ pub extern "C" fn s2binlib_follow_xref_mem_to_mem(
         return -2;
     }
 
-    let s2binlib_mutex = match S2BINLIB.get() {
-        Some(m) => m,
-        None => return -1,
+    let s2binlib_guard = match S2BINLIB.lock() {
+        Ok(guard) => guard,
+        Err(_) => return -5,
     };
 
-    let s2binlib = match s2binlib_mutex.lock() {
-        Ok(lib) => lib,
-        Err(_) => return -5,
+    let s2binlib = match s2binlib_guard.as_ref() {
+        Some(lib) => lib,
+        None => return -1,
     };
 
     match s2binlib.follow_xref_mem_to_mem(mem_address as u64) {
@@ -2459,14 +2523,14 @@ pub extern "C" fn s2binlib_follow_xref_va_to_mem(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -2534,14 +2598,14 @@ pub extern "C" fn s2binlib_follow_xref_va_to_va(
             Err(_) => return -2,
         };
 
-        let s2binlib_mutex = match S2BINLIB.get() {
-            Some(m) => m,
-            None => return -1,
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
         };
 
-        let mut s2binlib = match s2binlib_mutex.lock() {
-            Ok(lib) => lib,
-            Err(_) => return -5,
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
