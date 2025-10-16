@@ -28,7 +28,7 @@ cargo build --release
 
 ## Linking and building
 
-On windows, if you are seeing linking error like `"__imp_NtReadFile"`, you also need to link `kernel32.dll`.
+On windows, if you are seeing linking error like `"__imp_NtReadFile"`, you also need to link `kernel32.dll` and `ntdll.dll`.
 
 ## Example
 
