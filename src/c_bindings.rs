@@ -803,6 +803,326 @@ pub extern "C" fn s2binlib_find_vtable_va(
     }
 }
 
+/// Find a vtable by mangled name and return its virtual address
+/// 
+/// Searches for a vtable using the mangled/decorated RTTI name directly.
+/// Unlike find_vtable_va which auto-decorates the name, this function uses
+/// the provided name as-is.
+/// 
+/// If the binary is not yet loaded, it will be loaded automatically.
+/// 
+/// # Parameters
+/// * `binary_name` - Name of the binary to search (null-terminated C string)
+/// * `vtable_name` - Mangled RTTI name to search for (null-terminated C string)
+/// * `result` - Pointer to store the resulting vtable virtual address
+/// 
+/// # Returns
+/// * 0 on success (address written to result)
+/// * -1 if S2BinLib not initialized
+/// * -2 if invalid parameters
+/// * -3 if failed to load binary
+/// * -4 if vtable not found
+/// * -5 if internal error
+/// 
+/// # Safety
+/// This function is unsafe because it dereferences raw pointers.
+/// 
+/// # Example
+/// ```c
+/// void* vtable_va;
+/// int result = s2binlib_find_vtable_mangled_va("server", ".?AVCBaseEntity@@", &vtable_va);
+/// if (result == 0) {
+///     printf("VTable VA: %p\n", vtable_va);
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_find_vtable_mangled_va(
+    binary_name: *const c_char,
+    vtable_name: *const c_char,
+    result: *mut *mut c_void,
+) -> i32 {
+    unsafe {
+        if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
+            return -2;
+        }
+
+        let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let vtable_name_str = match CStr::from_ptr(vtable_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
+        };
+
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
+        };
+
+        if !s2binlib.is_binary_loaded(binary_name_str) {
+            s2binlib.load_binary(binary_name_str);
+        }
+
+        match s2binlib.find_vtable_mangled_va(binary_name_str, vtable_name_str) {
+            Ok(addr) => {
+                *result = addr as *mut c_void;
+                0
+            }
+            Err(_) => -4,
+        }
+    }
+}
+
+/// Find a vtable by mangled name and return its runtime memory address
+/// 
+/// Searches for a vtable using the mangled/decorated RTTI name directly and
+/// returns its runtime memory address.
+/// 
+/// If the binary is not yet loaded, it will be loaded automatically.
+/// 
+/// # Parameters
+/// * `binary_name` - Name of the binary to search (null-terminated C string)
+/// * `vtable_name` - Mangled RTTI name to search for (null-terminated C string)
+/// * `result` - Pointer to store the resulting vtable memory address
+/// 
+/// # Returns
+/// * 0 on success (address written to result)
+/// * -1 if S2BinLib not initialized
+/// * -2 if invalid parameters
+/// * -3 if failed to load binary
+/// * -4 if vtable not found
+/// * -5 if internal error
+/// 
+/// # Safety
+/// This function is unsafe because it dereferences raw pointers.
+/// 
+/// # Example
+/// ```c
+/// void* vtable_addr;
+/// int result = s2binlib_find_vtable_mangled("server", ".?AVCBaseEntity@@", &vtable_addr);
+/// if (result == 0) {
+///     printf("VTable at: %p\n", vtable_addr);
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_find_vtable_mangled(
+    binary_name: *const c_char,
+    vtable_name: *const c_char,
+    result: *mut *mut c_void,
+) -> i32 {
+    unsafe {
+        if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
+            return -2;
+        }
+
+        let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let vtable_name_str = match CStr::from_ptr(vtable_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
+        };
+
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
+        };
+
+        if !s2binlib.is_binary_loaded(binary_name_str) {
+            s2binlib.load_binary(binary_name_str);
+        }
+
+        match s2binlib.find_vtable_mangled(binary_name_str, vtable_name_str) {
+            Ok(addr) => {
+                *result = addr as *mut c_void;
+                0
+            }
+            Err(_) => -4,
+        }
+    }
+}
+
+/// Find a nested vtable (2 levels) by class names and return its virtual address
+/// 
+/// Searches for a vtable of a nested class (e.g., Class1::Class2).
+/// The function automatically decorates the names according to the platform's
+/// RTTI name mangling scheme.
+/// 
+/// If the binary is not yet loaded, it will be loaded automatically.
+/// 
+/// # Parameters
+/// * `binary_name` - Name of the binary to search (null-terminated C string)
+/// * `class1_name` - Outer class name (null-terminated C string)
+/// * `class2_name` - Inner/nested class name (null-terminated C string)
+/// * `result` - Pointer to store the resulting vtable virtual address
+/// 
+/// # Returns
+/// * 0 on success (address written to result)
+/// * -1 if S2BinLib not initialized
+/// * -2 if invalid parameters
+/// * -3 if failed to load binary
+/// * -4 if vtable not found
+/// * -5 if internal error
+/// 
+/// # Safety
+/// This function is unsafe because it dereferences raw pointers.
+/// 
+/// # Example
+/// ```c
+/// void* vtable_va;
+/// int result = s2binlib_find_vtable_nested_2_va("server", "CEntitySystem", "CEntitySubsystem", &vtable_va);
+/// if (result == 0) {
+///     printf("Nested VTable VA: %p\n", vtable_va);
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_find_vtable_nested_2_va(
+    binary_name: *const c_char,
+    class1_name: *const c_char,
+    class2_name: *const c_char,
+    result: *mut *mut c_void,
+) -> i32 {
+    unsafe {
+        if binary_name.is_null() || class1_name.is_null() || class2_name.is_null() || result.is_null() {
+            return -2;
+        }
+
+        let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let class1_name_str = match CStr::from_ptr(class1_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let class2_name_str = match CStr::from_ptr(class2_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
+        };
+
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
+        };
+
+        if !s2binlib.is_binary_loaded(binary_name_str) {
+            s2binlib.load_binary(binary_name_str);
+        }
+
+        match s2binlib.find_vtable_nested_2_va(binary_name_str, class1_name_str, class2_name_str) {
+            Ok(addr) => {
+                *result = addr as *mut c_void;
+                0
+            }
+            Err(_) => -4,
+        }
+    }
+}
+
+/// Find a nested vtable (2 levels) by class names and return its runtime memory address
+/// 
+/// Searches for a vtable of a nested class (e.g., Class1::Class2) and returns
+/// its runtime memory address.
+/// 
+/// If the binary is not yet loaded, it will be loaded automatically.
+/// 
+/// # Parameters
+/// * `binary_name` - Name of the binary to search (null-terminated C string)
+/// * `class1_name` - Outer class name (null-terminated C string)
+/// * `class2_name` - Inner/nested class name (null-terminated C string)
+/// * `result` - Pointer to store the resulting vtable memory address
+/// 
+/// # Returns
+/// * 0 on success (address written to result)
+/// * -1 if S2BinLib not initialized
+/// * -2 if invalid parameters
+/// * -3 if failed to load binary
+/// * -4 if vtable not found
+/// * -5 if internal error
+/// 
+/// # Safety
+/// This function is unsafe because it dereferences raw pointers.
+/// 
+/// # Example
+/// ```c
+/// void* vtable_addr;
+/// int result = s2binlib_find_vtable_nested_2("server", "CEntitySystem", "CEntitySubsystem", &vtable_addr);
+/// if (result == 0) {
+///     printf("Nested VTable at: %p\n", vtable_addr);
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_find_vtable_nested_2(
+    binary_name: *const c_char,
+    class1_name: *const c_char,
+    class2_name: *const c_char,
+    result: *mut *mut c_void,
+) -> i32 {
+    unsafe {
+        if binary_name.is_null() || class1_name.is_null() || class2_name.is_null() || result.is_null() {
+            return -2;
+        }
+
+        let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let class1_name_str = match CStr::from_ptr(class1_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let class2_name_str = match CStr::from_ptr(class2_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
+        };
+
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
+        };
+
+        if !s2binlib.is_binary_loaded(binary_name_str) {
+            s2binlib.load_binary(binary_name_str);
+        }
+
+        match s2binlib.find_vtable_nested_2(binary_name_str, class1_name_str, class2_name_str) {
+            Ok(addr) => {
+                *result = addr as *mut c_void;
+                0
+            }
+            Err(_) => -4,
+        }
+    }
+}
+
 /// Get the number of virtual functions in a vtable
 /// 
 /// Returns the count of virtual functions (vfuncs) in the specified vtable.
