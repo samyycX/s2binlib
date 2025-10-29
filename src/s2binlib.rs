@@ -126,6 +126,14 @@ impl S2BinLib {
         _ => format!("{}{}", name.len(), name),
       }
     }
+
+    fn decorate_rtti_type_descriptor_name_nested_2(&self, class1: &str, class2: &str) -> String {
+      match self.os.as_str() {
+        "windows" => format!(".?AV{}@{}@@", class2, class1),
+        _ => format!("N{}{}{}{}E", class1.len(), class1, class2.len(), class2),
+      }
+    }
+
     pub fn new(game_path: &str, game_type: &str, os: &str) -> Self {
         Self { 
           game_path: PathBuf::from(game_path),
@@ -363,9 +371,8 @@ impl S2BinLib {
 
     fn find_vtable_va_windows(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
         let binary_data = self.get_binary(binary_name)?;
-        let decorated_name = self.decorate_rtti_type_descriptor_name(vtable_name);
 
-        let type_descriptor_name = self.find_pattern_string_in_section(binary_name, ".data", &decorated_name)?;
+        let type_descriptor_name = self.find_pattern_string_in_section(binary_name, ".data", &vtable_name)?;
 
         let rtti_type_descriptor = self.file_offset_to_va(binary_name, type_descriptor_name)? - 0x10 - self.get_image_base(binary_name)?;
 
@@ -393,23 +400,22 @@ impl S2BinLib {
 
     fn find_vtable_va_linux(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
         let binary_data = self.get_binary(binary_name)?;
-        let decorated_name = self.decorate_rtti_type_descriptor_name(vtable_name);
 
         let data_range = self.get_section_range(binary_name, ".rodata")?;
 
         let offset = data_range.0;
 
-        let mut type_info_name = find_pattern_simd(&binary_data[offset as usize..], &decorated_name.as_bytes(), &vec![])?;
+        let mut type_info_name = find_pattern_simd(&binary_data[offset as usize..], &vtable_name.as_bytes(), &vec![])?;
         type_info_name += offset;
         while type_info_name != 0 {
 
           let type_info_name_str = self.read_string(binary_name, type_info_name)?;
 
-          if type_info_name_str == decorated_name {
+          if type_info_name_str == vtable_name {
             break;
           }
           let last_type_descriptor_name = type_info_name + 1;
-          type_info_name = find_pattern_simd(&binary_data[last_type_descriptor_name as usize..], &decorated_name.as_bytes(), &vec![])?;
+          type_info_name = find_pattern_simd(&binary_data[last_type_descriptor_name as usize..], &vtable_name.as_bytes(), &vec![])?;
           type_info_name += last_type_descriptor_name;
         }
         
@@ -496,11 +502,20 @@ impl S2BinLib {
     }
 
     pub fn find_vtable_va(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
-        match self.os.as_str() {
-            "windows" => self.find_vtable_va_windows(binary_name, vtable_name),
-            _ => self.find_vtable_va_linux(binary_name, vtable_name),
-        }
+      self.find_vtable_mangled_va(binary_name, &self.decorate_rtti_type_descriptor_name(vtable_name))
     }
+
+    pub fn find_vtable_nested_2_va(&self, binary_name: &str, class1_name: &str, class2_name: &str) -> Result<u64> {
+      self.find_vtable_mangled_va(binary_name, &self.decorate_rtti_type_descriptor_name_nested_2(class1_name, class2_name))
+    }
+
+    pub fn find_vtable_mangled_va(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
+      match self.os.as_str() {
+        "windows" => self.find_vtable_va_windows(binary_name, vtable_name),
+        _ => self.find_vtable_va_linux(binary_name, vtable_name),
+      }
+    }
+
 
     pub fn get_vtable_vfunc_count(&self, binary_name: &str, vtable_name: &str) -> Result<usize> {
       let vtable = self.find_vtable_va(binary_name, vtable_name)?;
@@ -522,6 +537,16 @@ impl S2BinLib {
 
     pub fn find_vtable(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
       let result = self.find_vtable_va(binary_name, vtable_name)?;
+      Ok(self.va_to_mem_address(binary_name, result)?)
+    }
+
+    pub fn find_vtable_mangled(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
+      let result = self.find_vtable_mangled_va(binary_name, vtable_name)?;
+      Ok(self.va_to_mem_address(binary_name, result)?)
+    }
+
+    pub fn find_vtable_nested_2(&self, binary_name: &str, class1_name: &str, class2_name: &str) -> Result<u64> {
+      let result = self.find_vtable_nested_2_va(binary_name, class1_name, class2_name)?;
       Ok(self.va_to_mem_address(binary_name, result)?)
     }
 

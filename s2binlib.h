@@ -245,6 +245,132 @@ extern "C"
   int s2binlib_find_vtable_va(const char *binary_name, const char *vtable_name, void **result);
 
   /**
+   * Find a vtable by mangled name and return its virtual address
+   *
+   * Searches for a vtable using the mangled/decorated RTTI name directly.
+   * Unlike s2binlib_find_vtable_va which auto-decorates the name, this function
+   * uses the provided name as-is.
+   *
+   * If the binary is not yet loaded, it will be loaded automatically.
+   *
+   * @param binary_name Name of the binary to search (null-terminated C string)
+   * @param vtable_name Mangled RTTI name to search for (null-terminated C string)
+   *                    - Windows: ".?AVClassName@@" format
+   *                    - Linux: "{length}ClassName" format
+   * @param result Pointer to store the resulting vtable virtual address
+   *
+   * @return 0 on success (address written to result)
+   *         -1 if S2BinLib not initialized
+   *         -2 if invalid parameters
+   *         -3 if failed to load binary
+   *         -4 if vtable not found
+   *         -5 if internal error
+   *
+   * @example
+   *     // Windows mangled name example
+   *     void* vtable_va;
+   *     int result = s2binlib_find_vtable_mangled_va("server", ".?AVCBaseEntity@@", &vtable_va);
+   *     if (result == 0) {
+   *         printf("VTable VA: %p\n", vtable_va);
+   *     }
+   *
+   *     // Linux mangled name example
+   *     int result = s2binlib_find_vtable_mangled_va("server", "11CBaseEntity", &vtable_va);
+   */
+  int s2binlib_find_vtable_mangled_va(const char *binary_name, const char *vtable_name, void **result);
+
+  /**
+   * Find a vtable by mangled name and return its runtime memory address
+   *
+   * Searches for a vtable using the mangled/decorated RTTI name directly and
+   * returns its runtime memory address.
+   *
+   * If the binary is not yet loaded, it will be loaded automatically.
+   *
+   * @param binary_name Name of the binary to search (null-terminated C string)
+   * @param vtable_name Mangled RTTI name to search for (null-terminated C string)
+   *                    - Windows: ".?AVClassName@@" format
+   *                    - Linux: "{length}ClassName" format
+   * @param result Pointer to store the resulting vtable memory address
+   *
+   * @return 0 on success (address written to result)
+   *         -1 if S2BinLib not initialized
+   *         -2 if invalid parameters
+   *         -3 if failed to load binary
+   *         -4 if vtable not found
+   *         -5 if internal error
+   *
+   * @example
+   *     void* vtable_addr;
+   *     int result = s2binlib_find_vtable_mangled("server", ".?AVCBaseEntity@@", &vtable_addr);
+   *     if (result == 0) {
+   *         printf("VTable at: %p\n", vtable_addr);
+   *     }
+   */
+  int s2binlib_find_vtable_mangled(const char *binary_name, const char *vtable_name, void **result);
+
+  /**
+   * Find a nested vtable (2 levels) by class names and return its virtual address
+   *
+   * Searches for a vtable of a nested class (e.g., Class1::Class2).
+   * The function automatically decorates the names according to the platform's
+   * RTTI name mangling scheme:
+   * - Windows: ".?AVClass2@Class1@@"
+   * - Linux: "N{len1}Class1{len2}Class2E"
+   *
+   * If the binary is not yet loaded, it will be loaded automatically.
+   *
+   * @param binary_name Name of the binary to search (null-terminated C string)
+   * @param class1_name Outer class name (null-terminated C string)
+   * @param class2_name Inner/nested class name (null-terminated C string)
+   * @param result Pointer to store the resulting vtable virtual address
+   *
+   * @return 0 on success (address written to result)
+   *         -1 if S2BinLib not initialized
+   *         -2 if invalid parameters
+   *         -3 if failed to load binary
+   *         -4 if vtable not found
+   *         -5 if internal error
+   *
+   * @example
+   *     void* vtable_va;
+   *     int result = s2binlib_find_vtable_nested_2_va("server", "CEntitySystem", "CEntitySubsystem", &vtable_va);
+   *     if (result == 0) {
+   *         printf("Nested VTable VA: %p\n", vtable_va);
+   *     }
+   */
+  int s2binlib_find_vtable_nested_2_va(const char *binary_name, const char *class1_name, const char *class2_name, void **result);
+
+  /**
+   * Find a nested vtable (2 levels) by class names and return its runtime memory address
+   *
+   * Searches for a vtable of a nested class (e.g., Class1::Class2) and returns
+   * its runtime memory address.
+   *
+   * If the binary is not yet loaded, it will be loaded automatically.
+   *
+   * @param binary_name Name of the binary to search (null-terminated C string)
+   * @param class1_name Outer class name (null-terminated C string)
+   * @param class2_name Inner/nested class name (null-terminated C string)
+   * @param result Pointer to store the resulting vtable memory address
+   *
+   * @return 0 on success (address written to result)
+   *         -1 if S2BinLib not initialized
+   *         -2 if invalid parameters
+   *         -3 if failed to load binary
+   *         -4 if vtable not found
+   *         -5 if internal error
+   *
+   * @example
+   *     void* vtable_addr;
+   *     int result = s2binlib_find_vtable_nested_2("server", "CEntitySystem", "CEntitySubsystem", &vtable_addr);
+   *     if (result == 0) {
+   *         printf("Nested VTable at: %p\n", vtable_addr);
+   *     }
+   */
+  int s2binlib_find_vtable_nested_2(const char *binary_name, const char *class1_name, const char *class2_name, void **result);
+
+  /**
    * Find a symbol by name in the specified binary
    *
    * If the binary is not yet loaded, it will be loaded automatically.
