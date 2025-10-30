@@ -1215,6 +1215,86 @@ pub extern "C" fn s2binlib_get_vtable_vfunc_count(
     }
 }
 
+/// Get the number of virtual functions in a vtable by virtual address
+/// 
+/// Returns the count of virtual functions (vfuncs) in a vtable at the specified
+/// virtual address. This counts valid function pointers in the vtable until it
+/// encounters a null or invalid pointer.
+/// 
+/// Unlike get_vtable_vfunc_count, this function takes a virtual address directly
+/// instead of looking up the vtable by name.
+/// 
+/// If the binary is not yet loaded, it will be loaded automatically.
+/// 
+/// # Parameters
+/// * `binary_name` - Name of the binary (e.g., "server", "client") (null-terminated C string)
+/// * `vtable_va` - Virtual address of the vtable
+/// * `result` - Pointer to store the resulting count of virtual functions
+/// 
+/// # Returns
+/// * `0` - Success, result contains the vfunc count
+/// * `-1` - S2BinLib not initialized
+/// * `-2` - Invalid input (null pointer or invalid UTF-8)
+/// * `-4` - Operation failed (invalid address or other error)
+/// * `-5` - Failed to acquire lock
+/// 
+/// # Safety
+/// This function is unsafe because it dereferences raw pointers.
+/// The caller must ensure that the pointers are valid.
+/// 
+/// # Example
+/// ```c
+/// void* vtable_va;
+/// // First get the vtable virtual address
+/// s2binlib_find_vtable_va("server", "CBaseEntity", &vtable_va);
+/// 
+/// // Then count its virtual functions
+/// size_t vfunc_count;
+/// int result = s2binlib_get_vtable_vfunc_count_by_va("server", (uint64_t)vtable_va, &vfunc_count);
+/// if (result == 0) {
+///     printf("VTable has %zu virtual functions\n", vfunc_count);
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_get_vtable_vfunc_count_by_va(
+    binary_name: *const c_char,
+    vtable_va: u64,
+    result: *mut usize,
+) -> i32 {
+    unsafe {
+        if binary_name.is_null() || result.is_null() {
+            return -2;
+        }
+
+        let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return -2,
+        };
+
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
+        };
+
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return -1,
+        };
+
+        if !s2binlib.is_binary_loaded(binary_name_str) {
+            s2binlib.load_binary(binary_name_str);
+        }
+
+        match s2binlib.get_vtable_vfunc_count_by_va(binary_name_str, vtable_va) {
+            Ok(count) => {
+                *result = count;
+                0
+            }
+            Err(_) => -4,
+        }
+    }
+}
+
 /// Pattern scan and return the virtual address
 /// 
 /// Scans for a byte pattern in the specified binary and returns the virtual address (VA)
@@ -2957,6 +3037,125 @@ pub extern "C" fn s2binlib_follow_xref_va_to_va(
                 0
             },
             Err(_) => -3,
+        }
+    }
+}
+
+/// Find the NetworkVar_StateChanged vtable index by virtual address
+/// 
+/// This function scans the vtable at the given virtual address to find the
+/// index of the NetworkVar_StateChanged virtual function. It analyzes each
+/// virtual function in the vtable looking for the specific instruction pattern
+/// that identifies the StateChanged function (cmp dword ptr [reg+56], 0xFF).
+/// 
+/// # Parameters
+/// * `vtable_va` - Virtual address of the vtable to analyze
+/// * `result` - Pointer to store the resulting index (as u64)
+/// 
+/// # Returns
+/// * 0 on success (index written to result)
+/// * -1 if S2BinLib not initialized
+/// * -2 if invalid parameters
+/// * -4 if NetworkVar_StateChanged not found in vtable
+/// * -5 if internal error
+/// 
+/// # Safety
+/// This function is unsafe because it dereferences raw pointers.
+/// 
+/// # Example
+/// ```c
+/// uint64_t index;
+/// int result = s2binlib_find_networkvar_vtable_statechanged_va(0x140001000, &index);
+/// if (result == 0) {
+///     printf("StateChanged index: %llu\n", index);
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_find_networkvar_vtable_statechanged_va(
+    vtable_va: u64,
+    result: *mut u64,
+) -> i32 {
+    unsafe {
+        if result.is_null() {
+            return -2;
+        }
+
+        let s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
+        };
+
+        let s2binlib = match s2binlib_guard.as_ref() {
+            Some(lib) => lib,
+            None => return -1,
+        };
+
+        match s2binlib.find_networkvar_vtable_statechanged_va(vtable_va) {
+            Ok(index) => {
+                *result = index;
+                0
+            }
+            Err(_) => -4,
+        }
+    }
+}
+
+/// Find the NetworkVar_StateChanged vtable index by memory address
+/// 
+/// This function converts the runtime memory address to a virtual address,
+/// then scans the vtable to find the index of the NetworkVar_StateChanged
+/// virtual function. It analyzes each virtual function in the vtable looking
+/// for the specific instruction pattern that identifies the StateChanged function.
+/// 
+/// # Parameters
+/// * `vtable_mem_address` - Runtime memory address of the vtable
+/// * `result` - Pointer to store the resulting index (as u64)
+/// 
+/// # Returns
+/// * 0 on success (index written to result)
+/// * -1 if S2BinLib not initialized
+/// * -2 if invalid parameters
+/// * -3 if address conversion failed
+/// * -4 if NetworkVar_StateChanged not found in vtable
+/// * -5 if internal error
+/// 
+/// # Safety
+/// This function is unsafe because it dereferences raw pointers.
+/// 
+/// # Example
+/// ```c
+/// uint64_t index;
+/// int result = s2binlib_find_networkvar_vtable_statechanged(vtable_ptr, &index);
+/// if (result == 0) {
+///     printf("StateChanged index: %llu\n", index);
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_find_networkvar_vtable_statechanged(
+    vtable_mem_address: u64,
+    result: *mut u64,
+) -> i32 {
+    unsafe {
+        if result.is_null() {
+            return -2;
+        }
+
+        let s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return -5,
+        };
+
+        let s2binlib = match s2binlib_guard.as_ref() {
+            Some(lib) => lib,
+            None => return -1,
+        };
+
+        match s2binlib.find_networkvar_vtable_statechanged(vtable_mem_address) {
+            Ok(index) => {
+                *result = index;
+                0
+            }
+            Err(_) => -4,
         }
     }
 }
