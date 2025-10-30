@@ -33,12 +33,13 @@ mod tests {
     use std::time::Instant;
 
     use anyhow::Result;
+    use iced_x86::{Code, Decoder, DecoderOptions, Mnemonic, OpKind};
 
     use super::*;
 
     #[test]
     fn test_s2binlib() -> Result<()> {
-        let mut s2binlib = S2BinLib::new("F:/cs2server/game", "csgo", "windows");
+        let mut s2binlib = S2BinLib::new("F:/cs2server/game", "csgo", "linux");
 
         s2binlib.load_binary("server");
 
@@ -47,14 +48,14 @@ mod tests {
 
         // s2binlib.load_binary("tier0");
         // println!("1");
-        // println!("{:X}", s2binlib.find_vtable_va("server", "CTraceFilter")?);
+        
         
         let start = Instant::now();
 
-        let xref = s2binlib.pattern_scan_va("server", "4C 8D 35 ? ? ? ? 77")?;
+        // let xref = s2binlib.pattern_scan_va("server", "4C 8D 35 ? ? ? ? 77")?;
 
-        let duration = start.elapsed();
-        println!("Time taken: {:?}", duration);
+        // let duration = start.elapsed();
+        // println!("Time taken: {:?}", duration);  
         // println!("xref {:X}", xref);
         // println!("follow xref {:X}", s2binlib.follow_xref_va_to_va("server", xref)?);
 
