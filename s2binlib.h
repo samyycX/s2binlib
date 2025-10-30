@@ -390,6 +390,70 @@ extern "C"
   int s2binlib_find_vtable_nested_2(const char *binary_name, const char *class1_name, const char *class2_name, void **result);
 
   /**
+   * Get the number of virtual functions in a vtable
+   *
+   * Returns the count of virtual functions (vfuncs) in the specified vtable.
+   * This counts valid function pointers in the vtable until it encounters a null
+   * or invalid pointer.
+   *
+   * If the binary is not yet loaded, it will be loaded automatically.
+   *
+   * @param binary_name Name of the binary to search (e.g., "server", "client")
+   * @param vtable_name Name of the vtable/class to search for
+   * @param result Pointer to store the resulting count of virtual functions
+   *
+   * @return 0 - Success, result contains the vfunc count
+   *         -1 - S2BinLib not initialized
+   *         -2 - Invalid input (null pointer or invalid UTF-8)
+   *         -4 - Operation failed (vtable not found or other error)
+   *         -5 - Failed to acquire lock
+   *
+   * @example
+   *     size_t vfunc_count;
+   *     int result = s2binlib_get_vtable_vfunc_count("server", "CBaseEntity", &vfunc_count);
+   *     if (result == 0) {
+   *         printf("VTable has %zu virtual functions\n", vfunc_count);
+   *     }
+   */
+  int s2binlib_get_vtable_vfunc_count(const char *binary_name, const char *vtable_name, size_t *result);
+
+  /**
+   * Get the number of virtual functions in a vtable by virtual address
+   *
+   * Returns the count of virtual functions (vfuncs) in a vtable at the specified
+   * virtual address. This counts valid function pointers in the vtable until it
+   * encounters a null or invalid pointer.
+   *
+   * Unlike s2binlib_get_vtable_vfunc_count, this function takes a virtual address
+   * directly instead of looking up the vtable by name.
+   *
+   * If the binary is not yet loaded, it will be loaded automatically.
+   *
+   * @param binary_name Name of the binary (e.g., "server", "client")
+   * @param vtable_va Virtual address of the vtable
+   * @param result Pointer to store the resulting count of virtual functions
+   *
+   * @return 0 - Success, result contains the vfunc count
+   *         -1 - S2BinLib not initialized
+   *         -2 - Invalid input (null pointer or invalid UTF-8)
+   *         -4 - Operation failed (invalid address or other error)
+   *         -5 - Failed to acquire lock
+   *
+   * @example
+   *     void* vtable_va;
+   *     // First get the vtable virtual address
+   *     s2binlib_find_vtable_va("server", "CBaseEntity", &vtable_va);
+   *
+   *     // Then count its virtual functions
+   *     size_t vfunc_count;
+   *     int result = s2binlib_get_vtable_vfunc_count_by_va("server", (uint64_t)vtable_va, &vfunc_count);
+   *     if (result == 0) {
+   *         printf("VTable has %zu virtual functions\n", vfunc_count);
+   *     }
+   */
+  int s2binlib_get_vtable_vfunc_count_by_va(const char *binary_name, uint64_t vtable_va, size_t *result);
+
+  /**
    * Find a symbol by name in the specified binary
    *
    * If the binary is not yet loaded, it will be loaded automatically.
@@ -1122,6 +1186,59 @@ extern "C"
    *     }
    */
   int s2binlib_follow_xref_va_to_va(const char *binary_name, uint64_t va, uint64_t *target_va_out);
+
+  /**
+   * @brief Find the NetworkVar_StateChanged vtable index by virtual address
+   *
+   * This function scans the vtable at the given virtual address to find the
+   * index of the NetworkVar_StateChanged virtual function. It analyzes each
+   * virtual function in the vtable looking for the specific instruction pattern
+   * that identifies the StateChanged function (cmp dword ptr [reg+56], 0xFF).
+   *
+   * @param vtable_va Virtual address of the vtable to analyze
+   * @param result Pointer to store the resulting index (as uint64_t)
+   *
+   * @return 0 on success (index written to result)
+   *         -1 if S2BinLib not initialized
+   *         -2 if invalid parameters
+   *         -4 if NetworkVar_StateChanged not found in vtable
+   *         -5 if internal error
+   *
+   * @example
+   *     uint64_t index;
+   *     int result = s2binlib_find_networkvar_vtable_statechanged_va(0x140001000, &index);
+   *     if (result == 0) {
+   *         printf("StateChanged index: %llu\n", index);
+   *     }
+   */
+  int s2binlib_find_networkvar_vtable_statechanged_va(uint64_t vtable_va, uint64_t *result);
+
+  /**
+   * @brief Find the NetworkVar_StateChanged vtable index by memory address
+   *
+   * This function converts the runtime memory address to a virtual address,
+   * then scans the vtable to find the index of the NetworkVar_StateChanged
+   * virtual function. It analyzes each virtual function in the vtable looking
+   * for the specific instruction pattern that identifies the StateChanged function.
+   *
+   * @param vtable_mem_address Runtime memory address of the vtable
+   * @param result Pointer to store the resulting index (as uint64_t)
+   *
+   * @return 0 on success (index written to result)
+   *         -1 if S2BinLib not initialized
+   *         -2 if invalid parameters
+   *         -3 if address conversion failed
+   *         -4 if NetworkVar_StateChanged not found in vtable
+   *         -5 if internal error
+   *
+   * @example
+   *     uint64_t index;
+   *     int result = s2binlib_find_networkvar_vtable_statechanged(vtable_ptr, &index);
+   *     if (result == 0) {
+   *         printf("StateChanged index: %llu\n", index);
+   *     }
+   */
+  int s2binlib_find_networkvar_vtable_statechanged(uint64_t vtable_mem_address, uint64_t *result);
 
 #ifdef __cplusplus
 }
