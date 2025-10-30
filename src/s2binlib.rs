@@ -21,7 +21,7 @@ use std::{collections::{btree_map::VacantEntry, HashMap}, fs, path::PathBuf};
 
 use anyhow::{anyhow, Result};
 use object::{read::pe::ImageOptionalHeader, Object, ObjectSection, ObjectSymbol};
-use iced_x86::{Decoder, DecoderOptions, Instruction, OpKind, Register};
+use iced_x86::{Code, Decoder, DecoderOptions, Instruction, OpKind, Register};
 
 use crate::{find_pattern_simd, is_executable, jit::JitTrampoline, memory::{get_module_base_from_pointer, set_mem_access} };
 
@@ -537,11 +537,15 @@ impl S2BinLib {
 
 
     pub fn get_vtable_vfunc_count(&self, binary_name: &str, vtable_name: &str) -> Result<usize> {
-      let vtable = self.find_vtable_va(binary_name, vtable_name)?;
+      let vtable_va = self.find_vtable_va(binary_name, vtable_name)?;
+      self.get_vtable_vfunc_count_by_va(binary_name, vtable_va)
+    }
+
+    pub fn get_vtable_vfunc_count_by_va(&self, binary_name: &str, vtable_va: u64) -> Result<usize> {
       let mut offset = 0;
 
       loop {
-        let vfunc_va = self.read_by_va(binary_name, vtable + offset, 8)?;
+        let vfunc_va = self.read_by_va(binary_name, vtable_va + offset, 8)?;
         let vfunc_va = u64::from_le_bytes(vfunc_va.try_into().unwrap());
 
         if vfunc_va == 0 || !self.is_valid_executable_va(binary_name, vfunc_va)? {
@@ -1008,5 +1012,37 @@ impl S2BinLib {
         ))
     }
 
+    pub fn find_networkvar_vtable_statechanged_va(&self, vtable_va: u64) -> Result<u64> {
+
+        let vfunc_count = self.get_vtable_vfunc_count_by_va("server", vtable_va)?;
+
+        for i in 0..vfunc_count {
+            let vfunc_va = self.read_by_va("server", vtable_va + i as u64 * 8, 8)?;
+            let vfunc_va = u64::from_le_bytes(vfunc_va.try_into().unwrap());
+
+            let bytes = self.read_by_va("server", vfunc_va, 32)?;
+
+            let mut iced = Decoder::with_ip(64, &bytes, 0, DecoderOptions::NONE);
+
+            while iced.can_decode() {
+                let inst = iced.decode();
+                if inst.code() == Code::Cmp_rm32_imm8 {
+                    let mem_displ = inst.memory_displacement32();
+                    let immediate = inst.immediate8();
+                    // 56 is NetworkStateChangedData->m_nPathIndex
+                    if mem_displ == 56 && immediate == 255 {
+                        return Ok(i as u64);
+                    }
+                }
+            }
+            
+        }
+      Err(anyhow::anyhow!("NetworkVar_StateChanged not found"))
+    }
+
+    pub fn find_networkvar_vtable_statechanged(&self, vtable_mem_address: u64) -> Result<u64> {
+      let vtable_va = self.mem_address_to_va("server", vtable_mem_address)?;
+      self.find_networkvar_vtable_statechanged_va(vtable_va)
+    }
 
 }
