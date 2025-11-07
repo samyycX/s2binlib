@@ -48,7 +48,11 @@ mod tests {
 
         // s2binlib.load_binary("tier0");
         // println!("1");
-        
+
+
+        let vtable = s2binlib.find_vtable_nested_2_va("server", "CBaseAnimGraphController", "NetworkVar_m_animGraphNetworkedVars")?;
+        let index = s2binlib.find_networkvar_vtable_statechanged_va(vtable)?;
+        println!("index {:X}", index);
         
         let start = Instant::now();
 
