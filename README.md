@@ -15,6 +15,8 @@ This library mainly read data from original binary file instead of from memory, 
 - Find symbol
 - Get module base address
 - Install trampoline to vtable with enough bytes padded with NOP (for safetyhook to hook empty virtual function)
+- Find all CEmbeddedNetworkVar NetworkStateChanged function index
+- Follow xref safely
 
 ## Compiling
 
@@ -25,6 +27,20 @@ Run the following command to compile.
 ```
 cargo build --release
 ```
+
+### Debug Mode for C Bindings
+
+To enable debug output for all C binding errors, compile with the `debug_c_bindings` feature:
+```
+cargo build --release --features debug_c_bindings
+```
+
+When enabled, all error returns in C bindings will print detailed debug information to stdout, including:
+- Error code
+- Error message
+- File name and line number where the error occurred
+
+This is useful for debugging integration issues with the C API.
 
 ## Linking and building
 
