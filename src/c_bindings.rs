@@ -23,6 +23,31 @@ use once_cell::sync::Lazy;
 
 use crate::S2BinLib;
 
+/// Macro for debug logging in C bindings when the debug_c_bindings feature is enabled
+#[cfg(feature = "debug_c_bindings")]
+macro_rules! c_debug {
+    ($($arg:tt)*) => {
+        println!("[S2BinLib C Binding Debug] {}", format!($($arg)*));
+    };
+}
+
+#[cfg(not(feature = "debug_c_bindings"))]
+macro_rules! c_debug {
+    ($($arg:tt)*) => {};
+}
+
+/// Macro to return an error code with optional debug message
+macro_rules! return_error {
+    ($code:expr, $msg:expr) => {{
+        c_debug!("Error {}: {} (at {}:{})", $code, $msg, file!(), line!());
+        return $code;
+    }};
+    ($code:expr) => {{
+        c_debug!("Error {} (at {}:{})", $code, file!(), line!());
+        return $code;
+    }};
+}
+
 /// Global S2BinLib instance
 static S2BINLIB: Lazy<Mutex<Option<S2BinLib>>> = Lazy::new(|| Mutex::new(None));
 
@@ -59,18 +84,18 @@ pub extern "C" fn s2binlib_initialize(
     unsafe {
         // Validate input pointers
         if game_path.is_null() || game_type.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: game_path or game_type is null");
         }
 
         // Convert C strings to Rust strings
         let game_path_str = match CStr::from_ptr(game_path).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert game_path to UTF-8 string"),
         };
 
         let game_type_str = match CStr::from_ptr(game_type).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert game_type to UTF-8 string"),
         };
 
         // Automatically detect the operating system
@@ -79,13 +104,13 @@ pub extern "C" fn s2binlib_initialize(
         } else if cfg!(target_os = "linux") {
             "linux"
         } else {
-            return -2; // Unsupported OS
+            return_error!(-2, "Unsupported operating system");
         };
 
         // Initialize the global instance
         let mut s2binlib = match S2BINLIB.lock() {
             Ok(lib) => lib,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
         
         *s2binlib = Some(S2BinLib::new(game_path_str, game_type_str, os_str));
@@ -127,29 +152,29 @@ pub extern "C" fn s2binlib_initialize_with_os(
     unsafe {
         // Validate input pointers
         if game_path.is_null() || game_type.is_null() || os.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: game_path, game_type or os is null");
         }
 
         // Convert C strings to Rust strings
         let game_path_str = match CStr::from_ptr(game_path).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert game_path to UTF-8 string"),
         };
 
         let game_type_str = match CStr::from_ptr(game_type).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert game_type to UTF-8 string"),
         };
 
         let os_str = match CStr::from_ptr(os).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert os to UTF-8 string"),
         };
 
         // Initialize the global instance
         let mut s2binlib = match S2BINLIB.lock() {
             Ok(lib) => lib,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
         
         *s2binlib = Some(S2BinLib::new(game_path_str, game_type_str, os_str));
@@ -195,29 +220,29 @@ pub extern "C" fn s2binlib_pattern_scan(
     unsafe {
         // Validate input pointers
         if binary_name.is_null() || pattern.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, pattern or result is null");
         }
 
         // Convert C strings to Rust strings
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let pattern_str = match CStr::from_ptr(pattern).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         // Get the global instance
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         // Load binary if not already loaded
@@ -231,7 +256,7 @@ pub extern "C" fn s2binlib_pattern_scan(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -274,29 +299,29 @@ pub extern "C" fn s2binlib_find_vtable(
     unsafe {
         // Validate input pointers
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, vtable_name or result is null");
         }
 
         // Convert C strings to Rust strings
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let vtable_name_str = match CStr::from_ptr(vtable_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         // Get the global instance
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         // Load binary if not already loaded
@@ -310,7 +335,7 @@ pub extern "C" fn s2binlib_find_vtable(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -352,29 +377,29 @@ pub extern "C" fn s2binlib_find_symbol(
     unsafe {
         // Validate input pointers
         if binary_name.is_null() || symbol_name.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, symbol_name or result is null");
         }
 
         // Convert C strings to Rust strings
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let symbol_name_str = match CStr::from_ptr(symbol_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         // Get the global instance
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         // Load binary if not already loaded
@@ -388,7 +413,7 @@ pub extern "C" fn s2binlib_find_symbol(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -3,
+            Err(_) => return_error!(-3, "Failed to load binary or operation failed"),
         }
     }
 }
@@ -428,24 +453,24 @@ pub extern "C" fn s2binlib_set_module_base_from_pointer(
     unsafe {
         // Validate input pointers
         if binary_name.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameter: binary_name is null");
         }
 
         // Convert C strings to Rust strings
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         // Get the global instance
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         // Set the base address for the module
@@ -483,26 +508,100 @@ pub extern "C" fn s2binlib_clear_module_base_address(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameter: binary_name is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         s2binlib.clear_module_base_address(binary_name_str);
         0
+    }
+}
+
+/// Set a custom binary path for a specific binary and operating system
+/// 
+/// This allows overriding the default binary path resolution for a specific binary.
+/// You can specify different paths for Windows and Linux builds.
+/// 
+/// # Parameters
+/// * `binary_name` - Name of the binary (e.g., "server", "client") (null-terminated C string)
+/// * `path` - The custom file path to the binary (null-terminated C string)
+/// * `os` - Operating system identifier ("windows" or "linux") (null-terminated C string)
+/// 
+/// # Returns
+/// * 0 on success
+/// * -1 if S2BinLib not initialized
+/// * -2 if invalid parameters
+/// * -4 if unsupported OS specified
+/// * -5 if internal error
+/// 
+/// # Safety
+/// This function is unsafe because it dereferences raw pointers.
+/// 
+/// # Example
+/// ```c
+/// int result = s2binlib_set_custom_binary_path("server", "/custom/path/server.dll", "windows");
+/// if (result == 0) {
+///     printf("Custom binary path set successfully\n");
+/// }
+/// ```
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_set_custom_binary_path(
+    binary_name: *const c_char,
+    path: *const c_char,
+    os: *const c_char
+) -> i32 {
+    unsafe {
+        // Validate input pointers
+        if binary_name.is_null() || path.is_null() || os.is_null() {
+            return_error!(-2, "Invalid parameters: binary_name, path or os is null");
+        }
+
+        // Convert C strings to Rust strings
+        let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
+        };
+
+        let path_str = match CStr::from_ptr(path).to_str() {
+            Ok(s) => s,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
+        };
+
+        let os_str = match CStr::from_ptr(os).to_str() {
+            Ok(s) => s,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
+        };
+
+        // Get the global instance
+        let mut s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
+        };
+
+        let s2binlib = match s2binlib_guard.as_mut() {
+            Some(lib) => lib,
+            None => return_error!(-1, "S2BinLib not initialized"),
+        };
+
+        // Set the custom binary path
+        match s2binlib.set_custom_binary_path(binary_name_str, path_str, os_str) {
+            Ok(_) => 0,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"), // Unsupported OS
+        }
     }
 }
 
@@ -541,22 +640,22 @@ pub extern "C" fn s2binlib_get_module_base_address(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_ref() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         match s2binlib.get_module_base_address(binary_name_str) {
@@ -564,7 +663,7 @@ pub extern "C" fn s2binlib_get_module_base_address(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -3,
+            Err(_) => return_error!(-3, "Failed to load binary or operation failed"),
         }
     }
 }
@@ -597,22 +696,22 @@ pub extern "C" fn s2binlib_is_binary_loaded(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameter: binary_name is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_ref() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if s2binlib.is_binary_loaded(binary_name_str) {
@@ -654,22 +753,22 @@ pub extern "C" fn s2binlib_load_binary(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameter: binary_name is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         s2binlib.load_binary(binary_name_str);
@@ -718,17 +817,17 @@ pub extern "C" fn s2binlib_get_binary_path(
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_ref() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         let path = s2binlib.get_binary_path(binary_name_str);
@@ -785,27 +884,27 @@ pub extern "C" fn s2binlib_find_vtable_va(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, vtable_name or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let vtable_name_str = match CStr::from_ptr(vtable_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -817,7 +916,7 @@ pub extern "C" fn s2binlib_find_vtable_va(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -862,27 +961,27 @@ pub extern "C" fn s2binlib_find_vtable_mangled_va(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, vtable_name or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let vtable_name_str = match CStr::from_ptr(vtable_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -894,7 +993,7 @@ pub extern "C" fn s2binlib_find_vtable_mangled_va(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -938,27 +1037,27 @@ pub extern "C" fn s2binlib_find_vtable_mangled(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, vtable_name or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let vtable_name_str = match CStr::from_ptr(vtable_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -970,7 +1069,7 @@ pub extern "C" fn s2binlib_find_vtable_mangled(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -1017,32 +1116,32 @@ pub extern "C" fn s2binlib_find_vtable_nested_2_va(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || class1_name.is_null() || class2_name.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, class names or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let class1_name_str = match CStr::from_ptr(class1_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let class2_name_str = match CStr::from_ptr(class2_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1054,7 +1153,7 @@ pub extern "C" fn s2binlib_find_vtable_nested_2_va(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -1100,32 +1199,32 @@ pub extern "C" fn s2binlib_find_vtable_nested_2(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || class1_name.is_null() || class2_name.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, class names or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let class1_name_str = match CStr::from_ptr(class1_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let class2_name_str = match CStr::from_ptr(class2_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1137,7 +1236,7 @@ pub extern "C" fn s2binlib_find_vtable_nested_2(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -1178,27 +1277,27 @@ pub extern "C" fn s2binlib_get_vtable_vfunc_count(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, vtable_name or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let vtable_name_str = match CStr::from_ptr(vtable_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1210,7 +1309,7 @@ pub extern "C" fn s2binlib_get_vtable_vfunc_count(
                 *result = count;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -1263,22 +1362,22 @@ pub extern "C" fn s2binlib_get_vtable_vfunc_count_by_va(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1290,7 +1389,7 @@ pub extern "C" fn s2binlib_get_vtable_vfunc_count_by_va(
                 *result = count;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -1338,27 +1437,27 @@ pub extern "C" fn s2binlib_pattern_scan_va(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || pattern.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, pattern or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let pattern_str = match CStr::from_ptr(pattern).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1370,7 +1469,7 @@ pub extern "C" fn s2binlib_pattern_scan_va(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -1441,27 +1540,27 @@ pub extern "C" fn s2binlib_pattern_scan_all_va(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || pattern.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name or pattern is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let pattern_str = match CStr::from_ptr(pattern).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1473,7 +1572,7 @@ pub extern "C" fn s2binlib_pattern_scan_all_va(
             callback(index, addr as *mut c_void, user_data)
         }) {
             Ok(_) => 0,
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -1532,27 +1631,27 @@ pub extern "C" fn s2binlib_pattern_scan_all(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || pattern.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name or pattern is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let pattern_str = match CStr::from_ptr(pattern).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1564,7 +1663,7 @@ pub extern "C" fn s2binlib_pattern_scan_all(
             callback(index, addr as *mut c_void, user_data)
         }) {
             Ok(_) => 0,
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -1608,27 +1707,27 @@ pub extern "C" fn s2binlib_find_export_va(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || export_name.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, export_name or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let export_name_str = match CStr::from_ptr(export_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1640,7 +1739,7 @@ pub extern "C" fn s2binlib_find_export_va(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -1684,27 +1783,27 @@ pub extern "C" fn s2binlib_find_export(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || export_name.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, export_name or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let export_name_str = match CStr::from_ptr(export_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1716,7 +1815,7 @@ pub extern "C" fn s2binlib_find_export(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -1759,27 +1858,27 @@ pub extern "C" fn s2binlib_find_symbol_va(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || symbol_name.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, symbol_name or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let symbol_name_str = match CStr::from_ptr(symbol_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1791,7 +1890,7 @@ pub extern "C" fn s2binlib_find_symbol_va(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -3,
+            Err(_) => return_error!(-3, "Failed to load binary or operation failed"),
         }
     }
 }
@@ -1840,17 +1939,17 @@ pub extern "C" fn s2binlib_read_by_file_offset(
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1863,7 +1962,7 @@ pub extern "C" fn s2binlib_read_by_file_offset(
                 std::ptr::copy_nonoverlapping(bytes.as_ptr(), buffer, copy_size);
                 0
             }
-            Err(_) => -3,
+            Err(_) => return_error!(-3, "Failed to load binary or operation failed"),
         }
     }
 }
@@ -1912,17 +2011,17 @@ pub extern "C" fn s2binlib_read_by_va(
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -1935,7 +2034,7 @@ pub extern "C" fn s2binlib_read_by_va(
                 std::ptr::copy_nonoverlapping(bytes.as_ptr(), buffer, copy_size);
                 0
             }
-            Err(_) => -3,
+            Err(_) => return_error!(-3, "Failed to load binary or operation failed"),
         }
     }
 }
@@ -1985,17 +2084,17 @@ pub extern "C" fn s2binlib_read_by_mem_address(
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -2008,7 +2107,7 @@ pub extern "C" fn s2binlib_read_by_mem_address(
                 std::ptr::copy_nonoverlapping(bytes.as_ptr(), buffer, copy_size);
                 0
             }
-            Err(_) => -3,
+            Err(_) => return_error!(-3, "Failed to load binary or operation failed"),
         }
     }
 }
@@ -2055,27 +2154,27 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname_va(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, vtable_name or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let vtable_name_str = match CStr::from_ptr(vtable_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -2087,7 +2186,7 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname_va(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -2133,27 +2232,27 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, vtable_name or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let vtable_name_str = match CStr::from_ptr(vtable_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -2165,7 +2264,7 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -2208,17 +2307,17 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr_va(
 ) -> i32 {
     unsafe {
         if result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameter: result pointer is null");
         }
 
         let s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_ref() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         match s2binlib.find_vfunc_by_vtbptr_va(vtable_ptr as u64, vfunc_index) {
@@ -2226,7 +2325,7 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr_va(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -2269,17 +2368,17 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr(
 ) -> i32 {
     unsafe {
         if result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameter: result pointer is null");
         }
 
         let s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_ref() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         match s2binlib.find_vfunc_by_vtbptr(vtable_ptr as u64, vfunc_index) {
@@ -2287,7 +2386,7 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -2331,27 +2430,27 @@ pub extern "C" fn s2binlib_find_string_va(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || string.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, string or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let string_str = match CStr::from_ptr(string).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -2363,7 +2462,7 @@ pub extern "C" fn s2binlib_find_string_va(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -2407,27 +2506,27 @@ pub extern "C" fn s2binlib_find_string(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || string.is_null() || result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name, string or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let string_str = match CStr::from_ptr(string).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -2439,7 +2538,7 @@ pub extern "C" fn s2binlib_find_string(
                 *result = addr as *mut c_void;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -2484,22 +2583,22 @@ pub extern "C" fn s2binlib_dump_xrefs(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameter: binary_name is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -2508,7 +2607,7 @@ pub extern "C" fn s2binlib_dump_xrefs(
 
         match s2binlib.dump_xrefs(binary_name_str) {
             Ok(_) => 0,
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -2555,22 +2654,22 @@ pub extern "C" fn s2binlib_get_xrefs_count(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameter: binary_name is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_ref() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         match s2binlib.find_xrefs_cached(binary_name_str, target_va as u64) {
@@ -2636,17 +2735,17 @@ pub extern "C" fn s2binlib_get_xrefs_cached(
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_ref() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         match s2binlib.find_xrefs_cached(binary_name_str, target_va as u64) {
@@ -2697,22 +2796,22 @@ pub extern "C" fn s2binlib_unload_binary(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameter: binary_name is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         s2binlib.unload_binary(binary_name_str);
@@ -2744,12 +2843,12 @@ pub extern "C" fn s2binlib_unload_binary(
 pub extern "C" fn s2binlib_unload_all_binaries() -> i32 {
     let mut s2binlib_guard = match S2BINLIB.lock() {
         Ok(guard) => guard,
-        Err(_) => return -5,
+        Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
     };
 
     let s2binlib = match s2binlib_guard.as_mut() {
         Some(lib) => lib,
-        None => return -1,
+        None => return_error!(-1, "S2BinLib not initialized"),
     };
 
     s2binlib.unload_all_binaries();
@@ -2802,12 +2901,12 @@ pub extern "C" fn s2binlib_install_trampoline(
 ) -> i32 {
       let mut s2binlib_guard = match S2BINLIB.lock() {
           Ok(guard) => guard,
-          Err(_) => return -5,
+          Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
       };
 
       let s2binlib = match s2binlib_guard.as_mut() {
           Some(lib) => lib,
-          None => return -1,
+          None => return_error!(-1, "S2BinLib not initialized"),
       };
 
       match s2binlib.install_trampoline(mem_address as u64) {
@@ -2817,7 +2916,7 @@ pub extern "C" fn s2binlib_install_trampoline(
             }
             0
           },
-          Err(_) => -3,
+          Err(_) => return_error!(-3, "Failed to install trampoline"),
       }
 }
 
@@ -2867,17 +2966,17 @@ pub extern "C" fn s2binlib_follow_xref_mem_to_mem(
     target_address_out: *mut *mut c_void,
 ) -> i32 {
     if mem_address.is_null() || target_address_out.is_null() {
-        return -2;
+        return_error!(-2, "Invalid parameters: mem_address or target_address_out is null");
     }
 
     let s2binlib_guard = match S2BINLIB.lock() {
         Ok(guard) => guard,
-        Err(_) => return -5,
+        Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
     };
 
     let s2binlib = match s2binlib_guard.as_ref() {
         Some(lib) => lib,
-        None => return -1,
+        None => return_error!(-1, "S2BinLib not initialized"),
     };
 
     match s2binlib.follow_xref_mem_to_mem(mem_address as u64) {
@@ -2887,7 +2986,7 @@ pub extern "C" fn s2binlib_follow_xref_mem_to_mem(
             }
             0
         },
-        Err(_) => -3,
+        Err(_) => return_error!(-3, "No valid xref found or invalid instruction"),
     }
 }
 
@@ -2934,22 +3033,22 @@ pub extern "C" fn s2binlib_follow_xref_va_to_mem(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || target_address_out.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameters: binary_name or target_address_out is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -2961,7 +3060,7 @@ pub extern "C" fn s2binlib_follow_xref_va_to_mem(
                 *target_address_out = target as *mut c_void;
                 0
             },
-            Err(_) => -3,
+            Err(_) => return_error!(-3, "Failed to load binary or operation failed"),
         }
     }
 }
@@ -3014,17 +3113,17 @@ pub extern "C" fn s2binlib_follow_xref_va_to_va(
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
             Ok(s) => s,
-            Err(_) => return -2,
+            Err(_) => return_error!(-2, "Failed to convert C string to UTF-8"),
         };
 
         let mut s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_mut() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         if !s2binlib.is_binary_loaded(binary_name_str) {
@@ -3036,7 +3135,7 @@ pub extern "C" fn s2binlib_follow_xref_va_to_va(
                 *target_va_out = target;
                 0
             },
-            Err(_) => -3,
+            Err(_) => return_error!(-3, "Failed to load binary or operation failed"),
         }
     }
 }
@@ -3077,17 +3176,17 @@ pub extern "C" fn s2binlib_find_networkvar_vtable_statechanged_va(
 ) -> i32 {
     unsafe {
         if result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameter: result pointer is null");
         }
 
         let s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_ref() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         match s2binlib.find_networkvar_vtable_statechanged_va(vtable_va) {
@@ -3095,7 +3194,7 @@ pub extern "C" fn s2binlib_find_networkvar_vtable_statechanged_va(
                 *result = index;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
@@ -3137,17 +3236,17 @@ pub extern "C" fn s2binlib_find_networkvar_vtable_statechanged(
 ) -> i32 {
     unsafe {
         if result.is_null() {
-            return -2;
+            return_error!(-2, "Invalid parameter: result pointer is null");
         }
 
         let s2binlib_guard = match S2BINLIB.lock() {
             Ok(guard) => guard,
-            Err(_) => return -5,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
         };
 
         let s2binlib = match s2binlib_guard.as_ref() {
             Some(lib) => lib,
-            None => return -1,
+            None => return_error!(-1, "S2BinLib not initialized"),
         };
 
         match s2binlib.find_networkvar_vtable_statechanged(vtable_mem_address) {
@@ -3155,7 +3254,7 @@ pub extern "C" fn s2binlib_find_networkvar_vtable_statechanged(
                 *result = index;
                 0
             }
-            Err(_) => -4,
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
         }
     }
 }
