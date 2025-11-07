@@ -20,6 +20,12 @@
 #ifndef S2BINLIB_H
 #define S2BINLIB_H
 
+#ifdef _WIN32
+#define S2BINLIB_API
+#else
+#define S2BINLIB_API __attribute__((visibility("hidden")))
+#endif
+
 #include <stdint.h>
 #include <stddef.h>
 
@@ -47,7 +53,7 @@ extern "C"
    *         // Handle error
    *     }
    */
-  int s2binlib_initialize(const char *game_path, const char *game_type);
+  S2BINLIB_API int s2binlib_initialize(const char *game_path, const char *game_type);
 
   /**
    * Initialize the global S2BinLib instance with a specific operating system
@@ -68,7 +74,7 @@ extern "C"
    *         // Handle error
    *     }
    */
-  int s2binlib_initialize_with_os(const char *game_path, const char *game_type, const char *os);
+  S2BINLIB_API int s2binlib_initialize_with_os(const char *game_path, const char *game_type, const char *os);
 
   /**
    * Scan for a pattern in the specified binary
@@ -93,7 +99,7 @@ extern "C"
    *         printf("Found at: %p\n", address);
    *     }
    */
-  int s2binlib_pattern_scan(const char *binary_name, const char *pattern, void **result);
+  S2BINLIB_API int s2binlib_pattern_scan(const char *binary_name, const char *pattern, void **result);
 
   /**
    * Pattern scan and return the virtual address
@@ -122,7 +128,7 @@ extern "C"
    *         printf("Pattern found at VA: %p\n", va);
    *     }
    */
-  int s2binlib_pattern_scan_va(const char *binary_name, const char *pattern, void **result);
+  S2BINLIB_API int s2binlib_pattern_scan_va(const char *binary_name, const char *pattern, void **result);
 
   /**
    * Callback function type for pattern_scan_all functions
@@ -170,8 +176,8 @@ extern "C"
    *         printf("Found %d matches\n", count);
    *     }
    */
-  int s2binlib_pattern_scan_all_va(const char *binary_name, const char *pattern,
-                                   s2binlib_pattern_scan_callback callback, void *user_data);
+  S2BINLIB_API int s2binlib_pattern_scan_all_va(const char *binary_name, const char *pattern,
+                                               s2binlib_pattern_scan_callback callback, void *user_data);
 
   /**
    * Find all occurrences of a pattern in a binary and return their memory addresses
@@ -210,8 +216,8 @@ extern "C"
    *         printf("Found %d matches\n", count);
    *     }
    */
-  int s2binlib_pattern_scan_all(const char *binary_name, const char *pattern,
-                                s2binlib_pattern_scan_callback callback, void *user_data);
+  S2BINLIB_API int s2binlib_pattern_scan_all(const char *binary_name, const char *pattern,
+                                            s2binlib_pattern_scan_callback callback, void *user_data);
 
   /**
    * Find a vtable by class name in the specified binary
@@ -236,7 +242,7 @@ extern "C"
    *         printf("VTable at: %p\n", vtable_addr);
    *     }
    */
-  int s2binlib_find_vtable(const char *binary_name, const char *vtable_name, void **result);
+  S2BINLIB_API int s2binlib_find_vtable(const char *binary_name, const char *vtable_name, void **result);
 
   /**
    * Find a vtable by class name and return its virtual address
@@ -261,7 +267,7 @@ extern "C"
    *         printf("VTable VA: %p\n", vtable_va);
    *     }
    */
-  int s2binlib_find_vtable_va(const char *binary_name, const char *vtable_name, void **result);
+  S2BINLIB_API int s2binlib_find_vtable_va(const char *binary_name, const char *vtable_name, void **result);
 
   /**
    * Find a vtable by mangled name and return its virtual address
@@ -296,7 +302,7 @@ extern "C"
    *     // Linux mangled name example
    *     int result = s2binlib_find_vtable_mangled_va("server", "11CBaseEntity", &vtable_va);
    */
-  int s2binlib_find_vtable_mangled_va(const char *binary_name, const char *vtable_name, void **result);
+  S2BINLIB_API int s2binlib_find_vtable_mangled_va(const char *binary_name, const char *vtable_name, void **result);
 
   /**
    * Find a vtable by mangled name and return its runtime memory address
@@ -326,7 +332,7 @@ extern "C"
    *         printf("VTable at: %p\n", vtable_addr);
    *     }
    */
-  int s2binlib_find_vtable_mangled(const char *binary_name, const char *vtable_name, void **result);
+  S2BINLIB_API int s2binlib_find_vtable_mangled(const char *binary_name, const char *vtable_name, void **result);
 
   /**
    * Find a nested vtable (2 levels) by class names and return its virtual address
@@ -358,7 +364,7 @@ extern "C"
    *         printf("Nested VTable VA: %p\n", vtable_va);
    *     }
    */
-  int s2binlib_find_vtable_nested_2_va(const char *binary_name, const char *class1_name, const char *class2_name, void **result);
+  S2BINLIB_API int s2binlib_find_vtable_nested_2_va(const char *binary_name, const char *class1_name, const char *class2_name, void **result);
 
   /**
    * Find a nested vtable (2 levels) by class names and return its runtime memory address
@@ -387,7 +393,7 @@ extern "C"
    *         printf("Nested VTable at: %p\n", vtable_addr);
    *     }
    */
-  int s2binlib_find_vtable_nested_2(const char *binary_name, const char *class1_name, const char *class2_name, void **result);
+  S2BINLIB_API int s2binlib_find_vtable_nested_2(const char *binary_name, const char *class1_name, const char *class2_name, void **result);
 
   /**
    * Get the number of virtual functions in a vtable
@@ -415,7 +421,7 @@ extern "C"
    *         printf("VTable has %zu virtual functions\n", vfunc_count);
    *     }
    */
-  int s2binlib_get_vtable_vfunc_count(const char *binary_name, const char *vtable_name, size_t *result);
+  S2BINLIB_API int s2binlib_get_vtable_vfunc_count(const char *binary_name, const char *vtable_name, size_t *result);
 
   /**
    * Get the number of virtual functions in a vtable by virtual address
@@ -451,7 +457,7 @@ extern "C"
    *         printf("VTable has %zu virtual functions\n", vfunc_count);
    *     }
    */
-  int s2binlib_get_vtable_vfunc_count_by_va(const char *binary_name, uint64_t vtable_va, size_t *result);
+  S2BINLIB_API int s2binlib_get_vtable_vfunc_count_by_va(const char *binary_name, uint64_t vtable_va, size_t *result);
 
   /**
    * Find a symbol by name in the specified binary
@@ -475,7 +481,7 @@ extern "C"
    *         printf("Symbol at: %p\n", symbol_addr);
    *     }
    */
-  int s2binlib_find_symbol(const char *binary_name, const char *symbol_name, void **result);
+  S2BINLIB_API int s2binlib_find_symbol(const char *binary_name, const char *symbol_name, void **result);
 
   /**
    * Find a symbol by name and return its virtual address
@@ -499,7 +505,7 @@ extern "C"
    *         printf("Symbol VA: %p\n", symbol_va);
    *     }
    */
-  int s2binlib_find_symbol_va(const char *binary_name, const char *symbol_name, void **result);
+  S2BINLIB_API int s2binlib_find_symbol_va(const char *binary_name, const char *symbol_name, void **result);
 
   /**
    * Manually set the base address for a module from a pointer
@@ -521,7 +527,7 @@ extern "C"
    *         printf("Server base address set successfully\n");
    *     }
    */
-  int s2binlib_set_module_base_from_pointer(const char *binary_name, void *pointer);
+  S2BINLIB_API int s2binlib_set_module_base_from_pointer(const char *binary_name, void *pointer);
 
   /**
    * Clear manually set base address for a module
@@ -541,7 +547,31 @@ extern "C"
    *         printf("Server base address cleared\n");
    *     }
    */
-  int s2binlib_clear_module_base_address(const char *binary_name);
+  S2BINLIB_API int s2binlib_clear_module_base_address(const char *binary_name);
+
+  /**
+   * Set a custom binary path for a specific binary and operating system
+   *
+   * This allows overriding the default binary path resolution for a specific binary.
+   * You can specify different paths for Windows and Linux builds.
+   *
+   * @param binary_name Name of the binary (e.g., "server", "client") (null-terminated C string)
+   * @param path The custom file path to the binary (null-terminated C string)
+   * @param os Operating system identifier ("windows" or "linux") (null-terminated C string)
+   *
+   * @return 0 on success
+   *         -1 if S2BinLib not initialized
+   *         -2 if invalid parameters
+   *         -4 if unsupported OS specified
+   *         -5 if internal error
+   *
+   * @example
+   *     int result = s2binlib_set_custom_binary_path("server", "/custom/path/server.dll", "windows");
+   *     if (result == 0) {
+   *         printf("Custom binary path set successfully\n");
+   *     }
+   */
+  S2BINLIB_API int s2binlib_set_custom_binary_path(const char *binary_name, const char *path, const char *os);
 
   /**
    * Get the module base address
@@ -566,7 +596,7 @@ extern "C"
    *         printf("Module base: %p\n", base_addr);
    *     }
    */
-  int s2binlib_get_module_base_address(const char *binary_name, void **result);
+  S2BINLIB_API int s2binlib_get_module_base_address(const char *binary_name, void **result);
 
   /**
    * Check if a binary is already loaded
@@ -585,7 +615,7 @@ extern "C"
    *         printf("Server is loaded\n");
    *     }
    */
-  int s2binlib_is_binary_loaded(const char *binary_name);
+  S2BINLIB_API int s2binlib_is_binary_loaded(const char *binary_name);
 
   /**
    * Load a binary into memory
@@ -606,7 +636,7 @@ extern "C"
    *         printf("Server loaded successfully\n");
    *     }
    */
-  int s2binlib_load_binary(const char *binary_name);
+  S2BINLIB_API int s2binlib_load_binary(const char *binary_name);
 
   /**
    * Get the full path to a binary file
@@ -630,7 +660,7 @@ extern "C"
    *         printf("Binary path: %s\n", path);
    *     }
    */
-  int s2binlib_get_binary_path(const char *binary_name, char *buffer, size_t buffer_size);
+  S2BINLIB_API int s2binlib_get_binary_path(const char *binary_name, char *buffer, size_t buffer_size);
 
   /**
    * Find an exported symbol by name and return its virtual address
@@ -655,7 +685,7 @@ extern "C"
    *         printf("Export VA: %p\n", export_va);
    *     }
    */
-  int s2binlib_find_export_va(const char *binary_name, const char *export_name, void **result);
+  S2BINLIB_API int s2binlib_find_export_va(const char *binary_name, const char *export_name, void **result);
 
   /**
    * Find an exported symbol by name and return its runtime memory address
@@ -680,7 +710,7 @@ extern "C"
    *         printf("Export at: %p\n", export_addr);
    *     }
    */
-  int s2binlib_find_export(const char *binary_name, const char *export_name, void **result);
+  S2BINLIB_API int s2binlib_find_export(const char *binary_name, const char *export_name, void **result);
 
   /**
    * Read bytes from binary at a file offset
@@ -705,7 +735,7 @@ extern "C"
    *         // Use buffer
    *     }
    */
-  int s2binlib_read_by_file_offset(const char *binary_name, uint64_t file_offset, uint8_t *buffer, size_t buffer_size);
+  S2BINLIB_API int s2binlib_read_by_file_offset(const char *binary_name, uint64_t file_offset, uint8_t *buffer, size_t buffer_size);
 
   /**
    * Read bytes from binary at a virtual address
@@ -730,7 +760,7 @@ extern "C"
    *         // Use buffer
    *     }
    */
-  int s2binlib_read_by_va(const char *binary_name, uint64_t va, uint8_t *buffer, size_t buffer_size);
+  S2BINLIB_API int s2binlib_read_by_va(const char *binary_name, uint64_t va, uint8_t *buffer, size_t buffer_size);
 
   /**
    * Read bytes from binary at a runtime memory address
@@ -755,7 +785,7 @@ extern "C"
    *         // Use buffer
    *     }
    */
-  int s2binlib_read_by_mem_address(const char *binary_name, uint64_t mem_address, uint8_t *buffer, size_t buffer_size);
+  S2BINLIB_API int s2binlib_read_by_mem_address(const char *binary_name, uint64_t mem_address, uint8_t *buffer, size_t buffer_size);
 
   /**
    * Find a virtual function by vtable name and index, return virtual address
@@ -784,7 +814,7 @@ extern "C"
    *         printf("VFunc VA: %p\n", vfunc_va);
    *     }
    */
-  int s2binlib_find_vfunc_by_vtbname_va(const char *binary_name, const char *vtable_name, size_t vfunc_index, void **result);
+  S2BINLIB_API int s2binlib_find_vfunc_by_vtbname_va(const char *binary_name, const char *vtable_name, size_t vfunc_index, void **result);
 
   /**
    * Find a virtual function by vtable name and index, return runtime address
@@ -813,7 +843,7 @@ extern "C"
    *         printf("VFunc at: %p\n", vfunc_addr);
    *     }
    */
-  int s2binlib_find_vfunc_by_vtbname(const char *binary_name, const char *vtable_name, size_t vfunc_index, void **result);
+  S2BINLIB_API int s2binlib_find_vfunc_by_vtbname(const char *binary_name, const char *vtable_name, size_t vfunc_index, void **result);
 
   /**
    * Find a virtual function by vtable pointer and index, return virtual address
@@ -839,7 +869,7 @@ extern "C"
    *         printf("VFunc VA: %p\n", vfunc_va);
    *     }
    */
-  int s2binlib_find_vfunc_by_vtbptr_va(void *vtable_ptr, size_t vfunc_index, void **result);
+  S2BINLIB_API int s2binlib_find_vfunc_by_vtbptr_va(void *vtable_ptr, size_t vfunc_index, void **result);
 
   /**
    * Find a virtual function by vtable pointer and index, return runtime address
@@ -865,7 +895,7 @@ extern "C"
    *         printf("VFunc at: %p\n", vfunc_addr);
    *     }
    */
-  int s2binlib_find_vfunc_by_vtbptr(void *vtable_ptr, size_t vfunc_index, void **result);
+  S2BINLIB_API int s2binlib_find_vfunc_by_vtbptr(void *vtable_ptr, size_t vfunc_index, void **result);
 
   /**
    * Find a string in the binary and return its virtual address
@@ -891,7 +921,7 @@ extern "C"
    *         printf("String VA: %p\n", string_va);
    *     }
    */
-  int s2binlib_find_string_va(const char *binary_name, const char *string, void **result);
+  S2BINLIB_API int s2binlib_find_string_va(const char *binary_name, const char *string, void **result);
 
   /**
    * Find a string in the binary and return its runtime memory address
@@ -917,7 +947,7 @@ extern "C"
    *         printf("String at: %p\n", string_addr);
    *     }
    */
-  int s2binlib_find_string(const char *binary_name, const char *string, void **result);
+  S2BINLIB_API int s2binlib_find_string(const char *binary_name, const char *string, void **result);
 
   /**
    * Dump and cache all cross-references in a binary
@@ -942,7 +972,7 @@ extern "C"
    *         printf("Xrefs cached successfully\n");
    *     }
    */
-  int s2binlib_dump_xrefs(const char *binary_name);
+  S2BINLIB_API int s2binlib_dump_xrefs(const char *binary_name);
 
   /**
    * Get the count of cached cross-references for a target virtual address
@@ -974,7 +1004,7 @@ extern "C"
    *         free(xrefs);
    *     }
    */
-  int s2binlib_get_xrefs_count(const char *binary_name, void *target_va);
+  S2BINLIB_API int s2binlib_get_xrefs_count(const char *binary_name, void *target_va);
 
   /**
    * Get cached cross-references for a target virtual address into a buffer
@@ -1013,7 +1043,7 @@ extern "C"
    *         free(xrefs);
    *     }
    */
-  int s2binlib_get_xrefs_cached(const char *binary_name, void *target_va, void **buffer, size_t buffer_size);
+  S2BINLIB_API int s2binlib_get_xrefs_cached(const char *binary_name, void *target_va, void **buffer, size_t buffer_size);
 
   /**
    * Unload a specific binary from memory
@@ -1034,7 +1064,7 @@ extern "C"
    *         printf("Binary unloaded successfully\n");
    *     }
    */
-  int s2binlib_unload_binary(const char *binary_name);
+  S2BINLIB_API int s2binlib_unload_binary(const char *binary_name);
 
   /**
    * Unload all binaries from memory
@@ -1052,7 +1082,7 @@ extern "C"
    *         printf("All binaries unloaded successfully\n");
    *     }
    */
-  int s2binlib_unload_all_binaries(void);
+  S2BINLIB_API int s2binlib_unload_all_binaries(void);
 
   /**
    * Install a JIT trampoline at a memory address
@@ -1087,7 +1117,7 @@ extern "C"
    *         printf("Trampoline installed successfully\n");
    *     }
    */
-  int s2binlib_install_trampoline(void *mem_address, void **trampoline_address_out);
+  S2BINLIB_API int s2binlib_install_trampoline(void *mem_address, void **trampoline_address_out);
 
   /**
    * @brief Follow cross-reference from memory address to memory address
@@ -1123,7 +1153,7 @@ extern "C"
    *         printf("Xref target: %p\n", target_addr);
    *     }
    */
-  int s2binlib_follow_xref_mem_to_mem(const void *mem_address, void **target_address_out);
+  S2BINLIB_API int s2binlib_follow_xref_mem_to_mem(const void *mem_address, void **target_address_out);
 
   /**
    * @brief Follow cross-reference from virtual address to memory address
@@ -1154,7 +1184,7 @@ extern "C"
    *         printf("Xref target: %p\n", target_addr);
    *     }
    */
-  int s2binlib_follow_xref_va_to_mem(const char *binary_name, uint64_t va, void **target_address_out);
+  S2BINLIB_API int s2binlib_follow_xref_va_to_mem(const char *binary_name, uint64_t va, void **target_address_out);
 
   /**
    * @brief Follow cross-reference from virtual address to virtual address
@@ -1185,7 +1215,7 @@ extern "C"
    *         printf("Xref target VA: 0x%llX\n", target_va);
    *     }
    */
-  int s2binlib_follow_xref_va_to_va(const char *binary_name, uint64_t va, uint64_t *target_va_out);
+  S2BINLIB_API int s2binlib_follow_xref_va_to_va(const char *binary_name, uint64_t va, uint64_t *target_va_out);
 
   /**
    * @brief Find the NetworkVar_StateChanged vtable index by virtual address
@@ -1211,7 +1241,7 @@ extern "C"
    *         printf("StateChanged index: %llu\n", index);
    *     }
    */
-  int s2binlib_find_networkvar_vtable_statechanged_va(uint64_t vtable_va, uint64_t *result);
+  S2BINLIB_API int s2binlib_find_networkvar_vtable_statechanged_va(uint64_t vtable_va, uint64_t *result);
 
   /**
    * @brief Find the NetworkVar_StateChanged vtable index by memory address
@@ -1238,7 +1268,7 @@ extern "C"
    *         printf("StateChanged index: %llu\n", index);
    *     }
    */
-  int s2binlib_find_networkvar_vtable_statechanged(uint64_t vtable_mem_address, uint64_t *result);
+  S2BINLIB_API int s2binlib_find_networkvar_vtable_statechanged(uint64_t vtable_mem_address, uint64_t *result);
 
 #ifdef __cplusplus
 }
