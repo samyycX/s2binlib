@@ -1,11 +1,12 @@
 use std::{fs::{self, File}, io::Write};
 
 use anyhow::Result;
+use log::{info, warn};
 use s2binlib::S2BinLib;
 
 pub fn dump_networkvars(s2binlib: &S2BinLib, dump_dir: &str) -> Result<()> {
   
-  let vtables = s2binlib.dump_vtables("server")?;
+  let vtables = s2binlib.get_vtables("server")?;
 
   let mut file = File::create(format!("{}/networkvars.txt", dump_dir))?;
 
@@ -14,9 +15,11 @@ pub fn dump_networkvars(s2binlib: &S2BinLib, dump_dir: &str) -> Result<()> {
       let index = s2binlib.find_networkvar_vtable_statechanged_va(vtable.vtable_address);
 
       if let Err(e) = index {
-        println!("[NetworkVar] Error finding statechanged index for {}: {}", vtable.type_name, e);
+        warn!("Error finding statechanged index for {}: {}", vtable.type_name, e);
         continue;
       }
+
+      info!("Dumping {}", vtable.type_name);
       let index = index.unwrap();
       let vfunc_count = vtable.methods.len();
       let statechanged_index = index as usize;

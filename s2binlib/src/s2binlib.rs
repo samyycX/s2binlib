@@ -24,9 +24,7 @@ use iced_x86::{Code, Decoder, DecoderOptions, Instruction, OpKind, Register};
 use object::{Object, ObjectSection, ObjectSymbol, read::pe::ImageOptionalHeader};
 
 use crate::{
-    find_pattern_simd, is_executable,
-    jit::JitTrampoline,
-    memory::{get_module_base_from_pointer, set_mem_access},
+    VTableInfo, find_pattern_simd, is_executable, jit::JitTrampoline, memory::{get_module_base_from_pointer, set_mem_access}
 };
 
 #[cfg(target_os = "windows")]
@@ -54,6 +52,7 @@ pub struct S2BinLib {
     trampolines: HashMap<u64, JitTrampoline>,
     custom_binary_paths_windows: HashMap<String, String>,
     custom_binary_paths_linux: HashMap<String, String>,
+    pub vtables: HashMap<String, Vec<VTableInfo>>,
 }
 
 fn read_int32(data: &[u8], offset: u64) -> u32 {
@@ -201,6 +200,7 @@ impl S2BinLib {
             trampolines: HashMap::new(),
             custom_binary_paths_windows: HashMap::new(),
             custom_binary_paths_linux: HashMap::new(),
+            vtables: HashMap::new(),
         }
     }
 
