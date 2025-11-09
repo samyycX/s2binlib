@@ -87,6 +87,10 @@ impl S2BinLib {
         }
     }
 
+    pub fn get_os(&self) -> String {
+        self.os.clone()
+    }
+
     pub fn get_module_base_address(&self, lib_name: &str) -> Result<u64> {
         if let Some(&base_address) = self.manual_base_addresses.get(lib_name) {
             return Ok(base_address);
