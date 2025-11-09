@@ -1,11 +1,13 @@
 use std::{collections::{BTreeMap, HashMap}, fs::{self, File}, io::Write};
 
 use anyhow::Result;
+use log::info;
 use s2binlib::S2BinLib;
 
 pub fn dump_vtables(s2binlib: &S2BinLib, tracked_binaries: &[String], dump_dir: &str) -> Result<()> {
 
   for binary in tracked_binaries {
+    info!("Dumping vtables for {}", binary);
     let vtables = s2binlib.get_vtables(binary)?;
     fs::create_dir_all(format!("{}/vtables", dump_dir))?;
     let file = File::create(format!("{}/vtables/{}.txt", dump_dir, binary))?;
