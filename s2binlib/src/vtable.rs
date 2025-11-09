@@ -74,11 +74,12 @@ impl S2BinLib {
 
         let view = BinaryView::new(binary, &file, image_base)?;
 
-        let vtables = match view.format {
+        let mut vtables = match view.format {
             BinaryFormat::Pe => MsvcParser::new(&view).parse(),
             BinaryFormat::Elf => ItaniumParser::new(&view).parse(),
             _ => Err(anyhow!("unsupported binary format")),
         }?;
+        vtables.sort_by(|a, b| a.type_name.cmp(&b.type_name));
 
         self.vtables.insert(binary_name.to_string(), vtables);
         Ok(())
