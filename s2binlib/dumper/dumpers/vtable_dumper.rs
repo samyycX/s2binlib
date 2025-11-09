@@ -6,7 +6,7 @@ use s2binlib::S2BinLib;
 pub fn dump_vtables(s2binlib: &S2BinLib, tracked_binaries: &[String], dump_dir: &str) -> Result<()> {
 
   for binary in tracked_binaries {
-    let vtables = s2binlib.dump_vtables(binary)?;
+    let vtables = s2binlib.get_vtables(binary)?;
     fs::create_dir_all(format!("{}/vtables", dump_dir))?;
     let file = File::create(format!("{}/vtables/{}.txt", dump_dir, binary))?;
     serde_json::to_writer_pretty(file, &vtables)?;
@@ -19,7 +19,7 @@ pub fn dump_vtables(s2binlib: &S2BinLib, tracked_binaries: &[String], dump_dir: 
       if map.contains_key(&vtable.type_name) {
         map.get_mut(&vtable.type_name).unwrap().push(vtable.methods.len());
       } else {
-        map.insert(vtable.type_name, vec![vtable.methods.len()]);
+        map.insert(vtable.type_name.clone(), vec![vtable.methods.len()]);
       }
     }
 

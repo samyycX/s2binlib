@@ -1,6 +1,7 @@
 use std::{fs::File, io::Write};
 
 use anyhow::Result;
+use log::info;
 use s2binlib::S2BinLib;
 
 pub fn dump_gamesystems(s2binlib: &S2BinLib, dump_dir: &str) -> Result<()> {
@@ -85,14 +86,15 @@ pub fn dump_gamesystems(s2binlib: &S2BinLib, dump_dir: &str) -> Result<()> {
 
     let size = s2binlib.get_vtable_vfunc_count("server", "IGameSystem")?;
 
-    let res = s2binlib.dump_vtables("server")?;
+    let res = s2binlib.get_vtables("server")?;
 
     for vtable in res {
-        for base in vtable.bases {
+        for base in &vtable.bases {
             if base.type_name.contains("IGameSystem") {
                 if vtable.methods.len() < size {
                     continue;
                 }
+                info!("Dumping {}", vtable.type_name);
                 for i in 0..size {
                     let method = vtable.methods[i];
                     if !s2binlib.is_nullsub_va(method)? {

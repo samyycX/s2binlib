@@ -57,7 +57,7 @@ pub struct Pmd {
 }
 
 impl S2BinLib {
-    pub fn dump_vtables(&self, binary_name: &str) -> Result<Vec<VTableInfo>> {
+    pub fn dump_vtables(&mut self, binary_name: &str) -> Result<()>{
         let binary = self.get_binary(binary_name)?;
         let file = object::File::parse(binary)?;
 
@@ -74,11 +74,18 @@ impl S2BinLib {
 
         let view = BinaryView::new(binary, &file, image_base)?;
 
-        match view.format {
+        let vtables = match view.format {
             BinaryFormat::Pe => MsvcParser::new(&view).parse(),
             BinaryFormat::Elf => ItaniumParser::new(&view).parse(),
             _ => Err(anyhow!("unsupported binary format")),
-        }
+        }?;
+
+        self.vtables.insert(binary_name.to_string(), vtables);
+        Ok(())
+    }
+
+    pub fn get_vtables(&self, binary_name: &str) -> Result<&Vec<VTableInfo>> {
+        self.vtables.get(binary_name).ok_or(anyhow!("vtables not found"))
     }
 }
 
