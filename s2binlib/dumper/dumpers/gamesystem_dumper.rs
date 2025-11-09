@@ -4,7 +4,7 @@ use anyhow::Result;
 use log::info;
 use s2binlib::S2BinLib;
 
-pub fn dump_gamesystems(s2binlib: &S2BinLib, dump_dir: &str) -> Result<()> {
+pub fn dump_gamesystems(s2binlib: &S2BinLib, dump_dir: &str, binary: &str) -> Result<()> {
   
   let names = vec![
       "Init",                             // 0
@@ -84,9 +84,10 @@ pub fn dump_gamesystems(s2binlib: &S2BinLib, dump_dir: &str) -> Result<()> {
 
     let mut funcs = vec![vec![]; max_size];
 
-    let size = s2binlib.get_vtable_vfunc_count("server", "IGameSystem")?;
+    let size = s2binlib.get_vtable_vfunc_count(binary, "IGameSystem")?;
 
-    let res = s2binlib.get_vtables("server")?;
+    let res = s2binlib.get_vtables(binary)?;
+
 
     for vtable in res {
         for base in &vtable.bases {
@@ -97,7 +98,7 @@ pub fn dump_gamesystems(s2binlib: &S2BinLib, dump_dir: &str) -> Result<()> {
                 info!("Dumping {}", vtable.type_name);
                 for i in 0..size {
                     let method = vtable.methods[i];
-                    if !s2binlib.is_nullsub_va(method)? {
+                    if !s2binlib.is_nullsub_va(binary, method)? {
                         funcs[i].push(vtable.type_name.clone());
                     }
                 }
@@ -105,7 +106,7 @@ pub fn dump_gamesystems(s2binlib: &S2BinLib, dump_dir: &str) -> Result<()> {
         }
     }
 
-    let mut file = File::create(format!("{}/gamesystem.txt", dump_dir))?;
+    let mut file = File::create(format!("{}/gamesystem_{}.txt", dump_dir, binary))?;
     for i in 0..max_size {
         writeln!(file, "{:<35} {}", format!("{} [{}]", names[i], i), format!("{:?}", funcs[i]))?;
     }

@@ -19,6 +19,7 @@ fn main() -> Result<()> {
         "server",
         "engine2",
         "tier0",
+        "client"
     ].into_iter().map(|s| s.to_string()).collect::<Vec<_>>();
 
 
@@ -35,7 +36,8 @@ fn main() -> Result<()> {
     }
     fs::create_dir_all(&dump_dir)?;
 
-    dumpers::gamesystem_dumper::dump_gamesystems(&s2binlib, &dump_dir)?;
+    dumpers::gamesystem_dumper::dump_gamesystems(&s2binlib, &dump_dir, "server")?;
+    dumpers::gamesystem_dumper::dump_gamesystems(&s2binlib, &dump_dir, "client")?;
     dumpers::vtable_dumper::dump_vtables(&s2binlib, &tracked_binaries, &dump_dir)?;
     dumpers::networkvar_dumper::dump_networkvars(&s2binlib, &dump_dir)?;
 

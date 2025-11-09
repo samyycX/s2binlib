@@ -1190,8 +1190,8 @@ impl S2BinLib {
         self.find_networkvar_vtable_statechanged_va(vtable_va)
     }
 
-    pub fn is_nullsub_va(&self, func_va: u64) -> Result<bool> {
-        let bytes = self.read_by_va("server", func_va, 3)?;
+    pub fn is_nullsub_va(&self, binary_name: &str, func_va: u64) -> Result<bool> {
+        let bytes = self.read_by_va(binary_name, func_va, 3)?;
         if bytes[0] == 0xC2 {
             return Ok(true);
         }
@@ -1207,8 +1207,8 @@ impl S2BinLib {
         Ok(false)
     }
 
-    pub fn is_nullsub(&self, func_mem_address: u64) -> Result<bool> {
+    pub fn is_nullsub(&self, binary_name: &str, func_mem_address: u64) -> Result<bool> {
         let func_va = self.mem_address_to_va("server", func_mem_address)?;
-        self.is_nullsub_va(func_va)
+        self.is_nullsub_va(binary_name, func_va)
     }
 }
