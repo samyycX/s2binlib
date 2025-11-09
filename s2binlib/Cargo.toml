@@ -1,0 +1,32 @@
+[package]
+name = "s2binlib"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+default = []
+
+[[bin]]
+name = "dumper"
+path = "dumper/main.rs"
+
+[dependencies]
+anyhow = "1.0.100"
+object = "0.37.3"
+iced-x86 = "1.21"
+region = "3.0"
+cpp_demangle = "0.4"
+msvc-demangler = "0.10"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+log = "0.4.28"
+tracing = "0.1.41"
+tracing-log = "0.2.0"
+tracing-subscriber = "0.3.20"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+windows = { version = "0.62.2", features = ["Win32_System_Memory"] }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+libc = "0.2.176"
+

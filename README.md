@@ -18,21 +18,31 @@ This library mainly read data from original binary file instead of from memory, 
 - Find all CEmbeddedNetworkVar NetworkStateChanged function index
 - Follow xref safely
 
+## Project Layout
+
+- `s2binlib`: core Rust library crate exposing safe APIs.
+- `s2binlib_binding`: C ABI wrapper crate that links to `s2binlib` and produces the `s2binlib` DLL/LIB artifacts.
+
 ## Compiling
 
 Prerequisites:
 - Rust development environment
 
-Run the following command to compile. 
+To build the C bindings (emitting `s2binlib.dll`, `libs2binlib.a`, etc.):
 ```
-cargo build --release
+cargo build -p s2binlib_binding --release
+```
+
+To build only the Rust core crate:
+```
+cargo build -p s2binlib --release
 ```
 
 ### Debug Mode for C Bindings
 
-To enable debug output for all C binding errors, compile with the `debug_c_bindings` feature:
+To enable debug output for all C binding errors, compile the binding crate with the `debug_c_bindings` feature:
 ```
-cargo build --release --features debug_c_bindings
+cargo build -p s2binlib_binding --release --features debug_c_bindings
 ```
 
 When enabled, all error returns in C bindings will print detailed debug information to stdout, including:

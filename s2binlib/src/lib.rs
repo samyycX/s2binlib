@@ -21,16 +21,18 @@ mod s2binlib;
 mod pattern;
 mod flags;
 mod memory;
+mod vtable;
 pub mod jit;
-pub mod c_bindings;
 
 pub use s2binlib::*;
 pub use pattern::*;
 pub use flags::*;
+pub use vtable::*;
 
 #[cfg(test)]
+#[allow(unused_imports, unused_variables)]
 mod tests {
-    use std::time::Instant;
+    use std::{fs::{self, File}, io::{BufWriter, Write}, time::Instant};
 
     use anyhow::Result;
     use iced_x86::{Code, Decoder, DecoderOptions, Mnemonic, OpKind};
@@ -39,20 +41,9 @@ mod tests {
 
     #[test]
     fn test_s2binlib() -> Result<()> {
-        let mut s2binlib = S2BinLib::new("F:/cs2server/game", "csgo", "linux");
+        
 
-        s2binlib.load_binary("server");
-
-        // println!("vtable count {}", s2binlib.get_vtable_vfunc_count("engine2", "CServerSideClient")?);
-
-
-        // s2binlib.load_binary("tier0");
-        // println!("1");
-
-
-        let vtable = s2binlib.find_vtable_nested_2_va("server", "CBaseAnimGraphController", "NetworkVar_m_animGraphNetworkedVars")?;
-        let index = s2binlib.find_networkvar_vtable_statechanged_va(vtable)?;
-        println!("index {:X}", index);
+        // fs::write("funcs.txt", serde_json::to_string_pretty(&funcs)?)?;
         
         let start = Instant::now();
 
