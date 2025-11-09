@@ -17,13 +17,9 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  ***********************************************************************************/
 
-use std::{
-    collections::{HashMap, btree_map::VacantEntry},
-    fs,
-    path::PathBuf,
-};
+use std::{collections::HashMap, fs, path::PathBuf};
 
-use anyhow::{Result, anyhow};
+use anyhow::Result;
 use iced_x86::{Code, Decoder, DecoderOptions, Instruction, OpKind, Register};
 use object::{Object, ObjectSection, ObjectSymbol, read::pe::ImageOptionalHeader};
 
@@ -204,32 +200,11 @@ impl S2BinLib {
         }
     }
 
-    /// Manually set the base address for a module from a pointer
-    ///
-    /// This allows overriding the automatic base address detection.
-    /// Useful when the module is loaded in a non-standard way or
-    /// when you need to force a specific base address.
-    ///
-    /// # Arguments
-    /// * `lib_name` - The library name without extension (e.g., "server", "engine2")
-    /// * `pointer` - The pointer from the module
-    ///
-    /// # Example
-    /// ```no_run
-    /// let mut s2binlib = S2BinLib::new("path", "game", "windows");
-    /// s2binlib.set_module_base_from_pointer("server", 0x140000000);
-    /// ```
     pub fn set_module_base_from_pointer(&mut self, lib_name: &str, pointer: u64) {
         self.manual_base_addresses
             .insert(lib_name.to_string(), get_module_base_from_pointer(pointer));
     }
 
-    /// Clear manually set base address for a module
-    ///
-    /// After calling this, the module will use automatic base address detection again.
-    ///
-    /// # Arguments
-    /// * `lib_name` - The library name without extension (e.g., "server", "engine2")
     pub fn clear_module_base_address(&mut self, lib_name: &str) {
         self.manual_base_addresses.remove(lib_name);
     }
@@ -1209,5 +1184,27 @@ impl S2BinLib {
     pub fn find_networkvar_vtable_statechanged(&self, vtable_mem_address: u64) -> Result<u64> {
         let vtable_va = self.mem_address_to_va("server", vtable_mem_address)?;
         self.find_networkvar_vtable_statechanged_va(vtable_va)
+    }
+
+    pub fn is_nullsub_va(&self, func_va: u64) -> Result<bool> {
+        let bytes = self.read_by_va("server", func_va, 3)?;
+        if bytes[0] == 0xC2 {
+            return Ok(true);
+        }
+
+        if bytes[0] == 0xC3 {
+            return Ok(true);
+        }
+
+        if bytes[0] == 0xB0 && bytes[1] == 0x01 && bytes[2] == 0xC3 {
+            return Ok(true);
+        }
+
+        Ok(false)
+    }
+
+    pub fn is_nullsub(&self, func_mem_address: u64) -> Result<bool> {
+        let func_va = self.mem_address_to_va("server", func_mem_address)?;
+        self.is_nullsub_va(func_va)
     }
 }

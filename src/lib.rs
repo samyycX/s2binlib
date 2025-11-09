@@ -21,16 +21,18 @@ mod s2binlib;
 mod pattern;
 mod flags;
 mod memory;
+mod vtable;
 pub mod jit;
 pub mod c_bindings;
 
 pub use s2binlib::*;
 pub use pattern::*;
 pub use flags::*;
+pub use vtable::*;
 
 #[cfg(test)]
 mod tests {
-    use std::time::Instant;
+    use std::{fs::{self, File}, io::{BufWriter, Write}, time::Instant};
 
     use anyhow::Result;
     use iced_x86::{Code, Decoder, DecoderOptions, Mnemonic, OpKind};
@@ -39,9 +41,9 @@ mod tests {
 
     #[test]
     fn test_s2binlib() -> Result<()> {
-        let mut s2binlib = S2BinLib::new("F:/cs2server/game", "csgo", "linux");
+        let mut s2binlib = S2BinLib::new("F:/cs2server/game", "csgo", "windows");
 
-        s2binlib.load_binary("server");
+        // s2binlib.load_binary("server");
 
         // println!("vtable count {}", s2binlib.get_vtable_vfunc_count("engine2", "CServerSideClient")?);
 
@@ -49,10 +51,121 @@ mod tests {
         // s2binlib.load_binary("tier0");
         // println!("1");
 
+        s2binlib.load_binary("server");
+        // let vtable = s2binlib.find_vtable_nested_2_va("server", "CBaseAnimGraphController", "NetworkVar_m_animGraphNetworkedVars")?;
+        // let index = s2binlib.find_networkvar_vtable_statechanged_va(vtable)?;
 
-        let vtable = s2binlib.find_vtable_nested_2_va("server", "CBaseAnimGraphController", "NetworkVar_m_animGraphNetworkedVars")?;
-        let index = s2binlib.find_networkvar_vtable_statechanged_va(vtable)?;
-        println!("index {:X}", index);
+        let res = s2binlib.dump_vtables("server")?;
+        
+        fs::write("vtables.txt", serde_json::to_string_pretty(&res)?)?;
+
+        println!("{}", res.len() *std::mem::size_of::<VTableInfo>());
+
+
+        let names = vec![
+            "Init",                             // 0
+            "PostInit",                         // 1
+            "Shutdown",                         // 2
+            "GameInit",                         // 3
+            "GameShutdown",                     // 4
+            "GamePostInit",                     // 5
+            "GamePreShutdown",                  // 6
+            "BuildGameSessionManifest",         // 7
+            "GameActivate",                     // 8
+            "ClientFullySignedOn",              // 9
+            "Disconnect",                       // 10
+            "unk_001",                          // 11
+            "GameDeactivate",                   // 12
+            "SpawnGroupPrecache",               // 13
+            "SpawnGroupUncache",                // 14
+            "PreSpawnGroupLoad",                // 15
+            "PostSpawnGroupLoad",               // 16
+            "PreSpawnGroupUnload",              // 17
+            "PostSpawnGroupUnload",             // 18
+            "ActiveSpawnGroupChanged",          // 19
+            "ClientPostDataUpdate",             // 20
+            "ClientPreRender",                  // 21
+            "ClientPreEntityThink",             // 22
+            "unk_101",                          // 23
+            "unk_102",                          // 24
+            "ClientPollNetworking",             // 25
+            "unk_201",                          // 26
+            "ClientUpdate",                     // 27
+            "unk_301",                          // 28
+            "ClientPostRender",                 // 29
+            "ServerPreEntityThink",             // 30
+            "ServerPostEntityThink",            // 31
+            "unk_401",                          // 32
+            "ServerPreClientUpdate",            // 33
+            "ServerAdvanceTick",                // 34
+            "ClientAdvanceTick",                // 35
+            "ServerGamePostSimulate",           // 36
+            "ClientGamePostSimulate",           // 37
+            "ServerPostAdvanceTick",            // 38
+            "ServerBeginAsyncPostTickWork",     // 39
+            "unk_501",                          // 40
+            "ServerEndAsyncPostTickWork",       // 41
+            "ClientFrameSimulate",              // 42
+            "ClientPauseSimulate",              // 43
+            "ClientAdvanceNonRenderedFrame",    // 44
+            "GameFrameBoundary",                // 45
+            "OutOfGameFrameBoundary",           // 46
+            "SaveGame",                         // 47
+            "RestoreGame",                      // 48
+            "unk_601",                          // 49
+            "unk_602",                          // 50
+            "unk_603",                          // 51
+            "unk_604",                          // 52
+            "unk_605",                          // 53
+            "unk_606",                          // 54
+            "GetName",                          // 55
+            "SetGameSystemGlobalPtrs",          // 56
+            "SetName",                          // 57
+            "DoesGameSystemReallocate",         // 58
+            "~IGameSystem",                     // 59
+            "~IGameSystem2",                    // 60
+
+            "Preserved1",
+            "Preserved2",
+            "Preserved3",
+            "Preserved4",
+            "Preserved5",
+            "Preserved6",
+            "Preserved7",
+            "Preserved8",
+            "Preserved9",
+            "Preserved10",
+        ];
+        let max_size = names.len();
+
+        let mut funcs = vec![vec![]; max_size];
+
+        let size = s2binlib.get_vtable_vfunc_count("server", "IGameSystem")?;
+
+        for vtable in res {
+            for base in vtable.bases {
+                if base.type_name.contains("IGameSystem") {
+                    if vtable.methods.len() < size {
+                        continue;
+                    }
+                    for i in 0..size {
+                        let method = vtable.methods[i];
+                        if !s2binlib.is_nullsub_va(method)? {
+                            println!("{:}", vtable.type_name);
+                            funcs[i].push(vtable.type_name.clone());
+                        }
+                    }
+                }
+            }
+        }
+
+        let mut file = File::create("funcs.txt")?;
+        for i in 0..max_size {
+            writeln!(file, "{:<35} {}", format!("{} [{}]", names[i], i), format!("{:?}", funcs[i]))?;
+        }
+        file.flush()?;
+
+        // fs::write("funcs.txt", serde_json::to_string_pretty(&funcs)?)?;
         
         let start = Instant::now();
 
