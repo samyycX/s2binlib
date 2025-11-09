@@ -1,4 +1,4 @@
-use std::{collections::HashMap, fs::{self, File}, io::Write};
+use std::{collections::{BTreeMap, HashMap}, fs::{self, File}, io::Write};
 
 use anyhow::Result;
 use s2binlib::S2BinLib;
@@ -13,7 +13,7 @@ pub fn dump_vtables(s2binlib: &S2BinLib, tracked_binaries: &[String], dump_dir: 
 
     let mut file = File::create(format!("{}/vtables/{}_short.txt", dump_dir, binary))?;
 
-    let mut map: HashMap<String, Vec<usize>> = HashMap::new();
+    let mut map: BTreeMap<String, Vec<usize>> = BTreeMap::new();
 
     for vtable in vtables {
       if map.contains_key(&vtable.type_name) {
