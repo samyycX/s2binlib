@@ -1,29 +1,12 @@
-[package]
-name = "s2binlib"
-version = "0.1.0"
-edition = "2024"
+[workspace]
+members = [
+    "s2binlib",
+    "s2binlib_binding",
+]
 
-[lib]
-crate-type = ["staticlib", "dylib"]
-
-[features]
-default = []
-debug_c_bindings = []
+resolver = "2"
 
 [profile.release]
-opt-level = 3
+opt-level = "z"
 lto = true
-
-
-[dependencies]
-anyhow = "1.0.100"
-object = "0.37.3"
-once_cell = "1.20"
-iced-x86 = "1.21"
-region = "3.0"
-
-[target.'cfg(target_os = "windows")'.dependencies]
-windows = { version = "0.62.2", features = ["Win32_System_Memory"] }
-
-[target.'cfg(target_os = "linux")'.dependencies]
-libc = "0.2.176"
+codegen-units = 1
