@@ -21,7 +21,7 @@ use std::ffi::{CStr, c_char, c_void};
 use std::sync::Mutex;
 use once_cell::sync::Lazy;
 
-use crate::S2BinLib;
+use s2binlib::S2BinLib;
 
 /// Macro for debug logging in C bindings when the debug_c_bindings feature is enabled
 #[cfg(feature = "debug_c_bindings")]
