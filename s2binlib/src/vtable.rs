@@ -4,11 +4,11 @@ use anyhow::{anyhow, Result};
 use cpp_demangle::Symbol;
 use msvc_demangler::{demangle, DemangleFlags};
 use object::{BinaryFormat, Object, ObjectSection, read::pe::ImageOptionalHeader};
-use serde::{Deserialize, Serialize};
 
 use crate::{is_executable, s2binlib::S2BinLib};
 
-#[derive(Serialize, Deserialize, Debug, Clone)]
+#[derive(Debug, Clone)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct VTableInfo {
     pub type_name: String,
     pub vtable_address: u64,
@@ -17,7 +17,8 @@ pub struct VTableInfo {
     pub model: VTableModel,
 }
 
-#[derive(Serialize, Deserialize, Debug, Clone)]
+#[derive(Debug, Clone)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub enum VTableModel {
     Msvc {
         complete_object_locator: u64,
@@ -30,13 +31,15 @@ pub enum VTableModel {
     },
 }
 
-#[derive(Serialize, Deserialize, Debug, Clone)]
+#[derive(Debug, Clone)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct BaseClassInfo {
     pub type_name: String,
     pub details: BaseClassModel,
 }
 
-#[derive(Serialize, Deserialize, Debug, Clone)]
+#[derive(Debug, Clone)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub enum BaseClassModel {
     Msvc {
         attributes: u32,
@@ -49,7 +52,8 @@ pub enum BaseClassModel {
     },
 }
 
-#[derive(Serialize, Deserialize, Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct Pmd {
     pub mdisp: i32,
     pub pdisp: i32,
