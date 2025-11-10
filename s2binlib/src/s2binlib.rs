@@ -17,10 +17,10 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  ***********************************************************************************/
 
-use std::{collections::HashMap, fs, path::PathBuf};
+use std::{cell::Cell, collections::HashMap, fs, path::PathBuf};
 
-use anyhow::Result;
-use iced_x86::{Code, Decoder, DecoderOptions, Instruction, OpKind, Register};
+use anyhow::{Result, bail};
+use iced_x86::{Code, Decoder, DecoderOptions, Instruction, Mnemonic, OpKind, Register};
 use object::{Object, ObjectSection, ObjectSymbol, read::pe::ImageOptionalHeader};
 
 use crate::{
@@ -41,18 +41,18 @@ unsafe extern "system" {
 }
 
 pub struct S2BinLib {
-    game_path: PathBuf,
-    game_type: String,
-    os: String,
-    binaries: HashMap<String, Vec<u8>>,
-    manual_base_addresses: HashMap<String, u64>,
+    pub(crate) game_path: PathBuf,
+    pub(crate) game_type: String,
+    pub(crate) os: String,
+    pub(crate) binaries: HashMap<String, Vec<u8>>,
+    pub(crate) manual_base_addresses: HashMap<String, u64>,
     /// Cached cross-references: binary_name -> (target_va -> Vec<xref_va>)
-    xrefs_cache: HashMap<String, HashMap<u64, Vec<u64>>>,
+    pub(crate) xrefs_cache: HashMap<String, HashMap<u64, Vec<u64>>>,
     /// Trampolines: (mem_address -> JitTrampoline)
-    trampolines: HashMap<u64, JitTrampoline>,
-    custom_binary_paths_windows: HashMap<String, String>,
-    custom_binary_paths_linux: HashMap<String, String>,
-    pub vtables: HashMap<String, Vec<VTableInfo>>,
+    pub(crate) trampolines: HashMap<u64, JitTrampoline>,
+    pub(crate) custom_binary_paths_windows: HashMap<String, String>,
+    pub(crate) custom_binary_paths_linux: HashMap<String, String>,
+    pub(crate) vtables: HashMap<String, Vec<VTableInfo>>,
 }
 
 fn read_int32(data: &[u8], offset: u64) -> u32 {
@@ -395,25 +395,12 @@ impl S2BinLib {
     }
 
     fn find_pattern_va(&self, binary_name: &str, pattern_string: &str) -> Result<u64> {
-        let binary_data = self.get_binary(binary_name)?;
-        let pattern = pattern_string
-            .split(" ")
-            .map(|x| {
-                if x == "?" {
-                    0u8
-                } else {
-                    u8::from_str_radix(x, 16).unwrap()
-                }
-            })
-            .collect::<Vec<u8>>();
-        let pattern_wildcard = pattern_string
-            .split(" ")
-            .enumerate()
-            .filter(|(_, x)| *x == "?")
-            .map(|(index, _)| index)
-            .collect::<Vec<usize>>();
-        let result = find_pattern_simd(binary_data, &pattern, &pattern_wildcard)?;
-        Ok(self.file_offset_to_va(binary_name, result)?)
+        let result = Cell::new(0);
+        self.pattern_scan_all_va(binary_name, pattern_string, |index, address| {
+            result.set(address);
+            true
+        })?;
+        Ok(result.get())
     }
 
     fn get_image_base(&self, binary_name: &str) -> Result<u64> {
@@ -697,7 +684,7 @@ impl S2BinLib {
         let pattern = pattern_string
             .split(" ")
             .map(|x| {
-                if x == "?" {
+                if x == "?" || x == "??" {
                     0u8
                 } else {
                     u8::from_str_radix(x, 16).unwrap()
@@ -707,7 +694,7 @@ impl S2BinLib {
         let pattern_wildcard = pattern_string
             .split(" ")
             .enumerate()
-            .filter(|(_, x)| *x == "?")
+            .filter(|(_, x)| *x == "?" || *x == "??")
             .map(|(index, _)| index)
             .collect::<Vec<usize>>();
 
@@ -735,6 +722,8 @@ impl S2BinLib {
 
         Err(anyhow::anyhow!("Pattern not found."))
     }
+
+    
 
     pub fn pattern_scan_all(
         &self,
@@ -790,12 +779,12 @@ impl S2BinLib {
         binary_name: &str,
         file_offset: u64,
         size: usize,
-    ) -> Result<Vec<u8>> {
+    ) -> Result<&[u8]> {
         let binary_data: &[u8] = self.get_binary(binary_name)?;
-        Ok(binary_data[file_offset as usize..file_offset as usize + size].to_vec())
+        Ok(&binary_data[file_offset as usize..file_offset as usize + size])
     }
 
-    pub fn read_by_va(&self, binary_name: &str, address: u64, size: usize) -> Result<Vec<u8>> {
+    pub fn read_by_va(&self, binary_name: &str, address: u64, size: usize) -> Result<&[u8]> {
         let file_offset = self.va_to_file_offset(binary_name, address)?;
         self.read_by_file_offset(binary_name, file_offset, size)
     }
@@ -805,7 +794,7 @@ impl S2BinLib {
         binary_name: &str,
         address: u64,
         size: usize,
-    ) -> Result<Vec<u8>> {
+    ) -> Result<&[u8]> {
         let va = self.mem_address_to_va(binary_name, address)?;
         self.read_by_va(binary_name, va, size)
     }
@@ -1210,5 +1199,68 @@ impl S2BinLib {
     pub fn is_nullsub(&self, binary_name: &str, func_mem_address: u64) -> Result<bool> {
         let func_va = self.mem_address_to_va("server", func_mem_address)?;
         self.is_nullsub_va(binary_name, func_va)
+    }
+
+    pub fn make_sig_va(&self, binary_name: &str, func_va: u64) -> Result<String> {
+
+        let data = self.read_by_va(binary_name, func_va, 1024)?;
+        let mut iced = Decoder::new(64, data, DecoderOptions::NONE);
+
+        let mut sigs = String::new();
+
+        let mut index = 0;
+
+        let mut warmup = 0;
+        let warmup_threshold = 3;
+
+        while iced.can_decode() {
+            let inst = iced.decode();
+            if inst.mnemonic() == Mnemonic::Ret || inst.mnemonic() == Mnemonic::Int3 {
+                bail!("Leaved function scope");
+            }
+
+            let inst_len = inst.len();
+            let opcode_len = inst.op_code().op_code_len() as usize;
+            let operand_len = inst_len - opcode_len;
+
+            let opcode = &data[index..index + opcode_len];
+            for byte in opcode {
+                sigs.push_str(&format!("{:02X} ", byte));
+            }
+
+            index += opcode_len;
+
+
+            for _ in 0..operand_len {
+                sigs.push_str("? ");
+                index += 1;
+            };
+
+
+            let success = Cell::new(false);
+
+            if (warmup < warmup_threshold) {
+                warmup += 1;
+                continue;
+            }
+
+            let _ = self.pattern_scan_all_va(binary_name, &sigs[0..sigs.len() - 1], |index, address| {
+                if index == 0 && address == func_va {
+                    success.set(true);
+                }
+                if address != func_va {
+                    success.set(false);
+                    return true;
+                }
+                false
+            });
+
+            if success.get() {
+                return Ok(sigs);
+            }
+        }
+
+        bail!("Signature not found");
+
     }
 }
