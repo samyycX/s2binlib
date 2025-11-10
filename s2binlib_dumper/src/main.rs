@@ -3,6 +3,7 @@ use std::fs;
 use anyhow::Result;
 use log::info;
 use s2binlib::{S2BinLib, VTableInfo};
+use stringvec::stringvec;
 
 mod dumpers {
     pub mod gamesystem_dumper;
@@ -17,7 +18,7 @@ fn main() -> Result<()> {
     let mut s2binlib = S2BinLib::new("F:/cs2server/game", "csgo", "windows");
 
     tracing_subscriber::fmt::init();
-    let tracked_binaries = vec![
+    let tracked_binaries = stringvec![
         "server",
         "engine2",
         "tier0",
@@ -25,7 +26,7 @@ fn main() -> Result<()> {
         "networksystem",
         "soundsystem",
         "pulse_system",
-    ].into_iter().map(|s| s.to_string()).collect::<Vec<_>>();
+    ];
 
 
     for binary in &tracked_binaries {
