@@ -10,7 +10,7 @@ pub fn dump_vtables(s2binlib: &S2BinLib, tracked_binaries: &[String], dump_dir: 
     info!("Dumping vtables for {}", binary);
     let vtables = s2binlib.get_vtables(binary)?;
     fs::create_dir_all(format!("{}/vtables", dump_dir))?;
-    let file = File::create(format!("{}/vtables/{}.txt", dump_dir, binary))?;
+    let file = File::create(format!("{}/vtables/{}.json", dump_dir, binary))?;
     serde_json::to_writer_pretty(file, &vtables)?;
 
     let mut file = File::create(format!("{}/vtables/{}_short.txt", dump_dir, binary))?;
