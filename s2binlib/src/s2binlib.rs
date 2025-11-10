@@ -835,17 +835,6 @@ impl S2BinLib {
         Ok(self.va_to_mem_address(binary_name, result)?)
     }
 
-    /// Dump cross-references from all executable sections
-    ///
-    /// This function scans all executable sections in the binary, disassembles
-    /// the instructions using iced-x86, and extracts cross-references (xrefs).
-    /// The results are cached in the `xrefs_cache` HashMap.
-    ///
-    /// # Arguments
-    /// * `binary_name` - The name of the binary to analyze
-    ///
-    /// # Returns
-    /// Returns Ok(()) on success, or an error if the binary cannot be processed
     pub fn dump_xrefs(&mut self, binary_name: &str) -> Result<()> {
         let binary_data = self.get_binary(binary_name)?;
         let object = object::File::parse(binary_data)?;
@@ -968,17 +957,6 @@ impl S2BinLib {
         Ok(())
     }
 
-    /// Get cached cross-references for a target virtual address
-    ///
-    /// Returns None if the binary hasn't been analyzed with `dump_xrefs` yet,
-    /// or if there are no references to the target address.
-    ///
-    /// # Arguments
-    /// * `binary_name` - The name of the binary
-    /// * `target_va` - The target virtual address to find references to
-    ///
-    /// # Returns
-    /// An optional reference to a vector of virtual addresses that reference the target
     pub fn find_xrefs_cached(&self, binary_name: &str, target_va: u64) -> Option<&Vec<u64>> {
         self.xrefs_cache
             .get(binary_name)
