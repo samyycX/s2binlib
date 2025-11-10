@@ -329,13 +329,6 @@ impl S2BinLib {
         ))
     }
 
-    fn find_pattern_string(&self, binary_name: &str, string: &str) -> Result<u64> {
-        let bytes = string.as_bytes().to_vec();
-        // bytes.push(0); // null terminato
-
-        self.find_pattern_bytes(binary_name, &bytes)
-    }
-
     fn find_pattern_string_in_section(
         &self,
         binary_name: &str,
@@ -345,12 +338,6 @@ impl S2BinLib {
         let bytes = string.as_bytes().to_vec();
 
         self.find_pattern_bytes_in_section(binary_name, section_name, &bytes)
-    }
-
-    fn find_pattern_bytes(&self, binary_name: &str, pattern: &[u8]) -> Result<u64> {
-        let binary_data = self.get_binary(binary_name)?;
-        let pattern_wildcard = vec![];
-        find_pattern_simd(binary_data, pattern, &pattern_wildcard)
     }
 
     fn find_pattern_int32_in_section(
@@ -396,7 +383,7 @@ impl S2BinLib {
 
     fn find_pattern_va(&self, binary_name: &str, pattern_string: &str) -> Result<u64> {
         let result = Cell::new(0);
-        self.pattern_scan_all_va(binary_name, pattern_string, |index, address| {
+        self.pattern_scan_all_va(binary_name, pattern_string, |_, address| {
             result.set(address);
             true
         })?;
@@ -1239,7 +1226,7 @@ impl S2BinLib {
 
             let success = Cell::new(false);
 
-            if (warmup < warmup_threshold) {
+            if warmup < warmup_threshold {
                 warmup += 1;
                 continue;
             }

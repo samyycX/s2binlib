@@ -73,7 +73,6 @@ fn dump_entities_internal(s2binlib: &S2BinLib, dump_dir: &str, binary_name: &str
             writeln!(file, "[!]")?;
           }
         } else {
-          let method = vtable.methods[i];
           writeln!(file, "[?]")?;
         }
       }
