@@ -20,7 +20,6 @@
 use std::{collections::HashMap, fs::{self, File}, io::Write};
 
 use anyhow::Result;
-use log::info;
 use s2binlib::{S2BinLib, VTableInfo};
 
 

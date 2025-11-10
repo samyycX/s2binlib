@@ -21,7 +21,7 @@ use std::fs;
 
 use anyhow::Result;
 use log::info;
-use s2binlib::{S2BinLib, VTableInfo};
+use s2binlib::S2BinLib;
 use stringvec::stringvec;
 
 mod dumpers {

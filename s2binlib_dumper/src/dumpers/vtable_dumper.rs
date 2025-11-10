@@ -17,10 +17,10 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  ***********************************************************************************/
 
-use std::{collections::{BTreeMap, HashMap}, fs::{self, File}, io::Write};
+use std::{collections::BTreeMap, fs::{self, File}, io::Write};
 
 use anyhow::Result;
-use log::{info, warn};
+use log::info;
 use s2binlib::S2BinLib;
 
 pub fn dump_vtables(s2binlib: &S2BinLib, tracked_binaries: &[String], dump_dir: &str) -> Result<()> {
