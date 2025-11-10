@@ -2,5 +2,5 @@ Base: CTraceFilter
 Virtual Function Count: 2
 Children Count: 25
 =============================================
-func_0     [DIFF 25]
-func_1     [DIFF 23]
+func_0     [ DIFF 25  ]
+func_1     [ DIFF 23  ]

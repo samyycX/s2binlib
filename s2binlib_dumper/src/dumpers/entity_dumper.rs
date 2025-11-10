@@ -1,7 +1,25 @@
+/************************************************************************************
+ *  S2BinLib - A static library that helps resolving memory from binary file
+ *  and map to absolute memory address, targeting source 2 game engine.
+ *  Copyright (C) 2025  samyyc
+ * 
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ ***********************************************************************************/
+
 use std::{collections::HashMap, fs::{self, File}, io::Write};
 
 use anyhow::Result;
-use log::info;
 use s2binlib::{S2BinLib, VTableInfo};
 
 
@@ -55,7 +73,6 @@ fn dump_entities_internal(s2binlib: &S2BinLib, dump_dir: &str, binary_name: &str
             writeln!(file, "[!]")?;
           }
         } else {
-          let method = vtable.methods[i];
           writeln!(file, "[?]")?;
         }
       }
