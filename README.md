@@ -17,11 +17,18 @@ This library mainly read data from original binary file instead of from memory, 
 - Install trampoline to vtable with enough bytes padded with NOP (for safetyhook to hook empty virtual function)
 - Find all CEmbeddedNetworkVar NetworkStateChanged function index
 - Follow xref safely
+- Dump vtables
+- Dump entity classes (dumper)
+- Dump vtable diffs (dumper)
+- Dump game system overrides (dumper)
+- Dump network var vtables (dumper)
+
 
 ## Project Layout
 
 - `s2binlib`: core Rust library crate exposing safe APIs.
 - `s2binlib_binding`: C ABI wrapper crate that links to `s2binlib` and produces the `s2binlib` DLL/LIB artifacts.
+- `s2binlib_dumper`: A dumper based on s2binlib for dumping game related data.
 
 ## Compiling
 
