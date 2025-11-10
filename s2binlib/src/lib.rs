@@ -47,6 +47,16 @@ mod tests {
         
         let start = Instant::now();
 
+        let mut s2binlib = S2BinLib::new("F:/cs2server/game", "csgo", "windows");
+
+        s2binlib.load_binary("server");
+
+        let start = Instant::now();
+        let sig = s2binlib.make_sig_va("server", 6451932160)?;
+        println!("Signature: {}", sig);
+        let duration = start.elapsed();
+        println!("Time taken: {:?}", duration);
+
         // let xref = s2binlib.pattern_scan_va("server", "4C 8D 35 ? ? ? ? 77")?;
 
         // let duration = start.elapsed();
