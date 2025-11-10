@@ -5,7 +5,6 @@ use log::info;
 use s2binlib::{S2BinLib, VTableInfo};
 
 
-
 fn dump_entities_internal(s2binlib: &S2BinLib, dump_dir: &str, binary_name: &str, class_name: &str) -> Result<()> {
 
   fs::create_dir_all(format!("{}/entity_diff/{}", dump_dir, binary_name))?;
@@ -16,13 +15,7 @@ fn dump_entities_internal(s2binlib: &S2BinLib, dump_dir: &str, binary_name: &str
 
   let mut entity_classes_file = File::create(format!("{}/entity_classes_{}.txt", dump_dir, binary_name))?;
 
-  // let base_info = vtables
-  //   .iter()
-  //   .find(|vtable| vtable.type_name.eq(class_name)).unwrap();
-
   let mut base_infos: HashMap<String, &VTableInfo> = HashMap::new();
-
-  let mut diffs = vec![0; base_count];
 
   for vtable in vtables {
     if vtable.bases.iter().any(|base| base.type_name.contains(class_name)) {
@@ -59,9 +52,6 @@ fn dump_entities_internal(s2binlib: &S2BinLib, dump_dir: &str, binary_name: &str
           if method == base_method {
             writeln!(file, "[=]")?;
           } else {
-            if i < diffs.len() {
-              diffs[i] += 1;
-            }
             writeln!(file, "[!]")?;
           }
         } else {
@@ -74,17 +64,12 @@ fn dump_entities_internal(s2binlib: &S2BinLib, dump_dir: &str, binary_name: &str
 
   entity_classes_file.flush()?;
 
-  let mut diffs_file = File::create(format!("{}/entity_diff/base_diff_count_{}.txt", dump_dir, binary_name))?;
-  for i in 0..diffs.len() {
-    writeln!(diffs_file, "{:<10} [DIFF {}]", format!("func_{}", i), diffs[i])?;
-  }
-  diffs_file.flush()?;
-
   Ok(())
 }
 
 pub fn dump_entities_server(s2binlib: &S2BinLib, dump_dir: &str) -> Result<()> {
   dump_entities_internal(s2binlib, dump_dir, "server", "CBaseEntity")
+
 }
 
 pub fn dump_entities_client(s2binlib: &S2BinLib, dump_dir: &str) -> Result<()> {
