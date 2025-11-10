@@ -65,7 +65,7 @@ On windows, if you are seeing linking error like `"__imp_NtReadFile"`, you also 
 
 ## Example
 
-Example code:
+Example code: 
 
 ```cpp
 #include <s2binlib.h>
