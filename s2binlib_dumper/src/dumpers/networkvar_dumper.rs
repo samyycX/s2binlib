@@ -17,7 +17,7 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  ***********************************************************************************/
 
-use std::{fs::{self, File}, io::Write};
+use std::{fs::File, io::Write};
 
 use anyhow::Result;
 use log::{info, warn};
