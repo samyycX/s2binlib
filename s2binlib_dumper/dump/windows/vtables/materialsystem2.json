@@ -1,0 +1,2752 @@
+[
+  {
+    "type_name": "CBaseIntrospectedToKV3TypeManager",
+    "vtable_address": 6443453488,
+    "methods": [
+      6442991376,
+      6442666048,
+      6442666048,
+      6442594832,
+      6442666064,
+      6442666048,
+      6442666064,
+      6442666048,
+      6442666064,
+      6442666080,
+      6442666048,
+      6442989312,
+      6442990752,
+      6442666048,
+      6442666096,
+      6442666096,
+      6442666096,
+      6442990080,
+      6442666064,
+      6442666048,
+      6443331540,
+      6443331540
+    ],
+    "bases": [
+      {
+        "type_name": "IResourceTypeManager",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443703376,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CBaseIntrospectedToKV3TypeManager::AsyncProcessResult",
+    "vtable_address": 6443453472,
+    "methods": [
+      6442989088
+    ],
+    "bases": [
+      {
+        "type_name": "IAsyncProcessedDataResult",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443697656,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CBaseVModuleMetadataProvider",
+    "vtable_address": 6443680184,
+    "methods": [
+      6443331540
+    ],
+    "bases": [],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443704472,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CCompileTargetExprOpCodeHandler",
+    "vtable_address": 6443487456,
+    "methods": [
+      6443255616
+    ],
+    "bases": [
+      {
+        "type_name": "IOpCodeHandler<int>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443699768,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CCompileTargetExprStackMachineBuilder",
+    "vtable_address": 6443486856,
+    "methods": [
+      6443255312,
+      6443429136,
+      6443255488,
+      6442666064,
+      6442666064,
+      6443255456,
+      6443255408,
+      6443255376,
+      6442666064,
+      6443255744
+    ],
+    "bases": [
+      {
+        "type_name": "CUtlStackMachineBuilder",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443699640,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CDynamicShaderCompileByteCode",
+    "vtable_address": 6443664376,
+    "methods": [
+      6442533328,
+      6442533296,
+      6442533312
+    ],
+    "bases": [
+      {
+        "type_name": "IRenderShaderByteCode",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443700224,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CFontBase",
+    "vtable_address": 6443686152,
+    "methods": [
+      6442800688,
+      6443331540,
+      6443331540
+    ],
+    "bases": [],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443705344,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CFontManager",
+    "vtable_address": 6443680296,
+    "methods": [
+      6442762944,
+      6442762880,
+      6442594832,
+      6442751360,
+      6442751808,
+      6442666048,
+      6442751312,
+      6442733376,
+      6442733392,
+      6442666096,
+      6442733376,
+      6442757568,
+      6442752528,
+      6442751328,
+      6442751904,
+      6442751920,
+      6442754160,
+      6442754368,
+      6442754256,
+      6442754752,
+      6442754864,
+      6442755184,
+      6442755424,
+      6442755456,
+      6442755680,
+      6442755712,
+      6442756016,
+      6442757584,
+      6442759376,
+      6442759824,
+      6442760208,
+      6442760784,
+      6442759568,
+      6442760336,
+      6442761616,
+      6442759984,
+      6442760624,
+      6442760032,
+      6442761168,
+      6442761344,
+      6442761440,
+      6442666048,
+      6442756784,
+      6442750608
+    ],
+    "bases": [
+      {
+        "type_name": "CTier2AppSystem<class IFontManager,0>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 5
+          }
+        }
+      },
+      {
+        "type_name": "CTier1AppSystem<class IFontManager,0>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 4
+          }
+        }
+      },
+      {
+        "type_name": "CTier0AppSystem<class IFontManager,0>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 3
+          }
+        }
+      },
+      {
+        "type_name": "CBaseAppSystem<class IFontManager>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 2
+          }
+        }
+      },
+      {
+        "type_name": "IFontManager",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IAppSystem",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443704784,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CIntOpEvaluator",
+    "vtable_address": 6443486832,
+    "methods": [
+      6443428592,
+      6443429952
+    ],
+    "bases": [
+      {
+        "type_name": "IOpEvaluator<int>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443699432,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CKV3ResourceBlockHelper",
+    "vtable_address": 6443453384,
+    "methods": [
+      6442989200
+    ],
+    "bases": [
+      {
+        "type_name": "IAsyncProcessedDataResult",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443697528,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CKV3TransferContextBase",
+    "vtable_address": 6443461288,
+    "methods": [
+      6443057488,
+      6443057136,
+      6442841264,
+      6442666064,
+      6443057696,
+      6442666048
+    ],
+    "bases": [
+      {
+        "type_name": "IErrorListener",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443698632,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CKV3TransferLoadContext",
+    "vtable_address": 6443461400,
+    "methods": [
+      6443057488,
+      6443057136,
+      6442841264,
+      6443056800,
+      6443057696,
+      6442666048
+    ],
+    "bases": [
+      {
+        "type_name": "CKV3TransferContextBase",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IErrorListener",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443698496,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CKV3TransferSaveContext",
+    "vtable_address": 6443461344,
+    "methods": [
+      6443057488,
+      6443057136,
+      6442841264,
+      6442666064,
+      6443057696,
+      6442666048
+    ],
+    "bases": [
+      {
+        "type_name": "CKV3TransferContextBase",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IErrorListener",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443698272,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CKV3Transfer_ResourceLoadInterface",
+    "vtable_address": 6443453264,
+    "methods": [
+      6442991904
+    ],
+    "bases": [
+      {
+        "type_name": "IKV3TransferInterface_ResourceLoad",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443697400,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CLineBatchLayoutInfo",
+    "vtable_address": 6443688336,
+    "methods": [
+      6442857968,
+      6442855424,
+      6442857680,
+      6442855456,
+      6442857776
+    ],
+    "bases": [
+      {
+        "type_name": "CBaseQueuedRenderable",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IQueuedRenderable",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443709480,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CLineLayoutInfo",
+    "vtable_address": 6443689136,
+    "methods": [
+      6442857248,
+      6442855424,
+      6442856912,
+      6442855456,
+      6442857056
+    ],
+    "bases": [
+      {
+        "type_name": "CBaseQueuedRenderable",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IQueuedRenderable",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443709304,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CMaterial2",
+    "vtable_address": 6443663952,
+    "methods": [
+      6442497376,
+      6442497408,
+      6442498032,
+      6442498048,
+      6442492752,
+      6442498880,
+      6442499280,
+      6442499328,
+      6442499344,
+      6442499360,
+      6442499616,
+      6442499872,
+      6442500128,
+      6442500160,
+      6442500416,
+      6442500688,
+      6442500944,
+      6442501200,
+      6442501232,
+      6442501872,
+      6442502624,
+      6442498160,
+      6442498336,
+      6442498512,
+      6442498544,
+      6442498800,
+      6442566304,
+      6442566320,
+      6442498528,
+      6442498816,
+      6442498832,
+      6442524160,
+      6442524288,
+      6442524416,
+      6442524736,
+      6442524576,
+      6442515552,
+      6442515568,
+      6442496784
+    ],
+    "bases": [
+      {
+        "type_name": "IMaterial2",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443700792,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CMaterial2::AsyncStaticComboResult_t",
+    "vtable_address": 6443663648,
+    "methods": [
+      6442519600
+    ],
+    "bases": [
+      {
+        "type_name": "IAsyncProcessedDataResult",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443700704,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CMaterialMode",
+    "vtable_address": 6443663840,
+    "methods": [
+      6442547632,
+      6442544096,
+      6442547664,
+      6442548064,
+      6442548096,
+      6442531872
+    ],
+    "bases": [
+      {
+        "type_name": "IMaterialMode",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443701200,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CMaterialSystem2",
+    "vtable_address": 6443671952,
+    "methods": [
+      6442680736,
+      6442680848,
+      6442594832,
+      6442674912,
+      6442680192,
+      6442680176,
+      6442672352,
+      6442733376,
+      6442733392,
+      6442666096,
+      6442733376,
+      6442680912,
+      6442681520,
+      6442681536,
+      6442681552,
+      6442681760,
+      6442681728,
+      6442682128,
+      6442682304,
+      6442682336,
+      6442694240,
+      6442685200,
+      6442680704,
+      6442699312,
+      6442699872,
+      6442700176,
+      6442695168,
+      6442695184,
+      6442696704,
+      6442696336,
+      6442695824,
+      6442699040,
+      6442699264,
+      6442699280,
+      6442699296,
+      6442681008,
+      6442697056,
+      6442697120,
+      6442698608,
+      6442698912,
+      6442681936,
+      6442681872,
+      6442697168,
+      6442698240,
+      6442680112,
+      6442680080,
+      6442700320,
+      6442673392
+    ],
+    "bases": [
+      {
+        "type_name": "CTier2AppSystem<class IMaterialSystem2,0>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 5
+          }
+        }
+      },
+      {
+        "type_name": "CTier1AppSystem<class IMaterialSystem2,0>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 4
+          }
+        }
+      },
+      {
+        "type_name": "CTier0AppSystem<class IMaterialSystem2,0>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 3
+          }
+        }
+      },
+      {
+        "type_name": "CBaseAppSystem<class IMaterialSystem2>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 2
+          }
+        }
+      },
+      {
+        "type_name": "IMaterialSystem2",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IAppSystem",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443703928,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CMaterialSystem2Utils",
+    "vtable_address": 6443688384,
+    "methods": [
+      6442861040,
+      6442762880,
+      6442594832,
+      6442861152,
+      6442862224,
+      6442666048,
+      6442861024,
+      6442733376,
+      6442733392,
+      6442666096,
+      6442733376,
+      6442862768,
+      6442862784,
+      6442863088,
+      6442863120,
+      6442863168,
+      6442863568,
+      6442863888,
+      6442864240,
+      6442864640,
+      6442865040,
+      6442866816,
+      6442866832,
+      6442871104,
+      6442893312,
+      6442873264,
+      6442872976,
+      6442872688,
+      6442872400,
+      6442873488,
+      6442876816,
+      6442876528,
+      6442876240,
+      6442876928,
+      6442879824,
+      6442880992,
+      6442882144,
+      6442886256,
+      6442885664,
+      6442884960,
+      6442884256,
+      6442883616,
+      6442886816,
+      6442887376,
+      6442889488,
+      6442888608,
+      6442887792,
+      6442889920,
+      6442890496,
+      6442890928,
+      6442891360,
+      6442892768,
+      6442892928,
+      6442897280,
+      6442897424,
+      6442893040,
+      6442895376,
+      6442897888,
+      6442899472,
+      6442900752,
+      6442860480
+    ],
+    "bases": [
+      {
+        "type_name": "CTier2AppSystem<class IMaterialSystem2Utils,0>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 5
+          }
+        }
+      },
+      {
+        "type_name": "CTier1AppSystem<class IMaterialSystem2Utils,0>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 4
+          }
+        }
+      },
+      {
+        "type_name": "CTier0AppSystem<class IMaterialSystem2Utils,0>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 3
+          }
+        }
+      },
+      {
+        "type_name": "CBaseAppSystem<class IMaterialSystem2Utils>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 2
+          }
+        }
+      },
+      {
+        "type_name": "IMaterialSystem2Utils",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IAppSystem",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443708104,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CMaterialTypeManager",
+    "vtable_address": 6443671696,
+    "methods": [
+      6442991376,
+      6442666048,
+      6442666048,
+      6442666640,
+      6442666096,
+      6442668768,
+      6442666096,
+      6442668464,
+      6442666112,
+      6442594832,
+      6442666048,
+      6442989312,
+      6442990752,
+      6442668416,
+      6442666096,
+      6442666096,
+      6442666096,
+      6442990080,
+      6442666064,
+      6442666048,
+      6442668944,
+      6442668896,
+      6442666800,
+      6442668336,
+      6442666048,
+      6442666464
+    ],
+    "bases": [
+      {
+        "type_name": "CTypesafeIntrospectedToKV3TypeManager<1952542070,struct MaterialResourceData_t>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 2
+          }
+        }
+      },
+      {
+        "type_name": "CBaseIntrospectedToKV3TypeManager",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IResourceTypeManager",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443703072,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CMeshLayoutInfo",
+    "vtable_address": 6443688960,
+    "methods": [
+      6442858496,
+      6442855424,
+      6442858160,
+      6442855456,
+      6442858288
+    ],
+    "bases": [
+      {
+        "type_name": "CBaseQueuedRenderable",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IQueuedRenderable",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443707880,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CModuleMetadataProvider_ResourceManifests",
+    "vtable_address": 6443461576,
+    "methods": [
+      6443059776
+    ],
+    "bases": [
+      {
+        "type_name": "CBaseVModuleMetadataProvider",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443698672,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CNullShaderCreateCallbacks",
+    "vtable_address": 6443672344,
+    "methods": [
+      6442492096,
+      6442672304,
+      6442594832,
+      6442594832,
+      6442594832
+    ],
+    "bases": [
+      {
+        "type_name": "IRuntimeShaderCreateCallbacks",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443703712,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CParallelProcessLauncher::CParallelLambdaJob<class `bool __cdecl CompileComboAndGetVariables_DynamicShaderCompile(class CUtlVector<struct DynamicShaderCompileTask_t,int,class CUtlVectorMemory_Growable<struct DynamicShaderCompileTask_t,int,0> > &,void (__cdecl *)(int,bool,int))'::`2'::<lambda_1> >",
+    "vtable_address": 6443663816,
+    "methods": [
+      6442590272,
+      6442589104
+    ],
+    "bases": [
+      {
+        "type_name": "IMultipleWorkerJob",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443701480,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CParallelProcessLauncher::CParallelLambdaJob<class `void __cdecl ParallelFor<1,class `bool __cdecl CompileAllShadersForStaticCombo(uint64_t,class CVfxStaticComboData &,class CVfx &,enum VfxProgram_t,class IVfx *)'::`2'::<lambda_1> >(int,int,char const *,class `bool __cdecl CompileAllShadersForStaticCombo(uint64_t,class CVfxStaticComboData &,class CVfx &,enum VfxProgram_t,class IVfx *)'::`2'::<lambda_1> &&,int,int,enum JobPriority_t)'::`12'::<lambda_1> >",
+    "vtable_address": 6443482384,
+    "methods": [
+      6443124256,
+      6443212464
+    ],
+    "bases": [
+      {
+        "type_name": "IMultipleWorkerJob",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443699184,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPlatformFont",
+    "vtable_address": 6443686120,
+    "methods": [
+      6442801360,
+      6442805392,
+      6442806144
+    ],
+    "bases": [
+      {
+        "type_name": "CFontBase",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443705280,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPostConnectCallback",
+    "vtable_address": 6443459760,
+    "methods": [
+      6443331540
+    ],
+    "bases": [],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443698072,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPostProcessingState",
+    "vtable_address": 6443687128,
+    "methods": [
+      6442833648,
+      6442832480,
+      6442811328,
+      6442814528,
+      6442814624,
+      6442814720,
+      6442816544,
+      6442814816,
+      6442815616,
+      6442830656,
+      6442830688,
+      6442832144,
+      6442832192,
+      6442830560,
+      6442830592,
+      6442830624,
+      6442830640,
+      6442834368
+    ],
+    "bases": [
+      {
+        "type_name": "IPostProcessingState",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443705616,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPostProcessingSystem",
+    "vtable_address": 6443687424,
+    "methods": [
+      6442762944,
+      6442762880,
+      6442594832,
+      6442811536,
+      6442811952,
+      6442666048,
+      6442594832,
+      6442733376,
+      6442733392,
+      6442666096,
+      6442733376,
+      6442812096,
+      6442812144,
+      6442812176,
+      6442812496,
+      6442811312,
+      6442812512,
+      6442812624,
+      6442812640,
+      6442813360,
+      6442813616,
+      6442814496
+    ],
+    "bases": [
+      {
+        "type_name": "CTier2AppSystem<class IPostProcessingSystem,0>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 5
+          }
+        }
+      },
+      {
+        "type_name": "CTier1AppSystem<class IPostProcessingSystem,0>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 4
+          }
+        }
+      },
+      {
+        "type_name": "CTier0AppSystem<class IPostProcessingSystem,0>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 3
+          }
+        }
+      },
+      {
+        "type_name": "CBaseAppSystem<class IPostProcessingSystem>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 2
+          }
+        }
+      },
+      {
+        "type_name": "IPostProcessingSystem",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IAppSystem",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443706256,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPostProcessingTypeManager",
+    "vtable_address": 6443687664,
+    "methods": [
+      6442991376,
+      6442666048,
+      6442666048,
+      6442841264,
+      6442666064,
+      6442666048,
+      6442666064,
+      6442666048,
+      6442666064,
+      6442666080,
+      6442666048,
+      6442989312,
+      6442990752,
+      6442666048,
+      6442666096,
+      6442666096,
+      6442666096,
+      6442990080,
+      6442666064,
+      6442666048,
+      6442844576,
+      6442844528,
+      6442841280,
+      6442841296,
+      6442666048,
+      6442841072
+    ],
+    "bases": [
+      {
+        "type_name": "CTypesafeIntrospectedToKV3TypeManager<1936683126,struct PostProcessingResource_t>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 2
+          }
+        }
+      },
+      {
+        "type_name": "CBaseIntrospectedToKV3TypeManager",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IResourceTypeManager",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443706768,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPrimitivesLayoutInfo",
+    "vtable_address": 6443688240,
+    "methods": [
+      6442860400,
+      6442855424,
+      6442859728,
+      6442855456,
+      6442859952
+    ],
+    "bases": [
+      {
+        "type_name": "CBaseQueuedRenderable",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IQueuedRenderable",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443708640,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CQueuedResetMaterialCacheRenderable",
+    "vtable_address": 6443688144,
+    "methods": [
+      6442855360,
+      6442855424,
+      6442855504,
+      6442855456,
+      6442855536
+    ],
+    "bases": [
+      {
+        "type_name": "CBaseQueuedRenderable",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IQueuedRenderable",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443708248,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CQueuedSetMaterialOrTextureRenderable",
+    "vtable_address": 6443688288,
+    "methods": [
+      6442856016,
+      6442855424,
+      6442855616,
+      6442855456,
+      6442855824
+    ],
+    "bases": [
+      {
+        "type_name": "CBaseQueuedRenderable",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IQueuedRenderable",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443709264,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CQueuedTextRenderable",
+    "vtable_address": 6443688192,
+    "methods": [
+      6442856800,
+      6442855424,
+      6442856400,
+      6442855456,
+      6442856512
+    ],
+    "bases": [
+      {
+        "type_name": "CBaseQueuedRenderable",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IQueuedRenderable",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443708184,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaInstallCallback",
+    "vtable_address": 6443461712,
+    "methods": [
+      6443061104
+    ],
+    "bases": [
+      {
+        "type_name": "CPostConnectCallback",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443698800,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaRegistration_materialsystem2",
+    "vtable_address": 6443695776,
+    "methods": [
+      6442971856
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaRegistration",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443709656,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CShaderCreateCallbacks",
+    "vtable_address": 6443664328,
+    "methods": [
+      6442492096,
+      6442493568,
+      6442493760,
+      6442493792,
+      6442493824
+    ],
+    "bases": [
+      {
+        "type_name": "IRuntimeShaderCreateCallbacks",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443700888,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CTextLayout",
+    "vtable_address": 6443687968,
+    "methods": [
+      6442762944,
+      6442762880,
+      6442594832,
+      6442845072,
+      6442845120,
+      6442666048,
+      6442845056,
+      6442733376,
+      6442733392,
+      6442666096,
+      6442733376,
+      6442845808,
+      6442845504,
+      6442845200,
+      6442846128,
+      6442847632,
+      6442851184,
+      6442851216,
+      6442847168,
+      6442847312,
+      6442844880
+    ],
+    "bases": [
+      {
+        "type_name": "CTier2AppSystem<class ITextLayout,0>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 5
+          }
+        }
+      },
+      {
+        "type_name": "CTier1AppSystem<class ITextLayout,0>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 4
+          }
+        }
+      },
+      {
+        "type_name": "CTier0AppSystem<class ITextLayout,0>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 3
+          }
+        }
+      },
+      {
+        "type_name": "CBaseAppSystem<class ITextLayout>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 2
+          }
+        }
+      },
+      {
+        "type_name": "ITextLayout",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 1
+          }
+        }
+      },
+      {
+        "type_name": "IAppSystem",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443707192,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CTextureDictionary",
+    "vtable_address": 6443454400,
+    "methods": [
+      6442995952,
+      6442997232,
+      6442996576,
+      6443000048,
+      6442994016,
+      6442995248,
+      6442995392,
+      6442998192,
+      6442998320,
+      6442998544,
+      6442998672,
+      6442999456,
+      6443006928,
+      6443005424,
+      6442997808,
+      6442998400,
+      6443005584,
+      6443001632,
+      6443004112,
+      6442997792
+    ],
+    "bases": [
+      {
+        "type_name": "ITextureDictionary",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443697944,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CUtlStackMachineBuilder",
+    "vtable_address": 6443486744,
+    "methods": [
+      6443255312,
+      6443429136,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540
+    ],
+    "bases": [],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443699312,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVfxConstructor",
+    "vtable_address": 6443663768,
+    "methods": [
+      6442529744
+    ],
+    "bases": [
+      {
+        "type_name": "ITSHashConstructor<class CVfx *>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443701728,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVfxShaderBuffer",
+    "vtable_address": 6443473392,
+    "methods": [
+      6443124352,
+      6443158912,
+      6442841264
+    ],
+    "bases": [
+      {
+        "type_name": "IRenderShaderByteCode",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443698928,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "IAsyncProcessedDataResult",
+    "vtable_address": 6443453248,
+    "methods": [
+      6443331540
+    ],
+    "bases": [],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443702416,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "IMultipleWorkerJob",
+    "vtable_address": 6443467704,
+    "methods": [
+      6442493856,
+      6443331540
+    ],
+    "bases": [],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443702088,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "IPostProcessingState",
+    "vtable_address": 6443687280,
+    "methods": [
+      6442811248,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540
+    ],
+    "bases": [],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443706296,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "IQueuedRenderable",
+    "vtable_address": 6443689088,
+    "methods": [
+      6442855360,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540
+    ],
+    "bases": [],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443707808,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "IRenderShaderByteCode",
+    "vtable_address": 6443467672,
+    "methods": [
+      6443331540,
+      6443331540,
+      6443331540
+    ],
+    "bases": [],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443701240,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "IRuntimeShaderCreateCallbacks",
+    "vtable_address": 6443663664,
+    "methods": [
+      6442492096,
+      6443331540,
+      6443331540,
+      6443331540,
+      6443331540
+    ],
+    "bases": [],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443701344,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "`public: virtual void * __cdecl CTypesafeIntrospectedToKV3TypeManager<1936683126,struct PostProcessingResource_t>::AllocateAndLoad(class CKV3TransferLoadContext &,struct ResourceBindingBase_t const *,class IRD_RegisterResourceDataUtils *)'::`2'::CAllocatorUtils",
+    "vtable_address": 6443687880,
+    "methods": [
+      6442669232,
+      6442669248
+    ],
+    "bases": [
+      {
+        "type_name": "CTypesafeIntrospectedToKV3TypeManager<1936683126,struct PostProcessingResource_t>::IKV3ResourceAllocatorUtils",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443706872,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "`public: virtual void * __cdecl CTypesafeIntrospectedToKV3TypeManager<1952542070,struct MaterialResourceData_t>::AllocateAndLoad(class CKV3TransferLoadContext &,struct ResourceBindingBase_t const *,class IRD_RegisterResourceDataUtils *)'::`2'::CAllocatorUtils",
+    "vtable_address": 6443671928,
+    "methods": [
+      6442669232,
+      6442669248
+    ],
+    "bases": [
+      {
+        "type_name": "CTypesafeIntrospectedToKV3TypeManager<1952542070,struct MaterialResourceData_t>::IKV3ResourceAllocatorUtils",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443703256,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "`public: virtual void __cdecl CTypesafeIntrospectedToKV3TypeManager<1936683126,struct PostProcessingResource_t>::DeallocateDestroyCleanup(void *,class IResourceDeallocatorUtils *)'::`2'::CDeallocatorUtils",
+    "vtable_address": 6443687904,
+    "methods": [
+      6442533312
+    ],
+    "bases": [
+      {
+        "type_name": "CTypesafeIntrospectedToKV3TypeManager<1936683126,struct PostProcessingResource_t>::IKV3ResourceDeallocatorUtils",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443706912,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "`public: virtual void __cdecl CTypesafeIntrospectedToKV3TypeManager<1952542070,struct MaterialResourceData_t>::DeallocateDestroyCleanup(void *,class IResourceDeallocatorUtils *)'::`2'::CDeallocatorUtils",
+    "vtable_address": 6443671912,
+    "methods": [
+      6442533312
+    ],
+    "bases": [
+      {
+        "type_name": "CTypesafeIntrospectedToKV3TypeManager<1952542070,struct MaterialResourceData_t>::IKV3ResourceDeallocatorUtils",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443703296,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "std::_Func_impl_no_alloc<class `private: void __cdecl CMaterial2::IssueAsyncLoadRequests(class CUtlLeanVector<struct MaterialStaticComboLoadRequest_t,int,class CMemAllocAllocator> &,class CWeakHandle<struct InfoForResourceTypeIMaterial2>,enum ShaderLoadMode_t)'::`19'::<lambda_1>,class std::unique_ptr<class IAsyncProcessedDataResult,struct std::default_delete<class IAsyncProcessedDataResult> >,class IAsyncResourceDataRequest *>",
+    "vtable_address": 6443664272,
+    "methods": [
+      6442594848,
+      6442594832,
+      6442594784,
+      6442594768,
+      6442594688,
+      6442593920
+    ],
+    "bases": [
+      {
+        "type_name": "std::_Func_base<class std::unique_ptr<class IAsyncProcessedDataResult,struct std::default_delete<class IAsyncProcessedDataResult> >,class IAsyncResourceDataRequest *>",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443700456,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "std::_Func_impl_no_alloc<class `private: void __cdecl CMaterial2::IssueAsyncLoadRequests(class CUtlLeanVector<struct MaterialStaticComboLoadRequest_t,int,class CMemAllocAllocator> &,class CWeakHandle<struct InfoForResourceTypeIMaterial2>,enum ShaderLoadMode_t)'::`19'::<lambda_2>,void,class IAsyncResourceDataRequest *,class std::unique_ptr<class IAsyncProcessedDataResult,struct std::default_delete<class IAsyncProcessedDataResult> > >",
+    "vtable_address": 6443663896,
+    "methods": [
+      6442594656,
+      6442594656,
+      6442594368,
+      6442594352,
+      6442593888,
+      6442593920
+    ],
+    "bases": [
+      {
+        "type_name": "std::_Func_base<void,class IAsyncResourceDataRequest *,class std::unique_ptr<class IAsyncProcessedDataResult,struct std::default_delete<class IAsyncProcessedDataResult> > >",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443700264,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "std::_Func_impl_no_alloc<class `public: void __cdecl CMaterialLayer::SetRenderStateForRenderablePassWithCommandBuffers(class CRenderAttributes const *,class CRenderAttributes const *,class IRenderContext *,struct RenderInputLayout_t__*,struct MaterialRenderablePass_t const &,struct RsStencilStateOverride_t const *,struct RsDepthBiasStateOverride_t const *,int,unsigned int) const'::`2'::<lambda_1>,class CUtlVector<struct std::pair<char const *,class std::variant<bool,float,int,uint64_t,class CUtlString,class Vec4D<float>,void *,struct std::monostate> >,int,class CUtlVectorMemory_Growable<struct std::pair<char const *,class std::variant<bool,float,int,uint64_t,class CUtlString,class Vec4D<float>,void *,struct std::monostate> >,int,0> > >",
+    "vtable_address": 6443664408,
+    "methods": [
+      6442594320,
+      6442594320,
+      6442594288,
+      6442594272,
+      6442593888,
+      6442593920
+    ],
+    "bases": [
+      {
+        "type_name": "std::_Func_base<class CUtlVector<struct std::pair<char const *,class std::variant<bool,float,int,uint64_t,class CUtlString,class Vec4D<float>,void *,struct std::monostate> >,int,class CUtlVectorMemory_Growable<struct std::pair<char const *,class std::variant<bool,float,int,uint64_t,class CUtlString,class Vec4D<float>,void *,struct std::monostate> >,int,0> > >",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443701032,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "std::_Func_impl_no_alloc<class `public: void __cdecl CMaterialLayer::SetRenderStateForRenderablePassWithCommandBuffers(class CRenderAttributes const *,class CRenderAttributes const *,class IRenderContext *,struct RenderInputLayout_t__*,struct MaterialRenderablePass_t const &,struct RsStencilStateOverride_t const *,struct RsDepthBiasStateOverride_t const *,int,unsigned int) const'::`42'::<lambda_2>,class CUtlVector<struct std::pair<char const *,class std::variant<bool,float,int,uint64_t,class CUtlString,class Vec4D<float>,void *,struct std::monostate> >,int,class CUtlVectorMemory_Growable<struct std::pair<char const *,class std::variant<bool,float,int,uint64_t,class CUtlString,class Vec4D<float>,void *,struct std::monostate> >,int,0> > >",
+    "vtable_address": 6443663712,
+    "methods": [
+      6442594240,
+      6442594240,
+      6442593952,
+      6442593936,
+      6442593888,
+      6442593920
+    ],
+    "bases": [
+      {
+        "type_name": "std::_Func_base<class CUtlVector<struct std::pair<char const *,class std::variant<bool,float,int,uint64_t,class CUtlString,class Vec4D<float>,void *,struct std::monostate> >,int,class CUtlVectorMemory_Growable<struct std::pair<char const *,class std::variant<bool,float,int,uint64_t,class CUtlString,class Vec4D<float>,void *,struct std::monostate> >,int,0> > >",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443702128,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "std::_Ref_count_obj2<struct CVfxStaticComboData::DecompressedComboData_t>",
+    "vtable_address": 6443481784,
+    "methods": [
+      6443231392,
+      6443231360,
+      6443124304,
+      6442594832
+    ],
+    "bases": [
+      {
+        "type_name": "std::_Ref_count_base",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443699056,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "std::bad_exception",
+    "vtable_address": 6443625240,
+    "methods": [
+      6443345796,
+      6442483344
+    ],
+    "bases": [
+      {
+        "type_name": "std::exception",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443700096,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "std::exception",
+    "vtable_address": 6443620960,
+    "methods": [
+      6442483376,
+      6442483344
+    ],
+    "bases": [],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443700376,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "type_info",
+    "vtable_address": 6443624848,
+    "methods": [
+      6443328416,
+      6443328460
+    ],
+    "bases": [],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6443699976,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  }
+]

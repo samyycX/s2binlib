@@ -1,9 +1,33 @@
-Base: CRecipientFilter
+Vtable: CRecipientFilter
 Virtual Function Count: 5
 Children Count: 10
 =============================================
-func_0     [ DIFF 10  ]
-func_1     [ DIFF 0   ]
-func_2     [ DIFF 0   ]
-func_3     [ DIFF 0   ]
-func_4     [ DIFF 0   ]
+func_0     [ DIFF 10  ]                               ["CBroadcastRecipientFilter", "CHLTVRecipientFilter", "CPASAttenuationFilter", "CPASFilter", "CPVSFilter", "CReliableBroadcastRecipientFilter", "CReliableSingleUserRecipientFilter", "CSingleUserPlusObserversFilter", "CSingleUserRecipientFilter", "CTeamRecipientFilter"]
+    "40 53 48 83 EC 20 48 8D 05 EB 49 FD 00 48 8B D9"
+func_1     [ DIFF 0   ]                               []
+    "0F B6 41 14 C3 CC CC CC CC CC CC CC CC CC CC CC"
+func_2     [ DIFF 0   ]                               []
+    "0F B6 41 15 C3 CC CC CC CC CC CC CC CC CC CC CC"
+func_3     [ DIFF 0   ]                               []
+    "48 8D 41 08 C3 CC CC CC CC CC CC CC CC CC CC CC"
+func_4     [ DIFF 0   ]                               []
+    "8B 41 10 89 02 48 8B C2 C3 CC CC CC CC CC CC CC"
+
+=============================================
+Bases: 
+"IRecipientFilter"
+=============================================
+
+=============================================
+Children: 
+"CBroadcastRecipientFilter"
+"CHLTVRecipientFilter"
+"CPASAttenuationFilter"
+"CPASFilter"
+"CPVSFilter"
+"CReliableBroadcastRecipientFilter"
+"CReliableSingleUserRecipientFilter"
+"CSingleUserPlusObserversFilter"
+"CSingleUserRecipientFilter"
+"CTeamRecipientFilter"
+================================================
