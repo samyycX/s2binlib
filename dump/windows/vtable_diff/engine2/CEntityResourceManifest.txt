@@ -1,0 +1,41 @@
+Vtable: CEntityResourceManifest
+Virtual Function Count: 12
+Children Count: 1
+=============================================
+func_0     [ DIFF 1   ]                               ["CEmptyEntityResourceManifest"]
+    "48 83 EC 38 4C 89 4C 24 20 4D 8B C8 45 33 C0 E8"
+func_1     [ DIFF 1   ]                               ["CEmptyEntityResourceManifest"]
+    "48 83 EC 38 45 33 C9 48 C7 44 24 20 00 00 00 00"
+func_2     [ DIFF 1   ]                               ["CEmptyEntityResourceManifest"]
+    "48 83 EC 38 45 33 C9 48 C7 44 24 20 00 00 00 00"
+func_3     [ DIFF 0   ]                               []
+    "40 56 48 81 EC 00 01 00 00 33 C0 C7 44 24 34 C8"
+func_4     [ DIFF 0   ]                               []
+    "44 8B 02 48 81 C1 D0 00 00 00 E9 C1 26 00 00 CC"
+func_5     [ DIFF 0   ]                               []
+    "48 83 EC 08 83 B9 E0 00 00 00 00 44 8B 0A 75 0F"
+func_6     [ DIFF 1   ]                               ["CEmptyEntityResourceManifest"]
+    "48 81 EC 58 01 00 00 48 8B 84 24 80 01 00 00 33"
+func_7     [ DIFF 0   ]                               []
+    "88 91 28 01 00 00 C3 CC CC CC CC CC CC CC CC CC"
+func_8     [ DIFF 0   ]                               []
+    "48 8B 41 60 48 85 C0 74 12 48 8B 80 A0 00 00 00"
+func_9     [ DIFF 0   ]                               []
+    "8B 41 28 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_10    [ DIFF 0   ]                               []
+    "83 79 28 00 7E 05 48 8B 41 30 C3 33 C0 C3 CC CC"
+func_11    [ DIFF 1   ]                               ["CEmptyEntityResourceManifest"]
+    "0F 10 81 10 01 00 00 48 8B C2 F2 0F 10 89 20 01"
+
+=============================================
+Bases: 
+"IEntityResourceManifest"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 0, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 0
+=============================================
+
+=============================================
+Children: 
+"CEmptyEntityResourceManifest"
+================================================

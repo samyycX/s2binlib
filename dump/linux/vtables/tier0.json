@@ -1,0 +1,3654 @@
+[
+  {
+    "type_name": "CAsyncScheduledFunctionManager",
+    "vtable_address": 4908792,
+    "methods": [
+      2126160,
+      2126464,
+      2126848,
+      2126768,
+      2126976,
+      2125824,
+      2125984
+    ],
+    "bases": [
+      {
+        "type_name": "IAsyncScheduledFunctions",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CColorizedLoggingListener",
+    "vtable_address": 4959288,
+    "methods": [
+      2654768,
+      2654736,
+      2058784,
+      2058784,
+      2058784
+    ],
+    "bases": [
+      {
+        "type_name": "CSimpleLoggingListener",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CCommandLine",
+    "vtable_address": 4904368,
+    "methods": [
+      1930720,
+      1930080,
+      1930368,
+      1911008,
+      1911392,
+      1911152,
+      1911248,
+      1911472,
+      1911632,
+      1919440,
+      1930992,
+      1927568,
+      1911504,
+      1910864,
+      1925632,
+      1910816,
+      1910832,
+      1910880,
+      1911328,
+      1911168,
+      1911520,
+      1919344,
+      1930896,
+      1927312,
+      1923392,
+      1924128
+    ],
+    "bases": [
+      {
+        "type_name": "ICommandLine",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CConCommandMemberAccessor<CCvar>",
+    "vtable_address": 4905832,
+    "methods": [
+      1963376,
+      1961808
+    ],
+    "bases": [
+      {
+        "type_name": "ConCommand",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2
+          }
+        }
+      },
+      {
+        "type_name": "ICommandCallback",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2
+          }
+        }
+      },
+      {
+        "type_name": "ICommandCompletionCallback",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CConCommandMemberAccessor<CCvar>",
+    "vtable_address": 4905864,
+    "methods": [
+      1963408
+    ],
+    "bases": [
+      {
+        "type_name": "ConCommand",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2
+          }
+        }
+      },
+      {
+        "type_name": "ICommandCallback",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2
+          }
+        }
+      },
+      {
+        "type_name": "ICommandCompletionCallback",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -16
+      }
+    }
+  },
+  {
+    "type_name": "CCountedStringPool_CI",
+    "vtable_address": 4925096,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CCvar",
+    "vtable_address": 4905888,
+    "methods": [
+      1964240,
+      1963200,
+      1913920,
+      1943168,
+      1944208,
+      1963296,
+      1963312,
+      1963328,
+      1964272,
+      1963344,
+      1963360,
+      1914448,
+      1912080,
+      1912192,
+      1946320,
+      1914880,
+      1911760,
+      1914656,
+      1912416,
+      1914160,
+      1912528,
+      1920928,
+      1913456,
+      1946624,
+      1951520,
+      1962400,
+      1962416,
+      1982816,
+      1963968,
+      1977664,
+      1979952,
+      1995920,
+      1980464,
+      1997360,
+      1962640,
+      1986240,
+      1962656,
+      1961792,
+      1963472,
+      1961872,
+      1956400,
+      1950176,
+      1927024,
+      1912032,
+      1947264,
+      1949408,
+      1913968,
+      1946816
+    ],
+    "bases": [
+      {
+        "type_name": "CTier0AppSystem<ICvar, (long long)0>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CDefaultKeyValuesErrorSpew",
+    "vtable_address": 4909656,
+    "methods": [
+      1963296,
+      1963296,
+      2144128
+    ],
+    "bases": [
+      {
+        "type_name": "IKeyValuesErrorSpew",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CDefaultLoggingResponsePolicy",
+    "vtable_address": 4959400,
+    "methods": [
+      2654944
+    ],
+    "bases": [
+      {
+        "type_name": "ILoggingResponsePolicy",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CDisposableKeyValuesSystem",
+    "vtable_address": 4910360,
+    "methods": [
+      2218240,
+      2218256,
+      2196912,
+      2196944,
+      2223680,
+      2200416,
+      2196992,
+      2197040,
+      2195120,
+      2197088,
+      2197136,
+      2225872,
+      2200240,
+      2206784,
+      2203968,
+      2201584,
+      2201760,
+      2201824,
+      2218304,
+      2218368,
+      2195152,
+      2195136,
+      2195136,
+      1963296
+    ],
+    "bases": [
+      {
+        "type_name": "CKeyValuesSystemBase",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CDmSymbolTableLarge",
+    "vtable_address": 4907624,
+    "methods": [
+      2001232,
+      2009760,
+      2015424,
+      2001072,
+      2001088,
+      2010112,
+      2011152,
+      2011536,
+      1963296
+    ],
+    "bases": [
+      {
+        "type_name": "IGlobalSymbolMap",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CExecMultiWorkerJob",
+    "vtable_address": 4908864,
+    "methods": [
+      2114000,
+      2114080,
+      2060208,
+      2114560,
+      2100816,
+      2068416,
+      2100784,
+      1963296
+    ],
+    "bases": [
+      {
+        "type_name": "CThreadedJob",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CFiberJobPool",
+    "vtable_address": 4907984,
+    "methods": [
+      2044448,
+      2038736,
+      2040960,
+      2049920,
+      2051168,
+      2047296
+    ],
+    "bases": [
+      {
+        "type_name": "IFiberJobPool",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CGlobalThreadPool",
+    "vtable_address": 4908504,
+    "methods": [
+      2137360,
+      2137376,
+      2060208,
+      2101104,
+      2141600,
+      2135904,
+      2141888,
+      2100832,
+      2100848,
+      2100864,
+      2114720,
+      2114768,
+      2123936,
+      2115312,
+      2121344,
+      2116080,
+      2121136,
+      2118336,
+      2118560,
+      2114848,
+      2118880,
+      2100880,
+      2124192
+    ],
+    "bases": [
+      {
+        "type_name": "CThreadPool",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CJobThread",
+    "vtable_address": 4908944,
+    "methods": [
+      2122736,
+      2122752
+    ],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CKeyValuesSystem",
+    "vtable_address": 4910608,
+    "methods": [
+      2217808,
+      2218192,
+      2201856,
+      2202080,
+      2223392,
+      2200416,
+      2195248,
+      2195248,
+      2195264,
+      2219648,
+      2221856,
+      2225584,
+      2200240,
+      2206784,
+      2203968,
+      2201584,
+      2201760,
+      2201824,
+      2218304,
+      2218368,
+      2195152,
+      2195200,
+      2195232,
+      2195216
+    ],
+    "bases": [
+      {
+        "type_name": "CKeyValuesSystemBase",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CKeyValuesSystemBase",
+    "vtable_address": 4910816,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "IKeyValuesSystem",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CLoadKV3FromText",
+    "vtable_address": 4911272,
+    "methods": [
+      2278480,
+      2207904,
+      2277136,
+      2196832,
+      2196848,
+      2196864
+    ],
+    "bases": [
+      {
+        "type_name": "IErrorListener",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CMemPassAllocT<LLA_AddAlignedSelectors<LowLevelAllocationScheme_jemalloc> >",
+    "vtable_address": 4921912,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "IMemAlloc_Internal",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1018592
+      }
+    }
+  },
+  {
+    "type_name": "CMemStdPurePassThroughAlloc",
+    "vtable_address": 4922440,
+    "methods": [
+      2676544,
+      2678128,
+      2682704,
+      2692752,
+      2692640,
+      2693072,
+      2693600,
+      2692656,
+      2682800,
+      2692896,
+      2692672,
+      2693248,
+      2693872,
+      2692688,
+      2682896,
+      2692704,
+      2693424,
+      2692704,
+      2694144,
+      2694160,
+      2195104,
+      2676752,
+      2676768,
+      2676784,
+      2676800,
+      2676720,
+      1963296,
+      2697488,
+      2677376,
+      2676816,
+      2676832,
+      2676848,
+      1963328,
+      2676864,
+      2676864,
+      2692560,
+      2676880,
+      2676880,
+      2676896,
+      2676912,
+      2677504,
+      2682800,
+      2692896,
+      2692720,
+      2694176
+    ],
+    "bases": [
+      {
+        "type_name": "CMemPassAllocT<LLA_AddAlignedSelectors<LowLevelAllocationScheme_jemalloc> >",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "COneTimeEvent",
+    "vtable_address": 4907576,
+    "methods": [
+      2032624,
+      2032672,
+      2001248,
+      2032560
+    ],
+    "bases": [
+      {
+        "type_name": "IRefCounted",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CParallelProcessorAbstract<CParallelProcessor<int, CMemberFuncJobItemProcessor<int, CCallQueue, CCallQueue>, 1> >",
+    "vtable_address": 4959064,
+    "methods": [
+      1869136,
+      1880656,
+      1861184
+    ],
+    "bases": [
+      {
+        "type_name": "CParallelProcessorAbstract_Base",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2
+          }
+        }
+      },
+      {
+        "type_name": "IMultipleWorkerJob",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPooledStdFunctionJob",
+    "vtable_address": 4907440,
+    "methods": [
+      2114320,
+      2114432,
+      2060208,
+      2060160,
+      2058496,
+      2068416,
+      2060432,
+      1963296
+    ],
+    "bases": [
+      {
+        "type_name": "CStdFunctionJob",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CProcess",
+    "vtable_address": 4923808,
+    "methods": [
+      2794288,
+      2794464,
+      2767856,
+      1911152,
+      1911504,
+      2767888,
+      2796336,
+      2810000,
+      2811248,
+      2811024,
+      2811536,
+      2812224,
+      2809840,
+      2800880,
+      2800896,
+      2812288,
+      2800912
+    ],
+    "bases": [
+      {
+        "type_name": "IProcess",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CProcessPipeRead",
+    "vtable_address": 4923736,
+    "methods": [
+      2767840,
+      2793184,
+      2793936,
+      2793568,
+      2795488,
+      2794656,
+      2795232
+    ],
+    "bases": [
+      {
+        "type_name": "IPipeRead",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CProcessUtils",
+    "vtable_address": 4925264,
+    "methods": [
+      1964240,
+      1963200,
+      2197984,
+      2801856,
+      2810560,
+      1963296,
+      1963312,
+      1963328,
+      1964272,
+      1963344,
+      1963360,
+      2800928,
+      2814688,
+      2800992,
+      2832832,
+      2801056,
+      2801296,
+      2812832,
+      2801328,
+      2812848,
+      2801360,
+      2801376,
+      2801392,
+      2801408,
+      2801424
+    ],
+    "bases": [
+      {
+        "type_name": "CTier0AppSystem<IProcessUtils, (long long)0>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<0>",
+    "vtable_address": 4924952,
+    "methods": [
+      2788960,
+      2770192
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<10>",
+    "vtable_address": 4924088,
+    "methods": [
+      2787232,
+      2768896
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<11>",
+    "vtable_address": 4924856,
+    "methods": [
+      2788768,
+      2770048
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<12>",
+    "vtable_address": 4924056,
+    "methods": [
+      2787168,
+      2768848
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<13>",
+    "vtable_address": 4924184,
+    "methods": [
+      2787424,
+      2769040
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<14>",
+    "vtable_address": 4924536,
+    "methods": [
+      2788128,
+      2769568
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<15>",
+    "vtable_address": 4924696,
+    "methods": [
+      2788448,
+      2769808
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<16>",
+    "vtable_address": 4923992,
+    "methods": [
+      2787040,
+      2768752
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<17>",
+    "vtable_address": 4924376,
+    "methods": [
+      2787808,
+      2769328
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<18>",
+    "vtable_address": 4924344,
+    "methods": [
+      2787744,
+      2769280
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<19>",
+    "vtable_address": 4924312,
+    "methods": [
+      2787680,
+      2769232
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<1>",
+    "vtable_address": 4924568,
+    "methods": [
+      2788192,
+      2769616
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<20>",
+    "vtable_address": 4924280,
+    "methods": [
+      2787616,
+      2769184
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<21>",
+    "vtable_address": 4924248,
+    "methods": [
+      2787552,
+      2769136
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<22>",
+    "vtable_address": 4924216,
+    "methods": [
+      2787488,
+      2769088
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<23>",
+    "vtable_address": 4924408,
+    "methods": [
+      2787872,
+      2769376
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<24>",
+    "vtable_address": 4924152,
+    "methods": [
+      2787360,
+      2768992
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<25>",
+    "vtable_address": 4924120,
+    "methods": [
+      2787296,
+      2768944
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<26>",
+    "vtable_address": 4924504,
+    "methods": [
+      2788064,
+      2769520
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<27>",
+    "vtable_address": 4924472,
+    "methods": [
+      2788000,
+      2769472
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<28>",
+    "vtable_address": 4924024,
+    "methods": [
+      2787104,
+      2768800
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<29>",
+    "vtable_address": 4924440,
+    "methods": [
+      2787936,
+      2769424
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<2>",
+    "vtable_address": 4924664,
+    "methods": [
+      2788384,
+      2769760
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<30>",
+    "vtable_address": 4923960,
+    "methods": [
+      2786976,
+      2768704
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<31>",
+    "vtable_address": 4924728,
+    "methods": [
+      2788512,
+      2769856
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<3>",
+    "vtable_address": 4924632,
+    "methods": [
+      2788320,
+      2769712
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<4>",
+    "vtable_address": 4924888,
+    "methods": [
+      2788832,
+      2770096
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<5>",
+    "vtable_address": 4924760,
+    "methods": [
+      2788576,
+      2769904
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<6>",
+    "vtable_address": 4924792,
+    "methods": [
+      2788640,
+      2769952
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<7>",
+    "vtable_address": 4924824,
+    "methods": [
+      2788704,
+      2770000
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<8>",
+    "vtable_address": 4924920,
+    "methods": [
+      2788896,
+      2770144
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSignal<9>",
+    "vtable_address": 4924600,
+    "methods": [
+      2788256,
+      2769664
+    ],
+    "bases": [
+      {
+        "type_name": "IForceSignalNumberIntoCallStack",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSimpleLoggingListener",
+    "vtable_address": 4959344,
+    "methods": [
+      2654656,
+      2654736,
+      2058784,
+      2058784,
+      2058784
+    ],
+    "bases": [
+      {
+        "type_name": "ILoggingListener",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CStdFunctionJob",
+    "vtable_address": 4907360,
+    "methods": [
+      2068528,
+      2068640,
+      2060208,
+      2060160,
+      2058496,
+      2068416,
+      2060432,
+      1963296
+    ],
+    "bases": [
+      {
+        "type_name": "CThreadedJob",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CStdMemAlloc<MemConfig_t>",
+    "vtable_address": 4922064,
+    "methods": [
+      2676736,
+      2678144,
+      2713504,
+      2714016,
+      2695808,
+      2716288,
+      2716944,
+      2696240,
+      2713504,
+      2714016,
+      2695808,
+      2716288,
+      2716944,
+      2696240,
+      2718576,
+      2696640,
+      2719120,
+      2697088,
+      2676928,
+      2676928,
+      2698032,
+      2676976,
+      2676992,
+      2677008,
+      2677024,
+      2677040,
+      2700608,
+      2700336,
+      2677536,
+      2677056,
+      2695424,
+      2695088,
+      2677088,
+      2677120,
+      2677136,
+      2697600,
+      2682432,
+      2677152,
+      2677168,
+      2677184,
+      2677200,
+      2682992,
+      2693040,
+      2692736,
+      2694192
+    ],
+    "bases": [
+      {
+        "type_name": "IMemAlloc_Internal",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CTestScriptMgr",
+    "vtable_address": 4925744,
+    "methods": [
+      1964240,
+      1963200,
+      2197984,
+      2846352,
+      2846160,
+      1963296,
+      1963312,
+      1963328,
+      1964272,
+      1963344,
+      1963360,
+      2878816,
+      2883248,
+      2844384,
+      2883472,
+      2858608,
+      2875008,
+      2863232,
+      2864240
+    ],
+    "bases": [
+      {
+        "type_name": "CTier0AppSystem<ITestScriptMgr, (long long)0>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CThreadManualEvent",
+    "vtable_address": 4907552,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CThreadPool",
+    "vtable_address": 4909016,
+    "methods": [
+      2136608,
+      2137312,
+      2060208,
+      2101104,
+      2141472,
+      2135904,
+      2141888,
+      2100832,
+      2100848,
+      2100864,
+      2114720,
+      2114768,
+      2123936,
+      2115312,
+      2121344,
+      2116080,
+      2121136,
+      2118336,
+      2118560,
+      2114848,
+      2118880,
+      2100880,
+      2124192
+    ],
+    "bases": [
+      {
+        "type_name": "CRefCounted1<IThreadPool, CRefCountServiceBase<CRefMT> >",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CThreadedJob",
+    "vtable_address": 4907904,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "CRefCounted1<IRefCounted, CRefCountServiceBase<CRefMT> >",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CThreadedJob",
+    "vtable_address": 4908256,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "CRefCounted1<IRefCounted, CRefCountServiceBase<CRefMT> >",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1012272
+      }
+    }
+  },
+  {
+    "type_name": "CThreadedJob",
+    "vtable_address": 4959048,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "CRefCounted1<IRefCounted, CRefCountServiceBase<CRefMT> >",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1072176
+      }
+    }
+  },
+  {
+    "type_name": "CThreadedTraverseJob",
+    "vtable_address": 4907824,
+    "methods": [
+      2073504,
+      2073616,
+      2060208,
+      2060160,
+      2058496,
+      2068416,
+      2092320,
+      1963296
+    ],
+    "bases": [
+      {
+        "type_name": "CThreadedJob",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CTier0AppSystem<ICvar, (long long)0>",
+    "vtable_address": 4905816,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "CBaseAppSystem<ICvar>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1011012
+      }
+    }
+  },
+  {
+    "type_name": "CTier0AppSystem<IProcessUtils, (long long)0>",
+    "vtable_address": 4925080,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "CBaseAppSystem<IProcessUtils>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1021552
+      }
+    }
+  },
+  {
+    "type_name": "CTier0AppSystem<ITestScriptMgr, (long long)0>",
+    "vtable_address": 4925616,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "CBaseAppSystem<ITestScriptMgr>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1021744
+      }
+    }
+  },
+  {
+    "type_name": "CTier0AppSystem<IUtlStringTokenSystem, (long long)0>",
+    "vtable_address": 4926776,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "CBaseAppSystem<IUtlStringTokenSystem>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1024400
+      }
+    }
+  },
+  {
+    "type_name": "CTier0MasterMobileEventListener",
+    "vtable_address": 4965120,
+    "methods": [
+      2107232,
+      2112448,
+      2113184,
+      2113504,
+      2108240
+    ],
+    "bases": [
+      {
+        "type_name": "IMobileEventListener",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CUtlCStringConversion",
+    "vtable_address": 4961072,
+    "methods": [
+      3235808
+    ],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CUtlJSONConversion",
+    "vtable_address": 4961096,
+    "methods": [
+      3235808
+    ],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CUtlNoEscConversion",
+    "vtable_address": 4965080,
+    "methods": [
+      2195088
+    ],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CUtlStringTokenSystem",
+    "vtable_address": 4926792,
+    "methods": [
+      3011264,
+      1963200,
+      2197984,
+      2978496,
+      2977824,
+      3030144,
+      2978368,
+      1963328,
+      3011456,
+      1963344,
+      1963360,
+      3015088,
+      3011520
+    ],
+    "bases": [
+      {
+        "type_name": "CTier0AppSystem<IUtlStringTokenSystem, (long long)0>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVBinaryModule",
+    "vtable_address": 4958856,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVBreakpadSymbolModule",
+    "vtable_address": 4929584,
+    "methods": [
+      3187072,
+      3187104,
+      3187136,
+      3194640,
+      3189456,
+      3186864,
+      3187088,
+      3207200,
+      3187200,
+      3187536,
+      3187824,
+      3187952,
+      3187968,
+      2195248,
+      3187952,
+      3218832,
+      3219712,
+      3194816,
+      3187984,
+      3188000,
+      3148528,
+      3188016
+    ],
+    "bases": [
+      {
+        "type_name": "CVSymbolModule",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVDebugLiveProcessTarget",
+    "vtable_address": 4927256,
+    "methods": [
+      3186000,
+      3186576,
+      3182544,
+      3182720,
+      3147216,
+      2195248,
+      3145936,
+      3165456,
+      3147072,
+      3147264,
+      3148128,
+      3145952,
+      3145968,
+      3146032,
+      3147088,
+      3146112,
+      3146192,
+      3146320,
+      3177216,
+      3177280
+    ],
+    "bases": [
+      {
+        "type_name": "CVDebugTarget",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVDebugProcessorAMD64",
+    "vtable_address": 4959664,
+    "methods": [
+      3148512,
+      3181824,
+      3145264,
+      3145280,
+      3145296,
+      3145312,
+      3145328,
+      3145344,
+      3145360,
+      3145648,
+      3166832
+    ],
+    "bases": [
+      {
+        "type_name": "CVDebugProcessor",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVDebugTarget",
+    "vtable_address": 4927064,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1028432
+      }
+    }
+  },
+  {
+    "type_name": "CVDebugTarget",
+    "vtable_address": 4927080,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVDwarfBinaryModule",
+    "vtable_address": 4929472,
+    "methods": [
+      3195472,
+      3189616,
+      3195712,
+      3200000,
+      3200080
+    ],
+    "bases": [
+      {
+        "type_name": "CVBinaryModule",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVDwarfSymbolModule",
+    "vtable_address": 4932512,
+    "methods": [
+      3187072,
+      3186880,
+      3186944,
+      3192816,
+      3188640,
+      3188848,
+      3145936,
+      3188912,
+      3189216,
+      3197504,
+      3200176,
+      3203008,
+      3215952,
+      2195248,
+      3203104,
+      3215024,
+      3215280,
+      3193024,
+      3194064,
+      3205920,
+      3216096,
+      3216848
+    ],
+    "bases": [
+      {
+        "type_name": "CVSymbolModule",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVImageHlpBinaryModule",
+    "vtable_address": 4929528,
+    "methods": [
+      3195392,
+      3188464,
+      3188480,
+      3199888,
+      3199936
+    ],
+    "bases": [
+      {
+        "type_name": "CVBinaryModule",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVNullBinaryModule",
+    "vtable_address": 4958912,
+    "methods": [
+      3188576,
+      3188464,
+      3188480,
+      3191600,
+      3200160
+    ],
+    "bases": [
+      {
+        "type_name": "CVBinaryModule",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVNullSymbolModule",
+    "vtable_address": 4929280,
+    "methods": [
+      3187072,
+      3145952,
+      3188352,
+      3188368,
+      3188384,
+      3186864,
+      3145936,
+      3188400,
+      3188416,
+      3188432,
+      3188448,
+      3187952,
+      3187968,
+      2195248,
+      3187952,
+      3215520,
+      3215744,
+      3188336,
+      3187984,
+      3188000,
+      3148528,
+      3188016
+    ],
+    "bases": [
+      {
+        "type_name": "CVSymbolModule",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVProfileOutputColumn_AverageTimePerCall",
+    "vtable_address": 4926480,
+    "methods": [
+      2949104,
+      2950096
+    ],
+    "bases": [
+      {
+        "type_name": "CVProfileOutputColumn_Base",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVProfileOutputColumn_AverageTimePerFrame",
+    "vtable_address": 4926512,
+    "methods": [
+      2949008,
+      2949600
+    ],
+    "bases": [
+      {
+        "type_name": "CVProfileOutputColumn_Base",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVProfileOutputColumn_Base",
+    "vtable_address": 4926344,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1022704
+      }
+    }
+  },
+  {
+    "type_name": "CVProfileOutputColumn_Count",
+    "vtable_address": 4926448,
+    "methods": [
+      2949296,
+      2950512
+    ],
+    "bases": [
+      {
+        "type_name": "CVProfileOutputColumn_Base",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVProfileOutputColumn_Name",
+    "vtable_address": 4926384,
+    "methods": [
+      2949392,
+      2950720
+    ],
+    "bases": [
+      {
+        "type_name": "CVProfileOutputColumn_Base",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVProfileOutputColumn_Peak",
+    "vtable_address": 4926416,
+    "methods": [
+      2949344,
+      2950544
+    ],
+    "bases": [
+      {
+        "type_name": "CVProfileOutputColumn_Base",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVProfileOutputColumn_Sum",
+    "vtable_address": 4926544,
+    "methods": [
+      2949200,
+      2950336
+    ],
+    "bases": [
+      {
+        "type_name": "CVProfileOutputColumn_Base",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVSymbolModule",
+    "vtable_address": 4929264,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1028688
+      }
+    }
+  },
+  {
+    "type_name": "CVSymbolModule",
+    "vtable_address": 4932320,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "IForceSignalNumberIntoCallStack",
+    "vtable_address": 4923720,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1021376
+      }
+    }
+  },
+  {
+    "type_name": "IGlobalSymbolMap",
+    "vtable_address": 4907344,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1011456
+      }
+    }
+  },
+  {
+    "type_name": "IKeyValuesDumpContext",
+    "vtable_address": 4909544,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "IKeyValuesErrorSpew",
+    "vtable_address": 4909640,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1014256
+      }
+    }
+  },
+  {
+    "type_name": "IKeyValuesSystem",
+    "vtable_address": 4909768,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1014672
+      }
+    }
+  },
+  {
+    "type_name": "ILoggingResponsePolicy",
+    "vtable_address": 4959272,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1072448
+      }
+    }
+  },
+  {
+    "type_name": "IMobileEventListener",
+    "vtable_address": 4909216,
+    "methods": [
+      2107200,
+      2112384,
+      1963296,
+      1963296,
+      1963296,
+      2100928
+    ],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "IMobileEventListener",
+    "vtable_address": 4961056,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1075136
+      }
+    }
+  },
+  {
+    "type_name": "IMultipleWorkerJob",
+    "vtable_address": 4959016,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 2050
+      }
+    }
+  },
+  {
+    "type_name": "LC_NUMERIC",
+    "vtable_address": 4886376,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 974379
+      }
+    }
+  },
+  {
+    "type_name": "TSListTests::CListOps",
+    "vtable_address": 4926032,
+    "methods": [
+      2892656,
+      2888704,
+      1963344,
+      2885152
+    ],
+    "bases": [
+      {
+        "type_name": "TSListTests::CTestOps",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "TSListTests::CQueueOps",
+    "vtable_address": 4925944,
+    "methods": [
+      2904560,
+      2888288,
+      1963344,
+      2885136
+    ],
+    "bases": [
+      {
+        "type_name": "TSListTests::CTestOps",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "TSListTests::CTestOps",
+    "vtable_address": 4925928,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1021840
+      }
+    }
+  },
+  {
+    "type_name": "TSListTests::CTestOps",
+    "vtable_address": 4926016,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1021904
+      }
+    }
+  },
+  {
+    "type_name": "ThreadPoolTest::CCountJob",
+    "vtable_address": 4959104,
+    "methods": [
+      2114160,
+      2114240,
+      2060208,
+      2060160,
+      2058496,
+      2068416,
+      2128320,
+      1963296
+    ],
+    "bases": [
+      {
+        "type_name": "CThreadedJob",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "abort",
+    "vtable_address": 4946832,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 65
+      }
+    }
+  },
+  {
+    "type_name": "activity_callback",
+    "vtable_address": 4941488,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1
+      }
+    }
+  },
+  {
+    "type_name": "alloc_max",
+    "vtable_address": 4941408,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 2
+      }
+    }
+  },
+  {
+    "type_name": "allocated",
+    "vtable_address": 4947032,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 11
+      }
+    }
+  },
+  {
+    "type_name": "allocated",
+    "vtable_address": 4955272,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 6
+      }
+    }
+  },
+  {
+    "type_name": "allocated",
+    "vtable_address": 4955312,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 6
+      }
+    }
+  },
+  {
+    "type_name": "arena",
+    "vtable_address": 4946752,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 9
+      }
+    }
+  },
+  {
+    "type_name": "background_thread",
+    "vtable_address": 4941856,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 10
+      }
+    }
+  },
+  {
+    "type_name": "bins",
+    "vtable_address": 4942384,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 2
+      }
+    }
+  },
+  {
+    "type_name": "cache_oblivious",
+    "vtable_address": 4946792,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 12
+      }
+    }
+  },
+  {
+    "type_name": "create",
+    "vtable_address": 4946872,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 3
+      }
+    }
+  },
+  {
+    "type_name": "enabled",
+    "vtable_address": 4946408,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 2
+      }
+    }
+  },
+  {
+    "type_name": "fmt::v9::basic_memory_buffer<char, (unsigned long)500, std::allocator<char> >",
+    "vtable_address": 4932808,
+    "methods": [
+      3309552
+    ],
+    "bases": [
+      {
+        "type_name": "fmt::v9::detail::buffer<char>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "fmt::v9::basic_memory_buffer<int, (unsigned long)500, std::allocator<int> >",
+    "vtable_address": 4936328,
+    "methods": [
+      3310368
+    ],
+    "bases": [
+      {
+        "type_name": "fmt::v9::detail::buffer<int>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "fmt::v9::basic_memory_buffer<unsigned int, (unsigned long)32, std::allocator<unsigned int> >",
+    "vtable_address": 4959472,
+    "methods": [
+      3320912
+    ],
+    "bases": [
+      {
+        "type_name": "fmt::v9::detail::buffer<unsigned int>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "fmt::v9::detail::buffer<int>",
+    "vtable_address": 4936312,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1040096
+      }
+    }
+  },
+  {
+    "type_name": "fmt::v9::detail::buffer<unsigned int>",
+    "vtable_address": 4959456,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1072800
+      }
+    }
+  },
+  {
+    "type_name": "fmt::v9::detail::iterator_buffer<char*, char, fmt::v9::detail::buffer_traits>",
+    "vtable_address": 4932832,
+    "methods": [
+      3294256
+    ],
+    "bases": [
+      {
+        "type_name": "fmt::v9::detail::buffer<char>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "fmt::v9::format_error",
+    "vtable_address": 4932856,
+    "methods": [
+      3236112,
+      3292032
+    ],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "full_slabs",
+    "vtable_address": 4955512,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "hooks",
+    "vtable_address": 4947072,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "initialized",
+    "vtable_address": 4947264,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 11
+      }
+    }
+  },
+  {
+    "type_name": "install",
+    "vtable_address": 4941248,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 5
+      }
+    }
+  },
+  {
+    "type_name": "large",
+    "vtable_address": 4955472,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 12
+      }
+    }
+  },
+  {
+    "type_name": "moodycamel::ConcurrentQueue<CThreadedJob*, moodycamel::ConcurrentQueueDefaultTraits>::ImplicitProducer",
+    "vtable_address": 4908720,
+    "methods": [
+      2101344,
+      2112544
+    ],
+    "bases": [
+      {
+        "type_name": "moodycamel::ConcurrentQueue<CThreadedJob*, moodycamel::ConcurrentQueueDefaultTraits>::ProducerBase",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "name",
+    "vtable_address": 4946488,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 2
+      }
+    }
+  },
+  {
+    "type_name": "narenas",
+    "vtable_address": 4946952,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 13
+      }
+    }
+  },
+  {
+    "type_name": "ndirty",
+    "vtable_address": 4948704,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 6
+      }
+    }
+  },
+  {
+    "type_name": "nmalloc",
+    "vtable_address": 4948768,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 4
+      }
+    }
+  },
+  {
+    "type_name": "nmalloc",
+    "vtable_address": 4948832,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 11
+      }
+    }
+  },
+  {
+    "type_name": "npageslabs_nonhuge",
+    "vtable_address": 4952928,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 6
+      }
+    }
+  },
+  {
+    "type_name": "npageslabs_nonhuge",
+    "vtable_address": 4952968,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 6
+      }
+    }
+  },
+  {
+    "type_name": "npageslabs_nonhuge",
+    "vtable_address": 4955936,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 6
+      }
+    }
+  },
+  {
+    "type_name": "nthreads",
+    "vtable_address": 4955872,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 32
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4940288,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4940328,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4940368,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4940408,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4940448,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4940488,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4940528,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4940568,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4940608,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4948656,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4953216,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4953256,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4953296,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4953336,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4953376,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4953416,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4953456,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4953496,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4953536,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4953576,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4953616,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_ops",
+    "vtable_address": 4953656,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 7
+      }
+    }
+  },
+  {
+    "type_name": "num_threads",
+    "vtable_address": 4941816,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 3
+      }
+    }
+  },
+  {
+    "type_name": "pactivep",
+    "vtable_address": 4955808,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1
+      }
+    }
+  },
+  {
+    "type_name": "query",
+    "vtable_address": 4941288,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 2
+      }
+    }
+  },
+  {
+    "type_name": "read",
+    "vtable_address": 4946448,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 2
+      }
+    }
+  },
+  {
+    "type_name": "size",
+    "vtable_address": 4947136,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 1
+      }
+    }
+  },
+  {
+    "type_name": "size",
+    "vtable_address": 4947200,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 4
+      }
+    }
+  },
+  {
+    "type_name": "thread_active_init",
+    "vtable_address": 4946992,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 11
+      }
+    }
+  },
+  {
+    "type_name": "version",
+    "vtable_address": 4947488,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 13
+      }
+    }
+  }
+]

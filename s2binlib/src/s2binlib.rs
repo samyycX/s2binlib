@@ -24,7 +24,9 @@ use iced_x86::{Code, Decoder, DecoderOptions, Instruction, Mnemonic, OpKind, Reg
 use object::{Object, ObjectSection, ObjectSymbol, read::pe::ImageOptionalHeader};
 
 use crate::{
-    VTableInfo, find_pattern_simd, is_executable, jit::JitTrampoline, memory::{get_module_base_from_pointer, set_mem_access}
+    VTableInfo, find_pattern_simd, is_executable,
+    jit::JitTrampoline,
+    memory::{get_module_base_from_pointer, set_mem_access},
 };
 
 #[cfg(target_os = "windows")]
@@ -40,7 +42,7 @@ unsafe extern "system" {
     fn GetModuleHandleA(lpModuleName: *const u8) -> *mut c_void;
 }
 
-pub struct S2BinLib {
+pub struct S2BinLib<'a> {
     pub(crate) game_path: PathBuf,
     pub(crate) game_type: String,
     pub(crate) os: String,
@@ -53,6 +55,7 @@ pub struct S2BinLib {
     pub(crate) custom_binary_paths_windows: HashMap<String, String>,
     pub(crate) custom_binary_paths_linux: HashMap<String, String>,
     pub(crate) vtables: HashMap<String, Vec<VTableInfo>>,
+    pub(crate) name_to_vtables: HashMap<String, &'a VTableInfo>,
 }
 
 fn read_int32(data: &[u8], offset: u64) -> u32 {
@@ -71,7 +74,7 @@ fn read_int64(data: &[u8], offset: u64) -> i64 {
     value
 }
 
-impl S2BinLib {
+impl<'a> S2BinLib<'a> {
     fn get_os_name(&self) -> String {
         match self.os.as_str() {
             "windows" => "win64".to_string(),
@@ -201,6 +204,7 @@ impl S2BinLib {
             custom_binary_paths_windows: HashMap::new(),
             custom_binary_paths_linux: HashMap::new(),
             vtables: HashMap::new(),
+            name_to_vtables: HashMap::new(),
         }
     }
 
@@ -238,7 +242,7 @@ impl S2BinLib {
                 .join(self.get_os_name())
                 .join(self.get_os_lib_name(binary_name))
                 .to_string_lossy()
-            .to_string(),
+                .to_string(),
         }
     }
 
@@ -710,8 +714,6 @@ impl S2BinLib {
         Err(anyhow::anyhow!("Pattern not found."))
     }
 
-    
-
     pub fn pattern_scan_all(
         &self,
         binary_name: &str,
@@ -1167,7 +1169,6 @@ impl S2BinLib {
     }
 
     pub fn make_sig_va(&self, binary_name: &str, func_va: u64) -> Result<String> {
-
         let data = self.read_by_va(binary_name, func_va, 1024)?;
         let mut iced = Decoder::new(64, data, DecoderOptions::NONE);
 
@@ -1195,12 +1196,10 @@ impl S2BinLib {
 
             index += opcode_len;
 
-
             for _ in 0..operand_len {
                 sigs.push_str("? ");
                 index += 1;
-            };
-
+            }
 
             let success = Cell::new(false);
 
@@ -1209,16 +1208,20 @@ impl S2BinLib {
                 continue;
             }
 
-            let _ = self.pattern_scan_all_va(binary_name, &sigs[0..sigs.len() - 1], |index, address| {
-                if index == 0 && address == func_va {
-                    success.set(true);
-                }
-                if address != func_va {
-                    success.set(false);
-                    return true;
-                }
-                false
-            });
+            let _ = self.pattern_scan_all_va(
+                binary_name,
+                &sigs[0..sigs.len() - 1],
+                |index, address| {
+                    if index == 0 && address == func_va {
+                        success.set(true);
+                    }
+                    if address != func_va {
+                        success.set(false);
+                        return true;
+                    }
+                    false
+                },
+            );
 
             if success.get() {
                 return Ok(sigs);
@@ -1226,6 +1229,5 @@ impl S2BinLib {
         }
 
         bail!("Signature not found");
-
     }
 }
