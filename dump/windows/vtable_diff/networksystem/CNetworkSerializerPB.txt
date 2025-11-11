@@ -1,0 +1,34 @@
+Vtable: CNetworkSerializerPB
+Virtual Function Count: 9
+Children Count: 0
+=============================================
+func_0     [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B D9 8B FA 48"
+func_1     [ DIFF 0   ]                               []
+    "48 8B 41 08 C3 CC CC CC CC CC CC CC CC CC CC CC"
+func_2     [ DIFF 0   ]                               []
+    "48 8D 41 10 C3 CC CC CC CC CC CC CC CC CC CC CC"
+func_3     [ DIFF 0   ]                               []
+    "89 51 28 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_4     [ DIFF 0   ]                               []
+    "09 51 10 45 84 C0 74 03 09 51 30 C3 CC CC CC CC"
+func_5     [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_6     [ DIFF 0   ]                               []
+    "48 8B 49 18 48 8B 01 48 FF 60 30 CC CC CC CC CC"
+func_7     [ DIFF 0   ]                               []
+    "48 8B 0D 71 7D 1C 00 48 8B 01 48 FF 60 28 CC CC"
+func_8     [ DIFF 0   ]                               []
+    "48 8B 0D 61 7D 1C 00 48 8B 01 48 FF 60 20 CC CC"
+
+=============================================
+Bases: 
+"INetworkMessageInternal"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 0, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 0
+=============================================
+
+=============================================
+Children: 
+================================================

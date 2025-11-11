@@ -1,0 +1,954 @@
+Vtable: C_CSWeaponBase
+Virtual Function Count: 419
+Children Count: 48
+=============================================
+func_0     [ DIFF 0   ]                               []
+    "E9 5B 7B FF FF CC CC CC CC CC CC CC CC CC CC CC"
+func_1     [ DIFF 48  ]                               ["C_AK47", "C_BaseCSGrenade", "C_C4", "C_CSWeaponBaseGun", "C_CSWeaponBaseShotgun", "C_DEagle", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_Knife", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBaseItem", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNOVA", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponSawedoff", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer", "C_WeaponXM1014"]
+    "48 89 5C 24 08 57 48 83 EC 20 8B DA 48 8B F9 E8"
+func_2     [ DIFF 0   ]                               []
+    "40 53 48 83 EC 30 48 8B D9 E8 62 CF E7 FF 48 8B"
+func_3     [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 6C 24 18 57 41 56 41 57 48"
+func_4     [ DIFF 10  ]                               ["C_BaseCSGrenade", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Knife", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponElite", "C_WeaponTaser"]
+    "48 89 5C 24 08 48 89 6C 24 18 48 89 74 24 20 57"
+func_5     [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 E8 32 52 18 00 48 8B"
+func_6     [ DIFF 36  ]                               ["C_AK47", "C_C4", "C_CSWeaponBaseGun", "C_DEagle", "C_Knife", "C_SmokeGrenade", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "48 8B C4 48 89 58 10 48 89 68 18 48 89 70 20 57"
+func_7     [ DIFF 0   ]                               []
+    "48 8B C4 48 89 58 08 48 89 70 10 57 48 83 EC 50"
+func_8     [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 8B FA 48 8B D9 E8"
+func_9     [ DIFF 0   ]                               []
+    "E9 8B 72 90 00 CC CC CC CC CC CC CC CC CC CC CC"
+func_10    [ DIFF 3   ]                               ["C_C4", "C_Item_Healthshot", "C_WeaponBaseItem"]
+    "48 89 5C 24 08 57 48 83 EC 30 48 8B D9 E8 8E D9"
+func_11    [ DIFF 1   ]                               ["C_C4"]
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B D9 33 FF 48"
+func_12    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 41"
+func_13    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_14    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_15    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B D9 8B FA 48"
+func_16    [ DIFF 0   ]                               []
+    "E9 AB B3 B7 FF CC CC CC CC CC CC CC CC CC CC CC"
+func_17    [ DIFF 0   ]                               []
+    "48 89 54 24 10 55 53 56 41 54 41 55 41 56 41 57"
+func_18    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B F9 48 8B DA"
+func_19    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B D9 E8 3E 05"
+func_20    [ DIFF 0   ]                               []
+    "E9 9B DE 5E 00 CC CC CC CC CC CC CC CC CC CC CC"
+func_21    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 E8 32 6D 18 00 48 8D"
+func_22    [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 6C 24 18 48 89 74 24 20 41"
+func_23    [ DIFF 0   ]                               []
+    "48 83 EC 28 E8 17 DE 0B 00 83 E0 DF 48 83 C4 28"
+func_24    [ DIFF 0   ]                               []
+    "C7 02 FF FF FF FF 48 8B C2 C3 CC CC CC CC CC CC"
+func_25    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_26    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_27    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_28    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_29    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 40 48"
+func_30    [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_31    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_32    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_33    [ DIFF 0   ]                               []
+    "C7 02 FF FF FF FF 48 8B C2 C3 CC CC CC CC CC CC"
+func_34    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_35    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_36    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_37    [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_38    [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_39    [ DIFF 0   ]                               []
+    "40 55 57 48 8B EC 48 83 EC 68 48 8B 51 08 48 8B"
+func_40    [ DIFF 48  ]                               ["C_AK47", "C_BaseCSGrenade", "C_C4", "C_CSWeaponBaseGun", "C_CSWeaponBaseShotgun", "C_DEagle", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_Knife", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBaseItem", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNOVA", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponSawedoff", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer", "C_WeaponXM1014"]
+    "48 8D 05 69 52 63 01 C3 CC CC CC CC CC CC CC CC"
+func_41    [ DIFF 48  ]                               ["C_AK47", "C_BaseCSGrenade", "C_C4", "C_CSWeaponBaseGun", "C_CSWeaponBaseShotgun", "C_DEagle", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_Knife", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBaseItem", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNOVA", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponSawedoff", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer", "C_WeaponXM1014"]
+    "E9 2B 4B 0C 00 CC CC CC CC CC CC CC CC CC CC CC"
+func_42    [ DIFF 48  ]                               ["C_AK47", "C_BaseCSGrenade", "C_C4", "C_CSWeaponBaseGun", "C_CSWeaponBaseShotgun", "C_DEagle", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_Knife", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBaseItem", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNOVA", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponSawedoff", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer", "C_WeaponXM1014"]
+    "40 53 48 83 EC 20 48 8B DA 48 8D 15 00 7E 62 01"
+func_43    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_44    [ DIFF 48  ]                               ["C_AK47", "C_BaseCSGrenade", "C_C4", "C_CSWeaponBaseGun", "C_CSWeaponBaseShotgun", "C_DEagle", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_Knife", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBaseItem", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNOVA", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponSawedoff", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer", "C_WeaponXM1014"]
+    "48 8B 41 10 48 8B 48 08 48 8B 81 10 01 00 00 48"
+func_45    [ DIFF 44  ]                               ["C_AK47", "C_BaseCSGrenade", "C_C4", "C_CSWeaponBaseGun", "C_DEagle", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_Knife", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBaseItem", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "48 8D 05 31 40 63 01 C3 CC CC CC CC CC CC CC CC"
+func_46    [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_47    [ DIFF 0   ]                               []
+    "48 8B C4 55 53 57 41 54 48 8B EC 48 83 EC 78 48"
+func_48    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_49    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_50    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 E8 22 0B 19 00 48 8B"
+func_51    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 8B 81 74 03 00 00 48 8B D9 0F"
+func_52    [ DIFF 0   ]                               []
+    "48 8B C1 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_53    [ DIFF 0   ]                               []
+    "48 8B C1 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_54    [ DIFF 0   ]                               []
+    "48 8B C1 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_55    [ DIFF 0   ]                               []
+    "48 8B C1 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_56    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_57    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_58    [ DIFF 0   ]                               []
+    "48 8B C1 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_59    [ DIFF 0   ]                               []
+    "48 8B C1 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_60    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_61    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_62    [ DIFF 0   ]                               []
+    "B8 05 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
+func_63    [ DIFF 0   ]                               []
+    "48 8B 81 40 03 00 00 C3 CC CC CC CC CC CC CC CC"
+func_64    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_65    [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_66    [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_67    [ DIFF 0   ]                               []
+    "40 55 41 56 41 57 48 8D 6C 24 B0 48 81 EC 50 01"
+func_68    [ DIFF 0   ]                               []
+    "48 83 EC 28 48 8B 49 38 48 85 C9 74 1B 48 8B 49"
+func_69    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 80 B9 26 05 00 00 05 48 8B D9"
+func_70    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48"
+func_71    [ DIFF 0   ]                               []
+    "48 C7 02 00 00 00 00 48 8B C2 C3 CC CC CC CC CC"
+func_72    [ DIFF 0   ]                               []
+    "48 83 EC 28 E8 E7 06 FC FF 34 01 48 83 C4 28 C3"
+func_73    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 40 F2 0F 10 05 06 5A"
+func_74    [ DIFF 0   ]                               []
+    "40 53 48 81 EC 80 00 00 00 48 8B 05 A8 14 40 01"
+func_75    [ DIFF 0   ]                               []
+    "48 8B 81 68 12 00 00 48 85 C0 74 05 48 8B 40 08"
+func_76    [ DIFF 0   ]                               []
+    "40 55 56 57 41 56 41 57 48 8B EC 48 83 EC 70 49"
+func_77    [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_78    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B 01 48 8B D9 FF 90 F8 01"
+func_79    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B 01 48 8B D9 FF 90 F8 01"
+func_80    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 30 48 8B 01 48 8B FA"
+func_81    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_82    [ DIFF 0   ]                               []
+    "48 81 C1 48 0F 00 00 48 8D 15 3A A3 EB 00 E9 3D"
+func_83    [ DIFF 0   ]                               []
+    "48 83 EC 28 38 91 60 03 00 00 74 43 48 89 5C 24"
+func_84    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_85    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_86    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_87    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_88    [ DIFF 0   ]                               []
+    "40 57 48 83 EC 20 0F B7 81 56 0F 00 00 48 8B F9"
+func_89    [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_90    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_91    [ DIFF 0   ]                               []
+    "44 0F B6 89 EB 03 00 00 41 3B D1 74 1B 44 3A CA"
+func_92    [ DIFF 0   ]                               []
+    "40 57 48 83 EC 20 48 8B F9 48 85 D2 75 08 32 C0"
+func_93    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 0F B6 89 EB 03 00 00 E8 6E E4"
+func_94    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_95    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B 51 10 48 8B"
+func_96    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B DA E8 52 C8 9B FF 48 85"
+func_97    [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_98    [ DIFF 0   ]                               []
+    "F3 0F 10 05 FC 8A 3A 01 C3 CC CC CC CC CC CC CC"
+func_99    [ DIFF 0   ]                               []
+    "48 8B C1 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_100   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_101   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 E8 52 45 26 00 48 8B"
+func_102   [ DIFF 7   ]                               ["C_BaseCSGrenade", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_MolotovGrenade", "C_SmokeGrenade"]
+    "40 53 48 83 EC 20 48 8B D9 E8 52 B9 0A 00 48 85"
+func_103   [ DIFF 1   ]                               ["C_C4"]
+    "40 53 48 83 EC 20 48 8B 01 48 8B D9 FF 90 E8 0B"
+func_104   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 48 81 C1 30 1B 00 00"
+func_105   [ DIFF 1   ]                               ["C_C4"]
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 8B"
+func_106   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 E8 32 D3 A8 FF 0F B6"
+func_107   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_108   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_109   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_110   [ DIFF 0   ]                               []
+    "0F B6 C2 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_111   [ DIFF 0   ]                               []
+    "49 8B 00 48 89 02 48 8B C2 C3 CC CC CC CC CC CC"
+func_112   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 30 BA 01 00 00 00 0F 29 74 24 20"
+func_113   [ DIFF 0   ]                               []
+    "48 89 5C 24 18 55 56 57 41 54 41 56 48 83 EC 40"
+func_114   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 80 B9 55 03 00 00"
+func_115   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B FA 48 8B D9"
+func_116   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_117   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_118   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_119   [ DIFF 0   ]                               []
+    "48 83 EC 28 48 8B 89 30 03 00 00 48 8B 01 FF 50"
+func_120   [ DIFF 0   ]                               []
+    "48 83 EC 28 48 8B 89 30 03 00 00 48 8B 01 FF 50"
+func_121   [ DIFF 0   ]                               []
+    "48 83 EC 28 48 8B 89 30 03 00 00 48 8B 01 FF 50"
+func_122   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 49 8B 00 49 8B F8"
+func_123   [ DIFF 0   ]                               []
+    "48 8B C4 55 48 8B EC 48 83 EC 70 48 89 58 18 48"
+func_124   [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 74 24 18 57 48 83 EC 20 48"
+func_125   [ DIFF 0   ]                               []
+    "48 89 5C 24 20 56 57 41 56 48 83 EC 60 0F 29 74"
+func_126   [ DIFF 0   ]                               []
+    "48 83 EC 28 E8 27 4A 34 00 0F B6 80 68 18 00 00"
+func_127   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 E8 D2 24 18 00 48 85"
+func_128   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 49"
+func_129   [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 74 24 18 55 57 41 54 41 56"
+func_130   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 0F"
+func_131   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_132   [ DIFF 0   ]                               []
+    "48 89 5C 24 18 48 89 6C 24 20 57 48 83 EC 20 48"
+func_133   [ DIFF 0   ]                               []
+    "40 57 48 83 EC 20 48 8B F9 E8 B2 71 18 00 83 BF"
+func_134   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 E8 52 49 C2 FF 48 85"
+func_135   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 55"
+func_136   [ DIFF 0   ]                               []
+    "8B 81 74 03 00 00 D1 E8 F6 D0 24 01 C3 CC CC CC"
+func_137   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_138   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_139   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_140   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 30 80 B9 69 05 00 00"
+func_141   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_142   [ DIFF 0   ]                               []
+    "48 8B 81 18 03 00 00 48 85 C0 74 03 48 FF E0 C3"
+func_143   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_144   [ DIFF 0   ]                               []
+    "48 8B 81 20 03 00 00 48 85 C0 74 03 48 FF E0 C3"
+func_145   [ DIFF 1   ]                               ["C_C4"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_146   [ DIFF 0   ]                               []
+    "40 57 48 83 EC 70 48 8B F9 E8 B2 D7 86 00 84 C0"
+func_147   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_148   [ DIFF 0   ]                               []
+    "48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 50 F3"
+func_149   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_150   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 83 B9 4C 03 00 00 01 48 8B D9"
+func_151   [ DIFF 0   ]                               []
+    "48 8B C4 55 53 56 57 48 8D 68 A1 48 81 EC B8 00"
+func_152   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B F9 48 8B DA"
+func_153   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 E8 32 7F 18 00 84 C0"
+func_154   [ DIFF 0   ]                               []
+    "8B 81 F0 05 00 00 C3 CC CC CC CC CC CC CC CC CC"
+func_155   [ DIFF 0   ]                               []
+    "39 91 F0 05 00 00 74 06 89 91 F0 05 00 00 C3 CC"
+func_156   [ DIFF 0   ]                               []
+    "80 B9 54 03 00 00 00 0F 94 C0 C3 CC CC CC CC CC"
+func_157   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_158   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_159   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_160   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_161   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_162   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_163   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_164   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_165   [ DIFF 0   ]                               []
+    "48 8B 01 48 FF A0 30 05 00 00 CC CC CC CC CC CC"
+func_166   [ DIFF 0   ]                               []
+    "48 8B C1 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_167   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_168   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_169   [ DIFF 0   ]                               []
+    "8B 81 48 03 00 00 C3 CC CC CC CC CC CC CC CC CC"
+func_170   [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 6C 24 18 56 57 41 54 41 56"
+func_171   [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 6C 24 18 56 57 41 54 41 56"
+func_172   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B DA E8 72 49 C5 FF F2 0F"
+func_173   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B DA E8 62 49 C5 FF F2 0F"
+func_174   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B DA E8 A2 E4 C4 FF F2 0F"
+func_175   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B DA E8 B2 54 C5 FF F2 0F"
+func_176   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B DA E8 62 58 05 00 F2 0F"
+func_177   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_178   [ DIFF 0   ]                               []
+    "40 56 48 83 EC 30 48 8B F1 0F 29 74 24 20 48 8B"
+func_179   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 30 F3 0F 10 15 86 AA"
+func_180   [ DIFF 0   ]                               []
+    "F3 0F 10 15 C0 9A 3A 01 48 81 C1 80 0D 00 00 33"
+func_181   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B 01 48 8B DA FF 90 80 02"
+func_182   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 30 80 B9 26 05 00 00"
+func_183   [ DIFF 0   ]                               []
+    "48 8B 01 48 FF A0 C0 05 00 00 CC CC CC CC CC CC"
+func_184   [ DIFF 0   ]                               []
+    "8B 91 30 05 00 00 45 33 D2 83 FA FF 74 4D 48 8B"
+func_185   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_186   [ DIFF 0   ]                               []
+    "F2 0F 10 05 80 32 3A 01 F2 0F 11 02 8B 05 7E 32"
+func_187   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_188   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_189   [ DIFF 0   ]                               []
+    "39 91 2C 05 00 00 74 06 89 91 2C 05 00 00 C3 CC"
+func_190   [ DIFF 0   ]                               []
+    "0F B6 81 26 05 00 00 84 C0 74 06 3C 05 0F 95 C0"
+func_191   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_192   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_193   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 E8 72 77 18 00 48 8B"
+func_194   [ DIFF 0   ]                               []
+    "48 8B 89 38 03 00 00 48 85 C9 0F 85 E0 0D 9A FF"
+func_195   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_196   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_197   [ DIFF 0   ]                               []
+    "48 8D 05 31 51 09 01 C3 CC CC CC CC CC CC CC CC"
+func_198   [ DIFF 0   ]                               []
+    "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
+func_199   [ DIFF 0   ]                               []
+    "40 55 56 48 83 EC 28 8B EA 48 8B F1 83 FA 01 0F"
+func_200   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_201   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_202   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_203   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_204   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_205   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B DA E8 B2 05 05 00 F2 0F"
+func_206   [ DIFF 0   ]                               []
+    "E9 1B D0 9C FF CC CC CC CC CC CC CC CC CC CC CC"
+func_207   [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 74 24 18 55 57 41 56 48 8B"
+func_208   [ DIFF 0   ]                               []
+    "E9 FB 31 FF FF CC CC CC CC CC CC CC CC CC CC CC"
+func_209   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_210   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_211   [ DIFF 0   ]                               []
+    "0F 57 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_212   [ DIFF 0   ]                               []
+    "0F 57 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_213   [ DIFF 0   ]                               []
+    "0F 57 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_214   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_215   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_216   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_217   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_218   [ DIFF 0   ]                               []
+    "48 89 5C 24 18 55 56 57 48 83 EC 20 49 8B D8 48"
+func_219   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_220   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 56 57 41 56 48 83 EC 50 4C 8B F2"
+func_221   [ DIFF 0   ]                               []
+    "48 83 EC 38 48 8B 89 30 03 00 00 0F 29 74 24 20"
+func_222   [ DIFF 0   ]                               []
+    "0F B6 81 70 0B 00 00 F3 0F 10 15 39 1B ED 00 66"
+func_223   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_224   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_225   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_226   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_227   [ DIFF 0   ]                               []
+    "C6 05 11 FF 7D 01 01 C3 CC CC CC CC CC CC CC CC"
+func_228   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_229   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_230   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_231   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_232   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 0F B6 81 50 0B 00 00 48 8B DA"
+func_233   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_234   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 E8 A2 19 0C 00 48 8B"
+func_235   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_236   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 E8 42 F0 0A 00 48 8B"
+func_237   [ DIFF 0   ]                               []
+    "0F B6 81 EA 03 00 00 C3 CC CC CC CC CC CC CC CC"
+func_238   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_239   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_240   [ DIFF 0   ]                               []
+    "40 53 56 57 48 83 EC 20 48 8B D9 48 8B 89 30 03"
+func_241   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_242   [ DIFF 0   ]                               []
+    "48 8B C2 48 8B D1 48 8B C8 E9 C2 4F CC FF CC CC"
+func_243   [ DIFF 0   ]                               []
+    "48 8B C1 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_244   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_245   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B F9 E8 1E D3"
+func_246   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_247   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_248   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_249   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48"
+func_250   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_251   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_252   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B DA E8 62 CA B8 FF F3 0F"
+func_253   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_254   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_255   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 30 0F 29 74 24 20 48 8B D9 0F 28"
+func_256   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B 1A 48 85 DB 0F 84 84 00"
+func_257   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48"
+func_258   [ DIFF 0   ]                               []
+    "40 55 53 57 41 56 41 57 48 8D 6C 24 C9 48 81 EC"
+func_259   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_260   [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 6C 24 18 48 89 74 24 20 57"
+func_261   [ DIFF 0   ]                               []
+    "48 83 EC 28 8B 0D 96 C0 9F 01 65 48 8B 04 25 58"
+func_262   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_263   [ DIFF 0   ]                               []
+    "40 55 56 57 48 8D AC 24 80 D9 FF FF B8 80 27 00"
+func_264   [ DIFF 0   ]                               []
+    "48 89 5C 24 18 48 89 54 24 10 55 56 57 41 54 41"
+func_265   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_266   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_267   [ DIFF 0   ]                               []
+    "0F 10 81 18 0C 00 00 48 8B C2 0F 10 89 28 0C 00"
+func_268   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 41 0F B6 00 48 8B D9 38 81 D1"
+func_269   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_270   [ DIFF 0   ]                               []
+    "48 83 EC 28 E8 B7 9C 34 00 48 8B C8 48 83 C4 28"
+func_271   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_272   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_273   [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 6C 24 18 48 89 74 24 20 57"
+func_274   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B F9 48 8D 15"
+func_275   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B F9 48 8B DA"
+func_276   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_277   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B F9 48 8B DA"
+func_278   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_279   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_280   [ DIFF 0   ]                               []
+    "C6 81 80 18 00 00 01 32 C0 C3 CC CC CC CC CC CC"
+func_281   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_282   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_283   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_284   [ DIFF 0   ]                               []
+    "48 83 B9 80 13 00 00 00 0F 95 C0 C3 CC CC CC CC"
+func_285   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B 01 48 8B D9 FF 90 30 03"
+func_286   [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 74 24 18 57 48 83 EC 20 48"
+func_287   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_288   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_289   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_290   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_291   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_292   [ DIFF 0   ]                               []
+    "C6 02 00 32 C0 C3 CC CC CC CC CC CC CC CC CC CC"
+func_293   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_294   [ DIFF 0   ]                               []
+    "39 91 68 18 00 00 74 06 89 91 68 18 00 00 44 39"
+func_295   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 E8 C2 B2 C2 FF 80 B8"
+func_296   [ DIFF 0   ]                               []
+    "8B 81 70 18 00 00 C3 CC CC CC CC CC CC CC CC CC"
+func_297   [ DIFF 0   ]                               []
+    "8B 81 74 18 00 00 C3 CC CC CC CC CC CC CC CC CC"
+func_298   [ DIFF 0   ]                               []
+    "F3 0F 2C 81 78 18 00 00 C3 CC CC CC CC CC CC CC"
+func_299   [ DIFF 0   ]                               []
+    "8B 81 7C 18 00 00 C3 CC CC CC CC CC CC CC CC CC"
+func_300   [ DIFF 0   ]                               []
+    "40 57 41 54 41 56 48 83 EC 30 45 8B E0 4C 8B F2"
+func_301   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_302   [ DIFF 0   ]                               []
+    "48 89 5C 24 10 57 48 83 EC 30 48 8B F9 E8 3E 4E"
+func_303   [ DIFF 41  ]                               ["C_AK47", "C_BaseCSGrenade", "C_C4", "C_CSWeaponBaseGun", "C_DEagle", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "40 53 55 56 57 41 56 48 81 EC 80 00 00 00 48 8B"
+func_304   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_305   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_306   [ DIFF 3   ]                               ["C_Item_Healthshot", "C_Knife", "C_WeaponBaseItem"]
+    "40 53 48 83 EC 20 48 8B D9 E8 A2 EE 0B 00 48 85"
+func_307   [ DIFF 33  ]                               ["C_AK47", "C_CSWeaponBaseGun", "C_DEagle", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_308   [ DIFF 0   ]                               []
+    "48 83 EC 28 E8 77 EE 0B 00 48 85 C0 0F 95 C0 48"
+func_309   [ DIFF 43  ]                               ["C_AK47", "C_BaseCSGrenade", "C_CSWeaponBaseGun", "C_DEagle", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_Knife", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBaseItem", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "48 8B C4 48 89 58 20 57 48 81 EC C0 00 00 00 48"
+func_310   [ DIFF 0   ]                               []
+    "48 8B 01 48 FF A0 B8 0C 00 00 CC CC CC CC CC CC"
+func_311   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_312   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_313   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 8B 15 80 1C A1 01"
+func_314   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 8B 15 10 1D A1 01"
+func_315   [ DIFF 7   ]                               ["C_BaseCSGrenade", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_MolotovGrenade", "C_SmokeGrenade"]
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_316   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B 01 33 D2 48 8B D9 FF 90"
+func_317   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 48 8B 88 20 07 00 00 48 8D"
+func_318   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 48 85 C0 74 2B 8B 88 4C 04"
+func_319   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 8B 15 10 74 9F 01"
+func_320   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 8B 80 00 07 00 00 C3 CC CC"
+func_321   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 8B 80 04 07 00 00 C3 CC CC"
+func_322   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_323   [ DIFF 41  ]                               ["C_AK47", "C_BaseCSGrenade", "C_CSWeaponBaseGun", "C_DEagle", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Knife", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "48 83 EC 28 48 8B 01 48 8D 54 24 30 41 B8 01 00"
+func_324   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48"
+func_325   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 8B FA 48 8B D9 83"
+func_326   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 8B FA 48 8B D9 83"
+func_327   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B 01 33 D2 48 8B D9 FF 90"
+func_328   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B 81 88 03 00"
+func_329   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B 81 88 03 00"
+func_330   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 8B FA 48 8B D9 85"
+func_331   [ DIFF 0   ]                               []
+    "45 8B C8 85 D2 74 1F 48 8B 81 88 03 00 00 80 B8"
+func_332   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_333   [ DIFF 0   ]                               []
+    "48 83 EC 28 48 8B 01 44 8B C2 48 8D 54 24 30 FF"
+func_334   [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 74 24 18 57 48 83 EC 20 48"
+func_335   [ DIFF 0   ]                               []
+    "48 89 5C 24 10 55 56 57 41 54 41 56 48 83 EC 60"
+func_336   [ DIFF 1   ]                               ["C_WeaponElite"]
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_337   [ DIFF 8   ]                               ["C_BaseCSGrenade", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_MolotovGrenade", "C_SmokeGrenade"]
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_338   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_339   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B 01 8B DA 48"
+func_340   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 57"
+func_341   [ DIFF 0   ]                               []
+    "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
+func_342   [ DIFF 0   ]                               []
+    "8B 91 20 05 00 00 83 FA FF 74 5C 48 8B 0D 86 70"
+func_343   [ DIFF 1   ]                               ["C_WeaponTaser"]
+    "0F 57 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_344   [ DIFF 3   ]                               ["C_C4", "C_IncendiaryGrenade", "C_MolotovGrenade"]
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_345   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B 01 48 8B D9 FF 90 C0 0A"
+func_346   [ DIFF 33  ]                               ["C_AK47", "C_CSWeaponBaseGun", "C_DEagle", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_347   [ DIFF 0   ]                               []
+    "0F 28 C1 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_348   [ DIFF 0   ]                               []
+    "41 8B 40 08 F2 41 0F 10 00 F2 0F 11 02 89 42 08"
+func_349   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 8B 80 0C 07 00 00 C3 CC CC"
+func_350   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 0F B6 80 34 07 00 00 C3 CC"
+func_351   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B 01 48 8B D9 FF 90 F0 0A"
+func_352   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 8B 80 20 08 00 00 C3 CC CC"
+func_353   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 8B 80 10 07 00 00 C3 CC CC"
+func_354   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 85 D2 78 13 48 63 CA 48 83"
+func_355   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 F3 0F 10 80 28 08 00 00 C3"
+func_356   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 85 D2 78 13 48 63 CA 48 83"
+func_357   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 85 D2 78 13 48 63 CA 48 83"
+func_358   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 85 D2 78 13 48 63 CA 48 83"
+func_359   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 85 D2 78 13 48 63 CA 48 83"
+func_360   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 85 D2 78 13 48 63 CA 48 83"
+func_361   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 85 D2 78 13 48 63 CA 48 83"
+func_362   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 85 D2 78 13 48 63 CA 48 83"
+func_363   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 0F B6 80 1F 07 00 00 C3 CC"
+func_364   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 85 D2 78 13 48 63 CA 48 83"
+func_365   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 85 D2 78 13 48 63 CA 48 83"
+func_366   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 85 D2 78 13 48 63 CA 48 83"
+func_367   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 85 D2 78 13 48 63 CA 48 83"
+func_368   [ DIFF 1   ]                               ["C_C4"]
+    "48 63 91 E0 19 00 00 48 8B 81 88 03 00 00 85 D2"
+func_369   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 8B 80 F4 07 00 00 C3 CC CC"
+func_370   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 0F B6 80 F0 07 00 00 C3 CC"
+func_371   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 50 48 8B 99 88 03 00 00 48 8D 44"
+func_372   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 50 48 8B 99 88 03 00 00 48 8D 44"
+func_373   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 F3 0F 10 80 58 08 00 00 C3"
+func_374   [ DIFF 0   ]                               []
+    "48 83 EC 38 48 63 91 E0 19 00 00 48 8B 81 88 03"
+func_375   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 F3 0F 10 80 DC 07 00 00 C3"
+func_376   [ DIFF 1   ]                               ["C_WeaponTaser"]
+    "48 8B 81 88 03 00 00 8B 80 40 04 00 00 C3 CC CC"
+func_377   [ DIFF 0   ]                               []
+    "F3 0F 10 05 5C B5 FA 00 C3 CC CC CC CC CC CC CC"
+func_378   [ DIFF 0   ]                               []
+    "85 D2 74 26 83 EA 01 74 13 83 FA 01 75 1C 48 8B"
+func_379   [ DIFF 0   ]                               []
+    "85 D2 74 2E 83 EA 01 74 19 83 FA 01 74 04 0F 57"
+func_380   [ DIFF 0   ]                               []
+    "48 83 EC 28 E8 37 0B 7C 00 48 8B C8 E8 CF 38 81"
+func_381   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_382   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_383   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 8B 80 D4 07 00 00 C3 CC CC"
+func_384   [ DIFF 33  ]                               ["C_AK47", "C_CSWeaponBaseGun", "C_DEagle", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_385   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 84 90 E5 03 00 00 0F 95 C0"
+func_386   [ DIFF 1   ]                               ["C_WeaponCZ75a"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_387   [ DIFF 33  ]                               ["C_AK47", "C_CSWeaponBaseGun", "C_DEagle", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B F9 E8 4E CF"
+func_388   [ DIFF 33  ]                               ["C_AK47", "C_CSWeaponBaseGun", "C_DEagle", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_389   [ DIFF 8   ]                               ["C_BaseCSGrenade", "C_C4", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_MolotovGrenade", "C_SmokeGrenade"]
+    "48 8B D1 48 81 C1 90 1C 00 00 E9 21 D8 00 00 CC"
+func_390   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 40 48 8B 01 48 8B D9 8B 91 E0 19"
+func_391   [ DIFF 33  ]                               ["C_AK47", "C_CSWeaponBaseGun", "C_DEagle", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_392   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_393   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_394   [ DIFF 0   ]                               []
+    "48 8B 81 88 03 00 00 0F B6 80 F1 07 00 00 C3 CC"
+func_395   [ DIFF 7   ]                               ["C_BaseCSGrenade", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_MolotovGrenade", "C_SmokeGrenade"]
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_396   [ DIFF 7   ]                               ["C_BaseCSGrenade", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_MolotovGrenade", "C_SmokeGrenade"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_397   [ DIFF 47  ]                               ["C_AK47", "C_BaseCSGrenade", "C_C4", "C_CSWeaponBaseGun", "C_DEagle", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_Knife", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBaseItem", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNOVA", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponSawedoff", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer", "C_WeaponXM1014"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_398   [ DIFF 43  ]                               ["C_AK47", "C_BaseCSGrenade", "C_CSWeaponBaseGun", "C_DEagle", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_Knife", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBaseItem", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_399   [ DIFF 43  ]                               ["C_AK47", "C_BaseCSGrenade", "C_C4", "C_CSWeaponBaseGun", "C_DEagle", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBaseItem", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "48 89 5C 24 18 57 48 83 EC 20 48 8B D9 E8 BE 5F"
+func_400   [ DIFF 33  ]                               ["C_AK47", "C_CSWeaponBaseGun", "C_DEagle", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B F9 E8 8E 63"
+func_401   [ DIFF 8   ]                               ["C_BaseCSGrenade", "C_C4", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_MolotovGrenade", "C_SmokeGrenade"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_402   [ DIFF 33  ]                               ["C_AK47", "C_CSWeaponBaseGun", "C_DEagle", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_403   [ DIFF 0   ]                               []
+    "0F B6 81 0C 1A 00 00 C3 CC CC CC CC CC CC CC CC"
+func_404   [ DIFF 33  ]                               ["C_AK47", "C_CSWeaponBaseGun", "C_DEagle", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_405   [ DIFF 33  ]                               ["C_AK47", "C_CSWeaponBaseGun", "C_DEagle", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_406   [ DIFF 33  ]                               ["C_AK47", "C_CSWeaponBaseGun", "C_DEagle", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_407   [ DIFF 43  ]                               ["C_AK47", "C_BaseCSGrenade", "C_C4", "C_CSWeaponBaseGun", "C_DEagle", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBaseItem", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer"]
+    "40 53 48 83 EC 20 48 8B D9 E8 D2 6D 0B 00 48 85"
+func_408   [ DIFF 46  ]                               ["C_AK47", "C_BaseCSGrenade", "C_CSWeaponBaseGun", "C_CSWeaponBaseShotgun", "C_DEagle", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponAWP", "C_WeaponAug", "C_WeaponBaseItem", "C_WeaponBizon", "C_WeaponCZ75a", "C_WeaponElite", "C_WeaponFamas", "C_WeaponFiveSeven", "C_WeaponG3SG1", "C_WeaponGalilAR", "C_WeaponGlock", "C_WeaponHKP2000", "C_WeaponM249", "C_WeaponM4A1", "C_WeaponM4A1Silencer", "C_WeaponMAC10", "C_WeaponMP5SD", "C_WeaponMP7", "C_WeaponMP9", "C_WeaponMag7", "C_WeaponNOVA", "C_WeaponNegev", "C_WeaponP250", "C_WeaponP90", "C_WeaponRevolver", "C_WeaponSCAR20", "C_WeaponSG556", "C_WeaponSSG08", "C_WeaponSawedoff", "C_WeaponTaser", "C_WeaponTec9", "C_WeaponUMP45", "C_WeaponUSPSilencer", "C_WeaponXM1014"]
+    "40 53 48 83 EC 20 48 8B 01 48 8B D9 FF 90 C8 0C"
+func_409   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 20 57 48 83 EC 30 48"
+func_410   [ DIFF 8   ]                               ["C_BaseCSGrenade", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_MolotovGrenade", "C_SmokeGrenade"]
+    "40 53 48 83 EC 20 48 8B 01 48 8B D9 FF 90 00 0C"
+func_411   [ DIFF 0   ]                               []
+    "48 89 5C 24 10 55 56 57 48 81 EC B0 00 00 00 44"
+func_412   [ DIFF 0   ]                               []
+    "40 53 57 48 83 EC 68 48 8B F9 E8 A1 9B 0A 00 48"
+func_413   [ DIFF 2   ]                               ["C_Item_Healthshot", "C_WeaponBaseItem"]
+    "48 89 5C 24 08 57 48 83 EC 20 80 BA 99 02 00 00"
+func_414   [ DIFF 1   ]                               ["C_WeaponCZ75a"]
+    "48 89 5C 24 10 48 89 74 24 18 57 48 83 EC 20 48"
+func_415   [ DIFF 9   ]                               ["C_BaseCSGrenade", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_MolotovGrenade", "C_SmokeGrenade", "C_WeaponBaseItem"]
+    "40 53 48 83 EC 30 0F BF 91 70 19 00 00 48 8B D9"
+func_416   [ DIFF 0   ]                               []
+    "0F B6 81 25 1A 00 00 C3 CC CC CC CC CC CC CC CC"
+func_417   [ DIFF 8   ]                               ["C_BaseCSGrenade", "C_DecoyGrenade", "C_Flashbang", "C_HEGrenade", "C_IncendiaryGrenade", "C_Item_Healthshot", "C_MolotovGrenade", "C_SmokeGrenade"]
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_418   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+
+=============================================
+Bases: 
+"C_BasePlayerWeapon"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 0, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 11
+"C_EconEntity"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 0, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 10
+"C_BaseFlex"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 0, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 7
+"CBaseAnimGraph"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 0, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 5
+"C_BaseModelEntity"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 0, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 4
+"C_BaseEntity"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 0, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 1
+"CEntityInstance"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 0, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 0
+"CCompositeMaterialOwner"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 1528, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 0
+"ISceneObjectRenderNotifier"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 2776, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 0
+"IBoneTransformOverride"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 4440, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 0
+"IHasAttributes"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 4968, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 0
+"IAttachmentOverride"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 4976, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 0
+"CGameEventListener"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 6424, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 1
+"IGameEventListener2"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 6424, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 0
+=============================================
+
+=============================================
+Children: 
+"C_AK47"
+"C_BaseCSGrenade"
+"C_C4"
+"C_CSWeaponBaseGun"
+"C_CSWeaponBaseShotgun"
+"C_DEagle"
+"C_DecoyGrenade"
+"C_Flashbang"
+"C_HEGrenade"
+"C_IncendiaryGrenade"
+"C_Item_Healthshot"
+"C_Knife"
+"C_MolotovGrenade"
+"C_SmokeGrenade"
+"C_WeaponAWP"
+"C_WeaponAug"
+"C_WeaponBaseItem"
+"C_WeaponBizon"
+"C_WeaponCZ75a"
+"C_WeaponElite"
+"C_WeaponFamas"
+"C_WeaponFiveSeven"
+"C_WeaponG3SG1"
+"C_WeaponGalilAR"
+"C_WeaponGlock"
+"C_WeaponHKP2000"
+"C_WeaponM249"
+"C_WeaponM4A1"
+"C_WeaponM4A1Silencer"
+"C_WeaponMAC10"
+"C_WeaponMP5SD"
+"C_WeaponMP7"
+"C_WeaponMP9"
+"C_WeaponMag7"
+"C_WeaponNOVA"
+"C_WeaponNegev"
+"C_WeaponP250"
+"C_WeaponP90"
+"C_WeaponRevolver"
+"C_WeaponSCAR20"
+"C_WeaponSG556"
+"C_WeaponSSG08"
+"C_WeaponSawedoff"
+"C_WeaponTaser"
+"C_WeaponTec9"
+"C_WeaponUMP45"
+"C_WeaponUSPSilencer"
+"C_WeaponXM1014"
+================================================
