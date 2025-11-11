@@ -1,275 +1,809 @@
-Base: CBaseModelEntity
+Vtable: CBaseModelEntity
 Virtual Function Count: 271
 Children Count: 253
 =============================================
-func_0     [ DIFF 159 ]
-func_1     [ DIFF 253 ]
-func_2     [ DIFF 106 ]
-func_3     [ DIFF 106 ]
-func_4     [ DIFF 220 ]
-func_5     [ DIFF 112 ]
-func_6     [ DIFF 245 ]
-func_7     [ DIFF 0   ]
-func_8     [ DIFF 111 ]
-func_9     [ DIFF 0   ]
-func_10    [ DIFF 197 ]
-func_11    [ DIFF 188 ]
-func_12    [ DIFF 106 ]
-func_13    [ DIFF 0   ]
-func_14    [ DIFF 1   ]
-func_15    [ DIFF 106 ]
-func_16    [ DIFF 32  ]
-func_17    [ DIFF 177 ]
-func_18    [ DIFF 5   ]
-func_19    [ DIFF 106 ]
-func_20    [ DIFF 4   ]
-func_21    [ DIFF 89  ]
-func_22    [ DIFF 0   ]
-func_23    [ DIFF 169 ]
-func_24    [ DIFF 1   ]
-func_25    [ DIFF 0   ]
-func_26    [ DIFF 0   ]
-func_27    [ DIFF 0   ]
-func_28    [ DIFF 0   ]
-func_29    [ DIFF 0   ]
-func_30    [ DIFF 0   ]
-func_31    [ DIFF 0   ]
-func_32    [ DIFF 0   ]
-func_33    [ DIFF 0   ]
-func_34    [ DIFF 0   ]
-func_35    [ DIFF 0   ]
-func_36    [ DIFF 0   ]
-func_37    [ DIFF 0   ]
-func_38    [ DIFF 0   ]
-func_39    [ DIFF 0   ]
-func_40    [ DIFF 253 ]
-func_41    [ DIFF 253 ]
-func_42    [ DIFF 253 ]
-func_43    [ DIFF 0   ]
-func_44    [ DIFF 220 ]
-func_45    [ DIFF 0   ]
-func_46    [ DIFF 0   ]
-func_47    [ DIFF 0   ]
-func_48    [ DIFF 0   ]
-func_49    [ DIFF 106 ]
-func_50    [ DIFF 50  ]
-func_51    [ DIFF 0   ]
-func_52    [ DIFF 0   ]
-func_53    [ DIFF 106 ]
-func_54    [ DIFF 106 ]
-func_55    [ DIFF 0   ]
-func_56    [ DIFF 0   ]
-func_57    [ DIFF 106 ]
-func_58    [ DIFF 106 ]
-func_59    [ DIFF 0   ]
-func_60    [ DIFF 0   ]
-func_61    [ DIFF 106 ]
-func_62    [ DIFF 106 ]
-func_63    [ DIFF 106 ]
-func_64    [ DIFF 106 ]
-func_65    [ DIFF 106 ]
-func_66    [ DIFF 106 ]
-func_67    [ DIFF 106 ]
-func_68    [ DIFF 106 ]
-func_69    [ DIFF 106 ]
-func_70    [ DIFF 4   ]
-func_71    [ DIFF 60  ]
-func_72    [ DIFF 0   ]
-func_73    [ DIFF 0   ]
-func_74    [ DIFF 8   ]
-func_75    [ DIFF 0   ]
-func_76    [ DIFF 4   ]
-func_77    [ DIFF 45  ]
-func_78    [ DIFF 0   ]
-func_79    [ DIFF 4   ]
-func_80    [ DIFF 19  ]
-func_81    [ DIFF 0   ]
-func_82    [ DIFF 106 ]
-func_83    [ DIFF 3   ]
-func_84    [ DIFF 8   ]
-func_85    [ DIFF 24  ]
-func_86    [ DIFF 0   ]
-func_87    [ DIFF 0   ]
-func_88    [ DIFF 0   ]
-func_89    [ DIFF 0   ]
-func_90    [ DIFF 0   ]
-func_91    [ DIFF 0   ]
-func_92    [ DIFF 0   ]
-func_93    [ DIFF 0   ]
-func_94    [ DIFF 3   ]
-func_95    [ DIFF 13  ]
-func_96    [ DIFF 106 ]
-func_97    [ DIFF 106 ]
-func_98    [ DIFF 0   ]
-func_99    [ DIFF 139 ]
-func_100   [ DIFF 77  ]
-func_101   [ DIFF 13  ]
-func_102   [ DIFF 3   ]
-func_103   [ DIFF 0   ]
-func_104   [ DIFF 0   ]
-func_105   [ DIFF 3   ]
-func_106   [ DIFF 0   ]
-func_107   [ DIFF 18  ]
-func_108   [ DIFF 18  ]
-func_109   [ DIFF 8   ]
-func_110   [ DIFF 0   ]
-func_111   [ DIFF 3   ]
-func_112   [ DIFF 0   ]
-func_113   [ DIFF 5   ]
-func_114   [ DIFF 5   ]
-func_115   [ DIFF 0   ]
-func_116   [ DIFF 0   ]
-func_117   [ DIFF 12  ]
-func_118   [ DIFF 6   ]
-func_119   [ DIFF 0   ]
-func_120   [ DIFF 0   ]
-func_121   [ DIFF 0   ]
-func_122   [ DIFF 0   ]
-func_123   [ DIFF 0   ]
-func_124   [ DIFF 16  ]
-func_125   [ DIFF 0   ]
-func_126   [ DIFF 0   ]
-func_127   [ DIFF 0   ]
-func_128   [ DIFF 0   ]
-func_129   [ DIFF 4   ]
-func_130   [ DIFF 0   ]
-func_131   [ DIFF 0   ]
-func_132   [ DIFF 0   ]
-func_133   [ DIFF 32  ]
-func_134   [ DIFF 32  ]
-func_135   [ DIFF 4   ]
-func_136   [ DIFF 0   ]
-func_137   [ DIFF 59  ]
-func_138   [ DIFF 3   ]
-func_139   [ DIFF 0   ]
-func_140   [ DIFF 2   ]
-func_141   [ DIFF 0   ]
-func_142   [ DIFF 0   ]
-func_143   [ DIFF 0   ]
-func_144   [ DIFF 0   ]
-func_145   [ DIFF 8   ]
-func_146   [ DIFF 0   ]
-func_147   [ DIFF 4   ]
-func_148   [ DIFF 106 ]
-func_149   [ DIFF 0   ]
-func_150   [ DIFF 86  ]
-func_151   [ DIFF 0   ]
-func_152   [ DIFF 0   ]
-func_153   [ DIFF 67  ]
-func_154   [ DIFF 65  ]
-func_155   [ DIFF 48  ]
-func_156   [ DIFF 43  ]
-func_157   [ DIFF 5   ]
-func_158   [ DIFF 15  ]
-func_159   [ DIFF 5   ]
-func_160   [ DIFF 4   ]
-func_161   [ DIFF 4   ]
-func_162   [ DIFF 63  ]
-func_163   [ DIFF 2   ]
-func_164   [ DIFF 8   ]
-func_165   [ DIFF 0   ]
-func_166   [ DIFF 6   ]
-func_167   [ DIFF 4   ]
-func_168   [ DIFF 106 ]
-func_169   [ DIFF 3   ]
-func_170   [ DIFF 0   ]
-func_171   [ DIFF 3   ]
-func_172   [ DIFF 3   ]
-func_173   [ DIFF 0   ]
-func_174   [ DIFF 4   ]
-func_175   [ DIFF 0   ]
-func_176   [ DIFF 0   ]
-func_177   [ DIFF 1   ]
-func_178   [ DIFF 10  ]
-func_179   [ DIFF 8   ]
-func_180   [ DIFF 8   ]
-func_181   [ DIFF 8   ]
-func_182   [ DIFF 50  ]
-func_183   [ DIFF 0   ]
-func_184   [ DIFF 50  ]
-func_185   [ DIFF 2   ]
-func_186   [ DIFF 0   ]
-func_187   [ DIFF 0   ]
-func_188   [ DIFF 0   ]
-func_189   [ DIFF 9   ]
-func_190   [ DIFF 0   ]
-func_191   [ DIFF 0   ]
-func_192   [ DIFF 53  ]
-func_193   [ DIFF 53  ]
-func_194   [ DIFF 53  ]
-func_195   [ DIFF 53  ]
-func_196   [ DIFF 0   ]
-func_197   [ DIFF 8   ]
-func_198   [ DIFF 0   ]
-func_199   [ DIFF 106 ]
-func_200   [ DIFF 62  ]
-func_201   [ DIFF 5   ]
-func_202   [ DIFF 0   ]
-func_203   [ DIFF 0   ]
-func_204   [ DIFF 0   ]
-func_205   [ DIFF 4   ]
-func_206   [ DIFF 1   ]
-func_207   [ DIFF 0   ]
-func_208   [ DIFF 0   ]
-func_209   [ DIFF 0   ]
-func_210   [ DIFF 0   ]
-func_211   [ DIFF 0   ]
-func_212   [ DIFF 1   ]
-func_213   [ DIFF 0   ]
-func_214   [ DIFF 4   ]
-func_215   [ DIFF 8   ]
-func_216   [ DIFF 8   ]
-func_217   [ DIFF 0   ]
-func_218   [ DIFF 0   ]
-func_219   [ DIFF 0   ]
-func_220   [ DIFF 6   ]
-func_221   [ DIFF 0   ]
-func_222   [ DIFF 0   ]
-func_223   [ DIFF 8   ]
-func_224   [ DIFF 4   ]
-func_225   [ DIFF 0   ]
-func_226   [ DIFF 0   ]
-func_227   [ DIFF 0   ]
-func_228   [ DIFF 22  ]
-func_229   [ DIFF 6   ]
-func_230   [ DIFF 51  ]
-func_231   [ DIFF 51  ]
-func_232   [ DIFF 54  ]
-func_233   [ DIFF 8   ]
-func_234   [ DIFF 60  ]
-func_235   [ DIFF 0   ]
-func_236   [ DIFF 0   ]
-func_237   [ DIFF 0   ]
-func_238   [ DIFF 0   ]
-func_239   [ DIFF 0   ]
-func_240   [ DIFF 0   ]
-func_241   [ DIFF 0   ]
-func_242   [ DIFF 0   ]
-func_243   [ DIFF 5   ]
-func_244   [ DIFF 106 ]
-func_245   [ DIFF 0   ]
-func_246   [ DIFF 0   ]
-func_247   [ DIFF 106 ]
-func_248   [ DIFF 0   ]
-func_249   [ DIFF 0   ]
-func_250   [ DIFF 0   ]
-func_251   [ DIFF 14  ]
-func_252   [ DIFF 8   ]
-func_253   [ DIFF 28  ]
-func_254   [ DIFF 31  ]
-func_255   [ DIFF 0   ]
-func_256   [ DIFF 0   ]
-func_257   [ DIFF 0   ]
-func_258   [ DIFF 0   ]
-func_259   [ DIFF 3   ]
-func_260   [ DIFF 6   ]
-func_261   [ DIFF 49  ]
-func_262   [ DIFF 0   ]
-func_263   [ DIFF 106 ]
-func_264   [ DIFF 16  ]
-func_265   [ DIFF 16  ]
-func_266   [ DIFF 0   ]
-func_267   [ DIFF 0   ]
-func_268   [ DIFF 0   ]
-func_269   [ DIFF 0   ]
-func_270   [ DIFF 0   ]
+func_0     [ DIFF 159 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBaseTrigger", "CBombTarget", "CBreakableProp", "CBuyZone", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChangeLevel", "CChicken", "CColorCorrectionVolume", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicNavConnectionsVolume", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CEnvParticleGlow", "CFish", "CFlashbang", "CFlashbangProjectile", "CFogTrigger", "CFootstepControl", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CHostageRescueZone", "CHostageRescueZoneShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMarkupVolumeTagged", "CMarkupVolumeTagged_Nav", "CMarkupVolumeTagged_NavGame", "CMarkupVolumeWithRef", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CParticleSystem", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointClientUIWorldPanel", "CPointClientUIWorldTextPanel", "CPointCommentaryNode", "CPointWorldText", "CPostProcessingVolume", "CPrecipitation", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerRagdollTrigger", "CShatterGlassShardPhysics", "CSimpleMarkupVolumeTagged", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "E9 1B 25 FF FF CC CC CC CC CC CC CC CC CC CC CC"
+func_1     [ DIFF 253 ]                               ["CAK47", "CBarnLight", "CBaseAnimGraph", "CBaseButton", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseClientUIEntity", "CBaseCombatCharacter", "CBaseDoor", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlatTrain", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBaseToggle", "CBaseTrigger", "CBeam", "CBombTarget", "CBreakable", "CBreakableProp", "CBuyZone", "CC4", "CCSObserverPawn", "CCSPlace", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSSprite", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChangeLevel", "CChicken", "CColorCorrectionVolume", "CCommentaryViewPosition", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicLight", "CDynamicNavConnectionsVolume", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CEntityBlocker", "CEntityDissolve", "CEnvBeam", "CEnvDecal", "CEnvExplosion", "CEnvLaser", "CEnvParticleGlow", "CEnvSky", "CFireCrackerBlast", "CFish", "CFlashbang", "CFlashbangProjectile", "CFogTrigger", "CFogVolume", "CFootstepControl", "CFuncBrush", "CFuncConveyor", "CFuncElectrifiedVolume", "CFuncIllusionary", "CFuncInteractionLayerClip", "CFuncLadder", "CFuncLadderAlias_func_useableladder", "CFuncMonitor", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncMover", "CFuncNavBlocker", "CFuncNavObstruction", "CFuncPlat", "CFuncPlatRot", "CFuncRetakeBarrier", "CFuncRotating", "CFuncRotator", "CFuncShatterglass", "CFuncTankTrain", "CFuncTrackAuto", "CFuncTrackChange", "CFuncTrackTrain", "CFuncTrain", "CFuncTrainControls", "CFuncVPhysicsClip", "CFuncVehicleClip", "CFuncWall", "CFuncWallToggle", "CFuncWater", "CGameEnd", "CGameMoney", "CGamePlayerEquip", "CGamePlayerZone", "CGameText", "CGunTarget", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CHostageRescueZone", "CHostageRescueZoneShim", "CIncendiaryGrenade", "CInferno", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemGenericTriggerHelper", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CLightDirectionalEntity", "CLightEntity", "CLightEnvironmentEntity", "CLightOrthoEntity", "CLightSpotEntity", "CMarkupVolume", "CMarkupVolumeTagged", "CMarkupVolumeTagged_Nav", "CMarkupVolumeTagged_NavGame", "CMarkupVolumeWithRef", "CModelPointEntity", "CMolotovGrenade", "CMolotovProjectile", "CMomentaryRotButton", "COmniLight", "COrnamentProp", "CParticleSystem", "CPhysBox", "CPhysMagnet", "CPhysicalButton", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPlatTrigger", "CPlayerSprayDecal", "CPointClientUIDialog", "CPointClientUIWorldPanel", "CPointClientUIWorldTextPanel", "CPointCommentaryNode", "CPointWorldText", "CPostProcessingVolume", "CPrecipitation", "CPrecipitationBlocker", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CRectLight", "CRevertSaved", "CRopeKeyframe", "CRopeKeyframeAlias_move_rope", "CRotButton", "CRotDoor", "CRuleBrushEntity", "CRuleEntity", "CRulePointEntity", "CScriptItem", "CScriptNavBlocker", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerOnlyModelEntity", "CServerRagdollTrigger", "CShatterGlassShardPhysics", "CShower", "CSimpleMarkupVolumeTagged", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CSpotlightEnd", "CSprite", "CSpriteAlias_env_glow", "CSpriteOriented", "CTextureBasedAnimatable", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBrush", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave", "CTriggerVolume", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014", "CWorld"]
+    "48 89 5C 24 08 57 48 83 EC 20 8B DA 48 8B F9 E8"
+func_2     [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "40 53 48 83 EC 20 48 8B D9 E8 32 8C B5 FF 48 8B"
+func_3     [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "C6 05 53 73 D5 00 01 C3 CC CC CC CC CC CC CC CC"
+func_4     [ DIFF 220 ]                               ["CAK47", "CBaseAnimGraph", "CBaseButton", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseDoor", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlatTrain", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBaseToggle", "CBaseTrigger", "CBeam", "CBombTarget", "CBreakable", "CBreakableProp", "CBuyZone", "CC4", "CCSObserverPawn", "CCSPlace", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSSprite", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChangeLevel", "CChicken", "CColorCorrectionVolume", "CCommentaryViewPosition", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicNavConnectionsVolume", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CEntityBlocker", "CEntityDissolve", "CEnvBeam", "CEnvExplosion", "CEnvLaser", "CEnvParticleGlow", "CFireCrackerBlast", "CFish", "CFlashbang", "CFlashbangProjectile", "CFogTrigger", "CFogVolume", "CFootstepControl", "CFuncBrush", "CFuncConveyor", "CFuncElectrifiedVolume", "CFuncIllusionary", "CFuncInteractionLayerClip", "CFuncLadder", "CFuncLadderAlias_func_useableladder", "CFuncMonitor", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncMover", "CFuncNavBlocker", "CFuncNavObstruction", "CFuncPlat", "CFuncPlatRot", "CFuncRetakeBarrier", "CFuncRotating", "CFuncRotator", "CFuncShatterglass", "CFuncTankTrain", "CFuncTrackAuto", "CFuncTrackChange", "CFuncTrackTrain", "CFuncTrain", "CFuncVPhysicsClip", "CFuncVehicleClip", "CFuncWall", "CFuncWallToggle", "CFuncWater", "CGamePlayerEquip", "CGunTarget", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CHostageRescueZone", "CHostageRescueZoneShim", "CIncendiaryGrenade", "CInferno", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMarkupVolume", "CMarkupVolumeTagged", "CMarkupVolumeTagged_Nav", "CMarkupVolumeTagged_NavGame", "CMarkupVolumeWithRef", "CMolotovGrenade", "CMolotovProjectile", "CMomentaryRotButton", "COrnamentProp", "CParticleSystem", "CPhysBox", "CPhysMagnet", "CPhysicalButton", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointClientUIDialog", "CPointCommentaryNode", "CPostProcessingVolume", "CPrecipitation", "CPrecipitationBlocker", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CRopeKeyframe", "CRopeKeyframeAlias_move_rope", "CRotButton", "CRotDoor", "CScriptItem", "CScriptNavBlocker", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerRagdollTrigger", "CShatterGlassShardPhysics", "CSimpleMarkupVolumeTagged", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CSprite", "CSpriteAlias_env_glow", "CSpriteOriented", "CTextureBasedAnimatable", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave", "CTriggerVolume", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "E9 6B F3 B4 FF CC CC CC CC CC CC CC CC CC CC CC"
+func_5     [ DIFF 112 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMarkupVolumeTagged", "CMarkupVolumeTagged_Nav", "CMarkupVolumeTagged_NavGame", "CMarkupVolumeWithRef", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSimpleMarkupVolumeTagged", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014", "CWorld"]
+    "E9 7B ED 15 00 CC CC CC CC CC CC CC CC CC CC CC"
+func_6     [ DIFF 245 ]                               ["CAK47", "CBarnLight", "CBaseAnimGraph", "CBaseButton", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseDoor", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlatTrain", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBaseTrigger", "CBeam", "CBombTarget", "CBreakable", "CBreakableProp", "CBuyZone", "CC4", "CCSObserverPawn", "CCSPlace", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSSprite", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChangeLevel", "CChicken", "CColorCorrectionVolume", "CCommentaryViewPosition", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicLight", "CDynamicNavConnectionsVolume", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CEntityBlocker", "CEntityDissolve", "CEnvBeam", "CEnvExplosion", "CEnvLaser", "CEnvParticleGlow", "CEnvSky", "CFireCrackerBlast", "CFish", "CFlashbang", "CFlashbangProjectile", "CFogTrigger", "CFogVolume", "CFootstepControl", "CFuncBrush", "CFuncConveyor", "CFuncElectrifiedVolume", "CFuncIllusionary", "CFuncInteractionLayerClip", "CFuncLadder", "CFuncLadderAlias_func_useableladder", "CFuncMonitor", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncMover", "CFuncNavBlocker", "CFuncNavObstruction", "CFuncPlat", "CFuncPlatRot", "CFuncRetakeBarrier", "CFuncRotating", "CFuncRotator", "CFuncShatterglass", "CFuncTankTrain", "CFuncTrackAuto", "CFuncTrackChange", "CFuncTrackTrain", "CFuncTrain", "CFuncTrainControls", "CFuncVPhysicsClip", "CFuncVehicleClip", "CFuncWall", "CFuncWallToggle", "CFuncWater", "CGameEnd", "CGameMoney", "CGamePlayerEquip", "CGamePlayerZone", "CGameText", "CGunTarget", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CHostageRescueZone", "CHostageRescueZoneShim", "CIncendiaryGrenade", "CInferno", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CLightDirectionalEntity", "CLightEntity", "CLightEnvironmentEntity", "CLightOrthoEntity", "CLightSpotEntity", "CMarkupVolume", "CMarkupVolumeTagged", "CMarkupVolumeTagged_Nav", "CMarkupVolumeTagged_NavGame", "CMarkupVolumeWithRef", "CMolotovGrenade", "CMolotovProjectile", "CMomentaryRotButton", "COmniLight", "COrnamentProp", "CParticleSystem", "CPhysBox", "CPhysMagnet", "CPhysicalButton", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPlatTrigger", "CPointClientUIDialog", "CPointClientUIWorldPanel", "CPointClientUIWorldTextPanel", "CPointCommentaryNode", "CPointWorldText", "CPostProcessingVolume", "CPrecipitation", "CPrecipitationBlocker", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CRectLight", "CRopeKeyframe", "CRopeKeyframeAlias_move_rope", "CRotButton", "CRotDoor", "CRuleBrushEntity", "CRuleEntity", "CRulePointEntity", "CScriptItem", "CScriptNavBlocker", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerRagdollTrigger", "CShatterGlassShardPhysics", "CShower", "CSimpleMarkupVolumeTagged", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CSpotlightEnd", "CSprite", "CSpriteAlias_env_glow", "CSpriteOriented", "CTextureBasedAnimatable", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBrush", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave", "CTriggerVolume", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014", "CWorld"]
+    "48 89 5C 24 10 48 89 74 24 18 57 48 83 EC 30 48"
+func_7     [ DIFF 0   ]                               []
+    "48 8B 01 48 FF 60 40 CC CC CC CC CC CC CC CC CC"
+func_8     [ DIFF 111 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CLightDirectionalEntity", "CLightEntity", "CLightEnvironmentEntity", "CLightOrthoEntity", "CLightSpotEntity", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "C6 05 D7 5F D5 00 01 C3 CC CC CC CC CC CC CC CC"
+func_9     [ DIFF 0   ]                               []
+    "C6 05 C7 5F D5 00 01 C3 CC CC CC CC CC CC CC CC"
+func_10    [ DIFF 197 ]                               ["CAK47", "CBarnLight", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseDoor", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBaseTrigger", "CBeam", "CBombTarget", "CBreakableProp", "CBuyZone", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChangeLevel", "CChicken", "CColorCorrectionVolume", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicNavConnectionsVolume", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CEnvBeam", "CEnvExplosion", "CEnvLaser", "CEnvParticleGlow", "CEnvSky", "CFish", "CFlashbang", "CFlashbangProjectile", "CFogTrigger", "CFogVolume", "CFootstepControl", "CFuncConveyor", "CFuncLadder", "CFuncLadderAlias_func_useableladder", "CFuncMonitor", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncMover", "CFuncNavBlocker", "CFuncNavObstruction", "CFuncPlat", "CFuncPlatRot", "CFuncRetakeBarrier", "CFuncRotating", "CFuncRotator", "CFuncTankTrain", "CFuncTrackAuto", "CFuncTrackChange", "CFuncTrackTrain", "CFuncTrain", "CFuncWater", "CGunTarget", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CHostageRescueZone", "CHostageRescueZoneShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CLightDirectionalEntity", "CLightEntity", "CLightEnvironmentEntity", "CLightOrthoEntity", "CLightSpotEntity", "CMarkupVolumeTagged", "CMarkupVolumeTagged_Nav", "CMarkupVolumeTagged_NavGame", "CMarkupVolumeWithRef", "CMolotovGrenade", "CMolotovProjectile", "COmniLight", "COrnamentProp", "CParticleSystem", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPostProcessingVolume", "CPrecipitation", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CRectLight", "CRopeKeyframe", "CRopeKeyframeAlias_move_rope", "CRotDoor", "CScriptItem", "CScriptNavBlocker", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerRagdollTrigger", "CShatterGlassShardPhysics", "CSimpleMarkupVolumeTagged", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CTextureBasedAnimatable", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave", "CTriggerVolume", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "48 89 5C 24 18 55 48 83 EC 20 8B DA 48 8B E9 E8"
+func_11    [ DIFF 188 ]                               ["CAK47", "CBarnLight", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseDoor", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBaseTrigger", "CBeam", "CBombTarget", "CBreakableProp", "CBuyZone", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChangeLevel", "CChicken", "CColorCorrectionVolume", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicNavConnectionsVolume", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CEnvBeam", "CEnvLaser", "CEnvParticleGlow", "CEnvSky", "CFireCrackerBlast", "CFish", "CFlashbang", "CFlashbangProjectile", "CFogTrigger", "CFootstepControl", "CFuncElectrifiedVolume", "CFuncMonitor", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncMover", "CFuncNavBlocker", "CFuncNavObstruction", "CFuncRetakeBarrier", "CFuncTankTrain", "CFuncTrackTrain", "CFuncWater", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CHostageRescueZone", "CHostageRescueZoneShim", "CIncendiaryGrenade", "CInferno", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CLightDirectionalEntity", "CLightEntity", "CLightEnvironmentEntity", "CLightOrthoEntity", "CLightSpotEntity", "CMarkupVolumeTagged", "CMarkupVolumeTagged_Nav", "CMarkupVolumeTagged_NavGame", "CMarkupVolumeWithRef", "CMolotovGrenade", "CMolotovProjectile", "COmniLight", "COrnamentProp", "CParticleSystem", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointClientUIWorldPanel", "CPointClientUIWorldTextPanel", "CPointCommentaryNode", "CPostProcessingVolume", "CPrecipitation", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CRectLight", "CRopeKeyframe", "CRopeKeyframeAlias_move_rope", "CRotDoor", "CScriptItem", "CScriptNavBlocker", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerRagdollTrigger", "CShatterGlassShardPhysics", "CSimpleMarkupVolumeTagged", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014", "CWorld"]
+    "40 53 48 83 EC 20 48 8B D9 48 81 C1 D0 06 00 00"
+func_12    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "E9 DB 83 15 00 CC CC CC CC CC CC CC CC CC CC CC"
+func_13    [ DIFF 0   ]                               []
+    "48 8B 89 E8 04 00 00 48 85 C9 0F 85 50 A1 15 00"
+func_14    [ DIFF 1   ]                               ["CWorld"]
+    "48 83 EC 48 48 8B 89 E8 04 00 00 48 8B 02 48 85"
+func_15    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_16    [ DIFF 32  ]                               ["CBasePlayerPawn", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CChicken", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CFuncLadder", "CFuncLadderAlias_func_useableladder", "CFuncRetakeBarrier", "CFuncTankTrain", "CFuncTrackTrain", "CMarkupVolumeTagged_NavGame", "CMarkupVolumeWithRef", "COrnamentProp", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptTriggerPush", "CShatterGlassShardPhysics", "CTriggerPush"]
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B FA 48 8B D9"
+func_17    [ DIFF 177 ]                               ["CAK47", "CBaseAnimGraph", "CBaseButton", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBaseTrigger", "CBeam", "CBombTarget", "CBreakable", "CBreakableProp", "CBuyZone", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChangeLevel", "CChicken", "CColorCorrectionVolume", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicNavConnectionsVolume", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CEnvBeam", "CEnvExplosion", "CEnvLaser", "CFish", "CFlashbang", "CFlashbangProjectile", "CFogTrigger", "CFootstepControl", "CFuncBrush", "CFuncElectrifiedVolume", "CFuncMonitor", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncNavBlocker", "CFuncNavObstruction", "CFuncRetakeBarrier", "CFuncRotating", "CFuncShatterglass", "CFuncTankTrain", "CFuncTrackTrain", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CHostageRescueZone", "CHostageRescueZoneShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMarkupVolumeTagged", "CMarkupVolumeTagged_Nav", "CMarkupVolumeTagged_NavGame", "CMarkupVolumeWithRef", "CMolotovGrenade", "CMolotovProjectile", "CMomentaryRotButton", "COrnamentProp", "CPhysBox", "CPhysMagnet", "CPhysicalButton", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPostProcessingVolume", "CPrecipitation", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CRotButton", "CScriptItem", "CScriptNavBlocker", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerRagdollTrigger", "CShatterGlassShardPhysics", "CSimpleMarkupVolumeTagged", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "44 89 4C 24 20 4C 89 44 24 18 55 53 56 41 54 41"
+func_18    [ DIFF 5   ]                               ["CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CShatterGlassShardPhysics"]
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B F9 48 8B DA"
+func_19    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "48 89 5C 24 10 48 89 6C 24 18 57 48 83 EC 70 48"
+func_20    [ DIFF 4   ]                               ["CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CTextureBasedAnimatable"]
+    "40 53 48 83 EC 20 48 8B D9 E8 32 14 5F 00 48 8B"
+func_21    [ DIFF 89  ]                               ["CAK47", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseDoor", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSSprite", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CCommentaryViewPosition", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CEconEntity", "CEconWearable", "CFlashbang", "CFlashbangProjectile", "CFuncElectrifiedVolume", "CFuncTrain", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CRotDoor", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CSprite", "CSpriteAlias_env_glow", "CSpriteOriented", "CTriggerPhysics", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B D9 E8 2E 84"
+func_22    [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 6C 24 18 48 89 74 24 20 41"
+func_23    [ DIFF 169 ]                               ["CAK47", "CBaseButton", "CBaseCSGrenade", "CBaseDoor", "CBasePlayerPawn", "CBasePlayerWeapon", "CBasePropDoor", "CBaseTrigger", "CBeam", "CBombTarget", "CBuyZone", "CC4", "CCSObserverPawn", "CCSPlace", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSSprite", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChangeLevel", "CChicken", "CColorCorrectionVolume", "CCommentaryViewPosition", "CDEagle", "CDecoyGrenade", "CDynamicNavConnectionsVolume", "CEnvBeam", "CEnvExplosion", "CEnvLaser", "CEnvParticleGlow", "CFlashbang", "CFogTrigger", "CFogVolume", "CFootstepControl", "CFuncBrush", "CFuncElectrifiedVolume", "CFuncMonitor", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncRotating", "CFuncShatterglass", "CFuncTankTrain", "CFuncTrackTrain", "CHEGrenade", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageRescueZone", "CHostageRescueZoneShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItem_Healthshot", "CKnife", "CLightDirectionalEntity", "CLightEntity", "CLightEnvironmentEntity", "CLightOrthoEntity", "CLightSpotEntity", "CModelPointEntity", "CMolotovGrenade", "CMomentaryRotButton", "CParticleSystem", "CPhysBox", "CPhysicalButton", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPlatTrigger", "CPlayerSprayDecal", "CPointClientUIDialog", "CPointClientUIWorldPanel", "CPointClientUIWorldTextPanel", "CPointWorldText", "CPostProcessingVolume", "CPrecipitation", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CRevertSaved", "CRopeKeyframe", "CRopeKeyframeAlias_move_rope", "CRotButton", "CRotDoor", "CScriptItem", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerOnlyModelEntity", "CServerRagdollTrigger", "CShatterGlassShardPhysics", "CShower", "CSmokeGrenade", "CSpotlightEnd", "CSprite", "CSpriteAlias_env_glow", "CSpriteOriented", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave", "CTriggerVolume", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "40 57 48 83 EC 20 E8 B5 FA 9E FF 48 8B F8 48 85"
+func_24    [ DIFF 1   ]                               ["CWorld"]
+    "C7 02 FF FF FF FF 48 8B C2 C3 CC CC CC CC CC CC"
+func_25    [ DIFF 0   ]                               []
+    "48 8B C4 56 48 81 EC 40 01 00 00 83 3A 00 48 8B"
+func_26    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 4C 8B C2 48 8B D3 48"
+func_27    [ DIFF 0   ]                               []
+    "48 8B C1 4C 8B C2 48 8B D0 48 83 C1 40 E9 CE 8D"
+func_28    [ DIFF 0   ]                               []
+    "88 91 C8 01 00 00 C3 CC CC CC CC CC CC CC CC CC"
+func_29    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 40 48"
+func_30    [ DIFF 0   ]                               []
+    "8B 81 C0 01 00 00 D1 E8 24 01 C3 CC CC CC CC CC"
+func_31    [ DIFF 0   ]                               []
+    "C6 81 00 02 00 00 01 C3 CC CC CC CC CC CC CC CC"
+func_32    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_33    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 4D 8B C8 48 8B DA 4C 8B C1 48"
+func_34    [ DIFF 0   ]                               []
+    "40 53 41 56 48 83 EC 58 48 8B 59 10 4C 8B F1 8B"
+func_35    [ DIFF 0   ]                               []
+    "48 83 C1 40 E9 07 00 00 00 CC CC CC CC CC CC CC"
+func_36    [ DIFF 0   ]                               []
+    "48 83 C1 40 E9 17 00 00 00 CC CC CC CC CC CC CC"
+func_37    [ DIFF 0   ]                               []
+    "4C 8B DC 49 89 5B 10 49 89 6B 18 56 57 41 56 48"
+func_38    [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_39    [ DIFF 0   ]                               []
+    "40 55 57 48 8B EC 48 83 EC 68 48 8B 51 08 48 8B"
+func_40    [ DIFF 253 ]                               ["CAK47", "CBarnLight", "CBaseAnimGraph", "CBaseButton", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseClientUIEntity", "CBaseCombatCharacter", "CBaseDoor", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlatTrain", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBaseToggle", "CBaseTrigger", "CBeam", "CBombTarget", "CBreakable", "CBreakableProp", "CBuyZone", "CC4", "CCSObserverPawn", "CCSPlace", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSSprite", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChangeLevel", "CChicken", "CColorCorrectionVolume", "CCommentaryViewPosition", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicLight", "CDynamicNavConnectionsVolume", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CEntityBlocker", "CEntityDissolve", "CEnvBeam", "CEnvDecal", "CEnvExplosion", "CEnvLaser", "CEnvParticleGlow", "CEnvSky", "CFireCrackerBlast", "CFish", "CFlashbang", "CFlashbangProjectile", "CFogTrigger", "CFogVolume", "CFootstepControl", "CFuncBrush", "CFuncConveyor", "CFuncElectrifiedVolume", "CFuncIllusionary", "CFuncInteractionLayerClip", "CFuncLadder", "CFuncLadderAlias_func_useableladder", "CFuncMonitor", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncMover", "CFuncNavBlocker", "CFuncNavObstruction", "CFuncPlat", "CFuncPlatRot", "CFuncRetakeBarrier", "CFuncRotating", "CFuncRotator", "CFuncShatterglass", "CFuncTankTrain", "CFuncTrackAuto", "CFuncTrackChange", "CFuncTrackTrain", "CFuncTrain", "CFuncTrainControls", "CFuncVPhysicsClip", "CFuncVehicleClip", "CFuncWall", "CFuncWallToggle", "CFuncWater", "CGameEnd", "CGameMoney", "CGamePlayerEquip", "CGamePlayerZone", "CGameText", "CGunTarget", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CHostageRescueZone", "CHostageRescueZoneShim", "CIncendiaryGrenade", "CInferno", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemGenericTriggerHelper", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CLightDirectionalEntity", "CLightEntity", "CLightEnvironmentEntity", "CLightOrthoEntity", "CLightSpotEntity", "CMarkupVolume", "CMarkupVolumeTagged", "CMarkupVolumeTagged_Nav", "CMarkupVolumeTagged_NavGame", "CMarkupVolumeWithRef", "CModelPointEntity", "CMolotovGrenade", "CMolotovProjectile", "CMomentaryRotButton", "COmniLight", "COrnamentProp", "CParticleSystem", "CPhysBox", "CPhysMagnet", "CPhysicalButton", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPlatTrigger", "CPlayerSprayDecal", "CPointClientUIDialog", "CPointClientUIWorldPanel", "CPointClientUIWorldTextPanel", "CPointCommentaryNode", "CPointWorldText", "CPostProcessingVolume", "CPrecipitation", "CPrecipitationBlocker", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CRectLight", "CRevertSaved", "CRopeKeyframe", "CRopeKeyframeAlias_move_rope", "CRotButton", "CRotDoor", "CRuleBrushEntity", "CRuleEntity", "CRulePointEntity", "CScriptItem", "CScriptNavBlocker", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerOnlyModelEntity", "CServerRagdollTrigger", "CShatterGlassShardPhysics", "CShower", "CSimpleMarkupVolumeTagged", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CSpotlightEnd", "CSprite", "CSpriteAlias_env_glow", "CSpriteOriented", "CTextureBasedAnimatable", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBrush", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave", "CTriggerVolume", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014", "CWorld"]
+    "48 8D 05 89 27 FB 00 C3 CC CC CC CC CC CC CC CC"
+func_41    [ DIFF 253 ]                               ["CAK47", "CBarnLight", "CBaseAnimGraph", "CBaseButton", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseClientUIEntity", "CBaseCombatCharacter", "CBaseDoor", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlatTrain", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBaseToggle", "CBaseTrigger", "CBeam", "CBombTarget", "CBreakable", "CBreakableProp", "CBuyZone", "CC4", "CCSObserverPawn", "CCSPlace", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSSprite", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChangeLevel", "CChicken", "CColorCorrectionVolume", "CCommentaryViewPosition", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicLight", "CDynamicNavConnectionsVolume", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CEntityBlocker", "CEntityDissolve", "CEnvBeam", "CEnvDecal", "CEnvExplosion", "CEnvLaser", "CEnvParticleGlow", "CEnvSky", "CFireCrackerBlast", "CFish", "CFlashbang", "CFlashbangProjectile", "CFogTrigger", "CFogVolume", "CFootstepControl", "CFuncBrush", "CFuncConveyor", "CFuncElectrifiedVolume", "CFuncIllusionary", "CFuncInteractionLayerClip", "CFuncLadder", "CFuncLadderAlias_func_useableladder", "CFuncMonitor", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncMover", "CFuncNavBlocker", "CFuncNavObstruction", "CFuncPlat", "CFuncPlatRot", "CFuncRetakeBarrier", "CFuncRotating", "CFuncRotator", "CFuncShatterglass", "CFuncTankTrain", "CFuncTrackAuto", "CFuncTrackChange", "CFuncTrackTrain", "CFuncTrain", "CFuncTrainControls", "CFuncVPhysicsClip", "CFuncVehicleClip", "CFuncWall", "CFuncWallToggle", "CFuncWater", "CGameEnd", "CGameMoney", "CGamePlayerEquip", "CGamePlayerZone", "CGameText", "CGunTarget", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CHostageRescueZone", "CHostageRescueZoneShim", "CIncendiaryGrenade", "CInferno", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemGenericTriggerHelper", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CLightDirectionalEntity", "CLightEntity", "CLightEnvironmentEntity", "CLightOrthoEntity", "CLightSpotEntity", "CMarkupVolume", "CMarkupVolumeTagged", "CMarkupVolumeTagged_Nav", "CMarkupVolumeTagged_NavGame", "CMarkupVolumeWithRef", "CModelPointEntity", "CMolotovGrenade", "CMolotovProjectile", "CMomentaryRotButton", "COmniLight", "COrnamentProp", "CParticleSystem", "CPhysBox", "CPhysMagnet", "CPhysicalButton", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPlatTrigger", "CPlayerSprayDecal", "CPointClientUIDialog", "CPointClientUIWorldPanel", "CPointClientUIWorldTextPanel", "CPointCommentaryNode", "CPointWorldText", "CPostProcessingVolume", "CPrecipitation", "CPrecipitationBlocker", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CRectLight", "CRevertSaved", "CRopeKeyframe", "CRopeKeyframeAlias_move_rope", "CRotButton", "CRotDoor", "CRuleBrushEntity", "CRuleEntity", "CRulePointEntity", "CScriptItem", "CScriptNavBlocker", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerOnlyModelEntity", "CServerRagdollTrigger", "CShatterGlassShardPhysics", "CShower", "CSimpleMarkupVolumeTagged", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CSpotlightEnd", "CSprite", "CSpriteAlias_env_glow", "CSpriteOriented", "CTextureBasedAnimatable", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBrush", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave", "CTriggerVolume", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014", "CWorld"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_42    [ DIFF 253 ]                               ["CAK47", "CBarnLight", "CBaseAnimGraph", "CBaseButton", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseClientUIEntity", "CBaseCombatCharacter", "CBaseDoor", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlatTrain", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBaseToggle", "CBaseTrigger", "CBeam", "CBombTarget", "CBreakable", "CBreakableProp", "CBuyZone", "CC4", "CCSObserverPawn", "CCSPlace", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSSprite", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChangeLevel", "CChicken", "CColorCorrectionVolume", "CCommentaryViewPosition", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicLight", "CDynamicNavConnectionsVolume", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CEntityBlocker", "CEntityDissolve", "CEnvBeam", "CEnvDecal", "CEnvExplosion", "CEnvLaser", "CEnvParticleGlow", "CEnvSky", "CFireCrackerBlast", "CFish", "CFlashbang", "CFlashbangProjectile", "CFogTrigger", "CFogVolume", "CFootstepControl", "CFuncBrush", "CFuncConveyor", "CFuncElectrifiedVolume", "CFuncIllusionary", "CFuncInteractionLayerClip", "CFuncLadder", "CFuncLadderAlias_func_useableladder", "CFuncMonitor", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncMover", "CFuncNavBlocker", "CFuncNavObstruction", "CFuncPlat", "CFuncPlatRot", "CFuncRetakeBarrier", "CFuncRotating", "CFuncRotator", "CFuncShatterglass", "CFuncTankTrain", "CFuncTrackAuto", "CFuncTrackChange", "CFuncTrackTrain", "CFuncTrain", "CFuncTrainControls", "CFuncVPhysicsClip", "CFuncVehicleClip", "CFuncWall", "CFuncWallToggle", "CFuncWater", "CGameEnd", "CGameMoney", "CGamePlayerEquip", "CGamePlayerZone", "CGameText", "CGunTarget", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CHostageRescueZone", "CHostageRescueZoneShim", "CIncendiaryGrenade", "CInferno", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemGenericTriggerHelper", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CLightDirectionalEntity", "CLightEntity", "CLightEnvironmentEntity", "CLightOrthoEntity", "CLightSpotEntity", "CMarkupVolume", "CMarkupVolumeTagged", "CMarkupVolumeTagged_Nav", "CMarkupVolumeTagged_NavGame", "CMarkupVolumeWithRef", "CModelPointEntity", "CMolotovGrenade", "CMolotovProjectile", "CMomentaryRotButton", "COmniLight", "COrnamentProp", "CParticleSystem", "CPhysBox", "CPhysMagnet", "CPhysicalButton", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPlatTrigger", "CPlayerSprayDecal", "CPointClientUIDialog", "CPointClientUIWorldPanel", "CPointClientUIWorldTextPanel", "CPointCommentaryNode", "CPointWorldText", "CPostProcessingVolume", "CPrecipitation", "CPrecipitationBlocker", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CRectLight", "CRevertSaved", "CRopeKeyframe", "CRopeKeyframeAlias_move_rope", "CRotButton", "CRotDoor", "CRuleBrushEntity", "CRuleEntity", "CRulePointEntity", "CScriptItem", "CScriptNavBlocker", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerOnlyModelEntity", "CServerRagdollTrigger", "CShatterGlassShardPhysics", "CShower", "CSimpleMarkupVolumeTagged", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CSpotlightEnd", "CSprite", "CSpriteAlias_env_glow", "CSpriteOriented", "CTextureBasedAnimatable", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBrush", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave", "CTriggerVolume", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014", "CWorld"]
+    "40 53 48 83 EC 20 48 8B DA E8 E2 3B C8 FF 48 8B"
+func_43    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_44    [ DIFF 220 ]                               ["CAK47", "CBarnLight", "CBaseAnimGraph", "CBaseButton", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseClientUIEntity", "CBaseCombatCharacter", "CBaseDoor", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlatTrain", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBaseToggle", "CBaseTrigger", "CBeam", "CBombTarget", "CBreakable", "CBreakableProp", "CBuyZone", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSSprite", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChangeLevel", "CChicken", "CColorCorrectionVolume", "CCommentaryViewPosition", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicLight", "CDynamicNavConnectionsVolume", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CEntityDissolve", "CEnvBeam", "CEnvDecal", "CEnvExplosion", "CEnvLaser", "CEnvParticleGlow", "CEnvSky", "CFireCrackerBlast", "CFish", "CFlashbang", "CFlashbangProjectile", "CFogTrigger", "CFootstepControl", "CFuncBrush", "CFuncConveyor", "CFuncElectrifiedVolume", "CFuncLadder", "CFuncLadderAlias_func_useableladder", "CFuncMonitor", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncMover", "CFuncPlat", "CFuncPlatRot", "CFuncRetakeBarrier", "CFuncRotating", "CFuncTankTrain", "CFuncTrackAuto", "CFuncTrackChange", "CFuncTrackTrain", "CFuncTrain", "CFuncWater", "CGunTarget", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CHostageRescueZone", "CHostageRescueZoneShim", "CIncendiaryGrenade", "CInferno", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CLightDirectionalEntity", "CLightEntity", "CLightEnvironmentEntity", "CLightOrthoEntity", "CLightSpotEntity", "CModelPointEntity", "CMolotovGrenade", "CMolotovProjectile", "CMomentaryRotButton", "COmniLight", "COrnamentProp", "CParticleSystem", "CPhysBox", "CPhysMagnet", "CPhysicalButton", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPlayerSprayDecal", "CPointClientUIDialog", "CPointClientUIWorldPanel", "CPointClientUIWorldTextPanel", "CPointCommentaryNode", "CPointWorldText", "CPostProcessingVolume", "CPrecipitation", "CPrecipitationBlocker", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CRectLight", "CRevertSaved", "CRopeKeyframe", "CRopeKeyframeAlias_move_rope", "CRotButton", "CRotDoor", "CScriptItem", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerRagdollTrigger", "CShatterGlassShardPhysics", "CShower", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CSpotlightEnd", "CSprite", "CSpriteAlias_env_glow", "CSpriteOriented", "CTextureBasedAnimatable", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave", "CTriggerVolume", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014", "CWorld"]
+    "48 8B 41 10 48 8B 48 08 48 8B 81 10 01 00 00 48"
+func_45    [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_46    [ DIFF 0   ]                               []
+    "48 8B C4 55 53 56 41 54 48 8B EC 48 83 EC 78 48"
+func_47    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_48    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_49    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "48 83 EC 28 49 8B 00 4C 8D 44 24 38 48 89 44 24"
+func_50    [ DIFF 50  ]                               ["CAK47", "CBaseCSGrenade", "CBasePlayerWeapon", "CC4", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 41"
+func_51    [ DIFF 0   ]                               []
+    "48 8B C1 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_52    [ DIFF 0   ]                               []
+    "48 8B C1 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_53    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_54    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_55    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_56    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_57    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_58    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_59    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_60    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_61    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_62    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_63    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_64    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_65    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "48 C7 02 00 00 00 00 48 8B C2 C3 CC CC CC CC CC"
+func_66    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "C6 05 99 A4 61 01 01 C3 CC CC CC CC CC CC CC CC"
+func_67    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "C6 05 89 A4 61 01 01 C3 CC CC CC CC CC CC CC CC"
+func_68    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_69    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_70    [ DIFF 4   ]                               ["CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_71    [ DIFF 60  ]                               ["CAK47", "CBaseCSGrenade", "CBasePlayerPawn", "CBasePropDoor", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CGunTarget", "CHEGrenade", "CHostage", "CHostageAlias_info_hostage_spawn", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CPlantedC4", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_72    [ DIFF 0   ]                               []
+    "48 83 EC 28 48 85 D2 74 10 48 8B 01 FF 90 50 02"
+func_73    [ DIFF 0   ]                               []
+    "48 83 EC 28 48 85 D2 74 11 48 8B 01 FF 90 50 02"
+func_74    [ DIFF 8   ]                               ["CBaseCombatCharacter", "CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageExpresserShim"]
+    "48 89 74 24 18 57 48 83 EC 20 48 8B FA 48 8B F1"
+func_75    [ DIFF 0   ]                               []
+    "48 8B 81 E0 03 00 00 C3 CC CC CC CC CC CC CC CC"
+func_76    [ DIFF 4   ]                               ["CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase"]
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_77    [ DIFF 45  ]                               ["CBaseButton", "CBaseDoor", "CBasePropDoor", "CBreakable", "CChicken", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CFuncBrush", "CFuncConveyor", "CFuncElectrifiedVolume", "CFuncInteractionLayerClip", "CFuncMonitor", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncMover", "CFuncPlat", "CFuncPlatRot", "CFuncRetakeBarrier", "CFuncRotating", "CFuncRotator", "CFuncTankTrain", "CFuncTrackAuto", "CFuncTrackChange", "CFuncTrackTrain", "CFuncVPhysicsClip", "CFuncVehicleClip", "CFuncWall", "CFuncWallToggle", "CGunTarget", "CMomentaryRotButton", "COrnamentProp", "CPhysBox", "CPhysicalButton", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CRotButton", "CRotDoor", "CShatterGlassShardPhysics"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_78    [ DIFF 0   ]                               []
+    "40 55 41 56 41 57 48 8D 6C 24 B0 48 81 EC 50 01"
+func_79    [ DIFF 4   ]                               ["CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase"]
+    "48 83 EC 28 48 8B 49 38 48 85 C9 74 1B 48 8B 49"
+func_80    [ DIFF 19  ]                               ["CBaseCombatCharacter", "CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CFuncConveyor", "CFuncMover", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageExpresserShim", "CPhysBox", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CShatterGlassShardPhysics"]
+    "40 53 41 56 48 81 EC 98 00 00 00 48 8B D9 4C 8B"
+func_81    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48"
+func_82    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "48 89 54 24 10 48 89 4C 24 08 55 41 54 41 57 48"
+func_83    [ DIFF 3   ]                               ["CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached"]
+    "48 83 EC 38 48 8B 02 48 8B CA 0F 29 74 24 20 0F"
+func_84    [ DIFF 8   ]                               ["CBaseCombatCharacter", "CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageExpresserShim"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_85    [ DIFF 24  ]                               ["CBaseCombatCharacter", "CBasePlayerPawn", "CBreakable", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageExpresserShim", "CItemSoda", "CPhysBox", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CShatterGlassShardPhysics", "CShower", "CWaterBullet", "CWorld"]
+    "48 89 5C 24 08 57 48 83 EC 50 48 8B 01 49 8B F8"
+func_86    [ DIFF 0   ]                               []
+    "40 53 55 56 57 48 83 EC 48 85 D2 48 63 EA 48 8B"
+func_87    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_88    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 40 0F 29 74 24 30 48 8B D9 0F 28"
+func_89    [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_90    [ DIFF 0   ]                               []
+    "48 C7 02 00 00 00 00 48 8B C2 C3 CC CC CC CC CC"
+func_91    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48"
+func_92    [ DIFF 0   ]                               []
+    "80 FA 05 0F 94 C0 C3 CC CC CC CC CC CC CC CC CC"
+func_93    [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_94    [ DIFF 3   ]                               ["CBeam", "CEnvBeam", "CEnvLaser"]
+    "48 89 5C 24 08 57 48 83 EC 30 48 8B 01 48 8B FA"
+func_95    [ DIFF 13  ]                               ["CBarnLight", "CCSSprite", "CCommentaryViewPosition", "CLightDirectionalEntity", "CLightEntity", "CLightEnvironmentEntity", "CLightOrthoEntity", "CLightSpotEntity", "COmniLight", "CRectLight", "CSprite", "CSpriteAlias_env_glow", "CSpriteOriented"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_96    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_97    [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "48 89 5C 24 08 57 48 83 EC 20 48 8D 99 F0 02 00"
+func_98    [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_99    [ DIFF 139 ]                               ["CAK47", "CBarnLight", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseTrigger", "CBeam", "CBombTarget", "CBuyZone", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSSprite", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChangeLevel", "CColorCorrectionVolume", "CCommentaryViewPosition", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicNavConnectionsVolume", "CEnvBeam", "CEnvDecal", "CEnvLaser", "CEnvParticleGlow", "CEnvSky", "CFireCrackerBlast", "CFlashbang", "CFlashbangProjectile", "CFogTrigger", "CFootstepControl", "CFuncElectrifiedVolume", "CFuncLadder", "CFuncLadderAlias_func_useableladder", "CFuncMonitor", "CHEGrenade", "CHEGrenadeProjectile", "CHostageRescueZone", "CHostageRescueZoneShim", "CIncendiaryGrenade", "CInferno", "CItem_Healthshot", "CKnife", "CLightDirectionalEntity", "CLightEntity", "CLightEnvironmentEntity", "CLightOrthoEntity", "CLightSpotEntity", "CMolotovGrenade", "CMolotovProjectile", "COmniLight", "CParticleSystem", "CPlantedC4", "CPlayerSprayDecal", "CPointClientUIWorldPanel", "CPointClientUIWorldTextPanel", "CPointCommentaryNode", "CPointWorldText", "CPostProcessingVolume", "CPrecipitation", "CPrecipitationBlocker", "CRectLight", "CRopeKeyframe", "CRopeKeyframeAlias_move_rope", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerRagdollTrigger", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CSprite", "CSpriteAlias_env_glow", "CSpriteOriented", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014", "CWorld"]
+    "40 53 48 83 EC 20 48 8B 01 48 8B D9 FF 90 88 05"
+func_100   [ DIFF 77  ]                               ["CAK47", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBasePlayerPawn", "CBasePlayerWeapon", "CBeam", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSSprite", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CCommentaryViewPosition", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CEconEntity", "CEconWearable", "CEnvBeam", "CEnvExplosion", "CEnvLaser", "CFlashbang", "CFlashbangProjectile", "CHEGrenade", "CHEGrenadeProjectile", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CModelPointEntity", "CMolotovGrenade", "CMolotovProjectile", "CPlantedC4", "CPlayerSprayDecal", "CPointWorldText", "CRevertSaved", "CShower", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CSprite", "CSpriteAlias_env_glow", "CSpriteOriented", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "48 89 5C 24 08 57 48 83 EC 20 80 7A 3A 00 48 8B"
+func_101   [ DIFF 13  ]                               ["CBasePlayerPawn", "CBeam", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CEnvBeam", "CEnvLaser", "CEnvParticleGlow", "CParticleSystem", "CPlantedC4", "CPointCommentaryNode", "CRopeKeyframe", "CRopeKeyframeAlias_move_rope"]
+    "48 89 5C 24 08 48 89 6C 24 18 56 57 41 56 48 83"
+func_102   [ DIFF 3   ]                               ["CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncMover"]
+    "B8 FF FF FF FF C3 CC CC CC CC CC CC CC CC CC CC"
+func_103   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B DA E8 32 8B 1A 00 48 8B"
+func_104   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 30 48"
+func_105   [ DIFF 3   ]                               ["CFuncMover", "CFuncRotator", "CItemGeneric"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_106   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 E8 52 AD 1A 00 48 85"
+func_107   [ DIFF 18  ]                               ["CBarnLight", "CBasePropDoor", "CChicken", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CFuncRetakeBarrier", "CLightDirectionalEntity", "CLightEntity", "CLightEnvironmentEntity", "CLightOrthoEntity", "CLightSpotEntity", "COmniLight", "COrnamentProp", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRectLight"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_108   [ DIFF 18  ]                               ["CBarnLight", "CBasePropDoor", "CChicken", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CFuncRetakeBarrier", "CLightDirectionalEntity", "CLightEntity", "CLightEnvironmentEntity", "CLightOrthoEntity", "CLightSpotEntity", "COmniLight", "COrnamentProp", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRectLight"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_109   [ DIFF 8   ]                               ["CBaseCombatCharacter", "CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageExpresserShim"]
+    "48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 41"
+func_110   [ DIFF 0   ]                               []
+    "40 57 48 83 EC 20 48 8B F9 48 85 D2 74 32 0F B6"
+func_111   [ DIFF 3   ]                               ["CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_112   [ DIFF 0   ]                               []
+    "48 8B C1 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_113   [ DIFF 5   ]                               ["CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CHostage", "CHostageAlias_info_hostage_spawn"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_114   [ DIFF 5   ]                               ["CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CHostage", "CHostageAlias_info_hostage_spawn"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_115   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_116   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_117   [ DIFF 12  ]                               ["CBarnLight", "CEnvSky", "CLightDirectionalEntity", "CLightEntity", "CLightEnvironmentEntity", "CLightOrthoEntity", "CLightSpotEntity", "COmniLight", "CPointClientUIWorldPanel", "CPointClientUIWorldTextPanel", "CPointWorldText", "CRectLight"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_118   [ DIFF 6   ]                               ["CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncMover", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_119   [ DIFF 0   ]                               []
+    "48 85 D2 0F 84 E8 00 00 00 48 89 5C 24 08 48 89"
+func_120   [ DIFF 0   ]                               []
+    "48 89 5C 24 18 55 56 41 57 48 83 EC 20 4C 63 B9"
+func_121   [ DIFF 0   ]                               []
+    "C7 81 90 02 00 00 00 00 00 00 C3 CC CC CC CC CC"
+func_122   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_123   [ DIFF 0   ]                               []
+    "0F B6 81 92 03 00 00 24 01 C3 CC CC CC CC CC CC"
+func_124   [ DIFF 16  ]                               ["CBasePropDoor", "CBreakableProp", "CChicken", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CFuncRetakeBarrier", "COrnamentProp", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CShatterGlassShardPhysics"]
+    "48 83 EC 28 48 8B 0D 35 8A 11 01 48 8B 01 FF 90"
+func_125   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B 01 48 8B DA FF 90 F0 02"
+func_126   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B DA 4D 85 C9 74 04 41 C6"
+func_127   [ DIFF 0   ]                               []
+    "40 53 44 8B 81 00 03 00 00 48 8B DA 4C 8B D9 41"
+func_128   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_129   [ DIFF 4   ]                               ["CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase"]
+    "40 57 48 83 EC 30 80 B9 E0 02 00 00 00 48 8B F9"
+func_130   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 30 48 8B 01 48 8B D9 FF 90 E0 05"
+func_131   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 80 B9 E0 02 00 00"
+func_132   [ DIFF 0   ]                               []
+    "48 89 5C 24 10 57 48 81 EC 80 00 00 00 48 8B FA"
+func_133   [ DIFF 32  ]                               ["CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseGrenade", "CBasePlayerPawn", "CBasePropDoor", "CBreakableProp", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CChicken", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CFlashbangProjectile", "CFuncRetakeBarrier", "CGunTarget", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageExpresserShim", "CMolotovProjectile", "COrnamentProp", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CShatterGlassShardPhysics", "CSmokeGrenadeProjectile"]
+    "40 53 48 83 EC 20 48 8B 02 4C 8B DA 48 8B D9 44"
+func_134   [ DIFF 32  ]                               ["CBaseCombatCharacter", "CBasePlayerPawn", "CBasePropDoor", "CBreakable", "CBreakableProp", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CChicken", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CFish", "CFuncRetakeBarrier", "CFuncTankTrain", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageExpresserShim", "COrnamentProp", "CPhysBox", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CShatterGlassShardPhysics"]
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B 01 48 8B FA"
+func_135   [ DIFF 4   ]                               ["CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_136   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_137   [ DIFF 59  ]                               ["CBaseButton", "CBaseDoor", "CBasePlatTrain", "CBaseToggle", "CBaseTrigger", "CBombTarget", "CBuyZone", "CChangeLevel", "CColorCorrectionVolume", "CDynamicNavConnectionsVolume", "CFogTrigger", "CFootstepControl", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncPlat", "CFuncPlatRot", "CFuncTrackAuto", "CFuncTrackChange", "CFuncTrain", "CGunTarget", "CHostageRescueZone", "CHostageRescueZoneShim", "CMomentaryRotButton", "CPhysicalButton", "CPostProcessingVolume", "CPrecipitation", "CRotButton", "CRotDoor", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerRagdollTrigger", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave"]
+    "0F 57 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_138   [ DIFF 3   ]                               ["CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase"]
+    "48 8B C4 48 89 58 08 48 89 70 10 48 89 78 18 55"
+func_139   [ DIFF 0   ]                               []
+    "8B 81 1C 04 00 00 D1 E8 F6 D0 24 01 C3 CC CC CC"
+func_140   [ DIFF 2   ]                               ["CFuncTankTrain", "CFuncTrackTrain"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_141   [ DIFF 0   ]                               []
+    "48 83 EC 28 48 8B C1 48 8B 0A 48 85 C9 74 28 48"
+func_142   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_143   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_144   [ DIFF 0   ]                               []
+    "48 83 EC 28 8B 81 F0 03 00 00 C1 E8 05 A8 01 75"
+func_145   [ DIFF 8   ]                               ["CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CScriptItem"]
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48"
+func_146   [ DIFF 0   ]                               []
+    "48 83 EC 28 48 85 D2 74 11 48 8B CA E8 FF 1F 1B"
+func_147   [ DIFF 4   ]                               ["CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_148   [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_149   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_150   [ DIFF 86  ]                               ["CAK47", "CBaseCSGrenade", "CBaseDoor", "CBasePlayerWeapon", "CBasePropDoor", "CBombTarget", "CC4", "CCSSprite", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CCommentaryViewPosition", "CDEagle", "CDecoyGrenade", "CFlashbang", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncTankTrain", "CFuncTrackAuto", "CFuncTrackChange", "CFuncTrackTrain", "CFuncTrain", "CFuncWall", "CFuncWallToggle", "CGameEnd", "CGamePlayerEquip", "CGameText", "CHEGrenade", "CIncendiaryGrenade", "CItemDogtags", "CItemGeneric", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMomentaryRotButton", "CPhysBox", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CRevertSaved", "CRotDoor", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSprite", "CSpriteAlias_env_glow", "CSpriteOriented", "CTriggerBrush", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "40 53 48 83 EC 20 48 8B 81 B8 02 00 00 48 8B DA"
+func_151   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_152   [ DIFF 0   ]                               []
+    "F3 0F 10 05 04 9C FF 00 C3 CC CC CC CC CC CC CC"
+func_153   [ DIFF 67  ]                               ["CBasePropDoor", "CBaseTrigger", "CBombTarget", "CBreakable", "CBreakableProp", "CBuyZone", "CChangeLevel", "CChicken", "CColorCorrectionVolume", "CDynamicNavConnectionsVolume", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CFogTrigger", "CFootstepControl", "CFuncElectrifiedVolume", "CFuncRetakeBarrier", "CFuncWater", "CGamePlayerEquip", "CHostageRescueZone", "CHostageRescueZoneShim", "CItemGenericTriggerHelper", "COrnamentProp", "CPhysBox", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPostProcessingVolume", "CPrecipitation", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerRagdollTrigger", "CShatterGlassShardPhysics", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBrush", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave"]
+    "40 57 48 83 EC 20 48 8B 81 70 02 00 00 48 8B FA"
+func_154   [ DIFF 65  ]                               ["CAK47", "CBaseCSGrenade", "CBombTarget", "CC4", "CCSPlayerPawn", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFish", "CFlashbang", "CFuncTrackAuto", "CFuncTrackChange", "CHEGrenade", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageRescueZone", "CHostageRescueZoneShim", "CIncendiaryGrenade", "CItemGeneric", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CPhysMagnet", "CPlatTrigger", "CScriptTriggerPush", "CShatterGlassShardPhysics", "CSmokeGrenade", "CTriggerLook", "CTriggerPush", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B 81 B0 02 00"
+func_155   [ DIFF 48  ]                               ["CBaseTrigger", "CBombTarget", "CBuyZone", "CChangeLevel", "CColorCorrectionVolume", "CDynamicNavConnectionsVolume", "CFogTrigger", "CFootstepControl", "CFuncElectrifiedVolume", "CFuncWater", "CHostageRescueZone", "CHostageRescueZoneShim", "CItemGenericTriggerHelper", "CPhysicalButton", "CPostProcessingVolume", "CPrecipitation", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerRagdollTrigger", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBrush", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave"]
+    "40 57 48 83 EC 20 48 8B 81 70 02 00 00 48 8B FA"
+func_156   [ DIFF 43  ]                               ["CBaseTrigger", "CBombTarget", "CBuyZone", "CChangeLevel", "CColorCorrectionVolume", "CDynamicNavConnectionsVolume", "CFogTrigger", "CFootstepControl", "CHostageRescueZone", "CHostageRescueZoneShim", "CPostProcessingVolume", "CPrecipitation", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerRagdollTrigger", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave"]
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_157   [ DIFF 5   ]                               ["CBaseDoor", "CBasePropDoor", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRotDoor"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_158   [ DIFF 15  ]                               ["CBaseDoor", "CBasePropDoor", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncPlat", "CFuncPlatRot", "CFuncRotating", "CFuncTankTrain", "CFuncTrackAuto", "CFuncTrackChange", "CFuncTrackTrain", "CFuncTrain", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRotDoor"]
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B 81 C0 02 00"
+func_159   [ DIFF 5   ]                               ["CBaseDoor", "CBasePropDoor", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRotDoor"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_160   [ DIFF 4   ]                               ["CBaseButton", "CMomentaryRotButton", "CPhysicalButton", "CRotButton"]
+    "48 C7 02 00 00 00 00 48 8B C2 C3 CC CC CC CC CC"
+func_161   [ DIFF 4   ]                               ["CBaseButton", "CMomentaryRotButton", "CPhysicalButton", "CRotButton"]
+    "48 C7 02 00 00 00 00 48 8B C2 C3 CC CC CC CC CC"
+func_162   [ DIFF 63  ]                               ["CBaseButton", "CBaseDoor", "CBasePlatTrain", "CBaseToggle", "CBaseTrigger", "CBombTarget", "CBuyZone", "CChangeLevel", "CColorCorrectionVolume", "CDynamicNavConnectionsVolume", "CFogTrigger", "CFootstepControl", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncPlat", "CFuncPlatRot", "CFuncTankTrain", "CFuncTrackAuto", "CFuncTrackChange", "CFuncTrackTrain", "CFuncTrain", "CGunTarget", "CHostageRescueZone", "CHostageRescueZoneShim", "CMomentaryRotButton", "CPhysicalButton", "CPostProcessingVolume", "CPrecipitation", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRotButton", "CRotDoor", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerRagdollTrigger", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave"]
+    "48 8B 81 C8 02 00 00 48 85 C0 74 03 48 FF E0 C3"
+func_163   [ DIFF 2   ]                               ["CC4", "CShower"]
+    "48 8B 81 88 02 00 00 48 85 C0 74 03 48 FF E0 C3"
+func_164   [ DIFF 8   ]                               ["CBaseDoor", "CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CHostage", "CHostageAlias_info_hostage_spawn", "CRotDoor"]
+    "48 89 7C 24 10 55 48 8D 6C 24 A0 48 81 EC 60 01"
+func_165   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_166   [ DIFF 6   ]                               ["CBaseCSGrenadeProjectile", "CDecoyProjectile", "CFlashbangProjectile", "CHEGrenadeProjectile", "CMolotovProjectile", "CSmokeGrenadeProjectile"]
+    "48 89 6C 24 10 48 89 74 24 18 57 48 83 EC 50 F3"
+func_167   [ DIFF 4   ]                               ["CFuncMover", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_168   [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48"
+func_169   [ DIFF 3   ]                               ["CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached"]
+    "8B 81 E4 04 00 00 C3 CC CC CC CC CC CC CC CC CC"
+func_170   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8D 99 E4 04 00"
+func_171   [ DIFF 3   ]                               ["CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_172   [ DIFF 3   ]                               ["CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_173   [ DIFF 0   ]                               []
+    "80 B9 D8 02 00 00 00 0F 94 C0 C3 CC CC CC CC CC"
+func_174   [ DIFF 4   ]                               ["CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_175   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_176   [ DIFF 0   ]                               []
+    "48 8B 01 48 FF A0 70 05 00 00 CC CC CC CC CC CC"
+func_177   [ DIFF 1   ]                               ["CWorld"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_178   [ DIFF 10  ]                               ["CBasePropDoor", "CChicken", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CFuncRetakeBarrier", "COrnamentProp", "CPropDoorRotating", "CPropDoorRotatingBreakable"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_179   [ DIFF 8   ]                               ["CBaseCombatCharacter", "CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageExpresserShim"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_180   [ DIFF 8   ]                               ["CBaseCombatCharacter", "CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageExpresserShim"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_181   [ DIFF 8   ]                               ["CBaseCombatCharacter", "CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageExpresserShim"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_182   [ DIFF 50  ]                               ["CAK47", "CBaseCSGrenade", "CBasePlayerWeapon", "CC4", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_183   [ DIFF 0   ]                               []
+    "48 8B 01 48 FF A0 C0 05 00 00 CC CC CC CC CC CC"
+func_184   [ DIFF 50  ]                               ["CAK47", "CBaseCSGrenade", "CBasePlayerWeapon", "CC4", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_185   [ DIFF 2   ]                               ["CFuncTankTrain", "CFuncTrackTrain"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_186   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_187   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_188   [ DIFF 0   ]                               []
+    "8B 81 D4 02 00 00 C3 CC CC CC CC CC CC CC CC CC"
+func_189   [ DIFF 9   ]                               ["CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CHostage", "CHostageAlias_info_hostage_spawn", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached"]
+    "48 89 5C 24 10 48 89 6C 24 18 56 57 41 54 41 56"
+func_190   [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 6C 24 18 56 57 41 54 41 56"
+func_191   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 48 8B 49 38 48 85 C9"
+func_192   [ DIFF 53  ]                               ["CAK47", "CBaseCSGrenade", "CBasePlayerPawn", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 40 48"
+func_193   [ DIFF 53  ]                               ["CAK47", "CBaseCSGrenade", "CBasePlayerPawn", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "40 53 48 83 EC 20 48 8B DA E8 52 AE 1A 00 F2 0F"
+func_194   [ DIFF 53  ]                               ["CAK47", "CBaseCSGrenade", "CBasePlayerPawn", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "40 53 48 83 EC 20 48 8B DA E8 A2 92 1A 00 F2 0F"
+func_195   [ DIFF 53  ]                               ["CAK47", "CBaseCSGrenade", "CBasePlayerPawn", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "40 53 48 83 EC 20 48 8B 01 48 8B DA FF 90 00 06"
+func_196   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B 01 48 8B DA FF 90 00 06"
+func_197   [ DIFF 8   ]                               ["CBaseCombatCharacter", "CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageExpresserShim"]
+    "40 53 48 83 EC 20 48 8B DA E8 E2 BA 1A 00 F2 0F"
+func_198   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_199   [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "48 89 5C 24 10 57 48 83 EC 30 F3 0F 10 81 08 04"
+func_200   [ DIFF 62  ]                               ["CBaseButton", "CBaseDoor", "CBasePlatTrain", "CBasePropDoor", "CBaseToggle", "CBaseTrigger", "CBombTarget", "CBuyZone", "CChangeLevel", "CColorCorrectionVolume", "CDynamicNavConnectionsVolume", "CFogTrigger", "CFootstepControl", "CFuncMoveLinear", "CFuncMoveLinearAlias_momentary_door", "CFuncPlat", "CFuncPlatRot", "CFuncTrackAuto", "CFuncTrackChange", "CFuncTrain", "CGunTarget", "CHostageRescueZone", "CHostageRescueZoneShim", "CMomentaryRotButton", "CPhysicalButton", "CPostProcessingVolume", "CPrecipitation", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRotButton", "CRotDoor", "CScriptTriggerHurt", "CScriptTriggerMultiple", "CScriptTriggerOnce", "CScriptTriggerPush", "CServerRagdollTrigger", "CTonemapTrigger", "CTriggerActiveWeaponDetect", "CTriggerBombReset", "CTriggerBuoyancy", "CTriggerCallback", "CTriggerDetectBulletFire", "CTriggerDetectExplosion", "CTriggerFan", "CTriggerGameEvent", "CTriggerGravity", "CTriggerHostageReset", "CTriggerHurt", "CTriggerImpact", "CTriggerLerpObject", "CTriggerLook", "CTriggerMultiple", "CTriggerOnce", "CTriggerPhysics", "CTriggerProximity", "CTriggerPush", "CTriggerRemove", "CTriggerSave", "CTriggerSndSosOpvar", "CTriggerSoundscape", "CTriggerTeleport", "CTriggerToggleSave"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_201   [ DIFF 5   ]                               ["CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CGunTarget"]
+    "40 53 48 83 EC 20 48 8B 01 48 8B DA FF 90 F0 02"
+func_202   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 30 48 8B 01 48 8B DA 48 8D 54 24"
+func_203   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 30 48 8B DA 4C 8D 81 A0 07 00 00"
+func_204   [ DIFF 0   ]                               []
+    "48 8D 81 A0 07 00 00 C3 CC CC CC CC CC CC CC CC"
+func_205   [ DIFF 4   ]                               ["CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase"]
+    "40 53 48 83 EC 20 48 8B DA E8 D2 E1 FF FF 48 8B"
+func_206   [ DIFF 1   ]                               ["CFuncMover"]
+    "48 83 EC 38 48 8D 54 24 20 E8 A2 2B 9F FF 0F 57"
+func_207   [ DIFF 0   ]                               []
+    "48 8B 01 48 FF A0 80 06 00 00 CC CC CC CC CC CC"
+func_208   [ DIFF 0   ]                               []
+    "8B 91 F4 03 00 00 45 33 D2 83 FA FF 74 4D 48 8B"
+func_209   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 49 8B D8 4C 8B C2"
+func_210   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_211   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_212   [ DIFF 1   ]                               ["CFuncConveyor"]
+    "F2 0F 10 05 B8 64 FF 00 F2 0F 11 02 8B 05 B6 64"
+func_213   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_214   [ DIFF 4   ]                               ["CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_215   [ DIFF 8   ]                               ["CBaseCombatCharacter", "CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageExpresserShim"]
+    "48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 55"
+func_216   [ DIFF 8   ]                               ["CBaseCombatCharacter", "CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageExpresserShim"]
+    "48 8B C4 48 89 58 18 55 57 41 56 48 8D A8 28 FF"
+func_217   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_218   [ DIFF 0   ]                               []
+    "48 8B C1 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_219   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_220   [ DIFF 6   ]                               ["CBaseCSGrenadeProjectile", "CDecoyProjectile", "CFlashbangProjectile", "CHEGrenadeProjectile", "CMolotovProjectile", "CSmokeGrenadeProjectile"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_221   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 30 48 8B 01 48 8B DA 48 8D 54 24"
+func_222   [ DIFF 0   ]                               []
+    "48 83 EC 68 33 C0 4C 8B C2 48 89 44 24 30 48 8D"
+func_223   [ DIFF 8   ]                               ["CBaseCombatCharacter", "CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageExpresserShim"]
+    "48 89 5C 24 08 57 48 83 EC 20 48 8D 99 F0 03 00"
+func_224   [ DIFF 4   ]                               ["CBasePlayerPawn", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase"]
+    "0F B6 81 F4 02 00 00 84 C0 74 28 3C 05 74 24 3C"
+func_225   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_226   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_227   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_228   [ DIFF 22  ]                               ["CBasePropDoor", "CBreakable", "CBreakableProp", "CChicken", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CFuncRetakeBarrier", "COrnamentProp", "CPhysBox", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CShatterGlassShardPhysics"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_229   [ DIFF 6   ]                               ["CBreakable", "CPhysBox", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_230   [ DIFF 51  ]                               ["CAK47", "CBaseCSGrenade", "CBasePlayerWeapon", "CC4", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CPrecipitation", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_231   [ DIFF 51  ]                               ["CAK47", "CBaseCSGrenade", "CBasePlayerWeapon", "CC4", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CPrecipitation", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "B8 FF FF FF FF C3 CC CC CC CC CC CC CC CC CC CC"
+func_232   [ DIFF 54  ]                               ["CAK47", "CBaseCSGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_233   [ DIFF 8   ]                               ["CBaseCSGrenadeProjectile", "CC4", "CDecoyProjectile", "CFlashbangProjectile", "CFuncRotator", "CHEGrenadeProjectile", "CMolotovProjectile", "CSmokeGrenadeProjectile"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_234   [ DIFF 60  ]                               ["CAK47", "CBaseCSGrenade", "CBasePlayerWeapon", "CBeam", "CC4", "CCSSprite", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CCommentaryViewPosition", "CDEagle", "CDecoyGrenade", "CEnvBeam", "CEnvLaser", "CFlashbang", "CFuncLadder", "CFuncLadderAlias_func_useableladder", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CSprite", "CSpriteAlias_env_glow", "CSpriteOriented", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_235   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_236   [ DIFF 0   ]                               []
+    "0F 57 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_237   [ DIFF 0   ]                               []
+    "0F 57 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_238   [ DIFF 0   ]                               []
+    "0F 57 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_239   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_240   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_241   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_242   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 B9 B8 01 00 00 E8"
+func_243   [ DIFF 5   ]                               ["CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CShatterGlassShardPhysics"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_244   [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_245   [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_246   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_247   [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "40 53 48 81 EC E0 00 00 00 8B 42 04 48 8B D9 44"
+func_248   [ DIFF 0   ]                               []
+    "48 83 EC 38 48 8B 89 70 02 00 00 0F 29 74 24 20"
+func_249   [ DIFF 0   ]                               []
+    "40 53 41 57 48 81 EC 88 00 00 00 48 8B 01 49 8B"
+func_250   [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_251   [ DIFF 14  ]                               ["CBaseButton", "CBreakable", "CCSPlayerPawn", "CFuncTankTrain", "CMomentaryRotButton", "CPhysBox", "CPhysicalButton", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CRopeKeyframe", "CRopeKeyframeAlias_move_rope", "CRotButton"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_252   [ DIFF 8   ]                               ["CCSPlayerPawn", "CPhysBox", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CShatterGlassShardPhysics", "CTriggerDetectBulletFire"]
+    "48 8B 89 38 05 00 00 48 85 C9 0F 85 E0 57 05 00"
+func_253   [ DIFF 28  ]                               ["CBasePlayerPawn", "CBasePropDoor", "CBreakable", "CBreakableProp", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CChicken", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CFuncRetakeBarrier", "CHostage", "CHostageAlias_info_hostage_spawn", "COrnamentProp", "CPhysBox", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CShatterGlassShardPhysics"]
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_254   [ DIFF 31  ]                               ["CBaseButton", "CBasePropDoor", "CBreakable", "CBreakableProp", "CCSPlayerPawn", "CChicken", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CFuncRetakeBarrier", "CHostage", "CHostageAlias_info_hostage_spawn", "CMomentaryRotButton", "COrnamentProp", "CPhysBox", "CPhysicalButton", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CPushable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CRopeKeyframe", "CRopeKeyframeAlias_move_rope", "CRotButton", "CShatterGlassShardPhysics"]
+    "C6 05 57 26 25 01 01 C3 CC CC CC CC CC CC CC CC"
+func_255   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_256   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_257   [ DIFF 0   ]                               []
+    "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_258   [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_259   [ DIFF 3   ]                               ["CBreakable", "CPhysBox", "CPushable"]
+    "40 53 48 83 EC 20 0F B6 81 88 05 00 00 48 8B DA"
+func_260   [ DIFF 6   ]                               ["CEnvExplosion", "CModelPointEntity", "CPlayerSprayDecal", "CPointWorldText", "CRevertSaved", "CShower"]
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_261   [ DIFF 49  ]                               ["CAK47", "CBaseCSGrenade", "CC4", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B D9 E8 BE 50"
+func_262   [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 8B 81 1C 04 00 00 48 8B D9 C1"
+func_263   [ DIFF 106 ]                               ["CAK47", "CBaseAnimGraph", "CBaseCSGrenade", "CBaseCSGrenadeProjectile", "CBaseCombatCharacter", "CBaseFlex", "CBaseFlexAlias_funCBaseFlex", "CBaseGrenade", "CBasePlayerPawn", "CBasePlayerWeapon", "CBaseProp", "CBasePropDoor", "CBreakableProp", "CC4", "CCSObserverPawn", "CCSPlayerPawn", "CCSPlayerPawnBase", "CCSWeaponBase", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CChicken", "CConstraintAnchor", "CDEagle", "CDecoyGrenade", "CDecoyProjectile", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CEconEntity", "CEconWearable", "CFish", "CFlashbang", "CFlashbangProjectile", "CFuncRetakeBarrier", "CHEGrenade", "CHEGrenadeProjectile", "CHostage", "CHostageAlias_info_hostage_spawn", "CHostageCarriableProp", "CHostageExpresserShim", "CIncendiaryGrenade", "CItem", "CItemAssaultSuit", "CItemDefuser", "CItemDefuserAlias_item_defuser", "CItemDogtags", "CItemGeneric", "CItemKevlar", "CItemSoda", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CMolotovProjectile", "COrnamentProp", "CPhysMagnet", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPlantedC4", "CPointCommentaryNode", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRagdollProp", "CRagdollPropAlias_physics_prop_ragdoll", "CRagdollPropAttached", "CScriptItem", "CShatterGlassShardPhysics", "CSmokeGrenade", "CSmokeGrenadeProjectile", "CWaterBullet", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_264   [ DIFF 16  ]                               ["CBasePropDoor", "CBreakableProp", "CChicken", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CFuncRetakeBarrier", "COrnamentProp", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CShatterGlassShardPhysics"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_265   [ DIFF 16  ]                               ["CBasePropDoor", "CBreakableProp", "CChicken", "CDynamicProp", "CDynamicPropAlias_cable_dynamic", "CDynamicPropAlias_dynamic_prop", "CDynamicPropAlias_prop_dynamic_override", "CFuncRetakeBarrier", "COrnamentProp", "CPhysicsProp", "CPhysicsPropMultiplayer", "CPhysicsPropOverride", "CPhysicsPropRespawnable", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CShatterGlassShardPhysics"]
+    "48 89 5C 24 08 57 48 83 EC 40 0F 29 74 24 30 0F"
+func_266   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 50 8B 81 90 03 00 00"
+func_267   [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 40 8B"
+func_268   [ DIFF 0   ]                               []
+    "BA 00 00 00 08 E9 B6 69 B6 FF CC CC CC CC CC CC"
+func_269   [ DIFF 0   ]                               []
+    "B8 FF FF FF FF C3 CC CC CC CC CC CC CC CC CC CC"
+func_270   [ DIFF 0   ]                               []
+    "40 53 48 81 EC F0 00 00 00 41 0F B6 C1 0F 29 B4"
+
+=============================================
+Bases: 
+"CBaseEntity"
+"CEntityInstance"
+=============================================
+
+=============================================
+Children: 
+"CAK47"
+"CBarnLight"
+"CBaseAnimGraph"
+"CBaseButton"
+"CBaseCSGrenade"
+"CBaseCSGrenadeProjectile"
+"CBaseClientUIEntity"
+"CBaseCombatCharacter"
+"CBaseDoor"
+"CBaseFlex"
+"CBaseFlexAlias_funCBaseFlex"
+"CBaseGrenade"
+"CBasePlatTrain"
+"CBasePlayerPawn"
+"CBasePlayerWeapon"
+"CBaseProp"
+"CBasePropDoor"
+"CBaseToggle"
+"CBaseTrigger"
+"CBeam"
+"CBombTarget"
+"CBreakable"
+"CBreakableProp"
+"CBuyZone"
+"CC4"
+"CCSObserverPawn"
+"CCSPlace"
+"CCSPlayerPawn"
+"CCSPlayerPawnBase"
+"CCSSprite"
+"CCSWeaponBase"
+"CCSWeaponBaseGun"
+"CCSWeaponBaseShotgun"
+"CChangeLevel"
+"CChicken"
+"CColorCorrectionVolume"
+"CCommentaryViewPosition"
+"CConstraintAnchor"
+"CDEagle"
+"CDecoyGrenade"
+"CDecoyProjectile"
+"CDynamicLight"
+"CDynamicNavConnectionsVolume"
+"CDynamicProp"
+"CDynamicPropAlias_cable_dynamic"
+"CDynamicPropAlias_dynamic_prop"
+"CDynamicPropAlias_prop_dynamic_override"
+"CEconEntity"
+"CEconWearable"
+"CEntityBlocker"
+"CEntityDissolve"
+"CEnvBeam"
+"CEnvDecal"
+"CEnvExplosion"
+"CEnvLaser"
+"CEnvParticleGlow"
+"CEnvSky"
+"CFireCrackerBlast"
+"CFish"
+"CFlashbang"
+"CFlashbangProjectile"
+"CFogTrigger"
+"CFogVolume"
+"CFootstepControl"
+"CFuncBrush"
+"CFuncConveyor"
+"CFuncElectrifiedVolume"
+"CFuncIllusionary"
+"CFuncInteractionLayerClip"
+"CFuncLadder"
+"CFuncLadderAlias_func_useableladder"
+"CFuncMonitor"
+"CFuncMoveLinear"
+"CFuncMoveLinearAlias_momentary_door"
+"CFuncMover"
+"CFuncNavBlocker"
+"CFuncNavObstruction"
+"CFuncPlat"
+"CFuncPlatRot"
+"CFuncRetakeBarrier"
+"CFuncRotating"
+"CFuncRotator"
+"CFuncShatterglass"
+"CFuncTankTrain"
+"CFuncTrackAuto"
+"CFuncTrackChange"
+"CFuncTrackTrain"
+"CFuncTrain"
+"CFuncTrainControls"
+"CFuncVPhysicsClip"
+"CFuncVehicleClip"
+"CFuncWall"
+"CFuncWallToggle"
+"CFuncWater"
+"CGameEnd"
+"CGameMoney"
+"CGamePlayerEquip"
+"CGamePlayerZone"
+"CGameText"
+"CGunTarget"
+"CHEGrenade"
+"CHEGrenadeProjectile"
+"CHostage"
+"CHostageAlias_info_hostage_spawn"
+"CHostageCarriableProp"
+"CHostageExpresserShim"
+"CHostageRescueZone"
+"CHostageRescueZoneShim"
+"CIncendiaryGrenade"
+"CInferno"
+"CItem"
+"CItemAssaultSuit"
+"CItemDefuser"
+"CItemDefuserAlias_item_defuser"
+"CItemDogtags"
+"CItemGeneric"
+"CItemGenericTriggerHelper"
+"CItemKevlar"
+"CItemSoda"
+"CItem_Healthshot"
+"CKnife"
+"CLightDirectionalEntity"
+"CLightEntity"
+"CLightEnvironmentEntity"
+"CLightOrthoEntity"
+"CLightSpotEntity"
+"CMarkupVolume"
+"CMarkupVolumeTagged"
+"CMarkupVolumeTagged_Nav"
+"CMarkupVolumeTagged_NavGame"
+"CMarkupVolumeWithRef"
+"CModelPointEntity"
+"CMolotovGrenade"
+"CMolotovProjectile"
+"CMomentaryRotButton"
+"COmniLight"
+"COrnamentProp"
+"CParticleSystem"
+"CPhysBox"
+"CPhysMagnet"
+"CPhysicalButton"
+"CPhysicsProp"
+"CPhysicsPropMultiplayer"
+"CPhysicsPropOverride"
+"CPhysicsPropRespawnable"
+"CPlantedC4"
+"CPlatTrigger"
+"CPlayerSprayDecal"
+"CPointClientUIDialog"
+"CPointClientUIWorldPanel"
+"CPointClientUIWorldTextPanel"
+"CPointCommentaryNode"
+"CPointWorldText"
+"CPostProcessingVolume"
+"CPrecipitation"
+"CPrecipitationBlocker"
+"CPropDoorRotating"
+"CPropDoorRotatingBreakable"
+"CPushable"
+"CRagdollProp"
+"CRagdollPropAlias_physics_prop_ragdoll"
+"CRagdollPropAttached"
+"CRectLight"
+"CRevertSaved"
+"CRopeKeyframe"
+"CRopeKeyframeAlias_move_rope"
+"CRotButton"
+"CRotDoor"
+"CRuleBrushEntity"
+"CRuleEntity"
+"CRulePointEntity"
+"CScriptItem"
+"CScriptNavBlocker"
+"CScriptTriggerHurt"
+"CScriptTriggerMultiple"
+"CScriptTriggerOnce"
+"CScriptTriggerPush"
+"CServerOnlyModelEntity"
+"CServerRagdollTrigger"
+"CShatterGlassShardPhysics"
+"CShower"
+"CSimpleMarkupVolumeTagged"
+"CSmokeGrenade"
+"CSmokeGrenadeProjectile"
+"CSpotlightEnd"
+"CSprite"
+"CSpriteAlias_env_glow"
+"CSpriteOriented"
+"CTextureBasedAnimatable"
+"CTonemapTrigger"
+"CTriggerActiveWeaponDetect"
+"CTriggerBombReset"
+"CTriggerBrush"
+"CTriggerBuoyancy"
+"CTriggerCallback"
+"CTriggerDetectBulletFire"
+"CTriggerDetectExplosion"
+"CTriggerFan"
+"CTriggerGameEvent"
+"CTriggerGravity"
+"CTriggerHostageReset"
+"CTriggerHurt"
+"CTriggerImpact"
+"CTriggerLerpObject"
+"CTriggerLook"
+"CTriggerMultiple"
+"CTriggerOnce"
+"CTriggerPhysics"
+"CTriggerProximity"
+"CTriggerPush"
+"CTriggerRemove"
+"CTriggerSave"
+"CTriggerSndSosOpvar"
+"CTriggerSoundscape"
+"CTriggerTeleport"
+"CTriggerToggleSave"
+"CTriggerVolume"
+"CWaterBullet"
+"CWeaponAWP"
+"CWeaponAug"
+"CWeaponBaseItem"
+"CWeaponBizon"
+"CWeaponCZ75a"
+"CWeaponElite"
+"CWeaponFamas"
+"CWeaponFiveSeven"
+"CWeaponG3SG1"
+"CWeaponGalilAR"
+"CWeaponGlock"
+"CWeaponHKP2000"
+"CWeaponM249"
+"CWeaponM4A1"
+"CWeaponM4A1Silencer"
+"CWeaponMAC10"
+"CWeaponMP5SD"
+"CWeaponMP7"
+"CWeaponMP9"
+"CWeaponMag7"
+"CWeaponNOVA"
+"CWeaponNegev"
+"CWeaponP250"
+"CWeaponP90"
+"CWeaponRevolver"
+"CWeaponSCAR20"
+"CWeaponSG556"
+"CWeaponSSG08"
+"CWeaponSawedoff"
+"CWeaponTaser"
+"CWeaponTec9"
+"CWeaponUMP45"
+"CWeaponUSPSilencer"
+"CWeaponXM1014"
+"CWorld"
+================================================

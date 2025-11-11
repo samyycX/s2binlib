@@ -17,14 +17,19 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  ***********************************************************************************/
 
+use std::collections::HashMap;
 use std::fs::{self, File};
 use std::io::Write;
 
 use anyhow::Result;
+use log::info;
 use s2binlib::S2BinLib;
+use stringvec::stringvec;
 
 
 pub fn dump_diff(s2binlib: &S2BinLib, dump_dir: &str, binary_name: &str, base_class: &str) -> Result<()> {
+
+  info!("Dumping diff for {} in {}", base_class, binary_name);
 
   fs::create_dir_all(format!("{}/vtable_diff/{}", dump_dir, binary_name))?;
   let dump_file = format!("{}/vtable_diff/{}/{}.txt", dump_dir, binary_name, base_class);
@@ -34,36 +39,126 @@ pub fn dump_diff(s2binlib: &S2BinLib, dump_dir: &str, binary_name: &str, base_cl
   let base_count = base_info.methods.len();
   let mut file = File::create(dump_file)?;
 
-  let mut diffs = vec![0; base_count];
-  let mut children = 0;
+  let mut diffs = vec![vec![]; base_count];
+  let mut children = vec![];
+  let mut bytes =vec![];
+
+  for method in &base_info.methods {
+    bytes.push(s2binlib.read_by_va(binary_name, *method, 16)?.to_vec());
+  }
 
   for vtable in vtables {
     if vtable.bases.iter().any(|base| base.type_name.contains(base_class)) {
       if vtable.methods.len() < base_count {
         continue; // multiple hierarchy vtable
       }
-      children += 1;
+      children.push(vtable.type_name.clone());
 
       for i in 0..vtable.methods.len() {
         if i < base_info.methods.len() {
           let method = vtable.methods[i];
           let base_method = base_info.methods[i];
           if method != base_method {
-            diffs[i] += 1;
+            diffs[i].push(vtable.type_name.clone());
           }
         }
       }
     }
   }
 
-  writeln!(file, "Base: {}", base_class)?;
+  writeln!(file, "Vtable: {}", base_class)?;
   writeln!(file, "Virtual Function Count: {}", base_count)?;
-  writeln!(file, "Children Count: {}", children)?;
+  writeln!(file, "Children Count: {}", children.iter().count())?;
   writeln!(file, "=============================================")?;
   for i in 0..diffs.len() {
-    writeln!(file, "{:<10} [ DIFF {:<3} ]", format!("func_{}", i), diffs[i])?;
+    write!(file, "{:<10} [ DIFF {:<3} ] {:>30}", format!("func_{}", i), diffs[i].iter().count(), "")?;
+    writeln!(file, "{:?}", diffs[i])?;
+    writeln!(file, "    {:?}", bytes[i].iter().map(|x| format!("{:02X}", x)).collect::<Vec<String>>().join(" "))?;
   }
+  writeln!(file)?;
+  writeln!(file, "=============================================")?;
+  writeln!(file, "Bases: ")?;
+  for byte in &base_info.bases {
+    writeln!(file, "{:?}", byte.type_name)?;
+  }
+  writeln!(file, "=============================================")?;
+  writeln!(file)?;
+  writeln!(file, "=============================================")?;
+  writeln!(file, "Children: ")?;
+  for child in children {
+    writeln!(file, "{:?}", child)?;
+  }
+  writeln!(file, "================================================")?;
   file.flush()?;
 
   Ok(())
+}
+
+pub fn dump_diffs(s2binlib: &S2BinLib, dump_dir: &str) -> Result<()> {
+
+  let vtables = HashMap::from([
+    ("server", stringvec![
+      "CBaseEntity",
+      "CBaseModelEntity",
+      "CCSWeaponBase",
+      "IGameSystem",
+      "CTraceFilter",
+      "CRecipientFilter",
+      "CCSPlayerController",
+      "CCSPlayer_WeaponServices",
+      "CCSPlayer_MovementServices",
+      "CGameSceneNode",
+      "CCSGameRules",
+      "CCSPlayer_ItemServices",
+      "CSource2GameClients",
+      "CSource2GameEntities",
+      "CGameEventManager",
+      "CLoopModeGame",
+      "CGameEventListener",
+      "CGameEntitySystem",
+      "CSource2Server",
+      "CLoadingSpawnGroup",
+      "CTraceFilter",
+      "CRecipientFilter",
+      "CGameEvent"
+    ]),
+    ("engine2", stringvec![
+      "CEntityResourceManifest",
+      "CServerSideClient",
+      "CNetworkServerService",
+      "CEngineServiceMgr",
+      "CEngineClient",
+      "CEngineServer"
+    ]),
+    ("tier0", stringvec![
+      "CCvar",
+    ]),
+    ("networksystem", stringvec![
+      "CNetworkMessages",
+      "CNetworkSerializerPB",
+      "CNetworkSystem"
+    ]),
+    ("materialsystem2", stringvec![
+      "CMaterialSystem2"
+    ]),
+    ("schemasystem", stringvec![
+      "CSchemaSystem",
+      "CSchemaType"
+    ]),
+    ("client", stringvec![
+      "C_BaseEntity",
+      "C_BaseModelEntity",
+      "C_CSWeaponBase",
+      "IGameSystem",
+    ])
+  ]);
+
+  for (binary_name, vtables) in vtables {
+    for vtable in vtables {
+      dump_diff(s2binlib, dump_dir, binary_name, &vtable)?;
+    }
+  }
+
+  Ok(())
+
 }

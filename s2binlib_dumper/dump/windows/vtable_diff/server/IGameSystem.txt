@@ -1,65 +1,249 @@
-Base: IGameSystem
+Vtable: IGameSystem
 Virtual Function Count: 61
 Children Count: 115
 =============================================
-func_0     [ DIFF 25  ]
-func_1     [ DIFF 9   ]
-func_2     [ DIFF 25  ]
-func_3     [ DIFF 54  ]
-func_4     [ DIFF 51  ]
-func_5     [ DIFF 3   ]
-func_6     [ DIFF 1   ]
-func_7     [ DIFF 7   ]
-func_8     [ DIFF 20  ]
-func_9     [ DIFF 0   ]
-func_10    [ DIFF 0   ]
-func_11    [ DIFF 0   ]
-func_12    [ DIFF 23  ]
-func_13    [ DIFF 4   ]
-func_14    [ DIFF 1   ]
-func_15    [ DIFF 12  ]
-func_16    [ DIFF 12  ]
-func_17    [ DIFF 4   ]
-func_18    [ DIFF 12  ]
-func_19    [ DIFF 8   ]
-func_20    [ DIFF 0   ]
-func_21    [ DIFF 10  ]
-func_22    [ DIFF 0   ]
-func_23    [ DIFF 0   ]
-func_24    [ DIFF 0   ]
-func_25    [ DIFF 0   ]
-func_26    [ DIFF 1   ]
-func_27    [ DIFF 5   ]
-func_28    [ DIFF 0   ]
-func_29    [ DIFF 2   ]
-func_30    [ DIFF 16  ]
-func_31    [ DIFF 20  ]
-func_32    [ DIFF 0   ]
-func_33    [ DIFF 8   ]
-func_34    [ DIFF 1   ]
-func_35    [ DIFF 0   ]
-func_36    [ DIFF 13  ]
-func_37    [ DIFF 3   ]
-func_38    [ DIFF 5   ]
-func_39    [ DIFF 3   ]
-func_40    [ DIFF 3   ]
-func_41    [ DIFF 1   ]
-func_42    [ DIFF 0   ]
-func_43    [ DIFF 0   ]
-func_44    [ DIFF 0   ]
-func_45    [ DIFF 10  ]
-func_46    [ DIFF 4   ]
-func_47    [ DIFF 6   ]
-func_48    [ DIFF 10  ]
-func_49    [ DIFF 1   ]
-func_50    [ DIFF 0   ]
-func_51    [ DIFF 0   ]
-func_52    [ DIFF 0   ]
-func_53    [ DIFF 0   ]
-func_54    [ DIFF 0   ]
-func_55    [ DIFF 0   ]
-func_56    [ DIFF 109 ]
-func_57    [ DIFF 0   ]
-func_58    [ DIFF 109 ]
-func_59    [ DIFF 115 ]
-func_60    [ DIFF 110 ]
+func_0     [ DIFF 25  ]                               ["CBaseGameStats_Driver", "CCSAddonManager", "CCSChickenManager", "CCSEntitySpotting", "CCSGCServerSystem", "CCSGOSteamWorksGameStatsServer", "CCSGameStats", "CCSHLTVDirector", "CCSInventoryManager", "CCSPointPulseSystem", "CCSWeaponSystem", "CDedicatedServerWorkshopManager", "CDirtySpatialPartitionEntityList", "CEntitySubclassGameSystem", "CFlexSceneFileManager", "CGCClientSystem", "CGameTimescale", "CHLTVDirector", "CInventoryManager", "CSoundEmitterSystem", "CSoundOpGameSystem", "CSteamWorksGameStatsServer", "CSteamWorksGameStatsUploader", "CUserInfoConvarList", "CVisibilityMonitor"]
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_1     [ DIFF 9   ]                               ["CCSFatDemoRecorder", "CCSGCServerSystem", "CCSGOSteamWorksGameStatsServer", "CCSInventoryManager", "CGCClientSystem", "CGameRulesGameSystem", "CInventoryManager", "CSteamWorksGameStatsServer", "CSteamWorksGameStatsUploader"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_2     [ DIFF 25  ]                               ["CBaseGameStats_Driver", "CCSAddonManager", "CCSGCServerSystem", "CCSGOSteamWorksGameStatsServer", "CCSHLTVDirector", "CCSInventoryManager", "CCSWeaponSystem", "CCleanupRelationshipsGameSystem", "CDedicatedServerWorkshopManager", "CDefaultResponseSystem", "CDirtySpatialPartitionEntityList", "CEntitySubclassGameSystem", "CFlexSceneFileManager", "CGCClientSystem", "CGameJobSystem", "CGameTimescale", "CHLTVDirector", "CInventoryManager", "CLagCompensationManager", "CServerLogHTTPDispatcher", "CSteamWorksGameStatsServer", "CSteamWorksGameStatsUploader", "CUserInfoConvarList", "CVisibilityMonitor", "ChangeLogger"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_3     [ DIFF 54  ]                               ["CAimTargetManager", "CAnimGraphGameSystem", "CAvatarOverrideMgr", "CBaseGameStats_Driver", "CBasePulseGameSystem", "CBodyGameSystem", "CCSAddonManager", "CCSEventLog", "CCSFatDemoRecorder", "CCSGOVScriptGameSystem", "CCSGameJournal", "CCSInventoryManager", "CCheckClient", "CClientUIDialogManager", "CColorCorrectionSystem", "CCommandQueueTester", "CCommentarySystem", "CCustomGameEventManager", "CDecalGameSystem", "CDefaultResponseSystem", "CDirtySpatialPartitionEntityList", "CEntityDebugGameSystem", "CEntitySubclassGameSystem", "CEventLog", "CFlashlightReceiver_Manager", "CFogSystem", "CGameJournal", "CGameParticleManagerSystem", "CGameRulesGameSystem", "CGlobalState", "CLightQueryGameSystem", "CNavGameSystem", "CNavSpaceBuildLocker", "CNetworkPVSModifierEntityManager", "CNullGameJournal", "CPhysicsGameSystem", "CPlayerVoiceListener", "CPrecacheRegister", "CPropData", "CRagdollLRURetirement", "CResponseQueueManager", "CSceneManager", "CServerPulseGameSystem", "CServerViewAngleChangeSystem", "CSmokeVolumeSystem", "CSoundEmitterSystem", "CSoundOpGameSystem", "CSoundOpvarSetPointManager", "CSoundscapeSystem", "CSource1LegacyGameEventGameSystem", "CSpawnGroupMgrGameSystem", "CToolGameSimulationAPI", "CVScriptGameSystem", "CVisibilityMonitor"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_4     [ DIFF 51  ]                               ["CAimTargetManager", "CAnchorList", "CAnimGraphGameSystem", "CAvatarOverrideMgr", "CBasePulseGameSystem", "CBodyGameSystem", "CCSAddonManager", "CCSFatDemoRecorder", "CCSGOVScriptGameSystem", "CCSGameJournal", "CClientUIDialogManager", "CCustomGameEventManager", "CDecalEmitterSystem", "CDecalGameSystem", "CDefaultResponseSystem", "CDirtySpatialPartitionEntityList", "CEntitySubclassGameSystem", "CFlashlightReceiver_Manager", "CGameJournal", "CGameParticleManagerSystem", "CGameRulesGameSystem", "CGameTimescale", "CGlobalState", "CLagCompensationManager", "CLightQueryGameSystem", "CNavGameSystem", "CNetworkPVSModifierEntityManager", "CNullGameJournal", "CPawnListGameSystem", "CPhysicsGameSystem", "CPlayerVoiceListener", "CPrecacheRegister", "CPropData", "CRenderGameSystem", "CResponseQueueManager", "CSceneManager", "CSendPlayerLoadoutHelper", "CServerPulseGameSystem", "CSharedMapManager", "CShatterGlassGameSystem", "CSimThinkManager", "CSmokeVolumeSystem", "CSoundOpvarSetPointManager", "CSoundscapeSystem", "CSource1LegacyGameEventGameSystem", "CSpawnGroupMgrGameSystem", "CStressDamageSystem", "CToolGameSimulationAPI", "CTriggerAsyncQuerySystem", "CVScriptGameSystem", "CWorldGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_5     [ DIFF 3   ]                               ["CGameRulesGameSystem", "CRagdollPoseControlSystem", "CWorldGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_6     [ DIFF 1   ]                               ["CRagdollPoseControlSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_7     [ DIFF 7   ]                               ["CCSGOVScriptGameSystem", "CCSInventoryManager", "CDecalEmitterSystem", "CDefaultResponseSystem", "CEntityDebugGameSystem", "CGameRulesGameSystem", "CVScriptGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_8     [ DIFF 20  ]                               ["CBodyGameSystem", "CCSInventoryManager", "CDebugOverlayBullets", "CDebugOverlayGameSystem", "CDebugOverlayGrenades", "CDebugOverlayRecorderBase", "CDebugOverlayWindow", "CDebugOverlayWorldModel", "CDecalGameSystem", "CDefaultResponseSystem", "CEntityDebugGameSystem", "CGameRulesGameSystem", "CInventoryManager", "CLightQueryGameSystem", "CNotifyManager", "CPhysicsGameSystem", "CPrecacheRegister", "CRenderGameSystem", "CServerLogHTTPDispatcher", "CSoundOpGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_9     [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_10    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_11    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_12    [ DIFF 23  ]                               ["CBaseGameStats_Driver", "CBodyGameSystem", "CCSAddonManager", "CCSInventoryManager", "CCommentarySystem", "CDebugOverlayBullets", "CDebugOverlayGameSystem", "CDebugOverlayGrenades", "CDebugOverlayRecorderBase", "CDebugOverlayWindow", "CDebugOverlayWorldModel", "CDecalGameSystem", "CGameRulesGameSystem", "CInventoryManager", "CLightQueryGameSystem", "CNotifyManager", "CPhysicsGameSystem", "CRenderGameSystem", "CResponseQueueManager", "CServerLogHTTPDispatcher", "CSoundControllerImp", "CSoundOpGameSystem", "CSoundOpvarSetPointManager"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_13    [ DIFF 4   ]                               ["CCSAddonManager", "CGameRulesGameSystem", "CMarkupManager", "CResourcePrecacherGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_14    [ DIFF 1   ]                               ["CSpawnGroupCompletionCallbackGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_15    [ DIFF 12  ]                               ["CDebugOverlayGameSystem", "CGameRulesGameSystem", "CGlobalState", "CLightQueryGameSystem", "CNavGameSystem", "CParticleSystemQueryGameSystem", "CPhysicsGameSystem", "CRagdollGameSystem", "CRenderGameSystem", "CSoundscapeSystem", "CSpawnGroupMgrGameSystem", "CWorldGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_16    [ DIFF 12  ]                               ["CCSHLTVDirector", "CColorCorrectionSystem", "CCommentarySystem", "CDefaultResponseSystem", "CGameRulesGameSystem", "CGameTimescale", "CGlobalState", "CHLTVDirector", "CNavGameSystem", "CRagdollGameSystem", "CSpawnGroupCompletionCallbackGameSystem", "CVisibilityMonitor"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_17    [ DIFF 4   ]                               ["CGameRulesGameSystem", "CGlobalState", "CScenePrecacheSystem", "CVisibilityMonitor"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_18    [ DIFF 12  ]                               ["CDebugOverlayGameSystem", "CGameRulesGameSystem", "CGlobalState", "CLightQueryGameSystem", "CMarkupManager", "CNavGameSystem", "CParticleSystemQueryGameSystem", "CPhysicsGameSystem", "CPlayerVoiceListener", "CRenderGameSystem", "CSoundscapeSystem", "CWorldGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_19    [ DIFF 8   ]                               ["CFogSystem", "CGameRulesGameSystem", "CNavGameSystem", "CPVSManager", "CPhysicsGameSystem", "CRagdollGameSystem", "CSoundscapeSystem", "CWorldGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_20    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_21    [ DIFF 10  ]                               ["CDebugOverlayBullets", "CDebugOverlayGrenades", "CDebugOverlayRecorderBase", "CDebugOverlayWindow", "CDebugOverlayWorldModel", "CDecalGameSystem", "CEntityDebugGameSystem", "CEnvWindControllerSystem", "CGameParticleManagerSystem", "CScrubEntityGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_22    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_23    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_24    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_25    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_26    [ DIFF 1   ]                               ["CSpawnGroupCompletionCallbackGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_27    [ DIFF 5   ]                               ["CAnimGraphGameSystem", "CCSAddonManager", "CGameJobSystem", "CPhysicsGameSystem", "CRagdollLRURetirement"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_28    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_29    [ DIFF 2   ]                               ["CParticleSystemQueryGameSystem", "CScrubEntityGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_30    [ DIFF 16  ]                               ["CAnimGraphGameSystem", "CBotGameSystem", "CCSGOSteamWorksGameStatsServer", "CEntityDebugGameSystem", "CGameRulesGameSystem", "CNavSpaceBuildLocker", "CPhysicsGameSystem", "CPreloaderGameSystem", "CSceneManager", "CSmokeVolumeSystem", "CSoundOpvarSetPointManager", "CSoundscapeSystem", "CSpawnGroupCompletionCallbackGameSystem", "CSteamWorksGameStatsServer", "CSteamWorksGameStatsUploader", "CTriggerAsyncQuerySystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_31    [ DIFF 20  ]                               ["CAnimGraphGameSystem", "CBaseGameStats_Driver", "CCSEntitySpotting", "CCSGOSteamWorksGameStatsServer", "CCSHLTVDirector", "CFuncMoverSystem", "CGameRulesGameSystem", "CGameTimescale", "CHLTVDirector", "CLagCompensationManager", "CPhysicsGameSystem", "CRagdollLRURetirement", "CResponseQueueManager", "CServerPulseGameSystem", "CSmokeVolumeSystem", "CSoundOpGameSystem", "CSteamWorksGameStatsServer", "CSteamWorksGameStatsUploader", "CStressDamageSystem", "CVisibilityMonitor"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_32    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_33    [ DIFF 8   ]                               ["CCSGOSteamWorksGameStatsServer", "CCSGameStats", "CCheckClient", "CGameRulesGameSystem", "CPhysicsGameSystem", "CSoundControllerImp", "CSteamWorksGameStatsServer", "CSteamWorksGameStatsUploader"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_34    [ DIFF 1   ]                               ["CSendPlayerLoadoutHelper"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_35    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_36    [ DIFF 13  ]                               ["CCSChickenManager", "CCSGOVScriptGameSystem", "CCSGameJournal", "CCommandQueueTester", "CDebugOverlayBullets", "CDedicatedServerWorkshopManager", "CEntityDebugGameSystem", "CLightQueryGameSystem", "CNullGameJournal", "CScrubEntityGameSystem", "CShatterGlassGameSystem", "CSmokeVolumeSystem", "CVScriptGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_37    [ DIFF 3   ]                               ["CEntityDebugGameSystem", "CLightQueryGameSystem", "CScrubEntityGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_38    [ DIFF 5   ]                               ["CDebugOverlayBullets", "CDebugOverlayGrenades", "CDebugOverlayRecorderBase", "CDebugOverlayWindow", "CDebugOverlayWorldModel"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_39    [ DIFF 3   ]                               ["CGameJobSystem", "CNavSpaceBuildLocker", "CPhysicsGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_40    [ DIFF 3   ]                               ["CGameJobSystem", "CNavSpaceBuildLocker", "CPhysicsGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_41    [ DIFF 1   ]                               ["CPhysicsGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_42    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_43    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_44    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_45    [ DIFF 10  ]                               ["CBodyGameSystem", "CCSGCServerSystem", "CCSGOVScriptGameSystem", "CGCClientSystem", "CGameJobSystem", "CNetworkPVSModifierEntityManager", "CPhysicsGameSystem", "CServerLogHTTPDispatcher", "CSpawnGroupMgrGameSystem", "CVScriptGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_46    [ DIFF 4   ]                               ["CBodyGameSystem", "CCSGCServerSystem", "CGCClientSystem", "CGameJobSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_47    [ DIFF 6   ]                               ["CBaseGameStats_Driver", "CCSGOSteamWorksGameStatsServer", "CGameRulesGameSystem", "CSoundOpvarSetPointManager", "CSteamWorksGameStatsServer", "CSteamWorksGameStatsUploader"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_48    [ DIFF 10  ]                               ["CBaseGameStats_Driver", "CCSGOSteamWorksGameStatsServer", "CCommentarySystem", "CGameRulesGameSystem", "CNavGameSystem", "CServerPulseGameSystem", "CSoundControllerImp", "CSoundOpvarSetPointManager", "CSteamWorksGameStatsServer", "CSteamWorksGameStatsUploader"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_49    [ DIFF 1   ]                               ["CGameRulesGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_50    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_51    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_52    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_53    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_54    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_55    [ DIFF 0   ]                               []
+    "48 8B 41 08 C3 CC CC CC CC CC CC CC CC CC CC CC"
+func_56    [ DIFF 109 ]                               ["CAimTargetManager", "CAnchorList", "CAnimGraphGameSystem", "CAvatarOverrideMgr", "CBaseGameStats_Driver", "CBasePulseGameSystem", "CBodyGameSystem", "CBotGameSystem", "CCSAddonManager", "CCSChickenManager", "CCSEntitySpotting", "CCSEventLog", "CCSFatDemoRecorder", "CCSGCServerSystem", "CCSGOSteamWorksGameStatsServer", "CCSGOVScriptGameSystem", "CCSGameJournal", "CCSGameStats", "CCSHLTVDirector", "CCSInventoryManager", "CCSPointPulseSystem", "CCSWeaponSystem", "CCheckClient", "CCleanupRelationshipsGameSystem", "CClientUIDialogManager", "CColorCorrectionSystem", "CCommandQueueTester", "CCommentarySystem", "CCustomGameEventManager", "CDebugOverlayBullets", "CDebugOverlayGameSystem", "CDebugOverlayGrenades", "CDebugOverlayRecorderBase", "CDebugOverlayWindow", "CDebugOverlayWorldModel", "CDecalEmitterSystem", "CDecalGameSystem", "CDedicatedServerWorkshopManager", "CDefaultResponseSystem", "CDirtySpatialPartitionEntityList", "CEntityDebugGameSystem", "CEntitySubclassGameSystem", "CEnvWindControllerSystem", "CEventLog", "CFlashlightReceiver_Manager", "CFlexSceneFileManager", "CFogSystem", "CFuncMoverSystem", "CGameJobSystem", "CGameParticleManagerSystem", "CGameRulesGameSystem", "CGameTimescale", "CGlobalState", "CHLTVDirector", "CItemGeneration", "CLagCompensationManager", "CLightQueryGameSystem", "CMarkupManager", "CNavGameSystem", "CNavSpaceBuildLocker", "CNetworkPVSModifierEntityManager", "CNotifyManager", "CNullGameJournal", "CPVSManager", "CParticleSystemQueryGameSystem", "CPawnListGameSystem", "CPhysicsGameSystem", "CPlayerVoiceListener", "CPrecacheRegister", "CPreloaderGameSystem", "CPropData", "CRagdollGameSystem", "CRagdollLRURetirement", "CRagdollPoseControlSystem", "CRenderGameSystem", "CResourcePrecacherGameSystem", "CResponseQueueManager", "CSceneManager", "CScenePrecacheSystem", "CScrubEntityGameSystem", "CSendPlayerLoadoutHelper", "CServerLogHTTPDispatcher", "CServerPulseGameSystem", "CServerViewAngleChangeSystem", "CSharedMapManager", "CShatterGlassGameSystem", "CSimThinkManager", "CSmokeVolumeSystem", "CSoundControllerImp", "CSoundEmitterSystem", "CSoundOpGameSystem", "CSoundOpvarSetPointManager", "CSoundOpvarSetPointManager_MP", "CSoundscapeSystem", "CSource1LegacyGameEventGameSystem", "CSource2EntitySystem", "CSource2EntitySystemDeallocator", "CSpawnGroupCompletionCallbackGameSystem", "CSpawnGroupMgrGameSystem", "CStressDamageSystem", "CTeamColorsAssignedSystem", "CToolGameSimulationAPI", "CTriggerAsyncQuerySystem", "CUserInfoConvarList", "CVScriptGameSystem", "CVisibilityMonitor", "CWorldGameSystem", "ChangeLogger", "GameEvent_RegisterHookupGameSystem"]
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_57    [ DIFF 0   ]                               []
+    "48 89 51 08 C3 CC CC CC CC CC CC CC CC CC CC CC"
+func_58    [ DIFF 109 ]                               ["CAimTargetManager", "CAnchorList", "CAnimGraphGameSystem", "CAvatarOverrideMgr", "CBaseGameStats_Driver", "CBasePulseGameSystem", "CBodyGameSystem", "CBotGameSystem", "CCSAddonManager", "CCSChickenManager", "CCSEntitySpotting", "CCSEventLog", "CCSFatDemoRecorder", "CCSGCServerSystem", "CCSGOSteamWorksGameStatsServer", "CCSGOVScriptGameSystem", "CCSGameJournal", "CCSGameStats", "CCSHLTVDirector", "CCSInventoryManager", "CCSPointPulseSystem", "CCSWeaponSystem", "CCheckClient", "CCleanupRelationshipsGameSystem", "CClientUIDialogManager", "CColorCorrectionSystem", "CCommandQueueTester", "CCommentarySystem", "CCustomGameEventManager", "CDebugOverlayBullets", "CDebugOverlayGameSystem", "CDebugOverlayGrenades", "CDebugOverlayRecorderBase", "CDebugOverlayWindow", "CDebugOverlayWorldModel", "CDecalEmitterSystem", "CDecalGameSystem", "CDedicatedServerWorkshopManager", "CDefaultResponseSystem", "CDirtySpatialPartitionEntityList", "CEntityDebugGameSystem", "CEntitySubclassGameSystem", "CEnvWindControllerSystem", "CEventLog", "CFlashlightReceiver_Manager", "CFlexSceneFileManager", "CFogSystem", "CFuncMoverSystem", "CGameJobSystem", "CGameParticleManagerSystem", "CGameRulesGameSystem", "CGameTimescale", "CGlobalState", "CHLTVDirector", "CItemGeneration", "CLagCompensationManager", "CLightQueryGameSystem", "CMarkupManager", "CNavGameSystem", "CNavSpaceBuildLocker", "CNetworkPVSModifierEntityManager", "CNotifyManager", "CNullGameJournal", "CPVSManager", "CParticleSystemQueryGameSystem", "CPawnListGameSystem", "CPhysicsGameSystem", "CPlayerVoiceListener", "CPrecacheRegister", "CPreloaderGameSystem", "CPropData", "CRagdollGameSystem", "CRagdollLRURetirement", "CRagdollPoseControlSystem", "CRenderGameSystem", "CResourcePrecacherGameSystem", "CResponseQueueManager", "CSceneManager", "CScenePrecacheSystem", "CScrubEntityGameSystem", "CSendPlayerLoadoutHelper", "CServerLogHTTPDispatcher", "CServerPulseGameSystem", "CServerViewAngleChangeSystem", "CSharedMapManager", "CShatterGlassGameSystem", "CSimThinkManager", "CSmokeVolumeSystem", "CSoundControllerImp", "CSoundEmitterSystem", "CSoundOpGameSystem", "CSoundOpvarSetPointManager", "CSoundOpvarSetPointManager_MP", "CSoundscapeSystem", "CSource1LegacyGameEventGameSystem", "CSource2EntitySystem", "CSource2EntitySystemDeallocator", "CSpawnGroupCompletionCallbackGameSystem", "CSpawnGroupMgrGameSystem", "CStressDamageSystem", "CTeamColorsAssignedSystem", "CToolGameSimulationAPI", "CTriggerAsyncQuerySystem", "CUserInfoConvarList", "CVScriptGameSystem", "CVisibilityMonitor", "CWorldGameSystem", "ChangeLogger", "GameEvent_RegisterHookupGameSystem"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_59    [ DIFF 115 ]                               ["CAimTargetManager", "CAnchorList", "CAnimGraphGameSystem", "CAvatarOverrideMgr", "CBaseGameStats_Driver", "CBasePulseGameSystem", "CBodyGameSystem", "CBotGameSystem", "CCSAddonManager", "CCSChickenManager", "CCSEntitySpotting", "CCSEventLog", "CCSFatDemoRecorder", "CCSGCServerSystem", "CCSGOSteamWorksGameStatsServer", "CCSGOVScriptGameSystem", "CCSGameJournal", "CCSGameStats", "CCSHLTVDirector", "CCSInventoryManager", "CCSPointPulseSystem", "CCSWeaponSystem", "CCheckClient", "CCleanupRelationshipsGameSystem", "CClientUIDialogManager", "CColorCorrectionSystem", "CCommandQueueTester", "CCommentarySystem", "CCustomGameEventManager", "CDebugOverlayBullets", "CDebugOverlayGameSystem", "CDebugOverlayGrenades", "CDebugOverlayRecorderBase", "CDebugOverlayWindow", "CDebugOverlayWorldModel", "CDecalEmitterSystem", "CDecalGameSystem", "CDedicatedServerWorkshopManager", "CDefaultResponseSystem", "CDirtySpatialPartitionEntityList", "CDontUseThisGameSystem", "CEntityDebugGameSystem", "CEntitySubclassGameSystem", "CEnvWindControllerSystem", "CEventLog", "CFlashlightReceiver_Manager", "CFlexSceneFileManager", "CFogSystem", "CFuncMoverSystem", "CGCClientSystem", "CGameJobSystem", "CGameJournal", "CGameParticleManagerSystem", "CGameRulesGameSystem", "CGameTimescale", "CGlobalState", "CHLTVDirector", "CInventoryManager", "CItemGeneration", "CLagCompensationManager", "CLightQueryGameSystem", "CMarkupManager", "CNavGameSystem", "CNavSpaceBuildLocker", "CNetworkPVSModifierEntityManager", "CNotifyManager", "CNullGameJournal", "CPVSManager", "CParticleSystemQueryGameSystem", "CPawnListGameSystem", "CPhysicsGameSystem", "CPlayerVoiceListener", "CPrecacheRegister", "CPreloaderGameSystem", "CPropData", "CRagdollGameSystem", "CRagdollLRURetirement", "CRagdollPoseControlSystem", "CRenderGameSystem", "CResourcePrecacherGameSystem", "CResponseQueueManager", "CSceneManager", "CScenePrecacheSystem", "CScrubEntityGameSystem", "CSendPlayerLoadoutHelper", "CServerLogHTTPDispatcher", "CServerPulseGameSystem", "CServerViewAngleChangeSystem", "CSharedMapManager", "CShatterGlassGameSystem", "CSimThinkManager", "CSmokeVolumeSystem", "CSoundControllerImp", "CSoundEmitterSystem", "CSoundOpGameSystem", "CSoundOpvarSetPointManager", "CSoundOpvarSetPointManager_MP", "CSoundscapeSystem", "CSource1LegacyGameEventGameSystem", "CSource2EntitySystem", "CSource2EntitySystemDeallocator", "CSpawnGroupCompletionCallbackGameSystem", "CSpawnGroupMgrGameSystem", "CSteamWorksGameStatsServer", "CSteamWorksGameStatsUploader", "CStressDamageSystem", "CTeamColorsAssignedSystem", "CToolGameSimulationAPI", "CTriggerAsyncQuerySystem", "CUserInfoConvarList", "CVScriptGameSystem", "CVisibilityMonitor", "CWorldGameSystem", "ChangeLogger", "GameEvent_RegisterHookupGameSystem"]
+    "48 89 5C 24 08 57 48 83 EC 20 8B DA 48 8B F9 E8"
+func_60    [ DIFF 110 ]                               ["CAimTargetManager", "CAnchorList", "CAnimGraphGameSystem", "CAvatarOverrideMgr", "CBaseGameStats_Driver", "CBasePulseGameSystem", "CBodyGameSystem", "CBotGameSystem", "CCSAddonManager", "CCSChickenManager", "CCSEntitySpotting", "CCSEventLog", "CCSFatDemoRecorder", "CCSGCServerSystem", "CCSGOSteamWorksGameStatsServer", "CCSGOVScriptGameSystem", "CCSGameJournal", "CCSGameStats", "CCSHLTVDirector", "CCSInventoryManager", "CCSPointPulseSystem", "CCSWeaponSystem", "CCheckClient", "CCleanupRelationshipsGameSystem", "CClientUIDialogManager", "CColorCorrectionSystem", "CCommandQueueTester", "CCommentarySystem", "CCustomGameEventManager", "CDebugOverlayBullets", "CDebugOverlayGameSystem", "CDebugOverlayGrenades", "CDebugOverlayRecorderBase", "CDebugOverlayWindow", "CDebugOverlayWorldModel", "CDecalEmitterSystem", "CDecalGameSystem", "CDedicatedServerWorkshopManager", "CDefaultResponseSystem", "CDirtySpatialPartitionEntityList", "CDontUseThisGameSystem", "CEntityDebugGameSystem", "CEntitySubclassGameSystem", "CEnvWindControllerSystem", "CEventLog", "CFlashlightReceiver_Manager", "CFlexSceneFileManager", "CFogSystem", "CFuncMoverSystem", "CGameJobSystem", "CGameParticleManagerSystem", "CGameRulesGameSystem", "CGameTimescale", "CGlobalState", "CHLTVDirector", "CItemGeneration", "CLagCompensationManager", "CLightQueryGameSystem", "CMarkupManager", "CNavGameSystem", "CNavSpaceBuildLocker", "CNetworkPVSModifierEntityManager", "CNotifyManager", "CNullGameJournal", "CPVSManager", "CParticleSystemQueryGameSystem", "CPawnListGameSystem", "CPhysicsGameSystem", "CPlayerVoiceListener", "CPrecacheRegister", "CPreloaderGameSystem", "CPropData", "CRagdollGameSystem", "CRagdollLRURetirement", "CRagdollPoseControlSystem", "CRenderGameSystem", "CResourcePrecacherGameSystem", "CResponseQueueManager", "CSceneManager", "CScenePrecacheSystem", "CScrubEntityGameSystem", "CSendPlayerLoadoutHelper", "CServerLogHTTPDispatcher", "CServerPulseGameSystem", "CServerViewAngleChangeSystem", "CSharedMapManager", "CShatterGlassGameSystem", "CSimThinkManager", "CSmokeVolumeSystem", "CSoundControllerImp", "CSoundEmitterSystem", "CSoundOpGameSystem", "CSoundOpvarSetPointManager", "CSoundOpvarSetPointManager_MP", "CSoundscapeSystem", "CSource1LegacyGameEventGameSystem", "CSource2EntitySystem", "CSource2EntitySystemDeallocator", "CSpawnGroupCompletionCallbackGameSystem", "CSpawnGroupMgrGameSystem", "CStressDamageSystem", "CTeamColorsAssignedSystem", "CToolGameSimulationAPI", "CTriggerAsyncQuerySystem", "CUserInfoConvarList", "CVScriptGameSystem", "CVisibilityMonitor", "CWorldGameSystem", "ChangeLogger", "GameEvent_RegisterHookupGameSystem"]
+    "48 83 EC 28 E8 EB FF FF FF 48 85 C0 74 06 FF 15"
+
+=============================================
+Bases: 
+=============================================
+
+=============================================
+Children: 
+"CAimTargetManager"
+"CAnchorList"
+"CAnimGraphGameSystem"
+"CAvatarOverrideMgr"
+"CBaseGameStats_Driver"
+"CBasePulseGameSystem"
+"CBodyGameSystem"
+"CBotGameSystem"
+"CCSAddonManager"
+"CCSChickenManager"
+"CCSEntitySpotting"
+"CCSEventLog"
+"CCSFatDemoRecorder"
+"CCSGCServerSystem"
+"CCSGOSteamWorksGameStatsServer"
+"CCSGOVScriptGameSystem"
+"CCSGameJournal"
+"CCSGameStats"
+"CCSHLTVDirector"
+"CCSInventoryManager"
+"CCSPointPulseSystem"
+"CCSWeaponSystem"
+"CCheckClient"
+"CCleanupRelationshipsGameSystem"
+"CClientUIDialogManager"
+"CColorCorrectionSystem"
+"CCommandQueueTester"
+"CCommentarySystem"
+"CCustomGameEventManager"
+"CDebugOverlayBullets"
+"CDebugOverlayGameSystem"
+"CDebugOverlayGrenades"
+"CDebugOverlayRecorderBase"
+"CDebugOverlayWindow"
+"CDebugOverlayWorldModel"
+"CDecalEmitterSystem"
+"CDecalGameSystem"
+"CDedicatedServerWorkshopManager"
+"CDefaultResponseSystem"
+"CDirtySpatialPartitionEntityList"
+"CDontUseThisGameSystem"
+"CEntityDebugGameSystem"
+"CEntitySubclassGameSystem"
+"CEnvWindControllerSystem"
+"CEventLog"
+"CFlashlightReceiver_Manager"
+"CFlexSceneFileManager"
+"CFogSystem"
+"CFuncMoverSystem"
+"CGCClientSystem"
+"CGameJobSystem"
+"CGameJournal"
+"CGameParticleManagerSystem"
+"CGameRulesGameSystem"
+"CGameTimescale"
+"CGlobalState"
+"CHLTVDirector"
+"CInventoryManager"
+"CItemGeneration"
+"CLagCompensationManager"
+"CLightQueryGameSystem"
+"CMarkupManager"
+"CNavGameSystem"
+"CNavSpaceBuildLocker"
+"CNetworkPVSModifierEntityManager"
+"CNotifyManager"
+"CNullGameJournal"
+"CPVSManager"
+"CParticleSystemQueryGameSystem"
+"CPawnListGameSystem"
+"CPhysicsGameSystem"
+"CPlayerVoiceListener"
+"CPrecacheRegister"
+"CPreloaderGameSystem"
+"CPropData"
+"CRagdollGameSystem"
+"CRagdollLRURetirement"
+"CRagdollPoseControlSystem"
+"CRenderGameSystem"
+"CResourcePrecacherGameSystem"
+"CResponseQueueManager"
+"CSceneManager"
+"CScenePrecacheSystem"
+"CScrubEntityGameSystem"
+"CSendPlayerLoadoutHelper"
+"CServerLogHTTPDispatcher"
+"CServerPulseGameSystem"
+"CServerViewAngleChangeSystem"
+"CSharedMapManager"
+"CShatterGlassGameSystem"
+"CSimThinkManager"
+"CSmokeVolumeSystem"
+"CSoundControllerImp"
+"CSoundEmitterSystem"
+"CSoundOpGameSystem"
+"CSoundOpvarSetPointManager"
+"CSoundOpvarSetPointManager_MP"
+"CSoundscapeSystem"
+"CSource1LegacyGameEventGameSystem"
+"CSource2EntitySystem"
+"CSource2EntitySystemDeallocator"
+"CSpawnGroupCompletionCallbackGameSystem"
+"CSpawnGroupMgrGameSystem"
+"CSteamWorksGameStatsServer"
+"CSteamWorksGameStatsUploader"
+"CStressDamageSystem"
+"CTeamColorsAssignedSystem"
+"CToolGameSimulationAPI"
+"CTriggerAsyncQuerySystem"
+"CUserInfoConvarList"
+"CVScriptGameSystem"
+"CVisibilityMonitor"
+"CWorldGameSystem"
+"ChangeLogger"
+"GameEvent_RegisterHookupGameSystem"
+================================================

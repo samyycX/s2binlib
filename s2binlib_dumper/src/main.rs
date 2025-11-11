@@ -45,6 +45,8 @@ fn main() -> Result<()> {
         "networksystem",
         "soundsystem",
         "pulse_system",
+        "schemasystem",
+        "materialsystem2",
     ];
 
 
@@ -61,16 +63,7 @@ fn main() -> Result<()> {
     }
     fs::create_dir_all(&dump_dir)?;
 
-    dumpers::diff_dumper::dump_diff(&s2binlib, &dump_dir, "server", "CBaseEntity")?;
-    dumpers::diff_dumper::dump_diff(&s2binlib, &dump_dir, "server", "CBaseModelEntity")?;
-    dumpers::diff_dumper::dump_diff(&s2binlib, &dump_dir, "server", "CCSWeaponBase")?;
-    dumpers::diff_dumper::dump_diff(&s2binlib, &dump_dir, "server", "IGameSystem")?;
-    dumpers::diff_dumper::dump_diff(&s2binlib, &dump_dir, "server", "CTraceFilter")?;
-    dumpers::diff_dumper::dump_diff(&s2binlib, &dump_dir, "server", "CRecipientFilter")?;
-    dumpers::diff_dumper::dump_diff(&s2binlib, &dump_dir, "client", "C_BaseEntity")?;
-    dumpers::diff_dumper::dump_diff(&s2binlib, &dump_dir, "client", "C_BaseModelEntity")?;
-    dumpers::diff_dumper::dump_diff(&s2binlib, &dump_dir, "client", "C_CSWeaponBase")?;
-    dumpers::diff_dumper::dump_diff(&s2binlib, &dump_dir, "client", "IGameSystem")?;
+    dumpers::diff_dumper::dump_diffs(&s2binlib, &dump_dir)?;
     dumpers::entity_dumper::dump_entities_server(&s2binlib, &dump_dir)?;
     dumpers::entity_dumper::dump_entities_client(&s2binlib, &dump_dir)?;
     dumpers::gamesystem_dumper::dump_gamesystems(&s2binlib, &dump_dir, "server")?;
