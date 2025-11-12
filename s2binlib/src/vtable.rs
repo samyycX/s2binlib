@@ -17,19 +17,14 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  ***********************************************************************************/
 
-use std::{
-    collections::{HashMap, HashSet},
-    slice,
-};
+use std::collections::{HashMap, HashSet};
 
 use anyhow::{Result, anyhow};
 use cpp_demangle::Symbol;
 use msvc_demangler::{DemangleFlags, demangle};
-use object::{BinaryFormat, Object, ObjectSection, read::pe::ImageOptionalHeader};
+use object::{BinaryFormat, Object, read::pe::ImageOptionalHeader};
 
 use crate::{
-    is_executable,
-    memory::module_sections_from_slice,
     s2binlib::S2BinLib,
     view::{BinaryView, FileBinaryView, SectionInfo},
 };
@@ -76,6 +71,7 @@ pub enum BaseClassModel {
     Itanium {
         offset: i64,
         flags: u32,
+        bases: Vec<BaseClassInfo>,
     },
 }
 
@@ -173,23 +169,6 @@ impl<'a> S2BinLib<'a> {
         binary_name: &str,
         vtable_name: &str,
     ) -> Result<Vec<&VTableInfo>> {
-        if self.os == "windows" {
-            let vtables = self.get_vtables(binary_name)?;
-            let mut children = Vec::new();
-            for vtable in vtables {
-                if vtable
-                    .bases
-                    .iter()
-                    .any(|base| base.type_name.contains(vtable_name))
-                {
-                    children.push(vtable);
-                }
-            }
-
-            return Ok(children);
-        }
-
-        // recursive search for itanium abi
         let mut visited = HashSet::new();
         self.get_vtable_children_recursively(binary_name, vtable_name, &mut visited)
     }
@@ -510,11 +489,12 @@ impl<'a, V: BinaryView<'a>> ItaniumParser<'a, V> {
     ) -> Option<VTableInfo> {
         let info = self.resolve_typeinfo(typeinfo_ptr)?;
         let methods = self.collect_methods(vtable_va);
+        let TypeInfoData { name, bases } = info;
         Some(VTableInfo {
-            type_name: info.name,
+            type_name: name,
             vtable_address: vtable_va,
             methods,
-            bases: info.bases,
+            bases,
             model: VTableModel::Itanium { offset_to_top },
         })
     }
@@ -570,11 +550,13 @@ impl<'a, V: BinaryView<'a>> ItaniumParser<'a, V> {
             if let Some(candidate) = self.view.read::<u64>(section.address() + offset + 16) {
                 if candidate != 0 && self.looks_like_typeinfo(candidate) {
                     if let Some(base) = self.resolve_typeinfo(candidate) {
+                        let TypeInfoData { name, bases } = base;
                         return vec![BaseClassInfo {
-                            type_name: base.name,
+                            type_name: name,
                             details: BaseClassModel::Itanium {
                                 offset: 0,
                                 flags: 0,
+                                bases,
                             },
                         }];
                     }
@@ -607,9 +589,14 @@ impl<'a, V: BinaryView<'a>> ItaniumParser<'a, V> {
             let flags = (offset_flags & 0xFF) as u32;
 
             if let Some(info) = self.resolve_typeinfo(typeinfo_ptr) {
+                let TypeInfoData { name, bases: nested } = info;
                 bases.push(BaseClassInfo {
-                    type_name: info.name,
-                    details: BaseClassModel::Itanium { offset, flags },
+                    type_name: name,
+                    details: BaseClassModel::Itanium {
+                        offset,
+                        flags,
+                        bases: nested,
+                    },
                 });
             }
 
