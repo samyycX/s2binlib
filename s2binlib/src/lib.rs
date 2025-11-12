@@ -57,16 +57,16 @@ mod tests {
 
         let start = Instant::now();
 
-        let mut s2binlib = S2BinLib::new("/mnt/f/cs2server/game", "csgo", "linux");
+        let mut s2binlib = S2BinLib::new("F:/cs2server/game", "csgo", "windows");
 
         s2binlib.load_binary("server");
 
         println!("lib: {:?}", "");
-        let lib = unsafe { Library::new("/mnt/f/cs2server/game/bin/linuxsteamrt64/libtier0.so")? };
+        let lib = unsafe { Library::new("F:/cs2server/game/bin/win64/tier0.dll")? };
 
         println!("lib: {:?}", lib);
 
-        let module_info = get_module_info("libtier0.so")?;
+        let module_info = get_module_info("tier0.dll")?;
 
         let view = unsafe {MemoryView::new(
             module_info.base_address as *const u8,
@@ -77,16 +77,11 @@ mod tests {
 
         let view2 = s2binlib.get_file_binary_view("server")?;
 
-        let mut parser = ItaniumParser::new(&view2);
+        let mut parser = MsvcParser::new(&view);
         let vtables = parser.parse()?;
 
+        println!("{:?}", vtables);
 
-        let time = Instant::now();
-
-        
-
-        println!("vtable: {:?}", vtables);
-        println!("time: {:?}", time.elapsed());
 
         // let c = view.read::<u64>(module_info.base_address as u64).unwrap();
         // let locator = parser.parse_locator(c).unwrap();
