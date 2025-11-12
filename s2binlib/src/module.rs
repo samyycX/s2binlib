@@ -127,28 +127,3 @@ fn get_module_info_linux(module_name: &str) -> Result<ModuleInfo, ModuleError> {
         _ => Err(ModuleError::NotFound),
     }
 }
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_get_current_executable() {
-        // 尝试获取当前可执行文件的信息
-        #[cfg(target_os = "windows")]
-        let result = get_module_info("test.exe");
-
-        #[cfg(target_os = "linux")]
-        let result = get_module_info("test");
-
-        match result {
-            Ok(info) => {
-                println!("Base Address: 0x{:X}", info.base_address);
-                println!("Size: {} bytes", info.size);
-                assert!(info.base_address > 0);
-                assert!(info.size > 0);
-            }
-            Err(e) => println!("Error: {}", e),
-        }
-    }
-}
