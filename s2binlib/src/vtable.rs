@@ -27,7 +27,12 @@ use cpp_demangle::Symbol;
 use msvc_demangler::{DemangleFlags, demangle};
 use object::{BinaryFormat, Object, ObjectSection, read::pe::ImageOptionalHeader};
 
-use crate::{is_executable, memory::module_sections_from_slice, s2binlib::S2BinLib, view::{BinaryView, FileBinaryView, SectionInfo}};
+use crate::{
+    is_executable,
+    memory::module_sections_from_slice,
+    s2binlib::S2BinLib,
+    view::{BinaryView, FileBinaryView, SectionInfo},
+};
 
 #[derive(Debug, Clone)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
@@ -83,7 +88,6 @@ pub struct Pmd {
 }
 
 impl<'a> S2BinLib<'a> {
-
     pub fn get_file_binary_view(&self, binary_name: &str) -> Result<FileBinaryView<'_>> {
         let binary = self.get_binary(binary_name)?;
         let file = object::File::parse(binary)?;
@@ -191,7 +195,6 @@ impl<'a> S2BinLib<'a> {
     }
 }
 
-
 pub struct MsvcParser<'a, V: BinaryView<'a>> {
     view: &'a V,
     type_cache: HashMap<u64, String>,
@@ -218,7 +221,10 @@ impl<'a, V: BinaryView<'a>> MsvcParser<'a, V> {
 
             let mut offset = 0usize;
             while offset + 8 <= section.len() {
-                let locator_ptr = self.view.read::<u64>(section.address() + offset as u64).unwrap();
+                let locator_ptr = self
+                    .view
+                    .read::<u64>(section.address() + offset as u64)
+                    .unwrap();
                 if locator_ptr != 0 {
                     if let Some(locator) = self.parse_locator(locator_ptr) {
                         let vtable_va = section.address() + offset as u64 + 8;
@@ -409,20 +415,20 @@ pub struct CompleteObjectLocator {
     class_descriptor: u64,
 }
 
-struct ItaniumParser<'a, V: BinaryView<'a>> {
+pub struct ItaniumParser<'a, V: BinaryView<'a>> {
     view: &'a V,
     type_cache: HashMap<u64, TypeInfoData>,
     visiting: HashSet<u64>,
 }
 
 #[derive(Clone, Debug)]
-struct TypeInfoData {
+pub struct TypeInfoData {
     name: String,
     bases: Vec<BaseClassInfo>,
 }
 
 impl<'a, V: BinaryView<'a>> ItaniumParser<'a, V> {
-    fn new(view: &'a V) -> Self {
+    pub fn new(view: &'a V) -> Self {
         Self {
             view,
             type_cache: HashMap::new(),
@@ -430,7 +436,7 @@ impl<'a, V: BinaryView<'a>> ItaniumParser<'a, V> {
         }
     }
 
-    fn parse(mut self) -> Result<Vec<VTableInfo>> {
+    pub fn parse(mut self) -> Result<Vec<VTableInfo>> {
         let mut results = Vec::new();
         let mut seen = HashSet::new();
 
@@ -441,7 +447,10 @@ impl<'a, V: BinaryView<'a>> ItaniumParser<'a, V> {
 
             let mut offset = 0usize;
             while offset + 24 <= section.len() {
-                let typeinfo_ptr = self.view.read::<u64>(section.address() + offset as u64 + 8).unwrap();
+                let typeinfo_ptr = self
+                    .view
+                    .read::<u64>(section.address() + offset as u64 + 8)
+                    .unwrap();
                 if typeinfo_ptr == 0 || !self.view.contains(typeinfo_ptr) {
                     offset += 8;
                     continue;
@@ -452,7 +461,10 @@ impl<'a, V: BinaryView<'a>> ItaniumParser<'a, V> {
                     continue;
                 }
 
-                let first_method = self.view.read::<u64>(section.address() + offset as u64 + 16).unwrap_or(0);
+                let first_method = self
+                    .view
+                    .read::<u64>(section.address() + offset as u64 + 16)
+                    .unwrap_or(0);
                 if first_method != 0 && !self.view.is_executable(first_method) {
                     offset += 8;
                     continue;
@@ -464,7 +476,10 @@ impl<'a, V: BinaryView<'a>> ItaniumParser<'a, V> {
                     continue;
                 }
 
-                let offset_to_top = self.view.read::<i64>(section.address() + offset as u64).unwrap();
+                let offset_to_top = self
+                    .view
+                    .read::<i64>(section.address() + offset as u64)
+                    .unwrap();
 
                 if let Some(info) = self.build_vtable_info(vtable_va, typeinfo_ptr, offset_to_top) {
                     results.push(info);
