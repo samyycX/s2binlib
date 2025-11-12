@@ -57,16 +57,16 @@ mod tests {
 
         let start = Instant::now();
 
-        let mut s2binlib = S2BinLib::new("F:/cs2server/game", "csgo", "windows");
+        let mut s2binlib = S2BinLib::new("/mnt/f/cs2server/game", "csgo", "linux");
 
         s2binlib.load_binary("server");
 
         println!("lib: {:?}", "");
-        let lib = unsafe { Library::new("F:/cs2server/game/bin/win64/tier0.dll")? };
+        let lib = unsafe { Library::new("/mnt/f/cs2server/game/bin/linuxsteamrt64/libtier0.so")? };
 
         println!("lib: {:?}", lib);
 
-        let module_info = get_module_info("tier0.dll")?;
+        let module_info = get_module_info("libtier0.so")?;
 
         let view = unsafe {MemoryView::new(
             module_info.base_address as *const u8,
@@ -76,38 +76,16 @@ mod tests {
         ) };
 
         let view2 = s2binlib.get_file_binary_view("server")?;
-        println!("{:?}", view.locate_address(0x18030D6A8));
 
-        let mut parser = MsvcParser::new(&view);
+        let mut parser = ItaniumParser::new(&view2);
         let vtables = parser.parse()?;
 
-        let vtable = vtables.iter().next().unwrap();
 
         let time = Instant::now();
 
         
-        let module_info = get_module_info("tier0.dll")?;
 
-        let view = unsafe {MemoryView::new(
-            module_info.base_address as *const u8,
-            module_info.size,
-            module_info.base_address as u64,
-            BinaryFormat::Pe,
-        ) };
-        let mut parser = MsvcParser::new(&view);
-
-        // Assume we don't know this
-        let locator_va = vtable.vtable_address - 8;
-        let vtable_va = vtable.vtable_address;
-        if !view.contains(locator_va) {
-            return Err(anyhow::anyhow!("Locator not found"));
-        }
-        let locator_ptr = view.read::<u64>(locator_va).unwrap();
-
-        let locator = parser.parse_locator(locator_ptr).unwrap();
-        let vtable = parser.build_vtable_info(vtable_va, &locator).unwrap();
-
-        println!("vtable: {:?}", vtable);
+        println!("vtable: {:?}", vtables);
         println!("time: {:?}", time.elapsed());
 
         // let c = view.read::<u64>(module_info.base_address as u64).unwrap();

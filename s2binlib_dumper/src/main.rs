@@ -105,7 +105,11 @@ fn main() -> Result<()> {
             s2binlib.dump_vtables(&binary)?;
         }
 
-        let dump_dir = format!("{}/{}", args.output_path.clone().unwrap_or("dump".to_string()), s2binlib.get_os());
+        let dump_dir = format!(
+            "{}/{}",
+            args.output_path.clone().unwrap_or("dump".to_string()),
+            s2binlib.get_os()
+        );
         if fs::exists(&dump_dir)? {
             fs::remove_dir_all(&dump_dir)?;
         }

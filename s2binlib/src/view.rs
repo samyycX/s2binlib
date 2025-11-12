@@ -5,11 +5,94 @@ use object::{BinaryFormat, Object, ObjectSection};
 
 use crate::{is_executable, memory::module_sections_from_slice};
 
+mod linux {
+    use super::SectionInfo;
+    use object::{BinaryFormat, Object, ObjectSection};
+    use std::{
+        fs::{self, File},
+        io::{BufRead, BufReader},
+    };
+
+    #[cfg(target_os = "linux")]
+    pub(super) fn build_sections<'a>(
+        data: &'a [u8],
+        real_image_base: u64,
+        image_base: u64,
+    ) -> Option<(Vec<SectionInfo<'a>>, BinaryFormat)> {
+        let path = module_path(real_image_base)?;
+        let binary = fs::read(&path).ok()?;
+        let file = object::File::parse(&*binary).ok()?;
+        let mut sections = Vec::new();
+
+        for section in file.sections() {
+            let size = usize::try_from(section.size()).ok()?;
+            if size == 0 {
+                continue;
+            }
+            let address = section.address();
+            let relative = address.checked_sub(image_base).unwrap_or(address);
+            let real_address = real_image_base.checked_add(relative)?;
+            let offset = usize::try_from(real_address.checked_sub(real_image_base)?).ok()?;
+            if offset >= data.len() {
+                continue;
+            }
+            let available = data.len() - offset;
+            if available == 0 {
+                continue;
+            }
+            let slice_size = size.min(available);
+            let end = offset + slice_size;
+            sections.push(SectionInfo {
+                index: section.index().0 as usize,
+                name: section.name().ok().map(|s| s.to_string()),
+                address,
+                real_address,
+                data: &data[offset..end],
+                executable: crate::is_executable(section.flags()),
+            });
+        }
+
+        if sections.is_empty() {
+            return None;
+        }
+
+        sections.sort_by_key(|entry| entry.real_address());
+        Some((sections, file.format()))
+    }
+
+    fn module_path(base: u64) -> Option<String> {
+        let file = File::open("/proc/self/maps").ok()?;
+        let reader = BufReader::new(file);
+        for line in reader.lines().flatten() {
+            let trimmed = line.trim();
+            if trimmed.is_empty() {
+                continue;
+            }
+            let parts: Vec<&str> = trimmed.split_whitespace().collect();
+            if parts.len() < 6 {
+                continue;
+            }
+            let mut bounds = parts[0].split('-');
+            let start = u64::from_str_radix(bounds.next()?, 16).ok()?;
+            let end = u64::from_str_radix(bounds.next()?, 16).ok()?;
+            if base < start || base >= end {
+                continue;
+            }
+            let path = parts[5..].join(" ");
+            if path.starts_with('/') {
+                return Some(path);
+            }
+        }
+        None
+    }
+}
+
 #[derive(Debug)]
 pub struct SectionInfo<'a> {
     index: usize,
     name: Option<String>,
     address: u64,
+    real_address: u64,
     data: &'a [u8],
     executable: bool,
 }
@@ -20,6 +103,9 @@ impl<'a> SectionInfo<'a> {
     }
     pub fn address(&self) -> u64 {
         self.address
+    }
+    pub fn real_address(&self) -> u64 {
+        self.real_address
     }
     pub fn name(&self) -> Option<&str> {
         self.name.as_deref()
@@ -47,7 +133,6 @@ macro_rules! impl_le_primitive {
 }
 
 impl_le_primitive!(u32, i32, i64, u64, f32, f64);
-
 
 pub trait BinaryView<'a> {
     fn format(&self) -> BinaryFormat;
@@ -90,7 +175,6 @@ pub trait BinaryView<'a> {
     }
 }
 
-
 #[derive(Debug)]
 pub struct FileBinaryView<'a> {
     sections: Vec<SectionInfo<'a>>,
@@ -128,6 +212,7 @@ impl<'a> FileBinaryView<'a> {
                 index,
                 name,
                 address,
+                real_address: address,
                 data: &data[start..end],
                 executable,
             });
@@ -186,34 +271,55 @@ impl<'a> BinaryView<'a> for FileBinaryView<'a> {
     }
 }
 
-
-
 #[derive(Debug)]
 pub struct MemoryView<'a> {
     sections: Vec<SectionInfo<'a>>,
     format: BinaryFormat,
     image_base: u64,
+    real_image_base: u64,
 }
 
 impl<'a> MemoryView<'a> {
     pub unsafe fn new(base: *const u8, len: usize, image_base: u64, format: BinaryFormat) -> Self {
         let data = unsafe { std::slice::from_raw_parts(base, len) };
+        let real_image_base = base as usize as u64;
         let mut sections = Vec::new();
+        let mut view_format = format;
 
-        if let Ok(descriptors) = module_sections_from_slice(data, image_base, format) {
-            for descriptor in descriptors {
-                let start = descriptor.offset.min(data.len());
-                let end = start.saturating_add(descriptor.size).min(data.len());
-                if start >= end {
-                    continue;
+        let linux_sections: Option<(Vec<SectionInfo<'a>>, BinaryFormat)> = {
+            #[cfg(target_os = "linux")]
+            {
+                linux::build_sections(data, real_image_base, image_base)
+            }
+            #[cfg(not(target_os = "linux"))]
+            {
+                None
+            }
+        };
+
+        if let Some((detected_sections, detected_format)) = linux_sections {
+            sections = detected_sections;
+            view_format = detected_format;
+        }
+
+        if sections.is_empty() {
+            if let Ok(descriptors) = module_sections_from_slice(data, image_base, format) {
+                for descriptor in descriptors {
+                    let start = descriptor.offset.min(data.len());
+                    let end = start.saturating_add(descriptor.size).min(data.len());
+                    if start >= end {
+                        continue;
+                    }
+                    let real_address = real_image_base + descriptor.offset as u64;
+                    sections.push(SectionInfo {
+                        index: descriptor.index,
+                        name: descriptor.name,
+                        address: descriptor.address,
+                        real_address,
+                        data: &data[start..end],
+                        executable: descriptor.executable,
+                    });
                 }
-                sections.push(SectionInfo {
-                    index: descriptor.index,
-                    name: descriptor.name,
-                    address: descriptor.address,
-                    data: &data[start..end],
-                    executable: descriptor.executable,
-                });
             }
         }
 
@@ -222,15 +328,19 @@ impl<'a> MemoryView<'a> {
                 index: 0,
                 name: None,
                 address: image_base,
+                real_address: real_image_base,
                 data,
                 executable: true,
             });
+        } else {
+            sections.sort_by_key(|section| (section.real_address, section.index));
         }
 
         Self {
             sections,
-            format,
+            format: view_format,
             image_base,
+            real_image_base,
         }
     }
 }
@@ -244,6 +354,10 @@ impl<'a> BinaryView<'a> for MemoryView<'a> {
         self.image_base
     }
 
+    fn follow_rva(&self, rva: u32) -> Option<u64> {
+        self.real_image_base.checked_add(rva as u64)
+    }
+
     fn sections(&self) -> &[SectionInfo<'a>] {
         &self.sections
     }
@@ -255,6 +369,12 @@ impl<'a> BinaryView<'a> for MemoryView<'a> {
     fn locate_address(&self, va: u64) -> Option<(usize, u64)> {
         for section in &self.sections {
             let len = section.data.len() as u64;
+            if len == 0 {
+                continue;
+            }
+            if va >= section.real_address && va < section.real_address + len {
+                return Some((section.index, va - section.real_address));
+            }
             if va >= section.address && va < section.address + len {
                 return Some((section.index, va - section.address));
             }
@@ -271,5 +391,16 @@ impl<'a> BinaryView<'a> for MemoryView<'a> {
             return None;
         }
         Some(&section.data[start..end])
+    }
+
+    fn is_executable(&self, address: u64) -> bool {
+        self.sections.iter().any(|section| {
+            if !section.executable {
+                return false;
+            }
+            let len = section.data.len() as u64;
+            (address >= section.real_address && address < section.real_address + len)
+                || (address >= section.address && address < section.address + len)
+        })
     }
 }
