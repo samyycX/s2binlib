@@ -16,6 +16,8 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  ***********************************************************************************/
 
-mod c_bindings;
+pub mod c_bindings;
+pub mod compat;
+pub mod interface;
 
 pub use c_bindings::*;

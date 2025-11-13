@@ -182,7 +182,6 @@ pub trait BinaryView<'a> {
 pub struct FileBinaryView<'a> {
     sections: Vec<SectionInfo<'a>>,
     section_map: HashMap<usize, usize>,
-    format: BinaryFormat,
     image_base: u64,
 }
 
@@ -224,7 +223,6 @@ impl<'a> FileBinaryView<'a> {
         Ok(Self {
             sections,
             section_map,
-            format: file.format(),
             image_base,
         })
     }

@@ -65,29 +65,79 @@ This is useful for debugging integration issues with the C API.
 
 On windows, if you are seeing linking error like `"__imp_NtReadFile"`, you also need to link `kernel32.dll` and `ntdll.dll`.
 
-## Example
+## C API
 
-Example code: 
+S2BinLib provides two C API styles:
 
-```cpp
+### 1. Global Singleton API (Recommended for simple use cases, static linking)
+
+The global singleton API (`s2binlib.h`) provides a thread-safe, easy-to-use interface with all functions prefixed with `s2binlib_`:
+
+```c
 #include <s2binlib.h>
 
 int main() {
-
-  // Initialize the lib, the game type is csgo for cs2
+  // Initialize the global instance (game type is "csgo" for CS2)
   s2binlib_initialize("/home/csgo/cs2server/game", "csgo");
 
-  // If you are using metamod, relocate these modules because its modified
+  // If you are using metamod, relocate these modules because they're modified
   GET_V_IFACE_ANY(GetServerFactory, g_pSource2Server, ISource2Server, SOURCE2SERVER_INTERFACE_VERSION);
   GET_V_IFACE_CURRENT(GetEngineFactory, g_pEngineServer2, IVEngineServer2, SOURCE2ENGINETOSERVER_INTERFACE_VERSION);
   s2binlib_set_module_base_from_pointer("server", g_pSource2Server);
   s2binlib_set_module_base_from_pointer("engine2", g_pEngineServer2);
 
-  // pattern scan
+  // Pattern scan
   void* result;
   s2binlib_pattern_scan("server", "01 02 03 AA BB CC ? ? DD", &result);
 
-  // free after use, this will only release the file bytes in memory, dumped xref and other information will still be cached
+  // Find a vtable
+  void* vtable_addr;
+  s2binlib_find_vtable("server", "CBaseEntity", &vtable_addr);
+
+  // Free after use, this will only release the file bytes in memory
+  // Dumped xref and other information will still be cached
   s2binlib_unload_all_binaries();
 
+  // Clean up the global instance
+  s2binlib_destroy();
 }
+```
+
+**Features:**
+- Thread-safe global singleton
+- Simple API with no manual instance management
+- All functions use snake_case naming with `s2binlib_` prefix
+- Return values: 0 for success, negative for errors (-1: not initialized, -2: invalid parameter, -3: operation failed, -4: not found, -99: mutex error)
+
+### 2. Object-Oriented API (For version control)
+
+The object-oriented API (`s2binlib001.h`) allows multiple instances with explicit lifecycle control:
+
+```cpp
+#include <s2binlib001.h>
+
+int main() {
+  // Create instance manually
+  void* s2binlib_ptr = s2binlib001_create();
+  S2BinLib001* s2binlib = (S2BinLib001*)s2binlib_ptr;
+
+  // Initialize through vtable
+  s2binlib->Initialize("/home/csgo/cs2server/game", "csgo");
+
+  // Use vtable methods
+  void* result;
+  s2binlib->PatternScan("server", "01 02 03 AA BB CC ? ? DD", &result);
+
+  // Destroy instance
+  s2binlib->Destroy();
+}
+```
+
+### 3. Dynamic Loading
+Or use the `CreateInterface` function for dynamic loading:
+
+```cpp
+// windows example
+S2CreateInterfaceFn createInterface = (S2CreateInterfaceFn)GetProcAddress(hDll, "CreateInterface");
+auto s2binlib = createInterface(S2BINLIB_INTERFACE_NAME);
+```
