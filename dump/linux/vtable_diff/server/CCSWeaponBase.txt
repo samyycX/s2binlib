@@ -4,19 +4,19 @@ Children Count: 48
 =============================================
 func_0     [ DIFF 0   ]                               []
     "48 8B 05 79 CD 38 01 48 85 C0 74 04 C3 0F 1F 00"
-func_1     [ DIFF 48  ]                               ["CAK47", "CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CC4", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CCSWeaponBaseShotgun", "CWeaponNOVA", "CWeaponSawedoff", "CWeaponXM1014", "CKnife", "CWeaponBaseItem", "CItem_Healthshot"]
+func_1     [ DIFF 48  ]                               ["CAK47", "CBaseCSGrenade", "CC4", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
     "55 48 8D 05 88 26 D8 00 48 89 E5 53 48 89 FB 48"
-func_2     [ DIFF 48  ]                               ["CAK47", "CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CC4", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CCSWeaponBaseShotgun", "CWeaponNOVA", "CWeaponSawedoff", "CWeaponXM1014", "CKnife", "CWeaponBaseItem", "CItem_Healthshot"]
+func_2     [ DIFF 48  ]                               ["CAK47", "CBaseCSGrenade", "CC4", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
     "55 48 89 E5 53 48 89 FB 48 83 EC 08 E8 AF FE FF"
 func_3     [ DIFF 0   ]                               []
     "55 48 89 E5 41 54 53 48 89 FB E8 91 0B 9F FF 48"
 func_4     [ DIFF 0   ]                               []
     "55 48 8D 15 68 70 82 FF 48 89 E5 41 56 41 55 49"
-func_5     [ DIFF 11  ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CC4", "CWeaponElite", "CWeaponTaser", "CKnife"]
+func_5     [ DIFF 11  ]                               ["CBaseCSGrenade", "CC4", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponElite", "CWeaponTaser"]
     "55 48 89 E5 41 57 49 BF BF B9 6B 28 FF FF FF FF"
 func_6     [ DIFF 0   ]                               []
     "E9 4B 83 20 00 CC CC CC CC CC CC CC CC CC CC CC"
-func_7     [ DIFF 36  ]                               ["CAK47", "CSmokeGrenade", "CC4", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CKnife"]
+func_7     [ DIFF 36  ]                               ["CAK47", "CC4", "CCSWeaponBaseGun", "CDEagle", "CKnife", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer"]
     "55 48 89 E5 41 56 41 55 4C 8D 2D 2F A0 7F FF 41"
 func_8     [ DIFF 0   ]                               []
     "48 8B 07 48 8D 15 46 FE FF FF 48 8B 40 48 48 39"
@@ -24,7 +24,7 @@ func_9     [ DIFF 0   ]                               []
     "E9 2B 52 80 00 CC CC CC CC CC CC CC CC CC CC CC"
 func_10    [ DIFF 0   ]                               []
     "C6 05 D4 4F 85 00 01 C3 CC CC CC CC CC CC CC CC"
-func_11    [ DIFF 3   ]                               ["CC4", "CWeaponBaseItem", "CItem_Healthshot"]
+func_11    [ DIFF 3   ]                               ["CC4", "CItem_Healthshot", "CWeaponBaseItem"]
     "55 48 89 E5 41 56 41 55 41 54 53 48 89 FB 48 83"
 func_12    [ DIFF 0   ]                               []
     "E9 1B 30 58 00 CC CC CC CC CC CC CC CC CC CC CC"
@@ -84,15 +84,15 @@ func_39    [ DIFF 0   ]                               []
     "31 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_40    [ DIFF 0   ]                               []
     "48 8B 77 08 48 85 F6 75 07 C3 66 0F 1F 44 00 00"
-func_41    [ DIFF 48  ]                               ["CAK47", "CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CC4", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CCSWeaponBaseShotgun", "CWeaponNOVA", "CWeaponSawedoff", "CWeaponXM1014", "CKnife", "CWeaponBaseItem", "CItem_Healthshot"]
+func_41    [ DIFF 48  ]                               ["CAK47", "CBaseCSGrenade", "CC4", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
     "48 8D 05 C9 67 EF 00 C3 CC CC CC CC CC CC CC CC"
-func_42    [ DIFF 11  ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CWeaponElite", "CWeaponTaser", "CKnife", "CItem_Healthshot"]
+func_42    [ DIFF 11  ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponElite", "CWeaponTaser"]
     "E9 AB 7C 12 00 CC CC CC CC CC CC CC CC CC CC CC"
-func_43    [ DIFF 48  ]                               ["CAK47", "CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CC4", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CCSWeaponBaseShotgun", "CWeaponNOVA", "CWeaponSawedoff", "CWeaponXM1014", "CKnife", "CWeaponBaseItem", "CItem_Healthshot"]
+func_43    [ DIFF 48  ]                               ["CAK47", "CBaseCSGrenade", "CC4", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
     "48 8D 3D 99 3C EF 00 E9 94 42 85 00 0F 1F 40 00"
 func_44    [ DIFF 0   ]                               []
     "C3 CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC"
-func_45    [ DIFF 48  ]                               ["CAK47", "CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CC4", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CCSWeaponBaseShotgun", "CWeaponNOVA", "CWeaponSawedoff", "CWeaponXM1014", "CKnife", "CWeaponBaseItem", "CItem_Healthshot"]
+func_45    [ DIFF 48  ]                               ["CAK47", "CBaseCSGrenade", "CC4", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
     "48 8B 47 10 48 8B 50 08 48 8B 82 10 01 00 00 48"
 func_46    [ DIFF 0   ]                               []
     "55 48 89 E5 41 57 41 56 41 55 4C 8D AD C0 FE FF"
@@ -684,19 +684,19 @@ func_339   [ DIFF 0   ]                               []
     "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
 func_340   [ DIFF 0   ]                               []
     "55 48 89 E5 41 57 41 56 41 55 41 54 49 89 F4 53"
-func_341   [ DIFF 41  ]                               ["CAK47", "CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CC4", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer"]
+func_341   [ DIFF 41  ]                               ["CAK47", "CBaseCSGrenade", "CC4", "CCSWeaponBaseGun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer"]
     "55 48 89 E5 41 57 41 56 41 55 49 89 F5 41 54 53"
 func_342   [ DIFF 0   ]                               []
     "C3 CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_343   [ DIFF 0   ]                               []
     "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
-func_344   [ DIFF 3   ]                               ["CKnife", "CWeaponBaseItem", "CItem_Healthshot"]
+func_344   [ DIFF 3   ]                               ["CItem_Healthshot", "CKnife", "CWeaponBaseItem"]
     "55 48 89 E5 53 48 89 FB 48 83 EC 08 E8 3F 73 12"
 func_345   [ DIFF 33  ]                               ["CAK47", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer"]
     "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
 func_346   [ DIFF 0   ]                               []
     "55 48 89 E5 E8 67 73 12 00 5D 48 85 C0 0F 95 C0"
-func_347   [ DIFF 43  ]                               ["CAK47", "CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CKnife", "CWeaponBaseItem", "CItem_Healthshot"]
+func_347   [ DIFF 43  ]                               ["CAK47", "CBaseCSGrenade", "CCSWeaponBaseGun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer"]
     "55 48 89 E5 41 56 41 55 41 54 53 48 89 FB 48 83"
 func_348   [ DIFF 0   ]                               []
     "48 8B 07 FF A0 E8 0D 00 00 CC CC CC CC CC CC CC"
@@ -706,9 +706,9 @@ func_350   [ DIFF 0   ]                               []
     "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
 func_351   [ DIFF 0   ]                               []
     "55 48 89 E5 E8 E7 46 F5 FF 5D 0F B6 80 00 04 00"
-func_352   [ DIFF 7   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade"]
+func_352   [ DIFF 7   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CMolotovGrenade", "CSmokeGrenade"]
     "55 48 89 E5 E8 C7 46 F5 FF 5D 0F B6 80 01 04 00"
-func_353   [ DIFF 7   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade"]
+func_353   [ DIFF 7   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CMolotovGrenade", "CSmokeGrenade"]
     "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
 func_354   [ DIFF 0   ]                               []
     "55 48 8D 0D 88 FB FF FF 48 89 E5 53 48 89 FB 48"
@@ -724,7 +724,7 @@ func_359   [ DIFF 0   ]                               []
     "48 8B 87 00 06 00 00 8B 80 04 07 00 00 C3 CC CC"
 func_360   [ DIFF 0   ]                               []
     "55 48 89 E5 53 48 89 FB 48 83 EC 08 8B 06 83 F8"
-func_361   [ DIFF 41  ]                               ["CAK47", "CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CKnife"]
+func_361   [ DIFF 41  ]                               ["CAK47", "CBaseCSGrenade", "CCSWeaponBaseGun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer"]
     "48 8B 07 55 48 8D 15 55 1F 98 FF 48 89 E5 48 8B"
 func_362   [ DIFF 0   ]                               []
     "55 48 89 E5 41 57 41 56 41 55 41 54 53 48 89 FB"
@@ -752,7 +752,7 @@ func_373   [ DIFF 0   ]                               []
     "85 D2 0F 84 B8 01 00 00 55 48 89 E5 41 57 41 56"
 func_374   [ DIFF 1   ]                               ["CWeaponElite"]
     "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
-func_375   [ DIFF 8   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CItem_Healthshot"]
+func_375   [ DIFF 8   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CMolotovGrenade", "CSmokeGrenade"]
     "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
 func_376   [ DIFF 0   ]                               []
     "C3 CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC"
@@ -764,7 +764,7 @@ func_379   [ DIFF 0   ]                               []
     "8B 8F D4 06 00 00 83 F9 FF 74 55 48 8B 35 6E 52"
 func_380   [ DIFF 1   ]                               ["CWeaponTaser"]
     "66 0F EF C0 C3 CC CC CC CC CC CC CC CC CC CC CC"
-func_381   [ DIFF 3   ]                               ["CMolotovGrenade", "CIncendiaryGrenade", "CC4"]
+func_381   [ DIFF 3   ]                               ["CC4", "CIncendiaryGrenade", "CMolotovGrenade"]
     "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
 func_382   [ DIFF 0   ]                               []
     "55 48 8D 0D E8 E1 FF FF 48 89 E5 48 83 EC 10 48"
@@ -858,7 +858,7 @@ func_426   [ DIFF 33  ]                               ["CAK47", "CCSWeaponBaseGu
     "55 48 89 E5 53 48 89 FB 48 83 EC 18 E8 2F 38 56"
 func_427   [ DIFF 33  ]                               ["CAK47", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer"]
     "31 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
-func_428   [ DIFF 8   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CC4"]
+func_428   [ DIFF 8   ]                               ["CBaseCSGrenade", "CC4", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CMolotovGrenade", "CSmokeGrenade"]
     "55 48 89 E5 41 57 41 56 41 55 41 54 49 89 F4 53"
 func_429   [ DIFF 0   ]                               []
     "55 48 8D 15 58 31 FB FF 0F 28 D0 48 89 E5 41 57"
@@ -868,19 +868,19 @@ func_431   [ DIFF 0   ]                               []
     "31 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_432   [ DIFF 0   ]                               []
     "31 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
-func_433   [ DIFF 7   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade"]
+func_433   [ DIFF 7   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CMolotovGrenade", "CSmokeGrenade"]
     "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
-func_434   [ DIFF 7   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade"]
+func_434   [ DIFF 7   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CMolotovGrenade", "CSmokeGrenade"]
     "31 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
-func_435   [ DIFF 47  ]                               ["CAK47", "CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CC4", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponNOVA", "CWeaponSawedoff", "CWeaponXM1014", "CKnife", "CWeaponBaseItem", "CItem_Healthshot"]
+func_435   [ DIFF 47  ]                               ["CAK47", "CBaseCSGrenade", "CC4", "CCSWeaponBaseGun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
     "31 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
-func_436   [ DIFF 43  ]                               ["CAK47", "CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CKnife", "CWeaponBaseItem", "CItem_Healthshot"]
+func_436   [ DIFF 43  ]                               ["CAK47", "CBaseCSGrenade", "CCSWeaponBaseGun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CKnife", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer"]
     "31 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
-func_437   [ DIFF 43  ]                               ["CAK47", "CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CC4", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponBaseItem", "CItem_Healthshot"]
+func_437   [ DIFF 43  ]                               ["CAK47", "CBaseCSGrenade", "CC4", "CCSWeaponBaseGun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer"]
     "55 48 89 E5 41 55 41 54 53 48 89 FB 48 83 EC 08"
 func_438   [ DIFF 33  ]                               ["CAK47", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer"]
     "55 48 89 E5 41 54 49 89 FC 53 48 83 EC 40 E8 1D"
-func_439   [ DIFF 8   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CC4"]
+func_439   [ DIFF 8   ]                               ["CBaseCSGrenade", "CC4", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CMolotovGrenade", "CSmokeGrenade"]
     "C3 CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_440   [ DIFF 33  ]                               ["CAK47", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer"]
     "31 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
@@ -892,13 +892,13 @@ func_443   [ DIFF 33  ]                               ["CAK47", "CCSWeaponBaseGu
     "31 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_444   [ DIFF 33  ]                               ["CAK47", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer"]
     "C3 CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC"
-func_445   [ DIFF 43  ]                               ["CAK47", "CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CC4", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponBaseItem", "CItem_Healthshot"]
+func_445   [ DIFF 43  ]                               ["CAK47", "CBaseCSGrenade", "CC4", "CCSWeaponBaseGun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer"]
     "55 48 89 E5 41 57 41 56 41 55 41 54 53 48 89 FB"
-func_446   [ DIFF 46  ]                               ["CAK47", "CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CCSWeaponBaseGun", "CDEagle", "CWeaponAWP", "CWeaponAug", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CCSWeaponBaseShotgun", "CWeaponNOVA", "CWeaponSawedoff", "CWeaponXM1014", "CWeaponBaseItem", "CItem_Healthshot"]
+func_446   [ DIFF 46  ]                               ["CAK47", "CBaseCSGrenade", "CCSWeaponBaseGun", "CCSWeaponBaseShotgun", "CDEagle", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CMolotovGrenade", "CSmokeGrenade", "CWeaponAWP", "CWeaponAug", "CWeaponBaseItem", "CWeaponBizon", "CWeaponCZ75a", "CWeaponElite", "CWeaponFamas", "CWeaponFiveSeven", "CWeaponG3SG1", "CWeaponGalilAR", "CWeaponGlock", "CWeaponHKP2000", "CWeaponM249", "CWeaponM4A1", "CWeaponM4A1Silencer", "CWeaponMAC10", "CWeaponMP5SD", "CWeaponMP7", "CWeaponMP9", "CWeaponMag7", "CWeaponNOVA", "CWeaponNegev", "CWeaponP250", "CWeaponP90", "CWeaponRevolver", "CWeaponSCAR20", "CWeaponSG556", "CWeaponSSG08", "CWeaponSawedoff", "CWeaponTaser", "CWeaponTec9", "CWeaponUMP45", "CWeaponUSPSilencer", "CWeaponXM1014"]
     "55 48 8D 15 98 FE FF FF 48 89 E5 41 57 41 56 41"
 func_447   [ DIFF 0   ]                               []
     "55 48 89 E5 41 55 41 54 53 48 89 FB 48 83 EC 48"
-func_448   [ DIFF 8   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CItem_Healthshot"]
+func_448   [ DIFF 8   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CMolotovGrenade", "CSmokeGrenade"]
     "55 48 89 E5 53 48 89 FB 48 83 EC 08 48 8B 07 FF"
 func_449   [ DIFF 0   ]                               []
     "80 BF A0 12 00 00 00 0F 84 F3 00 00 00 55 48 89"
@@ -906,15 +906,15 @@ func_450   [ DIFF 0   ]                               []
     "55 48 89 E5 41 57 41 56 49 89 F6 41 55 49 89 D5"
 func_451   [ DIFF 0   ]                               []
     "55 48 89 E5 41 54 53 48 89 FB 48 83 EC 10 E8 8D"
-func_452   [ DIFF 2   ]                               ["CWeaponBaseItem", "CItem_Healthshot"]
+func_452   [ DIFF 2   ]                               ["CItem_Healthshot", "CWeaponBaseItem"]
     "55 48 89 E5 41 57 41 56 41 55 49 89 F5 41 54 53"
 func_453   [ DIFF 1   ]                               ["CWeaponCZ75a"]
     "55 31 F6 48 89 E5 41 54 53 48 89 FB 48 83 EC 40"
-func_454   [ DIFF 9   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CWeaponBaseItem", "CItem_Healthshot"]
+func_454   [ DIFF 9   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CMolotovGrenade", "CSmokeGrenade", "CWeaponBaseItem"]
     "55 48 89 E5 41 54 53 48 89 FB 48 83 EC 40 0F B7"
 func_455   [ DIFF 0   ]                               []
     "0F B6 87 79 12 00 00 C3 CC CC CC CC CC CC CC CC"
-func_456   [ DIFF 8   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CMolotovGrenade", "CIncendiaryGrenade", "CSmokeGrenade", "CItem_Healthshot"]
+func_456   [ DIFF 8   ]                               ["CBaseCSGrenade", "CDecoyGrenade", "CFlashbang", "CHEGrenade", "CIncendiaryGrenade", "CItem_Healthshot", "CMolotovGrenade", "CSmokeGrenade"]
     "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
 func_457   [ DIFF 0   ]                               []
     "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
@@ -932,17 +932,21 @@ Bases:
 Children: 
 "CAK47"
 "CBaseCSGrenade"
+"CC4"
+"CCSWeaponBaseGun"
+"CCSWeaponBaseShotgun"
+"CDEagle"
 "CDecoyGrenade"
 "CFlashbang"
 "CHEGrenade"
-"CMolotovGrenade"
 "CIncendiaryGrenade"
+"CItem_Healthshot"
+"CKnife"
+"CMolotovGrenade"
 "CSmokeGrenade"
-"CC4"
-"CCSWeaponBaseGun"
-"CDEagle"
 "CWeaponAWP"
 "CWeaponAug"
+"CWeaponBaseItem"
 "CWeaponBizon"
 "CWeaponCZ75a"
 "CWeaponElite"
@@ -960,6 +964,7 @@ Children:
 "CWeaponMP7"
 "CWeaponMP9"
 "CWeaponMag7"
+"CWeaponNOVA"
 "CWeaponNegev"
 "CWeaponP250"
 "CWeaponP90"
@@ -967,15 +972,10 @@ Children:
 "CWeaponSCAR20"
 "CWeaponSG556"
 "CWeaponSSG08"
+"CWeaponSawedoff"
 "CWeaponTaser"
 "CWeaponTec9"
 "CWeaponUMP45"
 "CWeaponUSPSilencer"
-"CCSWeaponBaseShotgun"
-"CWeaponNOVA"
-"CWeaponSawedoff"
 "CWeaponXM1014"
-"CKnife"
-"CWeaponBaseItem"
-"CItem_Healthshot"
 ================================================

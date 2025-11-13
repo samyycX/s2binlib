@@ -2,9 +2,9 @@ Vtable: CGameEventListener
 Virtual Function Count: 2
 Children Count: 37
 =============================================
-func_0     [ DIFF 37  ]                               ["CAvatarOverrideMgr", "CBaseDoor", "CRotDoor", "CBasePropDoor", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CBtTree", "CCSChickenManager", "CCSEventLog", "CCSFatDemoRecorder", "CCSFunFactMgr", "CCSGOSteamWorksGameStatsServer", "CCSGameRules::NetworkVar_m_RetakeRules", "CCSGameStats", "CCSHLTVDirector", "CCSPlayerController", "CEntitySpawner<class CCSPlayerController>", "CCSPointPulseSystem", "CCSScript_EntityScript", "CChicken", "CColorCorrectionSystem", "CEnvWindControllerSystem", "CEventLog", "CFishPool", "CGameJournal", "CNullGameJournal", "CHLTVDirector", "CLogicEventListener", "CLogicGameEventListener", "CNavMeshGameEventListener", "CPostProcessingVolume", "CRetakeGameRules", "CRoundEndReport", "CSmokeGrenadeProjectile", "CSteamWorksGameStatsServer", "CSteamWorksGameStatsUploader", "CVScriptGameEventListener"]
+func_0     [ DIFF 37  ]                               ["CAvatarOverrideMgr", "CBaseDoor", "CBasePropDoor", "CBtTree", "CCSChickenManager", "CCSEventLog", "CCSFatDemoRecorder", "CCSFunFactMgr", "CCSGOSteamWorksGameStatsServer", "CCSGameRules::NetworkVar_m_RetakeRules", "CCSGameStats", "CCSHLTVDirector", "CCSPlayerController", "CCSPointPulseSystem", "CCSScript_EntityScript", "CChicken", "CColorCorrectionSystem", "CEntitySpawner<class CCSPlayerController>", "CEnvWindControllerSystem", "CEventLog", "CFishPool", "CGameJournal", "CHLTVDirector", "CLogicEventListener", "CLogicGameEventListener", "CNavMeshGameEventListener", "CNullGameJournal", "CPostProcessingVolume", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRetakeGameRules", "CRotDoor", "CRoundEndReport", "CSmokeGrenadeProjectile", "CSteamWorksGameStatsServer", "CSteamWorksGameStatsUploader", "CVScriptGameEventListener"]
     "48 89 5C 24 08 57 48 83 EC 20 80 79 08 00 48 8D"
-func_1     [ DIFF 37  ]                               ["CAvatarOverrideMgr", "CBaseDoor", "CRotDoor", "CBasePropDoor", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CBtTree", "CCSChickenManager", "CCSEventLog", "CCSFatDemoRecorder", "CCSFunFactMgr", "CCSGOSteamWorksGameStatsServer", "CCSGameRules::NetworkVar_m_RetakeRules", "CCSGameStats", "CCSHLTVDirector", "CCSPlayerController", "CEntitySpawner<class CCSPlayerController>", "CCSPointPulseSystem", "CCSScript_EntityScript", "CChicken", "CColorCorrectionSystem", "CEnvWindControllerSystem", "CEventLog", "CFishPool", "CGameJournal", "CNullGameJournal", "CHLTVDirector", "CLogicEventListener", "CLogicGameEventListener", "CNavMeshGameEventListener", "CPostProcessingVolume", "CRetakeGameRules", "CRoundEndReport", "CSmokeGrenadeProjectile", "CSteamWorksGameStatsServer", "CSteamWorksGameStatsUploader", "CVScriptGameEventListener"]
+func_1     [ DIFF 37  ]                               ["CAvatarOverrideMgr", "CBaseDoor", "CBasePropDoor", "CBtTree", "CCSChickenManager", "CCSEventLog", "CCSFatDemoRecorder", "CCSFunFactMgr", "CCSGOSteamWorksGameStatsServer", "CCSGameRules::NetworkVar_m_RetakeRules", "CCSGameStats", "CCSHLTVDirector", "CCSPlayerController", "CCSPointPulseSystem", "CCSScript_EntityScript", "CChicken", "CColorCorrectionSystem", "CEntitySpawner<class CCSPlayerController>", "CEnvWindControllerSystem", "CEventLog", "CFishPool", "CGameJournal", "CHLTVDirector", "CLogicEventListener", "CLogicGameEventListener", "CNavMeshGameEventListener", "CNullGameJournal", "CPostProcessingVolume", "CPropDoorRotating", "CPropDoorRotatingBreakable", "CRetakeGameRules", "CRotDoor", "CRoundEndReport", "CSmokeGrenadeProjectile", "CSteamWorksGameStatsServer", "CSteamWorksGameStatsUploader", "CVScriptGameEventListener"]
     "48 83 EC 28 E8 EB FF FF FF 48 85 C0 74 06 FF 15"
 
 =============================================
@@ -19,10 +19,7 @@ Bases:
 Children: 
 "CAvatarOverrideMgr"
 "CBaseDoor"
-"CRotDoor"
 "CBasePropDoor"
-"CPropDoorRotating"
-"CPropDoorRotatingBreakable"
 "CBtTree"
 "CCSChickenManager"
 "CCSEventLog"
@@ -33,22 +30,25 @@ Children:
 "CCSGameStats"
 "CCSHLTVDirector"
 "CCSPlayerController"
-"CEntitySpawner<class CCSPlayerController>"
 "CCSPointPulseSystem"
 "CCSScript_EntityScript"
 "CChicken"
 "CColorCorrectionSystem"
+"CEntitySpawner<class CCSPlayerController>"
 "CEnvWindControllerSystem"
 "CEventLog"
 "CFishPool"
 "CGameJournal"
-"CNullGameJournal"
 "CHLTVDirector"
 "CLogicEventListener"
 "CLogicGameEventListener"
 "CNavMeshGameEventListener"
+"CNullGameJournal"
 "CPostProcessingVolume"
+"CPropDoorRotating"
+"CPropDoorRotatingBreakable"
 "CRetakeGameRules"
+"CRotDoor"
 "CRoundEndReport"
 "CSmokeGrenadeProjectile"
 "CSteamWorksGameStatsServer"
