@@ -31,8 +31,6 @@ pub use pattern::*;
 pub use s2binlib::*;
 pub use vtable::*;
 
-use libloading;
-
 #[cfg(test)]
 #[allow(unused_imports, unused_variables)]
 mod tests {
@@ -44,7 +42,6 @@ mod tests {
 
     use anyhow::Result;
     use iced_x86::{Code, Decoder, DecoderOptions, Mnemonic, OpKind};
-    use libloading::Library;
     use object::BinaryFormat;
 
     use crate::{
