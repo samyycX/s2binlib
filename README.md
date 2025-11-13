@@ -18,6 +18,8 @@ This library mainly read data from original binary file instead of from memory, 
 - Find all CEmbeddedNetworkVar NetworkStateChanged function index
 - Follow xref safely
 - Dump vtables
+- Get runtime object rtti info (name, base classes)
+- Dump strings
 - Dump entity classes (dumper)
 - Dump vtable diffs (dumper)
 - Dump game system overrides (dumper)
@@ -28,7 +30,7 @@ This library mainly read data from original binary file instead of from memory, 
 
 - `s2binlib`: core Rust library crate exposing safe APIs.
 - `s2binlib_binding`: C ABI wrapper crate that links to `s2binlib` and produces the `s2binlib` DLL/LIB artifacts.
-- `s2binlib_dumper`: A dumper based on s2binlib for dumping game related data.
+- `s2binlib_dumper`: A dumper based on s2binlib for dumping and tracking game related data.
 
 ## Compiling
 
