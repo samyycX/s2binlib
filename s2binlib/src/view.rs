@@ -412,14 +412,9 @@ impl<'a> S2BinLib<'a> {
     }
 
     pub fn get_memory_view_from_ptr(&self, ptr: u64) -> Result<MemoryView<'_>> {
-        let result = module_from_pointer(ptr);
+        let module_base = self.module_from_pointer(ptr)?;
 
-        if result.is_none() {
-            bail!("Failed to get module from pointer.");
-        }
-
-        let (module_name, module_base) = result.unwrap();
-        let module_info = get_module_info(&module_name)?;
+        let module_info = get_module_info(module_base)?;
         let memory_view = unsafe {
             MemoryView::new(
                 module_info.base_address as *const u8,

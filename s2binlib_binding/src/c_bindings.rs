@@ -2475,7 +2475,7 @@ pub extern "C" fn s2binlib_get_object_ptr_vtable_name(
 
                 0
             }
-            Err(_) => return_error!(-4, "Failed to get vtable info"),
+            Err(err) => return_error!(-4, format!("Failed to get vtable info: {:?}", err)),
         }
     }
 }
