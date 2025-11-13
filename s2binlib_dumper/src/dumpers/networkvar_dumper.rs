@@ -32,7 +32,7 @@ pub fn dump_networkvars(s2binlib: &S2BinLib, dump_dir: &str) -> Result<()> {
         if vtable.type_name.contains("NetworkVar_")
             && !vtable.type_name.starts_with("CUtlVectorDataOps")
         {
-            let index = s2binlib.find_networkrvar_vtable_statechanged_rva(vtable.vtable_address);
+            let index = s2binlib.find_networkvar_vtable_statechanged_rva(vtable.vtable_address);
 
             if let Err(e) = index {
                 warn!(

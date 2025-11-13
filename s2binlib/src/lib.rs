@@ -64,27 +64,31 @@ mod tests {
 
         s2binlib.load_binary("server");
 
-        println!("lib: {:?}", "");
-        let lib = unsafe { Library::new("F:/cs2server/game/bin/win64/tier0.dll")? };
+        s2binlib.dump_strings("server")?;
 
-        println!("lib: {:?}", lib);
+        println!("{:?}", s2binlib.strings_cache.get("server").unwrap().get("nullptr Ent in GiveNamedItem: %s!").unwrap());
 
-        let module_info = get_module_info("tier0.dll")?;
+        // println!("lib: {:?}", "");
+        // let lib = unsafe { Library::new("F:/cs2server/game/bin/win64/tier0.dll")? };
 
-        let view = unsafe {
-            MemoryView::new(
-                module_info.base_address as *const u8,
-                module_info.size,
-                module_info.base_address as u64,
-            )
-        };
+        // println!("lib: {:?}", lib);
 
-        let view2 = s2binlib.get_file_binary_view("server")?;
+        // let module_info = get_module_info("tier0.dll")?;
 
-        let mut parser = MsvcParser::new(&view);
-        let vtables = parser.parse()?;
+        // let view = unsafe {
+        //     MemoryView::new(
+        //         module_info.base_address as *const u8,
+        //         module_info.size,
+        //         module_info.base_address as u64,
+        //     )
+        // };
 
-        println!("{:?}", vtables);
+        // let view2 = s2binlib.get_file_binary_view("server")?;
+
+        // let mut parser = MsvcParser::new(&view);
+        // let vtables = parser.parse()?;
+
+        // println!("{:?}", vtables);
 
         // let c = view.read::<u64>(module_info.base_address as u64).unwrap();
         // let locator = parser.parse_locator(c).unwrap();

@@ -56,6 +56,8 @@ pub struct S2BinLib<'a> {
     pub(crate) custom_binary_paths_linux: HashMap<String, String>,
     pub(crate) vtables: HashMap<String, Vec<VTableInfo>>,
     pub(crate) name_to_vtables: HashMap<String, &'a VTableInfo>,
+    /// Cached ASCII strings: binary_name -> (string_rva -> string)
+    pub(crate) strings_cache: HashMap<String, HashMap<String, u64>>,
 }
 
 fn read_int32(data: &[u8], offset: u64) -> u32 {
@@ -205,6 +207,7 @@ impl<'a> S2BinLib<'a> {
             custom_binary_paths_linux: HashMap::new(),
             vtables: HashMap::new(),
             name_to_vtables: HashMap::new(),
+            strings_cache: HashMap::new(),
         }
     }
 
@@ -963,6 +966,59 @@ impl<'a> S2BinLib<'a> {
         Ok(())
     }
 
+    pub fn dump_strings(&mut self, binary_name: &str) -> Result<()> {
+        const MIN_LENGTH: u64 = 4;
+        let binary_data = self.get_binary(binary_name)?;
+        let mut strings_map: HashMap<String, u64> = HashMap::new();
+
+        let mut section_ranges = vec![];
+        if self.get_os() == "windows" {
+            section_ranges.push(self.get_section_range(binary_name, ".data")?); 
+            section_ranges.push(self.get_section_range(binary_name, ".rdata")?); 
+
+        } else if self.get_os() == "linux" {
+            section_ranges.push(self.get_section_range(binary_name, ".rodata")?);
+            section_ranges.push(self.get_section_range(binary_name, ".data")?);
+            section_ranges.push(self.get_section_range(binary_name, ".data.rel.ro")?);
+        }
+
+        for section_range in section_ranges {
+            let start = section_range.0;
+            let end = section_range.1;
+            let mut index = start;
+            while index < end {
+                let byte = binary_data[index as usize];
+                if !byte.is_ascii() || (byte < 0x20 || byte > 0x7E) {
+                    index += 1;
+                    continue;
+                }
+
+                let start = index;
+                while index < end {
+                    let b = binary_data[index as usize];
+                    if !b.is_ascii() || (b < 0x20 || b > 0x7E) {
+                        break;
+                    }
+                    index += 1;
+                }
+
+                let length = index - start;
+                if length >= MIN_LENGTH {
+                    let slice = &binary_data[start as usize..index as usize];
+                    if let Ok(rva) = self.file_offset_to_rva(binary_name, start as u64) {
+                        let string = String::from_utf8_lossy(slice).to_string();
+                        strings_map.insert(string, rva);
+                    }
+                }
+            }
+        }
+
+        self.strings_cache
+            .insert(binary_name.to_string(), strings_map);
+
+        Ok(())
+    }   
+
     pub fn find_xrefs_cached(&self, binary_name: &str, target_rva: u64) -> Option<&Vec<u64>> {
         self.xrefs_cache
             .get(binary_name)
@@ -1142,7 +1198,7 @@ impl<'a> S2BinLib<'a> {
                 }
             }
         }
-        Err(anyhow::anyhow!("Networkrvar_StateChanged not found"))
+        Err(anyhow::anyhow!("NetworkVar_StateChanged not found"))
     }
 
     pub fn find_networkvar_vtable_statechanged(&self, vtable_mem_address: u64) -> Result<u64> {
