@@ -335,7 +335,6 @@ C_WeaponBaseItem VS C_Item_Healthshot
 [=]
 [=]
 [=]
-[=]
 [!]
 [=]
 [=]

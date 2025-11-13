@@ -240,7 +240,6 @@ C_CSPlayerPawn  VS C_CSGO_PreviewPlayer
 [=]
 [=]
 [=]
-[=]
 [!]
 [=]
 [=]
@@ -351,3 +350,4 @@ C_CSPlayerPawn  VS C_CSGO_PreviewPlayer
 [=]
 [=]
 [=]
+[!]

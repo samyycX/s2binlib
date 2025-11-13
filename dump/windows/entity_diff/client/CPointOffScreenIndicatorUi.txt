@@ -247,7 +247,6 @@ C_PointClientUIWorldPanel VS CPointOffScreenIndicatorUi
 [=]
 [=]
 [=]
-[=]
 [!]
 [=]
 [=]

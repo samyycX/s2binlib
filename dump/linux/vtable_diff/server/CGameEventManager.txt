@@ -3,7 +3,7 @@ Virtual Function Count: 17
 Children Count: 0
 =============================================
 func_0     [ DIFF 0   ]                               []
-    "55 48 8D 05 68 48 BB 00 48 89 E5 41 57 41 56 41"
+    "55 48 8D 05 A8 4E BB 00 48 89 E5 41 57 41 56 41"
 func_1     [ DIFF 0   ]                               []
     "55 48 89 E5 53 48 89 FB 48 83 EC 08 E8 3F FB FF"
 func_2     [ DIFF 0   ]                               []
@@ -19,7 +19,7 @@ func_6     [ DIFF 0   ]                               []
 func_7     [ DIFF 0   ]                               []
     "55 48 89 E5 41 57 41 56 4C 8D BF E0 00 00 00 41"
 func_8     [ DIFF 0   ]                               []
-    "55 48 89 E5 41 55 49 89 FD 41 54 48 8D 3D AE 73"
+    "55 48 89 E5 41 55 49 89 FD 41 54 48 8D 3D 6E 7A"
 func_9     [ DIFF 0   ]                               []
     "B9 01 00 00 00 31 D2 E9 D4 FA FF FF CC CC CC CC"
 func_10    [ DIFF 0   ]                               []
@@ -42,6 +42,8 @@ Bases:
 "IGameEventManager2"
     Offset: 0
     Flags: 0
+    Nested Bases:
+        "IBaseInterface"
 =============================================
 
 =============================================

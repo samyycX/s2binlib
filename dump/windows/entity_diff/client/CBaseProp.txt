@@ -272,6 +272,5 @@ CBaseAnimGraph  VS       CBaseProp
 [=]
 [=]
 [=]
-[=]
 [?]
 [?]

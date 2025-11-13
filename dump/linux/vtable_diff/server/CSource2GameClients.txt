@@ -5,13 +5,13 @@ Children Count: 0
 func_0     [ DIFF 0   ]                               []
     "55 48 89 E5 53 48 89 FB 48 8D 7D E8 48 83 EC 28"
 func_1     [ DIFF 0   ]                               []
-    "55 48 89 E5 53 48 89 FB 48 83 EC 08 E8 AF 2D 41"
+    "55 48 89 E5 53 48 89 FB 48 83 EC 08 E8 2F 34 41"
 func_2     [ DIFF 0   ]                               []
     "31 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_3     [ DIFF 0   ]                               []
-    "48 8D 05 B1 38 D7 00 48 83 38 00 74 13 55 31 FF"
+    "48 8D 05 51 40 D7 00 48 83 38 00 74 13 55 31 FF"
 func_4     [ DIFF 0   ]                               []
-    "55 48 89 E5 53 48 83 EC 08 48 8D 1D E0 10 E8 00"
+    "55 48 89 E5 53 48 83 EC 08 48 8D 1D 80 18 E8 00"
 func_5     [ DIFF 0   ]                               []
     "C3 CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_6     [ DIFF 0   ]                               []
@@ -33,13 +33,13 @@ func_13    [ DIFF 0   ]                               []
 func_14    [ DIFF 0   ]                               []
     "55 48 89 E5 41 57 49 89 CF 41 56 4D 89 C6 41 55"
 func_15    [ DIFF 0   ]                               []
-    "55 48 8D 15 B8 75 B8 FF 48 89 E5 41 57 41 56 41"
+    "55 48 8D 15 D8 3E B8 FF 48 89 E5 41 57 41 56 41"
 func_16    [ DIFF 0   ]                               []
     "55 89 F7 48 89 E5 41 57 41 56 41 55 41 54 53 48"
 func_17    [ DIFF 0   ]                               []
     "55 89 F7 48 89 E5 41 55 41 54 49 89 D4 53 48 83"
 func_18    [ DIFF 0   ]                               []
-    "89 F7 48 89 D6 E9 36 AC D9 FF CC CC CC CC CC CC"
+    "89 F7 48 89 D6 E9 B6 AC D9 FF CC CC CC CC CC CC"
 func_19    [ DIFF 0   ]                               []
     "55 89 F7 48 89 E5 E8 15 66 F0 FF 48 85 C0 74 10"
 func_20    [ DIFF 0   ]                               []
@@ -73,7 +73,7 @@ func_33    [ DIFF 0   ]                               []
 func_34    [ DIFF 0   ]                               []
     "55 48 89 E5 41 57 41 56 41 55 41 54 45 89 CC 53"
 func_35    [ DIFF 0   ]                               []
-    "55 48 89 E5 E8 E7 63 5D FF 5D 48 85 C0 48 8D 50"
+    "55 48 89 E5 E8 A7 1C 5D FF 5D 48 85 C0 48 8D 50"
 func_36    [ DIFF 0   ]                               []
     "55 89 F7 48 89 E5 E8 C5 5B F0 FF 48 85 C0 74 10"
 func_37    [ DIFF 0   ]                               []
@@ -89,13 +89,15 @@ func_41    [ DIFF 0   ]                               []
 func_42    [ DIFF 0   ]                               []
     "8B 4E 18 83 F9 76 7F 38 83 F9 74 7F 4B 83 F9 48"
 func_43    [ DIFF 0   ]                               []
-    "55 48 89 F7 48 89 E5 E8 84 15 5C FF 5D 83 F0 01"
+    "55 48 89 F7 48 89 E5 E8 44 CE 5B FF 5D 83 F0 01"
 
 =============================================
 Bases: 
 "CGameAppSystem<ISource2GameClients, 0>"
     Offset: 0
     Flags: 0
+    Nested Bases:
+        "CTier3AppSystem<ISource2GameClients, (long long)0>"
 =============================================
 
 =============================================

@@ -238,7 +238,6 @@ C_BaseCombatCharacter VS C_BasePlayerPawn
 [=]
 [=]
 [=]
-[=]
 [!]
 [=]
 [=]

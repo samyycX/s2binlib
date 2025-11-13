@@ -104,6 +104,8 @@ Bases:
 "CTier0AppSystem<ICvar, (long long)0>"
     Offset: 0
     Flags: 0
+    Nested Bases:
+        "CBaseAppSystem<ICvar>"
 =============================================
 
 =============================================

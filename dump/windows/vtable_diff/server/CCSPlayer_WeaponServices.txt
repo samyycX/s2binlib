@@ -3,15 +3,15 @@ Virtual Function Count: 36
 Children Count: 0
 =============================================
 func_0     [ DIFF 0   ]                               []
-    "40 53 48 83 EC 20 48 8B DA 48 8D 15 80 D7 FD 00"
+    "40 53 48 83 EC 20 48 8B DA 48 8D 15 60 D5 FD 00"
 func_1     [ DIFF 0   ]                               []
-    "48 8D 05 59 A6 FE 00 C3 CC CC CC CC CC CC CC CC"
+    "48 8D 05 99 A4 FE 00 C3 CC CC CC CC CC CC CC CC"
 func_2     [ DIFF 0   ]                               []
     "48 89 5C 24 08 57 48 83 EC 20 8B FA 48 8B D9 E8"
 func_3     [ DIFF 0   ]                               []
     "40 53 48 83 EC 20 48 83 79 30 00 48 8B D9 75 05"
 func_4     [ DIFF 0   ]                               []
-    "40 53 48 83 EC 20 48 8D 54 24 38 48 8B D9 E8 ED"
+    "40 53 48 83 EC 20 48 8D 54 24 38 48 8B D9 E8 0D"
 func_5     [ DIFF 0   ]                               []
     "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_6     [ DIFF 0   ]                               []
@@ -21,7 +21,7 @@ func_7     [ DIFF 0   ]                               []
 func_8     [ DIFF 0   ]                               []
     "40 56 41 55 41 57 48 83 EC 50 33 F6 4C 8B F9 48"
 func_9     [ DIFF 0   ]                               []
-    "40 53 48 83 EC 20 E8 35 89 12 00 48 8B D8 48 85"
+    "40 53 48 83 EC 20 E8 D5 87 12 00 48 8B D8 48 85"
 func_10    [ DIFF 0   ]                               []
     "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_11    [ DIFF 0   ]                               []
@@ -35,9 +35,9 @@ func_14    [ DIFF 0   ]                               []
 func_15    [ DIFF 0   ]                               []
     "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_16    [ DIFF 0   ]                               []
-    "8B 51 58 83 FA FF 74 60 48 8B 0D 11 26 01 01 48"
+    "8B 51 58 83 FA FF 74 60 48 8B 0D B1 24 01 01 48"
 func_17    [ DIFF 0   ]                               []
-    "40 53 48 83 EC 20 48 8B D9 E8 12 9C 12 00 48 8D"
+    "40 53 48 83 EC 20 48 8B D9 E8 B2 9A 12 00 48 8D"
 func_18    [ DIFF 0   ]                               []
     "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_19    [ DIFF 0   ]                               []
@@ -69,7 +69,7 @@ func_31    [ DIFF 0   ]                               []
 func_32    [ DIFF 0   ]                               []
     "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_33    [ DIFF 0   ]                               []
-    "40 53 48 83 EC 20 0F B6 DA E8 C2 4C F0 FF 0F B6"
+    "40 53 48 83 EC 20 0F B6 DA E8 A2 4E F0 FF 0F B6"
 func_34    [ DIFF 0   ]                               []
     "0F 57 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
 func_35    [ DIFF 0   ]                               []

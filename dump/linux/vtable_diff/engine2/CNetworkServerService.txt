@@ -104,6 +104,8 @@ Bases:
 "CBaseEngineService<INetworkServerService>"
     Offset: 0
     Flags: 2
+    Nested Bases:
+        "CTier4AppSystem<INetworkServerService, 0>"
 "IVConCommDataReceived"
     Offset: 56
     Flags: 2

@@ -279,4 +279,3 @@ C_BasePropDoor  VS C_PropDoorRotating
 [=]
 [=]
 [=]
-[=]

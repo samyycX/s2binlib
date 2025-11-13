@@ -27,7 +27,7 @@ func_10    [ DIFF 0   ]                               []
 func_11    [ DIFF 0   ]                               []
     "48 8B 05 D9 06 2F 00 48 85 C0 74 24 0F B6 80 A5"
 func_12    [ DIFF 0   ]                               []
-    "F3 0F 10 05 D8 1E BE FF C3 CC CC CC CC CC CC CC"
+    "F3 0F 10 05 98 1E BE FF C3 CC CC CC CC CC CC CC"
 func_13    [ DIFF 0   ]                               []
     "55 48 89 E5 41 57 41 56 4C 8D 75 C8 41 55 4C 89"
 func_14    [ DIFF 0   ]                               []
@@ -43,7 +43,7 @@ func_18    [ DIFF 0   ]                               []
 func_19    [ DIFF 0   ]                               []
     "55 B8 FF FF FF FF 48 89 E5 41 57 41 56 41 55 41"
 func_20    [ DIFF 0   ]                               []
-    "48 8B 05 99 0C 2F 00 48 8D 15 8D 79 BE FF 48 85"
+    "48 8B 05 99 0C 2F 00 48 8D 15 4D 79 BE FF 48 85"
 func_21    [ DIFF 0   ]                               []
     "89 F0 C1 E0 1F C3 CC CC CC CC CC CC CC CC CC CC"
 func_22    [ DIFF 0   ]                               []
@@ -73,7 +73,7 @@ func_33    [ DIFF 0   ]                               []
 func_34    [ DIFF 0   ]                               []
     "48 8B 05 49 00 2F 00 BA FF FF FF FF 48 85 C0 74"
 func_35    [ DIFF 0   ]                               []
-    "48 8B 3D 99 09 2F 00 F3 0F 10 05 F5 31 BE FF 48"
+    "48 8B 3D 99 09 2F 00 F3 0F 10 05 B5 31 BE FF 48"
 func_36    [ DIFF 0   ]                               []
     "48 8B 05 29 09 2F 00 48 85 C0 74 0C 8B 80 BC 03"
 func_37    [ DIFF 0   ]                               []
@@ -125,7 +125,7 @@ func_59    [ DIFF 0   ]                               []
 func_60    [ DIFF 0   ]                               []
     "48 8B 3D 41 07 2F 00 48 8D 15 B2 03 EA FF 48 8B"
 func_61    [ DIFF 0   ]                               []
-    "55 BF 1C 00 00 00 48 89 E5 53 48 83 EC 08 E8 CD"
+    "55 BF 1C 00 00 00 48 89 E5 53 48 83 EC 08 E8 AD"
 func_62    [ DIFF 0   ]                               []
     "55 48 89 E5 53 48 83 EC 08 0F B6 05 78 50 2F 00"
 func_63    [ DIFF 0   ]                               []
@@ -181,9 +181,9 @@ func_87    [ DIFF 0   ]                               []
 func_88    [ DIFF 0   ]                               []
     "31 C0 80 3D C7 2F 2F 00 00 75 06 8B 05 C7 48 34"
 func_89    [ DIFF 0   ]                               []
-    "48 8B 05 11 07 2F 00 48 8D 15 04 62 BF FF 48 85"
+    "48 8B 05 11 07 2F 00 48 8D 15 C4 61 BF FF 48 85"
 func_90    [ DIFF 0   ]                               []
-    "48 8B 05 E9 06 2F 00 48 8D 15 E4 61 BF FF 48 85"
+    "48 8B 05 E9 06 2F 00 48 8D 15 A4 61 BF FF 48 85"
 func_91    [ DIFF 0   ]                               []
     "48 8B 15 49 11 2F 00 31 C0 48 85 D2 74 06 8B 82"
 func_92    [ DIFF 0   ]                               []
@@ -209,7 +209,7 @@ func_101   [ DIFF 0   ]                               []
 func_102   [ DIFF 0   ]                               []
     "C3 CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_103   [ DIFF 0   ]                               []
-    "F3 0F 10 05 B4 21 C0 FF C3 CC CC CC CC CC CC CC"
+    "F3 0F 10 05 74 21 C0 FF C3 CC CC CC CC CC CC CC"
 func_104   [ DIFF 0   ]                               []
     "48 8B 3D 11 5A 33 00 48 8B 07 FF A0 40 01 00 00"
 func_105   [ DIFF 0   ]                               []
@@ -239,7 +239,7 @@ func_116   [ DIFF 0   ]                               []
 func_117   [ DIFF 0   ]                               []
     "55 48 89 E5 41 57 41 56 41 55 41 54 53 48 81 EC"
 func_118   [ DIFF 0   ]                               []
-    "55 48 89 E5 E8 D7 D8 C3 FF 84 C0 74 1B 5D 48 8D"
+    "55 48 89 E5 E8 B7 D8 C3 FF 84 C0 74 1B 5D 48 8D"
 func_119   [ DIFF 0   ]                               []
     "48 8B 3D F1 0F 2F 00 48 8D 15 22 62 E9 FF 48 8B"
 func_120   [ DIFF 0   ]                               []
@@ -249,7 +249,7 @@ func_121   [ DIFF 0   ]                               []
 func_122   [ DIFF 0   ]                               []
     "48 8B 3D B1 FA 2E 00 48 8D 15 E2 4C E9 FF 48 8B"
 func_123   [ DIFF 0   ]                               []
-    "48 89 F7 48 89 D6 E9 95 F5 C3 FF CC CC CC CC CC"
+    "48 89 F7 48 89 D6 E9 75 F5 C3 FF CC CC CC CC CC"
 func_124   [ DIFF 0   ]                               []
     "48 8B 3D 51 FA 2E 00 48 8D 0D 82 4C E9 FF 48 8B"
 func_125   [ DIFF 0   ]                               []
@@ -337,7 +337,7 @@ func_165   [ DIFF 0   ]                               []
 func_166   [ DIFF 0   ]                               []
     "48 8B 3D 39 EA 2E 00 48 85 FF 74 4C 55 48 89 E5"
 func_167   [ DIFF 0   ]                               []
-    "55 48 89 E5 53 89 F3 48 83 EC 08 E8 80 D1 C3 FF"
+    "55 48 89 E5 53 89 F3 48 83 EC 08 E8 60 D1 C3 FF"
 func_168   [ DIFF 0   ]                               []
     "48 8B 3D C9 EB 2E 00 83 FE 01 77 3C 48 85 FF 74"
 func_169   [ DIFF 0   ]                               []
@@ -355,7 +355,7 @@ func_174   [ DIFF 0   ]                               []
 func_175   [ DIFF 0   ]                               []
     "48 8B 3D 39 2B 2F 00 55 48 89 E5 48 8B 07 FF 50"
 func_176   [ DIFF 0   ]                               []
-    "F2 0F 10 05 E0 3B BE FF C3 CC CC CC CC CC CC CC"
+    "F2 0F 10 05 A0 3B BE FF C3 CC CC CC CC CC CC CC"
 func_177   [ DIFF 0   ]                               []
     "48 8B 05 49 5C 2F 00 48 8D 50 08 48 85 C0 48 0F"
 func_178   [ DIFF 0   ]                               []
@@ -388,6 +388,8 @@ Bases:
 "CTier4AppSystem<IVEngineClient2, 0>"
     Offset: 0
     Flags: 0
+    Nested Bases:
+        "CTier3AppSystem<IVEngineClient2, (long long)0>"
 =============================================
 
 =============================================

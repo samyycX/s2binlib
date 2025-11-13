@@ -240,4 +240,3 @@ C_Sprite        VS CSpriteOriented
 [=]
 [=]
 [=]
-[=]

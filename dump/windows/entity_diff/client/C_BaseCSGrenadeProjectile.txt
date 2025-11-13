@@ -288,4 +288,3 @@ C_BaseGrenade   VS C_BaseCSGrenadeProjectile
 [=]
 [=]
 [=]
-[=]
