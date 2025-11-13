@@ -17,7 +17,7 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  ***********************************************************************************/
 
-use std::collections::{HashMap, HashSet};
+use hashbrown::{HashMap, HashSet};
 
 use anyhow::{Result, anyhow, bail};
 use cpp_demangle::Symbol;
