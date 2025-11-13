@@ -2,7 +2,6 @@ use std::collections::HashMap;
 
 use anyhow::{Result, bail};
 use object::{BinaryFormat, Object, ObjectSection, read::pe::ImageOptionalHeader};
-use windows::Win32::System::Memory;
 
 use crate::{
     S2BinLib, is_executable,
