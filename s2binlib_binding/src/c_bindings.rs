@@ -79,9 +79,9 @@ static S2BINLIB: Lazy<Mutex<Option<S2BinLib<'static>>>> = Lazy::new(|| Mutex::ne
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_initialize(game_path: *const c_char, game_type: *const c_char) -> i32 {
     unsafe {
-        // Validate input pointers
+        // validate input pointers
         if game_path.is_null() || game_type.is_null() {
-            return_error!(-2, "Invalid parameters: game_path or game_type is null");
+            return_error!(-2, "invalid parameters: game_path or game_type is null");
         }
 
         // Convert C strings to Rust strings
@@ -147,9 +147,9 @@ pub extern "C" fn s2binlib_initialize_with_os(
     os: *const c_char,
 ) -> i32 {
     unsafe {
-        // Validate input pointers
+        // validate input pointers
         if game_path.is_null() || game_type.is_null() || os.is_null() {
-            return_error!(-2, "Invalid parameters: game_path, game_type or os is null");
+            return_error!(-2, "invalid parameters: game_path, game_type or os is null");
         }
 
         // Convert C strings to Rust strings
@@ -215,11 +215,11 @@ pub extern "C" fn s2binlib_pattern_scan(
     result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
-        // Validate input pointers
+        // validate input pointers
         if binary_name.is_null() || pattern.is_null() || result.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, pattern or result is null"
+                "invalid parameters: binary_name, pattern or result is null"
             );
         }
 
@@ -297,11 +297,11 @@ pub extern "C" fn s2binlib_find_vtable(
     result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
-        // Validate input pointers
+        // validate input pointers
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, vtable_name or result is null"
+                "invalid parameters: binary_name, vtable_name or result is null"
             );
         }
 
@@ -378,11 +378,11 @@ pub extern "C" fn s2binlib_find_symbol(
     result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
-        // Validate input pointers
+        // validate input pointers
         if binary_name.is_null() || symbol_name.is_null() || result.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, symbol_name or result is null"
+                "invalid parameters: binary_name, symbol_name or result is null"
             );
         }
 
@@ -457,9 +457,9 @@ pub extern "C" fn s2binlib_set_module_base_from_pointer(
     pointer: *mut c_void,
 ) -> i32 {
     unsafe {
-        // Validate input pointers
+        // validate input pointers
         if binary_name.is_null() {
-            return_error!(-2, "Invalid parameter: binary_name is null");
+            return_error!(-2, "invalid parameter: binary_name is null");
         }
 
         // Convert C strings to Rust strings
@@ -512,7 +512,7 @@ pub extern "C" fn s2binlib_set_module_base_from_pointer(
 pub extern "C" fn s2binlib_clear_module_base_address(binary_name: *const c_char) -> i32 {
     unsafe {
         if binary_name.is_null() {
-            return_error!(-2, "Invalid parameter: binary_name is null");
+            return_error!(-2, "invalid parameter: binary_name is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
@@ -569,9 +569,9 @@ pub extern "C" fn s2binlib_set_custom_binary_path(
     os: *const c_char,
 ) -> i32 {
     unsafe {
-        // Validate input pointers
+        // validate input pointers
         if binary_name.is_null() || path.is_null() || os.is_null() {
-            return_error!(-2, "Invalid parameters: binary_name, path or os is null");
+            return_error!(-2, "invalid parameters: binary_name, path or os is null");
         }
 
         // Convert C strings to Rust strings
@@ -644,7 +644,7 @@ pub extern "C" fn s2binlib_get_module_base_address(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || result.is_null() {
-            return_error!(-2, "Invalid parameters: binary_name or result is null");
+            return_error!(-2, "invalid parameters: binary_name or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
@@ -698,7 +698,7 @@ pub extern "C" fn s2binlib_get_module_base_address(
 pub extern "C" fn s2binlib_is_binary_loaded(binary_name: *const c_char) -> i32 {
     unsafe {
         if binary_name.is_null() {
-            return_error!(-2, "Invalid parameter: binary_name is null");
+            return_error!(-2, "invalid parameter: binary_name is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
@@ -753,7 +753,7 @@ pub extern "C" fn s2binlib_is_binary_loaded(binary_name: *const c_char) -> i32 {
 pub extern "C" fn s2binlib_load_binary(binary_name: *const c_char) -> i32 {
     unsafe {
         if binary_name.is_null() {
-            return_error!(-2, "Invalid parameter: binary_name is null");
+            return_error!(-2, "invalid parameter: binary_name is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
@@ -844,10 +844,10 @@ pub extern "C" fn s2binlib_get_binary_path(
     }
 }
 
-/// Find a vtable by class name and return its virtual address
+/// Find a vtable by class name and return its relative virtual address
 ///
 /// Searches for a vtable (virtual function table) by the class name and returns
-/// its virtual address (VA) in the binary. This is the address as it appears in
+/// its relative virtual address (RVA) in the binary. This is the address as it appears in
 /// the binary file, not the runtime memory address.
 ///
 /// If the binary is not yet loaded, it will be loaded automatically.
@@ -855,7 +855,7 @@ pub extern "C" fn s2binlib_get_binary_path(
 /// # Parameters
 /// * `binary_name` - Name of the binary to search (null-terminated C string)
 /// * `vtable_name` - Class name to search for (null-terminated C string)
-/// * `result` - Pointer to store the resulting vtable virtual address
+/// * `result` - Pointer to store the resulting vtable relative virtual address
 ///
 /// # Returns
 /// * 0 on success (address written to result)
@@ -870,14 +870,14 @@ pub extern "C" fn s2binlib_get_binary_path(
 ///
 /// # Example
 /// ```c
-/// void* vtable_va;
-/// int result = s2binlib_find_vtable_va("server", "CBaseEntity", &vtable_va);
+/// void* vtable_rva;
+/// int result = s2binlib_find_vtable_rva("server", "CBaseEntity", &vtable_rva);
 /// if (result == 0) {
-///     printf("VTable VA: %p\n", vtable_va);
+///     printf("VTable RVA: %p\n", vtable_rva);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_find_vtable_va(
+pub extern "C" fn s2binlib_find_vtable_rva(
     binary_name: *const c_char,
     vtable_name: *const c_char,
     result: *mut *mut c_void,
@@ -886,7 +886,7 @@ pub extern "C" fn s2binlib_find_vtable_va(
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, vtable_name or result is null"
+                "invalid parameters: binary_name, vtable_name or result is null"
             );
         }
 
@@ -914,7 +914,7 @@ pub extern "C" fn s2binlib_find_vtable_va(
             s2binlib.load_binary(binary_name_str);
         }
 
-        match s2binlib.find_vtable_va(binary_name_str, vtable_name_str) {
+        match s2binlib.find_vtable_rva(binary_name_str, vtable_name_str) {
             Ok(addr) => {
                 *result = addr as *mut c_void;
                 0
@@ -924,10 +924,10 @@ pub extern "C" fn s2binlib_find_vtable_va(
     }
 }
 
-/// Find a vtable by mangled name and return its virtual address
+/// Find a vtable by mangled name and return its relative virtual address
 ///
 /// Searches for a vtable using the mangled/decorated RTTI name directly.
-/// Unlike find_vtable_va which auto-decorates the name, this function uses
+/// Unlike find_vtable_rva which auto-decorates the name, this function uses
 /// the provided name as-is.
 ///
 /// If the binary is not yet loaded, it will be loaded automatically.
@@ -935,7 +935,7 @@ pub extern "C" fn s2binlib_find_vtable_va(
 /// # Parameters
 /// * `binary_name` - Name of the binary to search (null-terminated C string)
 /// * `vtable_name` - Mangled RTTI name to search for (null-terminated C string)
-/// * `result` - Pointer to store the resulting vtable virtual address
+/// * `result` - Pointer to store the resulting vtable relative virtual address
 ///
 /// # Returns
 /// * 0 on success (address written to result)
@@ -950,14 +950,14 @@ pub extern "C" fn s2binlib_find_vtable_va(
 ///
 /// # Example
 /// ```c
-/// void* vtable_va;
-/// int result = s2binlib_find_vtable_mangled_va("server", ".?AVCBaseEntity@@", &vtable_va);
+/// void* vtable_rva;
+/// int result = s2binlib_find_vtable_mangled_rva("server", ".?AVCBaseEntity@@", &vtable_rva);
 /// if (result == 0) {
-///     printf("VTable VA: %p\n", vtable_va);
+///     printf("VTable RVA: %p\n", vtable_rva);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_find_vtable_mangled_va(
+pub extern "C" fn s2binlib_find_vtable_mangled_rva(
     binary_name: *const c_char,
     vtable_name: *const c_char,
     result: *mut *mut c_void,
@@ -966,7 +966,7 @@ pub extern "C" fn s2binlib_find_vtable_mangled_va(
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, vtable_name or result is null"
+                "invalid parameters: binary_name, vtable_name or result is null"
             );
         }
 
@@ -994,7 +994,7 @@ pub extern "C" fn s2binlib_find_vtable_mangled_va(
             s2binlib.load_binary(binary_name_str);
         }
 
-        match s2binlib.find_vtable_mangled_va(binary_name_str, vtable_name_str) {
+        match s2binlib.find_vtable_mangled_rva(binary_name_str, vtable_name_str) {
             Ok(addr) => {
                 *result = addr as *mut c_void;
                 0
@@ -1045,7 +1045,7 @@ pub extern "C" fn s2binlib_find_vtable_mangled(
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, vtable_name or result is null"
+                "invalid parameters: binary_name, vtable_name or result is null"
             );
         }
 
@@ -1083,7 +1083,7 @@ pub extern "C" fn s2binlib_find_vtable_mangled(
     }
 }
 
-/// Find a nested vtable (2 levels) by class names and return its virtual address
+/// Find a nested vtable (2 levels) by class names and return its relative virtual address
 ///
 /// Searches for a vtable of a nested class (e.g., Class1::Class2).
 /// The function automatically decorates the names according to the platform's
@@ -1095,7 +1095,7 @@ pub extern "C" fn s2binlib_find_vtable_mangled(
 /// * `binary_name` - Name of the binary to search (null-terminated C string)
 /// * `class1_name` - Outer class name (null-terminated C string)
 /// * `class2_name` - Inner/nested class name (null-terminated C string)
-/// * `result` - Pointer to store the resulting vtable virtual address
+/// * `result` - Pointer to store the resulting vtable relative virtual address
 ///
 /// # Returns
 /// * 0 on success (address written to result)
@@ -1110,14 +1110,14 @@ pub extern "C" fn s2binlib_find_vtable_mangled(
 ///
 /// # Example
 /// ```c
-/// void* vtable_va;
-/// int result = s2binlib_find_vtable_nested_2_va("server", "CEntitySystem", "CEntitySubsystem", &vtable_va);
+/// void* vtable_rva;
+/// int result = s2binlib_find_vtable_nested_2_rva("server", "CEntitySystem", "CEntitySubsystem", &vtable_rva);
 /// if (result == 0) {
-///     printf("Nested VTable VA: %p\n", vtable_va);
+///     printf("Nested VTable RVA: %p\n", vtable_rva);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_find_vtable_nested_2_va(
+pub extern "C" fn s2binlib_find_vtable_nested_2_rva(
     binary_name: *const c_char,
     class1_name: *const c_char,
     class2_name: *const c_char,
@@ -1131,7 +1131,7 @@ pub extern "C" fn s2binlib_find_vtable_nested_2_va(
         {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, class names or result is null"
+                "invalid parameters: binary_name, class names or result is null"
             );
         }
 
@@ -1164,7 +1164,7 @@ pub extern "C" fn s2binlib_find_vtable_nested_2_va(
             s2binlib.load_binary(binary_name_str);
         }
 
-        match s2binlib.find_vtable_nested_2_va(binary_name_str, class1_name_str, class2_name_str) {
+        match s2binlib.find_vtable_nested_2_rva(binary_name_str, class1_name_str, class2_name_str) {
             Ok(addr) => {
                 *result = addr as *mut c_void;
                 0
@@ -1221,7 +1221,7 @@ pub extern "C" fn s2binlib_find_vtable_nested_2(
         {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, class names or result is null"
+                "invalid parameters: binary_name, class names or result is null"
             );
         }
 
@@ -1280,7 +1280,7 @@ pub extern "C" fn s2binlib_find_vtable_nested_2(
 /// # Returns
 /// * `0` - Success, result contains the vfunc count
 /// * `-1` - S2BinLib not initialized
-/// * `-2` - Invalid input (null pointer or invalid UTF-8)
+/// * `-2` - invalid input (null pointer or invalid UTF-8)
 /// * `-4` - Operation failed (vtable not found or other error)
 /// * `-5` - Failed to acquire lock
 ///
@@ -1302,7 +1302,7 @@ pub extern "C" fn s2binlib_get_vtable_vfunc_count(
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, vtable_name or result is null"
+                "invalid parameters: binary_name, vtable_name or result is null"
             );
         }
 
@@ -1340,26 +1340,26 @@ pub extern "C" fn s2binlib_get_vtable_vfunc_count(
     }
 }
 
-/// Get the number of virtual functions in a vtable by virtual address
+/// Get the number of virtual functions in a vtable by relative virtual address
 ///
 /// Returns the count of virtual functions (vfuncs) in a vtable at the specified
-/// virtual address. This counts valid function pointers in the vtable until it
+/// relative virtual address. This counts valid function pointers in the vtable until it
 /// encounters a null or invalid pointer.
 ///
-/// Unlike get_vtable_vfunc_count, this function takes a virtual address directly
+/// Unlike get_vtable_vfunc_count, this function takes a relative virtual address directly
 /// instead of looking up the vtable by name.
 ///
 /// If the binary is not yet loaded, it will be loaded automatically.
 ///
 /// # Parameters
 /// * `binary_name` - Name of the binary (e.g., "server", "client") (null-terminated C string)
-/// * `vtable_va` - Virtual address of the vtable
+/// * `vtable_rva` - Virtual address of the vtable
 /// * `result` - Pointer to store the resulting count of virtual functions
 ///
 /// # Returns
 /// * `0` - Success, result contains the vfunc count
 /// * `-1` - S2BinLib not initialized
-/// * `-2` - Invalid input (null pointer or invalid UTF-8)
+/// * `-2` - invalid input (null pointer or invalid UTF-8)
 /// * `-4` - Operation failed (invalid address or other error)
 /// * `-5` - Failed to acquire lock
 ///
@@ -1369,26 +1369,26 @@ pub extern "C" fn s2binlib_get_vtable_vfunc_count(
 ///
 /// # Example
 /// ```c
-/// void* vtable_va;
-/// // First get the vtable virtual address
-/// s2binlib_find_vtable_va("server", "CBaseEntity", &vtable_va);
+/// void* vtable_rva;
+/// // First get the vtable relative virtual address
+/// s2binlib_find_vtable_rva("server", "CBaseEntity", &vtable_rva);
 ///
 /// // Then count its virtual functions
 /// size_t vfunc_count;
-/// int result = s2binlib_get_vtable_vfunc_count_by_va("server", (uint64_t)vtable_va, &vfunc_count);
+/// int result = s2binlib_get_vtable_vfunc_count_by_rva("server", (uint64_t)vtable_rva, &vfunc_count);
 /// if (result == 0) {
 ///     printf("VTable has %zu virtual functions\n", vfunc_count);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_get_vtable_vfunc_count_by_va(
+pub extern "C" fn s2binlib_get_vtable_vfunc_count_by_rva(
     binary_name: *const c_char,
-    vtable_va: u64,
+    vtable_rva: u64,
     result: *mut usize,
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || result.is_null() {
-            return_error!(-2, "Invalid parameters: binary_name or result is null");
+            return_error!(-2, "invalid parameters: binary_name or result is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
@@ -1410,7 +1410,7 @@ pub extern "C" fn s2binlib_get_vtable_vfunc_count_by_va(
             s2binlib.load_binary(binary_name_str);
         }
 
-        match s2binlib.get_vtable_vfunc_count_by_va(binary_name_str, vtable_va) {
+        match s2binlib.get_vtable_vfunc_count_by_rva(binary_name_str, vtable_rva) {
             Ok(count) => {
                 *result = count;
                 0
@@ -1420,10 +1420,10 @@ pub extern "C" fn s2binlib_get_vtable_vfunc_count_by_va(
     }
 }
 
-/// Pattern scan and return the virtual address
+/// Pattern scan and return the relative virtual address
 ///
-/// Scans for a byte pattern in the specified binary and returns the virtual address (VA)
-/// where the pattern was found. The VA is the address as it appears in the binary file,
+/// Scans for a byte pattern in the specified binary and returns the relative virtual address (RVA)
+/// where the pattern was found. The RVA is the address as it appears in the binary file,
 /// not the runtime memory address.
 ///
 /// Pattern format: hex bytes separated by spaces, use '?' for wildcards
@@ -1434,7 +1434,7 @@ pub extern "C" fn s2binlib_get_vtable_vfunc_count_by_va(
 /// # Parameters
 /// * `binary_name` - Name of the binary to scan (null-terminated C string)
 /// * `pattern` - Pattern string with wildcards (null-terminated C string)
-/// * `result` - Pointer to store the resulting virtual address
+/// * `result` - Pointer to store the resulting relative virtual address
 ///
 /// # Returns
 /// * 0 on success (address written to result)
@@ -1449,14 +1449,14 @@ pub extern "C" fn s2binlib_get_vtable_vfunc_count_by_va(
 ///
 /// # Example
 /// ```c
-/// void* va;
-/// int result = s2binlib_pattern_scan_va("server", "48 89 5C 24 ?", &va);
+/// void* rva;
+/// int result = s2binlib_pattern_scan_rva("server", "48 89 5C 24 ?", &rva);
 /// if (result == 0) {
-///     printf("Pattern found at VA: %p\n", va);
+///     printf("Pattern found at RVA: %p\n", rva);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_pattern_scan_va(
+pub extern "C" fn s2binlib_pattern_scan_rva(
     binary_name: *const c_char,
     pattern: *const c_char,
     result: *mut *mut c_void,
@@ -1465,7 +1465,7 @@ pub extern "C" fn s2binlib_pattern_scan_va(
         if binary_name.is_null() || pattern.is_null() || result.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, pattern or result is null"
+                "invalid parameters: binary_name, pattern or result is null"
             );
         }
 
@@ -1493,7 +1493,7 @@ pub extern "C" fn s2binlib_pattern_scan_va(
             s2binlib.load_binary(binary_name_str);
         }
 
-        match s2binlib.pattern_scan_va(binary_name_str, pattern_str) {
+        match s2binlib.pattern_scan_rva(binary_name_str, pattern_str) {
             Ok(addr) => {
                 *result = addr as *mut c_void;
                 0
@@ -1507,7 +1507,7 @@ pub extern "C" fn s2binlib_pattern_scan_va(
 ///
 /// # Parameters
 /// * `index` - The index of the current match (0-based)
-/// * `address` - The found address (VA or memory address depending on the function)
+/// * `address` - The found address (RVA or memory address depending on the function)
 /// * `user_data` - User-provided data pointer
 ///
 /// # Returns
@@ -1516,11 +1516,11 @@ pub extern "C" fn s2binlib_pattern_scan_va(
 pub type PatternScanCallback =
     extern "C" fn(index: usize, address: *mut c_void, user_data: *mut c_void) -> bool;
 
-/// Find all occurrences of a pattern in a binary and return their virtual addresses
+/// Find all occurrences of a pattern in a binary and return their relative virtual addresses
 ///
 /// Scans the binary for all occurrences of the specified byte pattern and calls
 /// the callback function for each match found. The callback receives the match index
-/// and virtual addresses (VA).
+/// and relative virtual addresses (RVA).
 ///
 /// If the binary is not yet loaded, it will be loaded automatically.
 ///
@@ -1538,7 +1538,7 @@ pub type PatternScanCallback =
 /// * -4 if pattern not found
 /// * -5 if internal error
 ///
-/// # Callback Return Value
+/// # Callback Return value
 /// The callback should return:
 /// * `true` to stop searching (if you found what you need)
 /// * `false` to continue searching for more matches
@@ -1549,20 +1549,20 @@ pub type PatternScanCallback =
 /// # Example
 /// ```c
 /// bool my_callback(size_t index, void* address, void* user_data) {
-///     printf("Match #%zu found at VA: %p\n", index, address);
+///     printf("Match #%zu found at RVA: %p\n", index, address);
 ///     int* count = (int*)user_data;
 ///     (*count)++;
 ///     return false; // Continue searching
 /// }
 ///
 /// int count = 0;
-/// int result = s2binlib_pattern_scan_all_va("server", "48 89 5C 24 ?", my_callback, &count);
+/// int result = s2binlib_pattern_scan_all_rva("server", "48 89 5C 24 ?", my_callback, &count);
 /// if (result == 0) {
 ///     printf("Found %d matches\n", count);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_pattern_scan_all_va(
+pub extern "C" fn s2binlib_pattern_scan_all_rva(
     binary_name: *const c_char,
     pattern: *const c_char,
     callback: PatternScanCallback,
@@ -1570,7 +1570,7 @@ pub extern "C" fn s2binlib_pattern_scan_all_va(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || pattern.is_null() {
-            return_error!(-2, "Invalid parameters: binary_name or pattern is null");
+            return_error!(-2, "invalid parameters: binary_name or pattern is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
@@ -1597,7 +1597,7 @@ pub extern "C" fn s2binlib_pattern_scan_all_va(
             s2binlib.load_binary(binary_name_str);
         }
 
-        match s2binlib.pattern_scan_all_va(binary_name_str, pattern_str, |index, addr| {
+        match s2binlib.pattern_scan_all_rva(binary_name_str, pattern_str, |index, addr| {
             // Call the C callback function
             callback(index, addr as *mut c_void, user_data)
         }) {
@@ -1629,7 +1629,7 @@ pub extern "C" fn s2binlib_pattern_scan_all_va(
 /// * -4 if pattern not found
 /// * -5 if internal error
 ///
-/// # Callback Return Value
+/// # Callback Return value
 /// The callback should return:
 /// * `true` to stop searching (if you found what you need)
 /// * `false` to continue searching for more matches
@@ -1661,7 +1661,7 @@ pub extern "C" fn s2binlib_pattern_scan_all(
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || pattern.is_null() {
-            return_error!(-2, "Invalid parameters: binary_name or pattern is null");
+            return_error!(-2, "invalid parameters: binary_name or pattern is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
@@ -1698,17 +1698,17 @@ pub extern "C" fn s2binlib_pattern_scan_all(
     }
 }
 
-/// Find an exported symbol by name and return its virtual address
+/// Find an exported symbol by name and return its relative virtual address
 ///
 /// Searches for an exported symbol in the binary's export table and returns
-/// its virtual address (VA). This works for PE exports on Windows.
+/// its relative virtual address (RVA). This works for PE exports on Windows.
 ///
 /// If the binary is not yet loaded, it will be loaded automatically.
 ///
 /// # Parameters
 /// * `binary_name` - Name of the binary to search (null-terminated C string)
 /// * `export_name` - Export name to search for (null-terminated C string)
-/// * `result` - Pointer to store the resulting virtual address
+/// * `result` - Pointer to store the resulting relative virtual address
 ///
 /// # Returns
 /// * 0 on success (address written to result)
@@ -1723,14 +1723,14 @@ pub extern "C" fn s2binlib_pattern_scan_all(
 ///
 /// # Example
 /// ```c
-/// void* export_va;
-/// int result = s2binlib_find_export_va("server", "CreateInterface", &export_va);
+/// void* export_rva;
+/// int result = s2binlib_find_export_rva("server", "CreateInterface", &export_rva);
 /// if (result == 0) {
-///     printf("Export VA: %p\n", export_va);
+///     printf("Export RVA: %p\n", export_rva);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_find_export_va(
+pub extern "C" fn s2binlib_find_export_rva(
     binary_name: *const c_char,
     export_name: *const c_char,
     result: *mut *mut c_void,
@@ -1739,7 +1739,7 @@ pub extern "C" fn s2binlib_find_export_va(
         if binary_name.is_null() || export_name.is_null() || result.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, export_name or result is null"
+                "invalid parameters: binary_name, export_name or result is null"
             );
         }
 
@@ -1767,7 +1767,7 @@ pub extern "C" fn s2binlib_find_export_va(
             s2binlib.load_binary(binary_name_str);
         }
 
-        match s2binlib.find_export_va(binary_name_str, export_name_str) {
+        match s2binlib.find_export_rva(binary_name_str, export_name_str) {
             Ok(addr) => {
                 *result = addr as *mut c_void;
                 0
@@ -1818,7 +1818,7 @@ pub extern "C" fn s2binlib_find_export(
         if binary_name.is_null() || export_name.is_null() || result.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, export_name or result is null"
+                "invalid parameters: binary_name, export_name or result is null"
             );
         }
 
@@ -1856,17 +1856,17 @@ pub extern "C" fn s2binlib_find_export(
     }
 }
 
-/// Find a symbol by name and return its virtual address
+/// Find a symbol by name and return its relative virtual address
 ///
 /// Searches for a symbol in the binary's dynamic symbol table and returns
-/// its virtual address (VA). This works for ELF dynamic symbols on Linux.
+/// its relative virtual address (RVA). This works for ELF dynamic symbols on Linux.
 ///
 /// If the binary is not yet loaded, it will be loaded automatically.
 ///
 /// # Parameters
 /// * `binary_name` - Name of the binary to search (null-terminated C string)
 /// * `symbol_name` - Symbol name to search for (null-terminated C string)
-/// * `result` - Pointer to store the resulting virtual address
+/// * `result` - Pointer to store the resulting relative virtual address
 ///
 /// # Returns
 /// * 0 on success (address written to result)
@@ -1880,14 +1880,14 @@ pub extern "C" fn s2binlib_find_export(
 ///
 /// # Example
 /// ```c
-/// void* symbol_va;
-/// int result = s2binlib_find_symbol_va("server", "_Z13CreateInterfacev", &symbol_va);
+/// void* symbol_rva;
+/// int result = s2binlib_find_symbol_rva("server", "_Z13CreateInterfacev", &symbol_rva);
 /// if (result == 0) {
-///     printf("Symbol VA: %p\n", symbol_va);
+///     printf("Symbol RVA: %p\n", symbol_rva);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_find_symbol_va(
+pub extern "C" fn s2binlib_find_symbol_rva(
     binary_name: *const c_char,
     symbol_name: *const c_char,
     result: *mut *mut c_void,
@@ -1896,7 +1896,7 @@ pub extern "C" fn s2binlib_find_symbol_va(
         if binary_name.is_null() || symbol_name.is_null() || result.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, symbol_name or result is null"
+                "invalid parameters: binary_name, symbol_name or result is null"
             );
         }
 
@@ -1924,7 +1924,7 @@ pub extern "C" fn s2binlib_find_symbol_va(
             s2binlib.load_binary(binary_name_str);
         }
 
-        match s2binlib.find_symbol_va(binary_name_str, symbol_name_str) {
+        match s2binlib.find_symbol_rva(binary_name_str, symbol_name_str) {
             Ok(addr) => {
                 *result = addr as *mut c_void;
                 0
@@ -2006,15 +2006,15 @@ pub extern "C" fn s2binlib_read_by_file_offset(
     }
 }
 
-/// Read bytes from binary at a virtual address
+/// Read bytes from binary at a relative virtual address
 ///
-/// Reads raw bytes from the binary at the specified virtual address (VA) into the provided buffer.
+/// Reads raw bytes from the binary at the specified relative virtual address (RVA) into the provided buffer.
 ///
 /// If the binary is not yet loaded, it will be loaded automatically.
 ///
 /// # Parameters
 /// * `binary_name` - Name of the binary to read from (null-terminated C string)
-/// * `va` - Virtual address to read from
+/// * `rva` - Virtual address to read from
 /// * `buffer` - Buffer to store the read bytes
 /// * `buffer_size` - Size of the buffer (number of bytes to read)
 ///
@@ -2031,15 +2031,15 @@ pub extern "C" fn s2binlib_read_by_file_offset(
 /// # Example
 /// ```c
 /// uint8_t buffer[16];
-/// int result = s2binlib_read_by_va("server", 0x140001000, buffer, sizeof(buffer));
+/// int result = s2binlib_read_by_rva("server", 0x140001000, buffer, sizeof(buffer));
 /// if (result == 0) {
 ///     // Use buffer
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_read_by_va(
+pub extern "C" fn s2binlib_read_by_rva(
     binary_name: *const c_char,
-    va: u64,
+    rva: u64,
     buffer: *mut u8,
     buffer_size: usize,
 ) -> i32 {
@@ -2067,7 +2067,7 @@ pub extern "C" fn s2binlib_read_by_va(
             s2binlib.load_binary(binary_name_str);
         }
 
-        match s2binlib.read_by_va(binary_name_str, va, buffer_size) {
+        match s2binlib.read_by_rva(binary_name_str, rva, buffer_size) {
             Ok(bytes) => {
                 let copy_size = bytes.len().min(buffer_size);
                 std::ptr::copy_nonoverlapping(bytes.as_ptr(), buffer, copy_size);
@@ -2081,7 +2081,7 @@ pub extern "C" fn s2binlib_read_by_va(
 /// Read bytes from binary at a runtime memory address
 ///
 /// Reads raw bytes from the binary at the specified runtime memory address into the provided buffer.
-/// The address is automatically converted to a virtual address.
+/// The address is automatically converted to a relative virtual address.
 ///
 /// If the binary is not yet loaded, it will be loaded automatically.
 ///
@@ -2151,10 +2151,10 @@ pub extern "C" fn s2binlib_read_by_mem_address(
     }
 }
 
-/// Find a virtual function by vtable name and index, return virtual address
+/// Find a virtual function by vtable name and index, return relative virtual address
 ///
 /// Locates a vtable by its class name, then reads the virtual function pointer
-/// at the specified index. Returns the virtual address of the function.
+/// at the specified index. Returns the relative virtual address of the function.
 ///
 /// If the binary is not yet loaded, it will be loaded automatically.
 ///
@@ -2162,7 +2162,7 @@ pub extern "C" fn s2binlib_read_by_mem_address(
 /// * `binary_name` - Name of the binary to search (null-terminated C string)
 /// * `vtable_name` - Class name whose vtable to search for (null-terminated C string)
 /// * `vfunc_index` - Index of the virtual function in the vtable (0-based)
-/// * `result` - Pointer to store the resulting virtual address
+/// * `result` - Pointer to store the resulting relative virtual address
 ///
 /// # Returns
 /// * 0 on success (address written to result)
@@ -2177,14 +2177,14 @@ pub extern "C" fn s2binlib_read_by_mem_address(
 ///
 /// # Example
 /// ```c
-/// void* vfunc_va;
-/// int result = s2binlib_find_vfunc_by_vtbname_va("server", "CBaseEntity", 5, &vfunc_va);
+/// void* vfunc_rva;
+/// int result = s2binlib_find_vfunc_by_vtbname_rva("server", "CBaseEntity", 5, &vfunc_rva);
 /// if (result == 0) {
-///     printf("VFunc VA: %p\n", vfunc_va);
+///     printf("VFunc RVA: %p\n", vfunc_rva);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_find_vfunc_by_vtbname_va(
+pub extern "C" fn s2binlib_find_vfunc_by_vtbname_rva(
     binary_name: *const c_char,
     vtable_name: *const c_char,
     vfunc_index: usize,
@@ -2194,7 +2194,7 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname_va(
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, vtable_name or result is null"
+                "invalid parameters: binary_name, vtable_name or result is null"
             );
         }
 
@@ -2222,7 +2222,7 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname_va(
             s2binlib.load_binary(binary_name_str);
         }
 
-        match s2binlib.find_vfunc_by_vtbname_va(binary_name_str, vtable_name_str, vfunc_index) {
+        match s2binlib.find_vfunc_by_vtbname_rva(binary_name_str, vtable_name_str, vfunc_index) {
             Ok(addr) => {
                 *result = addr as *mut c_void;
                 0
@@ -2275,7 +2275,7 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname(
         if binary_name.is_null() || vtable_name.is_null() || result.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, vtable_name or result is null"
+                "invalid parameters: binary_name, vtable_name or result is null"
             );
         }
 
@@ -2313,16 +2313,16 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname(
     }
 }
 
-/// Find a virtual function by vtable pointer and index, return virtual address
+/// Find a virtual function by vtable pointer and index, return relative virtual address
 ///
 /// Given a runtime pointer to a vtable, reads the virtual function pointer
-/// at the specified index. Returns the virtual address of the function.
+/// at the specified index. Returns the relative virtual address of the function.
 /// The appropriate binary is automatically detected from the vtable pointer.
 ///
 /// # Parameters
 /// * `vtable_ptr` - Runtime pointer to the vtable
 /// * `vfunc_index` - Index of the virtual function in the vtable (0-based)
-/// * `result` - Pointer to store the resulting virtual address
+/// * `result` - Pointer to store the resulting relative virtual address
 ///
 /// # Returns
 /// * 0 on success (address written to result)
@@ -2337,21 +2337,21 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbname(
 ///
 /// # Example
 /// ```c
-/// void* vfunc_va;
-/// int result = s2binlib_find_vfunc_by_vtbptr_va(vtable_ptr, 5, &vfunc_va);
+/// void* vfunc_rva;
+/// int result = s2binlib_find_vfunc_by_vtbptr_rva(vtable_ptr, 5, &vfunc_rva);
 /// if (result == 0) {
-///     printf("VFunc VA: %p\n", vfunc_va);
+///     printf("VFunc RVA: %p\n", vfunc_rva);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_find_vfunc_by_vtbptr_va(
+pub extern "C" fn s2binlib_find_vfunc_by_vtbptr_rva(
     vtable_ptr: *mut c_void,
     vfunc_index: usize,
     result: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         if result.is_null() {
-            return_error!(-2, "Invalid parameter: result pointer is null");
+            return_error!(-2, "invalid parameter: result pointer is null");
         }
 
         let s2binlib_guard = match S2BINLIB.lock() {
@@ -2364,7 +2364,7 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr_va(
             None => return_error!(-1, "S2BinLib not initialized"),
         };
 
-        match s2binlib.find_vfunc_by_vtbptr_va(vtable_ptr as u64, vfunc_index) {
+        match s2binlib.find_vfunc_by_vtbptr_rva(vtable_ptr as u64, vfunc_index) {
             Ok(addr) => {
                 *result = addr as *mut c_void;
                 0
@@ -2412,7 +2412,7 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr(
 ) -> i32 {
     unsafe {
         if result.is_null() {
-            return_error!(-2, "Invalid parameter: result pointer is null");
+            return_error!(-2, "invalid parameter: result pointer is null");
         }
 
         let s2binlib_guard = match S2BINLIB.lock() {
@@ -2435,9 +2435,9 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr(
     }
 }
 
-/// Find a string in the binary and return its virtual address
+/// Find a string in the binary and return its relative virtual address
 ///
-/// Searches for an exact string match in the binary and returns its virtual address.
+/// Searches for an exact string match in the binary and returns its relative virtual address.
 /// The string must match exactly (case-sensitive).
 ///
 /// If the binary is not yet loaded, it will be loaded automatically.
@@ -2445,7 +2445,7 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr(
 /// # Parameters
 /// * `binary_name` - Name of the binary to search (null-terminated C string)
 /// * `string` - String to search for (null-terminated C string)
-/// * `result` - Pointer to store the resulting virtual address
+/// * `result` - Pointer to store the resulting relative virtual address
 ///
 /// # Returns
 /// * 0 on success (address written to result)
@@ -2460,14 +2460,14 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr(
 ///
 /// # Example
 /// ```c
-/// void* string_va;
-/// int result = s2binlib_find_string_va("server", "CBaseEntity", &string_va);
+/// void* string_rva;
+/// int result = s2binlib_find_string_rva("server", "CBaseEntity", &string_rva);
 /// if (result == 0) {
-///     printf("String VA: %p\n", string_va);
+///     printf("String RVA: %p\n", string_rva);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_find_string_va(
+pub extern "C" fn s2binlib_find_string_rva(
     binary_name: *const c_char,
     string: *const c_char,
     result: *mut *mut c_void,
@@ -2476,7 +2476,7 @@ pub extern "C" fn s2binlib_find_string_va(
         if binary_name.is_null() || string.is_null() || result.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, string or result is null"
+                "invalid parameters: binary_name, string or result is null"
             );
         }
 
@@ -2504,7 +2504,7 @@ pub extern "C" fn s2binlib_find_string_va(
             s2binlib.load_binary(binary_name_str);
         }
 
-        match s2binlib.find_string_va(binary_name_str, string_str) {
+        match s2binlib.find_string_rva(binary_name_str, string_str) {
             Ok(addr) => {
                 *result = addr as *mut c_void;
                 0
@@ -2555,7 +2555,7 @@ pub extern "C" fn s2binlib_find_string(
         if binary_name.is_null() || string.is_null() || result.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name, string or result is null"
+                "invalid parameters: binary_name, string or result is null"
             );
         }
 
@@ -2631,7 +2631,7 @@ pub extern "C" fn s2binlib_find_string(
 pub extern "C" fn s2binlib_dump_xrefs(binary_name: *const c_char) -> i32 {
     unsafe {
         if binary_name.is_null() {
-            return_error!(-2, "Invalid parameter: binary_name is null");
+            return_error!(-2, "invalid parameter: binary_name is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
@@ -2660,7 +2660,7 @@ pub extern "C" fn s2binlib_dump_xrefs(binary_name: *const c_char) -> i32 {
     }
 }
 
-/// Get the count of cached cross-references for a target virtual address
+/// Get the count of cached cross-references for a target relative virtual address
 ///
 /// Returns the number of code locations that reference the specified target address.
 /// The binary must have been analyzed with s2binlib_dump_xrefs() first.
@@ -2669,7 +2669,7 @@ pub extern "C" fn s2binlib_dump_xrefs(binary_name: *const c_char) -> i32 {
 ///
 /// # Parameters
 /// * `binary_name` - Name of the binary (null-terminated C string)
-/// * `target_va` - The target virtual address to find references to
+/// * `target_rva` - The target relative virtual address to find references to
 ///
 /// # Returns
 /// * Non-negative: Number of xrefs found
@@ -2698,11 +2698,11 @@ pub extern "C" fn s2binlib_dump_xrefs(binary_name: *const c_char) -> i32 {
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_get_xrefs_count(
     binary_name: *const c_char,
-    target_va: *mut c_void,
+    target_rva: *mut c_void,
 ) -> i32 {
     unsafe {
         if binary_name.is_null() {
-            return_error!(-2, "Invalid parameter: binary_name is null");
+            return_error!(-2, "invalid parameter: binary_name is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
@@ -2720,23 +2720,23 @@ pub extern "C" fn s2binlib_get_xrefs_count(
             None => return_error!(-1, "S2BinLib not initialized"),
         };
 
-        match s2binlib.find_xrefs_cached(binary_name_str, target_va as u64) {
+        match s2binlib.find_xrefs_cached(binary_name_str, target_rva as u64) {
             Some(xrefs) => xrefs.len() as i32,
             None => -3,
         }
     }
 }
 
-/// Get cached cross-references for a target virtual address into a buffer
+/// Get cached cross-references for a target relative virtual address into a buffer
 ///
-/// Returns all code locations (virtual addresses) that reference the specified target address
+/// Returns all code locations (relative virtual addresses) that reference the specified target address
 /// into the provided buffer. The binary must have been analyzed with s2binlib_dump_xrefs() first.
 ///
 /// Use s2binlib_get_xrefs_count() to determine the required buffer size.
 ///
 /// # Parameters
 /// * `binary_name` - Name of the binary (null-terminated C string)
-/// * `target_va` - The target virtual address to find references to
+/// * `target_rva` - The target relative virtual address to find references to
 /// * `buffer` - Buffer to store the xref addresses (array of uint64_t)
 /// * `buffer_size` - Size of the buffer (number of uint64_t elements it can hold)
 ///
@@ -2772,7 +2772,7 @@ pub extern "C" fn s2binlib_get_xrefs_count(
 #[unsafe(no_mangle)]
 pub extern "C" fn s2binlib_get_xrefs_cached(
     binary_name: *const c_char,
-    target_va: *mut c_void,
+    target_rva: *mut c_void,
     buffer: *mut *mut c_void,
     buffer_size: usize,
 ) -> i32 {
@@ -2796,7 +2796,7 @@ pub extern "C" fn s2binlib_get_xrefs_cached(
             None => return_error!(-1, "S2BinLib not initialized"),
         };
 
-        match s2binlib.find_xrefs_cached(binary_name_str, target_va as u64) {
+        match s2binlib.find_xrefs_cached(binary_name_str, target_rva as u64) {
             Some(xrefs) => {
                 if xrefs.len() * std::mem::size_of::<*mut c_void>() > buffer_size {
                     return -4; // Buffer too small
@@ -2842,7 +2842,7 @@ pub extern "C" fn s2binlib_get_xrefs_cached(
 pub extern "C" fn s2binlib_unload_binary(binary_name: *const c_char) -> i32 {
     unsafe {
         if binary_name.is_null() {
-            return_error!(-2, "Invalid parameter: binary_name is null");
+            return_error!(-2, "invalid parameter: binary_name is null");
         }
 
         let binary_name_str = match CStr::from_ptr(binary_name).to_str() {
@@ -2972,7 +2972,7 @@ pub extern "C" fn s2binlib_install_trampoline(
 /// decodes it using iced-x86, and returns the target address if the
 /// instruction contains a valid cross-reference.
 ///
-/// Valid xrefs include:
+/// valid xrefs include:
 /// - RIP-relative memory operands (e.g., lea rax, [rip+0x1000])
 /// - Near branches (call, jmp, jcc)
 /// - Absolute memory operands
@@ -3014,7 +3014,7 @@ pub extern "C" fn s2binlib_follow_xref_mem_to_mem(
     if mem_address.is_null() || target_address_out.is_null() {
         return_error!(
             -2,
-            "Invalid parameters: mem_address or target_address_out is null"
+            "invalid parameters: mem_address or target_address_out is null"
         );
     }
 
@@ -3039,20 +3039,20 @@ pub extern "C" fn s2binlib_follow_xref_mem_to_mem(
     }
 }
 
-/// Follow cross-reference from virtual address to memory address
+/// Follow cross-reference from relative virtual address to memory address
 ///
-/// This function reads the instruction at the given virtual address from the file,
+/// This function reads the instruction at the given relative virtual address from the file,
 /// decodes it using iced-x86, and returns the target memory address if the
 /// instruction contains a valid cross-reference.
 ///
-/// Valid xrefs include:
+/// valid xrefs include:
 /// - RIP-relative memory operands (e.g., lea rax, [rip+0x1000])
 /// - Near branches (call, jmp, jcc)
 /// - Absolute memory operands
 ///
 /// # Parameters
 /// * `binary_name` - Name of the binary (null-terminated C string)
-/// * `va` - Virtual address to analyze
+/// * `rva` - Virtual address to analyze
 /// * `target_address_out` - Pointer to store the target memory address
 ///
 /// # Returns
@@ -3069,22 +3069,22 @@ pub extern "C" fn s2binlib_follow_xref_mem_to_mem(
 /// # Example
 /// ```c
 /// void* target_addr;
-/// int result = s2binlib_follow_xref_va_to_mem("server", 0x140001000, &target_addr);
+/// int result = s2binlib_follow_xref_rva_to_mem("server", 0x140001000, &target_addr);
 /// if (result == 0) {
 ///     printf("Xref target: %p\n", target_addr);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_follow_xref_va_to_mem(
+pub extern "C" fn s2binlib_follow_xref_rva_to_mem(
     binary_name: *const c_char,
-    va: u64,
+    rva: u64,
     target_address_out: *mut *mut c_void,
 ) -> i32 {
     unsafe {
         if binary_name.is_null() || target_address_out.is_null() {
             return_error!(
                 -2,
-                "Invalid parameters: binary_name or target_address_out is null"
+                "invalid parameters: binary_name or target_address_out is null"
             );
         }
 
@@ -3107,7 +3107,7 @@ pub extern "C" fn s2binlib_follow_xref_va_to_mem(
             s2binlib.load_binary(binary_name_str);
         }
 
-        match s2binlib.follow_xref_va_to_mem(binary_name_str, va) {
+        match s2binlib.follow_xref_rva_to_mem(binary_name_str, rva) {
             Ok(target) => {
                 *target_address_out = target as *mut c_void;
                 0
@@ -3117,24 +3117,24 @@ pub extern "C" fn s2binlib_follow_xref_va_to_mem(
     }
 }
 
-/// Follow cross-reference from virtual address to virtual address
+/// Follow cross-reference from relative virtual address to relative virtual address
 ///
-/// This function reads the instruction at the given virtual address from the file,
-/// decodes it using iced-x86, and returns the target virtual address if the
+/// This function reads the instruction at the given relative virtual address from the file,
+/// decodes it using iced-x86, and returns the target relative virtual address if the
 /// instruction contains a valid cross-reference.
 ///
-/// Valid xrefs include:
+/// valid xrefs include:
 /// - RIP-relative memory operands (e.g., lea rax, [rip+0x1000])
 /// - Near branches (call, jmp, jcc)
 /// - Absolute memory operands
 ///
 /// # Parameters
 /// * `binary_name` - Name of the binary (null-terminated C string)
-/// * `va` - Virtual address to analyze
-/// * `target_va_out` - Pointer to store the target virtual address
+/// * `rva` - Virtual address to analyze
+/// * `target_rva_out` - Pointer to store the target relative virtual address
 ///
 /// # Returns
-/// * 0 on success (target VA written to target_va_out)
+/// * 0 on success (target RVA written to target_rva_out)
 /// * -1 if S2BinLib not initialized
 /// * -2 if invalid parameters
 /// * -3 if failed to load binary or no valid xref found
@@ -3146,20 +3146,20 @@ pub extern "C" fn s2binlib_follow_xref_va_to_mem(
 ///
 /// # Example
 /// ```c
-/// uint64_t target_va;
-/// int result = s2binlib_follow_xref_va_to_va("server", 0x140001000, &target_va);
+/// uint64_t target_rva;
+/// int result = s2binlib_follow_xref_rva_to_rva("server", 0x140001000, &target_rva);
 /// if (result == 0) {
-///     printf("Xref target VA: 0x%llX\n", target_va);
+///     printf("Xref target RVA: 0x%llX\n", target_rva);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_follow_xref_va_to_va(
+pub extern "C" fn s2binlib_follow_xref_rva_to_rva(
     binary_name: *const c_char,
-    va: u64,
-    target_va_out: *mut u64,
+    rva: u64,
+    target_rva_out: *mut u64,
 ) -> i32 {
     unsafe {
-        if binary_name.is_null() || target_va_out.is_null() {
+        if binary_name.is_null() || target_rva_out.is_null() {
             return -2;
         }
 
@@ -3182,9 +3182,9 @@ pub extern "C" fn s2binlib_follow_xref_va_to_va(
             s2binlib.load_binary(binary_name_str);
         }
 
-        match s2binlib.follow_xref_va_to_va(binary_name_str, va) {
+        match s2binlib.follow_xref_rva_to_rva(binary_name_str, rva) {
             Ok(target) => {
-                *target_va_out = target;
+                *target_rva_out = target;
                 0
             }
             Err(_) => return_error!(-3, "Failed to load binary or operation failed"),
@@ -3192,15 +3192,15 @@ pub extern "C" fn s2binlib_follow_xref_va_to_va(
     }
 }
 
-/// Find the NetworkVar_StateChanged vtable index by virtual address
+/// Find the NetworkVar_StateChanged vtable index by relative virtual address
 ///
-/// This function scans the vtable at the given virtual address to find the
+/// This function scans the vtable at the given relative virtual address to find the
 /// index of the NetworkVar_StateChanged virtual function. It analyzes each
 /// virtual function in the vtable looking for the specific instruction pattern
 /// that identifies the StateChanged function (cmp dword ptr [reg+56], 0xFF).
 ///
 /// # Parameters
-/// * `vtable_va` - Virtual address of the vtable to analyze
+/// * `vtable_rva` - Virtual address of the vtable to analyze
 /// * `result` - Pointer to store the resulting index (as u64)
 ///
 /// # Returns
@@ -3216,19 +3216,19 @@ pub extern "C" fn s2binlib_follow_xref_va_to_va(
 /// # Example
 /// ```c
 /// uint64_t index;
-/// int result = s2binlib_find_networkvar_vtable_statechanged_va(0x140001000, &index);
+/// int result = s2binlib_find_networkrvar_vtable_statechanged_rva(0x140001000, &index);
 /// if (result == 0) {
 ///     printf("StateChanged index: %llu\n", index);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_find_networkvar_vtable_statechanged_va(
-    vtable_va: u64,
+pub extern "C" fn s2binlib_find_networkrvar_vtable_statechanged_rva(
+    vtable_rva: u64,
     result: *mut u64,
 ) -> i32 {
     unsafe {
         if result.is_null() {
-            return_error!(-2, "Invalid parameter: result pointer is null");
+            return_error!(-2, "invalid parameter: result pointer is null");
         }
 
         let s2binlib_guard = match S2BINLIB.lock() {
@@ -3241,7 +3241,7 @@ pub extern "C" fn s2binlib_find_networkvar_vtable_statechanged_va(
             None => return_error!(-1, "S2BinLib not initialized"),
         };
 
-        match s2binlib.find_networkvar_vtable_statechanged_va(vtable_va) {
+        match s2binlib.find_networkrvar_vtable_statechanged_rva(vtable_rva) {
             Ok(index) => {
                 *result = index;
                 0
@@ -3253,7 +3253,7 @@ pub extern "C" fn s2binlib_find_networkvar_vtable_statechanged_va(
 
 /// Find the NetworkVar_StateChanged vtable index by memory address
 ///
-/// This function converts the runtime memory address to a virtual address,
+/// This function converts the runtime memory address to a relative virtual address,
 /// then scans the vtable to find the index of the NetworkVar_StateChanged
 /// virtual function. It analyzes each virtual function in the vtable looking
 /// for the specific instruction pattern that identifies the StateChanged function.
@@ -3276,19 +3276,19 @@ pub extern "C" fn s2binlib_find_networkvar_vtable_statechanged_va(
 /// # Example
 /// ```c
 /// uint64_t index;
-/// int result = s2binlib_find_networkvar_vtable_statechanged(vtable_ptr, &index);
+/// int result = s2binlib_find_networkrvar_vtable_statechanged(vtable_ptr, &index);
 /// if (result == 0) {
 ///     printf("StateChanged index: %llu\n", index);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_find_networkvar_vtable_statechanged(
+pub extern "C" fn s2binlib_find_networkrvar_vtable_statechanged(
     vtable_mem_address: u64,
     result: *mut u64,
 ) -> i32 {
     unsafe {
         if result.is_null() {
-            return_error!(-2, "Invalid parameter: result pointer is null");
+            return_error!(-2, "invalid parameter: result pointer is null");
         }
 
         let s2binlib_guard = match S2BINLIB.lock() {
@@ -3301,7 +3301,7 @@ pub extern "C" fn s2binlib_find_networkvar_vtable_statechanged(
             None => return_error!(-1, "S2BinLib not initialized"),
         };
 
-        match s2binlib.find_networkvar_vtable_statechanged(vtable_mem_address) {
+        match s2binlib.find_networkrvar_vtable_statechanged(vtable_mem_address) {
             Ok(index) => {
                 *result = index;
                 0

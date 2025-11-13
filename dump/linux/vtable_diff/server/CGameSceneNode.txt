@@ -10,7 +10,7 @@ Bases:
 =============================================
 Children: 
 "CBodyComponentPoint::NetworkVar_m_sceneNode"
+"CBodyComponentSkeletonInstance::NetworkVar_m_skeletonInstance"
 "CGameSceneNode::NetworkVar_m_hParent"
 "CSkeletonInstance"
-"CBodyComponentSkeletonInstance::NetworkVar_m_skeletonInstance"
 ================================================

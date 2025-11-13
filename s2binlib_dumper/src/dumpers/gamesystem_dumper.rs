@@ -114,7 +114,7 @@ pub fn dump_gamesystems(s2binlib: &S2BinLib, dump_dir: &str, binary: &str) -> Re
                 info!("Dumping {}", vtable.type_name);
                 for i in 0..size {
                     let method = vtable.methods[i];
-                    if !s2binlib.is_nullsub_va(binary, method)? {
+                    if !s2binlib.is_nullsub_rva(binary, method)? {
                         funcs[i].push(vtable.type_name.clone());
                     }
                 }

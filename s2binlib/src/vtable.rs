@@ -170,7 +170,9 @@ impl<'a> S2BinLib<'a> {
         vtable_name: &str,
     ) -> Result<Vec<&VTableInfo>> {
         let mut visited = HashSet::new();
-        self.get_vtable_children_recursively(binary_name, vtable_name, &mut visited)
+        let mut children = self.get_vtable_children_recursively(binary_name, vtable_name, &mut visited)?;
+        children.sort_by(|a, b| a.type_name.cmp(&b.type_name));
+        Ok(children)
     }
 }
 

@@ -2,9 +2,9 @@ Vtable: CRecipientFilter
 Virtual Function Count: 6
 Children Count: 10
 =============================================
-func_0     [ DIFF 10  ]                               ["CBroadcastRecipientFilter", "CReliableBroadcastRecipientFilter", "CHLTVRecipientFilter", "CPASFilter", "CPASAttenuationFilter", "CPVSFilter", "CSingleUserPlusObserversFilter", "CSingleUserRecipientFilter", "CReliableSingleUserRecipientFilter", "CTeamRecipientFilter"]
+func_0     [ DIFF 10  ]                               ["CBroadcastRecipientFilter", "CHLTVRecipientFilter", "CPASAttenuationFilter", "CPASFilter", "CPVSFilter", "CReliableBroadcastRecipientFilter", "CReliableSingleUserRecipientFilter", "CSingleUserPlusObserversFilter", "CSingleUserRecipientFilter", "CTeamRecipientFilter"]
     "C3 CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC"
-func_1     [ DIFF 10  ]                               ["CBroadcastRecipientFilter", "CReliableBroadcastRecipientFilter", "CHLTVRecipientFilter", "CPASFilter", "CPASAttenuationFilter", "CPVSFilter", "CSingleUserPlusObserversFilter", "CSingleUserRecipientFilter", "CReliableSingleUserRecipientFilter", "CTeamRecipientFilter"]
+func_1     [ DIFF 10  ]                               ["CBroadcastRecipientFilter", "CHLTVRecipientFilter", "CPASAttenuationFilter", "CPASFilter", "CPVSFilter", "CReliableBroadcastRecipientFilter", "CReliableSingleUserRecipientFilter", "CSingleUserPlusObserversFilter", "CSingleUserRecipientFilter", "CTeamRecipientFilter"]
     "BE 18 00 00 00 E9 86 5C 66 FF CC CC CC CC CC CC"
 func_2     [ DIFF 0   ]                               []
     "0F B6 47 14 C3 CC CC CC CC CC CC CC CC CC CC CC"
@@ -25,13 +25,13 @@ Bases:
 =============================================
 Children: 
 "CBroadcastRecipientFilter"
-"CReliableBroadcastRecipientFilter"
 "CHLTVRecipientFilter"
-"CPASFilter"
 "CPASAttenuationFilter"
+"CPASFilter"
 "CPVSFilter"
+"CReliableBroadcastRecipientFilter"
+"CReliableSingleUserRecipientFilter"
 "CSingleUserPlusObserversFilter"
 "CSingleUserRecipientFilter"
-"CReliableSingleUserRecipientFilter"
 "CTeamRecipientFilter"
 ================================================

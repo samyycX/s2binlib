@@ -53,7 +53,7 @@ pub fn dump_diff(
     let mut bytes = vec![];
 
     for method in &base_info.methods {
-        bytes.push(s2binlib.read_by_va(binary_name, *method, 16)?.to_vec());
+        bytes.push(s2binlib.read_by_rva(binary_name, *method, 16)?.to_vec());
     }
 
     for vtable in s2binlib.get_all_vtable_children(binary_name, base_class)? {
