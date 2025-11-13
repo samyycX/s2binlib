@@ -39,7 +39,7 @@ func_16    [ DIFF 0   ]                               []
 func_17    [ DIFF 0   ]                               []
     "45 33 C9 48 8D 0D 56 11 87 00 E9 81 CF 16 00 CC"
 func_18    [ DIFF 0   ]                               []
-    "48 83 EC 28 8B 05 72 77 87 00 85 C0 75 4C 48 8D"
+    "48 83 EC 28 8B 05 66 77 87 00 85 C0 75 4C 48 8D"
 func_19    [ DIFF 0   ]                               []
     "48 89 5C 24 08 57 48 83 EC 20 48 8B 3D 2F F5 83"
 func_20    [ DIFF 0   ]                               []
@@ -51,7 +51,7 @@ func_22    [ DIFF 0   ]                               []
 func_23    [ DIFF 0   ]                               []
     "4C 8B 05 C9 F3 83 00 4D 85 C0 74 28 85 D2 78 24"
 func_24    [ DIFF 0   ]                               []
-    "48 8D 05 A9 76 87 00 C3 CC CC CC CC CC CC CC CC"
+    "48 8D 05 A1 76 87 00 C3 CC CC CC CC CC CC CC CC"
 func_25    [ DIFF 0   ]                               []
     "48 8B CA 0F 28 D3 41 8B D0 E9 B2 3A 1A 00 CC CC"
 func_26    [ DIFF 0   ]                               []
@@ -139,7 +139,7 @@ func_66    [ DIFF 0   ]                               []
 func_67    [ DIFF 0   ]                               []
     "48 8B 05 69 08 87 00 48 85 C0 74 08 F3 0F 11 88"
 func_68    [ DIFF 0   ]                               []
-    "8B 05 32 49 87 00 C3 CC CC CC CC CC CC CC CC CC"
+    "8B 05 2A 49 87 00 C3 CC CC CC CC CC CC CC CC CC"
 func_69    [ DIFF 0   ]                               []
     "48 83 EC 28 48 8B 05 05 F9 83 00 48 85 C0 74 37"
 func_70    [ DIFF 0   ]                               []
@@ -149,7 +149,7 @@ func_71    [ DIFF 0   ]                               []
 func_72    [ DIFF 0   ]                               []
     "48 89 5C 24 08 48 89 74 24 10 57 48 81 EC 80 00"
 func_73    [ DIFF 0   ]                               []
-    "88 15 42 39 84 00 84 D2 74 14 41 B0 01 48 8D 0D"
+    "88 15 3A 39 84 00 84 D2 74 14 41 B0 01 48 8D 0D"
 func_74    [ DIFF 0   ]                               []
     "48 8B 05 B9 FB 83 00 48 85 C0 74 27 85 D2 78 23"
 func_75    [ DIFF 0   ]                               []
@@ -171,7 +171,7 @@ func_82    [ DIFF 0   ]                               []
 func_83    [ DIFF 0   ]                               []
     "48 8B 0D 99 08 84 00 48 85 C9 74 0A 48 8B 01 48"
 func_84    [ DIFF 0   ]                               []
-    "40 53 48 83 EC 20 83 3D 83 8D 54 00 01 48 8B DA"
+    "40 53 48 83 EC 20 83 3D 93 8D 54 00 01 48 8B DA"
 func_85    [ DIFF 0   ]                               []
     "8B 05 26 4F 87 00 33 C9 38 0D 6B 16 5F 00 0F 45"
 func_86    [ DIFF 0   ]                               []
@@ -221,7 +221,7 @@ func_107   [ DIFF 0   ]                               []
 func_108   [ DIFF 0   ]                               []
     "40 56 48 83 EC 40 8B 44 24 70 8B 74 24 78 89 54"
 func_109   [ DIFF 0   ]                               []
-    "0F B6 05 59 D3 5B 00 C3 CC CC CC CC CC CC CC CC"
+    "0F B6 05 5A D3 5B 00 C3 CC CC CC CC CC CC CC CC"
 func_110   [ DIFF 0   ]                               []
     "48 8B 0D 69 EE 83 00 E9 74 8A 00 00 CC CC CC CC"
 func_111   [ DIFF 0   ]                               []

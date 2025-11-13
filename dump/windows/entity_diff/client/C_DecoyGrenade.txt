@@ -420,6 +420,5 @@ C_BaseCSGrenade VS  C_DecoyGrenade
 [=]
 [=]
 [=]
-[=]
 [!]
 [!]

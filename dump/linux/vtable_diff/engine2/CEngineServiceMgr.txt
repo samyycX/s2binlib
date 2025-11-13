@@ -35,7 +35,7 @@ func_14    [ DIFF 0   ]                               []
 func_15    [ DIFF 0   ]                               []
     "55 48 89 E5 41 57 41 56 45 89 CE 41 55 41 89 CD"
 func_16    [ DIFF 0   ]                               []
-    "8B 87 A8 00 00 00 48 8D 15 25 FE D5 FF 85 C0 78"
+    "8B 87 A8 00 00 00 48 8D 15 E5 FD D5 FF 85 C0 78"
 func_17    [ DIFF 0   ]                               []
     "55 48 89 F2 48 89 E5 53 48 89 FB 48 8D B3 10 01"
 func_18    [ DIFF 0   ]                               []
@@ -53,7 +53,7 @@ func_23    [ DIFF 0   ]                               []
 func_24    [ DIFF 0   ]                               []
     "48 8B 3D F1 93 45 00 55 48 89 E5 41 54 49 89 F4"
 func_25    [ DIFF 0   ]                               []
-    "48 8B 3D D9 A5 45 00 48 85 FF 74 0C E9 9F 7F DA"
+    "48 8B 3D D9 A5 45 00 48 85 FF 74 0C E9 7F 7F DA"
 func_26    [ DIFF 0   ]                               []
     "48 83 BF C0 00 00 00 00 0F 95 C0 C3 CC CC CC CC"
 func_27    [ DIFF 0   ]                               []
@@ -83,11 +83,11 @@ func_38    [ DIFF 0   ]                               []
 func_39    [ DIFF 0   ]                               []
     "8B 87 18 02 00 00 C3 CC CC CC CC CC CC CC CC CC"
 func_40    [ DIFF 0   ]                               []
-    "48 8B 87 20 02 00 00 48 63 F6 48 8D 15 51 53 D5"
+    "48 8B 87 20 02 00 00 48 63 F6 48 8D 15 11 53 D5"
 func_41    [ DIFF 0   ]                               []
     "8B 87 18 02 00 00 85 C0 7E 71 55 48 89 E5 41 56"
 func_42    [ DIFF 0   ]                               []
-    "48 8B 87 B0 00 00 00 48 8D 15 34 53 D5 FF 48 85"
+    "48 8B 87 B0 00 00 00 48 8D 15 F4 52 D5 FF 48 85"
 func_43    [ DIFF 0   ]                               []
     "55 48 89 E5 41 54 53 48 89 FB 48 8D 7D E8 48 83"
 func_44    [ DIFF 0   ]                               []
@@ -105,9 +105,9 @@ func_49    [ DIFF 0   ]                               []
 func_50    [ DIFF 0   ]                               []
     "55 48 89 E5 41 57 41 56 4C 8D 35 81 AC 45 00 41"
 func_51    [ DIFF 0   ]                               []
-    "48 89 F7 E9 F8 85 DA FF CC CC CC CC CC CC CC CC"
+    "48 89 F7 E9 D8 85 DA FF CC CC CC CC CC CC CC CC"
 func_52    [ DIFF 0   ]                               []
-    "48 89 F7 48 89 D6 E9 45 78 DA FF CC CC CC CC CC"
+    "48 89 F7 48 89 D6 E9 25 78 DA FF CC CC CC CC CC"
 func_53    [ DIFF 0   ]                               []
     "55 48 89 F7 48 89 E5 48 81 EC D0 00 00 00 48 89"
 func_54    [ DIFF 0   ]                               []
@@ -132,9 +132,13 @@ Bases:
 "CTier4AppSystem<IEngineServiceMgr, 0>"
     Offset: 0
     Flags: 2
+    Nested Bases:
+        "CTier3AppSystem<IEngineServiceMgr, (long long)0>"
 "ILoopModePrerequisiteRegistry"
     Offset: 40
     Flags: 2
+    Nested Bases:
+        "IPrerequisiteRegistry"
 =============================================
 
 =============================================

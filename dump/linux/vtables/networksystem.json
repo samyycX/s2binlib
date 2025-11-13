@@ -28,7 +28,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -68,7 +80,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -108,7 +132,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -150,7 +186,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -190,7 +238,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -232,7 +292,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -272,7 +344,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -312,7 +396,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -352,7 +448,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -394,7 +502,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -436,7 +556,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -478,7 +610,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -520,7 +664,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -548,7 +704,51 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CNetMessage",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "CCLCMsg_RconServerDetails",
+                "details": {
+                  "Itanium": {
+                    "offset": 48,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -588,7 +788,51 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CNetMessage",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "CCLCMsg_RconServerDetails",
+                "details": {
+                  "Itanium": {
+                    "offset": 48,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -630,7 +874,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -672,7 +928,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -714,7 +982,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -756,7 +1036,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -798,7 +1090,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -840,7 +1144,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -864,7 +1180,19 @@
         "details": {
           "Itanium": {
             "offset": 8,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "ConCommandRef",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       },
@@ -873,7 +1201,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -882,7 +1211,8 @@
         "details": {
           "Itanium": {
             "offset": 16,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       }
@@ -905,7 +1235,19 @@
         "details": {
           "Itanium": {
             "offset": 8,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "ConCommandRef",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       },
@@ -914,7 +1256,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -923,7 +1266,8 @@
         "details": {
           "Itanium": {
             "offset": 16,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       }
@@ -949,7 +1293,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -972,7 +1317,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -995,7 +1341,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1021,7 +1368,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1063,7 +1411,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1099,7 +1459,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1124,7 +1485,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1147,7 +1509,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1176,7 +1539,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1202,7 +1566,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1269,7 +1634,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1308,7 +1674,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1329,7 +1696,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1357,7 +1725,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1385,7 +1754,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IErrorListener",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1413,7 +1794,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IErrorListener",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1436,7 +1829,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1476,7 +1870,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1518,7 +1924,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1560,7 +1978,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1602,7 +2032,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1644,7 +2086,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1684,7 +2138,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1724,7 +2190,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1764,7 +2242,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1804,7 +2294,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1844,7 +2346,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1884,7 +2398,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1924,7 +2450,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1964,7 +2502,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2006,7 +2556,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2046,7 +2608,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2088,7 +2662,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2130,7 +2716,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2170,7 +2768,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2212,7 +2822,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2254,7 +2876,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2296,7 +2930,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2338,7 +2984,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2378,7 +3036,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2418,7 +3088,30 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::Message",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::MessageLite",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2460,7 +3153,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2500,7 +3205,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2540,7 +3257,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2580,7 +3309,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2620,7 +3361,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2660,7 +3413,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2700,7 +3465,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2744,7 +3521,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2772,7 +3561,51 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CNetMessage",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "CNETMsg_SplitScreenUser",
+                "details": {
+                  "Itanium": {
+                    "offset": 48,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2812,7 +3645,51 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CNetMessage",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "CNETMsg_SplitScreenUser",
+                "details": {
+                  "Itanium": {
+                    "offset": 48,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2854,7 +3731,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -2896,7 +3785,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3006,7 +3907,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "INetChannelInfo",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       },
@@ -3015,7 +3928,8 @@
         "details": {
           "Itanium": {
             "offset": 16,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       }
@@ -3054,7 +3968,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3063,7 +3978,30 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::Message",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::MessageLite",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3103,7 +4041,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3112,7 +4051,30 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::Message",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::MessageLite",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3143,7 +4105,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -3171,7 +4134,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3180,7 +4144,30 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::Message",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::MessageLite",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3220,7 +4207,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3229,7 +4217,30 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::Message",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::MessageLite",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3260,7 +4271,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -3288,7 +4300,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3297,7 +4310,30 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::Message",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::MessageLite",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3337,7 +4373,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3346,7 +4383,30 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::Message",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::MessageLite",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3367,7 +4427,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3376,7 +4437,30 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::Message",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::MessageLite",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3407,7 +4491,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -3435,7 +4520,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3444,7 +4530,41 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::ZeroFieldsBase",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3484,7 +4604,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3493,7 +4614,41 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::ZeroFieldsBase",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3524,7 +4679,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -3552,7 +4708,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3561,7 +4718,41 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::ZeroFieldsBase",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3601,7 +4792,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3610,7 +4802,41 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::ZeroFieldsBase",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3641,7 +4867,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -3669,7 +4896,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3678,7 +4906,41 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::ZeroFieldsBase",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3718,7 +4980,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3727,7 +4990,41 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::ZeroFieldsBase",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3758,7 +5055,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -3786,7 +5084,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3795,7 +5094,30 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::Message",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::MessageLite",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3835,7 +5157,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3844,7 +5167,30 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::Message",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::MessageLite",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3875,7 +5221,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -3903,7 +5250,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3912,7 +5260,30 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::Message",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::MessageLite",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3952,7 +5323,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -3961,7 +5333,30 @@
         "details": {
           "Itanium": {
             "offset": 48,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "google::protobuf::Message",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::MessageLite",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -3992,7 +5387,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -4016,7 +5412,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -4025,7 +5422,8 @@
         "details": {
           "Itanium": {
             "offset": 8,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       }
@@ -4048,7 +5446,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -4057,7 +5456,8 @@
         "details": {
           "Itanium": {
             "offset": 8,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       }
@@ -4086,7 +5486,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -4095,7 +5496,8 @@
         "details": {
           "Itanium": {
             "offset": 8,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       }
@@ -4118,7 +5520,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       },
@@ -4127,7 +5530,8 @@
         "details": {
           "Itanium": {
             "offset": 8,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       }
@@ -4163,7 +5567,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -4189,7 +5594,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -4250,7 +5656,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -4282,7 +5689,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -4361,7 +5769,63 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "CTier1AppSystem<INetworkSystem, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CTier0AppSystem<INetworkSystem, (long long)0>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "CBaseAppSystem<INetworkSystem>",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "INetworkSystem",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": [
+                                              {
+                                                "type_name": "IAppSystem",
+                                                "details": {
+                                                  "Itanium": {
+                                                    "offset": 0,
+                                                    "flags": 0,
+                                                    "bases": []
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       },
@@ -4370,7 +5834,8 @@
         "details": {
           "Itanium": {
             "offset": 40,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       }
@@ -4393,7 +5858,63 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 2
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "CTier1AppSystem<INetworkSystem, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CTier0AppSystem<INetworkSystem, (long long)0>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "CBaseAppSystem<INetworkSystem>",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "INetworkSystem",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": [
+                                              {
+                                                "type_name": "IAppSystem",
+                                                "details": {
+                                                  "Itanium": {
+                                                    "offset": 0,
+                                                    "flags": 0,
+                                                    "bases": []
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       },
@@ -4402,7 +5923,8 @@
         "details": {
           "Itanium": {
             "offset": 40,
-            "flags": 2
+            "flags": 2,
+            "bases": []
           }
         }
       }
@@ -4453,7 +5975,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -4493,7 +6027,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -4533,7 +6079,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -4573,7 +6131,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -4613,7 +6183,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -4653,7 +6235,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -4693,7 +6287,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -4733,7 +6339,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -4773,7 +6391,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -4813,7 +6443,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -4853,7 +6495,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -4893,7 +6547,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -4933,7 +6599,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -4973,7 +6651,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5013,7 +6703,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5053,7 +6755,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5093,7 +6807,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5133,7 +6859,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5173,7 +6911,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5213,7 +6963,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5253,7 +7015,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5293,7 +7067,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5333,7 +7119,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5373,7 +7171,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5413,7 +7223,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5453,7 +7275,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5493,7 +7327,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5533,7 +7379,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5573,7 +7431,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5613,7 +7483,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5653,7 +7535,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5693,7 +7587,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5733,7 +7639,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5773,7 +7691,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5813,7 +7743,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5853,7 +7795,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5893,7 +7847,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5933,7 +7899,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -5973,7 +7951,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6013,7 +8003,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6053,7 +8055,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6093,7 +8107,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6133,7 +8159,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6173,7 +8211,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6213,7 +8263,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6253,7 +8315,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6293,7 +8367,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6333,7 +8419,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6373,7 +8471,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6413,7 +8523,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6436,7 +8558,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -6459,7 +8582,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -6504,7 +8628,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -6527,7 +8652,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -6594,7 +8720,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6634,7 +8772,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6678,7 +8828,52 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier0AppSystem<INetworkSystem, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CBaseAppSystem<INetworkSystem>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "INetworkSystem",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "IAppSystem",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": []
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6901,7 +9096,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -6926,7 +9122,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -6966,7 +9163,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -6994,7 +9203,51 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CNetMessage",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "NetMessageConnectionClosed",
+                "details": {
+                  "Itanium": {
+                    "offset": 48,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7034,7 +9287,51 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CNetMessage",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "NetMessageConnectionClosed",
+                "details": {
+                  "Itanium": {
+                    "offset": 48,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7074,7 +9371,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7102,7 +9411,51 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CNetMessage",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "NetMessageConnectionCrashed",
+                "details": {
+                  "Itanium": {
+                    "offset": 48,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7142,7 +9495,51 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CNetMessage",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "NetMessageConnectionCrashed",
+                "details": {
+                  "Itanium": {
+                    "offset": 48,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7182,7 +9579,30 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::Message",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::MessageLite",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7210,7 +9630,62 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CNetMessage",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "NetMessagePacketEnd",
+                "details": {
+                  "Itanium": {
+                    "offset": 48,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::internal::ZeroFieldsBase",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::Message",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "google::protobuf::MessageLite",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": []
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7250,7 +9725,62 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CNetMessage",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "NetMessagePacketEnd",
+                "details": {
+                  "Itanium": {
+                    "offset": 48,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::internal::ZeroFieldsBase",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::Message",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "google::protobuf::MessageLite",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": []
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7290,7 +9820,30 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::Message",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::MessageLite",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7318,7 +9871,62 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CNetMessage",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "NetMessagePacketStart",
+                "details": {
+                  "Itanium": {
+                    "offset": 48,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::internal::ZeroFieldsBase",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::Message",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "google::protobuf::MessageLite",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": []
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7358,7 +9966,62 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CNetMessage",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "NetMessagePacketStart",
+                "details": {
+                  "Itanium": {
+                    "offset": 48,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::internal::ZeroFieldsBase",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::Message",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "google::protobuf::MessageLite",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": []
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7398,7 +10061,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7426,7 +10101,51 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CNetMessage",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "NetMessageSplitscreenUserChanged",
+                "details": {
+                  "Itanium": {
+                    "offset": 48,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7466,7 +10185,51 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CNetMessage",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "NetMessageSplitscreenUserChanged",
+                "details": {
+                  "Itanium": {
+                    "offset": 48,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::Message",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "google::protobuf::MessageLite",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7517,7 +10280,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7557,7 +10332,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7597,7 +10384,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7625,7 +10424,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -7665,7 +10465,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -7705,7 +10506,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7745,7 +10558,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7785,7 +10610,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7825,7 +10662,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7850,7 +10699,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -7879,7 +10729,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -7919,7 +10770,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7959,7 +10822,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -7999,7 +10874,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8039,7 +10926,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8079,7 +10978,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8119,7 +11030,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8174,7 +11097,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8214,7 +11149,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8254,7 +11201,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8294,7 +11253,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8334,7 +11305,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8428,7 +11411,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8468,7 +11463,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8497,7 +11504,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -8518,7 +11526,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -8539,7 +11548,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -8560,7 +11570,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -8581,7 +11592,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -8602,7 +11614,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -8623,7 +11636,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -8685,7 +11699,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8725,7 +11751,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8765,7 +11803,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8805,7 +11855,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8845,7 +11907,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8885,7 +11959,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8925,7 +12011,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -8954,7 +12052,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -8994,7 +12093,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9034,7 +12145,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9138,7 +12261,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -9177,7 +12301,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -9216,7 +12341,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::TextFormat::FastFieldValuePrinter",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9244,7 +12381,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -9284,7 +12422,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9324,7 +12474,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9352,7 +12514,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -9398,7 +12561,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::MapFieldBase",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9433,7 +12608,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -9487,7 +12663,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::RepeatedFieldAccessor",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9538,7 +12726,30 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::RandomAccessRepeatedFieldAccessor",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::internal::RepeatedFieldAccessor",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9578,7 +12789,30 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::RandomAccessRepeatedFieldAccessor",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::internal::RepeatedFieldAccessor",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9618,7 +12852,30 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::RandomAccessRepeatedFieldAccessor",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::internal::RepeatedFieldAccessor",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9658,7 +12915,30 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::RandomAccessRepeatedFieldAccessor",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::internal::RepeatedFieldAccessor",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9698,7 +12978,30 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::RandomAccessRepeatedFieldAccessor",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::internal::RepeatedFieldAccessor",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9738,7 +13041,30 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::RandomAccessRepeatedFieldAccessor",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::internal::RepeatedFieldAccessor",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9778,7 +13104,30 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::RandomAccessRepeatedFieldAccessor",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::internal::RepeatedFieldAccessor",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9799,7 +13148,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::RepeatedFieldAccessor",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9873,7 +13234,30 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::RandomAccessRepeatedFieldAccessor",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::internal::RepeatedFieldAccessor",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9914,7 +13298,30 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::internal::RandomAccessRepeatedFieldAccessor",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "google::protobuf::internal::RepeatedFieldAccessor",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9935,7 +13342,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::MessageLite",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -9963,7 +13382,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -9992,7 +13412,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -10020,7 +13441,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -10048,7 +13470,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -10077,7 +13500,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -10116,7 +13540,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -10142,7 +13567,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -10171,7 +13597,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "google::protobuf::io::ZeroCopyOutputStream",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -10196,7 +13634,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -10224,7 +13663,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -10250,7 +13690,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -10278,7 +13719,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -10307,7 +13749,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -10332,7 +13775,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -10361,7 +13805,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -10432,7 +13877,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -10467,7 +13913,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CRefCountServiceBase<CRefMT>",
+                "details": {
+                  "Itanium": {
+                    "offset": 8,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }

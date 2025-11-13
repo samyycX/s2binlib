@@ -3,13 +3,13 @@ Virtual Function Count: 24
 Children Count: 0
 =============================================
 func_0     [ DIFF 0   ]                               []
-    "48 8D 3D B9 FD E8 00 E9 94 BA 7E 00 CC CC CC CC"
+    "48 8D 3D 99 07 E9 00 E9 54 C3 7E 00 CC CC CC CC"
 func_1     [ DIFF 0   ]                               []
-    "48 8D 05 49 04 E9 00 C3 CC CC CC CC CC CC CC CC"
+    "48 8D 05 09 0E E9 00 C3 CC CC CC CC CC CC CC CC"
 func_2     [ DIFF 0   ]                               []
-    "48 8D 05 19 A5 D4 00 48 89 07 E9 51 F1 1D 00 CC"
+    "48 8D 05 99 AD D4 00 48 89 07 E9 D1 F3 1D 00 CC"
 func_3     [ DIFF 0   ]                               []
-    "55 48 8D 05 08 A5 D4 00 48 89 E5 53 48 89 FB 48"
+    "55 48 8D 05 88 AD D4 00 48 89 E5 53 48 89 FB 48"
 func_4     [ DIFF 0   ]                               []
     "C3 CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_5     [ DIFF 0   ]                               []
@@ -39,13 +39,13 @@ func_16    [ DIFF 0   ]                               []
 func_17    [ DIFF 0   ]                               []
     "C3 CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_18    [ DIFF 0   ]                               []
-    "55 48 89 E5 53 48 89 FB 48 83 EC 08 E8 BF AB 1A"
+    "55 48 89 E5 53 48 89 FB 48 83 EC 08 E8 BF AC 1A"
 func_19    [ DIFF 0   ]                               []
-    "45 31 C9 45 31 C0 31 C9 31 D2 E9 D1 F6 FF FF CC"
+    "45 31 C9 45 31 C0 31 C9 31 D2 E9 51 F5 FF FF CC"
 func_20    [ DIFF 0   ]                               []
     "55 45 31 C9 44 0F B6 C2 31 C9 48 89 E5 31 D2 E8"
 func_21    [ DIFF 0   ]                               []
-    "45 31 C9 45 31 C0 31 C9 31 D2 E9 A1 F6 FF FF CC"
+    "45 31 C9 45 31 C0 31 C9 31 D2 E9 21 F5 FF FF CC"
 func_22    [ DIFF 0   ]                               []
     "55 0F B6 C9 48 89 E5 41 56 41 55 41 54 49 89 F4"
 func_23    [ DIFF 0   ]                               []
@@ -56,6 +56,8 @@ Bases:
 "CPlayer_ItemServices"
     Offset: 0
     Flags: 0
+    Nested Bases:
+        "CPlayerPawnComponent"
 =============================================
 
 =============================================

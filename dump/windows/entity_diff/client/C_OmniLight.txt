@@ -238,7 +238,6 @@ C_BarnLight     VS     C_OmniLight
 [=]
 [=]
 [=]
-[=]
 [!]
 [!]
 [!]

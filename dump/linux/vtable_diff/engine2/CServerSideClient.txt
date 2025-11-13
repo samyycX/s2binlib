@@ -21,13 +21,13 @@ func_7     [ DIFF 1   ]                               ["CHLTVClient"]
 func_8     [ DIFF 1   ]                               ["CHLTVClient"]
     "8B 47 64 85 C0 75 09 C3 0F 1F 84 00 00 00 00 00"
 func_9     [ DIFF 1   ]                               ["CHLTVClient"]
-    "55 45 31 C0 31 F6 B9 FF FF FF FF 48 8D 15 98 30"
+    "55 45 31 C0 31 F6 B9 FF FF FF FF 48 8D 15 64 30"
 func_10    [ DIFF 0   ]                               []
     "55 48 89 E5 41 55 49 89 D5 41 54 49 89 F4 53 48"
 func_11    [ DIFF 1   ]                               ["CHLTVClient"]
     "55 66 0F 6E C6 48 89 E5 41 54 66 41 0F 7E C4 53"
 func_12    [ DIFF 1   ]                               ["CHLTVClient"]
-    "F3 0F 10 0D A4 5D BA FF 0F 28 D1 F3 0F 5F D0 F3"
+    "F3 0F 10 0D 64 5D BA FF 0F 28 D1 F3 0F 5F D0 F3"
 func_13    [ DIFF 0   ]                               []
     "48 8B 7F 58 48 85 FF 74 07 48 8B 07 FF 60 28 90"
 func_14    [ DIFF 1   ]                               ["CHLTVClient"]
@@ -117,9 +117,9 @@ func_55    [ DIFF 0   ]                               []
 func_56    [ DIFF 0   ]                               []
     "48 8D 87 90 01 00 00 C3 CC CC CC CC CC CC CC CC"
 func_57    [ DIFF 1   ]                               ["CHLTVClient"]
-    "55 48 8D 35 C1 86 BA FF 31 D2 48 89 E5 53 48 89"
+    "55 48 8D 35 81 86 BA FF 31 D2 48 89 E5 53 48 89"
 func_58    [ DIFF 0   ]                               []
-    "55 48 8D 35 B2 15 BB FF BA 88 13 00 00 48 89 E5"
+    "55 48 8D 35 72 15 BB FF BA 88 13 00 00 48 89 E5"
 func_59    [ DIFF 1   ]                               ["CHLTVClient"]
     "48 81 C7 20 0E 00 00 BA 01 00 00 00 E9 8F 9B F7"
 func_60    [ DIFF 1   ]                               ["CHLTVClient"]
@@ -129,7 +129,7 @@ func_61    [ DIFF 1   ]                               ["CHLTVClient"]
 func_62    [ DIFF 1   ]                               ["CHLTVClient"]
     "55 48 89 E5 41 56 41 55 41 54 53 48 89 FB 48 83"
 func_63    [ DIFF 0   ]                               []
-    "55 48 89 E5 41 54 53 4C 8D 25 32 5E BA FF 48 89"
+    "55 48 89 E5 41 54 53 4C 8D 25 F2 5D BA FF 48 89"
 func_64    [ DIFF 0   ]                               []
     "48 85 F6 0F 84 FF 00 00 00 55 48 89 E5 41 56 41"
 func_65    [ DIFF 0   ]                               []
@@ -157,7 +157,7 @@ func_75    [ DIFF 1   ]                               ["CHLTVClient"]
 func_76    [ DIFF 1   ]                               ["CHLTVClient"]
     "55 48 89 E5 41 56 41 55 41 54 53 48 89 FB 48 83"
 func_77    [ DIFF 1   ]                               ["CHLTVClient"]
-    "48 83 7F 58 00 C6 47 62 01 74 05 E9 30 4D BF FF"
+    "48 83 7F 58 00 C6 47 62 01 74 05 E9 10 4D BF FF"
 func_78    [ DIFF 1   ]                               ["CHLTVClient"]
     "C6 47 62 00 C3 CC CC CC CC CC CC CC CC CC CC CC"
 func_79    [ DIFF 1   ]                               ["CHLTVClient"]
@@ -170,6 +170,10 @@ Bases:
 "CServerSideClientBase"
     Offset: 0
     Flags: 0
+    Nested Bases:
+        "CUtlSlot"
+        "INetworkChannelNotify"
+        "INetworkMessageProcessingPreFilter"
 =============================================
 
 =============================================

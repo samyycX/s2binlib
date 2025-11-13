@@ -247,7 +247,6 @@ C_BasePlayerPawn VS C_CSObserverPawn
 [=]
 [=]
 [=]
-[=]
 [!]
 [=]
 [=]

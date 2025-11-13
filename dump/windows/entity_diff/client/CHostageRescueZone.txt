@@ -241,7 +241,6 @@ CHostageRescueZoneShim VS CHostageRescueZone
 [=]
 [=]
 [=]
-[=]
 [!]
 [=]
 [=]

@@ -272,4 +272,3 @@ C_BaseEntity    VS C_CS2HudModelWeapon
 [?]
 [?]
 [?]
-[?]

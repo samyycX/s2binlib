@@ -122,6 +122,8 @@ Bases:
 "CTier2AppSystem<INetworkSystem, (long long)0>"
     Offset: 0
     Flags: 2
+    Nested Bases:
+        "CTier1AppSystem<INetworkSystem, (long long)0>"
 "IVConCommDataReceived"
     Offset: 40
     Flags: 2

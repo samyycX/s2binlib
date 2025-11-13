@@ -288,4 +288,3 @@ C_BaseEntity    VS C_MolotovProjectile
 [?]
 [?]
 [?]
-[?]

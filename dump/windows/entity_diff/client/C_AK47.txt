@@ -419,4 +419,3 @@ C_CSWeaponBaseGun VS          C_AK47
 [=]
 [=]
 [=]
-[=]

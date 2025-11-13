@@ -238,7 +238,6 @@ C_BaseToggle    VS CHostageRescueZoneShim
 [=]
 [=]
 [=]
-[=]
 [?]
 [?]
 [?]

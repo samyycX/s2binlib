@@ -247,7 +247,6 @@ C_EconEntity    VS C_BasePlayerWeapon
 [=]
 [=]
 [=]
-[=]
 [!]
 [=]
 [=]

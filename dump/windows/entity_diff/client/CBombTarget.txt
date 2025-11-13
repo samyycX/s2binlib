@@ -246,6 +246,5 @@ C_BaseTrigger   VS     CBombTarget
 [=]
 [=]
 [=]
-[=]
 [?]
 [?]

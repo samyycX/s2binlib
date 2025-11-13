@@ -1,6 +1,6 @@
 Vtable: CGameEventListener
 Virtual Function Count: 0
-Children Count: 38
+Children Count: 37
 =============================================
 
 =============================================
@@ -34,7 +34,6 @@ Children:
 "CCSEventLog"
 "CFishPool"
 "CGameJournal"
-"CCSGameJournal"
 "CNullGameJournal"
 "CHLTVDirector"
 "CCSHLTVDirector"

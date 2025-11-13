@@ -90,6 +90,8 @@ Bases:
 "CTier2AppSystem<ISchemaSystem, (long long)0>"
     Offset: 0
     Flags: 0
+    Nested Bases:
+        "CTier1AppSystem<ISchemaSystem, (long long)0>"
 =============================================
 
 =============================================

@@ -1,7 +1,7 @@
 [
   {
     "type_name": "CBaseIntrospectedToKV3TypeManager::AsyncProcessResult",
-    "vtable_address": 1663272,
+    "vtable_address": 1663208,
     "methods": [
       729680,
       731200
@@ -12,7 +12,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -25,9 +26,9 @@
   },
   {
     "type_name": "CCompileTargetExprOpCodeHandler",
-    "vtable_address": 1673256,
+    "vtable_address": 1673192,
     "methods": [
-      1284240
+      1284176
     ],
     "bases": [
       {
@@ -35,7 +36,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -48,19 +50,19 @@
   },
   {
     "type_name": "CCompileTargetExprStackMachineBuilder",
-    "vtable_address": 1673824,
+    "vtable_address": 1673760,
     "methods": [
-      1278448,
-      1312720,
+      1278384,
+      1312656,
       1196448,
-      1283632,
+      1283568,
       607952,
-      1278432,
-      1283936,
-      1284080,
-      1283776,
+      1278368,
+      1283872,
+      1284016,
+      1283712,
       607952,
-      1283536
+      1283472
     ],
     "bases": [
       {
@@ -68,7 +70,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -81,7 +84,7 @@
   },
   {
     "type_name": "CDynamicShaderCompileByteCode",
-    "vtable_address": 1660384,
+    "vtable_address": 1660320,
     "methods": [
       795984,
       796032,
@@ -94,7 +97,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -107,7 +111,7 @@
   },
   {
     "type_name": "CFontBase",
-    "vtable_address": 1668304,
+    "vtable_address": 1668240,
     "methods": [],
     "bases": [],
     "model": {
@@ -118,7 +122,7 @@
   },
   {
     "type_name": "CFontManager",
-    "vtable_address": 1667512,
+    "vtable_address": 1667448,
     "methods": [
       1003984,
       1004096,
@@ -172,7 +176,63 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier1AppSystem<IFontManager, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CTier0AppSystem<IFontManager, (long long)0>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "CBaseAppSystem<IFontManager>",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "IFontManager",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": [
+                                              {
+                                                "type_name": "IAppSystem",
+                                                "details": {
+                                                  "Itanium": {
+                                                    "offset": 0,
+                                                    "flags": 0,
+                                                    "bases": []
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -185,7 +245,7 @@
   },
   {
     "type_name": "CIntOpEvaluator",
-    "vtable_address": 1673224,
+    "vtable_address": 1673160,
     "methods": [
       1154336,
       1154928
@@ -196,7 +256,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -209,7 +270,7 @@
   },
   {
     "type_name": "CKV3ResourceBlockHelper",
-    "vtable_address": 1663304,
+    "vtable_address": 1663240,
     "methods": [
       727920,
       728800,
@@ -222,7 +283,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -235,7 +297,7 @@
   },
   {
     "type_name": "CKV3TransferContextBase",
-    "vtable_address": 1670472,
+    "vtable_address": 1670408,
     "methods": [
       1168272,
       609888,
@@ -250,7 +312,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -263,7 +326,7 @@
   },
   {
     "type_name": "CKV3TransferContextBase",
-    "vtable_address": 1670904,
+    "vtable_address": 1670840,
     "methods": [],
     "bases": [
       {
@@ -271,7 +334,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -284,7 +348,7 @@
   },
   {
     "type_name": "CKV3TransferLoadContext",
-    "vtable_address": 1672704,
+    "vtable_address": 1672640,
     "methods": [
       1168272,
       609888,
@@ -335,7 +399,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IErrorListener",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -348,7 +424,7 @@
   },
   {
     "type_name": "CKV3TransferSaveContext",
-    "vtable_address": 1670408,
+    "vtable_address": 1670344,
     "methods": [
       1168272,
       609888,
@@ -363,7 +439,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IErrorListener",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -376,9 +464,9 @@
   },
   {
     "type_name": "CKV3Transfer_ResourceLoadInterface",
-    "vtable_address": 1676280,
+    "vtable_address": 1676216,
     "methods": [
-      1371552
+      1371488
     ],
     "bases": [
       {
@@ -386,7 +474,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -399,7 +488,7 @@
   },
   {
     "type_name": "CLineBatchLayoutInfo",
-    "vtable_address": 1666176,
+    "vtable_address": 1666112,
     "methods": [
       877488,
       878336,
@@ -414,7 +503,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IQueuedRenderable",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -427,7 +528,7 @@
   },
   {
     "type_name": "CLineLayoutInfo",
-    "vtable_address": 1666240,
+    "vtable_address": 1666176,
     "methods": [
       875904,
       876688,
@@ -442,7 +543,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IQueuedRenderable",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -455,7 +568,7 @@
   },
   {
     "type_name": "CMaterial2",
-    "vtable_address": 1662176,
+    "vtable_address": 1662112,
     "methods": [
       711040,
       743744,
@@ -504,7 +617,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -517,7 +631,7 @@
   },
   {
     "type_name": "CMaterial2::AsyncStaticComboResult_t",
-    "vtable_address": 1662144,
+    "vtable_address": 1662080,
     "methods": [
       756784,
       757056
@@ -528,7 +642,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -541,7 +656,7 @@
   },
   {
     "type_name": "CMaterialMode",
-    "vtable_address": 1658832,
+    "vtable_address": 1658768,
     "methods": [
       786688,
       787888,
@@ -557,7 +672,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -570,7 +686,7 @@
   },
   {
     "type_name": "CMaterialSystem2",
-    "vtable_address": 1661392,
+    "vtable_address": 1661328,
     "methods": [
       620896,
       611616,
@@ -628,7 +744,63 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier1AppSystem<IMaterialSystem2, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CTier0AppSystem<IMaterialSystem2, (long long)0>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "CBaseAppSystem<IMaterialSystem2>",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "IMaterialSystem2",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": [
+                                              {
+                                                "type_name": "IAppSystem",
+                                                "details": {
+                                                  "Itanium": {
+                                                    "offset": 0,
+                                                    "flags": 0,
+                                                    "bases": []
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -641,7 +813,7 @@
   },
   {
     "type_name": "CMaterialSystem2Utils",
-    "vtable_address": 1665536,
+    "vtable_address": 1665472,
     "methods": [
       900832,
       958336,
@@ -712,7 +884,63 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier1AppSystem<IMaterialSystem2Utils, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CTier0AppSystem<IMaterialSystem2Utils, (long long)0>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "CBaseAppSystem<IMaterialSystem2Utils>",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "IMaterialSystem2Utils",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": [
+                                              {
+                                                "type_name": "IAppSystem",
+                                                "details": {
+                                                  "Itanium": {
+                                                    "offset": 0,
+                                                    "flags": 0,
+                                                    "bases": []
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -725,9 +953,9 @@
   },
   {
     "type_name": "CMaterialTypeManager",
-    "vtable_address": 1660736,
+    "vtable_address": 1660672,
     "methods": [
-      1353488,
+      1353424,
       665424,
       952080,
       825440,
@@ -738,13 +966,13 @@
       821568,
       821584,
       821520,
-      1394816,
-      1353520,
+      1394752,
+      1353456,
       821616,
       666608,
       821536,
-      1353504,
-      1375152,
+      1353440,
+      1375088,
       821552,
       665424,
       885632,
@@ -761,7 +989,30 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CBaseIntrospectedToKV3TypeManager",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "IResourceTypeManager",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -774,7 +1025,7 @@
   },
   {
     "type_name": "CMeshLayoutInfo",
-    "vtable_address": 1666112,
+    "vtable_address": 1666048,
     "methods": [
       879168,
       880016,
@@ -789,7 +1040,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IQueuedRenderable",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -802,9 +1065,9 @@
   },
   {
     "type_name": "CModuleMetadataProvider_ResourceManifests",
-    "vtable_address": 1677072,
+    "vtable_address": 1677008,
     "methods": [
-      1355808
+      1355744
     ],
     "bases": [
       {
@@ -812,7 +1075,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -825,7 +1089,7 @@
   },
   {
     "type_name": "CNullShaderCreateCallbacks",
-    "vtable_address": 1658520,
+    "vtable_address": 1658456,
     "methods": [
       609552,
       626512,
@@ -840,7 +1104,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -853,7 +1118,7 @@
   },
   {
     "type_name": "CPlatformFont",
-    "vtable_address": 1666968,
+    "vtable_address": 1666904,
     "methods": [
       1012704,
       1020176,
@@ -866,7 +1131,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -879,7 +1145,7 @@
   },
   {
     "type_name": "CPostProcessingState",
-    "vtable_address": 1669064,
+    "vtable_address": 1669000,
     "methods": [
       1069392,
       1070080,
@@ -907,7 +1173,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -920,7 +1187,7 @@
   },
   {
     "type_name": "CPostProcessingSystem",
-    "vtable_address": 1668872,
+    "vtable_address": 1668808,
     "methods": [
       1039600,
       1039936,
@@ -951,7 +1218,63 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier1AppSystem<IPostProcessingSystem, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CTier0AppSystem<IPostProcessingSystem, (long long)0>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "CBaseAppSystem<IPostProcessingSystem>",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "IPostProcessingSystem",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": [
+                                              {
+                                                "type_name": "IAppSystem",
+                                                "details": {
+                                                  "Itanium": {
+                                                    "offset": 0,
+                                                    "flags": 0,
+                                                    "bases": []
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -964,9 +1287,9 @@
   },
   {
     "type_name": "CPostProcessingTypeManager",
-    "vtable_address": 1669232,
+    "vtable_address": 1669168,
     "methods": [
-      1353488,
+      1353424,
       665424,
       952080,
       1037968,
@@ -977,13 +1300,13 @@
       1038592,
       1038608,
       821520,
-      1394816,
-      1353520,
+      1394752,
+      1353456,
       821520,
       666608,
       821536,
-      1353504,
-      1375152,
+      1353440,
+      1375088,
       821552,
       665424,
       1090800,
@@ -1000,7 +1323,30 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CBaseIntrospectedToKV3TypeManager",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "IResourceTypeManager",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1013,7 +1359,7 @@
   },
   {
     "type_name": "CPrimitivesLayoutInfo",
-    "vtable_address": 1666048,
+    "vtable_address": 1665984,
     "methods": [
       880880,
       882000,
@@ -1028,7 +1374,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IQueuedRenderable",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1041,7 +1399,7 @@
   },
   {
     "type_name": "CQueuedResetMaterialCacheRenderable",
-    "vtable_address": 1666432,
+    "vtable_address": 1666368,
     "methods": [
       852736,
       872704,
@@ -1056,7 +1414,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IQueuedRenderable",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1069,7 +1439,7 @@
   },
   {
     "type_name": "CQueuedSetMaterialOrTextureRenderable",
-    "vtable_address": 1666368,
+    "vtable_address": 1666304,
     "methods": [
       872720,
       873504,
@@ -1084,7 +1454,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IQueuedRenderable",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1097,7 +1479,7 @@
   },
   {
     "type_name": "CQueuedTextRenderable",
-    "vtable_address": 1666304,
+    "vtable_address": 1666240,
     "methods": [
       874304,
       875104,
@@ -1112,7 +1494,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IQueuedRenderable",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1125,9 +1519,9 @@
   },
   {
     "type_name": "CSchemaInstallCallback",
-    "vtable_address": 1677048,
+    "vtable_address": 1676984,
     "methods": [
-      1367968
+      1367904
     ],
     "bases": [
       {
@@ -1135,7 +1529,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1148,7 +1543,7 @@
   },
   {
     "type_name": "CSchemaRegistration_materialsystem2",
-    "vtable_address": 1677096,
+    "vtable_address": 1677032,
     "methods": [
       1080032
     ],
@@ -1158,7 +1553,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1171,7 +1567,7 @@
   },
   {
     "type_name": "CShaderCreateCallbacks",
-    "vtable_address": 1660432,
+    "vtable_address": 1660368,
     "methods": [
       609552,
       626528,
@@ -1186,7 +1582,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1199,7 +1596,7 @@
   },
   {
     "type_name": "CTextLayout",
-    "vtable_address": 1677120,
+    "vtable_address": 1677056,
     "methods": [
       1039488,
       1039712,
@@ -1230,7 +1627,63 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier1AppSystem<ITextLayout, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CTier0AppSystem<ITextLayout, (long long)0>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "CBaseAppSystem<ITextLayout>",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "ITextLayout",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": [
+                                              {
+                                                "type_name": "IAppSystem",
+                                                "details": {
+                                                  "Itanium": {
+                                                    "offset": 0,
+                                                    "flags": 0,
+                                                    "bases": []
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1243,28 +1696,28 @@
   },
   {
     "type_name": "CTextureDictionary",
-    "vtable_address": 1676104,
+    "vtable_address": 1676040,
     "methods": [
-      1383296,
-      1380448,
-      1388864,
-      1353856,
-      1391056,
-      1383056,
-      1381312,
-      1354464,
-      1354688,
-      1354864,
-      1387008,
-      1355088,
-      1371856,
-      1357840,
-      1358144,
-      1353936,
-      1354160,
-      1384000,
-      1354432,
-      1388352
+      1383232,
+      1380384,
+      1388800,
+      1353792,
+      1390992,
+      1382992,
+      1381248,
+      1354400,
+      1354624,
+      1354800,
+      1386944,
+      1355024,
+      1371792,
+      1357776,
+      1358080,
+      1353872,
+      1354096,
+      1383936,
+      1354368,
+      1388288
     ],
     "bases": [
       {
@@ -1272,7 +1725,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1285,7 +1739,7 @@
   },
   {
     "type_name": "CTier1AppSystem<ITextLayout, (long long)0>",
-    "vtable_address": 1668024,
+    "vtable_address": 1667960,
     "methods": [],
     "bases": [
       {
@@ -1293,7 +1747,41 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CBaseAppSystem<ITextLayout>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "ITextLayout",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "IAppSystem",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1306,7 +1794,7 @@
   },
   {
     "type_name": "CTier2AppSystem<IFontManager, (long long)0>",
-    "vtable_address": 1666952,
+    "vtable_address": 1666888,
     "methods": [],
     "bases": [
       {
@@ -1314,7 +1802,52 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier0AppSystem<IFontManager, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CBaseAppSystem<IFontManager>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "IFontManager",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "IAppSystem",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": []
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1327,7 +1860,7 @@
   },
   {
     "type_name": "CTier2AppSystem<IFontManager, (long long)0>",
-    "vtable_address": 1667152,
+    "vtable_address": 1667088,
     "methods": [
       1003984,
       1004096,
@@ -1347,7 +1880,52 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier0AppSystem<IFontManager, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CBaseAppSystem<IFontManager>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "IFontManager",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "IAppSystem",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": []
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1360,7 +1938,7 @@
   },
   {
     "type_name": "CTier2AppSystem<IMaterialSystem2, (long long)0>",
-    "vtable_address": 1658816,
+    "vtable_address": 1658752,
     "methods": [],
     "bases": [
       {
@@ -1368,7 +1946,52 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier0AppSystem<IMaterialSystem2, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CBaseAppSystem<IMaterialSystem2>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "IMaterialSystem2",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "IAppSystem",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": []
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1381,7 +2004,7 @@
   },
   {
     "type_name": "CTier2AppSystem<IMaterialSystem2, (long long)0>",
-    "vtable_address": 1661000,
+    "vtable_address": 1660936,
     "methods": [
       669872,
       669984,
@@ -1401,7 +2024,52 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier0AppSystem<IMaterialSystem2, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CBaseAppSystem<IMaterialSystem2>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "IMaterialSystem2",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "IAppSystem",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": []
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1414,7 +2082,7 @@
   },
   {
     "type_name": "CTier2AppSystem<IMaterialSystem2Utils, (long long)0>",
-    "vtable_address": 1665040,
+    "vtable_address": 1664976,
     "methods": [
       958224,
       958336,
@@ -1434,7 +2102,52 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier0AppSystem<IMaterialSystem2Utils, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CBaseAppSystem<IMaterialSystem2Utils>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "IMaterialSystem2Utils",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "IAppSystem",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": []
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1447,7 +2160,7 @@
   },
   {
     "type_name": "CTier2AppSystem<IPostProcessingSystem, (long long)0>",
-    "vtable_address": 1668680,
+    "vtable_address": 1668616,
     "methods": [
       1039600,
       1039936,
@@ -1467,7 +2180,52 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier0AppSystem<IPostProcessingSystem, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CBaseAppSystem<IPostProcessingSystem>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "IPostProcessingSystem",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "IAppSystem",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": []
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1480,7 +2238,7 @@
   },
   {
     "type_name": "CTier2AppSystem<ITextLayout, (long long)0>",
-    "vtable_address": 1668040,
+    "vtable_address": 1667976,
     "methods": [
       1039488,
       1039712,
@@ -1500,7 +2258,52 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier0AppSystem<ITextLayout, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CBaseAppSystem<ITextLayout>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "ITextLayout",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "IAppSystem",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": []
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1513,7 +2316,7 @@
   },
   {
     "type_name": "CTier2AppSystem<ITextLayout, (long long)0>",
-    "vtable_address": 1677032,
+    "vtable_address": 1676968,
     "methods": [],
     "bases": [
       {
@@ -1521,7 +2324,52 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier0AppSystem<ITextLayout, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CBaseAppSystem<ITextLayout>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "ITextLayout",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "IAppSystem",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": []
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1534,7 +2382,7 @@
   },
   {
     "type_name": "CTypesafeIntrospectedToKV3TypeManager<(unsigned long long)1952542070, MaterialResourceData_t>::AllocateAndLoad(CKV3TransferLoadContext&, ResourceBindingBase_t const*, IRD_RegisterResourceDataUtils*)::CAllocatorUtils",
-    "vtable_address": 1666624,
+    "vtable_address": 1666560,
     "methods": [
       821600,
       821664
@@ -1545,7 +2393,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1558,7 +2407,7 @@
   },
   {
     "type_name": "CTypesafeIntrospectedToKV3TypeManager<(unsigned long long)1952542070, MaterialResourceData_t>::DeallocateDestroyCleanup(void*, IResourceDeallocatorUtils*)::CDeallocatorUtils",
-    "vtable_address": 1666496,
+    "vtable_address": 1666432,
     "methods": [
       772032
     ],
@@ -1568,7 +2417,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1581,7 +2431,7 @@
   },
   {
     "type_name": "CTypesafeIntrospectedToKV3TypeManager<(unsigned long long)1952542070, MaterialResourceData_t>::IKV3ResourceAllocatorUtils",
-    "vtable_address": 1665024,
+    "vtable_address": 1664960,
     "methods": [],
     "bases": [],
     "model": {
@@ -1592,7 +2442,7 @@
   },
   {
     "type_name": "CTypesafeIntrospectedToKV3TypeManager<(unsigned long long)500152889462, PostProcessingResource_t>",
-    "vtable_address": 1668664,
+    "vtable_address": 1668600,
     "methods": [],
     "bases": [
       {
@@ -1600,7 +2450,19 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IResourceTypeManager",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
           }
         }
       }
@@ -1613,7 +2475,7 @@
   },
   {
     "type_name": "CTypesafeIntrospectedToKV3TypeManager<(unsigned long long)500152889462, PostProcessingResource_t>::AllocateAndLoad(CKV3TransferLoadContext&, ResourceBindingBase_t const*, IRD_RegisterResourceDataUtils*)::CAllocatorUtils",
-    "vtable_address": 1670744,
+    "vtable_address": 1670680,
     "methods": [
       1038640,
       821664
@@ -1624,7 +2486,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1637,7 +2500,7 @@
   },
   {
     "type_name": "CTypesafeIntrospectedToKV3TypeManager<(unsigned long long)500152889462, PostProcessingResource_t>::DeallocateDestroyCleanup(void*, IResourceDeallocatorUtils*)::CDeallocatorUtils",
-    "vtable_address": 1670720,
+    "vtable_address": 1670656,
     "methods": [
       772032
     ],
@@ -1647,7 +2510,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1660,7 +2524,7 @@
   },
   {
     "type_name": "CTypesafeIntrospectedToKV3TypeManager<(unsigned long long)500152889462, PostProcessingResource_t>::IKV3ResourceAllocatorUtils",
-    "vtable_address": 1670392,
+    "vtable_address": 1670328,
     "methods": [],
     "bases": [],
     "model": {
@@ -1671,7 +2535,7 @@
   },
   {
     "type_name": "CUtlStackMachineBuilder",
-    "vtable_address": 1673704,
+    "vtable_address": 1673640,
     "methods": [],
     "bases": [],
     "model": {
@@ -1682,7 +2546,7 @@
   },
   {
     "type_name": "CUtlStackMachineBuilder",
-    "vtable_address": 1673720,
+    "vtable_address": 1673656,
     "methods": [],
     "bases": [],
     "model": {
@@ -1693,7 +2557,7 @@
   },
   {
     "type_name": "CVfxConstructor",
-    "vtable_address": 1661992,
+    "vtable_address": 1661928,
     "methods": [
       757360
     ],
@@ -1703,7 +2567,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1716,12 +2581,12 @@
   },
   {
     "type_name": "CVfxShaderBuffer",
-    "vtable_address": 1673584,
+    "vtable_address": 1673520,
     "methods": [
-      1272800,
-      1273072,
-      1234208,
-      1234224
+      1272736,
+      1273008,
+      1234176,
+      1234192
     ],
     "bases": [
       {
@@ -1729,7 +2594,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 0
+            "flags": 0,
+            "bases": []
           }
         }
       }
@@ -1742,7 +2608,7 @@
   },
   {
     "type_name": "IAsyncProcessedDataResult",
-    "vtable_address": 1661976,
+    "vtable_address": 1661912,
     "methods": [],
     "bases": [],
     "model": {
@@ -1753,7 +2619,7 @@
   },
   {
     "type_name": "IErrorListener",
-    "vtable_address": 1669512,
+    "vtable_address": 1669448,
     "methods": [],
     "bases": [],
     "model": {
@@ -1764,7 +2630,7 @@
   },
   {
     "type_name": "IKV3TransferInterface_ResourceLoad",
-    "vtable_address": 1676088,
+    "vtable_address": 1676024,
     "methods": [],
     "bases": [],
     "model": {
@@ -1775,7 +2641,7 @@
   },
   {
     "type_name": "IRenderShaderByteCode",
-    "vtable_address": 1673144,
+    "vtable_address": 1673080,
     "methods": [],
     "bases": [],
     "model": {
@@ -1786,12 +2652,23 @@
   },
   {
     "type_name": "IRuntimeShaderCreateCallbacks",
-    "vtable_address": 1658504,
+    "vtable_address": 1658440,
     "methods": [],
     "bases": [],
     "model": {
       "Itanium": {
         "offset_to_top": 238624
+      }
+    }
+  },
+  {
+    "type_name": "MaterialParam_t",
+    "vtable_address": 1693680,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
       }
     }
   },
@@ -1851,41 +2728,30 @@
     }
   },
   {
-    "type_name": "MaterialParam_t",
-    "vtable_address": 1694064,
-    "methods": [],
-    "bases": [],
-    "model": {
-      "Itanium": {
-        "offset_to_top": 0
-      }
-    }
-  },
-  {
     "type_name": "PostProcessingResource_t",
-    "vtable_address": 1670640,
+    "vtable_address": 1670576,
     "methods": [],
     "bases": [],
     "model": {
       "Itanium": {
-        "offset_to_top": 1694272
+        "offset_to_top": 1694208
       }
     }
   },
   {
     "type_name": "ViewFadeMode_t",
-    "vtable_address": 1670696,
+    "vtable_address": 1670632,
     "methods": [],
     "bases": [],
     "model": {
       "Itanium": {
-        "offset_to_top": 1696320
+        "offset_to_top": 1696256
       }
     }
   },
   {
     "type_name": "m_bHasTonemapParams",
-    "vtable_address": 1669744,
+    "vtable_address": 1669680,
     "methods": [],
     "bases": [
       {
@@ -1893,7 +2759,8 @@
         "details": {
           "Itanium": {
             "offset": 0,
-            "flags": 1
+            "flags": 1,
+            "bases": []
           }
         }
       }
@@ -1906,13 +2773,13 @@
   },
   {
     "type_name": "std::_Sp_counted_ptr_inplace<CVfxStaticComboData::DecompressedComboData_t, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>",
-    "vtable_address": 1676848,
+    "vtable_address": 1676784,
     "methods": [
-      1302928,
-      1312688,
-      1275776,
-      1312704,
-      1283440
+      1302864,
+      1312624,
+      1275712,
+      1312640,
+      1283376
     ],
     "bases": [],
     "model": {

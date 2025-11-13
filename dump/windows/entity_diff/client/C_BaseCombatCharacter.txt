@@ -277,7 +277,6 @@ C_BaseFlex      VS C_BaseCombatCharacter
 [=]
 [=]
 [=]
-[=]
 [?]
 [?]
 [?]
