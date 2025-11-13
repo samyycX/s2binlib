@@ -1017,7 +1017,11 @@ impl<'a> S2BinLib<'a> {
             .insert(binary_name.to_string(), strings_map);
 
         Ok(())
-    }   
+    }
+
+    pub fn get_strings(&self, binary_name: &str) -> Option<&HashMap<String, u64>> {
+        self.strings_cache.get(binary_name)
+    }
 
     pub fn find_xrefs_cached(&self, binary_name: &str, target_rva: u64) -> Option<&Vec<u64>> {
         self.xrefs_cache

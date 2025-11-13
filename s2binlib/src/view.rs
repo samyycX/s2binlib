@@ -411,7 +411,7 @@ impl<'a> S2BinLib<'a> {
         FileBinaryView::new(binary, &file, image_base)
     }
 
-    pub fn get_memory_view_from_ptr(&self, ptr: u64) -> Result<MemoryView> {
+    pub fn get_memory_view_from_ptr(&self, ptr: u64) -> Result<MemoryView<'_>> {
         let result = module_from_pointer(ptr);
 
         if result.is_none() {
