@@ -40,6 +40,7 @@ jobs:
           path: |
             target/release/libs2binlib.so
             target/release/libs2binlib.a
+            target/release/libs2binlib.pdb
 
   build-windows:
     name: Build Windows
@@ -61,6 +62,7 @@ jobs:
           path: |
             target/release/s2binlib.dll
             target/release/s2binlib.lib
+            target/release/s2binlib.pdb
 
   create-release-package:
     name: Create Release Package
@@ -103,7 +105,11 @@ jobs:
           mkdir -p release/windows
           mkdir -p release/include
           cp artifacts/s2binlib-linux-x86_64/libs2binlib.a release/linux/
+          cp artifacts/s2binlib-linux-x86_64/libs2binlib.so release/linux/
+          cp artifacts/s2binlib-linux-x86_64/libs2binlib.pdb release/linux/
           cp artifacts/s2binlib-windows-x86_64/s2binlib.lib release/windows/
+          cp artifacts/s2binlib-windows-x86_64/s2binlib.dll release/windows/
+          cp artifacts/s2binlib-windows-x86_64/s2binlib.pdb release/windows/
           cp headers/s2binlib001.h release/include/
           cp headers/s2binlib_static.h release/include/
 
