@@ -104,7 +104,8 @@ jobs:
           mkdir -p release/include
           cp artifacts/s2binlib-linux-x86_64/libs2binlib.a release/linux/
           cp artifacts/s2binlib-windows-x86_64/s2binlib.lib release/windows/
-          cp s2binlib.h release/include/
+          cp headers/s2binlib001.h release/include/
+          cp headers/s2binlib_static.h release/include/
 
       - name: Create release archives
         run: |
