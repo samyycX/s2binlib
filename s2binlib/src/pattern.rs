@@ -2,7 +2,7 @@
  *  S2BinLib - A static library that helps resolving memory from binary file
  *  and map to absolute memory address, targeting source 2 game engine.
  *  Copyright (C) 2025  samyyc
- * 
+ *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -22,7 +22,11 @@ use anyhow::Result;
 #[cfg(target_arch = "x86_64")]
 use std::arch::x86_64::*;
 
-pub fn find_pattern_simd(binary_data: &[u8], pattern: &[u8], pattern_wildcard: &[usize]) -> Result<u64> {
+pub fn find_pattern_simd(
+    binary_data: &[u8],
+    pattern: &[u8],
+    pattern_wildcard: &[usize],
+) -> Result<u64> {
     if pattern.is_empty() || binary_data.len() < pattern.len() {
         return Err(anyhow::anyhow!("Pattern not found"));
     }
@@ -110,10 +114,10 @@ pub unsafe fn matches_avx2(data: &[u8], pattern: &[u8], mask: &[u8]) -> bool {
             let data_chunk = _mm256_loadu_si256(data.as_ptr().add(offset) as *const __m256i);
             let pattern_chunk = _mm256_loadu_si256(pattern.as_ptr().add(offset) as *const __m256i);
             let mask_chunk = _mm256_loadu_si256(mask.as_ptr().add(offset) as *const __m256i);
-            
+
             let xor = _mm256_xor_si256(data_chunk, pattern_chunk);
             let masked = _mm256_and_si256(xor, mask_chunk);
-            
+
             if _mm256_testz_si256(masked, masked) == 0 {
                 return false;
             }
@@ -145,10 +149,10 @@ pub unsafe fn matches_sse2(data: &[u8], pattern: &[u8], mask: &[u8]) -> bool {
 
             let xor = _mm_xor_si128(data_chunk, pattern_chunk);
             let masked = _mm_and_si128(xor, mask_chunk);
-            
+
             let cmp = _mm_cmpeq_epi8(masked, _mm_setzero_si128());
             let mask_result = _mm_movemask_epi8(cmp);
-            
+
             if mask_result != 0xFFFF {
                 return false;
             }

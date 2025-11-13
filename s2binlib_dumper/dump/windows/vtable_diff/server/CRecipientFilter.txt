@@ -1,9 +1,0 @@
-Base: CRecipientFilter
-Virtual Function Count: 5
-Children Count: 10
-=============================================
-func_0     [ DIFF 10  ]
-func_1     [ DIFF 0   ]
-func_2     [ DIFF 0   ]
-func_3     [ DIFF 0   ]
-func_4     [ DIFF 0   ]

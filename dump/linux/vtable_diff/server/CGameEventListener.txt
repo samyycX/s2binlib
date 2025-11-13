@@ -1,0 +1,52 @@
+Vtable: CGameEventListener
+Virtual Function Count: 0
+Children Count: 37
+=============================================
+
+=============================================
+Bases: 
+"IGameEventListener2"
+    Offset: 0
+    Flags: 0
+=============================================
+
+=============================================
+Children: 
+"CAvatarOverrideMgr"
+"CBaseDoor"
+"CBasePropDoor"
+"CBtTree"
+"CCSChickenManager"
+"CCSEventLog"
+"CCSFatDemoRecorder"
+"CCSFunFactMgr"
+"CCSGOSteamWorksGameStatsServer"
+"CCSGameRules::NetworkVar_m_RetakeRules"
+"CCSGameStats"
+"CCSHLTVDirector"
+"CCSPlayerController"
+"CCSPointPulseSystem"
+"CCSScript_EntityScript"
+"CChicken"
+"CColorCorrectionSystem"
+"CEntitySpawner<CCSPlayerController>"
+"CEnvWindControllerSystem"
+"CEventLog"
+"CFishPool"
+"CGameJournal"
+"CHLTVDirector"
+"CLogicEventListener"
+"CLogicGameEventListener"
+"CNavMeshGameEventListener"
+"CNullGameJournal"
+"CPostProcessingVolume"
+"CPropDoorRotating"
+"CPropDoorRotatingBreakable"
+"CRetakeGameRules"
+"CRotDoor"
+"CRoundEndReport"
+"CSmokeGrenadeProjectile"
+"CSteamWorksGameStatsServer"
+"CSteamWorksGameStatsUploader"
+"CVScriptGameEventListener"
+================================================

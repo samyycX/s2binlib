@@ -24,7 +24,9 @@ use iced_x86::{Code, Decoder, DecoderOptions, Instruction, Mnemonic, OpKind, Reg
 use object::{Object, ObjectSection, ObjectSymbol, read::pe::ImageOptionalHeader};
 
 use crate::{
-    VTableInfo, find_pattern_simd, is_executable, jit::JitTrampoline, memory::{get_module_base_from_pointer, set_mem_access}
+    VTableInfo, find_pattern_simd, is_executable,
+    jit::JitTrampoline,
+    memory::{get_module_base_from_pointer, module_from_pointer, set_mem_access},
 };
 
 #[cfg(target_os = "windows")]
@@ -40,38 +42,41 @@ unsafe extern "system" {
     fn GetModuleHandleA(lpModuleName: *const u8) -> *mut c_void;
 }
 
-pub struct S2BinLib {
+pub struct S2BinLib<'a> {
     pub(crate) game_path: PathBuf,
     pub(crate) game_type: String,
     pub(crate) os: String,
     pub(crate) binaries: HashMap<String, Vec<u8>>,
     pub(crate) manual_base_addresses: HashMap<String, u64>,
-    /// Cached cross-references: binary_name -> (target_va -> Vec<xref_va>)
+    /// Cached cross-references: binary_name -> (target_rva -> Vec<xref_rva>)
     pub(crate) xrefs_cache: HashMap<String, HashMap<u64, Vec<u64>>>,
     /// Trampolines: (mem_address -> JitTrampoline)
     pub(crate) trampolines: HashMap<u64, JitTrampoline>,
     pub(crate) custom_binary_paths_windows: HashMap<String, String>,
     pub(crate) custom_binary_paths_linux: HashMap<String, String>,
     pub(crate) vtables: HashMap<String, Vec<VTableInfo>>,
+    pub(crate) name_to_vtables: HashMap<String, &'a VTableInfo>,
+    /// Cached ASCII strings: binary_name -> (string_rva -> string)
+    pub(crate) strings_cache: HashMap<String, HashMap<String, u64>>,
 }
 
 fn read_int32(data: &[u8], offset: u64) -> u32 {
-    let mut value = 0;
+    let mut rvalue = 0;
     for i in 0..4 {
-        value |= (data[offset as usize + i as usize] as u32) << (i * 8);
+        rvalue |= (data[offset as usize + i as usize] as u32) << (i * 8);
     }
-    value
+    rvalue
 }
 
 fn read_int64(data: &[u8], offset: u64) -> i64 {
-    let mut value = 0i64;
+    let mut rvalue = 0i64;
     for i in 0..8 {
-        value |= (data[offset as usize + i as usize] as i64) << (i * 8);
+        rvalue |= (data[offset as usize + i as usize] as i64) << (i * 8);
     }
-    value
+    rvalue
 }
 
-impl S2BinLib {
+impl<'a> S2BinLib<'a> {
     fn get_os_name(&self) -> String {
         match self.os.as_str() {
             "windows" => "win64".to_string(),
@@ -201,6 +206,8 @@ impl S2BinLib {
             custom_binary_paths_windows: HashMap::new(),
             custom_binary_paths_linux: HashMap::new(),
             vtables: HashMap::new(),
+            name_to_vtables: HashMap::new(),
+            strings_cache: HashMap::new(),
         }
     }
 
@@ -211,6 +218,24 @@ impl S2BinLib {
 
     pub fn clear_module_base_address(&mut self, lib_name: &str) {
         self.manual_base_addresses.remove(lib_name);
+    }
+
+    pub fn module_from_pointer(&self, ptr: u64) -> Result<u64> {
+        let module = module_from_pointer(ptr);
+
+        if module.is_none() {
+            bail!("Failed to get module from pointer.");
+        }
+
+        let (module_name, module_base) = module.unwrap();
+        // respect custom module base
+        for (manual_module_name, manual_module_base) in &self.manual_base_addresses  {
+            let lib_name = self.get_os_lib_name(&manual_module_name);
+            if module_name.contains(&lib_name) {
+                return Ok(*manual_module_base);
+            }
+        }
+        Ok(module_base)
     }
 
     pub fn get_binary_path(&self, binary_name: &str) -> String {
@@ -238,7 +263,7 @@ impl S2BinLib {
                 .join(self.get_os_name())
                 .join(self.get_os_lib_name(binary_name))
                 .to_string_lossy()
-            .to_string(),
+                .to_string(),
         }
     }
 
@@ -263,7 +288,7 @@ impl S2BinLib {
             .ok_or_else(|| anyhow::anyhow!("Binary not found."))
     }
 
-    fn file_offset_to_va(&self, binary_name: &str, file_offset: u64) -> Result<u64> {
+    fn file_offset_to_rva(&self, binary_name: &str, file_offset: u64) -> Result<u64> {
         let binary_data = self.get_binary(binary_name)?;
         let object = object::File::parse(binary_data)?;
 
@@ -273,33 +298,33 @@ impl S2BinLib {
                 let section_file_end = file_range.0 + file_range.1;
 
                 if file_offset >= section_file_start && file_offset < section_file_end {
-                    let section_va = section.address();
+                    let section_rva = section.address();
                     let offset_in_section = file_offset - section_file_start;
-                    return Ok(section_va + offset_in_section);
+                    return Ok(section_rva + offset_in_section);
                 }
             }
         }
         Err(anyhow::anyhow!("File offset not found in any section."))
     }
 
-    fn va_to_file_offset(&self, binary_name: &str, va: u64) -> Result<u64> {
+    fn rva_to_file_offset(&self, binary_name: &str, rva: u64) -> Result<u64> {
         let binary_data = self.get_binary(binary_name)?;
         let object = object::File::parse(binary_data)?;
 
         for section in object.sections() {
-            let section_va = section.address();
+            let section_rva = section.address();
             let section_size = section.size();
-            let section_va_end = section_va + section_size;
+            let section_rva_end = section_rva + section_size;
 
-            if va >= section_va && va < section_va_end {
+            if rva >= section_rva && rva < section_rva_end {
                 if let Some(file_range) = section.file_range() {
                     let section_file_start = file_range.0;
-                    let offset_in_section = va - section_va;
+                    let offset_in_section = rva - section_rva;
                     return Ok(section_file_start + offset_in_section);
                 }
             }
         }
-        Err(anyhow::anyhow!("va not found in any section."))
+        Err(anyhow::anyhow!("rva not found in any section."))
     }
 
     fn is_file_offset_executable(&self, binary_name: &str, file_offset: u64) -> Result<bool> {
@@ -381,9 +406,9 @@ impl S2BinLib {
         Ok(result)
     }
 
-    fn find_pattern_va(&self, binary_name: &str, pattern_string: &str) -> Result<u64> {
+    fn find_pattern_rva(&self, binary_name: &str, pattern_string: &str) -> Result<u64> {
         let result = Cell::new(0);
-        self.pattern_scan_all_va(binary_name, pattern_string, |_, address| {
+        self.pattern_scan_all_rva(binary_name, pattern_string, |_, address| {
             result.set(address);
             true
         })?;
@@ -429,13 +454,13 @@ impl S2BinLib {
         Err(anyhow::anyhow!("Binary not found."))
     }
 
-    fn find_vtable_va_windows(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
+    fn find_vtable_rva_windows(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
         let binary_data = self.get_binary(binary_name)?;
 
         let type_descriptor_name =
             self.find_pattern_string_in_section(binary_name, ".data", &vtable_name)?;
 
-        let rtti_type_descriptor = self.file_offset_to_va(binary_name, type_descriptor_name)?
+        let rtti_type_descriptor = self.file_offset_to_rva(binary_name, type_descriptor_name)?
             - 0x10
             - self.get_image_base(binary_name)?;
 
@@ -449,13 +474,13 @@ impl S2BinLib {
             if read_int32(&binary_data, reference - 0xC) == 1
                 && read_int32(&binary_data, reference - 0x8) == 0
             {
-                let reference_offset = self.file_offset_to_va(binary_name, reference - 0xC)?;
+                let reference_offset = self.file_offset_to_rva(binary_name, reference - 0xC)?;
                 let rtti_complete_object_locator = self.find_pattern_int32_in_section(
                     binary_name,
                     ".rdata",
                     reference_offset as u32,
                 )?;
-                return Ok(self.file_offset_to_va(binary_name, rtti_complete_object_locator + 8)?);
+                return Ok(self.file_offset_to_rva(binary_name, rtti_complete_object_locator + 8)?);
             }
             let last_reference = reference + 1;
             let result = find_pattern_simd(
@@ -472,7 +497,7 @@ impl S2BinLib {
         Err(anyhow::anyhow!("Vtable not found."))
     }
 
-    fn find_vtable_va_linux(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
+    fn find_vtable_rva_linux(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
         let binary_data = self.get_binary(binary_name)?;
 
         let data_range = self.get_section_range(binary_name, ".rodata")?;
@@ -501,8 +526,8 @@ impl S2BinLib {
         }
 
         // Find reference to type name in .data.rel.ro section (8-byte pointer)
-        let type_info_name_va = self.file_offset_to_va(binary_name, type_info_name)?;
-        let type_info_name_ptr_pattern = type_info_name_va.to_le_bytes();
+        let type_info_name_rva = self.file_offset_to_rva(binary_name, type_info_name)?;
+        let type_info_name_ptr_pattern = type_info_name_rva.to_le_bytes();
 
         let reference_type_name = self.find_pattern_bytes_in_section(
             binary_name,
@@ -512,8 +537,8 @@ impl S2BinLib {
 
         // Offset back by 0x8 to get typeinfo
         let type_info = reference_type_name - 0x8;
-        let type_info_va = self.file_offset_to_va(binary_name, type_info)?;
-        let type_info_ptr_pattern = type_info_va.to_le_bytes();
+        let type_info_rva = self.file_offset_to_rva(binary_name, type_info)?;
+        let type_info_ptr_pattern = type_info_rva.to_le_bytes();
 
         // Search for references to typeinfo in .data.rel.ro and .data.rel.ro.local sections
         for section_name in &[".data.rel.ro", ".data.rel.ro.local"] {
@@ -539,7 +564,7 @@ impl S2BinLib {
                         let offset_to_this = read_int64(binary_data, reference - 0x8);
                         if offset_to_this == 0 {
                             // Found vtable at +0x8
-                            return Ok(self.file_offset_to_va(binary_name, reference + 0x8)?);
+                            return Ok(self.file_offset_to_rva(binary_name, reference + 0x8)?);
                         }
                     }
 
@@ -555,91 +580,95 @@ impl S2BinLib {
         Err(anyhow::anyhow!("Vtable not found."))
     }
 
-    fn is_valid_va(&self, binary_name: &str, va: u64) -> Result<bool> {
-        let Ok(file_offset) = self.va_to_file_offset(binary_name, va) else {
+    fn is_rvalid_rva(&self, binary_name: &str, rva: u64) -> Result<bool> {
+        let Ok(file_offset) = self.rva_to_file_offset(binary_name, rva) else {
             return Ok(false);
         };
 
         Ok(file_offset > 0 && file_offset < self.get_binary(binary_name)?.len() as u64)
     }
 
-    fn is_valid_executable_va(&self, binary_name: &str, va: u64) -> Result<bool> {
-        if !self.is_valid_va(binary_name, va)? {
+    fn is_rvalid_executable_rva(&self, binary_name: &str, rva: u64) -> Result<bool> {
+        if !self.is_rvalid_rva(binary_name, rva)? {
             return Ok(false);
         }
 
-        let file_offset = self.va_to_file_offset(binary_name, va)?;
+        let file_offset = self.rva_to_file_offset(binary_name, rva)?;
         self.is_file_offset_executable(binary_name, file_offset)
     }
 
-    fn mem_address_to_va(&self, binary_name: &str, address: u64) -> Result<u64> {
+    fn mem_address_to_rva(&self, binary_name: &str, address: u64) -> Result<u64> {
         let base_address = self.get_module_base_address(binary_name)?;
         let image_base = self.get_image_base(binary_name)?;
         Ok(address - base_address + image_base)
     }
 
-    fn va_to_mem_address(&self, binary_name: &str, address: u64) -> Result<u64> {
+    fn rva_to_mem_address(&self, binary_name: &str, address: u64) -> Result<u64> {
         let base_address = self.get_module_base_address(binary_name)?;
         let image_base = self.get_image_base(binary_name)?;
         Ok(address - image_base + base_address)
     }
 
-    pub fn find_vtable_va(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
-        self.find_vtable_mangled_va(
+    pub fn find_vtable_rva(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
+        self.find_vtable_mangled_rva(
             binary_name,
             &self.decorate_rtti_type_descriptor_name(vtable_name),
         )
     }
 
-    pub fn find_vtable_nested_2_va(
+    pub fn find_vtable_nested_2_rva(
         &self,
         binary_name: &str,
         class1_name: &str,
         class2_name: &str,
     ) -> Result<u64> {
-        self.find_vtable_mangled_va(
+        self.find_vtable_mangled_rva(
             binary_name,
             &self.decorate_rtti_type_descriptor_name_nested_2(class1_name, class2_name),
         )
     }
 
-    pub fn find_vtable_mangled_va(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
+    pub fn find_vtable_mangled_rva(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
         match self.os.as_str() {
-            "windows" => self.find_vtable_va_windows(binary_name, vtable_name),
-            _ => self.find_vtable_va_linux(binary_name, vtable_name),
+            "windows" => self.find_vtable_rva_windows(binary_name, vtable_name),
+            _ => self.find_vtable_rva_linux(binary_name, vtable_name),
         }
     }
 
     pub fn get_vtable_vfunc_count(&self, binary_name: &str, vtable_name: &str) -> Result<usize> {
-        let vtable_va = self.find_vtable_va(binary_name, vtable_name)?;
-        self.get_vtable_vfunc_count_by_va(binary_name, vtable_va)
+        let vtable_rva = self.find_vtable_rva(binary_name, vtable_name)?;
+        self.get_vtable_vfunc_count_by_rva(binary_name, vtable_rva)
     }
 
-    pub fn get_vtable_vfunc_count_by_va(&self, binary_name: &str, vtable_va: u64) -> Result<usize> {
+    pub fn get_vtable_vfunc_count_by_rva(
+        &self,
+        binary_name: &str,
+        vtable_rva: u64,
+    ) -> Result<usize> {
         let mut offset = 0;
 
         loop {
-            let vfunc_va = self.read_by_va(binary_name, vtable_va + offset, 8)?;
-            let vfunc_va = u64::from_le_bytes(vfunc_va.try_into().unwrap());
+            let vfunc_rva = self.read_by_rva(binary_name, vtable_rva + offset, 8)?;
+            let vfunc_rva = u64::from_le_bytes(vfunc_rva.try_into().unwrap());
 
-            if vfunc_va == 0 || !self.is_valid_executable_va(binary_name, vfunc_va)? {
+            if vfunc_rva == 0 || !self.is_rvalid_executable_rva(binary_name, vfunc_rva)? {
                 break;
             }
 
-            // check if its a valid function
+            // check if its a rvalid function
             offset += 8;
         }
         Ok(offset as usize / 8)
     }
 
     pub fn find_vtable(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
-        let result = self.find_vtable_va(binary_name, vtable_name)?;
-        Ok(self.va_to_mem_address(binary_name, result)?)
+        let result = self.find_vtable_rva(binary_name, vtable_name)?;
+        Ok(self.rva_to_mem_address(binary_name, result)?)
     }
 
     pub fn find_vtable_mangled(&self, binary_name: &str, vtable_name: &str) -> Result<u64> {
-        let result = self.find_vtable_mangled_va(binary_name, vtable_name)?;
-        Ok(self.va_to_mem_address(binary_name, result)?)
+        let result = self.find_vtable_mangled_rva(binary_name, vtable_name)?;
+        Ok(self.rva_to_mem_address(binary_name, result)?)
     }
 
     pub fn find_vtable_nested_2(
@@ -648,20 +677,20 @@ impl S2BinLib {
         class1_name: &str,
         class2_name: &str,
     ) -> Result<u64> {
-        let result = self.find_vtable_nested_2_va(binary_name, class1_name, class2_name)?;
-        Ok(self.va_to_mem_address(binary_name, result)?)
+        let result = self.find_vtable_nested_2_rva(binary_name, class1_name, class2_name)?;
+        Ok(self.rva_to_mem_address(binary_name, result)?)
     }
 
-    pub fn pattern_scan_va(&self, binary_name: &str, pattern_string: &str) -> Result<u64> {
-        self.find_pattern_va(binary_name, pattern_string)
+    pub fn pattern_scan_rva(&self, binary_name: &str, pattern_string: &str) -> Result<u64> {
+        self.find_pattern_rva(binary_name, pattern_string)
     }
 
     pub fn pattern_scan(&self, binary_name: &str, pattern_string: &str) -> Result<u64> {
-        let result = self.find_pattern_va(binary_name, pattern_string)?;
-        Ok(self.va_to_mem_address(binary_name, result)?)
+        let result = self.find_pattern_rva(binary_name, pattern_string)?;
+        Ok(self.rva_to_mem_address(binary_name, result)?)
     }
 
-    pub fn pattern_scan_all_va(
+    pub fn pattern_scan_all_rva(
         &self,
         binary_name: &str,
         pattern_string: &str,
@@ -698,7 +727,7 @@ impl S2BinLib {
 
             if callback(
                 match_index,
-                self.file_offset_to_va(binary_name, offset as u64)?,
+                self.file_offset_to_rva(binary_name, offset as u64)?,
             ) {
                 return Ok(());
             }
@@ -710,8 +739,6 @@ impl S2BinLib {
         Err(anyhow::anyhow!("Pattern not found."))
     }
 
-    
-
     pub fn pattern_scan_all(
         &self,
         binary_name: &str,
@@ -722,12 +749,12 @@ impl S2BinLib {
         let _ = self.get_module_base_address(binary_name)?;
         let _ = self.get_image_base(binary_name)?;
 
-        self.pattern_scan_all_va(binary_name, pattern_string, |index, x| {
-            callback(index, self.va_to_mem_address(binary_name, x).unwrap())
+        self.pattern_scan_all_rva(binary_name, pattern_string, |index, x| {
+            callback(index, self.rva_to_mem_address(binary_name, x).unwrap())
         })
     }
 
-    pub fn find_export_va(&self, binary_name: &str, export_name: &str) -> Result<u64> {
+    pub fn find_export_rva(&self, binary_name: &str, export_name: &str) -> Result<u64> {
         let binary_data = self.get_binary(binary_name)?;
         let object = object::File::parse(binary_data)?;
 
@@ -740,11 +767,11 @@ impl S2BinLib {
     }
 
     pub fn find_export(&self, binary_name: &str, export_name: &str) -> Result<u64> {
-        let result = self.find_export_va(binary_name, export_name)?;
-        Ok(self.mem_address_to_va(binary_name, result)?)
+        let result = self.find_export_rva(binary_name, export_name)?;
+        Ok(self.mem_address_to_rva(binary_name, result)?)
     }
 
-    pub fn find_symbol_va(&self, binary_name: &str, symbol_name: &str) -> Result<u64> {
+    pub fn find_symbol_rva(&self, binary_name: &str, symbol_name: &str) -> Result<u64> {
         let binary_data = self.get_binary(binary_name)?;
         let object = object::File::parse(binary_data)?;
 
@@ -757,8 +784,8 @@ impl S2BinLib {
     }
 
     pub fn find_symbol(&self, binary_name: &str, symbol_name: &str) -> Result<u64> {
-        let result = self.find_symbol_va(binary_name, symbol_name)?;
-        Ok(self.va_to_mem_address(binary_name, result)?)
+        let result = self.find_symbol_rva(binary_name, symbol_name)?;
+        Ok(self.rva_to_mem_address(binary_name, result)?)
     }
 
     pub fn read_by_file_offset(
@@ -771,8 +798,8 @@ impl S2BinLib {
         Ok(&binary_data[file_offset as usize..file_offset as usize + size])
     }
 
-    pub fn read_by_va(&self, binary_name: &str, address: u64, size: usize) -> Result<&[u8]> {
-        let file_offset = self.va_to_file_offset(binary_name, address)?;
+    pub fn read_by_rva(&self, binary_name: &str, address: u64, size: usize) -> Result<&[u8]> {
+        let file_offset = self.rva_to_file_offset(binary_name, address)?;
         self.read_by_file_offset(binary_name, file_offset, size)
     }
 
@@ -782,19 +809,19 @@ impl S2BinLib {
         address: u64,
         size: usize,
     ) -> Result<&[u8]> {
-        let va = self.mem_address_to_va(binary_name, address)?;
-        self.read_by_va(binary_name, va, size)
+        let rva = self.mem_address_to_rva(binary_name, address)?;
+        self.read_by_rva(binary_name, rva, size)
     }
 
-    pub fn find_vfunc_by_vtbname_va(
+    pub fn find_vfunc_by_vtbname_rva(
         &self,
         binary_name: &str,
         vtb_name: &str,
         vfunc_index: usize,
     ) -> Result<u64> {
-        let vtb = self.find_vtable_va(binary_name, vtb_name)?;
+        let vtb = self.find_vtable_rva(binary_name, vtb_name)?;
 
-        let vfuncptr = self.read_by_va(binary_name, vtb + vfunc_index as u64 * 8, 8)?;
+        let vfuncptr = self.read_by_rva(binary_name, vtb + vfunc_index as u64 * 8, 8)?;
         Ok(u64::from_le_bytes(vfuncptr.try_into().unwrap()))
     }
 
@@ -804,35 +831,35 @@ impl S2BinLib {
         vtb_name: &str,
         vfunc_index: usize,
     ) -> Result<u64> {
-        let vtb = self.find_vfunc_by_vtbname_va(binary_name, vtb_name, vfunc_index)?;
-        Ok(self.va_to_mem_address(binary_name, vtb)?)
+        let vtb = self.find_vfunc_by_vtbname_rva(binary_name, vtb_name, vfunc_index)?;
+        Ok(self.rva_to_mem_address(binary_name, vtb)?)
     }
 
-    pub fn find_vfunc_by_vtbptr_va(&self, vtb_ptr: u64, vfunc_index: usize) -> Result<u64> {
+    pub fn find_vfunc_by_vtbptr_rva(&self, vtb_ptr: u64, vfunc_index: usize) -> Result<u64> {
         let binary_name = self.get_binary_name_by_ptr(vtb_ptr)?;
-        let vtb_va = self.mem_address_to_va(&binary_name, vtb_ptr)?;
-        let vfuncptr = self.read_by_va(&binary_name, vtb_va + vfunc_index as u64 * 8, 8)?;
+        let vtb_rva = self.mem_address_to_rva(&binary_name, vtb_ptr)?;
+        let vfuncptr = self.read_by_rva(&binary_name, vtb_rva + vfunc_index as u64 * 8, 8)?;
         Ok(u64::from_le_bytes(vfuncptr.try_into().unwrap()))
     }
 
     pub fn find_vfunc_by_vtbptr(&self, vtb_ptr: u64, vfunc_index: usize) -> Result<u64> {
         let binary_name = self.get_binary_name_by_ptr(vtb_ptr)?;
-        let vtb_va = self.mem_address_to_va(&binary_name, vtb_ptr)?;
-        let vfuncptr = self.read_by_va(&binary_name, vtb_va + vfunc_index as u64 * 8, 8)?;
-        let vfunc_va = u64::from_le_bytes(vfuncptr.try_into().unwrap());
-        Ok(self.va_to_mem_address(&binary_name, vfunc_va)?)
+        let vtb_rva = self.mem_address_to_rva(&binary_name, vtb_ptr)?;
+        let vfuncptr = self.read_by_rva(&binary_name, vtb_rva + vfunc_index as u64 * 8, 8)?;
+        let vfunc_rva = u64::from_le_bytes(vfuncptr.try_into().unwrap());
+        Ok(self.rva_to_mem_address(&binary_name, vfunc_rva)?)
     }
 
-    pub fn find_string_va(&self, binary_name: &str, string: &str) -> Result<u64> {
+    pub fn find_string_rva(&self, binary_name: &str, string: &str) -> Result<u64> {
         let binary_data = self.get_binary(binary_name)?;
         let string_bytes = string.as_bytes();
         let result = find_pattern_simd(binary_data, string_bytes, &vec![])?;
-        Ok(self.file_offset_to_va(binary_name, result)?)
+        Ok(self.file_offset_to_rva(binary_name, result)?)
     }
 
     pub fn find_string(&self, binary_name: &str, string: &str) -> Result<u64> {
-        let result = self.find_string_va(binary_name, string)?;
-        Ok(self.va_to_mem_address(binary_name, result)?)
+        let result = self.find_string_rva(binary_name, string)?;
+        Ok(self.rva_to_mem_address(binary_name, result)?)
     }
 
     pub fn dump_xrefs(&mut self, binary_name: &str) -> Result<()> {
@@ -864,11 +891,11 @@ impl S2BinLib {
             };
 
             // Get section virtual address
-            let section_va = section.address();
+            let section_rva = section.address();
 
             // Create decoder
             let mut decoder =
-                Decoder::with_ip(bitness, section_data, section_va, DecoderOptions::NONE);
+                Decoder::with_ip(bitness, section_data, section_rva, DecoderOptions::NONE);
 
             let mut instruction = Instruction::default();
 
@@ -876,12 +903,12 @@ impl S2BinLib {
             while decoder.can_decode() {
                 decoder.decode_out(&mut instruction);
 
-                // Skip invalid instructions
+                // Skip inrvalid instructions
                 if instruction.is_invalid() {
                     continue;
                 }
 
-                let instr_va = instruction.ip();
+                let instr_rva = instruction.ip();
 
                 // Analyze instruction operands for memory references
                 for i in 0..instruction.op_count() {
@@ -892,11 +919,11 @@ impl S2BinLib {
                         OpKind::Memory => {
                             if instruction.is_ip_rel_memory_operand() {
                                 // RIP-relative addressing
-                                let target_va = instruction.ip_rel_memory_address();
+                                let target_rva = instruction.ip_rel_memory_address();
                                 xrefs_map
-                                    .entry(target_va)
+                                    .entry(target_rva)
                                     .or_insert_with(Vec::new)
-                                    .push(instr_va);
+                                    .push(instr_rva);
                             } else if instruction.memory_base() == Register::None
                                 && instruction.memory_index() == Register::None
                             {
@@ -906,21 +933,21 @@ impl S2BinLib {
                                     xrefs_map
                                         .entry(displacement)
                                         .or_insert_with(Vec::new)
-                                        .push(instr_va);
+                                        .push(instr_rva);
                                 }
                             }
                         }
 
                         // Near branch (call, jmp, jcc)
                         OpKind::NearBranch16 | OpKind::NearBranch32 | OpKind::NearBranch64 => {
-                            let target_va = instruction.near_branch_target();
+                            let target_rva = instruction.near_branch_target();
                             xrefs_map
-                                .entry(target_va)
+                                .entry(target_rva)
                                 .or_insert_with(Vec::new)
-                                .push(instr_va);
+                                .push(instr_rva);
                         }
 
-                        // Immediate values that might be addresses
+                        // Immediate rvalues that might be addresses
                         OpKind::Immediate32 | OpKind::Immediate64 => {
                             let immediate = if bitness == 64 {
                                 instruction.immediate(i)
@@ -928,7 +955,7 @@ impl S2BinLib {
                                 instruction.immediate(i) as u32 as u64
                             };
 
-                            // Only consider values that look like valid virtual addresses
+                            // Only consider rvalues that look like rvalid virtual addresses
                             // For PE files, check if it's near the image base
                             // For ELF files, check if it's in a reasonable range
                             let is_likely_address = if bitness == 64 {
@@ -941,7 +968,7 @@ impl S2BinLib {
                                 xrefs_map
                                     .entry(immediate)
                                     .or_insert_with(Vec::new)
-                                    .push(instr_va);
+                                    .push(instr_rva);
                             }
                         }
 
@@ -957,10 +984,67 @@ impl S2BinLib {
         Ok(())
     }
 
-    pub fn find_xrefs_cached(&self, binary_name: &str, target_va: u64) -> Option<&Vec<u64>> {
+    pub fn dump_strings(&mut self, binary_name: &str) -> Result<()> {
+        const MIN_LENGTH: u64 = 4;
+        let binary_data = self.get_binary(binary_name)?;
+        let mut strings_map: HashMap<String, u64> = HashMap::new();
+
+        let mut section_ranges = vec![];
+        if self.get_os() == "windows" {
+            section_ranges.push(self.get_section_range(binary_name, ".data")?); 
+            section_ranges.push(self.get_section_range(binary_name, ".rdata")?); 
+
+        } else if self.get_os() == "linux" {
+            section_ranges.push(self.get_section_range(binary_name, ".rodata")?);
+            section_ranges.push(self.get_section_range(binary_name, ".data")?);
+            section_ranges.push(self.get_section_range(binary_name, ".data.rel.ro")?);
+        }
+
+        for section_range in section_ranges {
+            let start = section_range.0;
+            let end = section_range.1;
+            let mut index = start;
+            while index < end {
+                let byte = binary_data[index as usize];
+                if !byte.is_ascii() || (byte < 0x20 || byte > 0x7E) {
+                    index += 1;
+                    continue;
+                }
+
+                let start = index;
+                while index < end {
+                    let b = binary_data[index as usize];
+                    if !b.is_ascii() || (b < 0x20 || b > 0x7E) {
+                        break;
+                    }
+                    index += 1;
+                }
+
+                let length = index - start;
+                if length >= MIN_LENGTH {
+                    let slice = &binary_data[start as usize..index as usize];
+                    if let Ok(rva) = self.file_offset_to_rva(binary_name, start as u64) {
+                        let string = String::from_utf8_lossy(slice).to_string();
+                        strings_map.insert(string, rva);
+                    }
+                }
+            }
+        }
+
+        self.strings_cache
+            .insert(binary_name.to_string(), strings_map);
+
+        Ok(())
+    }
+
+    pub fn get_strings(&self, binary_name: &str) -> Option<&HashMap<String, u64>> {
+        self.strings_cache.get(binary_name)
+    }
+
+    pub fn find_xrefs_cached(&self, binary_name: &str, target_rva: u64) -> Option<&Vec<u64>> {
         self.xrefs_cache
             .get(binary_name)
-            .and_then(|map| map.get(&target_va))
+            .and_then(|map| map.get(&target_rva))
     }
 
     pub fn unload_binary(&mut self, binary_name: &str) {
@@ -1012,7 +1096,7 @@ impl S2BinLib {
 
         if instruction.is_invalid() {
             return Err(anyhow::anyhow!(
-                "Invalid instruction at address 0x{:X}",
+                "Inrvalid instruction at address 0x{:X}",
                 mem_address
             ));
         }
@@ -1045,39 +1129,39 @@ impl S2BinLib {
         }
 
         Err(anyhow::anyhow!(
-            "No valid xref found in instruction at address 0x{:X}",
+            "No rvalid xref found in instruction at address 0x{:X}",
             mem_address
         ))
     }
 
-    pub fn follow_xref_va_to_mem(&self, binary_name: &str, va: u64) -> Result<u64> {
-        let mem_address = self.va_to_mem_address(binary_name, va)?;
+    pub fn follow_xref_rva_to_mem(&self, binary_name: &str, rva: u64) -> Result<u64> {
+        let mem_address = self.rva_to_mem_address(binary_name, rva)?;
         self.follow_xref_mem_to_mem(mem_address)
     }
 
-    pub fn follow_xref_va_to_va(&self, binary_name: &str, va: u64) -> Result<u64> {
-        let file_offset = self.va_to_file_offset(binary_name, va)?;
+    pub fn follow_xref_rva_to_rva(&self, binary_name: &str, rva: u64) -> Result<u64> {
+        let file_offset = self.rva_to_file_offset(binary_name, rva)?;
         let binary_data = self.get_binary(binary_name)?;
 
         const MAX_INSTR_LEN: usize = 15;
 
         if file_offset as usize + MAX_INSTR_LEN > binary_data.len() {
             return Err(anyhow::anyhow!(
-                "Instruction at VA 0x{:X} extends beyond binary data",
-                va
+                "Instruction at rva 0x{:X} extends beyond binary data",
+                rva
             ));
         }
 
         let instruction_bytes =
             &binary_data[file_offset as usize..file_offset as usize + MAX_INSTR_LEN];
 
-        let mut decoder = Decoder::with_ip(64, instruction_bytes, va, DecoderOptions::NONE);
+        let mut decoder = Decoder::with_ip(64, instruction_bytes, rva, DecoderOptions::NONE);
 
         let mut instruction = Instruction::default();
         decoder.decode_out(&mut instruction);
 
         if instruction.is_invalid() {
-            return Err(anyhow::anyhow!("Invalid instruction at VA 0x{:X}", va));
+            return Err(anyhow::anyhow!("Inrvalid instruction at rva 0x{:X}", rva));
         }
 
         for i in 0..instruction.op_count() {
@@ -1108,19 +1192,19 @@ impl S2BinLib {
         }
 
         Err(anyhow::anyhow!(
-            "No valid xref found in instruction at VA 0x{:X}",
-            va
+            "No rvalid xref found in instruction at rva 0x{:X}",
+            rva
         ))
     }
 
-    pub fn find_networkvar_vtable_statechanged_va(&self, vtable_va: u64) -> Result<u64> {
-        let vfunc_count = self.get_vtable_vfunc_count_by_va("server", vtable_va)?;
+    pub fn find_networkvar_vtable_statechanged_rva(&self, vtable_rva: u64) -> Result<u64> {
+        let vfunc_count = self.get_vtable_vfunc_count_by_rva("server", vtable_rva)?;
 
         for i in 0..vfunc_count {
-            let vfunc_va = self.read_by_va("server", vtable_va + i as u64 * 8, 8)?;
-            let vfunc_va = u64::from_le_bytes(vfunc_va.try_into().unwrap());
+            let vfunc_rva = self.read_by_rva("server", vtable_rva + i as u64 * 8, 8)?;
+            let vfunc_rva = u64::from_le_bytes(vfunc_rva.try_into().unwrap());
 
-            let bytes = self.read_by_va("server", vfunc_va, 32)?;
+            let bytes = self.read_by_rva("server", vfunc_rva, 32)?;
 
             let mut iced = Decoder::with_ip(64, &bytes, 0, DecoderOptions::NONE);
 
@@ -1140,12 +1224,12 @@ impl S2BinLib {
     }
 
     pub fn find_networkvar_vtable_statechanged(&self, vtable_mem_address: u64) -> Result<u64> {
-        let vtable_va = self.mem_address_to_va("server", vtable_mem_address)?;
-        self.find_networkvar_vtable_statechanged_va(vtable_va)
+        let vtable_rva = self.mem_address_to_rva("server", vtable_mem_address)?;
+        self.find_networkvar_vtable_statechanged_rva(vtable_rva)
     }
 
-    pub fn is_nullsub_va(&self, binary_name: &str, func_va: u64) -> Result<bool> {
-        let bytes = self.read_by_va(binary_name, func_va, 3)?;
+    pub fn is_nullsub_rva(&self, binary_name: &str, func_rva: u64) -> Result<bool> {
+        let bytes = self.read_by_rva(binary_name, func_rva, 3)?;
         if bytes[0] == 0xC2 {
             return Ok(true);
         }
@@ -1162,13 +1246,12 @@ impl S2BinLib {
     }
 
     pub fn is_nullsub(&self, binary_name: &str, func_mem_address: u64) -> Result<bool> {
-        let func_va = self.mem_address_to_va("server", func_mem_address)?;
-        self.is_nullsub_va(binary_name, func_va)
+        let func_rva = self.mem_address_to_rva("server", func_mem_address)?;
+        self.is_nullsub_rva(binary_name, func_rva)
     }
 
-    pub fn make_sig_va(&self, binary_name: &str, func_va: u64) -> Result<String> {
-
-        let data = self.read_by_va(binary_name, func_va, 1024)?;
+    pub fn make_sig_rva(&self, binary_name: &str, func_rva: u64) -> Result<String> {
+        let data = self.read_by_rva(binary_name, func_rva, 1024)?;
         let mut iced = Decoder::new(64, data, DecoderOptions::NONE);
 
         let mut sigs = String::new();
@@ -1195,12 +1278,10 @@ impl S2BinLib {
 
             index += opcode_len;
 
-
             for _ in 0..operand_len {
                 sigs.push_str("? ");
                 index += 1;
-            };
-
+            }
 
             let success = Cell::new(false);
 
@@ -1209,16 +1290,20 @@ impl S2BinLib {
                 continue;
             }
 
-            let _ = self.pattern_scan_all_va(binary_name, &sigs[0..sigs.len() - 1], |index, address| {
-                if index == 0 && address == func_va {
-                    success.set(true);
-                }
-                if address != func_va {
-                    success.set(false);
-                    return true;
-                }
-                false
-            });
+            let _ = self.pattern_scan_all_rva(
+                binary_name,
+                &sigs[0..sigs.len() - 1],
+                |index, address| {
+                    if index == 0 && address == func_rva {
+                        success.set(true);
+                    }
+                    if address != func_rva {
+                        success.set(false);
+                        return true;
+                    }
+                    false
+                },
+            );
 
             if success.get() {
                 return Ok(sigs);
@@ -1226,6 +1311,5 @@ impl S2BinLib {
         }
 
         bail!("Signature not found");
-
     }
 }

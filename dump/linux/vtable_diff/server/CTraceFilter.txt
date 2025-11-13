@@ -1,0 +1,46 @@
+Vtable: CTraceFilter
+Virtual Function Count: 3
+Children Count: 23
+=============================================
+func_0     [ DIFF 23  ]                               ["AnimGraphUtils::CTraceFilterAnimGraphSlope", "CAnimGraphTraceFilter", "CBotBreakableEnumerator", "CBotDoorEnumerator", "CCSTraceFilterSimple", "CInfernoLOSTraceFilter", "CTraceFilterDoor", "CTraceFilterEntityPush", "CTraceFilterEntitySweep", "CTraceFilterForPlayerHeadCollision", "CTraceFilterGroundEntities", "CTraceFilterIngnoreGrenades", "CTraceFilterKnifeIgnoreTeammates", "CTraceFilterLOS", "CTraceFilterList", "CTraceFilterNoNPCsOrPlayer", "CTraceFilterNoPlayersAndFlashbangPassableAnims", "CTraceFilterPlayerMovementCS", "CTraceFilterPushFinal", "CTraceFilterPushMove", "CTraceFilterQueryCache", "CTraceFilterTaserIgnoreTeammates", "CTraceFilterWalkableEntities"]
+    "C3 CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_1     [ DIFF 23  ]                               ["AnimGraphUtils::CTraceFilterAnimGraphSlope", "CAnimGraphTraceFilter", "CBotBreakableEnumerator", "CBotDoorEnumerator", "CCSTraceFilterSimple", "CInfernoLOSTraceFilter", "CTraceFilterDoor", "CTraceFilterEntityPush", "CTraceFilterEntitySweep", "CTraceFilterForPlayerHeadCollision", "CTraceFilterGroundEntities", "CTraceFilterIngnoreGrenades", "CTraceFilterKnifeIgnoreTeammates", "CTraceFilterLOS", "CTraceFilterList", "CTraceFilterNoNPCsOrPlayer", "CTraceFilterNoPlayersAndFlashbangPassableAnims", "CTraceFilterPlayerMovementCS", "CTraceFilterPushFinal", "CTraceFilterPushMove", "CTraceFilterQueryCache", "CTraceFilterTaserIgnoreTeammates", "CTraceFilterWalkableEntities"]
+    "BE 38 00 00 00 E9 76 60 F8 FF CC CC CC CC CC CC"
+func_2     [ DIFF 21  ]                               ["AnimGraphUtils::CTraceFilterAnimGraphSlope", "CAnimGraphTraceFilter", "CBotBreakableEnumerator", "CBotDoorEnumerator", "CInfernoLOSTraceFilter", "CTraceFilterDoor", "CTraceFilterEntityPush", "CTraceFilterEntitySweep", "CTraceFilterForPlayerHeadCollision", "CTraceFilterGroundEntities", "CTraceFilterIngnoreGrenades", "CTraceFilterKnifeIgnoreTeammates", "CTraceFilterList", "CTraceFilterNoNPCsOrPlayer", "CTraceFilterNoPlayersAndFlashbangPassableAnims", "CTraceFilterPlayerMovementCS", "CTraceFilterPushFinal", "CTraceFilterPushMove", "CTraceFilterQueryCache", "CTraceFilterTaserIgnoreTeammates", "CTraceFilterWalkableEntities"]
+    "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
+
+=============================================
+Bases: 
+"RnQueryAttr_t"
+    Offset: 8
+    Flags: 2
+    Nested Bases:
+        "RnQueryShapeAttr_t"
+=============================================
+
+=============================================
+Children: 
+"AnimGraphUtils::CTraceFilterAnimGraphSlope"
+"CAnimGraphTraceFilter"
+"CBotBreakableEnumerator"
+"CBotDoorEnumerator"
+"CCSTraceFilterSimple"
+"CInfernoLOSTraceFilter"
+"CTraceFilterDoor"
+"CTraceFilterEntityPush"
+"CTraceFilterEntitySweep"
+"CTraceFilterForPlayerHeadCollision"
+"CTraceFilterGroundEntities"
+"CTraceFilterIngnoreGrenades"
+"CTraceFilterKnifeIgnoreTeammates"
+"CTraceFilterLOS"
+"CTraceFilterList"
+"CTraceFilterNoNPCsOrPlayer"
+"CTraceFilterNoPlayersAndFlashbangPassableAnims"
+"CTraceFilterPlayerMovementCS"
+"CTraceFilterPushFinal"
+"CTraceFilterPushMove"
+"CTraceFilterQueryCache"
+"CTraceFilterTaserIgnoreTeammates"
+"CTraceFilterWalkableEntities"
+================================================
