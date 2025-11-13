@@ -17,8 +17,8 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  ***********************************************************************************/
 
-use std::{cell::Cell, collections::HashMap, fs, path::PathBuf};
-
+use std::{cell::Cell, fs, path::PathBuf};
+use hashbrown::HashMap;
 use anyhow::{Result, bail};
 use iced_x86::{Code, Decoder, DecoderOptions, Instruction, Mnemonic, OpKind, Register};
 use object::{Object, ObjectSection, ObjectSymbol, read::pe::ImageOptionalHeader};

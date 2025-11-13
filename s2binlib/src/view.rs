@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use hashbrown::HashMap;
 
 use anyhow::{Result, bail};
 use object::{BinaryFormat, Object, ObjectSection, read::pe::ImageOptionalHeader};
