@@ -1,0 +1,252 @@
+  what():  
+ ... 
+ [clone 
+ _Complex
+ _Imaginary
+ __vector(
+ class
+ const
+ for 
+ noexcept
+ requires 
+ restrict
+ throw
+ transaction_safe
+ volatile
+%s: __pos (which is %zu) > __size (which is %zu)
+%s: __pos (which is %zu) > this->size() (which is %zu)
+(...
+(anonymous namespace)
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
+-in-
+...)
+/dev/random
+/dev/urandom
+0123456789
+10ConCommand
+10IAppSystem
+11CSchemaType
+13CSchemaSystem
+13ConCommandRef
+13ISchemaSystem
+14CBaseAppSystemI13ISchemaSystemE
+14IErrorListener
+15CSchemaType_Ptr
+15CTier0AppSystemI13ISchemaSystemLx0EE
+15CTier1AppSystemI13ISchemaSystemLx0EE
+15CTier2AppSystemI13ISchemaSystemLx0EE
+16ICommandCallback
+18CSchemaType_Atomic
+19CSchemaRegistration
+19CSchemaType_Builtin
+20CPostConnectCallback
+20CSchemaType_Atomic_I
+20CSchemaType_Atomic_T
+20CSchemaType_Bitfield
+21CSchemaType_Atomic_TT
+22CSchemaInstallCallback
+22CSchemaSystemTypeScope
+22CSchemaType_FixedArray
+22ISchemaSystemTypeScope
+23CKV3TransferContextBase
+23CKV3TransferSaveContext
+24CSchemaType_DeclaredEnum
+25CConCommandMemberAccessorI13CSchemaSystemE
+25CSchemaType_DeclaredClass
+26ICommandCompletionCallback
+28CBaseVModuleMetadataProvider
+29CSchemaRegistration_schemalib
+32CSchemaRegistration_resourcefile
+32CSchemaRegistration_schemasystem
+32CSchemaType_Atomic_CollectionOfT
+35CExampleSchemaVData_PolymorphicBase
+39CExampleSchemaVData_PolymorphicDerivedA
+39CExampleSchemaVData_PolymorphicDerivedB
+41CModuleMetadataProvider_ResourceManifests
+GLIBCXX_TUNABLES
+JArray
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv117__class_type_infoE
+N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv120__si_class_type_infoE
+N10__cxxabiv121__vmi_class_type_infoE
+N9__gnu_cxx20recursive_init_errorE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+NSt3_V214error_categoryE
+St10bad_typeid
+St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
+St11logic_error
+St11range_error
+St12domain_error
+St12length_error
+St12out_of_range
+St12system_error
+St13bad_exception
+St13runtime_error
+St14overflow_error
+St15underflow_error
+St16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE
+St16invalid_argument
+St19_Sp_make_shared_tag
+St20bad_array_new_length
+St8bad_cast
+St9bad_alloc
+St9exception
+St9type_info
+TLS init function for 
+TLS wrapper function for 
+VTT for 
+[...]=
+[abi:
+[friend]
+_Float
+_GLOBAL_
+__float128
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
+alignof 
+allocator
+auto
+auto:
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string: construction from null is not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::compare
+basic_string::copy
+basic_string::erase
+basic_string::insert
+basic_string::replace
+basic_string::resize
+basic_string::substr
+basic_string_view::substr
+bool
+boolean
+byte
+char
+char16_t
+char32_t
+char8_t
+co_await 
+const_cast
+construction vtable for 
+covariant return thunk to 
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
+default
+delete 
+delete[] 
+double
+dynamic_cast
+false
+float
+generic
+getentropy
+glibcxx.eh_pool
+global constructors keyed to 
+global destructors keyed to 
+guard variable for 
+half
+hardware
+hidden alias for 
+initializer for module 
+java Class for 
+java resource 
+long
+long double
+long long
+mt19937
+new 
+new[]
+noexcept
+non-transaction clone for 
+non-virtual thunk to 
+obj_count
+obj_size
+operator
+operator 
+operator"" 
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
+rdrand
+rdrnd
+rdseed
+reference temporary #
+reinterpret_cast
+short
+signed char
+sizeof 
+sizeof...
+static_cast
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::bad_typeid
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::bfloat16_t
+std::exception
+std::iostream
+std::istream
+std::ostream
+std::string
+string literal
+string::string
+system
+template
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively
+terminate called without an active exception
+this
+this 
+throw
+throw 
+transaction clone for 
+true
+typeinfo fn for 
+typeinfo for 
+typeinfo name for 
+typename
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
+virtual thunk to 
+void
+vrman
+vtable for 
+wchar_t
+{default arg#
+{lambda
+{parm#
+{unnamed type#

@@ -31,6 +31,7 @@ mod dumpers {
     pub mod gamesystem_dumper;
     pub mod networkvar_dumper;
     pub mod vtable_dumper;
+    pub mod strings_dumper;
 }
 
 #[derive(Parser)]
@@ -103,6 +104,7 @@ fn main() -> Result<()> {
             info!("Initializing {}", binary);
             s2binlib.load_binary(&binary);
             s2binlib.dump_vtables(&binary)?;
+            s2binlib.dump_strings(&binary)?;
         }
 
         let dump_dir = format!(
@@ -122,6 +124,7 @@ fn main() -> Result<()> {
         dumpers::gamesystem_dumper::dump_gamesystems(&s2binlib, &dump_dir, "client")?;
         dumpers::vtable_dumper::dump_vtables(&s2binlib, &tracked_binaries, &dump_dir)?;
         dumpers::networkvar_dumper::dump_networkvars(&s2binlib, &dump_dir)?;
+        dumpers::strings_dumper::dump_strings(&s2binlib, &dump_dir, &tracked_binaries)?;
     }
 
     Ok(())
