@@ -168,7 +168,11 @@ impl<'a> S2BinLib<'a> {
         let memory_view = self.get_memory_view_from_ptr(vtable_ptr)?;
 
         if !memory_view.contains(vtable_ptr - 8) {
-            bail!("Vtable pointer {:X} is not in the memory view {:X}.", vtable_ptr - 8, memory_view.image_base());
+            bail!(
+                "Vtable pointer {:X} is not in the memory view {:X}.",
+                vtable_ptr - 8,
+                memory_view.image_base()
+            );
         };
         let rtti_ptr = memory_view.read::<u64>(vtable_ptr - 8);
         if rtti_ptr.is_none() {

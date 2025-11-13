@@ -229,7 +229,7 @@ impl<'a> S2BinLib<'a> {
 
         let (module_name, module_base) = module.unwrap();
         // respect custom module base
-        for (manual_module_name, manual_module_base) in &self.manual_base_addresses  {
+        for (manual_module_name, manual_module_base) in &self.manual_base_addresses {
             let lib_name = self.get_os_lib_name(&manual_module_name);
             if module_name.contains(&lib_name) {
                 return Ok(*manual_module_base);
@@ -991,9 +991,8 @@ impl<'a> S2BinLib<'a> {
 
         let mut section_ranges = vec![];
         if self.get_os() == "windows" {
-            section_ranges.push(self.get_section_range(binary_name, ".data")?); 
-            section_ranges.push(self.get_section_range(binary_name, ".rdata")?); 
-
+            section_ranges.push(self.get_section_range(binary_name, ".data")?);
+            section_ranges.push(self.get_section_range(binary_name, ".rdata")?);
         } else if self.get_os() == "linux" {
             section_ranges.push(self.get_section_range(binary_name, ".rodata")?);
             section_ranges.push(self.get_section_range(binary_name, ".data")?);

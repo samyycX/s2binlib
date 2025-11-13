@@ -31,13 +31,15 @@ jobs:
       - name: Build release
         run: |
           . $HOME/.cargo/env
-          cargo build --release
+          cargo build -p s2binlib_binding --release
 
       - name: Upload Linux artifact
         uses: actions/upload-artifact@v4
         with:
           name: s2binlib-linux-x86_64
-          path: target/release/libs2binlib.a
+          path: |
+            target/release/libs2binlib.so
+            target/release/libs2binlib.a
 
   build-windows:
     name: Build Windows
@@ -50,13 +52,14 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
 
       - name: Build release
-        run: cargo build --release
+        run: cargo build -p s2binlib_binding --release
 
       - name: Upload Windows artifacts
         uses: actions/upload-artifact@v4
         with:
           name: s2binlib-windows-x86_64
           path: |
+            target/release/s2binlib.dll
             target/release/s2binlib.lib
 
   create-release-package:
@@ -142,7 +145,8 @@ jobs:
             s2binlib-${{ steps.gitversion.outputs.semVer }}-linux-x86_64.tar.gz
             s2binlib-${{ steps.gitversion.outputs.semVer }}-windows-x86_64.tar.gz
             s2binlib-${{ steps.gitversion.outputs.semVer }}-all-platforms.tar.gz
-            s2binlib.h
+            headers/s2binlib001.h
+            headers/s2binlib_static.h
           draft: false
           prerelease: false
         env:
