@@ -2435,6 +2435,110 @@ pub extern "C" fn s2binlib_find_vfunc_by_vtbptr(
     }
 }
 
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_get_object_ptr_vtable_name(
+    object_ptr: *const c_void,
+    buffer: *mut c_char,
+    buffer_size: usize,
+) -> i32 {
+    unsafe {
+        if object_ptr.is_null() || buffer.is_null() || buffer_size == 0 {
+            return_error!(
+                -2,
+                "invalid parameters: object_ptr, buffer or buffer_size is invalid"
+            );
+        }
+
+        let s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
+        };
+
+        let s2binlib = match s2binlib_guard.as_ref() {
+            Some(lib) => lib,
+            None => return_error!(-1, "S2BinLib not initialized"),
+        };
+
+        match s2binlib.get_object_ptr_vtable_name(object_ptr as u64) {
+            Ok(name) => {
+                let name_bytes = name.as_bytes();
+                if name_bytes.len() + 1 > buffer_size {
+                    return_error!(-3, "buffer too small to store vtable name");
+                }
+
+                std::ptr::copy_nonoverlapping(
+                    name_bytes.as_ptr(),
+                    buffer as *mut u8,
+                    name_bytes.len(),
+                );
+                *buffer.add(name_bytes.len()) = 0;
+
+                0
+            }
+            Err(_) => return_error!(-4, "Failed to get vtable info"),
+        }
+    }
+}
+
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_object_ptr_has_vtable(object_ptr: *const c_void) -> i32 {
+    if object_ptr.is_null() {
+        return_error!(-2, "invalid parameter: object_ptr is null");
+    }
+
+    let s2binlib_guard = match S2BINLIB.lock() {
+        Ok(guard) => guard,
+        Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
+    };
+
+    let s2binlib = match s2binlib_guard.as_ref() {
+        Some(lib) => lib,
+        None => return_error!(-1, "S2BinLib not initialized"),
+    };
+
+    if s2binlib.object_ptr_has_vtable(object_ptr as u64) {
+        1
+    } else {
+        0
+    }
+}
+
+#[unsafe(no_mangle)]
+pub extern "C" fn s2binlib_object_ptr_has_base_class(
+    object_ptr: *const c_void,
+    base_class_name: *const c_char,
+) -> i32 {
+    unsafe {
+        if object_ptr.is_null() || base_class_name.is_null() {
+            return_error!(
+                -2,
+                "invalid parameters: object_ptr or base_class_name is null"
+            );
+        }
+
+        let base_class_name_str = match CStr::from_ptr(base_class_name).to_str() {
+            Ok(s) => s,
+            Err(_) => return_error!(-2, "Failed to convert base_class_name to UTF-8 string"),
+        };
+
+        let s2binlib_guard = match S2BINLIB.lock() {
+            Ok(guard) => guard,
+            Err(_) => return_error!(-5, "Failed to acquire global S2BinLib lock"),
+        };
+
+        let s2binlib = match s2binlib_guard.as_ref() {
+            Some(lib) => lib,
+            None => return_error!(-1, "S2BinLib not initialized"),
+        };
+
+        match s2binlib.object_ptr_has_base_class(object_ptr as u64, base_class_name_str) {
+            Ok(true) => 1,
+            Ok(false) => 0,
+            Err(_) => return_error!(-4, "Failed to get vtable info"),
+        }
+    }
+}
+
 /// Find a string in the binary and return its relative virtual address
 ///
 /// Searches for an exact string match in the binary and returns its relative virtual address.
@@ -3216,13 +3320,13 @@ pub extern "C" fn s2binlib_follow_xref_rva_to_rva(
 /// # Example
 /// ```c
 /// uint64_t index;
-/// int result = s2binlib_find_networkrvar_vtable_statechanged_rva(0x140001000, &index);
+/// int result = s2binlib_find_networkvar_vtable_statechanged_rva(0x140001000, &index);
 /// if (result == 0) {
 ///     printf("StateChanged index: %llu\n", index);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_find_networkrvar_vtable_statechanged_rva(
+pub extern "C" fn s2binlib_find_networkvar_vtable_statechanged_rva(
     vtable_rva: u64,
     result: *mut u64,
 ) -> i32 {
@@ -3241,7 +3345,7 @@ pub extern "C" fn s2binlib_find_networkrvar_vtable_statechanged_rva(
             None => return_error!(-1, "S2BinLib not initialized"),
         };
 
-        match s2binlib.find_networkrvar_vtable_statechanged_rva(vtable_rva) {
+        match s2binlib.find_networkvar_vtable_statechanged_rva(vtable_rva) {
             Ok(index) => {
                 *result = index;
                 0
@@ -3276,13 +3380,13 @@ pub extern "C" fn s2binlib_find_networkrvar_vtable_statechanged_rva(
 /// # Example
 /// ```c
 /// uint64_t index;
-/// int result = s2binlib_find_networkrvar_vtable_statechanged(vtable_ptr, &index);
+/// int result = s2binlib_find_networkvar_vtable_statechanged(vtable_ptr, &index);
 /// if (result == 0) {
 ///     printf("StateChanged index: %llu\n", index);
 /// }
 /// ```
 #[unsafe(no_mangle)]
-pub extern "C" fn s2binlib_find_networkrvar_vtable_statechanged(
+pub extern "C" fn s2binlib_find_networkvar_vtable_statechanged(
     vtable_mem_address: u64,
     result: *mut u64,
 ) -> i32 {
@@ -3301,7 +3405,7 @@ pub extern "C" fn s2binlib_find_networkrvar_vtable_statechanged(
             None => return_error!(-1, "S2BinLib not initialized"),
         };
 
-        match s2binlib.find_networkrvar_vtable_statechanged(vtable_mem_address) {
+        match s2binlib.find_networkvar_vtable_statechanged(vtable_mem_address) {
             Ok(index) => {
                 *result = index;
                 0
