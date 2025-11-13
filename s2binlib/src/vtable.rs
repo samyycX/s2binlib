@@ -19,7 +19,7 @@
 
 use std::collections::{HashMap, HashSet};
 
-use anyhow::{Result, anyhow};
+use anyhow::{Result, anyhow, bail};
 use cpp_demangle::Symbol;
 use msvc_demangler::{DemangleFlags, demangle};
 use object::{BinaryFormat, Object, read::pe::ImageOptionalHeader};
@@ -84,19 +84,6 @@ pub struct Pmd {
 }
 
 impl<'a> S2BinLib<'a> {
-    pub fn get_file_binary_view(&self, binary_name: &str) -> Result<FileBinaryView<'_>> {
-        let binary = self.get_binary(binary_name)?;
-        let file = object::File::parse(binary)?;
-
-        let image_base = match &file {
-            object::File::Pe64(pe) => pe.nt_headers().optional_header.image_base(),
-            object::File::Pe32(pe) => pe.nt_headers().optional_header.image_base() as u64,
-            object::File::Elf64(_) | object::File::Elf32(_) => 0,
-            _ => 0,
-        };
-        FileBinaryView::new(binary, &file, image_base)
-    }
-
     pub fn dump_vtables(&mut self, binary_name: &str) -> Result<()> {
         let binary = self.get_binary(binary_name)?;
         let file = object::File::parse(binary)?;
@@ -114,7 +101,7 @@ impl<'a> S2BinLib<'a> {
 
         let view = FileBinaryView::new(binary, &file, image_base)?;
 
-        let mut vtables = match view.format() {
+        let mut vtables = match file.format() {
             BinaryFormat::Pe => MsvcParser::new(&view).parse(),
             BinaryFormat::Elf => ItaniumParser::new(&view).parse(),
             _ => Err(anyhow!("unsupported binary format")),
@@ -170,9 +157,67 @@ impl<'a> S2BinLib<'a> {
         vtable_name: &str,
     ) -> Result<Vec<&VTableInfo>> {
         let mut visited = HashSet::new();
-        let mut children = self.get_vtable_children_recursively(binary_name, vtable_name, &mut visited)?;
+        let mut children =
+            self.get_vtable_children_recursively(binary_name, vtable_name, &mut visited)?;
         children.sort_by(|a, b| a.type_name.cmp(&b.type_name));
         Ok(children)
+    }
+
+    pub fn get_object_ptr_vtable_info(&self, object_ptr: u64) -> Result<VTableInfo> {
+        let vtable_ptr = unsafe { *(object_ptr as *const u64) };
+        let memory_view = self.get_memory_view_from_ptr(vtable_ptr)?;
+
+        if !memory_view.contains(vtable_ptr - 8) {
+            bail!("Vtable pointer is not in the memory view.");
+        };
+        let rtti_ptr: u64 = vtable_ptr - 8;
+
+        #[cfg(target_os = "windows")]
+        {
+            let mut parser = MsvcParser::new(&memory_view);
+            let locator = parser.parse_locator(rtti_ptr);
+            if locator.is_none() {
+                bail!("Failed to parse locator.");
+            }
+            let locator = locator.unwrap();
+            let vtable_info = parser.build_vtable_info(vtable_ptr, &locator);
+            if vtable_info.is_none() {
+                bail!("Failed to build vtable info.");
+            }
+            Ok(vtable_info.unwrap())
+        }
+        #[cfg(target_os = "linux")]
+        {
+            let mut parser = ItaniumParser::new(&memory_view);
+
+            // TODO: get offset_to_top from rtti_ptr
+            let vtable_info = parser.build_vtable_info(vtable_ptr, rtti_ptr, 0);
+            if vtable_info.is_none() {
+                bail!("Failed to build vtable info.");
+            }
+            Ok(vtable_info.unwrap())
+        }
+    }
+
+    pub fn get_object_ptr_vtable_name(&self, object_ptr: u64) -> Result<String> {
+        let vtable_info = self.get_object_ptr_vtable_info(object_ptr)?;
+        Ok(vtable_info.type_name)
+    }
+
+    pub fn object_ptr_has_vtable(&self, object_ptr: u64) -> bool {
+        self.get_object_ptr_vtable_info(object_ptr).is_ok()
+    }
+
+    pub fn object_ptr_has_base_class(
+        &self,
+        object_ptr: u64,
+        base_class_name: &str,
+    ) -> Result<bool> {
+        let vtable_info = self.get_object_ptr_vtable_info(object_ptr)?;
+        Ok(vtable_info
+            .bases
+            .iter()
+            .any(|base| base.type_name.eq(base_class_name)))
     }
 }
 
@@ -591,7 +636,10 @@ impl<'a, V: BinaryView<'a>> ItaniumParser<'a, V> {
             let flags = (offset_flags & 0xFF) as u32;
 
             if let Some(info) = self.resolve_typeinfo(typeinfo_ptr) {
-                let TypeInfoData { name, bases: nested } = info;
+                let TypeInfoData {
+                    name,
+                    bases: nested,
+                } = info;
                 bases.push(BaseClassInfo {
                     type_name: name,
                     details: BaseClassModel::Itanium {

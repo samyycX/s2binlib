@@ -619,7 +619,11 @@ impl<'a> S2BinLib<'a> {
         self.get_vtable_vfunc_count_by_rva(binary_name, vtable_rva)
     }
 
-    pub fn get_vtable_vfunc_count_by_rva(&self, binary_name: &str, vtable_rva: u64) -> Result<usize> {
+    pub fn get_vtable_vfunc_count_by_rva(
+        &self,
+        binary_name: &str,
+        vtable_rva: u64,
+    ) -> Result<usize> {
         let mut offset = 0;
 
         loop {
@@ -1115,7 +1119,7 @@ impl<'a> S2BinLib<'a> {
         ))
     }
 
-    pub fn find_networkrvar_vtable_statechanged_rva(&self, vtable_rva: u64) -> Result<u64> {
+    pub fn find_networkvar_vtable_statechanged_rva(&self, vtable_rva: u64) -> Result<u64> {
         let vfunc_count = self.get_vtable_vfunc_count_by_rva("server", vtable_rva)?;
 
         for i in 0..vfunc_count {
@@ -1141,9 +1145,9 @@ impl<'a> S2BinLib<'a> {
         Err(anyhow::anyhow!("Networkrvar_StateChanged not found"))
     }
 
-    pub fn find_networkrvar_vtable_statechanged(&self, vtable_mem_address: u64) -> Result<u64> {
+    pub fn find_networkvar_vtable_statechanged(&self, vtable_mem_address: u64) -> Result<u64> {
         let vtable_rva = self.mem_address_to_rva("server", vtable_mem_address)?;
-        self.find_networkrvar_vtable_statechanged_rva(vtable_rva)
+        self.find_networkvar_vtable_statechanged_rva(vtable_rva)
     }
 
     pub fn is_nullsub_rva(&self, binary_name: &str, func_rva: u64) -> Result<bool> {

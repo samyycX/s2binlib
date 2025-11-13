@@ -112,7 +112,11 @@ pub fn dump_diff(
                 writeln!(file, "    Displacement: {:?}", displacement)?;
                 writeln!(file, "    Num Contained Bases: {:?}", num_contained_bases)?;
             }
-            BaseClassModel::Itanium { offset, flags, bases } => {
+            BaseClassModel::Itanium {
+                offset,
+                flags,
+                bases,
+            } => {
                 writeln!(file, "    Offset: {:?}", offset)?;
                 writeln!(file, "    Flags: {:?}", flags)?;
                 if !bases.is_empty() {

@@ -1,9 +1,14 @@
 use std::collections::HashMap;
 
-use anyhow::Result;
-use object::{BinaryFormat, Object, ObjectSection};
+use anyhow::{Result, bail};
+use object::{BinaryFormat, Object, ObjectSection, read::pe::ImageOptionalHeader};
+use windows::Win32::System::Memory;
 
-use crate::{is_executable, memory::module_sections_from_slice};
+use crate::{
+    S2BinLib, is_executable,
+    memory::{get_module_base_from_pointer, module_from_pointer, module_sections_from_slice},
+    module::get_module_info,
+};
 
 mod linux {
     use super::SectionInfo;
@@ -18,7 +23,7 @@ mod linux {
         data: &'a [u8],
         real_image_base: u64,
         image_base: u64,
-    ) -> Option<(Vec<SectionInfo<'a>>, BinaryFormat)> {
+    ) -> Option<Vec<SectionInfo<'a>>> {
         let path = module_path(real_image_base)?;
         let binary = fs::read(&path).ok()?;
         let file = object::File::parse(&*binary).ok()?;
@@ -57,7 +62,7 @@ mod linux {
         }
 
         sections.sort_by_key(|entry| entry.real_address());
-        Some((sections, file.format()))
+        Some(sections)
     }
 
     fn module_path(base: u64) -> Option<String> {
@@ -135,7 +140,6 @@ macro_rules! impl_le_primitive {
 impl_le_primitive!(u32, i32, i64, u64, f32, f64);
 
 pub trait BinaryView<'a> {
-    fn format(&self) -> BinaryFormat;
     fn image_base(&self) -> u64;
     fn follow_rva(&self, rva: u32) -> Option<u64> {
         self.image_base().checked_add(rva as u64)
@@ -228,10 +232,6 @@ impl<'a> FileBinaryView<'a> {
 }
 
 impl<'a> BinaryView<'a> for FileBinaryView<'a> {
-    fn format(&self) -> BinaryFormat {
-        self.format
-    }
-
     fn image_base(&self) -> u64 {
         self.image_base
     }
@@ -274,19 +274,17 @@ impl<'a> BinaryView<'a> for FileBinaryView<'a> {
 #[derive(Debug)]
 pub struct MemoryView<'a> {
     sections: Vec<SectionInfo<'a>>,
-    format: BinaryFormat,
     image_base: u64,
     real_image_base: u64,
 }
 
 impl<'a> MemoryView<'a> {
-    pub unsafe fn new(base: *const u8, len: usize, image_base: u64, format: BinaryFormat) -> Self {
+    pub unsafe fn new(base: *const u8, len: usize, image_base: u64) -> Self {
         let data = unsafe { std::slice::from_raw_parts(base, len) };
         let real_image_base = base as usize as u64;
         let mut sections = Vec::new();
-        let mut view_format = format;
 
-        let linux_sections: Option<(Vec<SectionInfo<'a>>, BinaryFormat)> = {
+        let linux_sections: Option<Vec<SectionInfo<'a>>> = {
             #[cfg(target_os = "linux")]
             {
                 linux::build_sections(data, real_image_base, image_base)
@@ -297,13 +295,12 @@ impl<'a> MemoryView<'a> {
             }
         };
 
-        if let Some((detected_sections, detected_format)) = linux_sections {
+        if let Some(detected_sections) = linux_sections {
             sections = detected_sections;
-            view_format = detected_format;
         }
 
         if sections.is_empty() {
-            if let Ok(descriptors) = module_sections_from_slice(data, image_base, format) {
+            if let Ok(descriptors) = module_sections_from_slice(data, image_base) {
                 for descriptor in descriptors {
                     let start = descriptor.offset.min(data.len());
                     let end = start.saturating_add(descriptor.size).min(data.len());
@@ -338,7 +335,6 @@ impl<'a> MemoryView<'a> {
 
         Self {
             sections,
-            format: view_format,
             image_base,
             real_image_base,
         }
@@ -346,10 +342,6 @@ impl<'a> MemoryView<'a> {
 }
 
 impl<'a> BinaryView<'a> for MemoryView<'a> {
-    fn format(&self) -> BinaryFormat {
-        self.format
-    }
-
     fn image_base(&self) -> u64 {
         self.image_base
     }
@@ -402,5 +394,39 @@ impl<'a> BinaryView<'a> for MemoryView<'a> {
             (address >= section.real_address && address < section.real_address + len)
                 || (address >= section.address && address < section.address + len)
         })
+    }
+}
+
+impl<'a> S2BinLib<'a> {
+    pub fn get_file_binary_view(&self, binary_name: &str) -> Result<FileBinaryView<'_>> {
+        let binary = self.get_binary(binary_name)?;
+        let file = object::File::parse(binary)?;
+
+        let image_base = match &file {
+            object::File::Pe64(pe) => pe.nt_headers().optional_header.image_base(),
+            object::File::Pe32(pe) => pe.nt_headers().optional_header.image_base() as u64,
+            object::File::Elf64(_) | object::File::Elf32(_) => 0,
+            _ => 0,
+        };
+        FileBinaryView::new(binary, &file, image_base)
+    }
+
+    pub fn get_memory_view_from_ptr(&self, ptr: u64) -> Result<MemoryView> {
+        let result = module_from_pointer(ptr);
+
+        if result.is_none() {
+            bail!("Failed to get module from pointer.");
+        }
+
+        let (module_name, module_base) = result.unwrap();
+        let module_info = get_module_info(&module_name)?;
+        let memory_view = unsafe {
+            MemoryView::new(
+                module_info.base_address as *const u8,
+                module_info.size,
+                module_base,
+            )
+        };
+        Ok(memory_view)
     }
 }

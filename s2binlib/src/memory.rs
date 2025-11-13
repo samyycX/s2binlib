@@ -117,7 +117,6 @@ pub struct MemorySectionDescriptor {
 pub fn module_sections_from_slice<'a>(
     data: &'a [u8],
     image_base: u64,
-    _format: BinaryFormat,
 ) -> Result<Vec<MemorySectionDescriptor>> {
     if data.is_empty() {
         return Ok(Vec::new());

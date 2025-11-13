@@ -20,11 +20,11 @@
 mod flags;
 pub mod jit;
 mod memory;
+mod module;
 mod pattern;
 mod s2binlib;
-mod vtable;
-mod module;
 mod view;
+mod vtable;
 
 pub use flags::*;
 pub use pattern::*;
@@ -47,7 +47,10 @@ mod tests {
     use libloading::Library;
     use object::BinaryFormat;
 
-    use crate::{module::get_module_info, view::{BinaryView, FileBinaryView, MemoryView}};
+    use crate::{
+        module::get_module_info,
+        view::{BinaryView, FileBinaryView, MemoryView},
+    };
 
     use super::*;
 
@@ -68,12 +71,13 @@ mod tests {
 
         let module_info = get_module_info("tier0.dll")?;
 
-        let view = unsafe {MemoryView::new(
-            module_info.base_address as *const u8,
-            module_info.size,
-            module_info.base_address as u64,
-            BinaryFormat::Pe,
-        ) };
+        let view = unsafe {
+            MemoryView::new(
+                module_info.base_address as *const u8,
+                module_info.size,
+                module_info.base_address as u64,
+            )
+        };
 
         let view2 = s2binlib.get_file_binary_view("server")?;
 
@@ -81,7 +85,6 @@ mod tests {
         let vtables = parser.parse()?;
 
         println!("{:?}", vtables);
-
 
         // let c = view.read::<u64>(module_info.base_address as u64).unwrap();
         // let locator = parser.parse_locator(c).unwrap();
