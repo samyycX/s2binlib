@@ -26,7 +26,7 @@ use object::{Object, ObjectSection, ObjectSymbol, read::pe::ImageOptionalHeader}
 use crate::{
     VTableInfo, find_pattern_simd, is_executable,
     jit::JitTrampoline,
-    memory::{get_module_base_from_pointer, set_mem_access},
+    memory::{get_module_base_from_pointer, module_from_pointer, set_mem_access},
 };
 
 #[cfg(target_os = "windows")]
@@ -218,6 +218,24 @@ impl<'a> S2BinLib<'a> {
 
     pub fn clear_module_base_address(&mut self, lib_name: &str) {
         self.manual_base_addresses.remove(lib_name);
+    }
+
+    pub fn module_from_pointer(&self, ptr: u64) -> Result<u64> {
+        let module = module_from_pointer(ptr);
+
+        if module.is_none() {
+            bail!("Failed to get module from pointer.");
+        }
+
+        let (module_name, module_base) = module.unwrap();
+        // respect custom module base
+        for (manual_module_name, manual_module_base) in &self.manual_base_addresses  {
+            let lib_name = self.get_os_lib_name(&manual_module_name);
+            if module_name.contains(&lib_name) {
+                return Ok(*manual_module_base);
+            }
+        }
+        Ok(module_base)
     }
 
     pub fn get_binary_path(&self, binary_name: &str) -> String {
