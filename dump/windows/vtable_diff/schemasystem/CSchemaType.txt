@@ -1,0 +1,57 @@
+Vtable: CSchemaType
+Virtual Function Count: 17
+Children Count: 11
+=============================================
+func_0     [ DIFF 11  ]                               ["CSchemaType_Atomic", "CSchemaType_Atomic_CollectionOfT", "CSchemaType_Atomic_I", "CSchemaType_Atomic_T", "CSchemaType_Atomic_TT", "CSchemaType_Bitfield", "CSchemaType_Builtin", "CSchemaType_DeclaredClass", "CSchemaType_DeclaredEnum", "CSchemaType_FixedArray", "CSchemaType_Ptr"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_1     [ DIFF 11  ]                               ["CSchemaType_Atomic", "CSchemaType_Atomic_CollectionOfT", "CSchemaType_Atomic_I", "CSchemaType_Atomic_T", "CSchemaType_Atomic_TT", "CSchemaType_Bitfield", "CSchemaType_Builtin", "CSchemaType_DeclaredClass", "CSchemaType_DeclaredEnum", "CSchemaType_FixedArray", "CSchemaType_Ptr"]
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B DA 45 84 C0"
+func_2     [ DIFF 1   ]                               ["CSchemaType_DeclaredClass"]
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 30 8B"
+func_3     [ DIFF 11  ]                               ["CSchemaType_Atomic", "CSchemaType_Atomic_CollectionOfT", "CSchemaType_Atomic_I", "CSchemaType_Atomic_T", "CSchemaType_Atomic_TT", "CSchemaType_Bitfield", "CSchemaType_Builtin", "CSchemaType_DeclaredClass", "CSchemaType_DeclaredEnum", "CSchemaType_FixedArray", "CSchemaType_Ptr"]
+    "48 83 EC 28 E8 EB FF FF FF 48 85 C0 74 06 FF 15"
+func_4     [ DIFF 1   ]                               ["CSchemaType_DeclaredClass"]
+    "48 3B CA 0F 94 C0 C3 CC CC CC CC CC CC CC CC CC"
+func_5     [ DIFF 5   ]                               ["CSchemaType_Atomic_CollectionOfT", "CSchemaType_Atomic_T", "CSchemaType_Atomic_TT", "CSchemaType_FixedArray", "CSchemaType_Ptr"]
+    "48 C7 02 00 00 00 00 48 8B C2 C3 CC CC CC CC CC"
+func_6     [ DIFF 5   ]                               ["CSchemaType_Atomic_CollectionOfT", "CSchemaType_Atomic_T", "CSchemaType_Atomic_TT", "CSchemaType_FixedArray", "CSchemaType_Ptr"]
+    "48 89 0A 48 8B C2 C3 CC CC CC CC CC CC CC CC CC"
+func_7     [ DIFF 2   ]                               ["CSchemaType_DeclaredClass", "CSchemaType_Ptr"]
+    "48 3B D1 0F 94 C0 C3 CC CC CC CC CC CC CC CC CC"
+func_8     [ DIFF 5   ]                               ["CSchemaType_Atomic_CollectionOfT", "CSchemaType_Atomic_T", "CSchemaType_Atomic_TT", "CSchemaType_FixedArray", "CSchemaType_Ptr"]
+    "38 51 18 74 03 33 C0 C3 44 38 41 19 74 0A 33 C0"
+func_9     [ DIFF 11  ]                               ["CSchemaType_Atomic", "CSchemaType_Atomic_CollectionOfT", "CSchemaType_Atomic_I", "CSchemaType_Atomic_T", "CSchemaType_Atomic_TT", "CSchemaType_Bitfield", "CSchemaType_Builtin", "CSchemaType_DeclaredClass", "CSchemaType_DeclaredEnum", "CSchemaType_FixedArray", "CSchemaType_Ptr"]
+    "48 83 EC 28 E8 EB FF FF FF 48 85 C0 74 06 FF 15"
+func_10    [ DIFF 8   ]                               ["CSchemaType_Atomic", "CSchemaType_Atomic_CollectionOfT", "CSchemaType_Atomic_I", "CSchemaType_Atomic_T", "CSchemaType_Atomic_TT", "CSchemaType_Builtin", "CSchemaType_DeclaredClass", "CSchemaType_DeclaredEnum"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_11    [ DIFF 1   ]                               ["CSchemaType_Builtin"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_12    [ DIFF 5   ]                               ["CSchemaType_Atomic", "CSchemaType_Atomic_CollectionOfT", "CSchemaType_Atomic_I", "CSchemaType_Atomic_T", "CSchemaType_Atomic_TT"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_13    [ DIFF 1   ]                               ["CSchemaType_DeclaredClass"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_14    [ DIFF 1   ]                               ["CSchemaType_DeclaredEnum"]
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_15    [ DIFF 7   ]                               ["CSchemaType_Atomic_CollectionOfT", "CSchemaType_Atomic_T", "CSchemaType_Atomic_TT", "CSchemaType_DeclaredClass", "CSchemaType_DeclaredEnum", "CSchemaType_FixedArray", "CSchemaType_Ptr"]
+    "48 39 51 10 0F 94 C0 C3 CC CC CC CC CC CC CC CC"
+func_16    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8D 05 87 A5 04"
+
+=============================================
+Bases: 
+=============================================
+
+=============================================
+Children: 
+"CSchemaType_Atomic"
+"CSchemaType_Atomic_CollectionOfT"
+"CSchemaType_Atomic_I"
+"CSchemaType_Atomic_T"
+"CSchemaType_Atomic_TT"
+"CSchemaType_Bitfield"
+"CSchemaType_Builtin"
+"CSchemaType_DeclaredClass"
+"CSchemaType_DeclaredEnum"
+"CSchemaType_FixedArray"
+"CSchemaType_Ptr"
+================================================

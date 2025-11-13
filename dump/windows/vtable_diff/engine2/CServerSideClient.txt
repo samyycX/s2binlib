@@ -1,0 +1,49 @@
+Vtable: CServerSideClient
+Virtual Function Count: 1
+Children Count: 19
+=============================================
+func_0     [ DIFF 18  ]                               ["CDelayedCall2<class CServerSideClientBase,class CHLTVClient,struct CHLTVClient::PrintTVStatusCall_t,struct empty_t>", "CDelayedCall2<class CServerSideClientBase,class CServerSideClient,struct CServerSideClient::FakeClientMarkSpawnGroupsAsLoadedCall_t,struct empty_t>", "CDelayedCall2<class CServerSideClientBase,class CServerSideClient,struct CServerSideClient::StartHltvReplayCall_t,struct empty_t>", "CDelayedCall2<class CServerSideClientBase,class CServerSideClient,struct CServerSideClient::StopHltvReplayCall_t,struct empty_t>", "CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::BuildServerInfoMessageAsync_t,class CNetworkGameServerSpawnGroupAutoLock>", "CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::DisconnectCall_t,struct empty_t>", "CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::OnSpawnGroupActivateCall_t,class CNetworkGameServerSpawnGroupAutoLock>", "CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::OnSpawnGroupDeactivateCall_t,class CNetworkGameServerSpawnGroupAutoLock>", "CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::OnSpawnGroupLoadCall_t,class CNetworkGameServerSpawnGroupAutoLock>", "CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::ProcessBaselineAckCall_t,struct empty_t>", "CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::SendNetMessageCall_t,struct empty_t>", "CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::SendSpawnGroupManifestUpdateCall_t,class CNetworkGameServerSpawnGroupAutoLock>", "CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::SignonStateNewCall_t,struct empty_t>", "CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::SignonStateNewFailedCall_t,struct empty_t>", "CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::UpdateAcknowledgedFramecountCall_t,struct empty_t>", "CServerSideClient::CSendJob_Empty", "CServerSideClient::CSendJob_HltvReplay", "CServerSideClient::CSendJob_HltvSource"]
+    "40 53 48 83 EC 30 48 8B 02 48 8B D9 48 8B CA FF"
+
+=============================================
+Bases: 
+"CServerSideClientBase"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 0, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 3
+"CUtlSlot"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 16, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 0
+"INetworkChannelNotify"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 0, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 0
+"INetworkMessageProcessingPreFilter"
+    Attributes: 77
+    Displacement: Pmd { mdisp: 8, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 0
+=============================================
+
+=============================================
+Children: 
+"CDelayedCall2<class CServerSideClientBase,class CHLTVClient,struct CHLTVClient::PrintTVStatusCall_t,struct empty_t>"
+"CDelayedCall2<class CServerSideClientBase,class CServerSideClient,struct CServerSideClient::FakeClientMarkSpawnGroupsAsLoadedCall_t,struct empty_t>"
+"CDelayedCall2<class CServerSideClientBase,class CServerSideClient,struct CServerSideClient::StartHltvReplayCall_t,struct empty_t>"
+"CDelayedCall2<class CServerSideClientBase,class CServerSideClient,struct CServerSideClient::StopHltvReplayCall_t,struct empty_t>"
+"CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::BuildServerInfoMessageAsync_t,class CNetworkGameServerSpawnGroupAutoLock>"
+"CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::DisconnectCall_t,struct empty_t>"
+"CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::OnSpawnGroupActivateCall_t,class CNetworkGameServerSpawnGroupAutoLock>"
+"CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::OnSpawnGroupDeactivateCall_t,class CNetworkGameServerSpawnGroupAutoLock>"
+"CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::OnSpawnGroupLoadCall_t,class CNetworkGameServerSpawnGroupAutoLock>"
+"CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::ProcessBaselineAckCall_t,struct empty_t>"
+"CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::SendNetMessageCall_t,struct empty_t>"
+"CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::SendSpawnGroupManifestUpdateCall_t,class CNetworkGameServerSpawnGroupAutoLock>"
+"CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::SignonStateNewCall_t,struct empty_t>"
+"CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::SignonStateNewFailedCall_t,struct empty_t>"
+"CDelayedCall2<class CServerSideClientBase,class CServerSideClientBase,struct CServerSideClientBase::UpdateAcknowledgedFramecountCall_t,struct empty_t>"
+"CHLTVClient"
+"CServerSideClient::CSendJob_Empty"
+"CServerSideClient::CSendJob_HltvReplay"
+"CServerSideClient::CSendJob_HltvSource"
+================================================

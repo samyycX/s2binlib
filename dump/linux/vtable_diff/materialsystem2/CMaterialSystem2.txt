@@ -1,0 +1,115 @@
+Vtable: CMaterialSystem2
+Virtual Function Count: 49
+Children Count: 0
+=============================================
+func_0     [ DIFF 0   ]                               []
+    "55 48 89 E5 41 56 41 55 49 89 F5 41 54 53 48 89"
+func_1     [ DIFF 0   ]                               []
+    "55 48 89 E5 41 56 41 55 49 89 FD 41 54 53 48 63"
+func_2     [ DIFF 0   ]                               []
+    "31 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_3     [ DIFF 0   ]                               []
+    "55 48 89 E5 41 57 49 89 FF 41 56 41 55 41 54 53"
+func_4     [ DIFF 0   ]                               []
+    "55 48 89 E5 41 54 53 48 89 FB 48 8B 3D 1F EB 0F"
+func_5     [ DIFF 0   ]                               []
+    "C6 87 53 0C 00 00 01 C3 CC CC CC CC CC CC CC CC"
+func_6     [ DIFF 0   ]                               []
+    "48 8D 05 69 B6 10 00 C3 CC CC CC CC CC CC CC CC"
+func_7     [ DIFF 0   ]                               []
+    "B8 02 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
+func_8     [ DIFF 0   ]                               []
+    "55 48 89 E5 53 48 89 FB 48 89 F7 48 83 EC 08 48"
+func_9     [ DIFF 0   ]                               []
+    "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
+func_10    [ DIFF 0   ]                               []
+    "B8 02 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
+func_11    [ DIFF 0   ]                               []
+    "8B 06 48 8D 8F 70 0B 00 00 3B 05 FD A4 10 00 66"
+func_12    [ DIFF 0   ]                               []
+    "80 8F 50 0C 00 00 40 C3 CC CC CC CC CC CC CC CC"
+func_13    [ DIFF 0   ]                               []
+    "80 8F 50 0C 00 00 80 C3 CC CC CC CC CC CC CC CC"
+func_14    [ DIFF 0   ]                               []
+    "55 45 31 C0 B9 FF FF FF FF 31 F6 48 89 E5 41 54"
+func_15    [ DIFF 0   ]                               []
+    "49 8B 39 48 85 FF 74 10 48 83 C7 08 E9 EF AD 02"
+func_16    [ DIFF 0   ]                               []
+    "49 8B 38 48 85 FF 74 38 55 48 89 D0 48 83 C7 08"
+func_17    [ DIFF 0   ]                               []
+    "48 8B 02 48 89 D7 48 85 C0 74 35 66 0F 6E D6 66"
+func_18    [ DIFF 0   ]                               []
+    "4C 8B 1A 48 89 CF 31 C9 4D 85 DB 74 34 89 F0 48"
+func_19    [ DIFF 0   ]                               []
+    "55 48 89 E5 41 57 41 56 41 55 49 89 CD 41 54 53"
+func_20    [ DIFF 0   ]                               []
+    "55 48 8D 05 74 F8 FB FF 48 8D 35 B1 D2 0F 00 48"
+func_21    [ DIFF 0   ]                               []
+    "55 31 D2 48 89 E5 48 83 EC 20 48 8D 75 E0 48 C7"
+func_22    [ DIFF 0   ]                               []
+    "31 C0 48 83 3D BE B5 10 00 00 74 07 0F B6 05 82"
+func_23    [ DIFF 0   ]                               []
+    "55 48 89 E5 41 57 41 56 41 55 41 54 53 48 83 EC"
+func_24    [ DIFF 0   ]                               []
+    "55 48 89 E5 41 55 49 89 F5 41 54 53 48 89 FB 48"
+func_25    [ DIFF 0   ]                               []
+    "55 48 89 E5 53 48 89 FB 48 83 EC 08 8B BF 20 0C"
+func_26    [ DIFF 0   ]                               []
+    "C6 47 24 01 C3 CC CC CC CC CC CC CC CC CC CC CC"
+func_27    [ DIFF 0   ]                               []
+    "55 48 89 E5 41 57 49 89 FF 41 56 41 55 41 54 53"
+func_28    [ DIFF 0   ]                               []
+    "55 48 89 E5 41 57 49 89 CF 41 56 49 89 D6 41 55"
+func_29    [ DIFF 0   ]                               []
+    "55 48 89 E5 41 57 41 56 41 55 41 54 53 48 89 FB"
+func_30    [ DIFF 0   ]                               []
+    "55 48 89 E5 41 57 45 89 CF 41 56 4D 89 C6 41 55"
+func_31    [ DIFF 0   ]                               []
+    "55 48 89 E5 53 48 83 EC 08 0F B6 05 E0 8B 10 00"
+func_32    [ DIFF 0   ]                               []
+    "66 0F EF C0 C7 46 20 00 00 00 00 0F 11 06 0F 11"
+func_33    [ DIFF 0   ]                               []
+    "8B 47 34 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+func_34    [ DIFF 0   ]                               []
+    "83 47 34 01 C3 CC CC CC CC CC CC CC CC CC CC CC"
+func_35    [ DIFF 0   ]                               []
+    "55 48 89 E5 41 57 49 89 D7 41 56 41 55 49 89 FD"
+func_36    [ DIFF 0   ]                               []
+    "48 85 D2 74 33 48 8B 06 48 85 C0 74 2B 8B 48 20"
+func_37    [ DIFF 0   ]                               []
+    "48 8B 06 48 85 C0 74 15 8B 48 20 85 C9 7E 0E 48"
+func_38    [ DIFF 0   ]                               []
+    "55 48 89 E5 41 55 49 89 F5 41 54 53 48 89 FB 48"
+func_39    [ DIFF 0   ]                               []
+    "55 48 89 E5 53 48 89 FB 48 83 EC 08 8B BF 98 0C"
+func_40    [ DIFF 0   ]                               []
+    "55 48 89 E5 41 56 41 55 49 89 D5 41 54 48 8D 15"
+func_41    [ DIFF 0   ]                               []
+    "55 48 89 E5 41 57 41 56 41 55 41 54 53 48 83 EC"
+func_42    [ DIFF 0   ]                               []
+    "85 D2 74 5C 48 8B 3D B5 A1 10 00 55 48 89 E5 41"
+func_43    [ DIFF 0   ]                               []
+    "55 B9 07 00 00 00 BE 76 6D 61 74 48 89 E5 41 57"
+func_44    [ DIFF 0   ]                               []
+    "55 48 89 E5 53 48 89 F3 48 83 EC 08 E8 DF FE FF"
+func_45    [ DIFF 0   ]                               []
+    "55 48 89 E5 E8 07 FF FF FF 5D 83 F8 03 0F 94 C0"
+func_46    [ DIFF 0   ]                               []
+    "0F B6 87 C8 0C 00 00 40 88 B7 C8 0C 00 00 C3 CC"
+func_47    [ DIFF 0   ]                               []
+    "55 48 8D 05 28 D1 0F 00 48 89 E5 41 57 41 56 41"
+func_48    [ DIFF 0   ]                               []
+    "55 48 89 E5 53 48 89 FB 48 83 EC 08 E8 2F F9 FF"
+
+=============================================
+Bases: 
+"CTier2AppSystem<IMaterialSystem2, (long long)0>"
+    Offset: 0
+    Flags: 0
+    Nested Bases:
+        "CTier1AppSystem<IMaterialSystem2, (long long)0>"
+=============================================
+
+=============================================
+Children: 
+================================================

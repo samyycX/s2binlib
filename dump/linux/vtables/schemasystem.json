@@ -1,0 +1,1264 @@
+[
+  {
+    "type_name": "CConCommandMemberAccessor<CSchemaSystem>",
+    "vtable_address": 670416,
+    "methods": [
+      475968,
+      476000
+    ],
+    "bases": [
+      {
+        "type_name": "ConCommand",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "ConCommandRef",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "ICommandCallback",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      },
+      {
+        "type_name": "ICommandCompletionCallback",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CConCommandMemberAccessor<CSchemaSystem>",
+    "vtable_address": 670448,
+    "methods": [
+      476064
+    ],
+    "bases": [
+      {
+        "type_name": "ConCommand",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "ConCommandRef",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "ICommandCallback",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      },
+      {
+        "type_name": "ICommandCompletionCallback",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -16
+      }
+    }
+  },
+  {
+    "type_name": "CExampleSchemaVData_PolymorphicBase",
+    "vtable_address": 678944,
+    "methods": [
+      566960,
+      585168,
+      588912,
+      566976,
+      566992,
+      601328
+    ],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CExampleSchemaVData_PolymorphicBase",
+    "vtable_address": 693008,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CExampleSchemaVData_PolymorphicDerivedA",
+    "vtable_address": 678784,
+    "methods": [
+      567008,
+      585568,
+      593296,
+      567024,
+      567072,
+      601344
+    ],
+    "bases": [
+      {
+        "type_name": "CExampleSchemaVData_PolymorphicBase",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CExampleSchemaVData_PolymorphicDerivedB",
+    "vtable_address": 678720,
+    "methods": [
+      567040,
+      586208,
+      597904,
+      567056,
+      567072,
+      601360
+    ],
+    "bases": [
+      {
+        "type_name": "CExampleSchemaVData_PolymorphicBase",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CExampleSchemaVData_PolymorphicDerivedB",
+    "vtable_address": 679184,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 693728
+      }
+    }
+  },
+  {
+    "type_name": "CHandle",
+    "vtable_address": 678456,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 690560
+      }
+    }
+  },
+  {
+    "type_name": "CKV3TransferContextBase",
+    "vtable_address": 679008,
+    "methods": [
+      567664,
+      391216,
+      566000,
+      388368,
+      388384,
+      388400
+    ],
+    "bases": [
+      {
+        "type_name": "IErrorListener",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CKV3TransferSaveContext",
+    "vtable_address": 679072,
+    "methods": [
+      567664,
+      391216,
+      566000,
+      388368,
+      388384,
+      388400
+    ],
+    "bases": [
+      {
+        "type_name": "CKV3TransferContextBase",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IErrorListener",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CModuleMetadataProvider_ResourceManifests",
+    "vtable_address": 679720,
+    "methods": [
+      600000
+    ],
+    "bases": [
+      {
+        "type_name": "CBaseVModuleMetadataProvider",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaInstallCallback",
+    "vtable_address": 679696,
+    "methods": [
+      574064
+    ],
+    "bases": [
+      {
+        "type_name": "CPostConnectCallback",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaRegistration",
+    "vtable_address": 679680,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 199776
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaRegistration_resourcefile",
+    "vtable_address": 679744,
+    "methods": [
+      570912
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaRegistration",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaRegistration_schemalib",
+    "vtable_address": 679768,
+    "methods": [
+      571328
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaRegistration",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaRegistration_schemasystem",
+    "vtable_address": 679792,
+    "methods": [
+      536528
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaRegistration",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaSystem",
+    "vtable_address": 670472,
+    "methods": [
+      395008,
+      475648,
+      388352,
+      395120,
+      395216,
+      475920,
+      390608,
+      475936,
+      476176,
+      388960,
+      475952,
+      390656,
+      412288,
+      400176,
+      401088,
+      390672,
+      401344,
+      402640,
+      401648,
+      402848,
+      409712,
+      403072,
+      390688,
+      390640,
+      390848,
+      390624,
+      390576,
+      391648,
+      475040,
+      433632,
+      527520,
+      525248,
+      400048,
+      400384,
+      401920,
+      424144,
+      561536,
+      410608,
+      433648,
+      394128,
+      408928
+    ],
+    "bases": [
+      {
+        "type_name": "CTier2AppSystem<ISchemaSystem, (long long)0>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier1AppSystem<ISchemaSystem, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CTier0AppSystem<ISchemaSystem, (long long)0>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "CBaseAppSystem<ISchemaSystem>",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "ISchemaSystem",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": [
+                                              {
+                                                "type_name": "IAppSystem",
+                                                "details": {
+                                                  "Itanium": {
+                                                    "offset": 0,
+                                                    "flags": 0,
+                                                    "bases": []
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaSystemInternalRegistration",
+    "vtable_address": 677928,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaSystemTypeScope",
+    "vtable_address": 669792,
+    "methods": [
+      417600,
+      423296,
+      427632,
+      432576,
+      433872,
+      405216,
+      463168,
+      429760,
+      440000,
+      441408,
+      443008,
+      444544,
+      445888,
+      446976,
+      435216,
+      436352,
+      439008,
+      427744,
+      429920,
+      431552,
+      431872,
+      432224,
+      430272,
+      430912,
+      397120,
+      398160,
+      398592,
+      399632,
+      391008,
+      391024,
+      391056,
+      391120,
+      428032,
+      429328,
+      429536
+    ],
+    "bases": [
+      {
+        "type_name": "ISchemaSystemTypeScope",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaType",
+    "vtable_address": 670816,
+    "methods": [
+      388416,
+      568256,
+      570800
+    ],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaType",
+    "vtable_address": 679288,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaType_Atomic",
+    "vtable_address": 672688,
+    "methods": [
+      393408,
+      567232,
+      570800,
+      389120,
+      388432,
+      566064,
+      388448,
+      388432,
+      388464,
+      389232,
+      392832,
+      388512,
+      389296,
+      388368,
+      388368,
+      388528,
+      405760,
+      408800
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaType",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaType_Atomic_CollectionOfT",
+    "vtable_address": 671888,
+    "methods": [
+      389616,
+      570240,
+      570800,
+      389120,
+      388432,
+      389424,
+      389440,
+      388432,
+      389456,
+      389760,
+      392832,
+      388512,
+      389296,
+      388368,
+      388368,
+      389584,
+      434384,
+      475312
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaType_Atomic_T",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CSchemaType_Atomic",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CSchemaType",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaType_Atomic_I",
+    "vtable_address": 671568,
+    "methods": [
+      393408,
+      570544,
+      570800,
+      389120,
+      388432,
+      566064,
+      388448,
+      388432,
+      388464,
+      390224,
+      392832,
+      388512,
+      389296,
+      388368,
+      388368,
+      388528,
+      434480,
+      475440
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaType_Atomic",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CSchemaType",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaType_Atomic_T",
+    "vtable_address": 672048,
+    "methods": [
+      389312,
+      570240,
+      570800,
+      389120,
+      388432,
+      389424,
+      389440,
+      388432,
+      389456,
+      389504,
+      392832,
+      388512,
+      389296,
+      388368,
+      388368,
+      389584,
+      405808,
+      408864
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaType_Atomic",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CSchemaType",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaType_Atomic_TT",
+    "vtable_address": 671728,
+    "methods": [
+      389888,
+      569872,
+      570800,
+      389120,
+      388432,
+      389424,
+      389440,
+      388432,
+      389456,
+      390016,
+      392832,
+      388512,
+      389296,
+      388368,
+      388368,
+      390144,
+      434432,
+      475376
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaType_Atomic_T",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CSchemaType_Atomic",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CSchemaType",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaType_Bitfield",
+    "vtable_address": 672208,
+    "methods": [
+      388960,
+      568384,
+      570800,
+      566336,
+      388432,
+      566064,
+      388448,
+      388432,
+      388464,
+      388976,
+      388368,
+      388512,
+      566080,
+      388368,
+      388368,
+      388528,
+      434336,
+      475248
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaType",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaType_Builtin",
+    "vtable_address": 669632,
+    "methods": [
+      389040,
+      568512,
+      570800,
+      566384,
+      388432,
+      566064,
+      388448,
+      388432,
+      388464,
+      389056,
+      568672,
+      566480,
+      566080,
+      388368,
+      388368,
+      388528,
+      579520,
+      601264
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaType",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaType_DeclaredClass",
+    "vtable_address": 671408,
+    "methods": [
+      390304,
+      567376,
+      576496,
+      566496,
+      566848,
+      566064,
+      388448,
+      579360,
+      388464,
+      394000,
+      568720,
+      388512,
+      566080,
+      568720,
+      388368,
+      390320,
+      434528,
+      475504
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaType",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaType_DeclaredEnum",
+    "vtable_address": 671248,
+    "methods": [
+      393120,
+      567520,
+      570800,
+      566640,
+      388432,
+      566064,
+      388448,
+      388432,
+      388464,
+      390368,
+      568800,
+      388512,
+      566080,
+      388368,
+      568800,
+      390320,
+      434528,
+      475568
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaType",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaType_FixedArray",
+    "vtable_address": 672368,
+    "methods": [
+      388752,
+      569088,
+      570800,
+      566240,
+      388432,
+      566224,
+      388768,
+      388432,
+      388784,
+      388832,
+      388368,
+      388512,
+      566080,
+      388368,
+      388368,
+      388928,
+      434288,
+      475184
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaType",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaType_Ptr",
+    "vtable_address": 672528,
+    "methods": [
+      388544,
+      567088,
+      570800,
+      566112,
+      388432,
+      566096,
+      388576,
+      566144,
+      388704,
+      388592,
+      388368,
+      388512,
+      566080,
+      388368,
+      388368,
+      388672,
+      434240,
+      475120
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaType",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSoundEventName",
+    "vtable_address": 679264,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 693216
+      }
+    }
+  },
+  {
+    "type_name": "CTier2AppSystem<ISchemaSystem, (long long)0>",
+    "vtable_address": 670088,
+    "methods": [
+      434048,
+      475648,
+      388352,
+      434160,
+      427648,
+      475920,
+      476128,
+      475936,
+      476176,
+      388960,
+      475952
+    ],
+    "bases": [
+      {
+        "type_name": "CTier1AppSystem<ISchemaSystem, (long long)0>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier0AppSystem<ISchemaSystem, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CBaseAppSystem<ISchemaSystem>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "ISchemaSystem",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "IAppSystem",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": []
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "fieldtype_t",
+    "vtable_address": 677952,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 690432
+      }
+    }
+  },
+  {
+    "type_name": "vrman",
+    "vtable_address": 694184,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  }
+]

@@ -2,7 +2,7 @@
  *  S2BinLib - A static library that helps resolving memory from binary file
  *  and map to absolute memory address, targeting source 2 game engine.
  *  Copyright (C) 2025  samyyc
- * 
+ *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -19,12 +19,15 @@
 
 use std::collections::{HashMap, HashSet};
 
-use anyhow::{anyhow, Result};
+use anyhow::{Result, anyhow, bail};
 use cpp_demangle::Symbol;
-use msvc_demangler::{demangle, DemangleFlags};
-use object::{BinaryFormat, Object, ObjectSection, read::pe::ImageOptionalHeader};
+use msvc_demangler::{DemangleFlags, demangle};
+use object::{BinaryFormat, Object, read::pe::ImageOptionalHeader};
 
-use crate::{is_executable, s2binlib::S2BinLib};
+use crate::{
+    s2binlib::S2BinLib,
+    view::{BinaryView, FileBinaryView, SectionInfo},
+};
 
 #[derive(Debug, Clone)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
@@ -68,6 +71,7 @@ pub enum BaseClassModel {
     Itanium {
         offset: i64,
         flags: u32,
+        bases: Vec<BaseClassInfo>,
     },
 }
 
@@ -79,8 +83,8 @@ pub struct Pmd {
     pub vdisp: i32,
 }
 
-impl S2BinLib {
-    pub fn dump_vtables(&mut self, binary_name: &str) -> Result<()>{
+impl<'a> S2BinLib<'a> {
+    pub fn dump_vtables(&mut self, binary_name: &str) -> Result<()> {
         let binary = self.get_binary(binary_name)?;
         let file = object::File::parse(binary)?;
 
@@ -95,9 +99,9 @@ impl S2BinLib {
             _ => 0,
         };
 
-        let view = BinaryView::new(binary, &file, image_base)?;
+        let view = FileBinaryView::new(binary, &file, image_base)?;
 
-        let mut vtables = match view.format {
+        let mut vtables = match file.format() {
             BinaryFormat::Pe => MsvcParser::new(&view).parse(),
             BinaryFormat::Elf => ItaniumParser::new(&view).parse(),
             _ => Err(anyhow!("unsupported binary format")),
@@ -109,168 +113,126 @@ impl S2BinLib {
     }
 
     pub fn get_vtables(&self, binary_name: &str) -> Result<&Vec<VTableInfo>> {
-        self.vtables.get(binary_name).ok_or(anyhow!("vtables not found"))
+        self.vtables
+            .get(binary_name)
+            .ok_or(anyhow!("vtables not found"))
+    }
+
+    fn get_vtable_children_recursively(
+        &self,
+        binary_name: &str,
+        target_name: &str,
+        visited: &mut HashSet<String>,
+    ) -> Result<Vec<&VTableInfo>> {
+        let mut children = Vec::new();
+        for vtable in self.get_vtables(binary_name)? {
+            if vtable
+                .bases
+                .iter()
+                .any(|base| base.type_name.contains(target_name))
+            {
+                if vtable.type_name.eq(target_name) {
+                    continue;
+                }
+                if visited.contains(&vtable.type_name) {
+                    continue;
+                }
+                children.push(vtable);
+                visited.insert(vtable.type_name.to_string());
+
+                children.extend(self.get_vtable_children_recursively(
+                    binary_name,
+                    &vtable.type_name,
+                    visited,
+                )?);
+            }
+        }
+
+        Ok(children)
+    }
+
+    pub fn get_all_vtable_children(
+        &self,
+        binary_name: &str,
+        vtable_name: &str,
+    ) -> Result<Vec<&VTableInfo>> {
+        let mut visited = HashSet::new();
+        let mut children =
+            self.get_vtable_children_recursively(binary_name, vtable_name, &mut visited)?;
+        children.sort_by(|a, b| a.type_name.cmp(&b.type_name));
+        Ok(children)
+    }
+
+    pub fn get_object_ptr_vtable_info(&self, object_ptr: u64) -> Result<VTableInfo> {
+        let vtable_ptr = unsafe { *(object_ptr as *const u64) };
+        let memory_view = self.get_memory_view_from_ptr(vtable_ptr)?;
+
+        if !memory_view.contains(vtable_ptr - 8) {
+            bail!("Vtable pointer {:X} is not in the memory view {:X}.", vtable_ptr - 8, memory_view.image_base());
+        };
+        let rtti_ptr = memory_view.read::<u64>(vtable_ptr - 8);
+        if rtti_ptr.is_none() {
+            bail!("Failed to read rtti pointer.");
+        }
+        let rtti_ptr = rtti_ptr.unwrap();
+
+        #[cfg(target_os = "windows")]
+        {
+            let mut parser = MsvcParser::new(&memory_view);
+            let locator = parser.parse_locator(rtti_ptr);
+            if locator.is_none() {
+                bail!("Failed to parse locator.");
+            }
+            let locator = locator.unwrap();
+            let vtable_info = parser.build_vtable_info(vtable_ptr, &locator);
+            if vtable_info.is_none() {
+                bail!("Failed to build vtable info.");
+            }
+            Ok(vtable_info.unwrap())
+        }
+        #[cfg(target_os = "linux")]
+        {
+            let mut parser = ItaniumParser::new(&memory_view);
+
+            // TODO: get offset_to_top from rtti_ptr
+            let vtable_info = parser.build_vtable_info(vtable_ptr, rtti_ptr, 0);
+            if vtable_info.is_none() {
+                bail!("Failed to build vtable info.");
+            }
+            Ok(vtable_info.unwrap())
+        }
+    }
+
+    pub fn get_object_ptr_vtable_name(&self, object_ptr: u64) -> Result<String> {
+        let vtable_info = self.get_object_ptr_vtable_info(object_ptr)?;
+        Ok(vtable_info.type_name)
+    }
+
+    pub fn object_ptr_has_vtable(&self, object_ptr: u64) -> bool {
+        self.get_object_ptr_vtable_info(object_ptr).is_ok()
+    }
+
+    pub fn object_ptr_has_base_class(
+        &self,
+        object_ptr: u64,
+        base_class_name: &str,
+    ) -> Result<bool> {
+        let vtable_info = self.get_object_ptr_vtable_info(object_ptr)?;
+        Ok(vtable_info
+            .bases
+            .iter()
+            .any(|base| base.type_name.eq(base_class_name)))
     }
 }
 
-struct BinaryView<'a> {
-    sections: Vec<SectionInfo<'a>>,
-    section_map: HashMap<usize, usize>,
-    format: BinaryFormat,
-    image_base: u64,
-}
-
-struct SectionInfo<'a> {
-    index: usize,
-    name: Option<String>,
-    address: u64,
-    data: &'a [u8],
-    executable: bool,
-}
-
-impl<'a> BinaryView<'a> {
-    fn new(data: &'a [u8], file: &object::File<'a>, image_base: u64) -> Result<Self> {
-        let mut sections = Vec::new();
-        let mut section_map = HashMap::new();
-
-        for section in file.sections() {
-            let Some((file_offset, size)) = section.file_range() else {
-                continue;
-            };
-            if size == 0 {
-                continue;
-            }
-
-            let start = file_offset as usize;
-            let end = start + size as usize;
-            if end > data.len() || start >= end {
-                continue;
-            }
-
-            let index = section.index().0 as usize;
-            let name = section.name().ok().map(|s| s.to_string());
-            let address = section.address();
-            let executable = is_executable(section.flags());
-
-            section_map.insert(index, sections.len());
-            sections.push(SectionInfo {
-                index,
-                name,
-                address,
-                data: &data[start..end],
-                executable,
-            });
-        }
-
-        Ok(Self {
-            sections,
-            section_map,
-            format: file.format(),
-            image_base,
-        })
-    }
-
-    fn section_by_index(&self, index: usize) -> Option<&SectionInfo<'a>> {
-        self.section_map
-            .get(&index)
-            .and_then(|position| self.sections.get(*position))
-    }
-
-    fn locate_va(&self, va: u64) -> Option<(usize, u64)> {
-        for section in &self.sections {
-            let len = section.data.len() as u64;
-            if len == 0 {
-                continue;
-            }
-            if va >= section.address && va < section.address + len {
-                return Some((section.index, va - section.address));
-            }
-        }
-        None
-    }
-
-    fn read_bytes(&self, va: u64, len: usize) -> Option<&'a [u8]> {
-        let (section_index, offset) = self.locate_va(va)?;
-        let section = self.section_by_index(section_index)?;
-        let start = usize::try_from(offset).ok()?;
-        let end = start.checked_add(len)?;
-        if end > section.data.len() {
-            return None;
-        }
-        Some(&section.data[start..end])
-    }
-
-    fn read_u32(&self, va: u64) -> Option<u32> {
-        let bytes = self.read_bytes(va, 4)?;
-        Some(u32::from_le_bytes(bytes.try_into().ok()?))
-    }
-
-    fn read_i32(&self, va: u64) -> Option<i32> {
-        let bytes = self.read_bytes(va, 4)?;
-        Some(i32::from_le_bytes(bytes.try_into().ok()?))
-    }
-
-    fn read_i64(&self, va: u64) -> Option<i64> {
-        let bytes = self.read_bytes(va, 8)?;
-        Some(i64::from_le_bytes(bytes.try_into().ok()?))
-    }
-
-    fn read_pointer_va(&self, va: u64) -> Option<u64> {
-        let (section_index, offset) = self.locate_va(va)?;
-        self.read_pointer(section_index, offset)
-    }
-
-    fn read_pointer(&self, section_index: usize, offset: u64) -> Option<u64> {
-        let section = self.section_by_index(section_index)?;
-        let start = usize::try_from(offset).ok()?;
-        let end = start.checked_add(8)?;
-        if end > section.data.len() {
-            return None;
-        }
-        let bytes: [u8; 8] = section.data[start..end].try_into().ok()?;
-        Some(u64::from_le_bytes(bytes))
-    }
-
-    fn read_c_string(&self, va: u64) -> Option<String> {
-        let (section_index, offset) = self.locate_va(va)?;
-        let section = self.section_by_index(section_index)?;
-        let mut cursor = usize::try_from(offset).ok()?;
-        while cursor < section.data.len() {
-            if section.data[cursor] == 0 {
-                let slice = &section.data[usize::try_from(offset).ok()?..cursor];
-                return Some(String::from_utf8_lossy(slice).into_owned());
-            }
-            cursor += 1;
-        }
-        None
-    }
-
-    fn is_executable(&self, va: u64) -> bool {
-        for section in &self.sections {
-            if !section.executable {
-                continue;
-            }
-            let len = section.data.len() as u64;
-            if va >= section.address && va < section.address + len {
-                return true;
-            }
-        }
-        false
-    }
-
-    fn contains(&self, va: u64) -> bool {
-        self.locate_va(va).is_some()
-    }
-}
-
-struct MsvcParser<'a> {
-    view: &'a BinaryView<'a>,
+pub struct MsvcParser<'a, V: BinaryView<'a>> {
+    view: &'a V,
     type_cache: HashMap<u64, String>,
     hierarchy_cache: HashMap<u64, (u32, Vec<BaseClassInfo>)>,
 }
 
-impl<'a> MsvcParser<'a> {
-    fn new(view: &'a BinaryView<'a>) -> Self {
+impl<'a, V: BinaryView<'a>> MsvcParser<'a, V> {
+    pub fn new(view: &'a V) -> Self {
         Self {
             view,
             type_cache: HashMap::new(),
@@ -278,22 +240,24 @@ impl<'a> MsvcParser<'a> {
         }
     }
 
-    fn parse(mut self) -> Result<Vec<VTableInfo>> {
+    pub fn parse(&mut self) -> Result<Vec<VTableInfo>> {
         let mut results = Vec::new();
         let mut seen = HashSet::new();
 
-        for section in &self.view.sections {
+        for section in self.view.sections() {
             if !self.is_candidate_section(section) {
                 continue;
             }
 
             let mut offset = 0usize;
-            while offset + 8 <= section.data.len() {
-                let locator_ptr =
-                    u64::from_le_bytes(section.data[offset..offset + 8].try_into().unwrap());
+            while offset + 8 <= section.len() {
+                let locator_ptr = self
+                    .view
+                    .read::<u64>(section.address() + offset as u64)
+                    .unwrap();
                 if locator_ptr != 0 {
                     if let Some(locator) = self.parse_locator(locator_ptr) {
-                        let vtable_va = section.address + offset as u64 + 8;
+                        let vtable_va = section.address() + offset as u64 + 8;
                         if seen.insert(vtable_va) {
                             if let Some(info) = self.build_vtable_info(vtable_va, &locator) {
                                 results.push(info);
@@ -310,34 +274,25 @@ impl<'a> MsvcParser<'a> {
     }
 
     fn is_candidate_section(&self, section: &SectionInfo<'_>) -> bool {
-        section.name.as_deref().map_or(false, |name| {
+        section.name().map_or(false, |name| {
             let lower = name.to_ascii_lowercase();
             lower.contains(".rdata") || lower.contains(".data")
         })
     }
 
-    fn parse_locator(&self, locator_ptr: u64) -> Option<CompleteObjectLocator> {
-
-        let data = self.view.read_bytes(locator_ptr, 24)?;
-        
-        let signature = u32::from_le_bytes(data[0..4].try_into().ok()?);
+    pub fn parse_locator(&self, locator_ptr: u64) -> Option<CompleteObjectLocator> {
+        let signature: u32 = self.view.read(locator_ptr)?;
         if signature > 1 {
             return None;
         }
 
-        let offset = u32::from_le_bytes(data[4..8].try_into().ok()?);
-        let cd_offset = u32::from_le_bytes(data[8..12].try_into().ok()?);
-        let type_descriptor_rva = u32::from_le_bytes(data[12..16].try_into().ok()?);
-        let class_descriptor_rva = u32::from_le_bytes(data[16..20].try_into().ok()?);
+        let offset: u32 = self.view.read(locator_ptr + 4)?;
+        let cd_offset: u32 = self.view.read(locator_ptr + 8)?;
+        let type_descriptor_rva: u32 = self.view.read(locator_ptr + 12)?;
+        let class_descriptor_rva: u32 = self.view.read(locator_ptr + 16)?;
 
-        let type_descriptor = self
-            .view
-            .image_base
-            .checked_add(type_descriptor_rva as u64)?;
-        let class_descriptor = self
-            .view
-            .image_base
-            .checked_add(class_descriptor_rva as u64)?;
+        let type_descriptor = self.view.follow_rva(type_descriptor_rva)?;
+        let class_descriptor = self.view.follow_rva(class_descriptor_rva)?;
 
         if !self.view.contains(type_descriptor) || !self.view.contains(class_descriptor) {
             return None;
@@ -352,7 +307,7 @@ impl<'a> MsvcParser<'a> {
         })
     }
 
-    fn build_vtable_info(
+    pub fn build_vtable_info(
         &mut self,
         vtable_va: u64,
         locator: &CompleteObjectLocator,
@@ -379,7 +334,7 @@ impl<'a> MsvcParser<'a> {
         })
     }
 
-    fn get_type_name(&mut self, type_descriptor: u64) -> Option<String> {
+    pub fn get_type_name(&mut self, type_descriptor: u64) -> Option<String> {
         if let Some(name) = self.type_cache.get(&type_descriptor) {
             return Some(name.clone());
         }
@@ -391,9 +346,9 @@ impl<'a> MsvcParser<'a> {
         let demangled = demangle(&wrapped, DemangleFlags::COMPLETE)
             .map(|s| s.to_string())
             .and_then(|s| {
-              let splited = s.split_once(" ").unwrap().1;
-              let splited = splited.rsplit_once("::").unwrap().0;
-              Ok(splited.to_string())
+                let splited = s.split_once(" ").unwrap().1;
+                let splited = splited.rsplit_once("::").unwrap().0;
+                Ok(splited.to_string())
             })
             .unwrap_or(wrapped);
 
@@ -401,22 +356,19 @@ impl<'a> MsvcParser<'a> {
         Some(demangled)
     }
 
-    fn get_class_hierarchy(
-        &mut self,
-        class_descriptor: u64,
-    ) -> Option<(u32, Vec<BaseClassInfo>)> {
+    fn get_class_hierarchy(&mut self, class_descriptor: u64) -> Option<(u32, Vec<BaseClassInfo>)> {
         if let Some(cached) = self.hierarchy_cache.get(&class_descriptor) {
             return Some(cached.clone());
         }
 
-        let signature = self.view.read_u32(class_descriptor)?;
+        let signature: u32 = self.view.read(class_descriptor)?;
         if signature > 1 {
             return None;
         }
 
-        let attributes = self.view.read_u32(class_descriptor + 4)?;
-        let base_count = self.view.read_u32(class_descriptor + 8)?;
-        let base_array_rva = self.view.read_u32(class_descriptor + 12)?;
+        let attributes: u32 = self.view.read(class_descriptor + 4)?;
+        let base_count: u32 = self.view.read(class_descriptor + 8)?;
+        let base_array_rva: u32 = self.view.read(class_descriptor + 12)?;
 
         if base_count == 0 {
             self.hierarchy_cache
@@ -424,19 +376,13 @@ impl<'a> MsvcParser<'a> {
             return Some((attributes, Vec::new()));
         }
 
-        let base_array = self
-            .view
-            .image_base
-            .checked_add(base_array_rva as u64)?;
+        let base_array = self.view.follow_rva(base_array_rva)?;
 
         let mut bases = Vec::new();
         for index in 0..base_count {
             let entry_va = base_array + (index as u64 * 4);
-            let descriptor_rva = self.view.read_u32(entry_va)?;
-            let descriptor_va = self
-                .view
-                .image_base
-                .checked_add(descriptor_rva as u64)?;
+            let descriptor_rva: u32 = self.view.read(entry_va)?;
+            let descriptor_va = self.view.follow_rva(descriptor_rva)?;
             if let Some(base) = self.parse_base_descriptor(descriptor_va) {
                 bases.push(base);
             }
@@ -449,17 +395,14 @@ impl<'a> MsvcParser<'a> {
     }
 
     fn parse_base_descriptor(&mut self, addr: u64) -> Option<BaseClassInfo> {
-        let type_descriptor_rva = self.view.read_u32(addr)?;
-        let type_descriptor = self
-            .view
-            .image_base
-            .checked_add(type_descriptor_rva as u64)?;
+        let type_descriptor_rva: u32 = self.view.read(addr)?;
+        let type_descriptor = self.view.follow_rva(type_descriptor_rva)?;
 
-        let num_contained_bases = self.view.read_u32(addr + 4)?;
-        let mdisp = self.view.read_i32(addr + 8)?;
-        let pdisp = self.view.read_i32(addr + 12)?;
-        let vdisp = self.view.read_i32(addr + 16)?;
-        let attributes = self.view.read_u32(addr + 20)?;
+        let num_contained_bases: u32 = self.view.read(addr + 4)?;
+        let mdisp: i32 = self.view.read(addr + 8)?;
+        let pdisp: i32 = self.view.read(addr + 12)?;
+        let vdisp: i32 = self.view.read(addr + 16)?;
+        let attributes: u32 = self.view.read(addr + 20)?;
 
         let type_name = self.get_type_name(type_descriptor)?;
 
@@ -467,7 +410,11 @@ impl<'a> MsvcParser<'a> {
             type_name,
             details: BaseClassModel::Msvc {
                 attributes,
-                displacement: Pmd { mdisp, pdisp, vdisp },
+                displacement: Pmd {
+                    mdisp,
+                    pdisp,
+                    vdisp,
+                },
                 num_contained_bases,
             },
         })
@@ -476,7 +423,7 @@ impl<'a> MsvcParser<'a> {
     fn collect_methods(&self, mut vtable_va: u64) -> Vec<u64> {
         let mut methods = Vec::new();
         for _ in 0..1024 {
-            let Some(method) = self.view.read_pointer_va(vtable_va) else {
+            let Some(method) = self.view.read::<u64>(vtable_va) else {
                 break;
             };
             if method == 0 || !self.view.is_executable(method) {
@@ -490,7 +437,7 @@ impl<'a> MsvcParser<'a> {
 }
 
 #[derive(Debug)]
-struct CompleteObjectLocator {
+pub struct CompleteObjectLocator {
     address: u64,
     offset: u32,
     cd_offset: u32,
@@ -498,20 +445,20 @@ struct CompleteObjectLocator {
     class_descriptor: u64,
 }
 
-struct ItaniumParser<'a> {
-    view: &'a BinaryView<'a>,
+pub struct ItaniumParser<'a, V: BinaryView<'a>> {
+    view: &'a V,
     type_cache: HashMap<u64, TypeInfoData>,
     visiting: HashSet<u64>,
 }
 
-#[derive(Clone)]
-struct TypeInfoData {
+#[derive(Clone, Debug)]
+pub struct TypeInfoData {
     name: String,
     bases: Vec<BaseClassInfo>,
 }
 
-impl<'a> ItaniumParser<'a> {
-    fn new(view: &'a BinaryView<'a>) -> Self {
+impl<'a, V: BinaryView<'a>> ItaniumParser<'a, V> {
+    pub fn new(view: &'a V) -> Self {
         Self {
             view,
             type_cache: HashMap::new(),
@@ -519,19 +466,21 @@ impl<'a> ItaniumParser<'a> {
         }
     }
 
-    fn parse(mut self) -> Result<Vec<VTableInfo>> {
+    pub fn parse(mut self) -> Result<Vec<VTableInfo>> {
         let mut results = Vec::new();
         let mut seen = HashSet::new();
 
-        for section in &self.view.sections {
+        for section in self.view.sections() {
             if !self.is_candidate_section(section) {
                 continue;
             }
 
             let mut offset = 0usize;
-            while offset + 24 <= section.data.len() {
-                let typeinfo_ptr =
-                    u64::from_le_bytes(section.data[offset + 8..offset + 16].try_into().unwrap());
+            while offset + 24 <= section.len() {
+                let typeinfo_ptr = self
+                    .view
+                    .read::<u64>(section.address() + offset as u64 + 8)
+                    .unwrap();
                 if typeinfo_ptr == 0 || !self.view.contains(typeinfo_ptr) {
                     offset += 8;
                     continue;
@@ -542,24 +491,25 @@ impl<'a> ItaniumParser<'a> {
                     continue;
                 }
 
-                let first_method = if offset + 24 <= section.data.len() {
-                    u64::from_le_bytes(section.data[offset + 16..offset + 24].try_into().unwrap())
-                } else {
-                    0
-                };
+                let first_method = self
+                    .view
+                    .read::<u64>(section.address() + offset as u64 + 16)
+                    .unwrap_or(0);
                 if first_method != 0 && !self.view.is_executable(first_method) {
                     offset += 8;
                     continue;
                 }
 
-                let vtable_va = section.address + offset as u64 + 16;
+                let vtable_va = section.address() + offset as u64 + 16;
                 if !seen.insert(vtable_va) {
                     offset += 8;
                     continue;
                 }
 
-                let offset_to_top =
-                    i64::from_le_bytes(section.data[offset..offset + 8].try_into().unwrap());
+                let offset_to_top = self
+                    .view
+                    .read::<i64>(section.address() + offset as u64)
+                    .unwrap();
 
                 if let Some(info) = self.build_vtable_info(vtable_va, typeinfo_ptr, offset_to_top) {
                     results.push(info);
@@ -575,9 +525,10 @@ impl<'a> ItaniumParser<'a> {
 
     fn is_candidate_section(&self, section: &SectionInfo<'_>) -> bool {
         section
-            .name
-            .as_deref()
-            .map(|name| name.contains(".data.rel.ro"))
+            .name()
+            .map(|name| {
+                name.contains(".data.rel.ro") || name.contains(".data") || name.contains(".rodata")
+            })
             .unwrap_or(false)
     }
 
@@ -589,11 +540,12 @@ impl<'a> ItaniumParser<'a> {
     ) -> Option<VTableInfo> {
         let info = self.resolve_typeinfo(typeinfo_ptr)?;
         let methods = self.collect_methods(vtable_va);
+        let TypeInfoData { name, bases } = info;
         Some(VTableInfo {
-            type_name: info.name,
+            type_name: name,
             vtable_address: vtable_va,
             methods,
-            bases: info.bases,
+            bases,
             model: VTableModel::Itanium { offset_to_top },
         })
     }
@@ -601,7 +553,7 @@ impl<'a> ItaniumParser<'a> {
     fn collect_methods(&self, mut vtable_va: u64) -> Vec<u64> {
         let mut methods = Vec::new();
         for _ in 0..1024 {
-            let Some(method) = self.view.read_pointer_va(vtable_va) else {
+            let Some(method) = self.view.read::<u64>(vtable_va) else {
                 break;
             };
             if method == 0 || !self.view.is_executable(method) {
@@ -621,45 +573,46 @@ impl<'a> ItaniumParser<'a> {
             return None;
         }
 
-        let (section_index, offset) = self.view.locate_va(addr)?;
-        let section = self.view.section_by_index(section_index)?;
-        let offset_usize = usize::try_from(offset).ok()?;
-        if offset_usize + 16 > section.data.len() {
-            self.visiting.remove(&addr);
-            return None;
-        }
-
-        let name_ptr = self
-            .view
-            .read_pointer(section_index, offset + 8)?;
-        let raw_name = self.view.read_c_string(name_ptr)?;
-        let demangled_name = Symbol::new(&raw_name)
-            .ok()
-            .and_then(|s| s.demangle(&Default::default()).ok())
-            .unwrap_or(raw_name);
-
-        let bases = self.resolve_bases(section_index, offset);
-
-        let data = TypeInfoData {
-            name: demangled_name,
-            bases,
-        };
+        let result = (|| {
+            let (section_index, offset) = self.validate_typeinfo_header(addr)?;
+            let raw_name = self.read_typeinfo_name(section_index, offset)?;
+            let demangled_name = Symbol::new(&raw_name)
+                .ok()
+                .and_then(|s| s.demangle(&Default::default()).ok())
+                .unwrap_or(raw_name);
+            let bases = self.resolve_bases(section_index, offset);
+            Some(TypeInfoData {
+                name: demangled_name,
+                bases,
+            })
+        })();
 
         self.visiting.remove(&addr);
-        self.type_cache.insert(addr, data.clone());
-        Some(data)
+        if let Some(data) = result {
+            self.type_cache.insert(addr, data.clone());
+            Some(data)
+        } else {
+            None
+        }
     }
 
     fn resolve_bases(&mut self, section_index: usize, offset: u64) -> Vec<BaseClassInfo> {
-        if let Some(candidate) = self.view.read_pointer(section_index, offset + 16) {
-            if candidate != 0 && self.looks_like_typeinfo(candidate) {
-                if let Some(base) = self.resolve_typeinfo(candidate) {
-                    return vec![BaseClassInfo {
-                        type_name: base.name,
-                        details: BaseClassModel::Itanium { offset: 0, flags: 0 },
-                    }];
+        if let Some(section) = self.view.section_by_index(section_index) {
+            if let Some(candidate) = self.view.read::<u64>(section.address() + offset + 16) {
+                if candidate != 0 && self.looks_like_typeinfo(candidate) {
+                    if let Some(base) = self.resolve_typeinfo(candidate) {
+                        let TypeInfoData { name, bases } = base;
+                        return vec![BaseClassInfo {
+                            type_name: name,
+                            details: BaseClassModel::Itanium {
+                                offset: 0,
+                                flags: 0,
+                                bases,
+                            },
+                        }];
+                    }
+                    return Vec::new();
                 }
-                return Vec::new();
             }
         }
         self.parse_vmi_typeinfo(section_index, offset)
@@ -670,8 +623,8 @@ impl<'a> ItaniumParser<'a> {
             Some(section) => section,
             None => return Vec::new(),
         };
-        let base_va = section.address + offset;
-        let base_count = self.view.read_u32(base_va + 20).unwrap_or(0);
+        let base_va = section.address() + offset;
+        let base_count = self.view.read::<u32>(base_va + 20).unwrap_or(0);
         if base_count == 0 {
             return Vec::new();
         }
@@ -679,17 +632,25 @@ impl<'a> ItaniumParser<'a> {
         let mut bases = Vec::new();
         let mut entry_va = base_va + 24;
         for _ in 0..base_count {
-            let Some(typeinfo_ptr) = self.view.read_pointer_va(entry_va) else {
+            let Some(typeinfo_ptr) = self.view.read::<u64>(entry_va) else {
                 break;
             };
-            let offset_flags = self.view.read_i64(entry_va + 8).unwrap_or(0);
+            let offset_flags = self.view.read::<i64>(entry_va + 8).unwrap_or(0);
             let offset = offset_flags >> 8;
             let flags = (offset_flags & 0xFF) as u32;
 
             if let Some(info) = self.resolve_typeinfo(typeinfo_ptr) {
+                let TypeInfoData {
+                    name,
+                    bases: nested,
+                } = info;
                 bases.push(BaseClassInfo {
-                    type_name: info.name,
-                    details: BaseClassModel::Itanium { offset, flags },
+                    type_name: name,
+                    details: BaseClassModel::Itanium {
+                        offset,
+                        flags,
+                        bases: nested,
+                    },
                 });
             }
 
@@ -700,12 +661,64 @@ impl<'a> ItaniumParser<'a> {
     }
 
     fn looks_like_typeinfo(&self, addr: u64) -> bool {
-        if let Some((section_index, offset)) = self.view.locate_va(addr) {
-            if let Some(name_ptr) = self.view.read_pointer(section_index, offset + 8) {
-                return self.view.read_c_string(name_ptr).is_some();
-            }
+        if let Some((section_index, offset)) = self.validate_typeinfo_header(addr) {
+            return self.read_typeinfo_name(section_index, offset).is_some();
         }
         false
     }
+
+    fn validate_typeinfo_header(&self, addr: u64) -> Option<(usize, u64)> {
+        let (section_index, offset) = self.view.locate_address(addr)?;
+        let section = self.view.section_by_index(section_index)?;
+        if section.executable() {
+            return None;
+        }
+        if offset & 0x7 != 0 {
+            return None;
+        }
+        let offset_usize = usize::try_from(offset).ok()?;
+        if offset_usize + 16 > section.len() {
+            return None;
+        }
+
+        let vtable_ptr = self.view.read::<u64>(section.address() + offset)?;
+        if vtable_ptr != 0 && !self.view.contains(vtable_ptr) {
+            return None;
+        }
+        Some((section_index, offset))
+    }
+
+    fn read_typeinfo_name(&self, section_index: usize, offset: u64) -> Option<String> {
+        let section = self.view.section_by_index(section_index)?;
+        let name_ptr = self.view.read::<u64>(section.address() + offset + 8)?;
+        if name_ptr == 0 || !self.view.contains(name_ptr) {
+            return None;
+        }
+        let (name_section_index, _) = self.view.locate_address(name_ptr)?;
+        let name_section = self.view.section_by_index(name_section_index)?;
+        if name_section.executable() {
+            return None;
+        }
+        let name = self.view.read_c_string(name_ptr)?;
+        if !Self::typeinfo_name_is_plausible(&name) {
+            return None;
+        }
+        Some(name)
+    }
+
+    fn typeinfo_name_is_plausible(name: &str) -> bool {
+        if name.is_empty() || name.len() > 512 {
+            return false;
+        }
+        if !name
+            .chars()
+            .all(|ch| ch.is_ascii() && !ch.is_ascii_control())
+        {
+            return false;
+        }
+        matches!(
+            name.as_bytes().first(),
+            Some(b'_') | Some(b'0'..=b'9') | Some(b'A'..=b'Z') | Some(b'a'..=b'z')
+        )
+    }
 }
- 

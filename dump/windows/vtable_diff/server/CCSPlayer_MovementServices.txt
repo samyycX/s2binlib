@@ -1,0 +1,132 @@
+Vtable: CCSPlayer_MovementServices
+Virtual Function Count: 54
+Children Count: 0
+=============================================
+func_0     [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B DA 48 8D 15 90 C4 FF 00"
+func_1     [ DIFF 0   ]                               []
+    "48 8D 05 81 C1 00 01 C3 CC CC CC CC CC CC CC CC"
+func_2     [ DIFF 0   ]                               []
+    "40 53 56 48 83 EC 28 48 89 6C 24 40 48 8D 05 D5"
+func_3     [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_4     [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 30 0F 29 74 24 20 48"
+func_5     [ DIFF 0   ]                               []
+    "40 53 48 81 EC 90 00 00 00 48 8D 94 24 B0 00 00"
+func_6     [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_7     [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8D 54 24 38 48 8B D9 E8 4D"
+func_8     [ DIFF 0   ]                               []
+    "40 53 48 83 EC 60 48 8B D9 E8 12 C1 00 00 A8 01"
+func_9     [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 60 48 8B 01 48 8B D9"
+func_10    [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_11    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 40 48 8B 05 53 85 F0 00 48 8B D9"
+func_12    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_13    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_14    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_15    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_16    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_17    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 E8 B2 AE 14 00 48 8D"
+func_18    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B FA 48 8B D9"
+func_19    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 BA 02 00 00 00 48 8B D9 E8 9D"
+func_20    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20 48"
+func_21    [ DIFF 0   ]                               []
+    "4C 89 4C 24 20 55 56 41 54 41 55 41 56 48 83 EC"
+func_22    [ DIFF 0   ]                               []
+    "4C 89 4C 24 20 48 89 54 24 10 55 56 57 41 54 41"
+func_23    [ DIFF 0   ]                               []
+    "40 57 41 57 48 81 EC B8 00 00 00 48 83 79 30 00"
+func_24    [ DIFF 0   ]                               []
+    "8B 81 7C 02 00 00 F2 0F 10 81 74 02 00 00 F2 0F"
+func_25    [ DIFF 0   ]                               []
+    "B0 01 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_26    [ DIFF 0   ]                               []
+    "48 83 EC 28 8B 0D 46 97 44 01 65 48 8B 04 25 58"
+func_27    [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 6C 24 18 48 89 74 24 20 57"
+func_28    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 60 0F 29 7C 24 50 48"
+func_29    [ DIFF 0   ]                               []
+    "40 55 57 41 57 48 8D 6C 24 B9 48 81 EC B0 00 00"
+func_30    [ DIFF 0   ]                               []
+    "48 83 EC 28 BA FF FF FF FF 48 8D 0D E0 E5 2A 01"
+func_31    [ DIFF 0   ]                               []
+    "48 89 5C 24 18 55 56 57 48 83 EC 30 0F 29 74 24"
+func_32    [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 6C 24 18 48 89 74 24 20 57"
+func_33    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 83 79 30 00 48 8B D9 75 05"
+func_34    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 81 EC F0 00 00 00 48 8B DA"
+func_35    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 83 79 30 00 48 8B D9 75 05"
+func_36    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 8B 15 84 9E 2F 01 48 8B D9 65"
+func_37    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 60 48 83 79 30 00 48 8B D9 0F 29"
+func_38    [ DIFF 0   ]                               []
+    "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_39    [ DIFF 0   ]                               []
+    "48 8B C4 48 89 58 10 48 89 70 18 55 48 8D 68 B1"
+func_40    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 48 89 7C 24 18 55"
+func_41    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 60 48"
+func_42    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_43    [ DIFF 0   ]                               []
+    "48 83 EC 38 0F 29 74 24 20 BA FF FF FF FF F3 0F"
+func_44    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 40 48 8B D9 E8 72 5C 00 00 0F BA"
+func_45    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_46    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 48 8B D9 48 8B FA"
+func_47    [ DIFF 0   ]                               []
+    "48 89 5C 24 10 48 89 6C 24 18 57 41 56 41 57 48"
+func_48    [ DIFF 0   ]                               []
+    "48 8B C4 48 89 58 10 48 89 70 18 48 89 78 20 55"
+func_49    [ DIFF 0   ]                               []
+    "41 C7 00 00 00 5C 43 C7 02 00 00 07 43 C3 CC CC"
+func_50    [ DIFF 0   ]                               []
+    "40 53 48 83 EC 20 48 8B D9 85 D2 74 0F 83 EA 01"
+func_51    [ DIFF 0   ]                               []
+    "48 89 5C 24 08 57 48 83 EC 20 65 48 8B 04 25 58"
+func_52    [ DIFF 0   ]                               []
+    "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+func_53    [ DIFF 0   ]                               []
+    "40 53 57 48 81 EC D8 00 00 00 0F B6 84 24 10 01"
+
+=============================================
+Bases: 
+"CPlayer_MovementServices_Humanoid"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 0, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 2
+"CPlayer_MovementServices"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 0, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 1
+"CPlayerPawnComponent"
+    Attributes: 64
+    Displacement: Pmd { mdisp: 0, pdisp: -1, vdisp: 0 }
+    Num Contained Bases: 0
+=============================================
+
+=============================================
+Children: 
+================================================

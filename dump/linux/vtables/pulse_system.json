@@ -1,0 +1,7941 @@
+[
+  {
+    "type_name": "Blue",
+    "vtable_address": 1983472,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 662605
+      }
+    }
+  },
+  {
+    "type_name": "CBasePulseGraphInstance",
+    "vtable_address": 1998160,
+    "methods": [
+      885088,
+      885088,
+      885088,
+      885088,
+      885088,
+      1389616
+    ],
+    "bases": [
+      {
+        "type_name": "IPulseHost_Unknown",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CBasePulseGraphInstance",
+    "vtable_address": 2025696,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CBasePulseGraphInstance",
+    "vtable_address": 2027120,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CGenericExprPart",
+    "vtable_address": 1990376,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 368272
+      }
+    }
+  },
+  {
+    "type_name": "CGenericExpr_Binary",
+    "vtable_address": 1991832,
+    "methods": [
+      1189920,
+      1220880,
+      1202144,
+      1190000,
+      1190096,
+      1190112
+    ],
+    "bases": [
+      {
+        "type_name": "CGenericExprPart",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CGenericExpr_BoolLiteral",
+    "vtable_address": 1991432,
+    "methods": [
+      1190576,
+      1221392,
+      1205248,
+      1190448,
+      1189760,
+      1189776
+    ],
+    "bases": [
+      {
+        "type_name": "CGenericExprPart",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CGenericExpr_FloatLiteral",
+    "vtable_address": 1991304,
+    "methods": [
+      1190592,
+      1221424,
+      1205184,
+      1190384,
+      1189760,
+      1189776
+    ],
+    "bases": [
+      {
+        "type_name": "CGenericExprPart",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CGenericExpr_FunctionCall",
+    "vtable_address": 1991624,
+    "methods": [
+      1209424,
+      1221136,
+      1205120,
+      1205776,
+      1190496,
+      1190544,
+      1190480,
+      1190560
+    ],
+    "bases": [
+      {
+        "type_name": "CGenericExprPart",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CGenericExpr_IntLiteral",
+    "vtable_address": 1991368,
+    "methods": [
+      1146320,
+      1221408,
+      1205216,
+      1190416,
+      1189760,
+      1189776
+    ],
+    "bases": [
+      {
+        "type_name": "CGenericExprPart",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CGenericExpr_Property",
+    "vtable_address": 1991704,
+    "methods": [
+      1203888,
+      1221056,
+      1205056,
+      1205600,
+      1189888,
+      1189904
+    ],
+    "bases": [
+      {
+        "type_name": "CGenericExprPart",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CGenericExpr_StringLiteral",
+    "vtable_address": 1991496,
+    "methods": [
+      1203984,
+      1221440,
+      1204928,
+      1205296,
+      1189760,
+      1189776
+    ],
+    "bases": [
+      {
+        "type_name": "CGenericExprPart",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CGenericExpr_TernaryConditional",
+    "vtable_address": 1991768,
+    "methods": [
+      1190128,
+      1220960,
+      1202976,
+      1190224,
+      1190336,
+      1190352
+    ],
+    "bases": [
+      {
+        "type_name": "CGenericExprPart",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CGenericExpr_Unary",
+    "vtable_address": 1991896,
+    "methods": [
+      1189792,
+      1220816,
+      1201952,
+      1189840,
+      1189888,
+      1189904
+    ],
+    "bases": [
+      {
+        "type_name": "CGenericExprPart",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CGenericExpr_VariableReference",
+    "vtable_address": 1991560,
+    "methods": [
+      1203952,
+      1221328,
+      1204992,
+      1205456,
+      1189760,
+      1189776
+    ],
+    "bases": [
+      {
+        "type_name": "CGenericExprPart",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CKV3MemberNameWithStorage",
+    "vtable_address": 2003480,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 2062688
+      }
+    }
+  },
+  {
+    "type_name": "CKV3ResourceBlockHelper",
+    "vtable_address": 1974768,
+    "methods": [
+      905232,
+      905312
+    ],
+    "bases": [
+      {
+        "type_name": "IAsyncProcessedDataResult",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CKV3TransferContextBase",
+    "vtable_address": 1972984,
+    "methods": [
+      1203040,
+      886480,
+      1189696,
+      885008,
+      885024,
+      885040
+    ],
+    "bases": [
+      {
+        "type_name": "IErrorListener",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CKV3TransferContextBase",
+    "vtable_address": 1991288,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "IErrorListener",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 634320
+      }
+    }
+  },
+  {
+    "type_name": "CKV3TransferLoadContext",
+    "vtable_address": 1991960,
+    "methods": [
+      1203040,
+      886480,
+      1189696,
+      1203568,
+      885024,
+      885040,
+      1229440,
+      1249664,
+      1250240,
+      1226592,
+      1237664,
+      1229856,
+      1226912,
+      1226928,
+      1253408,
+      1253520,
+      1253648,
+      1234336,
+      1234400,
+      1253856,
+      1249600,
+      1234320,
+      1234240,
+      1234272,
+      1229952,
+      1227184,
+      1227216,
+      1250976,
+      1239728,
+      1226256,
+      1242816,
+      1248208,
+      1225664,
+      1225920,
+      1226400,
+      1226064,
+      1226112,
+      1226752,
+      1251760,
+      1229904,
+      1227056,
+      1227152
+    ],
+    "bases": [
+      {
+        "type_name": "CKV3TransferContextBase",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IErrorListener",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CKV3TransferSaveContext",
+    "vtable_address": 1972920,
+    "methods": [
+      1203040,
+      886480,
+      1189696,
+      885008,
+      885024,
+      885040
+    ],
+    "bases": [
+      {
+        "type_name": "CKV3TransferContextBase",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IErrorListener",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CKV3Transfer_EmptyResourceLoadInterface",
+    "vtable_address": 1992832,
+    "methods": [
+      888512
+    ],
+    "bases": [
+      {
+        "type_name": "IKV3TransferInterface_ResourceLoad",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CKV3Transfer_ResourceLoadInterface",
+    "vtable_address": 1992808,
+    "methods": [
+      1262944
+    ],
+    "bases": [
+      {
+        "type_name": "IKV3TransferInterface_ResourceLoad",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CModuleMetadataProvider_ResourceManifests",
+    "vtable_address": 2012720,
+    "methods": [
+      1836384
+    ],
+    "bases": [
+      {
+        "type_name": "CBaseVModuleMetadataProvider",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Base",
+    "vtable_address": 1987304,
+    "methods": [
+      1301808,
+      1620048,
+      1663920,
+      1618736,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Base",
+    "vtable_address": 2024736,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Base",
+    "vtable_address": 2024752,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 1986056,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "CPulseCell_Base",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 365184
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 2003672,
+    "methods": [
+      1301824,
+      1664560,
+      1678064,
+      1618752,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_Base",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 2004112,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "CPulseCell_Base",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 643744
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 2006000,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "CPulseCell_Base",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 644736
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 2024720,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 2025712,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 2025808,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 2026160,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 2026256,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 2026272,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 2026288,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 2026704,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 2026768,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 2026784,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 2026800,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseFlow",
+    "vtable_address": 2045568,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseRequirement",
+    "vtable_address": 2005632,
+    "methods": [
+      1301840,
+      1664912,
+      1678992,
+      1618768,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168,
+      885088,
+      977616,
+      1016512
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_Base",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseRequirement",
+    "vtable_address": 2027280,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseRequirement",
+    "vtable_address": 2044640,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseRequirement",
+    "vtable_address": 2044944,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseState",
+    "vtable_address": 2049904,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseValue",
+    "vtable_address": 2004848,
+    "methods": [
+      1301952,
+      1665264,
+      1692064,
+      1618880,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_Base",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseValue",
+    "vtable_address": 2005800,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "CPulseCell_Base",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 644304
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseValue",
+    "vtable_address": 2025904,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseValue",
+    "vtable_address": 2026672,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseValue",
+    "vtable_address": 2026688,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseValue",
+    "vtable_address": 2045728,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseValue",
+    "vtable_address": 2045888,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseValue",
+    "vtable_address": 2050928,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseValue",
+    "vtable_address": 2051152,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseYieldingInflow",
+    "vtable_address": 1987720,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 366752
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseYieldingInflow",
+    "vtable_address": 2008744,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 647024
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseYieldingInflow",
+    "vtable_address": 2025968,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseYieldingInflow",
+    "vtable_address": 2026544,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseYieldingInflow",
+    "vtable_address": 2049808,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseYieldingInflow",
+    "vtable_address": 2050064,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseYieldingInflow",
+    "vtable_address": 2050320,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseYieldingInflow",
+    "vtable_address": 2050832,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseYieldingInflow",
+    "vtable_address": 2050992,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BaseYieldingInflow",
+    "vtable_address": 2051376,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_BooleanSwitchState",
+    "vtable_address": 2009632,
+    "methods": [
+      1792256,
+      1804192,
+      1819808,
+      1792272,
+      1432384,
+      1431056,
+      990224,
+      1792288,
+      1792304,
+      1792320,
+      1794736,
+      1794768,
+      1490720,
+      1058480,
+      1016512,
+      1493472,
+      1058512,
+      885088,
+      1016512,
+      1302000,
+      1302000,
+      1016512
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseState",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseYieldingInflow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_BaseFlow",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "CPulseCell_Base",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_CursorQueue",
+    "vtable_address": 2003328,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 2054848
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_CursorQueue",
+    "vtable_address": 2010608,
+    "methods": [
+      1792672,
+      1835568,
+      1850608,
+      1792688,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168,
+      1432464,
+      1485088,
+      1016512,
+      1058496,
+      1058512,
+      1804240,
+      1823968,
+      1437264,
+      1468848,
+      1016512,
+      1467744,
+      1467760
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_WaitForCursorsWithTagBase",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseYieldingInflow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_BaseFlow",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "CPulseCell_Base",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_ExampleCriteria",
+    "vtable_address": 1987168,
+    "methods": [
+      1016544,
+      1059488,
+      1084448,
+      1016560,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168,
+      1047184,
+      1016576,
+      1042432
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseRequirement",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_ExampleSelector",
+    "vtable_address": 1987056,
+    "methods": [
+      1016592,
+      1062064,
+      1085968,
+      1016608,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_FireCursors",
+    "vtable_address": 2006016,
+    "methods": [
+      1706736,
+      1714336,
+      1731744,
+      1706752,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168,
+      1463216,
+      1463712,
+      1016512,
+      1058496,
+      1058512,
+      885088,
+      1016512,
+      1302000,
+      1302000,
+      1016512
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseYieldingInflow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Inflow_BaseEntrypoint",
+    "vtable_address": 2005520,
+    "methods": [
+      1301856,
+      1666720,
+      1680800,
+      1618784,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Inflow_EntOutputHandler",
+    "vtable_address": 2005072,
+    "methods": [
+      1301920,
+      1668864,
+      1686176,
+      1618848,
+      1435104,
+      1431056,
+      1461488,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_Inflow_BaseEntrypoint",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Inflow_EventHandler",
+    "vtable_address": 2005296,
+    "methods": [
+      1301888,
+      1668176,
+      1681920,
+      1618816,
+      1434784,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_Inflow_BaseEntrypoint",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Inflow_GraphHook",
+    "vtable_address": 2005184,
+    "methods": [
+      1301904,
+      1668528,
+      1683808,
+      1618832,
+      1434944,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_Inflow_BaseEntrypoint",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Inflow_Method",
+    "vtable_address": 2005408,
+    "methods": [
+      1301872,
+      1668160,
+      1700544,
+      1618800,
+      1434624,
+      1431056,
+      1446336,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_Inflow_BaseEntrypoint",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Inflow_ObservableVariableListener",
+    "vtable_address": 2004960,
+    "methods": [
+      1301936,
+      1666736,
+      1688528,
+      1618864,
+      1435280,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_Inflow_BaseEntrypoint",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Inflow_Wait",
+    "vtable_address": 2004352,
+    "methods": [
+      1302016,
+      1670112,
+      1696624,
+      1618928,
+      1433552,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168,
+      1432464,
+      1058480,
+      1432624,
+      1058496,
+      1058512,
+      885088,
+      1016512,
+      1431152,
+      1431152,
+      1016512
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseYieldingInflow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Inflow_Yield",
+    "vtable_address": 2004544,
+    "methods": [
+      1301984,
+      1669504,
+      1694832,
+      1618912,
+      1433312,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168,
+      1432464,
+      1058480,
+      1016512,
+      1058496,
+      1058512,
+      885088,
+      1016512,
+      1302000,
+      1302000,
+      1016512
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseYieldingInflow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_InlineNodeSkipSelector",
+    "vtable_address": 2007664,
+    "methods": [
+      1302224,
+      1758784,
+      1784640,
+      1749504,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_IntervalTimer",
+    "vtable_address": 2008240,
+    "methods": [
+      1749280,
+      1756272,
+      1776720,
+      1749296,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168,
+      1432768,
+      1058480,
+      1464224,
+      1058496,
+      1058512,
+      1763264,
+      1762080,
+      1753856,
+      1751712,
+      1016512
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseYieldingInflow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_IsRequirementValid",
+    "vtable_address": 2007776,
+    "methods": [
+      1302192,
+      1754176,
+      1783120,
+      1749488,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168,
+      1311088,
+      1302208,
+      1310784
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseRequirement",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_LimitCount",
+    "vtable_address": 2007912,
+    "methods": [
+      1302160,
+      1749984,
+      1781248,
+      1749472,
+      1432384,
+      1431056,
+      990224,
+      1339984,
+      1340000,
+      1340016,
+      1754112,
+      1754144,
+      1311088,
+      1302176,
+      1310784
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseRequirement",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Outflow_CycleOrdered",
+    "vtable_address": 2004240,
+    "methods": [
+      1302032,
+      1670736,
+      1704688,
+      1618944,
+      1432384,
+      1431056,
+      990224,
+      1339984,
+      1340000,
+      1340016,
+      1341296,
+      1341328
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Outflow_CycleRandom",
+    "vtable_address": 2004128,
+    "methods": [
+      1302048,
+      1706768,
+      1725408,
+      1618960,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Outflow_CycleShuffled",
+    "vtable_address": 2007024,
+    "methods": [
+      1302064,
+      1707440,
+      1728560,
+      1618976,
+      1432384,
+      1431056,
+      990224,
+      1340032,
+      1341344,
+      1372544,
+      1341392,
+      1341424
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Outflow_TestExplicitYesNo",
+    "vtable_address": 1987736,
+    "methods": [
+      1059040,
+      1100288,
+      1104560,
+      1059056,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Outflow_TestRandomYesNo",
+    "vtable_address": 1987848,
+    "methods": [
+      1059008,
+      1099760,
+      1126880,
+      1059024,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_PickBestOutflowSelector",
+    "vtable_address": 2007552,
+    "methods": [
+      1302240,
+      1759344,
+      1787184,
+      1749520,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Step_CallExternalMethod",
+    "vtable_address": 2006496,
+    "methods": [
+      1302128,
+      1713264,
+      1739344,
+      1619040,
+      1433504,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168,
+      1461168,
+      1462000,
+      1016512,
+      1058496,
+      1058512,
+      1311056,
+      1066752,
+      1433744,
+      1434112,
+      1016512
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseYieldingInflow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Step_DebugLog",
+    "vtable_address": 2006688,
+    "methods": [
+      1302112,
+      1709776,
+      1723648,
+      1619024,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Step_PublicOutput",
+    "vtable_address": 2004736,
+    "methods": [
+      1301968,
+      1665600,
+      1693088,
+      1618896,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Step_TestDomainCreateFakeEntity",
+    "vtable_address": 1986736,
+    "methods": [
+      1058560,
+      1060352,
+      1088912,
+      1058576,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Step_TestDomainDestroyFakeEntity",
+    "vtable_address": 1986624,
+    "methods": [
+      1058592,
+      1060704,
+      1089872,
+      1058608,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Step_TestDomainEntFire",
+    "vtable_address": 1986512,
+    "methods": [
+      1058624,
+      1064608,
+      1090944,
+      1058640,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Step_TestDomainTracepoint",
+    "vtable_address": 1986848,
+    "methods": [
+      1058528,
+      1060000,
+      1087952,
+      1058544,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_TestWaitWithCursorState",
+    "vtable_address": 1989144,
+    "methods": [
+      1058720,
+      1105760,
+      1114768,
+      1058736,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168,
+      978768,
+      1058480,
+      979152,
+      1058496,
+      1058512,
+      1068240,
+      1066720,
+      1065760,
+      1062480,
+      1016512
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseYieldingInflow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Test_MultiInflow_NoDefault",
+    "vtable_address": 1988376,
+    "methods": [
+      1058880,
+      1103104,
+      1118752,
+      1058896,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Test_MultiInflow_WithDefault",
+    "vtable_address": 1988488,
+    "methods": [
+      1058848,
+      1102752,
+      1117792,
+      1058864,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Test_MultiOutflow_WithParams",
+    "vtable_address": 1988264,
+    "methods": [
+      1058912,
+      1099232,
+      1120400,
+      1058928,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Test_MultiOutflow_WithParams_Yielding",
+    "vtable_address": 1988072,
+    "methods": [
+      1058944,
+      1107856,
+      1122688,
+      1058960,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168,
+      978896,
+      1058480,
+      1011248,
+      1058496,
+      1058512,
+      1068256,
+      1066752,
+      1066016,
+      1063648,
+      1016512
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseYieldingInflow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Test_NoInflow",
+    "vtable_address": 1988600,
+    "methods": [
+      1058816,
+      1102400,
+      1116832,
+      1058832,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseFlow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Timeline",
+    "vtable_address": 2010048,
+    "methods": [
+      1792032,
+      1802560,
+      1813424,
+      1792048,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168,
+      1466160,
+      1467328,
+      1467312,
+      1058496,
+      1058512,
+      1804208,
+      1310752,
+      1437168,
+      1435792,
+      1016512,
+      1835552
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseYieldingInflow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Unknown",
+    "vtable_address": 2006384,
+    "methods": [
+      1302144,
+      1432928,
+      1435552,
+      1431040,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_Base",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Val_TestDomainFindEntityByName",
+    "vtable_address": 1986288,
+    "methods": [
+      1058688,
+      1061408,
+      1093328,
+      1058704,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseValue",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Val_TestDomainGetEntityName",
+    "vtable_address": 1986400,
+    "methods": [
+      1058656,
+      1061056,
+      1092304,
+      1058672,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseValue",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Value_Curve",
+    "vtable_address": 2006240,
+    "methods": [
+      1706608,
+      1711760,
+      1746112,
+      1706624,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseValue",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Value_Gradient",
+    "vtable_address": 2008464,
+    "methods": [
+      1749152,
+      1751296,
+      1773824,
+      1749168,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseValue",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Value_RandomFloat",
+    "vtable_address": 2006800,
+    "methods": [
+      1302096,
+      1709424,
+      1722592,
+      1619008,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseValue",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Value_RandomInt",
+    "vtable_address": 2006912,
+    "methods": [
+      1302080,
+      1709072,
+      1721536,
+      1618992,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseValue",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_Value_TestValue50",
+    "vtable_address": 1987960,
+    "methods": [
+      1058976,
+      1103456,
+      1125152,
+      1058992,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseValue",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_Base",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_WaitForCursorsWithTag",
+    "vtable_address": 2008816,
+    "methods": [
+      1792640,
+      1800912,
+      1822224,
+      1792656,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168,
+      1432464,
+      1485088,
+      1016512,
+      1058496,
+      1058512,
+      1804240,
+      1823968,
+      1437264,
+      1468848,
+      1016512,
+      1467696,
+      1467728
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_WaitForCursorsWithTagBase",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseYieldingInflow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_BaseFlow",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "CPulseCell_Base",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": []
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_WaitForCursorsWithTagBase",
+    "vtable_address": 2009024,
+    "methods": [
+      1792608,
+      1800896,
+      1821696,
+      1792624,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168,
+      1432464,
+      1485088,
+      1016512,
+      1058496,
+      1058512,
+      1804240,
+      1823968,
+      1437264,
+      1468848,
+      1016512,
+      1467696,
+      1467712
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseYieldingInflow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_WaitForCursorsWithTagBase",
+    "vtable_address": 2010360,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseYieldingInflow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 647344
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_WaitForCursorsWithTagBase",
+    "vtable_address": 2049680,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseCell_WaitForObservable",
+    "vtable_address": 2009824,
+    "methods": [
+      1792224,
+      1802576,
+      1817536,
+      1792240,
+      1432384,
+      1431056,
+      990224,
+      1016496,
+      1016512,
+      1016512,
+      885168,
+      885168,
+      1432464,
+      1058480,
+      1016512,
+      1493008,
+      1058512,
+      885088,
+      1016512,
+      1302000,
+      1302000,
+      1016512
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseCell_BaseYieldingInflow",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseCell_BaseFlow",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CPulseCell_Base",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseDomainScopeLoader",
+    "vtable_address": 1977960,
+    "methods": [
+      1269040,
+      1269008,
+      1260864,
+      1260880,
+      1260912,
+      1262608,
+      1286496,
+      1262720,
+      1263648,
+      1263808,
+      1263968,
+      1263248,
+      1263296,
+      1263344,
+      1263392,
+      1263472,
+      1263584,
+      1269952,
+      1270160
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseModuleRegistrationHook<CPulseDomainScopeLoader>",
+        "details": {
+          "Itanium": {
+            "offset": 24,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      },
+      {
+        "type_name": "CPostConnectCallback",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseExecCursor",
+    "vtable_address": 1983992,
+    "methods": [],
+    "bases": [
+      {
+        "type_name": "IPulseExecLog",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      },
+      {
+        "type_name": "IPulseHost_Unknown",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      },
+      {
+        "type_name": "IPulseHost_YieldingCursor",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseHost_Cursor",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 364032
+      }
+    }
+  },
+  {
+    "type_name": "CPulseExecCursor",
+    "vtable_address": 1988712,
+    "methods": [
+      1337088,
+      1338096,
+      1301680,
+      1315568,
+      1316304,
+      976592,
+      976624,
+      885216,
+      885248,
+      885216,
+      885248,
+      1331424,
+      1324160,
+      1330768,
+      1336096,
+      1318896,
+      1313872,
+      1304528,
+      1319648,
+      1311136,
+      1307952,
+      1325152,
+      1325216,
+      1339200,
+      1302432,
+      1329632,
+      1302256,
+      1302272
+    ],
+    "bases": [
+      {
+        "type_name": "IPulseExecLog",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      },
+      {
+        "type_name": "IPulseHost_Unknown",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      },
+      {
+        "type_name": "IPulseHost_YieldingCursor",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseHost_Cursor",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseExecCursor",
+    "vtable_address": 1988952,
+    "methods": [
+      885088,
+      885088,
+      976608,
+      976640,
+      885088
+    ],
+    "bases": [
+      {
+        "type_name": "IPulseExecLog",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      },
+      {
+        "type_name": "IPulseHost_Unknown",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      },
+      {
+        "type_name": "IPulseHost_YieldingCursor",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseHost_Cursor",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -8
+      }
+    }
+  },
+  {
+    "type_name": "CPulseExecCursor",
+    "vtable_address": 1989008,
+    "methods": [
+      1332192,
+      1324288,
+      1312160,
+      1308176,
+      1325184,
+      1330880,
+      1337072,
+      976656,
+      976672,
+      885232,
+      885264,
+      1325680,
+      1339584,
+      1319264,
+      1314208
+    ],
+    "bases": [
+      {
+        "type_name": "IPulseExecLog",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      },
+      {
+        "type_name": "IPulseHost_Unknown",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      },
+      {
+        "type_name": "IPulseHost_YieldingCursor",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseHost_Cursor",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -16
+      }
+    }
+  },
+  {
+    "type_name": "CPulseExecCursor",
+    "vtable_address": 2026384,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseGraphDef",
+    "vtable_address": 1997808,
+    "methods": [
+      1340416,
+      1341232,
+      1340464,
+      1373888,
+      1354944,
+      1361472,
+      1340048,
+      1340400,
+      1375328,
+      1340768,
+      1341440,
+      1340512,
+      1340720,
+      1340144,
+      1340096,
+      1340192,
+      1340256,
+      1340304,
+      1340352,
+      1341552,
+      1372240,
+      1339968,
+      1340576
+    ],
+    "bases": [
+      {
+        "type_name": "IPulseGraphDef",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseGraphInstance_TestDomain",
+    "vtable_address": 1979408,
+    "methods": [
+      885088,
+      885088,
+      885088,
+      885088,
+      885088,
+      977632,
+      977648,
+      887472,
+      980560,
+      1401504,
+      989456,
+      999120,
+      1405424,
+      1389648,
+      1408288,
+      1409552,
+      1411552,
+      1417984,
+      1411376,
+      1007472,
+      978448,
+      980208,
+      1392256,
+      1420160,
+      1391328,
+      985296,
+      1391968,
+      1391936,
+      977536,
+      977664,
+      1012560,
+      978448,
+      1411104,
+      1414112,
+      1414656,
+      977680,
+      977712,
+      1013952,
+      1012032,
+      984752,
+      978224,
+      978288,
+      978416,
+      984496,
+      984304,
+      1010800,
+      977744,
+      981456,
+      981952,
+      984960,
+      1003248,
+      1004000,
+      985008,
+      980896,
+      1005392,
+      1006272,
+      1004960,
+      978672,
+      985536,
+      985344,
+      978704,
+      977792,
+      977824,
+      977856,
+      977888,
+      977920,
+      977952,
+      1015072,
+      977984,
+      978016,
+      983312,
+      982512,
+      982688,
+      983776,
+      984048,
+      1014560,
+      978048,
+      984272,
+      885168,
+      978096,
+      1008800,
+      885120,
+      1008960,
+      1009536,
+      1010032,
+      1010640,
+      978144
+    ],
+    "bases": [
+      {
+        "type_name": "CBasePulseGraphInstance",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseHost_Unknown",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "IPulseGraphInstance_TestDomain",
+        "details": {
+          "Itanium": {
+            "offset": 280,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      },
+      {
+        "type_name": "CPulseBlackboardViewFromGraphInstance",
+        "details": {
+          "Itanium": {
+            "offset": 288,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseBlackboardView",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseGraphInstance_TestDomain",
+    "vtable_address": 1980120,
+    "methods": [
+      989968,
+      999664,
+      977696,
+      977728,
+      1014544,
+      1012528,
+      984848,
+      978256,
+      978352,
+      978432,
+      984624,
+      984400,
+      1011232,
+      977760,
+      981696,
+      982224,
+      984976,
+      1003728,
+      1004480,
+      985152,
+      981440,
+      1005760,
+      1006640,
+      1007040,
+      978688,
+      985776,
+      986016,
+      978720,
+      977808,
+      977840,
+      977872,
+      977904,
+      977936,
+      977968,
+      1015424,
+      978000,
+      978032,
+      983440,
+      983584,
+      982992,
+      983792,
+      983808,
+      1015040,
+      978064,
+      984288,
+      978080,
+      978112,
+      1008944,
+      978128,
+      1009520,
+      1010016,
+      1010624,
+      1010768,
+      978160
+    ],
+    "bases": [
+      {
+        "type_name": "CBasePulseGraphInstance",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseHost_Unknown",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "IPulseGraphInstance_TestDomain",
+        "details": {
+          "Itanium": {
+            "offset": 280,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      },
+      {
+        "type_name": "CPulseBlackboardViewFromGraphInstance",
+        "details": {
+          "Itanium": {
+            "offset": 288,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseBlackboardView",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -280
+      }
+    }
+  },
+  {
+    "type_name": "CPulseGraphInstance_TestDomain",
+    "vtable_address": 1980568,
+    "methods": [
+      989712,
+      999392,
+      1261824,
+      1260800,
+      1261312,
+      1278592,
+      1260688,
+      885072,
+      885280
+    ],
+    "bases": [
+      {
+        "type_name": "CBasePulseGraphInstance",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseHost_Unknown",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "IPulseGraphInstance_TestDomain",
+        "details": {
+          "Itanium": {
+            "offset": 280,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      },
+      {
+        "type_name": "CPulseBlackboardViewFromGraphInstance",
+        "details": {
+          "Itanium": {
+            "offset": 288,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseBlackboardView",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -288
+      }
+    }
+  },
+  {
+    "type_name": "CPulseGraphInstance_TestDomain",
+    "vtable_address": 2026304,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseGraphInstance_TestDomain",
+    "vtable_address": 2026320,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseGraphInstance_TestDomain_Derived",
+    "vtable_address": 1978160,
+    "methods": [
+      885088,
+      885088,
+      885088,
+      885088,
+      885088,
+      1058752,
+      1058768,
+      887632,
+      1063488,
+      1109056,
+      949824,
+      962704,
+      1405424,
+      1389648,
+      1408288,
+      1409552,
+      1411552,
+      1417984,
+      1411376,
+      1007472,
+      978448,
+      980208,
+      1392256,
+      1420160,
+      1391328,
+      985296,
+      1391968,
+      1391936,
+      977536,
+      977664,
+      1012560,
+      978448,
+      1411104,
+      1414112,
+      1414656,
+      977680,
+      977712,
+      1013952,
+      1012032,
+      984752,
+      978224,
+      978288,
+      978416,
+      984496,
+      984304,
+      1010800,
+      977744,
+      981456,
+      981952,
+      984960,
+      1003248,
+      1004000,
+      985008,
+      980896,
+      1005392,
+      1006272,
+      1004960,
+      978672,
+      985536,
+      985344,
+      978704,
+      977792,
+      977824,
+      977856,
+      977888,
+      977920,
+      977952,
+      1015072,
+      977984,
+      978016,
+      983312,
+      982512,
+      982688,
+      983776,
+      984048,
+      1014560,
+      978048,
+      984272,
+      986256,
+      1058784,
+      1008800,
+      1096384,
+      1008960,
+      1009536,
+      1010032,
+      1010640,
+      1097056
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseGraphInstance_TestDomain",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CBasePulseGraphInstance",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseHost_Unknown",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseGraphInstance_TestDomain",
+                "details": {
+                  "Itanium": {
+                    "offset": 280,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "CPulseBlackboardViewFromGraphInstance",
+                "details": {
+                  "Itanium": {
+                    "offset": 288,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseBlackboardView",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseGraphInstance_TestDomain_Derived",
+    "vtable_address": 1978872,
+    "methods": [
+      950336,
+      963248,
+      977696,
+      977728,
+      1014544,
+      1012528,
+      984848,
+      978256,
+      978352,
+      978432,
+      984624,
+      984400,
+      1011232,
+      977760,
+      981696,
+      982224,
+      984976,
+      1003728,
+      1004480,
+      985152,
+      981440,
+      1005760,
+      1006640,
+      1007040,
+      978688,
+      985776,
+      986016,
+      978720,
+      977808,
+      977840,
+      977872,
+      977904,
+      977936,
+      977968,
+      1015424,
+      978000,
+      978032,
+      983440,
+      983584,
+      982992,
+      983792,
+      983808,
+      1015040,
+      978064,
+      984288,
+      986576,
+      1058800,
+      1008944,
+      1097040,
+      1009520,
+      1010016,
+      1010624,
+      1010768,
+      1097664
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseGraphInstance_TestDomain",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CBasePulseGraphInstance",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseHost_Unknown",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseGraphInstance_TestDomain",
+                "details": {
+                  "Itanium": {
+                    "offset": 280,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "CPulseBlackboardViewFromGraphInstance",
+                "details": {
+                  "Itanium": {
+                    "offset": 288,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseBlackboardView",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -280
+      }
+    }
+  },
+  {
+    "type_name": "CPulseGraphInstance_TestDomain_Derived",
+    "vtable_address": 1979320,
+    "methods": [
+      950080,
+      962976,
+      1261824,
+      1260800,
+      1261312,
+      1278592,
+      1260688,
+      885072,
+      885280
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseGraphInstance_TestDomain",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CBasePulseGraphInstance",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseHost_Unknown",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseGraphInstance_TestDomain",
+                "details": {
+                  "Itanium": {
+                    "offset": 280,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "CPulseBlackboardViewFromGraphInstance",
+                "details": {
+                  "Itanium": {
+                    "offset": 288,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseBlackboardView",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -288
+      }
+    }
+  },
+  {
+    "type_name": "CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView",
+    "vtable_address": 1980656,
+    "methods": [
+      885088,
+      885088,
+      885088,
+      885088,
+      885088,
+      978192,
+      978208,
+      887904,
+      980720,
+      1401504,
+      950592,
+      963520,
+      1405424,
+      1389648,
+      1408288,
+      1409552,
+      1411552,
+      1417984,
+      1411376,
+      1007472,
+      986896,
+      980208,
+      1392256,
+      1420160,
+      1391328,
+      985296,
+      1391968,
+      1391936,
+      977536,
+      977664,
+      1012560,
+      978736,
+      1411104,
+      1414112,
+      1414656,
+      977680,
+      977712,
+      1013952,
+      1012032,
+      984752,
+      978224,
+      978288,
+      978416,
+      984496,
+      984304,
+      1010800,
+      977744,
+      981456,
+      981952,
+      984960,
+      1003248,
+      1004000,
+      985008,
+      980896,
+      1005392,
+      1006272,
+      1004960,
+      978672,
+      985536,
+      985344,
+      978704,
+      977792,
+      977824,
+      977856,
+      977888,
+      977920,
+      977952,
+      1015072,
+      977984,
+      978016,
+      983312,
+      982512,
+      982688,
+      983776,
+      984048,
+      1014560,
+      978048,
+      984272,
+      885168,
+      978096,
+      1008800,
+      885120,
+      1008960,
+      1009536,
+      1010032,
+      1010640,
+      978144
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseGraphInstance_TestDomain",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CBasePulseGraphInstance",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseHost_Unknown",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseGraphInstance_TestDomain",
+                "details": {
+                  "Itanium": {
+                    "offset": 280,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "CPulseBlackboardViewFromGraphInstance",
+                "details": {
+                  "Itanium": {
+                    "offset": 288,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseBlackboardView",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView",
+    "vtable_address": 1981368,
+    "methods": [
+      951104,
+      964064,
+      977696,
+      977728,
+      1014544,
+      1012528,
+      984848,
+      978256,
+      978352,
+      978432,
+      984624,
+      984400,
+      1011232,
+      977760,
+      981696,
+      982224,
+      984976,
+      1003728,
+      1004480,
+      985152,
+      981440,
+      1005760,
+      1006640,
+      1007040,
+      978688,
+      985776,
+      986016,
+      978720,
+      977808,
+      977840,
+      977872,
+      977904,
+      977936,
+      977968,
+      1015424,
+      978000,
+      978032,
+      983440,
+      983584,
+      982992,
+      983792,
+      983808,
+      1015040,
+      978064,
+      984288,
+      978080,
+      978112,
+      1008944,
+      978128,
+      1009520,
+      1010016,
+      1010624,
+      1010768,
+      978160
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseGraphInstance_TestDomain",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CBasePulseGraphInstance",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseHost_Unknown",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseGraphInstance_TestDomain",
+                "details": {
+                  "Itanium": {
+                    "offset": 280,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "CPulseBlackboardViewFromGraphInstance",
+                "details": {
+                  "Itanium": {
+                    "offset": 288,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseBlackboardView",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -280
+      }
+    }
+  },
+  {
+    "type_name": "CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView",
+    "vtable_address": 1981816,
+    "methods": [
+      950848,
+      963792,
+      1261824,
+      1260800,
+      1261312,
+      1278592,
+      1260688,
+      885072,
+      885280
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseGraphInstance_TestDomain",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CBasePulseGraphInstance",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseHost_Unknown",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseGraphInstance_TestDomain",
+                "details": {
+                  "Itanium": {
+                    "offset": 280,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "CPulseBlackboardViewFromGraphInstance",
+                "details": {
+                  "Itanium": {
+                    "offset": 288,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseBlackboardView",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -288
+      }
+    }
+  },
+  {
+    "type_name": "CPulseGraphInstance_TurtleGraphics",
+    "vtable_address": 1982032,
+    "methods": [
+      885088,
+      885088,
+      885088,
+      885088,
+      885088,
+      1136352,
+      1136368,
+      888176,
+      1139792,
+      1143104,
+      951360,
+      962464,
+      1405424,
+      1389648,
+      1408288,
+      1409552,
+      1411552,
+      1417984,
+      1411376,
+      1389760,
+      1389728,
+      980144,
+      1392256,
+      1420160,
+      1391328,
+      1391648,
+      1391968,
+      1391936,
+      977536,
+      977664,
+      1389744,
+      1389728,
+      1411104,
+      1414112,
+      1414656,
+      977680,
+      1136400,
+      1188432,
+      1136432
+    ],
+    "bases": [
+      {
+        "type_name": "CBasePulseGraphInstance",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseHost_Unknown",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "IPulseGraphInstance_TurtleGraphics",
+        "details": {
+          "Itanium": {
+            "offset": 280,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseGraphInstance_TurtleGraphics",
+    "vtable_address": 1982360,
+    "methods": [
+      946544,
+      962592,
+      1136384,
+      1136416,
+      1188896,
+      1136448
+    ],
+    "bases": [
+      {
+        "type_name": "CBasePulseGraphInstance",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseHost_Unknown",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "IPulseGraphInstance_TurtleGraphics",
+        "details": {
+          "Itanium": {
+            "offset": 280,
+            "flags": 2,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -280
+      }
+    }
+  },
+  {
+    "type_name": "CPulseGraphInstance_TurtleGraphics",
+    "vtable_address": 1984536,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 2031456
+      }
+    }
+  },
+  {
+    "type_name": "CPulseInterfaceHelpers_Load_NoOp",
+    "vtable_address": 1981904,
+    "methods": [
+      885392
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseInstanceLoadAPI_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseInstanceLoadAPI",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_GameTime_Load_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_GameTime_Load",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_EHandle_Load_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_EHandle_Load",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_Worldspace_Load_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 24,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_Worldspace_Load",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3Transfer_EmptyResourceLoadInterface",
+        "details": {
+          "Itanium": {
+            "offset": 32,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_ResourceLoad",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseInterfaceHelpers_Load_NoOp",
+    "vtable_address": 1981928,
+    "methods": [
+      885056
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseInstanceLoadAPI_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseInstanceLoadAPI",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_GameTime_Load_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_GameTime_Load",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_EHandle_Load_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_EHandle_Load",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_Worldspace_Load_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 24,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_Worldspace_Load",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3Transfer_EmptyResourceLoadInterface",
+        "details": {
+          "Itanium": {
+            "offset": 32,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_ResourceLoad",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -8
+      }
+    }
+  },
+  {
+    "type_name": "CPulseInterfaceHelpers_Load_NoOp",
+    "vtable_address": 1981952,
+    "methods": [
+      886896
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseInstanceLoadAPI_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseInstanceLoadAPI",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_GameTime_Load_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_GameTime_Load",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_EHandle_Load_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_EHandle_Load",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_Worldspace_Load_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 24,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_Worldspace_Load",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3Transfer_EmptyResourceLoadInterface",
+        "details": {
+          "Itanium": {
+            "offset": 32,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_ResourceLoad",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -16
+      }
+    }
+  },
+  {
+    "type_name": "CPulseInterfaceHelpers_Load_NoOp",
+    "vtable_address": 1981976,
+    "methods": [
+      885328,
+      885360
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseInstanceLoadAPI_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseInstanceLoadAPI",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_GameTime_Load_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_GameTime_Load",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_EHandle_Load_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_EHandle_Load",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_Worldspace_Load_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 24,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_Worldspace_Load",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3Transfer_EmptyResourceLoadInterface",
+        "details": {
+          "Itanium": {
+            "offset": 32,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_ResourceLoad",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -24
+      }
+    }
+  },
+  {
+    "type_name": "CPulseInterfaceHelpers_Load_NoOp",
+    "vtable_address": 1982008,
+    "methods": [
+      888512
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseInstanceLoadAPI_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseInstanceLoadAPI",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_GameTime_Load_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_GameTime_Load",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_EHandle_Load_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_EHandle_Load",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_Worldspace_Load_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 24,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_Worldspace_Load",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3Transfer_EmptyResourceLoadInterface",
+        "details": {
+          "Itanium": {
+            "offset": 32,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_ResourceLoad",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -32
+      }
+    }
+  },
+  {
+    "type_name": "CPulseInterfaceHelpers_Save_NoOp",
+    "vtable_address": 1972816,
+    "methods": [
+      885392
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseInstanceSaveAPI_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseInstanceSaveAPI",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_GameTime_Save_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_GameTime_Save",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_EHandle_Save_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_EHandle_Save",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_Worldspace_Save_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 24,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_Worldspace_Save",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseInterfaceHelpers_Save_NoOp",
+    "vtable_address": 1972840,
+    "methods": [
+      885056
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseInstanceSaveAPI_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseInstanceSaveAPI",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_GameTime_Save_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_GameTime_Save",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_EHandle_Save_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_EHandle_Save",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_Worldspace_Save_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 24,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_Worldspace_Save",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -8
+      }
+    }
+  },
+  {
+    "type_name": "CPulseInterfaceHelpers_Save_NoOp",
+    "vtable_address": 1972864,
+    "methods": [
+      886848
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseInstanceSaveAPI_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseInstanceSaveAPI",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_GameTime_Save_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_GameTime_Save",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_EHandle_Save_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_EHandle_Save",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_Worldspace_Save_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 24,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_Worldspace_Save",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -16
+      }
+    }
+  },
+  {
+    "type_name": "CPulseInterfaceHelpers_Save_NoOp",
+    "vtable_address": 1972888,
+    "methods": [
+      885328,
+      885360
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseInstanceSaveAPI_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IPulseInstanceSaveAPI",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_GameTime_Save_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 8,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_GameTime_Save",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_EHandle_Save_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 16,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_EHandle_Save",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type_name": "CKV3TransferInterface_Worldspace_Save_NoOp",
+        "details": {
+          "Itanium": {
+            "offset": 24,
+            "flags": 2,
+            "bases": [
+              {
+                "type_name": "IKV3TransferInterface_Worldspace_Save",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -24
+      }
+    }
+  },
+  {
+    "type_name": "CPulseScopeEnumeratingTypeService",
+    "vtable_address": 2012768,
+    "methods": [
+      1260832,
+      885072,
+      977536,
+      1260848,
+      977536,
+      1274000,
+      1261072,
+      1282496
+    ],
+    "bases": [
+      {
+        "type_name": "IPulseTypeQueriesForScope",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseModuleRegistrationHook<IPulseTypeQueriesForScope>",
+                "details": {
+                  "Itanium": {
+                    "offset": 8,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseSystem",
+    "vtable_address": 1974176,
+    "methods": [
+      947744,
+      939136,
+      884992,
+      925616,
+      926080,
+      885072,
+      888336,
+      939408,
+      948208,
+      885184,
+      939424,
+      902656,
+      888800,
+      885424,
+      889168,
+      886960,
+      930128,
+      927648,
+      930512,
+      925520,
+      886048,
+      930688,
+      900304,
+      900736,
+      901328,
+      886208,
+      886224,
+      939520,
+      959392,
+      961536,
+      964336,
+      948752,
+      959008,
+      895728,
+      888928,
+      894272,
+      889504,
+      894848,
+      885504,
+      889072,
+      889120,
+      938544,
+      938576,
+      938672,
+      919872,
+      885536,
+      895008,
+      931216,
+      976800,
+      1008768,
+      976816,
+      976832,
+      972240,
+      970000,
+      938528,
+      931616,
+      886240,
+      960960,
+      935424,
+      885568,
+      901872,
+      907776,
+      887104,
+      909312,
+      914624,
+      890080,
+      890176,
+      927168,
+      889456,
+      895936,
+      927792,
+      886112
+    ],
+    "bases": [
+      {
+        "type_name": "CTier3AppSystem<IPulseSystem, (long long)0>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier2AppSystem<IPulseSystem, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CTier1AppSystem<IPulseSystem, (long long)0>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "CTier0AppSystem<IPulseSystem, (long long)0>",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "CBaseAppSystem<IPulseSystem>",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": [
+                                              {
+                                                "type_name": "IPulseSystem",
+                                                "details": {
+                                                  "Itanium": {
+                                                    "offset": 0,
+                                                    "flags": 0,
+                                                    "bases": [
+                                                      {
+                                                        "type_name": "IAppSystem",
+                                                        "details": {
+                                                          "Itanium": {
+                                                            "offset": 0,
+                                                            "flags": 0,
+                                                            "bases": []
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseTestHandleService",
+    "vtable_address": 1985296,
+    "methods": [
+      978944,
+      987216,
+      999936,
+      1001088,
+      1044976,
+      1017968,
+      1045456,
+      885168
+    ],
+    "bases": [
+      {
+        "type_name": "IPulseTypeQueriesForScope",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CPulseModuleRegistrationHook<IPulseTypeQueriesForScope>",
+                "details": {
+                  "Itanium": {
+                    "offset": 8,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseTurtleGraphicsCursor",
+    "vtable_address": 1984680,
+    "methods": [
+      1337088,
+      1338096,
+      976688,
+      980416,
+      999040,
+      976592,
+      976624,
+      885216,
+      885248,
+      885216,
+      885248,
+      1331424,
+      1324160,
+      1330768,
+      1336096,
+      1318896,
+      1313872,
+      1304528,
+      1319648,
+      1311136,
+      1307952,
+      1325152,
+      1325216,
+      1339200,
+      1302432,
+      1329632,
+      1302256,
+      1302272
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseExecCursor",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IPulseExecLog",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseHost_Unknown",
+                "details": {
+                  "Itanium": {
+                    "offset": 8,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseHost_YieldingCursor",
+                "details": {
+                  "Itanium": {
+                    "offset": 16,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseHost_Cursor",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulseTurtleGraphicsCursor",
+    "vtable_address": 1984920,
+    "methods": [
+      885088,
+      885088,
+      976608,
+      976640,
+      885088
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseExecCursor",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IPulseExecLog",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseHost_Unknown",
+                "details": {
+                  "Itanium": {
+                    "offset": 8,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseHost_YieldingCursor",
+                "details": {
+                  "Itanium": {
+                    "offset": 16,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseHost_Cursor",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -8
+      }
+    }
+  },
+  {
+    "type_name": "CPulseTurtleGraphicsCursor",
+    "vtable_address": 1984976,
+    "methods": [
+      1332192,
+      1324288,
+      1312160,
+      1308176,
+      1325184,
+      1330880,
+      1337072,
+      976656,
+      976672,
+      885232,
+      885264,
+      1325680,
+      1339584,
+      1319264,
+      1314208
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseExecCursor",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IPulseExecLog",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseHost_Unknown",
+                "details": {
+                  "Itanium": {
+                    "offset": 8,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseHost_YieldingCursor",
+                "details": {
+                  "Itanium": {
+                    "offset": 16,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseHost_Cursor",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -16
+      }
+    }
+  },
+  {
+    "type_name": "CPulseTypeManager",
+    "vtable_address": 1977752,
+    "methods": [
+      939104,
+      885072,
+      885072,
+      885088,
+      885104,
+      885120,
+      885184,
+      941472,
+      885136,
+      885152,
+      885168,
+      946656,
+      940384,
+      885168,
+      885184,
+      885200,
+      885184,
+      947456,
+      885104,
+      885072,
+      940784,
+      973632,
+      947376,
+      885104
+    ],
+    "bases": [
+      {
+        "type_name": "CKV3ResourceTypeManager<(unsigned long long)111546415280246>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IResourceTypeManager",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulse_OutflowConnection",
+    "vtable_address": 2051552,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulse_OutflowConnection",
+    "vtable_address": 2051568,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CPulse_ResumePoint",
+    "vtable_address": 2051536,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CReadOnlyBlackboardView",
+    "vtable_address": 1973136,
+    "methods": [
+      1272240,
+      1272336,
+      1262336,
+      1260816,
+      1261568,
+      1278832,
+      1262832,
+      1284288,
+      885088
+    ],
+    "bases": [
+      {
+        "type_name": "IPulseBlackboardView",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaInstallCallback",
+    "vtable_address": 2012696,
+    "methods": [
+      1836272
+    ],
+    "bases": [
+      {
+        "type_name": "CPostConnectCallback",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaRegistration",
+    "vtable_address": 2012680,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 648608
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaRegistration_pulse_runtime_lib",
+    "vtable_address": 2012744,
+    "methods": [
+      1468160
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaRegistration",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CSchemaRegistration_pulse_system",
+    "vtable_address": 2012848,
+    "methods": [
+      977136
+    ],
+    "bases": [
+      {
+        "type_name": "CSchemaRegistration",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CTestDomainDerived_Cursor",
+    "vtable_address": 1985376,
+    "methods": [
+      1337088,
+      1338096,
+      978176,
+      1020544,
+      1042000,
+      976592,
+      976624,
+      885216,
+      885248,
+      885216,
+      885248,
+      1331424,
+      1324160,
+      1330768,
+      1336096,
+      1318896,
+      1313872,
+      978960,
+      979632,
+      1311136,
+      1307952,
+      1325152,
+      1325216,
+      1339200,
+      1302432,
+      1329632,
+      1302256,
+      1302272
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseExecCursor",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IPulseExecLog",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseHost_Unknown",
+                "details": {
+                  "Itanium": {
+                    "offset": 8,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseHost_YieldingCursor",
+                "details": {
+                  "Itanium": {
+                    "offset": 16,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseHost_Cursor",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "CTestDomainDerived_Cursor",
+    "vtable_address": 1985616,
+    "methods": [
+      885088,
+      885088,
+      976608,
+      976640,
+      885088
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseExecCursor",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IPulseExecLog",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseHost_Unknown",
+                "details": {
+                  "Itanium": {
+                    "offset": 8,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseHost_YieldingCursor",
+                "details": {
+                  "Itanium": {
+                    "offset": 16,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseHost_Cursor",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -8
+      }
+    }
+  },
+  {
+    "type_name": "CTestDomainDerived_Cursor",
+    "vtable_address": 1985672,
+    "methods": [
+      1332192,
+      1324288,
+      1312160,
+      1308176,
+      1325184,
+      1330880,
+      1337072,
+      976656,
+      976672,
+      885232,
+      885264,
+      1325680,
+      1339584,
+      1319264,
+      1314208
+    ],
+    "bases": [
+      {
+        "type_name": "CPulseExecCursor",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "IPulseExecLog",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseHost_Unknown",
+                "details": {
+                  "Itanium": {
+                    "offset": 8,
+                    "flags": 2,
+                    "bases": []
+                  }
+                }
+              },
+              {
+                "type_name": "IPulseHost_YieldingCursor",
+                "details": {
+                  "Itanium": {
+                    "offset": 16,
+                    "flags": 2,
+                    "bases": [
+                      {
+                        "type_name": "IPulseHost_Cursor",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": -16
+      }
+    }
+  },
+  {
+    "type_name": "CTier2AppSystem<IPulseSystem, (long long)0>",
+    "vtable_address": 1973584,
+    "methods": [
+      947744,
+      939136,
+      884992,
+      946464,
+      938784,
+      885072,
+      885088,
+      939440,
+      948208,
+      885184,
+      939424
+    ],
+    "bases": [
+      {
+        "type_name": "CTier1AppSystem<IPulseSystem, (long long)0>",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "CTier0AppSystem<IPulseSystem, (long long)0>",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": [
+                      {
+                        "type_name": "CBaseAppSystem<IPulseSystem>",
+                        "details": {
+                          "Itanium": {
+                            "offset": 0,
+                            "flags": 0,
+                            "bases": [
+                              {
+                                "type_name": "IPulseSystem",
+                                "details": {
+                                  "Itanium": {
+                                    "offset": 0,
+                                    "flags": 0,
+                                    "bases": [
+                                      {
+                                        "type_name": "IAppSystem",
+                                        "details": {
+                                          "Itanium": {
+                                            "offset": 0,
+                                            "flags": 0,
+                                            "bases": []
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "Curve",
+    "vtable_address": 1999632,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 662978
+      }
+    }
+  },
+  {
+    "type_name": "Fake Ent-Fire",
+    "vtable_address": 1983152,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 665010
+      }
+    }
+  },
+  {
+    "type_name": "FakeEntityDerivedA_t",
+    "vtable_address": 1984144,
+    "methods": [
+      978912,
+      1016160,
+      1016176
+    ],
+    "bases": [
+      {
+        "type_name": "FakeEntity_t",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "FakeEntityDerivedB_t",
+    "vtable_address": 2010448,
+    "methods": [
+      978928,
+      1025936,
+      1041952
+    ],
+    "bases": [
+      {
+        "type_name": "FakeEntityDerivedA_t",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": [
+              {
+                "type_name": "FakeEntity_t",
+                "details": {
+                  "Itanium": {
+                    "offset": 0,
+                    "flags": 0,
+                    "bases": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "FakeEntity_t",
+    "vtable_address": 1984184,
+    "methods": [
+      977616,
+      1015440,
+      1016112
+    ],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "IAsyncProcessedDataResult",
+    "vtable_address": 1972752,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 361632
+      }
+    }
+  },
+  {
+    "type_name": "IKV3TransferInterface_ResourceLoad",
+    "vtable_address": 1992792,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 635328
+      }
+    }
+  },
+  {
+    "type_name": "IPulseGraphDef",
+    "vtable_address": 1997704,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 637584
+      }
+    }
+  },
+  {
+    "type_name": "If this cursor spawns other work via Fire And Forget, should this Tag be inherited?",
+    "vtable_address": 2009488,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 664453
+      }
+    }
+  },
+  {
+    "type_name": "Optional. Type 'Any'. An associated value, e.g. the Entity Handle which is responsible for this Cursor. The Tag is defined by the unique combination of Name and Value.",
+    "vtable_address": 2008224,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 664453
+      }
+    }
+  },
+  {
+    "type_name": "Optional. Type 'Any'. An associated value, e.g. the Entity Handle which is responsible for this Cursor. The Tag is defined by the unique combination of Name and Value.",
+    "vtable_address": 2009360,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 664453
+      }
+    }
+  },
+  {
+    "type_name": "Optional. Type 'Any'. An associated value, e.g. the Entity Handle which is responsible for this Cursor. The Tag is defined by the unique combination of Name and Value.",
+    "vtable_address": 2009424,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 664453
+      }
+    }
+  },
+  {
+    "type_name": "PulseBestOutflowRules_t",
+    "vtable_address": 2003440,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 2062368
+      }
+    }
+  },
+  {
+    "type_name": "PulseSystemEventCursorResult_t",
+    "vtable_address": 1973504,
+    "methods": [
+      988480,
+      999024,
+      939456,
+      990240,
+      994672,
+      976192,
+      885008,
+      979296
+    ],
+    "bases": [
+      {
+        "type_name": "PulseSystemEventBase_t",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "PulseSystemEventObservableVariableListenerNotify_t",
+    "vtable_address": 1973344,
+    "methods": [
+      1004736,
+      1004784,
+      939504,
+      993376,
+      997536,
+      976480,
+      885312,
+      980000
+    ],
+    "bases": [
+      {
+        "type_name": "PulseSystemEventBase_t",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "PulseSystemEventObservableVariableSourceChanged_t",
+    "vtable_address": 1973264,
+    "methods": [
+      1004848,
+      1004896,
+      939488,
+      992240,
+      996416,
+      976480,
+      885296,
+      976496
+    ],
+    "bases": [
+      {
+        "type_name": "PulseSystemEventBase_t",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "PulseSystemEventYieldResume_t",
+    "vtable_address": 1973424,
+    "methods": [
+      988416,
+      998944,
+      939472,
+      991440,
+      995568,
+      976240,
+      885008,
+      976288
+    ],
+    "bases": [
+      {
+        "type_name": "PulseSystemEventBase_t",
+        "details": {
+          "Itanium": {
+            "offset": 0,
+            "flags": 0,
+            "bases": []
+          }
+        }
+      }
+    ],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 0
+      }
+    }
+  },
+  {
+    "type_name": "PulseTestEnumShape_t",
+    "vtable_address": 1984560,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 2031680
+      }
+    }
+  },
+  {
+    "type_name": "Randomly taken half of the time",
+    "vtable_address": 1982640,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 662605
+      }
+    }
+  },
+  {
+    "type_name": "Unknown",
+    "vtable_address": 2001040,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 662605
+      }
+    }
+  },
+  {
+    "type_name": "tools/images/pulse_editor/requirements.png",
+    "vtable_address": 1983344,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 659150
+      }
+    }
+  },
+  {
+    "type_name": "tools/images/pulse_editor/requirements.png",
+    "vtable_address": 1992976,
+    "methods": [],
+    "bases": [],
+    "model": {
+      "Itanium": {
+        "offset_to_top": 659150
+      }
+    }
+  }
+]
