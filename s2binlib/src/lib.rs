@@ -63,7 +63,15 @@ mod tests {
 
         s2binlib.dump_strings("server")?;
 
-        println!("{:?}", s2binlib.strings_cache.get("server").unwrap().get("nullptr Ent in GiveNamedItem: %s!").unwrap());
+        println!(
+            "{:?}",
+            s2binlib
+                .strings_cache
+                .get("server")
+                .unwrap()
+                .get("nullptr Ent in GiveNamedItem: %s!")
+                .unwrap()
+        );
 
         // println!("lib: {:?}", "");
         // let lib = unsafe { Library::new("F:/cs2server/game/bin/win64/tier0.dll")? };
