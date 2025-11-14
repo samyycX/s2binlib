@@ -580,7 +580,7 @@ impl<'a> S2BinLib<'a> {
         Err(anyhow::anyhow!("Vtable not found."))
     }
 
-    fn is_rvalid_rva(&self, binary_name: &str, rva: u64) -> Result<bool> {
+    fn is_valid_rva(&self, binary_name: &str, rva: u64) -> Result<bool> {
         let Ok(file_offset) = self.rva_to_file_offset(binary_name, rva) else {
             return Ok(false);
         };
@@ -588,8 +588,8 @@ impl<'a> S2BinLib<'a> {
         Ok(file_offset > 0 && file_offset < self.get_binary(binary_name)?.len() as u64)
     }
 
-    fn is_rvalid_executable_rva(&self, binary_name: &str, rva: u64) -> Result<bool> {
-        if !self.is_rvalid_rva(binary_name, rva)? {
+    fn is_valid_executable_rva(&self, binary_name: &str, rva: u64) -> Result<bool> {
+        if !self.is_valid_rva(binary_name, rva)? {
             return Ok(false);
         }
 
@@ -651,11 +651,11 @@ impl<'a> S2BinLib<'a> {
             let vfunc_rva = self.read_by_rva(binary_name, vtable_rva + offset, 8)?;
             let vfunc_rva = u64::from_le_bytes(vfunc_rva.try_into().unwrap());
 
-            if vfunc_rva == 0 || !self.is_rvalid_executable_rva(binary_name, vfunc_rva)? {
+            if vfunc_rva == 0 || !self.is_valid_executable_rva(binary_name, vfunc_rva)? {
                 break;
             }
 
-            // check if its a rvalid function
+            // check if its a valid function
             offset += 8;
         }
         Ok(offset as usize / 8)
@@ -903,7 +903,7 @@ impl<'a> S2BinLib<'a> {
             while decoder.can_decode() {
                 decoder.decode_out(&mut instruction);
 
-                // Skip inrvalid instructions
+                // Skip invalid instructions
                 if instruction.is_invalid() {
                     continue;
                 }
@@ -955,7 +955,7 @@ impl<'a> S2BinLib<'a> {
                                 instruction.immediate(i) as u32 as u64
                             };
 
-                            // Only consider rvalues that look like rvalid virtual addresses
+                            // Only consider rvalues that look like valid virtual addresses
                             // For PE files, check if it's near the image base
                             // For ELF files, check if it's in a reasonable range
                             let is_likely_address = if bitness == 64 {
@@ -1095,7 +1095,7 @@ impl<'a> S2BinLib<'a> {
 
         if instruction.is_invalid() {
             return Err(anyhow::anyhow!(
-                "Inrvalid instruction at address 0x{:X}",
+                "Invalid instruction at address 0x{:X}",
                 mem_address
             ));
         }
@@ -1128,7 +1128,7 @@ impl<'a> S2BinLib<'a> {
         }
 
         Err(anyhow::anyhow!(
-            "No rvalid xref found in instruction at address 0x{:X}",
+            "No valid xref found in instruction at address 0x{:X}",
             mem_address
         ))
     }
@@ -1160,7 +1160,7 @@ impl<'a> S2BinLib<'a> {
         decoder.decode_out(&mut instruction);
 
         if instruction.is_invalid() {
-            return Err(anyhow::anyhow!("Inrvalid instruction at rva 0x{:X}", rva));
+            return Err(anyhow::anyhow!("Invalid instruction at rva 0x{:X}", rva));
         }
 
         for i in 0..instruction.op_count() {
@@ -1191,7 +1191,7 @@ impl<'a> S2BinLib<'a> {
         }
 
         Err(anyhow::anyhow!(
-            "No rvalid xref found in instruction at rva 0x{:X}",
+            "No valid xref found in instruction at rva 0x{:X}",
             rva
         ))
     }
