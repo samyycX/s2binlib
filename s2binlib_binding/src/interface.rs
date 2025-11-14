@@ -4,7 +4,7 @@ use std::ffi::{c_char, c_void};
 use crate::compat::s2binlib001::s2binlib001_create;
 
 #[unsafe(no_mangle)]
-pub unsafe extern "C" fn CreateInterface(name: *const c_char) -> *mut c_void {
+pub unsafe extern "C" fn S2BinLib_CreateInterface(name: *const c_char) -> *mut c_void {
     if name.is_null() {
         return std::ptr::null_mut();
     }

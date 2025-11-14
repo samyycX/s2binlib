@@ -138,6 +138,6 @@ Or use the `CreateInterface` function for dynamic loading:
 
 ```cpp
 // windows example
-S2CreateInterfaceFn createInterface = (S2CreateInterfaceFn)GetProcAddress(hDll, "CreateInterface");
+S2CreateInterfaceFn createInterface = (S2CreateInterfaceFn)GetProcAddress(hDll, "S2BinLib_CreateInterface");
 auto s2binlib = createInterface(S2BINLIB_INTERFACE_NAME);
 ```

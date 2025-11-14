@@ -7,7 +7,7 @@ int main(int argc, char** argv) {
 
     HMODULE hDll = LoadLibrary(TEXT("s2binlib.dll"));
 
-    S2CreateInterfaceFn createInterface = (S2CreateInterfaceFn)GetProcAddress(hDll, "CreateInterface");
+    S2CreateInterfaceFn createInterface = (S2CreateInterfaceFn)GetProcAddress(hDll, "S2BinLib_CreateInterface");
     auto s2binlib = createInterface(S2BINLIB_INTERFACE_NAME);
 
     s2binlib->InitializeWithOs("F:/cs2server/game", "csgo", "windows");
