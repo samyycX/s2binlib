@@ -187,13 +187,13 @@
  (%ld unused bits)
  (%s)
  (08@HPX`hpx
- (08@HPX`j`/
+ (08@HPX`jp/
  (08@HPXb
- (08@HPZ`/
+ (08@HPZp/
  (08@HR
  (08@J
- (08@J`/
- (0:`/
+ (08@Jp/
+ (0:p/
  (0X`hpz
  (Dirty Animation)
  (Disabled on Server)
@@ -252,7 +252,6 @@
  = { <proto text format> }". To set fields within it, use syntax like "
  ?? 
  ACTIVE GROUP
- A`X=
  Base Class Array'
  Base Class Descriptor at (
  C>TQ
@@ -2139,7 +2138,6 @@ $tH@T
 %s:  IGameSystem::LoopPostInitAllSystems(start)
 %s:  Invalid entity search name %s
 %s:  No entity at index %d
-%s:  No entity system!n
 %s:  Queue AsyncWrite (%s)
 %s:  ReadTick %d:%s : clamping rebased tick %s [baseTick %d] value %d to zero!
 %s:  ReleaseSpawnGroup
@@ -2532,8 +2530,8 @@ $tH@T
 (3"B
 (3@Mb
 (40YF
-(40^
 (4?NewFromUnsigned@Integer@v8@@SA?AV?$Local@VInteger@v8@@@2@PEAVIsolate@2@I@Z
+(4@^
 (5Kc
 (5Me
 (5Nc
@@ -8238,9 +8236,9 @@ $tH@T
 02V8[
 05=k
 08@HP
-08@HR`/
+08@HRp/
 08@J
-08B`/
+08Bp/
 08bX
 09,h
 09|+
@@ -8747,12 +8745,11 @@ $tH@T
 8=<c
 8??SetInternalFieldCount@ObjectTemplate@v8@@QEAAXH@Z
 8@HP:
-8@J`/
+8@Jp/
 8A*c
 8A6j
-8B`/
 8Blend (Masked): %.2f%%
-8Bpo
+8Bp/
 8CMsgGCCStrike15_v2_Client2GCEconPreviewDataBlockResponse
 8Csinf
 8GZS
@@ -9462,13 +9459,14 @@ $tH@T
 @08N
 @0pp
 @2&@
-@2`/
-@6`w
+@2p/
+@6pw
 @80^
-@:0v
-@:@/
-@:`f
+@: e
+@:@v
+@:P/
 @:e+
+@:pf
 @<:nq
 @>%>b
 @?SlowGetAlignedPointerFromInternalField@Object@v8@@AEAAPEAXH@Z
@@ -9481,7 +9479,7 @@ $tH@T
 @F(%
 @HPX
 @HPX&I
-@HPX`hv`
+@HPX`hvp
 @MfKZ
 @Pgl
 @Q~i
@@ -9495,7 +9493,7 @@ $tH@T
 @dKb]
 @fff>fff>fff>fff>
 @h!Aq8
-@ht0^
+@ht@^
 @i1V
 @jB+
 @n2w
@@ -9543,6 +9541,7 @@ A>pP&
 A>x8
 A@d0I
 AA Compromise
+AA: q
 AABBDirection
 AABB_t
 AACompromise
@@ -9574,7 +9573,7 @@ ACT_TRICK
 ACT_TURN_IN_PLACE
 ACT_UNDEFINED
 ACT_WALK
-ACUserMessageLagCompensationError_t
+ACUserMessageServerFrameTime_t
 AD Time Stamping
 ADDED %s (%s) to transition.
 ADDED.
@@ -10298,6 +10297,7 @@ B %d : %s
 B!rA
 B"`b
 B#B)B/BCBSBUB[BaBsB}B
+B%s:  No entity system!n
 B*k@5
 B+N3
 B+Uk=
@@ -10354,7 +10354,6 @@ BEOS_LOAD
 BEOS_NAME_CONVERTER
 BEOS_UNLOAD
 BEST
-BEntity is in spawn group %s(%s)
 BF-CBC
 BF-CFB
 BF-ECB
@@ -13880,6 +13879,7 @@ CUserMessageHudText
 CUserMessageHudText_t
 CUserMessageItemPickup
 CUserMessageItemPickup_t
+CUserMessageLagCompensationError_t
 CUserMessageRequestDiagnostic
 CUserMessageRequestDiagnostic_t
 CUserMessageRequestDllStatus
@@ -13905,7 +13905,6 @@ CUserMessageScreenTilt_t
 CUserMessageSendAudio
 CUserMessageSendAudio_t
 CUserMessageServerFrameTime
-CUserMessageServerFrameTime_t
 CUserMessageShake
 CUserMessageShakeDir
 CUserMessageShakeDir_t
@@ -16597,6 +16596,7 @@ Entity allocation failed since it forced slot %d, which is currently used by ent
 Entity class %s does not have its own datadesc (uses %s)
 Entity component datadesc mismatch, template %s vs. virtual %s
 Entity global initializers did not run
+Entity is in spawn group %s(%s)
 Entity is phsycally %s spawn group %s(%s)
 Entity no longer exists for output connection
 Entity2
@@ -22123,7 +22123,7 @@ P-521
 P08@J
 P08J
 P08N
-P2`/
+P2p/
 P5[1
 P:   
 P>q_Y~
@@ -22602,7 +22602,7 @@ Pitch
 PitchShift
 Pivot
 PivotPaint
-Pj`/
+Pjp/
 Place
 Place a message in the telemetry timeline
 PlaceDecalEvent_t
@@ -27698,7 +27698,7 @@ XUID
 XW=?'
 XWY]
 XYD%
-X`hr`/
+X`hrp/
 Xd3h
 XfJ7
 XjfR
@@ -28306,15 +28306,16 @@ _}eOk
 `'>W
 `'~}
 `+!]?
+`2 q
 `28)fk
-`2`/
+`2p/
 `3?New@Array@v8@@SA?AV?$Local@VArray@v8@@@2@PEAVIsolate@2@H@Z
 `47/
-`6 J
-`: /
-`:0e
-`:`/
-`:`d
+`60J
+`:0/
+`:@e
+`:p/
+`:pd
 `:zQF
 `=&c
 `>r1
@@ -28338,11 +28339,11 @@ _}eOk
 `anonymous namespace'
 `apc
 `bB"(!
-`b`/
+`bp/
 `cC#( 
 `copy constructor closure'
-`d`/
 `default constructor closure'
+`dp/
 `dub`D
 `dynamic atexit destructor for '
 `dynamic initializer for '
@@ -29788,6 +29789,7 @@ bytes_sec_p99
 bytes_total
 bytes_total_reliable
 bytes_total_voice
+bytestring
 c [1>H'
 c(>\,
 c(^a
@@ -42756,16 +42758,14 @@ p.ppBasis
 p.prime
 p.tpBasis
 p08@H^
-p0j 
+p0j0
 p0p@
 p250
-p2`/
-p2po
+p2p/
 p2{l
 p4Z3
 p5Z3
 p618
-p6pa
 p:(L
 p>?Set@Template@v8@@QEAAXV?$Local@VName@v8@@@2@V?$Local@VData@v8@@@2@W4PropertyAttribute@2@@Z
 p@0pqE5tsO?|1
@@ -43066,7 +43066,6 @@ payload + padding <= 16381
 payment gateway capabilities
 payment_row_usd
 payment_us_usd
-pb`/
 pbeWithMD2AndDES-CBC
 pbeWithMD2AndRC2-CBC
 pbeWithMD5AndCast5CBC
@@ -43080,6 +43079,7 @@ pbeWithSHA1And40BitRC2-CBC
 pbeWithSHA1And40BitRC4
 pbeWithSHA1AndDES-CBC
 pbeWithSHA1AndRC2-CBC
+pbp/
 pc64
 pcPathLengthConstraint
 pdm_reset_spawns

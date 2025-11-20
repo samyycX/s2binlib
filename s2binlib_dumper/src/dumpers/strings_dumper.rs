@@ -1,10 +1,17 @@
-use std::{fs::{self, File}, io::Write};
+use std::{
+    fs::{self, File},
+    io::Write,
+};
 
 use anyhow::Result;
 use log::info;
 use s2binlib::S2BinLib;
 
-pub fn dump_strings(s2binlib: &S2BinLib, dump_dir: &str, tracked_binaries: &[String]) -> Result<()> {
+pub fn dump_strings(
+    s2binlib: &S2BinLib,
+    dump_dir: &str,
+    tracked_binaries: &[String],
+) -> Result<()> {
     fs::create_dir_all(format!("{}/strings", dump_dir))?;
     for binary in tracked_binaries {
         info!("Dumping strings for {}", binary);

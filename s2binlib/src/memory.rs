@@ -18,7 +18,7 @@
  ***********************************************************************************/
 
 use anyhow::Result;
-use object::{BinaryFormat, Object, ObjectSection};
+use object::{Object, ObjectSection};
 
 use crate::is_executable;
 
