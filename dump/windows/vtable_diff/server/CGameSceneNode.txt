@@ -3,7 +3,7 @@ Virtual Function Count: 28
 Children Count: 3
 =============================================
 func_0     [ DIFF 3   ]                               ["CBodyComponentPoint::NetworkVar_m_sceneNode", "CBodyComponentSkeletonInstance::NetworkVar_m_skeletonInstance", "CSkeletonInstance"]
-    "48 89 5C 24 08 57 48 83 EC 20 8B FA 48 8D 05 0D"
+    "48 89 5C 24 08 57 48 83 EC 20 8B FA 48 8D 05 2D"
 func_1     [ DIFF 2   ]                               ["CBodyComponentSkeletonInstance::NetworkVar_m_skeletonInstance", "CSkeletonInstance"]
     "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_2     [ DIFF 2   ]                               ["CBodyComponentSkeletonInstance::NetworkVar_m_skeletonInstance", "CSkeletonInstance"]

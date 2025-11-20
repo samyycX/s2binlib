@@ -5,7 +5,7 @@ Children Count: 0
 func_0     [ DIFF 0   ]                               []
     "55 48 89 E5 53 48 89 FB 48 8D 7D E8 48 83 EC 28"
 func_1     [ DIFF 0   ]                               []
-    "55 48 89 E5 53 48 89 FB 48 83 EC 08 E8 DF 33 41"
+    "55 48 89 E5 53 48 89 FB 48 83 EC 08 E8 1F 34 41"
 func_2     [ DIFF 0   ]                               []
     "31 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_3     [ DIFF 0   ]                               []
@@ -25,9 +25,9 @@ func_9     [ DIFF 0   ]                               []
 func_10    [ DIFF 0   ]                               []
     "B8 02 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
 func_11    [ DIFF 0   ]                               []
-    "55 48 8D 05 D8 2C A6 00 48 89 E5 53 48 89 FB 48"
+    "55 48 8D 05 18 2D A6 00 48 89 E5 53 48 89 FB 48"
 func_12    [ DIFF 0   ]                               []
-    "55 48 8D 05 28 2C A6 00 48 89 E5 53 48 89 FB 48"
+    "55 48 8D 05 68 2C A6 00 48 89 E5 53 48 89 FB 48"
 func_13    [ DIFF 0   ]                               []
     "55 48 89 E5 41 57 49 89 FF 41 56 48 8D 3D DE 32"
 func_14    [ DIFF 0   ]                               []

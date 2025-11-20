@@ -247,6 +247,7 @@
  -retail 
  ... Skipping view model attachment creation.
  ... }
+ .@$J
  .CPlayer_GetNicknameList_Request
  .CPublishedFile_Publish_Response"2
  /&gt;
@@ -3759,7 +3760,6 @@ $taser_charge
 (end of input).
 (end of track)
 (fS{ggRcjh
-(fpxJ
 (from angle, to angle, time) - Spherical lerp of angle from->to based on time
 (h W#
 (h`H1pqA
@@ -4148,7 +4148,7 @@ $taser_charge
 ,m+=
 ,name:
 ,oYR
-,sK3H
+,sK3h
 ,section=
 ,value:
 ,}aK
@@ -4297,11 +4297,12 @@ $taser_charge
 -|\E
 -|p.
 . +F
-. DJ
-. EJ
-. HJ
-. NJ
-. sJ
+. ,J
+. 2J
+. 4J
+. 6J
+. KJ
+. OJ
 .$@b
 .%.-.3.7.9.?.W.[.o.y.
 .%X&1
@@ -4317,11 +4318,10 @@ $taser_charge
 ..CPlayer_GetNewSteamAnnouncementState_Response"_
 ..uR5&m
 ./#{
-.0*J
-.0,J
 .00cfg
-.0FJ
-.0~J
+.0MJ
+.0OJ
+.0kJ
 .4+w
 .4bb
 .5.}
@@ -9947,12 +9947,11 @@ $taser_charge
 .?AW4GenericPopupResult_t@@
 .?AW4ModifierCode@panorama@@
 .?AW4loadout_slot_t@@
-.@*J
-.@+J
-.@;J
-.@DJ
-.@qJ
-.@~J
+.@KJ
+.@LJ
+.@OJ
+.@UJ
+.@zJ
 .AJ[
 .AccountActivity
 .CBaseUserCmdPB
@@ -10148,13 +10147,12 @@ $taser_charge
 .N_v
 .OperationalStatisticElement"S
 .OperationalVarValue
-.P)J
-.P*J
+.P1J
+.P3J
 .P6A?AVCTransform@@AEBV0@0@Z
 .P6AXPEAVCSceneObject@@@Z
 .P6AXPEBVC_EconItemView@@AEAVCUtlBuffer@@HH_K@Z
 .PARTICLE_MESSAGE
-.PDJ
 .PEAV?$Global@VFunction@v8@@@v8@@
 .PEAVCImagePanel@panorama@@
 .PEAVCPanel2D@panorama@@
@@ -10174,8 +10172,8 @@ $taser_charge
 .PEBVCSteamProfileItems@@
 .PEBVC_EconItemView@@
 .PEBVILocalizationString@panorama@@
-.PFJ
 .PLACEHOLDER_VALUE
+.PMJ
 .PerFriendPreferences"*
 .PerFriendPreferences"U
 .PlayerCommendationInfo
@@ -10197,7 +10195,6 @@ $taser_charge
 .PublishedFileDetails.Tag
 .PublishedFileDetails.VoteData
 .Publishes a clouded user file to the Workshop.
-.P~J
 .Q.Ol
 .QuestType"
 .RequestPause_t
@@ -10477,11 +10474,11 @@ $taser_charge
 .\ssl\t1_lib.c
 .\ssl\t1_reneg.c
 .]R:
-.`)J
-.`*J
-.`+J
-.`;J
-.`~J
+.`1J
+.`2J
+.`BJ
+.`KJ
+.`xJ
 .a%|
 .beta
 .bmxz
@@ -10524,20 +10521,15 @@ $taser_charge
 .k_EMsgGCCStrike15_v2_PlayerOverwatchCaseUpdate
 .kv3
 .lbN
-.p)J
-.p*J
-.p.J
-.pCJ
-.pEJ
-.pFJ
-.p_J
+.p0J
+.p1J
+.pKJ
+.pMJ
 .party
 .pdata
 .placeholder.proto
 .png
 .pp@0
-.p}J
-.p~J
 .r&I|C
 .rdata
 .rdata$00
@@ -10684,7 +10676,6 @@ $taser_charge
 0 == ( pInstance->GetOwnerEntity()->GetEntityIdentity()->GetFlags() & EF_IN_STAGING_LIST )
 0 == all alive, any other number is the number the CT's need to rescue to win the round.
 0 == bilinear upsampe, 1 == FSR upsample, 2 == FSR + RCAS upsample
-0 MD
 0#0)070;0U0Y0[0g0q0y0}0
 0$2z4
 0&-[U
@@ -10730,6 +10721,7 @@ $taser_charge
 0=Never; 1=Only if there is a problem; 2=always
 0=low, 1=medium, 2=high, 3=ultra
 0@9=
+0@TD
 0CClientMsg_WorldUIControllerHasPanelChangedEvent
 0CCommunity_GetGamePersonalDataCategories_Request
 0CMsgGCCStrike15_v2_ClientRequestWatchInfoFriends
@@ -10745,7 +10737,6 @@ $taser_charge
 0T.Q
 0W/5
 0Z@q
-0daD
 0iN>/
 0k_EGCItemCustomizationNotification_ApplyKeychain
 0k_EGCItemCustomizationNotification_CasketInvFull
@@ -10759,7 +10750,6 @@ $taser_charge
 0k_EMsgGCCStrike15_v2_ClientRequestPlayersProfile
 0k_EMsgGCCStrike15_v2_MatchmakingGC2ClientAbandon
 0k_EMsgGCCStrike15_v2_MatchmakingGC2ClientReserve
-0lsD
 0pp@5tqE?|sO541
 0tU+xc:
 0x%.*s
@@ -11307,10 +11297,9 @@ $taser_charge
 5k_EMsgGCCStrike15_v2_ServerNotificationForUserPenalty
 5t?F
 5~EW
-6 0J
 6 9J
-6 jJ
-6 |J
+6 dJ
+6 wJ
 6#6165676;6M6O6S6Y6a6k6m6
 6#RDP#
 6%vi
@@ -11320,38 +11309,35 @@ $taser_charge
 6,2K
 6-(\
 6-zeZ
-60;J
+60<J
 6144
 62$|S)6f
 64CK
+6666666666666666
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\.\ssl\s3_enc.c
-6666666666666666p
 67-s
 6>J`
 6?NumberValue@Value@v8@@QEBA?AV?$Maybe@N@2@V?$Local@VContext@v8@@@2@@Z
 6?S.>
-6@1J
-6@4J
-6@LJ
+6@7J
+6@@J
 6@['
-6@dJ
-6@xJ
+6@qJ
 6E0C3V8\9]}
 6GAME_PARTICLE_MANAGER_EVENT_FREEZE_TRANSITION_OVERRIDE
 6GAME_PARTICLE_MANAGER_EVENT_SET_CONTROL_POINT_SNAPSHOT
 6H,N
 6K;L#k;{
 6O|T%
-6P8J
-6PMJ
-6P\J
-6PnJ
+6PBJ
 6Qd=
 6Returns the URL of the proper cloud server for a user.
 6True if the operation was successful, false otherwise.
 6_wEX
-6`2J
-6`_J
+6`8J
+6`;J
+6`SJ
+6`kJ
 6afD
 6bX+
 6c&0|vvX
@@ -11359,10 +11345,11 @@ $taser_charge
 6l13
 6lkc
 6myY;
-6p3J
+6p?J
+6pTJ
 6p]!
-6poJ
-6ptJ
+6pcJ
+6puJ
 6qo~
 6r-m_v
 6r1ij
@@ -11416,11 +11403,12 @@ $taser_charge
 8= zp
 8@HP:
 8A6j
-8B3(
-8B`8
+8B3H
 8CMsgGCCStrike15_v2_Client2GCEconPreviewDataBlockResponse
 8Client ID for which to count the number of issued tokens"
 8Csinf
+8F tJ
+8F0sJ
 8GZS
 8Gets the list of nicknames this user has for other users
 8If set, remove from ignore/block list instead of adding "\
@@ -11739,6 +11727,8 @@ $taser_charge
 =y.g^
 =|qM
 > %s
+> >J
+> \J
 >!-B
 >"<_
 >"I;6
@@ -11747,7 +11737,7 @@ $taser_charge
 >)[8
 >*`r
 >0 enemies, 0 teammates
->06J
+>0xJ
 >1w.
 >4|6eXg_e
 >77:
@@ -11755,16 +11745,16 @@ $taser_charge
 >8;I)
 >; xs:
 >= [%s] 
->@:J
 >B=~,
 >CURVE_TANGENT_LINEAR
 >Kb|
+>P=J
 >Sem
 >WK6
 >[^j
 >]q&`
 >`*-
->`5J
+>`AJ
 >cQ6
 >d`D$
 >fN46R^
@@ -11773,9 +11763,6 @@ $taser_charge
 >n{J
 >o}-XH
 >p00<
->p9J
->pZJ
->p`J
 >wpnHand_R
 >yhP
 >ztq
@@ -12248,17 +12235,14 @@ $taser_charge
 @08N
 @0pp
 @2&@
-@6 *J
-@6 ~J
-@6@)J
-@6`.J
-@6`}J
+@60jJ
+@6@1J
+@6`0J
 @80^
-@: ?
-@:P/
-@:`r
+@: 5
+@:@F
 @:e+
-@:p/
+@:p6
 @<:nq
 @>%>b
 @?SlowGetInternalField@Object@v8@@AEAA?AV?$Local@VData@v8@@@2@H@Z
@@ -12271,7 +12255,7 @@ $taser_charge
 @F(%
 @HPX
 @HPX&I
-@HPX`hvPOJ
+@HPX`hvpVJ
 @MfKZ
 @Pgl
 @Q~i
@@ -12323,7 +12307,7 @@ A<fP
 A>pP&
 A>x8
 AA Compromise
-AA:0?
+AA:PF
 AAAA-
 AAAA-%.*s
 AABBDirection
@@ -12684,6 +12668,7 @@ AcknowledgeNewItembyItemID
 AcknowledgeRentalExpiration
 Acknowledged_HasInsufficientPagefile
 Acknowledged_HasLowAvailableVirtualMemory
+Acl_debug_client_gamestats
 Acomposite_material_use_gpu
 AcquireSRWLockExclusive
 AcquireSRWLockShared
@@ -13613,7 +13598,6 @@ Beta
 BetaUniverse
 Bezier
 BgColor
-Bh%O
 Bh;+j
 Bidirectional_Messages
 Big Number part of OpenSSL 1.0.2j  26 Sep 2016
@@ -21658,7 +21642,6 @@ Found no entity at %d.
 Found soundscape entity "%s" with no soundscape name.
 FourQuaternions
 FourVectors
-FpXJ
 Frac
 Fractional component (ie. returns 0.34 for 12.34)
 Fractional sampling not implemented yet
@@ -24630,7 +24613,6 @@ JS_NUMBER
 JS_STRING
 JUMP
 JUMP_COND
-JY3x
 JZIX
 J_R=I)
 J`KL
@@ -27045,7 +27027,6 @@ OwnGameplayInfo
 OwnerContext
 O~`L{
 P A@~t
-P MD
 P!bxo
 P(UH 
 P-192
@@ -27060,8 +27041,10 @@ P2P Voice
 P2P ping to "%s". Timed out after %.2fms
 P2P_Messages
 P5[1
+P60LJ
 P:   
 P@HPX`hpx
+P@TD
 PAGN_4
 PANEL_ID
 PANORAMA_LAYOUTFILE
@@ -27660,7 +27643,6 @@ PauseMenuBackground
 PauseSound
 Pawn: %s
 Pawn: (%d) Name: %s
-PdaD
 Pe6^
 Pearlescence Mask
 PeekNamedPipe
@@ -28278,7 +28260,6 @@ Pushes an identifier used to group overlays. Overlays marked with this identifie
 Put all physics in all the worlds to sleep
 Pyramid
 P|iC
-Q$4p
 Q(Optional) If supplied, the resulting published file's Id is appended to the URI.
 Q*hd
 Q/xtJ2
@@ -28766,6 +28747,7 @@ Rebinding key %s to new command %s.
 Rebuild list of subscribed items from steam and download/update all files.
 RebuildDebugLayout
 RebuildOptions
+Received CCSUsrMsg_DisconnectToLobby
 Received P2P ping reply %d/4 from "%s". Round trip time %.2fms. %s
 Received SDR ticket for %s
 Received client welcome from GC.
@@ -33964,8 +33946,9 @@ XWY]
 XYD%
 X`hr
 Xd3h
-Xf0pJ
+Xf0vJ
 XfJ7
+XfPwJ
 XjfR
 XpDataJSO
 XpNeededForDrop
@@ -34344,6 +34327,7 @@ Z~wl
 ]o~P
 ]r}R{
 ]}Wl
+^ #J
 ^(BM
 ^+#_
 ^->6
@@ -34520,24 +34504,22 @@ _var
 _xU`u
 _{j!g>
 _}eOk
-` MD
 `&H|&
 `'>W
 `'~}
-`20?
 `28)fk
+`2PF
 `3?New@Array@v8@@SA?AV?$Local@VArray@v8@@@2@PEAVIsolate@2@H@Z
 `47/
-`6 +J
-`60-J
-`6`,J
-`6`-J
-`6pDJ
-`: .
-`:P-
+`603J
+`6@2J
+`6P4J
+`:@5
+`:p4
 `:zQF
 `@ `QE
 `@"Gg
+`@TD
 `Ch.
 `D$daM-l
 `DZG
@@ -34558,7 +34540,6 @@ _}eOk
 `bB"(!
 `cC#( 
 `copy constructor closure'
-`daD
 `default constructor closure'
 `dub`D
 `dynamic atexit destructor for '
@@ -34580,7 +34561,6 @@ _}eOk
 `local static thread guard'
 `local vftable constructor closure'
 `local vftable'
-`lsD
 `managed vector constructor iterator'
 `managed vector copy constructor iterator'
 `managed vector destructor iterator'
@@ -36168,6 +36148,7 @@ bytes_sec_p99
 bytes_total
 bytes_total_reliable
 bytes_total_voice
+bytestring
 bzip2/libbzip2: internal error number %d.
 c [1>H'
 c(>\,
@@ -36705,7 +36686,6 @@ cl_deathcam_audio_mix_phase2_fade_time
 cl_deathcampanel_position_dynamic
 cl_deathnotices_show_numbers
 cl_debounce_zoom
-cl_debug_client_gamestats
 cl_debug_force_push_to_talk
 cl_debug_overlay_fullposition
 cl_debug_round_stat_submission
@@ -39783,7 +39763,6 @@ f%g}
 f%wyLmX:
 f&dy
 f-=v
-f0UJ
 f1cK%
 f4%B.&
 f5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
@@ -39791,6 +39770,7 @@ f@-r
 fA,'
 fCSunday
 fP;y
+fP\J
 fP~V
 fTimeScale
 fU).
@@ -48711,10 +48691,10 @@ mzP"T
 n < (int)sizeof(ctx->enc_data)
 n >= 0
 n does not equal p q
+n mJ
 n-resize
 n03>Pu
 n0?X
-n0mJ
 n1Z 
 n2{hb
 n5cM
@@ -48722,7 +48702,6 @@ n6j/
 n:2C[
 n?X9t?
 n@PK
-n@lJ
 nBCSGO/Icon Editor
 nBits != 32
 nCRD
@@ -48748,6 +48727,7 @@ nNumerator
 nObjects
 nObserverMode
 nPriority != NETWORK_FIELD_CHANGE_DEFAULT_PRIORITY
+nPtJ
 nRetiredAtNodeID
 nSRecord
 nSaved
@@ -48769,6 +48749,7 @@ nValue
 n_actions
 n_reload
 n`3i
+n`sJ
 nadeCount
 namc
 name
@@ -49609,7 +49590,6 @@ owner_soid
 ownername
 owns
 oyster
-p MD
 p is not prime
 p not prime
 p!PcA1|
@@ -49622,10 +49602,10 @@ p.ppBasis
 p.prime
 p.tpBasis
 p08@H^
-p0jP
+p0WD
+p0jp
 p0p@
 p250
-p2`8
 p2p_FightingGame_Connection
 p2p_FightingGame_GameData
 p2p_Ping
@@ -49642,11 +49622,11 @@ p2{l
 p4Z3
 p5Z3
 p618
-p6`cJ
 p:(L
 p>?Set@Template@v8@@QEAAXV?$Local@VName@v8@@@2@V?$Local@VData@v8@@@2@W4PropertyAttribute@2@@Z
 p@0pqE5tsO?|1
 p@HPX`h
+p@TD
 pAShatterDamageCause
 pCheckpointName
 pD4t
@@ -50076,7 +50056,6 @@ pbeWithSHA1AndDES-CBC
 pbeWithSHA1AndRC2-CBC
 pc64
 pcPathLengthConstraint
-pdaD
 peachpuff
 pearlescent
 pedestal display model
@@ -50493,7 +50472,6 @@ playsoundscape
 playtime
 playtime_2weeks
 playtime_forever
-plsD
 plum
 point
 point arithmetic failure
@@ -55387,6 +55365,7 @@ v$m%
 v&l(
 v'A>M6
 v)56
+v0YJ
 v0o/5
 v1(0)
 v1GZ
@@ -56569,7 +56548,6 @@ z~")
 ~,Vg
 ~,ue`
 ~/;0
-~0EJ
 ~5c^
 ~7'j
 ~9ob
@@ -56579,12 +56557,13 @@ z~")
 ~CPanel2D - destroy members
 ~If D
 ~P2T
-~PEJ
+~PLJ
 ~R65Fu
 ~X3>
 ~[I,
 ~^1W1X;R3_
 ~_K&
 ~jLRG
+~pLJ
 ~w]UG
 ~yhZ
