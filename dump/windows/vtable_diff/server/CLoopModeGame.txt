@@ -15,7 +15,7 @@ func_4     [ DIFF 0   ]                               []
 func_5     [ DIFF 0   ]                               []
     "33 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_6     [ DIFF 0   ]                               []
-    "40 53 48 83 EC 60 48 8D 05 93 69 AC 00 48 C7 44"
+    "40 53 48 83 EC 60 48 8D 05 B3 69 AC 00 48 C7 44"
 func_7     [ DIFF 0   ]                               []
     "32 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_8     [ DIFF 0   ]                               []

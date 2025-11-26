@@ -3,11 +3,11 @@ Virtual Function Count: 23
 Children Count: 0
 =============================================
 func_0     [ DIFF 0   ]                               []
-    "40 53 48 83 EC 20 48 8B DA 48 8D 15 F0 CD 01 01"
+    "40 53 48 83 EC 20 48 8B DA 48 8D 15 E0 CD 01 01"
 func_1     [ DIFF 0   ]                               []
-    "48 8D 05 91 19 03 01 C3 CC CC CC CC CC CC CC CC"
+    "48 8D 05 81 19 03 01 C3 CC CC CC CC CC CC CC CC"
 func_2     [ DIFF 0   ]                               []
-    "48 89 5C 24 08 57 48 83 EC 20 48 8D 05 3F F4 BB"
+    "48 89 5C 24 08 57 48 83 EC 20 48 8D 05 4F F4 BB"
 func_3     [ DIFF 0   ]                               []
     "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_4     [ DIFF 0   ]                               []

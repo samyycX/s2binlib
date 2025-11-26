@@ -30,8 +30,8 @@ mod dumpers {
     pub mod entity_dumper;
     pub mod gamesystem_dumper;
     pub mod networkvar_dumper;
-    pub mod vtable_dumper;
     pub mod strings_dumper;
+    pub mod vtable_dumper;
 }
 
 #[derive(Parser)]
