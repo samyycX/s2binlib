@@ -182,14 +182,14 @@
  'L>[
  ('" 
  (08@HPX`hpx
- (08@HPX`jpp
- (08@HPXb@
- (08@HPZpp
- (08@HR@
- (08@J@
- (08@Jpp
- (0:pp
- (0X`hpz@
+ (08@HPX`j0r
+ (08@HPXbp
+ (08@HPZ0r
+ (08@HRp
+ (08@J0r
+ (08@Jp
+ (0:0r
+ (0X`hpzp
  (IP "%s")
  (Start: 
  (Texture)
@@ -212,7 +212,7 @@
  -noscreenshot
  -product "%s"
  ... }
- .0zE
+ .`{E
  0"r$4&
  0: read from NULL
  1: write to NULL
@@ -1153,60 +1153,61 @@ $tI(knN
 'Z3'
 'j%-A+
 'k|7O
+(!Z\
+(![\
+(!r\
 (#GameUI_Disconnect_LoopLevelLoadActivate
 (#GameUI_Disconnect_RemoteProblem_BadCert
 (#GameUI_Disconnect_RemoteProblem_Timeout
 (#Player_DisconnectReason_InputAutomation
-(%0\
 (%d dupes)
 (%d)
 (%d,%d)
+(%h\
 (%u)
-(%u\
 (("**,
 ((6"8(:,<*>
-()%\
-()1\
+()#\
+()&\
+()*\
+()s\
 (*MARK) must have an argument
 (*VERB) not recognized
 (*d/%
-(-R\
-(-\\
-(-~\
 (0`hpx
-(1G\
-(1b\
+(1>\
 (1x*
-(1{\
 (27>?<:20./-(
 (3?0
 (4%I!
-(5 \
-(52\
-(5J\
-(5a\
+(5"\
+(5K\
+(5M\
 (64-bit process)
 (8GXgw
-(9Y\
-(=(\
-(=e\
+(9H\
+(9]\
+(=.\
+(=\\
+(=p\
 (>aI
 (?3s'?
 (?R or (?[+-]digits must be followed by )
-(A'\
-(A]\
 (Addresses differ: existing '%s' @ '%p' != requested '%s' @ '%p')
 (Direct Routing)
-(EU\
+(E@\
 (Existing entry.)
 (Expecting %s)
 (Expecting EOF)
-(I#\
 (I%<!}9
-(MI\
-(MZ\
+(I5\
+(IA\
+(M)\
+(Mb\
+(Ml\
 (Module names differ: existing '%s' != requested '%s')
 (Modules differ: existing '%p' != requested '%p')
+(Mu\
 (NETWORK_DISCONNECT_INVALID_MESSAGE_ERROR
 (NETWORK_DISCONNECT_KICKED_HOSTAGEKILLING
 (NETWORK_DISCONNECT_KICKED_INSECURECLIENT
@@ -1216,53 +1217,54 @@ $tI(knN
 (NETWORK_DISCONNECT_SERVER_REQUIRES_STEAM
 (NETWORK_DISCONNECT_STEAM_AUTHALREADYUSED
 (None)
+(QW\
 (QfT
+(Qr\
 (Relay)
 (T?j?Y
-(U*\
-(UH\
+(U$\
+(U0\
+(UB\
+(UZ\
 (Untested Direct Routing)
-(Uy\
+(Uq\
 (VM&
-(Y3\
-(Yg\
-(]R\
-(]c\
-(a&\
-(a`\
+(Yi\
+(]8\
+(a7\
+(am\
 (cannot determine missing fields for lite message)
 (channel = 
 (dump took %.1fms)
+(ee\
 (end of input).
-(iJ\
-(i[\
-(ib\
-(m-\
-(m0\
-(mL\
-(ma\
+(i-\
+(i3\
+(iw\
+(mY\
 (merge 
-(mu\
+(mj\
 (no landmark)
 (no reason given)
 (no server running)
 (none)
 (null)
 (nullptr)
-(q9\
-(qX\
+(q+\
 (root)
 (secure mode enabled, connected to Steam3) 
 (secure mode enabled, disconnected from Steam3) 
 (syU
 (tv_playcast_showerrors will display the following headers: %s)
+(u%\
+(u'\
 (u/\
-(u5\
+(u:\
+(uX\
 (unknown)
-(y$\
-(yx\
-(}Q\
-(}~\
+(yC\
+(}b\
+(}s\
 ) ='
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 )"5G
@@ -1325,8 +1327,6 @@ $tI(knN
 *NETWORK_DISCONNECT_STRINGTABLEMSG_OVERFLOW
 *StO9>T
 *gC 
-*p1%
-*pY$
 *zvC
 *~ m
 + =(
@@ -1363,7 +1363,6 @@ $tI(knN
 +shift
 +w?FFv?
 , "%s"
-, 0%
 , Position
 , at <EOF>
 , at offset %d
@@ -1385,6 +1384,7 @@ $tI(knN
 ,=@"
 ,?%[
 ,@Zs
+,@u.
 ,EZr
 ,HR>O
 ,NETWORK_DISCONNECT_REJECT_CONNECT_FROM_LOBBY
@@ -1394,6 +1394,7 @@ $tI(knN
 ,NETWORK_DISCONNECT_REMOTE_TIMEOUT_CONNECTING
 ,NETWORK_DISCONNECT_STEAM_DENY_BAD_ANTI_CHEAT
 ,NETWORK_DISCONNECT_STEAM_LOGGED_IN_ELSEWHERE
+,P1%
 ,Y@d
 ,d3c&
 ,j.b0^2`4^6`8^:f<
@@ -1472,7 +1473,8 @@ $tI(knN
 -vulkan
 -worldwide
 -~??
-. }E
+. qE
+. ~E
 .!E>
 .(!>
 .(_!
@@ -1482,7 +1484,9 @@ $tI(knN
 ..\content
 ..om?
 .00cfg
-.0}E
+.0pE
+.0qE
+.0wE
 .7=-l
 .9GXdx
 .>PJ;I:qE>
@@ -2788,6 +2792,7 @@ $tI(knN
 .?AVsystem_error@std@@
 .?AVtask_canceled@Concurrency@@
 .?AVtype_info@@
+.@pE
 .BNW^h
 .C2S_CONNECT_SameProcessCheck
 .C2S_CONNECT_SameProcessCheck"q
@@ -2857,12 +2862,12 @@ $tI(knN
 .PLACEHOLDER_VALUE
 .PrefetchType"h
 .ProtoFlattenedSerializer_t
-.PwE
+.P~E
 .RequestPause_t
 .SignonState_t
 .TBMD
 .VoiceDataFormat_t:
-.`{E
+.`~E
 .arc
 .arj
 .bak
@@ -2898,7 +2903,6 @@ $tI(knN
 .lzh
 .pdata
 .placeholder.proto
-.pqE
 .rdata
 .rdata$00
 .rdata$T
@@ -2981,9 +2985,10 @@ $tI(knN
 0123456789abcdefghijklmnopqrstuvwxyz
 03<?
 08@HP
-08@HRpp
-08@J@
-08Bpp
+08@HR0r
+08@Jp
+08B0r
+0: 3%
 0: Force z prepass off. 1: Force on. -1: Don't force
 0: Use normals reconstructed from depth. 1: Output correct normals in z prepass.
 0: run all send jobs on main thread; 1: send jobs run asynchronously (except on dedicated server); 2: send jobs asynchronously; 3: send jobs run in parallel but block to not overlap the next tick; 4: main server clients' send jobs run in parallel, then HLTV server jobs; this approximately matches pre-async profile for a single HLTV server configuration
@@ -2994,14 +2999,13 @@ $tI(knN
 0B_u
 0C&C
 0E>X
-0L'A
 0NETWORK_DISCONNECT_KICKED_VACNETABNORMALBEHAVIOR
 0NETWORK_DISCONNECT_REJECT_SERVERCDKEYAUTHINVALID
 0T.Q
 0X8b?~
 0iN>/
-0l@A
 0x%x,
+0|(A
 0|t?L
 0|t?uj
 0}~NU
@@ -3018,8 +3022,8 @@ $tI(knN
 127.0.0.1
 16777215"R
 16777215B$
+16:05:04
 18!P+*
-19:05:44
 1:1: Tokens : ( T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | TOK_COLON | OPEN_BRACE | CLOSE_BRACE | OPEN_PAREN | CLOSE_PAREN | OPEN_BRACKET | CLOSE_BRACKET | SEMICOLON | OP_EQUAL | COMMA | DOUBLE_AND | NEGATIVE_TOK | DOUBLE_OR | LITERAL_TRUE | LITERAL_FALSE | POS_INTLITERAL | POS_FLOATLITERAL | ID | DOUBLE_QUOTED_STRING | SINGLE_QUOTED_STRING | SINGLE_LINE_COMMENT | ML_COMMENT | WS | UNRECOGNIZED );
 1>O\kw
 1?Uo
@@ -3072,6 +3076,7 @@ $tI(knN
 2/.google.protobuf.DescriptorProto.ExtensionRange
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 200000
+203%
 21.CSVCMsg_PacketEntities.outofpvs_entity_updates_t
 22.CSVCMsg_PacketEntities.non_transmitted_entities_t
 23#"
@@ -3079,14 +3084,12 @@ $tI(knN
 25.CSource2Metrics_MatchPerfSummary_Notification.Client
 25:Q
 26.google.protobuf.EnumDescriptorProto.EnumReservedRange
-2@f'
 2CZu
 2Hax
 2NK?
 2Ogx
-2PG$
 2i0/
-2p1%
+2pg'
 2|9+
 3 X<
 3$EE
@@ -3130,15 +3133,16 @@ $tI(knN
 5c;3E
 5y?4
 5{ ~
+6 }E
+60{E
 64-bit
 6>J`
 6?k 6?t
-6@yE
 6D)!
 6GQ^h~
 6KT3c7
 6NK>
-6p|E
+6pzE
 6s?fBbEcJYG[I[NYVP\B]@f;g<h<u4{,
 6tmT
 6uu?>
@@ -3159,17 +3163,17 @@ $tI(knN
 8#GameUI_Disconnect_LocalProblem_HostedServerPrimaryRelay
 8%`~
 8'>0
-8-6\
 80?"
 84f>$
 87.ui
 87g}
 8>0RF>
 8@HP:
-8@Jpp
+8@J0r
 8A3b
-8Bpp
+8B0r
 8Csinf
+8MF\
 8NETWORK_DISCONNECT_LOCALPROBLEM_HOSTEDSERVERPRIMARYRELAY
 8Smt
 8W?i
@@ -3178,6 +3182,7 @@ $tI(knN
 8ke?;
 8t R
 8}WW`
+9"d\
 9*ubC'
 9=[>
 9=aA\E
@@ -3202,6 +3207,8 @@ $tI(knN
 :&G/
 :'Y"!
 :-+a
+:03%
+:04,
 :1X:
 ::ExecGameTypeCfg
 :>)*
@@ -3210,8 +3217,6 @@ $tI(knN
 :>gM|?
 :>t6k'
 :?(\O?
-:@1%
-:@f'
 :B&?
 :F<N:V>
 :H?'mK?
@@ -3219,8 +3224,8 @@ $tI(knN
 :^V=
 :^V=/
 :i/?
-:p1%
-:pY$
+:p2%
+:pg'
 ;%5F
 ;%I*
 ;*xh
@@ -3317,7 +3322,6 @@ $tI(knN
 >`#I>
 >`#I>`#I
 >`*-
->`rE
 >a/A
 >cQ6
 >fff?fff?fff?fff?invalid_hitbox
@@ -3711,9 +3715,8 @@ $tI(knN
 @08@HPX`hpx
 @08N
 @2&@
-@2pp
+@20r
 @>%>b
-@>ptE
 @GetProfile_ultrafast
 @HPX
 @HPX&I
@@ -3721,7 +3724,8 @@ $tI(knN
 @Y>)F
 @^8U)zj
 @b;zO]
-@htP
+@hCY
+@htp
 @i-kuX
 @l?O#m?
 A command with the specified name already exists. Cannot create an alias with the same name.
@@ -3737,7 +3741,6 @@ A2r>
 A7/s
 A>l$/
 A>pP&
-AA:p1%
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
@@ -3913,7 +3916,6 @@ Av??
 Avestan
 Avg Keyframe: %s Bytes, %.3f ms (%.1f max, %.1f recent max)
 A{v8
-B e'
 B"D%'R
 B2Bk
 B5@S
@@ -3935,7 +3937,7 @@ BGRA8888_LINEAR
 BGRX8888
 BGRX8888_LINEAR
 BKbhTb~XBK!;
-BP0%
+BPf'
 BROADCAST
 BSR_ANYCRLF)
 BSR_UNICODE)
@@ -4116,9 +4118,9 @@ C:\buildworker\csgo_rel_win64\build\src\engine2\looptypeclientserver.cpp
 C:\buildworker\csgo_rel_win64\build\src\engine2\networkclientservice.cpp
 C:\buildworker\csgo_rel_win64\build\src\engine2\networkgameclient.cpp
 C:\buildworker\csgo_rel_win64\build\src\engine2\networkgameclient.cpp:2674
-C:\buildworker\csgo_rel_win64\build\src\engine2\networkgameclient.cpp:3650
-C:\buildworker\csgo_rel_win64\build\src\engine2\networkgameclient.cpp:4300
-C:\buildworker\csgo_rel_win64\build\src\engine2\networkgameclient.cpp:4591
+C:\buildworker\csgo_rel_win64\build\src\engine2\networkgameclient.cpp:3655
+C:\buildworker\csgo_rel_win64\build\src\engine2\networkgameclient.cpp:4305
+C:\buildworker\csgo_rel_win64\build\src\engine2\networkgameclient.cpp:4596
 C:\buildworker\csgo_rel_win64\build\src\engine2\networkgameclientbase.cpp
 C:\buildworker\csgo_rel_win64\build\src\engine2\networkgameclientbase.cpp:2802
 C:\buildworker\csgo_rel_win64\build\src\engine2\networkgameclientbase.cpp:4314
@@ -4183,6 +4185,7 @@ CBidirMsg_PredictionEvent
 CBidirMsg_RebroadcastGameEvent
 CBidirMsg_RebroadcastSource
 CBroadcastPlayer
+CBroadcastPlayer got DEM_Stop, server tick %d
 CBroadcastPlayer::SkipToTick( %d, %u )
 CBugService
 CCIR601 sampling not implemented yet
@@ -4527,8 +4530,6 @@ CL:  Connection to '%s' failed
 CL:  Connection to server '%s' timed out, disconnecting
 CL:  Deferring SIGNONSTATE_SPAWN (spawn count %d) message
 CL:  Disconnected - Client delta ticks out of order!
-CL:  Disconnecting from server: %s
-CL:  Disconnecting from server: changelevel
 CL:  FCVAR_CHEAT and FCVAR_REPLICATED cvars reverted to defaults (remote connection).
 CL:  Finished logging most recent client ticks.
 CL:  Forcing %s to blocking load during demo playback due to having incomplete/updateable manifest
@@ -5161,7 +5162,7 @@ Connected [%s] [last packet %.3f sec ago]
 Connecting to %s
 Connection State: Connected=%s, Ever=%s
 Connection closed: %s.
-Connection lost: %s.
+Connection lost: %s
 Connection rejected by game
 Connection timeout detected at source engine layer after %i retries.
 Connection to Steam servers lost.
@@ -5409,7 +5410,9 @@ Disconnect: %s
 DisconnectAllClients
 Disconnected
 Disconnected from server: %s
-Disconnection during connection phase. Sign-on state: %d (%s). Disconnect reason: %d (%s).
+Disconnecting from server: %s
+Disconnecting from server: changelevel
+Disconnection during connection phase. Sign-on state: %d (%s). Disconnect reason: %s.
 Dispatch clients to relay proxies: 0=never, 1=if appropriate, 2=always
 DispatchEvent( %s ) took %f msecs
 Dispatching EventAppShutdown_t {
@@ -6945,6 +6948,7 @@ Non-repeated field "
 None
 Not Connected
 Not a JPEG file: starts with 0x%02x 0x%02x
+Not a SourceTV proxy
 Not creating socket NS_HLTV due to -nohltv command line option.
 Not implemented yet
 Not logged into Steam, Steam auth will fail
@@ -6954,7 +6958,7 @@ Not supported.
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Note: should use "addip" instead of "banip".
 Nov  4 2025
-Nov 11 2025
+Nov 17 2025
 November
 Now recording to "%s", immediate mode, recorded length so far is %s.
 Now recording to "%s", recorded length so far is %s.
@@ -7090,12 +7094,12 @@ Overrides the max players reported to prospective clients
 Overriding minidump handler with Engine2MinidumpFunction
 P!&#
 P#7)^
-P08@J@
-P08JP
+P08@Jp
+P08J
 P08N
-P2pp
-P60tE
+P20r
 P6_)
+P6`uE
 P:S;A
 P>q_Y~
 P?2+
@@ -7108,7 +7112,6 @@ PFT_SOUND
 PHrk
 PInstruction_t<41>::Run
 PInstruction_t<42>::Run
-PL'A
 PLACEHOLDER_VALUE
 PLATFORM
 PLAYBACK: At end of data
@@ -7224,8 +7227,7 @@ Phoenician
 Physics interface checksum is 0x%08X, expected 0x%08X. One of the binaries is out of date, please rebuild %s.
 PhysicsBuilderMgr001
 Ping
-Pjpp
-Pl@A
+Pj0r
 Plain assert text (has prefix)
 Plain general text (no prefix)
 Plat_AlertUser
@@ -7437,6 +7439,7 @@ ProcessClassInfo: can't allocate %d C_ServerClassInfos.
 ProcessClassInfo: invalid class index (%d).
 ProcessPacketEntitiesWorkItem_Decode: DecodeClassBaseline(%d) failed for class %s.
 ProcessReadPacketEntitiesWorkItems
+ProcessServerInfo failed
 ProcessServerInfo( %s : %s : #%d ) - client requesting connection abort!
 ProcessServerInfo: Failed to initialize the game client!
 ProcessServerInfo: Failed to parse the game session manifest!
@@ -7471,6 +7474,7 @@ PulseSymbol_t
 PulseValueType_t
 Puts the server into extremely low CPU usage mode when no clients connected
 P{}b=
+P|(A
 P}V<4 
 Q #<
 Q%llx,
@@ -7626,6 +7630,7 @@ Rejecting connection request from %s (reservation cookie 0x%llx), server is rese
 Rejecting reservation because sv_shutdown was requested.
 Relay "%s", connect to %s (GSID:%s)
 Relay "%s", not connected.
+Relay connecting to a different upstream server
 Relay proxies retry connection after network timeout
 Relay server is hibernating
 Relay server waking up from hibernation
@@ -9202,7 +9207,7 @@ X?/QY?s
 X?OsX?
 X?wm
 XSzi
-X`hrpp
+X`hr0r
 Xn1G
 Xr?9
 XsBI
@@ -9227,13 +9232,11 @@ Z?SHX?
 Z@&LHA'
 Z@1~+
 ZOCg
-ZP0%
 ZPKE?81("
 ZW][Rbmxv
 Z\>z8
 Zmbw
 Zod(^?
-Zp1%
 Zpm"U
 Zq",9
 [ %d ]%n
@@ -9292,6 +9295,7 @@ Zq",9
 [test]
 [unknown]
 [~J!
+\ _'
 \ at end of pattern
 \"""
 \$gm?
@@ -9418,28 +9422,27 @@ _root_keyname
 _spawngroup_logging/log_%s_group_%s.txt
 _temp_mapcycle.txt
 `#I>
-`%H\
 `+!]?
 `-uRQg
-`2p1%
-`2pp
+`20r
 `3Q"X
-`:@X'
-`:pp
+`6 pE
+`:0r
+`:pY'
 `>r1
 `?& 
 `?'N
 `?8H
 `?NH]?E
 `?m'_?&~]?(
+`EX\
 `F(>
-`L'A
 `RTTI
 `anonymous namespace'
-`bpp
+`b0r
 `copy constructor closure'
+`d0r
 `default constructor closure'
-`dpp
 `dynamic atexit destructor for '
 `dynamic initializer for '
 `eh vector constructor iterator'
@@ -9447,9 +9450,8 @@ _temp_mapcycle.txt
 `eh vector destructor iterator'
 `eh vector vbase constructor iterator'
 `eh vector vbase copy constructor iterator'
-`htP
+`htp
 `hyz
-`l@A
 `local static guard'
 `local static thread guard'
 `local vftable constructor closure'
@@ -9464,7 +9466,6 @@ _temp_mapcycle.txt
 `string'
 `typeof'
 `udt returning'
-`ur\
 `vbase destructor'
 `vbtable'
 `vcall'
@@ -9476,8 +9477,7 @@ _temp_mapcycle.txt
 `vector vbase copy constructor iterator'
 `vftable'
 `virtual displacement map'
-`}7\
-`}s\
+`|(A
 a numbered reference must not be zero
 a!M(
 a&M-=Z]<i*k)n-t&q&p&|
@@ -10262,6 +10262,7 @@ expect_default_outflow
 expected_long_tick
 expected_long_tick_reason
 expected_return_type
+expecting to re-create serializers from server serializers
 expr
 extend .$0 {
 extendee
@@ -10504,10 +10505,10 @@ h0'D
 h>1my
 h?oT
 hG?)
-hIf\
 hJ4%
 hPU3
 hTarget
+hYv\
 has_pvs_vis_bits_deprecated
 hb:?
 header crc mismatch
@@ -10565,7 +10566,7 @@ hostname
 hostname : %s
 hostname_in_client_status
 hostport
-hpz@
+hpzp
 hscript
 hscript_lightbinding
 http Send %.3f ms ave, %.3f ms max
@@ -11359,17 +11360,17 @@ owner dead
 oz>!km>
 p08@H^
 p0p@
+p20r
 p2p_listpeers
 p2p_ping "%s"
-p2pp
 p4edit
+p6@vE
 p?ff
 p@HPX`h
 pClass
 pClass->m_ClassID(%i) >= %i
 pClient
 pCm)
-pL'A
 pMessage
 pServerClass
 pYa(bu
@@ -11401,7 +11402,7 @@ pause
 pause_group
 pause_type
 paused
-pbpp
+pb0r
 pc64
 peer
 pending
@@ -11424,13 +11425,11 @@ picks_bans
 ping
 ping_avg_ms
 pitch
-pl@A
 playback_frames
 playback_ticks
 playback_time
 playcast
 playcast: %d dem_consolecmd [%s]
-playcast: %d dem_stop
 playcast: Demo message, tick %i, %i bytes
 playcast: Packet tick %d size %u
 playdemo
@@ -11520,6 +11519,7 @@ purecall
 push_var_values
 py_generic_services
 pz&"
+p|(A
 p}?w
 qIU<
 qM1H
@@ -11539,7 +11539,6 @@ r?dar?
 rA?7
 rEy5
 rFg7
-rPG$
 r_add_views_in_pre_output
 r_always_render_all_windows
 r_aspectratio
@@ -12654,7 +12653,6 @@ z(#d
 z?Mbz?H5z?
 z?_i
 zFarCull
-zP0%
 zPrePassNormals
 zY;>u:m
 z_AMC

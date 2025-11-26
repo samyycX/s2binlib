@@ -5,13 +5,13 @@ Children Count: 1
 func_0     [ DIFF 0   ]                               []
     "48 39 77 58 74 0A C3 66 0F 1F 84 00 00 00 00 00"
 func_1     [ DIFF 1   ]                               ["CHLTVClient"]
-    "55 48 8D 05 70 F4 27 00 48 89 E5 41 54 53 48 89"
+    "55 48 8D 05 E8 13 28 00 48 89 E5 41 54 53 48 89"
 func_2     [ DIFF 1   ]                               ["CHLTVClient"]
-    "55 48 8D 05 F0 E2 27 00 48 89 E5 41 54 53 48 89"
+    "55 48 8D 05 C8 00 28 00 48 89 E5 41 54 53 48 89"
 func_3     [ DIFF 1   ]                               ["CHLTVClient"]
     "55 45 0F B6 C9 48 89 E5 41 57 41 56 49 89 FE 41"
 func_4     [ DIFF 1   ]                               ["CHLTVClient"]
-    "80 3D 59 F2 2E 00 00 55 48 89 E5 41 54 49 89 F4"
+    "80 3D 59 07 2F 00 00 55 48 89 E5 41 54 49 89 F4"
 func_5     [ DIFF 1   ]                               ["CHLTVClient"]
     "55 48 89 E5 41 57 41 56 41 55 41 54 53 48 89 FB"
 func_6     [ DIFF 0   ]                               []
@@ -21,17 +21,17 @@ func_7     [ DIFF 1   ]                               ["CHLTVClient"]
 func_8     [ DIFF 1   ]                               ["CHLTVClient"]
     "8B 47 64 85 C0 75 09 C3 0F 1F 84 00 00 00 00 00"
 func_9     [ DIFF 1   ]                               ["CHLTVClient"]
-    "55 45 31 C0 31 F6 B9 FF FF FF FF 48 8D 15 64 30"
+    "55 45 31 C0 31 F6 B9 FF FF FF FF 48 8D 15 A7 77"
 func_10    [ DIFF 0   ]                               []
     "55 48 89 E5 41 55 49 89 D5 41 54 49 89 F4 53 48"
 func_11    [ DIFF 1   ]                               ["CHLTVClient"]
     "55 66 0F 6E C6 48 89 E5 41 54 66 41 0F 7E C4 53"
 func_12    [ DIFF 1   ]                               ["CHLTVClient"]
-    "F3 0F 10 0D 64 5D BA FF 0F 28 D1 F3 0F 5F D0 F3"
+    "F3 0F 10 0D 04 89 BA FF 0F 28 D1 F3 0F 5F D0 F3"
 func_13    [ DIFF 0   ]                               []
     "48 8B 7F 58 48 85 FF 74 07 48 8B 07 FF 60 28 90"
 func_14    [ DIFF 1   ]                               ["CHLTVClient"]
-    "55 48 89 E5 41 54 49 89 FC 53 31 DB E8 4F 3C FF"
+    "55 48 89 E5 41 54 49 89 FC 53 31 DB E8 DF 27 FF"
 func_15    [ DIFF 1   ]                               ["CHLTVClient"]
     "55 48 89 E5 41 57 41 56 4C 8D BD B0 FD FF FF 41"
 func_16    [ DIFF 1   ]                               ["CHLTVClient"]
@@ -57,7 +57,7 @@ func_25    [ DIFF 0   ]                               []
 func_26    [ DIFF 0   ]                               []
     "55 48 89 E5 53 48 89 FB 48 83 EC 08 48 8B 56 48"
 func_27    [ DIFF 1   ]                               ["CHLTVClient"]
-    "55 48 8D 05 F8 19 2A 00 48 89 E5 41 57 41 56 41"
+    "55 48 8D 05 98 B4 29 00 48 89 E5 41 57 41 56 41"
 func_28    [ DIFF 0   ]                               []
     "8B 46 70 83 F8 07 74 58 55 48 89 E5 83 F8 02 7E"
 func_29    [ DIFF 1   ]                               ["CHLTVClient"]
@@ -77,7 +77,7 @@ func_35    [ DIFF 1   ]                               ["CHLTVClient"]
 func_36    [ DIFF 0   ]                               []
     "55 48 89 E5 41 57 41 56 41 55 41 54 49 89 F4 BE"
 func_37    [ DIFF 1   ]                               ["CHLTVClient"]
-    "48 8B 05 B9 08 2F 00 55 48 89 F2 48 8B 4F 58 48"
+    "48 8B 05 49 32 2F 00 55 48 89 F2 48 8B 4F 58 48"
 func_38    [ DIFF 1   ]                               ["CHLTVClient"]
     "83 7F 64 06 0F 85 66 01 00 00 55 48 89 E5 41 57"
 func_39    [ DIFF 1   ]                               ["CHLTVClient"]
@@ -89,17 +89,17 @@ func_41    [ DIFF 1   ]                               ["CHLTVClient"]
 func_42    [ DIFF 1   ]                               ["CHLTVClient"]
     "48 8B 47 50 48 C7 80 A8 03 00 00 00 00 00 00 B8"
 func_43    [ DIFF 1   ]                               ["CHLTVClient"]
-    "55 48 8D 15 A8 13 02 00 48 89 E5 41 55 41 54 49"
+    "55 48 8D 15 08 14 02 00 48 89 E5 41 55 41 54 49"
 func_44    [ DIFF 1   ]                               ["CHLTVClient"]
-    "83 7F 64 01 0F 8E B6 00 00 00 55 48 8D 15 3E 15"
+    "83 7F 64 01 0F 8E B6 00 00 00 55 48 8D 15 9E 15"
 func_45    [ DIFF 0   ]                               []
-    "55 48 8D 15 A8 31 FC FF 48 89 E5 41 55 41 54 53"
+    "55 48 8D 15 B8 2E FC FF 48 89 E5 41 55 41 54 53"
 func_46    [ DIFF 1   ]                               ["CHLTVClient"]
     "55 48 89 E5 41 57 41 56 41 55 41 54 49 89 FC 53"
 func_47    [ DIFF 1   ]                               ["CHLTVClient"]
     "31 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_48    [ DIFF 1   ]                               ["CHLTVClient"]
-    "55 48 8B 46 48 48 89 F9 48 8B 3D A1 F9 2E 00 48"
+    "55 48 8B 46 48 48 89 F9 48 8B 3D 91 18 2F 00 48"
 func_49    [ DIFF 0   ]                               []
     "48 85 F6 0F 84 77 0D 00 00 55 48 89 E5 41 56 41"
 func_50    [ DIFF 1   ]                               ["CHLTVClient"]
@@ -117,11 +117,11 @@ func_55    [ DIFF 0   ]                               []
 func_56    [ DIFF 0   ]                               []
     "48 8D 87 90 01 00 00 C3 CC CC CC CC CC CC CC CC"
 func_57    [ DIFF 1   ]                               ["CHLTVClient"]
-    "55 48 8D 35 81 86 BA FF 31 D2 48 89 E5 53 48 89"
+    "55 48 8D 35 44 8E BA FF 31 D2 48 89 E5 53 48 89"
 func_58    [ DIFF 0   ]                               []
-    "55 48 8D 35 72 15 BB FF BA 88 13 00 00 48 89 E5"
+    "55 48 8D 35 3C 1D BB FF BA 88 13 00 00 48 89 E5"
 func_59    [ DIFF 1   ]                               ["CHLTVClient"]
-    "48 81 C7 20 0E 00 00 BA 01 00 00 00 E9 8F 9B F7"
+    "48 81 C7 20 0E 00 00 BA 01 00 00 00 E9 FF B1 F7"
 func_60    [ DIFF 1   ]                               ["CHLTVClient"]
     "55 48 89 E5 41 55 41 54 53 48 83 EC 78 4C 8B 67"
 func_61    [ DIFF 1   ]                               ["CHLTVClient"]
@@ -129,7 +129,7 @@ func_61    [ DIFF 1   ]                               ["CHLTVClient"]
 func_62    [ DIFF 1   ]                               ["CHLTVClient"]
     "55 48 89 E5 41 56 41 55 41 54 53 48 89 FB 48 83"
 func_63    [ DIFF 0   ]                               []
-    "55 48 89 E5 41 54 53 4C 8D 25 F2 5D BA FF 48 89"
+    "55 48 89 E5 41 54 53 4C 8D 25 F2 80 BA FF 48 89"
 func_64    [ DIFF 0   ]                               []
     "48 85 F6 0F 84 FF 00 00 00 55 48 89 E5 41 56 41"
 func_65    [ DIFF 0   ]                               []
@@ -137,11 +137,11 @@ func_65    [ DIFF 0   ]                               []
 func_66    [ DIFF 0   ]                               []
     "48 8B 87 90 00 00 00 C3 CC CC CC CC CC CC CC CC"
 func_67    [ DIFF 0   ]                               []
-    "55 48 89 E5 41 55 41 54 4C 8D 25 61 44 FC FF 53"
+    "55 48 89 E5 41 55 41 54 4C 8D 25 41 58 FC FF 53"
 func_68    [ DIFF 1   ]                               ["CHLTVClient"]
-    "48 8B 05 49 C1 53 00 48 8D 8F D8 0B 00 00 48 8B"
+    "48 8B 05 D9 F3 53 00 48 8D 8F D8 0B 00 00 48 8B"
 func_69    [ DIFF 1   ]                               ["CHLTVClient"]
-    "48 89 F8 48 8B 3D 96 09 2F 00 48 89 F2 8B 70 48"
+    "48 89 F8 48 8B 3D 46 33 2F 00 48 89 F2 8B 70 48"
 func_70    [ DIFF 1   ]                               ["CHLTVClient"]
     "55 48 89 E5 41 57 41 56 41 55 41 54 49 89 FC 53"
 func_71    [ DIFF 1   ]                               ["CHLTVClient"]
@@ -149,15 +149,15 @@ func_71    [ DIFF 1   ]                               ["CHLTVClient"]
 func_72    [ DIFF 1   ]                               ["CHLTVClient"]
     "8B 87 44 0F 00 00 C3 CC CC CC CC CC CC CC CC CC"
 func_73    [ DIFF 1   ]                               ["CHLTVClient"]
-    "55 48 89 E5 53 48 83 EC 18 48 8B 05 30 81 2A 00"
+    "55 48 89 E5 53 48 83 EC 18 48 8B 05 E0 44 2A 00"
 func_74    [ DIFF 1   ]                               ["CHLTVClient"]
-    "55 48 89 E5 41 54 4C 8B 25 1B B5 53 00 53 48 89"
+    "55 48 89 E5 41 54 4C 8B 25 0B 67 53 00 53 48 89"
 func_75    [ DIFF 1   ]                               ["CHLTVClient"]
-    "48 81 C7 88 0F 00 00 E9 A4 FD FF FF CC CC CC CC"
+    "48 81 C7 88 0F 00 00 E9 24 CB 00 00 CC CC CC CC"
 func_76    [ DIFF 1   ]                               ["CHLTVClient"]
     "55 48 89 E5 41 56 41 55 41 54 53 48 89 FB 48 83"
 func_77    [ DIFF 1   ]                               ["CHLTVClient"]
-    "48 83 7F 58 00 C6 47 62 01 74 05 E9 10 4D BF FF"
+    "48 83 7F 58 00 C6 47 62 01 74 05 E9 C0 07 BF FF"
 func_78    [ DIFF 1   ]                               ["CHLTVClient"]
     "C6 47 62 00 C3 CC CC CC CC CC CC CC CC CC CC CC"
 func_79    [ DIFF 1   ]                               ["CHLTVClient"]
