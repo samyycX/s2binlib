@@ -65,7 +65,7 @@
   },
   {
     "type_name": "CBaseVModuleMetadataProvider",
-    "vtable_address": 6443922968,
+    "vtable_address": 6443922984,
     "methods": [
       6443358268
     ],
@@ -81,7 +81,7 @@
   },
   {
     "type_name": "CGenericExprPart",
-    "vtable_address": 6443908480,
+    "vtable_address": 6443908496,
     "methods": [
       6443451792,
       6443358268,
@@ -101,7 +101,7 @@
   },
   {
     "type_name": "CGenericExpr_Binary",
-    "vtable_address": 6443908616,
+    "vtable_address": 6443908632,
     "methods": [
       6443451840,
       6443452832,
@@ -136,7 +136,7 @@
   },
   {
     "type_name": "CGenericExpr_BoolLiteral",
-    "vtable_address": 6443909064,
+    "vtable_address": 6443909080,
     "methods": [
       6443451952,
       6443453520,
@@ -171,7 +171,7 @@
   },
   {
     "type_name": "CGenericExpr_FloatLiteral",
-    "vtable_address": 6443908936,
+    "vtable_address": 6443908952,
     "methods": [
       6443451952,
       6443453568,
@@ -206,7 +206,7 @@
   },
   {
     "type_name": "CGenericExpr_FunctionCall",
-    "vtable_address": 6443909256,
+    "vtable_address": 6443909272,
     "methods": [
       6443452000,
       6443453600,
@@ -243,7 +243,7 @@
   },
   {
     "type_name": "CGenericExpr_IntLiteral",
-    "vtable_address": 6443909000,
+    "vtable_address": 6443909016,
     "methods": [
       6443451952,
       6443453664,
@@ -278,7 +278,7 @@
   },
   {
     "type_name": "CGenericExpr_Property",
-    "vtable_address": 6443909192,
+    "vtable_address": 6443909208,
     "methods": [
       6443452320,
       6443453696,
@@ -313,7 +313,7 @@
   },
   {
     "type_name": "CGenericExpr_StringLiteral",
-    "vtable_address": 6443908872,
+    "vtable_address": 6443908888,
     "methods": [
       6443452432,
       6443453760,
@@ -348,7 +348,7 @@
   },
   {
     "type_name": "CGenericExpr_TernaryConditional",
-    "vtable_address": 6443908800,
+    "vtable_address": 6443908816,
     "methods": [
       6443452512,
       6443453824,
@@ -383,7 +383,7 @@
   },
   {
     "type_name": "CGenericExpr_Unary",
-    "vtable_address": 6443908528,
+    "vtable_address": 6443908544,
     "methods": [
       6443452640,
       6443453904,
@@ -418,7 +418,7 @@
   },
   {
     "type_name": "CGenericExpr_VariableReference",
-    "vtable_address": 6443909128,
+    "vtable_address": 6443909144,
     "methods": [
       6443452432,
       6443454080,
@@ -453,7 +453,7 @@
   },
   {
     "type_name": "CKV3ResourceBlockHelper",
-    "vtable_address": 6443920792,
+    "vtable_address": 6443920808,
     "methods": [
       6442484768
     ],
@@ -484,7 +484,7 @@
   },
   {
     "type_name": "CKV3TransferContextBase",
-    "vtable_address": 6443602880,
+    "vtable_address": 6443602896,
     "methods": [
       6443339008,
       6443338640,
@@ -520,7 +520,7 @@
   },
   {
     "type_name": "CKV3TransferLoadContext",
-    "vtable_address": 6443602992,
+    "vtable_address": 6443603008,
     "methods": [
       6443339008,
       6443338640,
@@ -570,7 +570,7 @@
   },
   {
     "type_name": "CKV3TransferSaveContext",
-    "vtable_address": 6443602936,
+    "vtable_address": 6443602952,
     "methods": [
       6443339008,
       6443338640,
@@ -682,7 +682,7 @@
   },
   {
     "type_name": "CModuleMetadataProvider_ResourceManifests",
-    "vtable_address": 6443603768,
+    "vtable_address": 6443603784,
     "methods": [
       6443352640
     ],
@@ -713,7 +713,7 @@
   },
   {
     "type_name": "CPostConnectCallback",
-    "vtable_address": 6443602784,
+    "vtable_address": 6443602800,
     "methods": [
       6443358268
     ],
@@ -729,7 +729,7 @@
   },
   {
     "type_name": "CPulseCell_Base",
-    "vtable_address": 6443566848,
+    "vtable_address": 6443566864,
     "methods": [
       6442588928,
       6442951712,
@@ -756,7 +756,7 @@
   },
   {
     "type_name": "CPulseCell_BaseFlow",
-    "vtable_address": 6443566952,
+    "vtable_address": 6443566968,
     "methods": [
       6442589024,
       6442951712,
@@ -798,7 +798,7 @@
   },
   {
     "type_name": "CPulseCell_BaseRequirement",
-    "vtable_address": 6443567056,
+    "vtable_address": 6443567072,
     "methods": [
       6442650896,
       6442951712,
@@ -843,7 +843,7 @@
   },
   {
     "type_name": "CPulseCell_BaseValue",
-    "vtable_address": 6443567808,
+    "vtable_address": 6443567824,
     "methods": [
       6442589088,
       6442951712,
@@ -885,7 +885,7 @@
   },
   {
     "type_name": "CPulseCell_BooleanSwitchState",
-    "vtable_address": 6443590560,
+    "vtable_address": 6443590576,
     "methods": [
       6443215456,
       6443209104,
@@ -979,7 +979,7 @@
   },
   {
     "type_name": "CPulseCell_CursorQueue",
-    "vtable_address": 6443595248,
+    "vtable_address": 6443595264,
     "methods": [
       6443234992,
       6443225520,
@@ -1075,7 +1075,7 @@
   },
   {
     "type_name": "CPulseCell_ExampleCriteria",
-    "vtable_address": 6443942632,
+    "vtable_address": 6443942648,
     "methods": [
       6442650960,
       6442594768,
@@ -1134,7 +1134,7 @@
   },
   {
     "type_name": "CPulseCell_ExampleSelector",
-    "vtable_address": 6443942776,
+    "vtable_address": 6443942792,
     "methods": [
       6442651136,
       6442673792,
@@ -1190,7 +1190,7 @@
   },
   {
     "type_name": "CPulseCell_FireCursors",
-    "vtable_address": 6443586384,
+    "vtable_address": 6443586400,
     "methods": [
       6443181728,
       6443180544,
@@ -1270,7 +1270,7 @@
   },
   {
     "type_name": "CPulseCell_Inflow_BaseEntrypoint",
-    "vtable_address": 6443567184,
+    "vtable_address": 6443567200,
     "methods": [
       6442982640,
       6442951728,
@@ -1326,7 +1326,7 @@
   },
   {
     "type_name": "CPulseCell_Inflow_EntOutputHandler",
-    "vtable_address": 6443567600,
+    "vtable_address": 6443567616,
     "methods": [
       6442982688,
       6442951744,
@@ -1396,7 +1396,7 @@
   },
   {
     "type_name": "CPulseCell_Inflow_EventHandler",
-    "vtable_address": 6443567392,
+    "vtable_address": 6443567408,
     "methods": [
       6442982736,
       6442952128,
@@ -1466,7 +1466,7 @@
   },
   {
     "type_name": "CPulseCell_Inflow_GraphHook",
-    "vtable_address": 6443567496,
+    "vtable_address": 6443567512,
     "methods": [
       6442982784,
       6442952336,
@@ -1536,7 +1536,7 @@
   },
   {
     "type_name": "CPulseCell_Inflow_Method",
-    "vtable_address": 6443567288,
+    "vtable_address": 6443567304,
     "methods": [
       6442982832,
       6442952544,
@@ -1606,7 +1606,7 @@
   },
   {
     "type_name": "CPulseCell_Inflow_ObservableVariableListener",
-    "vtable_address": 6443567704,
+    "vtable_address": 6443567720,
     "methods": [
       6442982880,
       6442952560,
@@ -1676,7 +1676,7 @@
   },
   {
     "type_name": "CPulseCell_Inflow_Wait",
-    "vtable_address": 6443568200,
+    "vtable_address": 6443568216,
     "methods": [
       6442982928,
       6442952848,
@@ -1756,7 +1756,7 @@
   },
   {
     "type_name": "CPulseCell_Inflow_Yield",
-    "vtable_address": 6443568016,
+    "vtable_address": 6443568032,
     "methods": [
       6442982976,
       6442952928,
@@ -1836,7 +1836,7 @@
   },
   {
     "type_name": "CPulseCell_InlineNodeSkipSelector",
-    "vtable_address": 6443571672,
+    "vtable_address": 6443571688,
     "methods": [
       6443010784,
       6442997744,
@@ -1892,7 +1892,7 @@
   },
   {
     "type_name": "CPulseCell_IntervalTimer",
-    "vtable_address": 6443588320,
+    "vtable_address": 6443588336,
     "methods": [
       6443194352,
       6443189984,
@@ -1972,7 +1972,7 @@
   },
   {
     "type_name": "CPulseCell_IsRequirementValid",
-    "vtable_address": 6443571544,
+    "vtable_address": 6443571560,
     "methods": [
       6443010832,
       6442594768,
@@ -2031,7 +2031,7 @@
   },
   {
     "type_name": "CPulseCell_LimitCount",
-    "vtable_address": 6443571416,
+    "vtable_address": 6443571432,
     "methods": [
       6443010880,
       6442998208,
@@ -2090,7 +2090,7 @@
   },
   {
     "type_name": "CPulseCell_Outflow_CycleOrdered",
-    "vtable_address": 6443568384,
+    "vtable_address": 6443568400,
     "methods": [
       6442983024,
       6442953008,
@@ -2146,7 +2146,7 @@
   },
   {
     "type_name": "CPulseCell_Outflow_CycleRandom",
-    "vtable_address": 6443568488,
+    "vtable_address": 6443568504,
     "methods": [
       6442983072,
       6442953008,
@@ -2202,7 +2202,7 @@
   },
   {
     "type_name": "CPulseCell_Outflow_CycleShuffled",
-    "vtable_address": 6443568592,
+    "vtable_address": 6443568608,
     "methods": [
       6442983120,
       6442953008,
@@ -2258,7 +2258,7 @@
   },
   {
     "type_name": "CPulseCell_Outflow_TestExplicitYesNo",
-    "vtable_address": 6443928496,
+    "vtable_address": 6443928512,
     "methods": [
       6442591536,
       6442641440,
@@ -2314,7 +2314,7 @@
   },
   {
     "type_name": "CPulseCell_Outflow_TestRandomYesNo",
-    "vtable_address": 6443928936,
+    "vtable_address": 6443928952,
     "methods": [
       6442591472,
       6442641440,
@@ -2370,7 +2370,7 @@
   },
   {
     "type_name": "CPulseCell_PickBestOutflowSelector",
-    "vtable_address": 6443571776,
+    "vtable_address": 6443571792,
     "methods": [
       6443010928,
       6442998432,
@@ -2426,7 +2426,7 @@
   },
   {
     "type_name": "CPulseCell_Step_CallExternalMethod",
-    "vtable_address": 6443569008,
+    "vtable_address": 6443569024,
     "methods": [
       6442983168,
       6442953088,
@@ -2506,7 +2506,7 @@
   },
   {
     "type_name": "CPulseCell_Step_DebugLog",
-    "vtable_address": 6443568904,
+    "vtable_address": 6443568920,
     "methods": [
       6442983216,
       6442951712,
@@ -2562,7 +2562,7 @@
   },
   {
     "type_name": "CPulseCell_Step_PublicOutput",
-    "vtable_address": 6443567912,
+    "vtable_address": 6443567928,
     "methods": [
       6442983264,
       6442953104,
@@ -2618,7 +2618,7 @@
   },
   {
     "type_name": "CPulseCell_Step_TestDomainCreateFakeEntity",
-    "vtable_address": 6443928616,
+    "vtable_address": 6443928632,
     "methods": [
       6442589216,
       6442594768,
@@ -2674,7 +2674,7 @@
   },
   {
     "type_name": "CPulseCell_Step_TestDomainDestroyFakeEntity",
-    "vtable_address": 6443927608,
+    "vtable_address": 6443927624,
     "methods": [
       6442589280,
       6442594768,
@@ -2730,7 +2730,7 @@
   },
   {
     "type_name": "CPulseCell_Step_TestDomainEntFire",
-    "vtable_address": 6443929368,
+    "vtable_address": 6443929384,
     "methods": [
       6442589344,
       6442602560,
@@ -2786,7 +2786,7 @@
   },
   {
     "type_name": "CPulseCell_Step_TestDomainTracepoint",
-    "vtable_address": 6443928248,
+    "vtable_address": 6443928264,
     "methods": [
       6442589152,
       6442594768,
@@ -2842,7 +2842,7 @@
   },
   {
     "type_name": "CPulseCell_TestWaitWithCursorState",
-    "vtable_address": 6443929952,
+    "vtable_address": 6443929968,
     "methods": [
       6442589536,
       6442612528,
@@ -2922,7 +2922,7 @@
   },
   {
     "type_name": "CPulseCell_Test_MultiInflow_NoDefault",
-    "vtable_address": 6443928112,
+    "vtable_address": 6443928128,
     "methods": [
       6442590480,
       6442594768,
@@ -2978,7 +2978,7 @@
   },
   {
     "type_name": "CPulseCell_Test_MultiInflow_WithDefault",
-    "vtable_address": 6443929784,
+    "vtable_address": 6443929800,
     "methods": [
       6442590416,
       6442594768,
@@ -3034,7 +3034,7 @@
   },
   {
     "type_name": "CPulseCell_Test_MultiOutflow_WithParams",
-    "vtable_address": 6443929264,
+    "vtable_address": 6443929280,
     "methods": [
       6442590544,
       6442628368,
@@ -3090,7 +3090,7 @@
   },
   {
     "type_name": "CPulseCell_Test_MultiOutflow_WithParams_Yielding",
-    "vtable_address": 6443927912,
+    "vtable_address": 6443927928,
     "methods": [
       6442590608,
       6442633616,
@@ -3170,7 +3170,7 @@
   },
   {
     "type_name": "CPulseCell_Test_NoInflow",
-    "vtable_address": 6443930136,
+    "vtable_address": 6443930152,
     "methods": [
       6442590352,
       6442594768,
@@ -3226,7 +3226,7 @@
   },
   {
     "type_name": "CPulseCell_Timeline",
-    "vtable_address": 6443588864,
+    "vtable_address": 6443588880,
     "methods": [
       6443202288,
       6443199808,
@@ -3306,7 +3306,7 @@
   },
   {
     "type_name": "CPulseCell_Unknown",
-    "vtable_address": 6443569192,
+    "vtable_address": 6443569208,
     "methods": [
       6442983312,
       6442895632,
@@ -3348,7 +3348,7 @@
   },
   {
     "type_name": "CPulseCell_Val_TestDomainFindEntityByName",
-    "vtable_address": 6443928736,
+    "vtable_address": 6443928752,
     "methods": [
       6442589472,
       6442594768,
@@ -3404,7 +3404,7 @@
   },
   {
     "type_name": "CPulseCell_Val_TestDomainGetEntityName",
-    "vtable_address": 6443927384,
+    "vtable_address": 6443927400,
     "methods": [
       6442589408,
       6442594768,
@@ -3460,7 +3460,7 @@
   },
   {
     "type_name": "CPulseCell_Value_Curve",
-    "vtable_address": 6443586104,
+    "vtable_address": 6443586120,
     "methods": [
       6443178480,
       6443175920,
@@ -3516,7 +3516,7 @@
   },
   {
     "type_name": "CPulseCell_Value_Gradient",
-    "vtable_address": 6443586768,
+    "vtable_address": 6443586784,
     "methods": [
       6443186096,
       6443183520,
@@ -3572,7 +3572,7 @@
   },
   {
     "type_name": "CPulseCell_Value_RandomFloat",
-    "vtable_address": 6443568800,
+    "vtable_address": 6443568816,
     "methods": [
       6442983360,
       6442951712,
@@ -3628,7 +3628,7 @@
   },
   {
     "type_name": "CPulseCell_Value_RandomInt",
-    "vtable_address": 6443568696,
+    "vtable_address": 6443568712,
     "methods": [
       6442983408,
       6442951712,
@@ -3684,7 +3684,7 @@
   },
   {
     "type_name": "CPulseCell_Value_TestValue50",
-    "vtable_address": 6443927504,
+    "vtable_address": 6443927520,
     "methods": [
       6442591408,
       6442594768,
@@ -3740,7 +3740,7 @@
   },
   {
     "type_name": "CPulseCell_WaitForCursorsWithTag",
-    "vtable_address": 6443595048,
+    "vtable_address": 6443595064,
     "methods": [
       6443235040,
       6443225760,
@@ -3836,7 +3836,7 @@
   },
   {
     "type_name": "CPulseCell_WaitForCursorsWithTagBase",
-    "vtable_address": 6443594848,
+    "vtable_address": 6443594864,
     "methods": [
       6443235088,
       6443226128,
@@ -3918,7 +3918,7 @@
   },
   {
     "type_name": "CPulseCell_WaitForObservable",
-    "vtable_address": 6443590376,
+    "vtable_address": 6443590392,
     "methods": [
       6443215504,
       6443209312,
@@ -4360,7 +4360,7 @@
   },
   {
     "type_name": "CPulseGraphInstance_TestDomain",
-    "vtable_address": 6443925416,
+    "vtable_address": 6443925432,
     "methods": [
       6442557300,
       6442485280,
@@ -4499,7 +4499,7 @@
   },
   {
     "type_name": "CPulseGraphInstance_TestDomain",
-    "vtable_address": 6443926744,
+    "vtable_address": 6443926760,
     "methods": [
       6442557312,
       6442850720,
@@ -4593,7 +4593,7 @@
   },
   {
     "type_name": "CPulseGraphInstance_TestDomain",
-    "vtable_address": 6443926816,
+    "vtable_address": 6443926832,
     "methods": [
       6442483520,
       6442483520,
@@ -4713,7 +4713,7 @@
   },
   {
     "type_name": "CPulseGraphInstance_TestDomain_Derived",
-    "vtable_address": 6443919240,
+    "vtable_address": 6443919256,
     "methods": [
       6442483520,
       6442483520,
@@ -4847,7 +4847,7 @@
   },
   {
     "type_name": "CPulseGraphInstance_TestDomain_Derived",
-    "vtable_address": 6443920208,
+    "vtable_address": 6443920224,
     "methods": [
       6442557300,
       6442485280,
@@ -5000,7 +5000,7 @@
   },
   {
     "type_name": "CPulseGraphInstance_TestDomain_Derived",
-    "vtable_address": 6443920720,
+    "vtable_address": 6443920736,
     "methods": [
       6442557312,
       6442850720,
@@ -5108,7 +5108,7 @@
   },
   {
     "type_name": "CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView",
-    "vtable_address": 6443918328,
+    "vtable_address": 6443918344,
     "methods": [
       6442557312,
       6442850720,
@@ -5216,7 +5216,7 @@
   },
   {
     "type_name": "CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView",
-    "vtable_address": 6443919520,
+    "vtable_address": 6443919536,
     "methods": [
       6442557300,
       6442485280,
@@ -5369,7 +5369,7 @@
   },
   {
     "type_name": "CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView",
-    "vtable_address": 6443921096,
+    "vtable_address": 6443921112,
     "methods": [
       6442483520,
       6442483520,
@@ -5503,7 +5503,7 @@
   },
   {
     "type_name": "CPulseGraphInstance_TurtleGraphics",
-    "vtable_address": 6443917992,
+    "vtable_address": 6443918008,
     "methods": [
       6442483520,
       6442483520,
@@ -5595,7 +5595,7 @@
   },
   {
     "type_name": "CPulseGraphInstance_TurtleGraphics",
-    "vtable_address": 6443920920,
+    "vtable_address": 6443920936,
     "methods": [
       6442557288,
       6442485280,
@@ -7013,7 +7013,7 @@
   },
   {
     "type_name": "CPulseSystem",
-    "vtable_address": 6443918400,
+    "vtable_address": 6443918416,
     "methods": [
       6442526128,
       6442526000,
@@ -7199,7 +7199,7 @@
   },
   {
     "type_name": "CPulseTestHandleService",
-    "vtable_address": 6443927136,
+    "vtable_address": 6443927152,
     "methods": [
       6442578960,
       6442578976,
@@ -7251,7 +7251,7 @@
   },
   {
     "type_name": "CPulseTurtleGraphicsCursor",
-    "vtable_address": 6443922320,
+    "vtable_address": 6443922336,
     "methods": [
       6442725440,
       6442738720,
@@ -7352,7 +7352,7 @@
   },
   {
     "type_name": "CPulseTurtleGraphicsCursor",
-    "vtable_address": 6443922448,
+    "vtable_address": 6443922464,
     "methods": [
       6442483520,
       6442483520,
@@ -7443,7 +7443,7 @@
   },
   {
     "type_name": "CPulseTurtleGraphicsCursor",
-    "vtable_address": 6443922496,
+    "vtable_address": 6443922512,
     "methods": [
       6442733632,
       6442734288,
@@ -7539,7 +7539,7 @@
   },
   {
     "type_name": "CPulseTypeManager",
-    "vtable_address": 6443919952,
+    "vtable_address": 6443919968,
     "methods": [
       6442526960,
       6442483504,
@@ -7676,7 +7676,7 @@
   },
   {
     "type_name": "CSchemaInstallCallback",
-    "vtable_address": 6443603688,
+    "vtable_address": 6443603704,
     "methods": [
       6443351904
     ],
@@ -7738,7 +7738,7 @@
   },
   {
     "type_name": "CSchemaRegistration_pulse_system",
-    "vtable_address": 6443923024,
+    "vtable_address": 6443923040,
     "methods": [
       6442570368
     ],
@@ -7769,7 +7769,7 @@
   },
   {
     "type_name": "CTestDomainDerived_Cursor",
-    "vtable_address": 6443925344,
+    "vtable_address": 6443925360,
     "methods": [
       6442483520,
       6442483520,
@@ -7860,7 +7860,7 @@
   },
   {
     "type_name": "CTestDomainDerived_Cursor",
-    "vtable_address": 6443925912,
+    "vtable_address": 6443925928,
     "methods": [
       6442725440,
       6442738720,
@@ -7961,7 +7961,7 @@
   },
   {
     "type_name": "CTestDomainDerived_Cursor",
-    "vtable_address": 6443926144,
+    "vtable_address": 6443926160,
     "methods": [
       6442733632,
       6442734288,
@@ -8057,7 +8057,7 @@
   },
   {
     "type_name": "FakeEntityDerivedA_t",
-    "vtable_address": 6443926040,
+    "vtable_address": 6443926056,
     "methods": [
       6442578928,
       6442578048
@@ -8089,7 +8089,7 @@
   },
   {
     "type_name": "FakeEntityDerivedB_t",
-    "vtable_address": 6443925392,
+    "vtable_address": 6443925408,
     "methods": [
       6442578944,
       6442578048
@@ -8135,7 +8135,7 @@
   },
   {
     "type_name": "FakeEntity_t",
-    "vtable_address": 6443925848,
+    "vtable_address": 6443925864,
     "methods": [
       6442570944,
       6442578048
@@ -8152,7 +8152,7 @@
   },
   {
     "type_name": "IAsyncProcessedDataResult",
-    "vtable_address": 6443920640,
+    "vtable_address": 6443920656,
     "methods": [
       6443358268
     ],
@@ -8191,7 +8191,7 @@
   },
   {
     "type_name": "IPulseGraphInstance_TestDomain",
-    "vtable_address": 6443926232,
+    "vtable_address": 6443926248,
     "methods": [
       6442570880,
       6443358268,
@@ -8259,7 +8259,7 @@
   },
   {
     "type_name": "IPulseGraphInstance_TurtleGraphics",
-    "vtable_address": 6443918280,
+    "vtable_address": 6443918296,
     "methods": [
       6442488160,
       6443358268,
@@ -8279,7 +8279,7 @@
   },
   {
     "type_name": "PulseSystemEventBase_t",
-    "vtable_address": 6443919048,
+    "vtable_address": 6443919064,
     "methods": [
       6442489008,
       6443358268,
@@ -8301,7 +8301,7 @@
   },
   {
     "type_name": "PulseSystemEventCursorResult_t",
-    "vtable_address": 6443920968,
+    "vtable_address": 6443920984,
     "methods": [
       6442489008,
       6442489072,
@@ -8338,7 +8338,7 @@
   },
   {
     "type_name": "PulseSystemEventObservableVariableListenerNotify_t",
-    "vtable_address": 6443920656,
+    "vtable_address": 6443920672,
     "methods": [
       6442508560,
       6442489136,
@@ -8375,7 +8375,7 @@
   },
   {
     "type_name": "PulseSystemEventObservableVariableSourceChanged_t",
-    "vtable_address": 6443921032,
+    "vtable_address": 6443921048,
     "methods": [
       6442507968,
       6442489104,
@@ -8412,7 +8412,7 @@
   },
   {
     "type_name": "PulseSystemEventYieldResume_t",
-    "vtable_address": 6443919112,
+    "vtable_address": 6443919128,
     "methods": [
       6442506704,
       6442489088,
@@ -8449,7 +8449,7 @@
   },
   {
     "type_name": "std::_Func_impl_no_alloc<class PulseBindingSchemaEnumTraits_t<enum PulseCursorCancelPriority_t>::<lambda_1>,class CPulseValueFullType>",
-    "vtable_address": 6443920152,
+    "vtable_address": 6443920168,
     "methods": [
       6442537136,
       6442537136,
@@ -8485,7 +8485,7 @@
   },
   {
     "type_name": "std::_Func_impl_no_alloc<class PulseBindingSchemaEnumTraits_t<enum PulseCursorCancelPriority_t>::<lambda_2>,unsigned int>",
-    "vtable_address": 6443920848,
+    "vtable_address": 6443920864,
     "methods": [
       6442537056,
       6442537056,
@@ -8521,7 +8521,7 @@
   },
   {
     "type_name": "std::_Func_impl_no_alloc<class PulseBindingSchemaEnumTraits_t<enum PulseTestEnumColor_t>::<lambda_3>,class CPulseValueFullType>",
-    "vtable_address": 6443921888,
+    "vtable_address": 6443921904,
     "methods": [
       6442567664,
       6442567664,
@@ -8557,7 +8557,7 @@
   },
   {
     "type_name": "std::_Func_impl_no_alloc<class PulseBindingSchemaEnumTraits_t<enum PulseTestEnumColor_t>::<lambda_4>,unsigned int>",
-    "vtable_address": 6443921832,
+    "vtable_address": 6443921848,
     "methods": [
       6442567584,
       6442567584,
@@ -8593,7 +8593,7 @@
   },
   {
     "type_name": "std::_Func_impl_no_alloc<class PulseBindingSchemaEnumTraits_t<enum PulseTestEnumShape_t>::<lambda_5>,class CPulseValueFullType>",
-    "vtable_address": 6443921720,
+    "vtable_address": 6443921736,
     "methods": [
       6442567536,
       6442567536,
@@ -8629,7 +8629,7 @@
   },
   {
     "type_name": "std::_Func_impl_no_alloc<class PulseBindingSchemaEnumTraits_t<enum PulseTestEnumShape_t>::<lambda_6>,unsigned int>",
-    "vtable_address": 6443921776,
+    "vtable_address": 6443921792,
     "methods": [
       6442567456,
       6442567456,
@@ -8665,7 +8665,7 @@
   },
   {
     "type_name": "std::__non_rtti_object",
-    "vtable_address": 6443943768,
+    "vtable_address": 6443943784,
     "methods": [
       6443354072,
       6443354180
@@ -8711,7 +8711,7 @@
   },
   {
     "type_name": "std::bad_cast",
-    "vtable_address": 6443943720,
+    "vtable_address": 6443943736,
     "methods": [
       6443354072,
       6443354180
@@ -8743,7 +8743,7 @@
   },
   {
     "type_name": "std::bad_exception",
-    "vtable_address": 6443608504,
+    "vtable_address": 6443608520,
     "methods": [
       6443354072,
       6443354180
@@ -8775,7 +8775,7 @@
   },
   {
     "type_name": "std::bad_function_call",
-    "vtable_address": 6443603912,
+    "vtable_address": 6443603928,
     "methods": [
       6443354072,
       6443354172
@@ -8807,7 +8807,7 @@
   },
   {
     "type_name": "std::bad_typeid",
-    "vtable_address": 6443943744,
+    "vtable_address": 6443943760,
     "methods": [
       6443354072,
       6443354180
@@ -8839,7 +8839,7 @@
   },
   {
     "type_name": "std::exception",
-    "vtable_address": 6443603864,
+    "vtable_address": 6443603880,
     "methods": [
       6443354072,
       6443354180
@@ -8856,7 +8856,7 @@
   },
   {
     "type_name": "type_info",
-    "vtable_address": 6443608120,
+    "vtable_address": 6443608136,
     "methods": [
       6443355624
     ],

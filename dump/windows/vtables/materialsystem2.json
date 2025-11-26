@@ -1612,7 +1612,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6443706256,
+        "complete_object_locator": 6443706296,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1932,7 +1932,7 @@
   },
   {
     "type_name": "CSchemaRegistration_materialsystem2",
-    "vtable_address": 6443695776,
+    "vtable_address": 6443695760,
     "methods": [
       6442971568
     ],
@@ -2314,7 +2314,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6443706296,
+        "complete_object_locator": 6443706256,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0

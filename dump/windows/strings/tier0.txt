@@ -124,7 +124,6 @@
 "e?<<<<<<l?
 "f^n[
 "pA3Q
-"pA3Q c1
 "t*U
 #%llu
 #.zf
@@ -142,6 +141,7 @@
 #int#
 #jT$
 #nyf
+#vpulse3
 $/o|
 $8'S
 $@06p
@@ -550,6 +550,7 @@ $xmm9
 (+EW
 (-AVX) 
 (>aI
+(En6
 (Missing)
 (None)
 (T?j?Y
@@ -557,7 +558,6 @@ $xmm9
 (Unaccounted)
 (Unknown Cause)
 (W^j
-(Yo6
 (d$5V
 (deleted)
 (main)
@@ -634,7 +634,7 @@ $xmm9
 ,HR><y5
 ,HR>O
 ,fp!
-,}v(
+,}vh
 -&B'-
 -)4d
 -- Hierarchical Call Graph --
@@ -985,7 +985,6 @@ $xmm9
 1;TRUE;YES;ON
 1A26b
 1DBlend
-1Ia(
 1]>P
 1]t$
 1icl
@@ -1010,6 +1009,7 @@ $xmm9
 3wl'
 4JpI?=
 4R.=
+4pc1
 5'g|
 5(3#
 5(Hf;
@@ -1069,6 +1069,7 @@ $xmm9
 9z\u@
 : proc group %u:%u, physical ID %d, core ID %d
 :$R>
+:0c1
 :1X:
 ::<lambda_
 ::string literal
@@ -1078,11 +1079,9 @@ $xmm9
 :>K5
 :>t6k'
 :?EQ
-:@c1
 :Q>@
 :R;uD
-:`APc1
-:`c1
+:`A@c1
 :i/?
 :iEF
 :~dm1
@@ -2003,7 +2002,7 @@ $xmm9
 ?GetWinLevelRevision@CPUInformation@@SA_NPEAG0@Z
 ?GrowByChunks@CBufferString@@QEAAHHH@Z
 ?GrowPool@CPoolAllocator@@QEAAXI@Z
-?HEAP WARNING: memory block at %p is unexpectedly allocated
+?HEAP WARNING: memory block at %p appears to be corrupt
 ?HandleFirstWriteLockTransition@CEventRWLock@@IEAAXAEAVCEventListNode@@@Z
 ?HandleToString@CCountedStringPool_CI@@QEBAPEBDG@Z
 ?HandlerQueueHeartBeat@MiniDumpStandardData_t@@QEBAXXZ
@@ -2944,6 +2943,7 @@ BC?>6t9^
 BCryptGenRandom
 BF>^G
 BOOL
+BPb1
 BREAKPAD:   can't open cached file
 BREAKPAD:   can't open file
 BREAKPAD:   can't verify cached file
@@ -2966,7 +2966,6 @@ BREAKPAD: reopen cached file '%s'
 BREAKPAD: search for '%s'
 BREAKPAD: try and open '%s'
 BTcq
-B`b1
 Bad Shortcut
 Bad exponent in floating point number
 Bad expression operator: '%c%c', expected C style boolean expression operator.
@@ -4502,7 +4501,7 @@ H+c?
 H>*SL>
 H>p&
 H>r1
-HEAP WARNING: memory block at %p appears to be corrupt
+HEAP WARNING: memory block at %p is unexpectedly allocated
 HEAP WARNING: memory block at %p is unexpectedly free
 HEAP WARNING: memory block at %p is unexpectedly unrecognized
 HEAP WARNING: memory pointer %p is invalid
@@ -7124,7 +7123,7 @@ VtuneApi32e.dll
 W 7x
 W @G
 W&|.
-W)lQ
+W)lQH
 W/q#IX
 W4vC
 WARNING
@@ -7223,10 +7222,11 @@ X360SPLITSCREEN
 X360WIDE
 X>0S
 X?fff?;
-XPc1
+X@c1
 XS&Y+
 XXXXXX: found leading plus sign while parsing string '%s' as float64, ignoring it
 Xi#/H
+Xpb1
 XsBI
 Y5us
 Y8a:
@@ -7340,11 +7340,11 @@ Z|Y(
 ]xEc
 ]|^?
 ^+ep
-^0c1
 ^6o}
 ^<V7w
 ^>&qN
 ^GP~
+^Pc1
 ^RfN>
 ^W>;
 ^[L6
@@ -7458,6 +7458,7 @@ _}4(
 `Dx@
 `F(>
 `M1k
+`Qo6
 `RTTI
 `anonymous namespace'
 `copy constructor closure'
@@ -7495,7 +7496,6 @@ _}4(
 `vector vbase copy constructor iterator'
 `vftable'
 `virtual displacement map'
-`yo6
 a'>/
 a6>r
 a?y#c?sIe?
@@ -8101,7 +8101,6 @@ l!;b
 l(>>
 l6qnk
 l<}2l
-l=!0
 l>*>
 l>^b
 l@6 
@@ -9333,7 +9332,6 @@ vpulse15
 vpulse16
 vpulse17
 vpulse2
-vpulse3
 vpulse4
 vpulse5
 vpulse6
@@ -9383,7 +9381,6 @@ xSvf$
 xT?V
 xYiu
 x`tm6
-xrY(
 xu37
 xuRCk
 y9*O
@@ -9429,9 +9426,9 @@ zs}O
 }=H>
 }I$}l
 ~ $s%r
+~ c1
 ~)p$w
 ~.kg
-~0c1
 ~DSTRCT
 ~NX4
 ~X3>

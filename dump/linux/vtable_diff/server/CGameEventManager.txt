@@ -19,7 +19,7 @@ func_6     [ DIFF 0   ]                               []
 func_7     [ DIFF 0   ]                               []
     "55 48 89 E5 41 57 41 56 4C 8D BF E0 00 00 00 41"
 func_8     [ DIFF 0   ]                               []
-    "55 48 89 E5 41 55 49 89 FD 41 54 48 8D 3D 6E 7A"
+    "55 48 89 E5 41 55 49 89 FD 41 54 48 8D 3D AE 7A"
 func_9     [ DIFF 0   ]                               []
     "B9 01 00 00 00 31 D2 E9 D4 FA FF FF CC CC CC CC"
 func_10    [ DIFF 0   ]                               []

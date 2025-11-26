@@ -463,7 +463,7 @@ func_228   [ DIFF 0   ]                               []
 func_229   [ DIFF 0   ]                               []
     "C2 00 00 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_230   [ DIFF 0   ]                               []
-    "48 8D 05 01 A3 BD 00 C3 CC CC CC CC CC CC CC CC"
+    "48 8D 05 E1 A2 BD 00 C3 CC CC CC CC CC CC CC CC"
 func_231   [ DIFF 0   ]                               []
     "B8 01 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC"
 func_232   [ DIFF 0   ]                               []

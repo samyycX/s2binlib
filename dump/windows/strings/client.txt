@@ -247,7 +247,6 @@
  -retail 
  ... Skipping view model attachment creation.
  ... }
- .@$J
  .CPlayer_GetNicknameList_Request
  .CPublishedFile_Publish_Response"2
  /&gt;
@@ -3937,6 +3936,7 @@ $taser_charge
 *Returns the player's community preferences
 *StO9>T
 *UlS
+*X*D
 *Y$ve
 *[l=
 *]r\)
@@ -4120,7 +4120,7 @@ $taser_charge
 ,ShfPQ
 ,Y;v>
 ,ZFDGn
-,]p3
+,]p3(
 ,a:z
 ,ar_monastery
 ,associated_workshop_file_for_direct_payments
@@ -4148,7 +4148,7 @@ $taser_charge
 ,m+=
 ,name:
 ,oYR
-,sK3h
+,sK3
 ,section=
 ,value:
 ,}aK
@@ -4297,12 +4297,13 @@ $taser_charge
 -|\E
 -|p.
 . +F
-. ,J
-. 2J
-. 4J
 . 6J
-. KJ
-. OJ
+. 7J
+. RJ
+. UJ
+. aJ
+. iJ
+. tJ
 .$@b
 .%.-.3.7.9.?.W.[.o.y.
 .%X&1
@@ -4318,10 +4319,13 @@ $taser_charge
 ..CPlayer_GetNewSteamAnnouncementState_Response"_
 ..uR5&m
 ./#{
+.0/J
 .00cfg
-.0MJ
+.09J
+.0NJ
 .0OJ
-.0kJ
+.0RJ
+.0aJ
 .4+w
 .4bb
 .5.}
@@ -9947,11 +9951,11 @@ $taser_charge
 .?AW4GenericPopupResult_t@@
 .?AW4ModifierCode@panorama@@
 .?AW4loadout_slot_t@@
-.@KJ
-.@LJ
+.@6J
+.@7J
+.@NJ
 .@OJ
-.@UJ
-.@zJ
+.@RJ
 .AJ[
 .AccountActivity
 .CBaseUserCmdPB
@@ -10147,8 +10151,6 @@ $taser_charge
 .N_v
 .OperationalStatisticElement"S
 .OperationalVarValue
-.P1J
-.P3J
 .P6A?AVCTransform@@AEBV0@0@Z
 .P6AXPEAVCSceneObject@@@Z
 .P6AXPEBVC_EconItemView@@AEAVCUtlBuffer@@HH_K@Z
@@ -10173,7 +10175,9 @@ $taser_charge
 .PEBVC_EconItemView@@
 .PEBVILocalizationString@panorama@@
 .PLACEHOLDER_VALUE
-.PMJ
+.POJ
+.PPJ
+.PRJ
 .PerFriendPreferences"*
 .PerFriendPreferences"U
 .PlayerCommendationInfo
@@ -10474,11 +10478,12 @@ $taser_charge
 .\ssl\t1_lib.c
 .\ssl\t1_reneg.c
 .]R:
-.`1J
-.`2J
-.`BJ
-.`KJ
-.`xJ
+.`/J
+.`5J
+.`7J
+.`9J
+.`NJ
+.`RJ
 .a%|
 .beta
 .bmxz
@@ -10521,13 +10526,12 @@ $taser_charge
 .k_EMsgGCCStrike15_v2_PlayerOverwatchCaseUpdate
 .kv3
 .lbN
-.p0J
-.p1J
-.pKJ
-.pMJ
+.pPJ
+.pRJ
 .party
 .pdata
 .placeholder.proto
+.pnJ
 .png
 .pp@0
 .r&I|C
@@ -10707,6 +10711,7 @@ $taser_charge
 09,h
 09|+
 0: (V0) Legacy save format, 1: (V1) KeyValues3 save format
+0: J
 0: Not Started, 1: Needs Training, 2: Training Complete, -1: Disabled
 0: Use connect method requested by GC.  >0: Always use SDR if possible.  <0: Always use direct UDP if possible
 0: cannot detach; 1: press secondary fire to detach
@@ -10718,10 +10723,11 @@ $taser_charge
 0: regular radar; 1: always disabled; 2: disabled in warmup
 0;Q5[
 0<cz
+0<kD
 0=Never; 1=Only if there is a problem; 2=always
 0=low, 1=medium, 2=high, 3=ultra
+0>PxJ
 0@9=
-0@TD
 0CClientMsg_WorldUIControllerHasPanelChangedEvent
 0CCommunity_GetGamePersonalDataCategories_Request
 0CMsgGCCStrike15_v2_ClientRequestWatchInfoFriends
@@ -10735,6 +10741,7 @@ $taser_charge
 0NETWORK_DISCONNECT_REJECT_SERVERCDKEYAUTHINVALID
 0Name of the file to publish in the user's cloud.
 0T.Q
+0TgI
 0W/5
 0Z@q
 0iN>/
@@ -11153,6 +11160,7 @@ $taser_charge
 2Tm=#
 2Uiwp"9
 2W[~
+2X*D
 2Zq)
 2\fWQx
 2];*
@@ -11265,6 +11273,7 @@ $taser_charge
 4tpD
 4zj@1;IJ
 4|2;#GameUI_Retake_Card_LightEmUp,1,1,rifle1,grenade0|2;#GameUI_Retake_Card_Kobe,1,1,rifle1,grenade2|1;#GameUI_Retake_Card_1g,1,1,rifle1,grenade3|1;#GameUI_Retake_Card_DisappearingAct,1,1,rifle1,grenade1|1;#GameUI_Retake_Card_EyesOnTarget,1,1,weapon_aug
+4~3X
 5&3!
 5'0v2ZP
 5(EWorkshopFileType) Type of Workshop file to publish.
@@ -11297,9 +11306,9 @@ $taser_charge
 5k_EMsgGCCStrike15_v2_ServerNotificationForUserPenalty
 5t?F
 5~EW
-6 9J
-6 dJ
-6 wJ
+6 %J
+6 :J
+6 =J
 6#6165676;6M6O6S6Y6a6k6m6
 6#RDP#
 6%vi
@@ -11309,35 +11318,37 @@ $taser_charge
 6,2K
 6-(\
 6-zeZ
-60<J
+60&J
 6144
 62$|S)6f
 64CK
-6666666666666666
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\.\ssl\s3_enc.c
+6666666666666666p
 67-s
 6>J`
 6?NumberValue@Value@v8@@QEBA?AV?$Maybe@N@2@V?$Local@VContext@v8@@@2@@Z
 6?S.>
-6@7J
+6@'J
+6@;J
 6@@J
 6@['
-6@qJ
+6@yJ
 6E0C3V8\9]}
 6GAME_PARTICLE_MANAGER_EVENT_FREEZE_TRANSITION_OVERRIDE
 6GAME_PARTICLE_MANAGER_EVENT_SET_CONTROL_POINT_SNAPSHOT
 6H,N
 6K;L#k;{
 6O|T%
-6PBJ
+6PDJ
+6PEJ
+6PXJ
 6Qd=
 6Returns the URL of the proper cloud server for a user.
 6True if the operation was successful, false otherwise.
 6_wEX
-6`8J
-6`;J
-6`SJ
-6`kJ
+6`<J
+6`gJ
+6`zJ
 6afD
 6bX+
 6c&0|vvX
@@ -11346,10 +11357,7 @@ $taser_charge
 6lkc
 6myY;
 6p?J
-6pTJ
 6p]!
-6pcJ
-6puJ
 6qo~
 6r-m_v
 6r1ij
@@ -11403,12 +11411,11 @@ $taser_charge
 8= zp
 8@HP:
 8A6j
-8B3H
 8CMsgGCCStrike15_v2_Client2GCEconPreviewDataBlockResponse
 8Client ID for which to count the number of issued tokens"
 8Csinf
-8F tJ
-8F0sJ
+8F`wJ
+8FpvJ
 8GZS
 8Gets the list of nicknames this user has for other users
 8If set, remove from ignore/block list instead of adding "\
@@ -11728,7 +11735,7 @@ $taser_charge
 =|qM
 > %s
 > >J
-> \J
+> ~J
 >!-B
 >"<_
 >"I;6
@@ -11737,7 +11744,7 @@ $taser_charge
 >)[8
 >*`r
 >0 enemies, 0 teammates
->0xJ
+>0BJ
 >1w.
 >4|6eXg_e
 >77:
@@ -11748,13 +11755,14 @@ $taser_charge
 >B=~,
 >CURVE_TANGENT_LINEAR
 >Kb|
->P=J
+>PWJ
 >Sem
 >WK6
 >[^j
 >]q&`
 >`*-
 >`AJ
+>`_J
 >cQ6
 >d`D$
 >fN46R^
@@ -11763,6 +11771,7 @@ $taser_charge
 >n{J
 >o}-XH
 >p00<
+>p{J
 >wpnHand_R
 >yhP
 >ztq
@@ -12235,14 +12244,12 @@ $taser_charge
 @08N
 @0pp
 @2&@
-@60jJ
-@6@1J
-@6`0J
+@6 /J
+@6P5J
+@6pmJ
 @80^
-@: 5
-@:@F
+@:`8
 @:e+
-@:p6
 @<:nq
 @>%>b
 @?SlowGetInternalField@Object@v8@@AEAA?AV?$Local@VData@v8@@@2@H@Z
@@ -12255,8 +12262,10 @@ $taser_charge
 @F(%
 @HPX
 @HPX&I
-@HPX`hvpVJ
+@HPX`hv
+@HV qJ
 @MfKZ
+@N@\J
 @Pgl
 @Q~i
 @Show debug data when players change their loadout.
@@ -12307,7 +12316,6 @@ A<fP
 A>pP&
 A>x8
 AA Compromise
-AA:PF
 AAAA-
 AAAA-%.*s
 AABBDirection
@@ -16348,6 +16356,7 @@ CSGO/Bullets
 CSGO/Graphics/GPU Cull Shadow Views
 CSGO/Graphics/GPU Culling
 CSGO/Graphics/GPU Culling (Two Pass)
+CSGO/Icon Editor
 CSGO/Show Grenades History
 CSGO/WorldModel
 CSGOApplyLowLatencyVSyncRecommendation
@@ -21164,6 +21173,7 @@ FORM
 FORMAT
 FPSMax
 FPSMaxUI
+FP~J
 FREEZETIME
 FSR DETAIL
 FSR Upscale
@@ -23029,6 +23039,7 @@ GraphPositionToUIPosition
 GraphStatAverage
 Graphics Memory (%s): 
 Graphics driver is out of date.  Vendor %x, '%s', version %u.%u < %u.%u
+Graphics driver recommendation (NVIDIA 581.80 / AMD 23.11.1)
 GraphicsAPI
 GraphicsComputeSync
 GraphicsMisc
@@ -27035,16 +27046,17 @@ P-256
 P-384
 P-521
 P08@J
-P08J
+P08J0
 P08N
 P2P Voice
 P2P ping to "%s". Timed out after %.2fms
 P2P_Messages
 P5[1
-P60LJ
+P6P/J
+P6pOJ
 P:   
+P<kD
 P@HPX`hpx
-P@TD
 PAGN_4
 PANEL_ID
 PANORAMA_LAYOUTFILE
@@ -33946,9 +33958,8 @@ XWY]
 XYD%
 X`hr
 Xd3h
-Xf0vJ
 XfJ7
-XfPwJ
+XfpyJ
 XjfR
 XpDataJSO
 XpNeededForDrop
@@ -34327,7 +34338,6 @@ Z~wl
 ]o~P
 ]r}R{
 ]}Wl
-^ #J
 ^(BM
 ^+#_
 ^->6
@@ -34351,6 +34361,7 @@ Z~wl
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ^^h0
+^`&J
 ^oEZ_
 ^|1)
 _ Lq
@@ -34507,19 +34518,19 @@ _}eOk
 `&H|&
 `'>W
 `'~}
+`2 ?
 `28)fk
 `2PF
 `3?New@Array@v8@@SA?AV?$Local@VArray@v8@@@2@PEAVIsolate@2@H@Z
+`43X
 `47/
-`603J
-`6@2J
-`6P4J
-`:@5
-`:p4
+`6p6J
+`: 7
+`:@8
 `:zQF
+`<kD
 `@ `QE
 `@"Gg
-`@TD
 `Ch.
 `D$daM-l
 `DZG
@@ -34529,6 +34540,7 @@ _}eOk
 `ITS
 `L,l
 `RTTI
+`TgI
 `VX:H
 `]Bo2'
 ``@ PP@
@@ -39770,7 +39782,6 @@ f@-r
 fA,'
 fCSunday
 fP;y
-fP\J
 fP~V
 fTimeScale
 fU).
@@ -43188,7 +43199,7 @@ k~Rz
 l :%
 l <= sizeof(c->iv)
 l!;b
-l&+3
+l&+38
 l&: q
 l&rB6
 l(>>
@@ -48691,7 +48702,6 @@ mzP"T
 n < (int)sizeof(ctx->enc_data)
 n >= 0
 n does not equal p q
-n mJ
 n-resize
 n03>Pu
 n0?X
@@ -48702,7 +48712,7 @@ n6j/
 n:2C[
 n?X9t?
 n@PK
-nBCSGO/Icon Editor
+n@`J
 nBits != 32
 nCRD
 nChangeOffset < INT16_MAX
@@ -48726,8 +48736,9 @@ nMin
 nNumerator
 nObjects
 nObserverMode
+nP$J
 nPriority != NETWORK_FIELD_CHANGE_DEFAULT_PRIORITY
-nPtJ
+nP}J
 nRetiredAtNodeID
 nSRecord
 nSaved
@@ -48749,7 +48760,7 @@ nValue
 n_actions
 n_reload
 n`3i
-n`sJ
+n`pJ
 nadeCount
 namc
 name
@@ -49602,8 +49613,6 @@ p.ppBasis
 p.prime
 p.tpBasis
 p08@H^
-p0WD
-p0jp
 p0p@
 p250
 p2p_FightingGame_Connection
@@ -49623,16 +49632,17 @@ p4Z3
 p5Z3
 p618
 p:(L
+p<kD
 p>?Set@Template@v8@@QEAAXV?$Local@VName@v8@@@2@V?$Local@VData@v8@@@2@W4PropertyAttribute@2@@Z
 p@0pqE5tsO?|1
 p@HPX`h
-p@TD
 pAShatterDamageCause
 pCheckpointName
 pD4t
 pData->GetDataDescMap() == pTemplateDataMap
 pDescription
 pDest
+pF@ J
 pField
 pFilter
 pG_*h
@@ -49655,6 +49665,7 @@ pSpawnedEntityName
 pSpecified
 pTagName
 pTarget
+pTgI
 pU>\AL
 pWeapon
 pWorldObject
@@ -50603,6 +50614,7 @@ powderblue
 pp == NULL || *pp != NULL
 pp&c
 ppBasis
+ppZD
 pqualid
 pre mac length too long
 pre-transform-rotate2d
@@ -55365,7 +55377,6 @@ v$m%
 v&l(
 v'A>M6
 v)56
-v0YJ
 v0o/5
 v1(0)
 v1GZ
@@ -55679,6 +55690,7 @@ voting_done
 voting_options
 voting_winner
 voxel_size
+vp\J
 vparams
 vphysics2
 vpk:
@@ -56548,6 +56560,7 @@ z~")
 ~,Vg
 ~,ue`
 ~/;0
+~0PJ
 ~5c^
 ~7'j
 ~9ob
@@ -56557,13 +56570,12 @@ z~")
 ~CPanel2D - destroy members
 ~If D
 ~P2T
-~PLJ
+~PNJ
 ~R65Fu
 ~X3>
 ~[I,
 ~^1W1X;R3_
 ~_K&
 ~jLRG
-~pLJ
 ~w]UG
 ~yhZ

@@ -15,7 +15,7 @@ func_4     [ DIFF 0   ]                               []
 func_5     [ DIFF 0   ]                               []
     "31 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_6     [ DIFF 0   ]                               []
-    "55 48 8D 3D 14 F6 63 FF 48 8D 05 21 C2 6B FF 48"
+    "55 48 8D 3D 54 F5 63 FF 48 8D 05 61 C1 6B FF 48"
 func_7     [ DIFF 0   ]                               []
     "31 C0 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
 func_8     [ DIFF 0   ]                               []

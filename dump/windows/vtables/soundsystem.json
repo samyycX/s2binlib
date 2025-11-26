@@ -987,7 +987,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<bool,struct VMixDualCompressorDesc_t>",
-    "vtable_address": 6445965672,
+    "vtable_address": 6445965664,
     "methods": [
       6444923216,
       6445034960,
@@ -1084,7 +1084,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<bool,struct VMixDynamicsBand_t>",
-    "vtable_address": 6445961056,
+    "vtable_address": 6445961048,
     "methods": [
       6444923216,
       6445034960,
@@ -1181,7 +1181,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<bool,struct VMixDynamicsCompressorDesc_t>",
-    "vtable_address": 6445954416,
+    "vtable_address": 6445954408,
     "methods": [
       6444923216,
       6445034960,
@@ -1278,7 +1278,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<bool,struct VMixFilterDesc_t>",
-    "vtable_address": 6445945256,
+    "vtable_address": 6445945248,
     "methods": [
       6444923216,
       6445034960,
@@ -1375,7 +1375,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<bool,struct VMixUtilityDesc_t>",
-    "vtable_address": 6445982648,
+    "vtable_address": 6445982640,
     "methods": [
       6444923216,
       6445034960,
@@ -1472,7 +1472,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<enum VMixChannelOperation_t,struct VMixUtilityDesc_t>",
-    "vtable_address": 6445978664,
+    "vtable_address": 6445978656,
     "methods": [
       6444923216,
       6445034960,
@@ -1569,7 +1569,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<enum VMixFilterSlope_t,struct VMixFilterDesc_t>",
-    "vtable_address": 6445943768,
+    "vtable_address": 6445943760,
     "methods": [
       6444923216,
       6445034960,
@@ -1666,7 +1666,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<enum VMixFilterType_t,struct VMixFilterDesc_t>",
-    "vtable_address": 6445942280,
+    "vtable_address": 6445942272,
     "methods": [
       6444923216,
       6445034960,
@@ -1763,7 +1763,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<enum VMixLFOShape_t,struct VMixAutoFilterDesc_t>",
-    "vtable_address": 6445990344,
+    "vtable_address": 6445990336,
     "methods": [
       6444923216,
       6445034960,
@@ -1860,7 +1860,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<enum VMixLFOShape_t,struct VMixOscDesc_t>",
-    "vtable_address": 6445992072,
+    "vtable_address": 6445992064,
     "methods": [
       6444923216,
       6445034960,
@@ -1957,7 +1957,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<float,struct VMixAutoFilterDesc_t>",
-    "vtable_address": 6445984800,
+    "vtable_address": 6445984792,
     "methods": [
       6444923216,
       6445034960,
@@ -2054,7 +2054,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<float,struct VMixConvolutionDesc_t>",
-    "vtable_address": 6445968904,
+    "vtable_address": 6445968896,
     "methods": [
       6444923216,
       6445034960,
@@ -2151,7 +2151,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<float,struct VMixDualCompressorDesc_t>",
-    "vtable_address": 6445963176,
+    "vtable_address": 6445963168,
     "methods": [
       6444923216,
       6445034960,
@@ -2248,7 +2248,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<float,struct VMixDynamicsBand_t>",
-    "vtable_address": 6445956040,
+    "vtable_address": 6445956032,
     "methods": [
       6444923216,
       6445034960,
@@ -2345,7 +2345,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<float,struct VMixDynamicsCompressorDesc_t>",
-    "vtable_address": 6445949400,
+    "vtable_address": 6445949392,
     "methods": [
       6444923216,
       6445034960,
@@ -2442,7 +2442,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<float,struct VMixEffectChainDesc_t>",
-    "vtable_address": 6445995672,
+    "vtable_address": 6445995664,
     "methods": [
       6444923216,
       6445034960,
@@ -2539,7 +2539,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<float,struct VMixFilterDesc_t>",
-    "vtable_address": 6445946744,
+    "vtable_address": 6445946736,
     "methods": [
       6444923216,
       6445034960,
@@ -2636,7 +2636,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<float,struct VMixOscDesc_t>",
-    "vtable_address": 6445993560,
+    "vtable_address": 6445993552,
     "methods": [
       6444923216,
       6445034960,
@@ -2733,7 +2733,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<float,struct VMixShaperDesc_t>",
-    "vtable_address": 6445975536,
+    "vtable_address": 6445975528,
     "methods": [
       6444923216,
       6445034960,
@@ -2830,7 +2830,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<float,struct VMixUtilityDesc_t>",
-    "vtable_address": 6445980152,
+    "vtable_address": 6445980144,
     "methods": [
       6444923216,
       6445034960,
@@ -2927,7 +2927,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<int,struct VMixShaperDesc_t>",
-    "vtable_address": 6445974048,
+    "vtable_address": 6445974040,
     "methods": [
       6444923216,
       6445034960,
@@ -3024,7 +3024,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<struct VMixDynamicsBand_t,struct VMixDualCompressorDesc_t>",
-    "vtable_address": 6445967160,
+    "vtable_address": 6445967152,
     "methods": [
       6444923280,
       6445034960,
@@ -3121,7 +3121,7 @@
   },
   {
     "type_name": "CBaseConcreteToolAttr<struct VMixFilterDesc_t,struct VMixAutoFilterDesc_t>",
-    "vtable_address": 6445987296,
+    "vtable_address": 6445987288,
     "methods": [
       6444923344,
       6445034960,
@@ -3218,7 +3218,7 @@
   },
   {
     "type_name": "CBaseToolAttr",
-    "vtable_address": 6445941840,
+    "vtable_address": 6445941832,
     "methods": [
       6444923792,
       6445034960,
@@ -3590,7 +3590,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<bool,struct VMixDualCompressorDesc_t>",
-    "vtable_address": 6445966152,
+    "vtable_address": 6445966144,
     "methods": [
       6444923408,
       6445034960,
@@ -3757,7 +3757,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<bool,struct VMixDualCompressorDesc_t>",
-    "vtable_address": 6445966584,
+    "vtable_address": 6445966576,
     "methods": [
       6444960048,
       6444955856,
@@ -3879,7 +3879,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<bool,struct VMixDynamicsBand_t>",
-    "vtable_address": 6445961536,
+    "vtable_address": 6445961528,
     "methods": [
       6444923408,
       6445034960,
@@ -4046,7 +4046,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<bool,struct VMixDynamicsBand_t>",
-    "vtable_address": 6445961968,
+    "vtable_address": 6445961960,
     "methods": [
       6444960048,
       6444955856,
@@ -4168,7 +4168,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<bool,struct VMixDynamicsCompressorDesc_t>",
-    "vtable_address": 6445954896,
+    "vtable_address": 6445954888,
     "methods": [
       6444923408,
       6445034960,
@@ -4335,7 +4335,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<bool,struct VMixDynamicsCompressorDesc_t>",
-    "vtable_address": 6445955328,
+    "vtable_address": 6445955320,
     "methods": [
       6444960048,
       6444955856,
@@ -4457,7 +4457,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<bool,struct VMixFilterDesc_t>",
-    "vtable_address": 6445945736,
+    "vtable_address": 6445945728,
     "methods": [
       6444923408,
       6445034960,
@@ -4624,7 +4624,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<bool,struct VMixFilterDesc_t>",
-    "vtable_address": 6445946168,
+    "vtable_address": 6445946160,
     "methods": [
       6444960048,
       6444955856,
@@ -4746,7 +4746,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<bool,struct VMixUtilityDesc_t>",
-    "vtable_address": 6445983128,
+    "vtable_address": 6445983120,
     "methods": [
       6444923408,
       6445034960,
@@ -4913,7 +4913,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<bool,struct VMixUtilityDesc_t>",
-    "vtable_address": 6445983560,
+    "vtable_address": 6445983552,
     "methods": [
       6444960048,
       6444955856,
@@ -5035,7 +5035,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<enum VMixChannelOperation_t,struct VMixUtilityDesc_t>",
-    "vtable_address": 6445979144,
+    "vtable_address": 6445979136,
     "methods": [
       6444923408,
       6445034960,
@@ -5202,7 +5202,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<enum VMixChannelOperation_t,struct VMixUtilityDesc_t>",
-    "vtable_address": 6445979576,
+    "vtable_address": 6445979568,
     "methods": [
       6444959472,
       6444955488,
@@ -5324,7 +5324,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<enum VMixFilterSlope_t,struct VMixFilterDesc_t>",
-    "vtable_address": 6445944248,
+    "vtable_address": 6445944240,
     "methods": [
       6444923408,
       6445034960,
@@ -5491,7 +5491,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<enum VMixFilterSlope_t,struct VMixFilterDesc_t>",
-    "vtable_address": 6445944680,
+    "vtable_address": 6445944672,
     "methods": [
       6444959760,
       6444955664,
@@ -5613,7 +5613,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<enum VMixFilterType_t,struct VMixFilterDesc_t>",
-    "vtable_address": 6445942760,
+    "vtable_address": 6445942752,
     "methods": [
       6444923408,
       6445034960,
@@ -5780,7 +5780,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<enum VMixFilterType_t,struct VMixFilterDesc_t>",
-    "vtable_address": 6445943192,
+    "vtable_address": 6445943184,
     "methods": [
       6444959904,
       6444955760,
@@ -5902,7 +5902,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<enum VMixLFOShape_t,struct VMixAutoFilterDesc_t>",
-    "vtable_address": 6445990824,
+    "vtable_address": 6445990816,
     "methods": [
       6444923408,
       6445034960,
@@ -6069,7 +6069,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<enum VMixLFOShape_t,struct VMixAutoFilterDesc_t>",
-    "vtable_address": 6445991256,
+    "vtable_address": 6445991248,
     "methods": [
       6444959472,
       6444955488,
@@ -6191,7 +6191,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<enum VMixLFOShape_t,struct VMixOscDesc_t>",
-    "vtable_address": 6445992552,
+    "vtable_address": 6445992544,
     "methods": [
       6444923408,
       6445034960,
@@ -6358,7 +6358,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<enum VMixLFOShape_t,struct VMixOscDesc_t>",
-    "vtable_address": 6445992984,
+    "vtable_address": 6445992976,
     "methods": [
       6444959472,
       6444955488,
@@ -6480,7 +6480,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixAutoFilterDesc_t>",
-    "vtable_address": 6445985280,
+    "vtable_address": 6445985272,
     "methods": [
       6444923408,
       6445034960,
@@ -6647,7 +6647,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixAutoFilterDesc_t>",
-    "vtable_address": 6445985712,
+    "vtable_address": 6445985704,
     "methods": [
       6444959616,
       6444955568,
@@ -6769,7 +6769,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixConvolutionDesc_t>",
-    "vtable_address": 6445969384,
+    "vtable_address": 6445969376,
     "methods": [
       6444923408,
       6445034960,
@@ -6936,7 +6936,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixConvolutionDesc_t>",
-    "vtable_address": 6445969816,
+    "vtable_address": 6445969808,
     "methods": [
       6444959616,
       6444955568,
@@ -7058,7 +7058,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixDualCompressorDesc_t>",
-    "vtable_address": 6445963656,
+    "vtable_address": 6445963648,
     "methods": [
       6444923408,
       6445034960,
@@ -7225,7 +7225,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixDualCompressorDesc_t>",
-    "vtable_address": 6445964088,
+    "vtable_address": 6445964080,
     "methods": [
       6444959616,
       6444955568,
@@ -7347,7 +7347,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixDynamicsBand_t>",
-    "vtable_address": 6445956520,
+    "vtable_address": 6445956512,
     "methods": [
       6444923408,
       6445034960,
@@ -7514,7 +7514,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixDynamicsBand_t>",
-    "vtable_address": 6445956952,
+    "vtable_address": 6445956944,
     "methods": [
       6444959616,
       6444955568,
@@ -7636,7 +7636,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixDynamicsCompressorDesc_t>",
-    "vtable_address": 6445949880,
+    "vtable_address": 6445949872,
     "methods": [
       6444923408,
       6445034960,
@@ -7803,7 +7803,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixDynamicsCompressorDesc_t>",
-    "vtable_address": 6445950312,
+    "vtable_address": 6445950304,
     "methods": [
       6444959616,
       6444955568,
@@ -7925,7 +7925,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixEffectChainDesc_t>",
-    "vtable_address": 6445996152,
+    "vtable_address": 6445996144,
     "methods": [
       6444923408,
       6445034960,
@@ -8092,7 +8092,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixEffectChainDesc_t>",
-    "vtable_address": 6445996584,
+    "vtable_address": 6445996576,
     "methods": [
       6444959616,
       6444955568,
@@ -8214,7 +8214,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixFilterDesc_t>",
-    "vtable_address": 6445947224,
+    "vtable_address": 6445947216,
     "methods": [
       6444923408,
       6445034960,
@@ -8381,7 +8381,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixFilterDesc_t>",
-    "vtable_address": 6445947656,
+    "vtable_address": 6445947648,
     "methods": [
       6444959616,
       6444955568,
@@ -8503,7 +8503,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixOscDesc_t>",
-    "vtable_address": 6445994040,
+    "vtable_address": 6445994032,
     "methods": [
       6444923408,
       6445034960,
@@ -8670,7 +8670,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixOscDesc_t>",
-    "vtable_address": 6445994472,
+    "vtable_address": 6445994464,
     "methods": [
       6444959616,
       6444955568,
@@ -8792,7 +8792,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixShaperDesc_t>",
-    "vtable_address": 6445976016,
+    "vtable_address": 6445976008,
     "methods": [
       6444923408,
       6445034960,
@@ -8959,7 +8959,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixShaperDesc_t>",
-    "vtable_address": 6445976448,
+    "vtable_address": 6445976440,
     "methods": [
       6444959616,
       6444955568,
@@ -9081,7 +9081,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixUtilityDesc_t>",
-    "vtable_address": 6445980632,
+    "vtable_address": 6445980624,
     "methods": [
       6444923408,
       6445034960,
@@ -9248,7 +9248,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<float,struct VMixUtilityDesc_t>",
-    "vtable_address": 6445981064,
+    "vtable_address": 6445981056,
     "methods": [
       6444959616,
       6444955568,
@@ -9370,7 +9370,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<int,struct VMixShaperDesc_t>",
-    "vtable_address": 6445974528,
+    "vtable_address": 6445974520,
     "methods": [
       6444923408,
       6445034960,
@@ -9537,7 +9537,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<int,struct VMixShaperDesc_t>",
-    "vtable_address": 6445974960,
+    "vtable_address": 6445974952,
     "methods": [
       6444959472,
       6444955488,
@@ -9659,7 +9659,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<struct VMixDynamicsBand_t,struct VMixDualCompressorDesc_t>",
-    "vtable_address": 6445967640,
+    "vtable_address": 6445967632,
     "methods": [
       6444923472,
       6445034960,
@@ -9798,7 +9798,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<struct VMixDynamicsBand_t,struct VMixDualCompressorDesc_t>",
-    "vtable_address": 6445968072,
+    "vtable_address": 6445968064,
     "methods": [
       6444939328,
       6444942384,
@@ -9895,7 +9895,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<struct VMixFilterDesc_t,struct VMixAutoFilterDesc_t>",
-    "vtable_address": 6445987776,
+    "vtable_address": 6445987768,
     "methods": [
       6444923536,
       6445034960,
@@ -10034,7 +10034,7 @@
   },
   {
     "type_name": "CConcreteToolAttrDirectMember<struct VMixFilterDesc_t,struct VMixAutoFilterDesc_t>",
-    "vtable_address": 6445988208,
+    "vtable_address": 6445988200,
     "methods": [
       6444939424,
       6444942528,
@@ -10335,7 +10335,7 @@
   },
   {
     "type_name": "CDefaultToolAttrTableForStruct<struct VMixAutoFilterDesc_t>",
-    "vtable_address": 6445991976,
+    "vtable_address": 6445991968,
     "methods": [
       6444939520,
       6444942672,
@@ -10376,7 +10376,7 @@
   },
   {
     "type_name": "CDefaultToolAttrTableForStruct<struct VMixConvolutionDesc_t>",
-    "vtable_address": 6445973952,
+    "vtable_address": 6445973944,
     "methods": [
       6444939616,
       6444942816,
@@ -10417,7 +10417,7 @@
   },
   {
     "type_name": "CDefaultToolAttrTableForStruct<struct VMixDualCompressorDesc_t>",
-    "vtable_address": 6445968808,
+    "vtable_address": 6445968800,
     "methods": [
       6444939712,
       6444942960,
@@ -10458,7 +10458,7 @@
   },
   {
     "type_name": "CDefaultToolAttrTableForStruct<struct VMixDynamicsBand_t>",
-    "vtable_address": 6445963080,
+    "vtable_address": 6445963072,
     "methods": [
       6444939328,
       6444942384,
@@ -10499,7 +10499,7 @@
   },
   {
     "type_name": "CDefaultToolAttrTableForStruct<struct VMixDynamicsCompressorDesc_t>",
-    "vtable_address": 6445955944,
+    "vtable_address": 6445955936,
     "methods": [
       6444939808,
       6444943104,
@@ -10540,7 +10540,7 @@
   },
   {
     "type_name": "CDefaultToolAttrTableForStruct<struct VMixEffectChainDesc_t>",
-    "vtable_address": 6445997192,
+    "vtable_address": 6445997184,
     "methods": [
       6444939904,
       6444943248,
@@ -10581,7 +10581,7 @@
   },
   {
     "type_name": "CDefaultToolAttrTableForStruct<struct VMixFilterDesc_t>",
-    "vtable_address": 6445949304,
+    "vtable_address": 6445949296,
     "methods": [
       6444939424,
       6444942528,
@@ -10622,7 +10622,7 @@
   },
   {
     "type_name": "CDefaultToolAttrTableForStruct<struct VMixOscDesc_t>",
-    "vtable_address": 6445995576,
+    "vtable_address": 6445995568,
     "methods": [
       6444940000,
       6444943392,
@@ -10663,7 +10663,7 @@
   },
   {
     "type_name": "CDefaultToolAttrTableForStruct<struct VMixShaperDesc_t>",
-    "vtable_address": 6445978568,
+    "vtable_address": 6445978560,
     "methods": [
       6444940096,
       6444943536,
@@ -10704,7 +10704,7 @@
   },
   {
     "type_name": "CDefaultToolAttrTableForStruct<struct VMixUtilityDesc_t>",
-    "vtable_address": 6445984704,
+    "vtable_address": 6445984696,
     "methods": [
       6444940192,
       6444943680,
@@ -13371,7 +13371,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6446268952,
+        "complete_object_locator": 6446268992,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -26541,7 +26541,7 @@
   },
   {
     "type_name": "CSyncVSndResourceUtils",
-    "vtable_address": 6446123960,
+    "vtable_address": 6446124120,
     "methods": [
       6443119456,
       6442541520,
@@ -26633,7 +26633,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<bool,struct VMixDualCompressorDesc_t>",
-    "vtable_address": 6445966104,
+    "vtable_address": 6445966096,
     "methods": [
       6444927520,
       6442538176,
@@ -26668,7 +26668,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<bool,struct VMixDynamicsBand_t>",
-    "vtable_address": 6445961488,
+    "vtable_address": 6445961480,
     "methods": [
       6444927632,
       6442538176,
@@ -26703,7 +26703,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<bool,struct VMixDynamicsCompressorDesc_t>",
-    "vtable_address": 6445954848,
+    "vtable_address": 6445954840,
     "methods": [
       6444927744,
       6442538176,
@@ -26738,7 +26738,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<bool,struct VMixFilterDesc_t>",
-    "vtable_address": 6445945688,
+    "vtable_address": 6445945680,
     "methods": [
       6444927072,
       6442538176,
@@ -26773,7 +26773,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<bool,struct VMixUtilityDesc_t>",
-    "vtable_address": 6445983080,
+    "vtable_address": 6445983072,
     "methods": [
       6444927856,
       6442538176,
@@ -26808,7 +26808,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<enum VMixChannelOperation_t,struct VMixUtilityDesc_t>",
-    "vtable_address": 6445979096,
+    "vtable_address": 6445979088,
     "methods": [
       6444926960,
       6442538176,
@@ -26843,7 +26843,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<enum VMixFilterSlope_t,struct VMixFilterDesc_t>",
-    "vtable_address": 6445944200,
+    "vtable_address": 6445944192,
     "methods": [
       6444927072,
       6442538176,
@@ -26878,7 +26878,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<enum VMixFilterType_t,struct VMixFilterDesc_t>",
-    "vtable_address": 6445942712,
+    "vtable_address": 6445942704,
     "methods": [
       6444927184,
       6442538176,
@@ -26913,7 +26913,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<enum VMixLFOShape_t,struct VMixAutoFilterDesc_t>",
-    "vtable_address": 6445990776,
+    "vtable_address": 6445990768,
     "methods": [
       6444927296,
       6442538176,
@@ -26948,7 +26948,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<enum VMixLFOShape_t,struct VMixOscDesc_t>",
-    "vtable_address": 6445992504,
+    "vtable_address": 6445992496,
     "methods": [
       6444927408,
       6442538176,
@@ -26983,7 +26983,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<float,struct VMixAutoFilterDesc_t>",
-    "vtable_address": 6445985232,
+    "vtable_address": 6445985224,
     "methods": [
       6444925776,
       6442538176,
@@ -27018,7 +27018,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<float,struct VMixConvolutionDesc_t>",
-    "vtable_address": 6445969336,
+    "vtable_address": 6445969328,
     "methods": [
       6444925872,
       6442538176,
@@ -27053,7 +27053,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<float,struct VMixDualCompressorDesc_t>",
-    "vtable_address": 6445963608,
+    "vtable_address": 6445963600,
     "methods": [
       6444925968,
       6442538176,
@@ -27088,7 +27088,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<float,struct VMixDynamicsBand_t>",
-    "vtable_address": 6445956472,
+    "vtable_address": 6445956464,
     "methods": [
       6444926064,
       6442538176,
@@ -27123,7 +27123,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<float,struct VMixDynamicsCompressorDesc_t>",
-    "vtable_address": 6445949832,
+    "vtable_address": 6445949824,
     "methods": [
       6444926160,
       6442538176,
@@ -27158,7 +27158,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<float,struct VMixEffectChainDesc_t>",
-    "vtable_address": 6445996104,
+    "vtable_address": 6445996096,
     "methods": [
       6444926256,
       6442538176,
@@ -27193,7 +27193,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<float,struct VMixFilterDesc_t>",
-    "vtable_address": 6445947176,
+    "vtable_address": 6445947168,
     "methods": [
       6444926352,
       6442538176,
@@ -27228,7 +27228,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<float,struct VMixOscDesc_t>",
-    "vtable_address": 6445993992,
+    "vtable_address": 6445993984,
     "methods": [
       6444926448,
       6442538176,
@@ -27263,7 +27263,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<float,struct VMixShaperDesc_t>",
-    "vtable_address": 6445975968,
+    "vtable_address": 6445975960,
     "methods": [
       6444926544,
       6442538176,
@@ -27298,7 +27298,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<float,struct VMixUtilityDesc_t>",
-    "vtable_address": 6445980584,
+    "vtable_address": 6445980576,
     "methods": [
       6444926640,
       6442538176,
@@ -27333,7 +27333,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<int,struct VMixShaperDesc_t>",
-    "vtable_address": 6445974480,
+    "vtable_address": 6445974472,
     "methods": [
       6444925664,
       6442538176,
@@ -27368,7 +27368,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<struct VMixDynamicsBand_t,struct VMixDualCompressorDesc_t>",
-    "vtable_address": 6445967592,
+    "vtable_address": 6445967584,
     "methods": [
       6444926736,
       6442538176,
@@ -27403,7 +27403,7 @@
   },
   {
     "type_name": "CToolAttrDirectMemberAccess<struct VMixFilterDesc_t,struct VMixAutoFilterDesc_t>",
-    "vtable_address": 6445987728,
+    "vtable_address": 6445987720,
     "methods": [
       6444926848,
       6442538176,
@@ -27830,7 +27830,7 @@
   },
   {
     "type_name": "CVSoundTypeManager",
-    "vtable_address": 6446123712,
+    "vtable_address": 6446123872,
     "methods": [
       6442538176,
       6442541792,
@@ -30930,7 +30930,7 @@
   },
   {
     "type_name": "IBaseToolAttr",
-    "vtable_address": 6445941408,
+    "vtable_address": 6445941400,
     "methods": [
       6444924016,
       6445418428,
@@ -31091,7 +31091,7 @@
   },
   {
     "type_name": "IVSoundManager",
-    "vtable_address": 6446124072,
+    "vtable_address": 6446124232,
     "methods": [
       6442538176,
       6442541792,
@@ -31211,7 +31211,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_filter",
-    "vtable_address": 6445988304,
+    "vtable_address": 6445988296,
     "methods": [
       6444923728,
       6445034960,
@@ -31364,7 +31364,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_filter",
-    "vtable_address": 6445988736,
+    "vtable_address": 6445988728,
     "methods": [
       6444939424,
       6444942528,
@@ -31475,7 +31475,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flAttackTimeMS",
-    "vtable_address": 6445986288,
+    "vtable_address": 6445986280,
     "methods": [
       6444923600,
       6445034960,
@@ -31656,7 +31656,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flAttackTimeMS",
-    "vtable_address": 6445986720,
+    "vtable_address": 6445986712,
     "methods": [
       6444959616,
       6444955568,
@@ -31792,7 +31792,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flEnvelopeAmount",
-    "vtable_address": 6445985784,
+    "vtable_address": 6445985776,
     "methods": [
       6444923600,
       6445034960,
@@ -31973,7 +31973,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flEnvelopeAmount",
-    "vtable_address": 6445986216,
+    "vtable_address": 6445986208,
     "methods": [
       6444959616,
       6444955568,
@@ -32109,7 +32109,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flLFOAmount",
-    "vtable_address": 6445988832,
+    "vtable_address": 6445988824,
     "methods": [
       6444923600,
       6445034960,
@@ -32290,7 +32290,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flLFOAmount",
-    "vtable_address": 6445989264,
+    "vtable_address": 6445989256,
     "methods": [
       6444959616,
       6444955568,
@@ -32426,7 +32426,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flLFORate",
-    "vtable_address": 6445989336,
+    "vtable_address": 6445989328,
     "methods": [
       6444923600,
       6445034960,
@@ -32607,7 +32607,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flLFORate",
-    "vtable_address": 6445989768,
+    "vtable_address": 6445989760,
     "methods": [
       6444959616,
       6444955568,
@@ -32743,7 +32743,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flPhase",
-    "vtable_address": 6445989840,
+    "vtable_address": 6445989832,
     "methods": [
       6444923600,
       6445034960,
@@ -32924,7 +32924,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flPhase",
-    "vtable_address": 6445990272,
+    "vtable_address": 6445990264,
     "methods": [
       6444959616,
       6444955568,
@@ -33060,7 +33060,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flReleaseTimeMS",
-    "vtable_address": 6445986792,
+    "vtable_address": 6445986784,
     "methods": [
       6444923600,
       6445034960,
@@ -33241,7 +33241,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flReleaseTimeMS",
-    "vtable_address": 6445987224,
+    "vtable_address": 6445987216,
     "methods": [
       6444959616,
       6444955568,
@@ -33377,7 +33377,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_nLFOShape",
-    "vtable_address": 6445991328,
+    "vtable_address": 6445991320,
     "methods": [
       6444923600,
       6445034960,
@@ -33558,7 +33558,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixAutoFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_nLFOShape",
-    "vtable_address": 6445991760,
+    "vtable_address": 6445991752,
     "methods": [
       6444959472,
       6444955488,
@@ -33694,7 +33694,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flHighCutoffFreq",
-    "vtable_address": 6445973416,
+    "vtable_address": 6445973408,
     "methods": [
       6444923600,
       6445034960,
@@ -33875,7 +33875,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flHighCutoffFreq",
-    "vtable_address": 6445973848,
+    "vtable_address": 6445973840,
     "methods": [
       6444959616,
       6444955568,
@@ -34011,7 +34011,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flLowCutoffFreq",
-    "vtable_address": 6445972912,
+    "vtable_address": 6445972904,
     "methods": [
       6444923600,
       6445034960,
@@ -34192,7 +34192,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flLowCutoffFreq",
-    "vtable_address": 6445973344,
+    "vtable_address": 6445973336,
     "methods": [
       6444959616,
       6444955568,
@@ -34328,7 +34328,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flPreDelayMS",
-    "vtable_address": 6445970392,
+    "vtable_address": 6445970384,
     "methods": [
       6444923600,
       6445034960,
@@ -34509,7 +34509,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flPreDelayMS",
-    "vtable_address": 6445970824,
+    "vtable_address": 6445970816,
     "methods": [
       6444959616,
       6444955568,
@@ -34645,7 +34645,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flWetMix",
-    "vtable_address": 6445970896,
+    "vtable_address": 6445970888,
     "methods": [
       6444923600,
       6445034960,
@@ -34826,7 +34826,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flWetMix",
-    "vtable_address": 6445971328,
+    "vtable_address": 6445971320,
     "methods": [
       6444959616,
       6444955568,
@@ -34962,7 +34962,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbGain",
-    "vtable_address": 6445969888,
+    "vtable_address": 6445969880,
     "methods": [
       6444923600,
       6445034960,
@@ -35143,7 +35143,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbGain",
-    "vtable_address": 6445970320,
+    "vtable_address": 6445970312,
     "methods": [
       6444959616,
       6444955568,
@@ -35279,7 +35279,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbHigh",
-    "vtable_address": 6445972408,
+    "vtable_address": 6445972400,
     "methods": [
       6444923600,
       6445034960,
@@ -35460,7 +35460,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbHigh",
-    "vtable_address": 6445972840,
+    "vtable_address": 6445972832,
     "methods": [
       6444959616,
       6444955568,
@@ -35596,7 +35596,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbLow",
-    "vtable_address": 6445971400,
+    "vtable_address": 6445971392,
     "methods": [
       6444923600,
       6445034960,
@@ -35777,7 +35777,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbLow",
-    "vtable_address": 6445971832,
+    "vtable_address": 6445971824,
     "methods": [
       6444959616,
       6444955568,
@@ -35913,7 +35913,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbMid",
-    "vtable_address": 6445971904,
+    "vtable_address": 6445971896,
     "methods": [
       6444923600,
       6445034960,
@@ -36094,7 +36094,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixConvolutionDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbMid",
-    "vtable_address": 6445972336,
+    "vtable_address": 6445972328,
     "methods": [
       6444959616,
       6444955568,
@@ -36230,7 +36230,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDualCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_bPeakMode",
-    "vtable_address": 6445966656,
+    "vtable_address": 6445966648,
     "methods": [
       6444923600,
       6445034960,
@@ -36411,7 +36411,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDualCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_bPeakMode",
-    "vtable_address": 6445967088,
+    "vtable_address": 6445967080,
     "methods": [
       6444960048,
       6444955856,
@@ -36547,7 +36547,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDualCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_bandDesc",
-    "vtable_address": 6445968168,
+    "vtable_address": 6445968160,
     "methods": [
       6444923664,
       6445034960,
@@ -36700,7 +36700,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDualCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_bandDesc",
-    "vtable_address": 6445968600,
+    "vtable_address": 6445968592,
     "methods": [
       6444939328,
       6444942384,
@@ -36811,7 +36811,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDualCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flRMSTimeMS",
-    "vtable_address": 6445964160,
+    "vtable_address": 6445964152,
     "methods": [
       6444923600,
       6445034960,
@@ -36992,7 +36992,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDualCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flRMSTimeMS",
-    "vtable_address": 6445964592,
+    "vtable_address": 6445964584,
     "methods": [
       6444959616,
       6444955568,
@@ -37128,7 +37128,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDualCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flWetMix",
-    "vtable_address": 6445965168,
+    "vtable_address": 6445965160,
     "methods": [
       6444923600,
       6445034960,
@@ -37309,7 +37309,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDualCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flWetMix",
-    "vtable_address": 6445965600,
+    "vtable_address": 6445965592,
     "methods": [
       6444959616,
       6444955568,
@@ -37445,7 +37445,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDualCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbKneeWidth",
-    "vtable_address": 6445964664,
+    "vtable_address": 6445964656,
     "methods": [
       6444923600,
       6445034960,
@@ -37626,7 +37626,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDualCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbKneeWidth",
-    "vtable_address": 6445965096,
+    "vtable_address": 6445965088,
     "methods": [
       6444959616,
       6444955568,
@@ -37762,7 +37762,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_bEnable",
-    "vtable_address": 6445962040,
+    "vtable_address": 6445962032,
     "methods": [
       6444923600,
       6445034960,
@@ -37943,7 +37943,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_bEnable",
-    "vtable_address": 6445962472,
+    "vtable_address": 6445962464,
     "methods": [
       6444960048,
       6444955856,
@@ -38079,7 +38079,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_bSolo",
-    "vtable_address": 6445962544,
+    "vtable_address": 6445962536,
     "methods": [
       6444923600,
       6445034960,
@@ -38260,7 +38260,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_bSolo",
-    "vtable_address": 6445962976,
+    "vtable_address": 6445962968,
     "methods": [
       6444960048,
       6444955856,
@@ -38396,7 +38396,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flAttackTimeMS",
-    "vtable_address": 6445960048,
+    "vtable_address": 6445960040,
     "methods": [
       6444923600,
       6445034960,
@@ -38577,7 +38577,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flAttackTimeMS",
-    "vtable_address": 6445960480,
+    "vtable_address": 6445960472,
     "methods": [
       6444959616,
       6444955568,
@@ -38713,7 +38713,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flRatioAbove",
-    "vtable_address": 6445959544,
+    "vtable_address": 6445959536,
     "methods": [
       6444923600,
       6445034960,
@@ -38894,7 +38894,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flRatioAbove",
-    "vtable_address": 6445959976,
+    "vtable_address": 6445959968,
     "methods": [
       6444959616,
       6444955568,
@@ -39030,7 +39030,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flRatioBelow",
-    "vtable_address": 6445959040,
+    "vtable_address": 6445959032,
     "methods": [
       6444923600,
       6445034960,
@@ -39211,7 +39211,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flRatioBelow",
-    "vtable_address": 6445959472,
+    "vtable_address": 6445959464,
     "methods": [
       6444959616,
       6444955568,
@@ -39347,7 +39347,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flReleaseTimeMS",
-    "vtable_address": 6445960552,
+    "vtable_address": 6445960544,
     "methods": [
       6444923600,
       6445034960,
@@ -39528,7 +39528,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flReleaseTimeMS",
-    "vtable_address": 6445960984,
+    "vtable_address": 6445960976,
     "methods": [
       6444959616,
       6444955568,
@@ -39664,7 +39664,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbGainInput",
-    "vtable_address": 6445957024,
+    "vtable_address": 6445957016,
     "methods": [
       6444923600,
       6445034960,
@@ -39845,7 +39845,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbGainInput",
-    "vtable_address": 6445957456,
+    "vtable_address": 6445957448,
     "methods": [
       6444959616,
       6444955568,
@@ -39981,7 +39981,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbGainOutput",
-    "vtable_address": 6445957528,
+    "vtable_address": 6445957520,
     "methods": [
       6444923600,
       6445034960,
@@ -40162,7 +40162,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbGainOutput",
-    "vtable_address": 6445957960,
+    "vtable_address": 6445957952,
     "methods": [
       6444959616,
       6444955568,
@@ -40298,7 +40298,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbThresholdAbove",
-    "vtable_address": 6445958536,
+    "vtable_address": 6445958528,
     "methods": [
       6444923600,
       6445034960,
@@ -40479,7 +40479,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbThresholdAbove",
-    "vtable_address": 6445958968,
+    "vtable_address": 6445958960,
     "methods": [
       6444959616,
       6444955568,
@@ -40615,7 +40615,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbThresholdBelow",
-    "vtable_address": 6445958032,
+    "vtable_address": 6445958024,
     "methods": [
       6444923600,
       6445034960,
@@ -40796,7 +40796,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsBand_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbThresholdBelow",
-    "vtable_address": 6445958464,
+    "vtable_address": 6445958456,
     "methods": [
       6444959616,
       6444955568,
@@ -40932,7 +40932,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_bPeakMode",
-    "vtable_address": 6445955400,
+    "vtable_address": 6445955392,
     "methods": [
       6444923600,
       6445034960,
@@ -41113,7 +41113,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_bPeakMode",
-    "vtable_address": 6445955832,
+    "vtable_address": 6445955824,
     "methods": [
       6444960048,
       6444955856,
@@ -41249,7 +41249,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flAttackTimeMS",
-    "vtable_address": 6445952400,
+    "vtable_address": 6445952392,
     "methods": [
       6444923600,
       6445034960,
@@ -41430,7 +41430,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flAttackTimeMS",
-    "vtable_address": 6445952832,
+    "vtable_address": 6445952824,
     "methods": [
       6444959616,
       6444955568,
@@ -41566,7 +41566,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flCompressionRatio",
-    "vtable_address": 6445951896,
+    "vtable_address": 6445951888,
     "methods": [
       6444923600,
       6445034960,
@@ -41747,7 +41747,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flCompressionRatio",
-    "vtable_address": 6445952328,
+    "vtable_address": 6445952320,
     "methods": [
       6444959616,
       6444955568,
@@ -41883,7 +41883,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flRMSTimeMS",
-    "vtable_address": 6445953408,
+    "vtable_address": 6445953400,
     "methods": [
       6444923600,
       6445034960,
@@ -42064,7 +42064,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flRMSTimeMS",
-    "vtable_address": 6445953840,
+    "vtable_address": 6445953832,
     "methods": [
       6444959616,
       6444955568,
@@ -42200,7 +42200,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flReleaseTimeMS",
-    "vtable_address": 6445952904,
+    "vtable_address": 6445952896,
     "methods": [
       6444923600,
       6445034960,
@@ -42381,7 +42381,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flReleaseTimeMS",
-    "vtable_address": 6445953336,
+    "vtable_address": 6445953328,
     "methods": [
       6444959616,
       6444955568,
@@ -42517,7 +42517,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flWetMix",
-    "vtable_address": 6445953912,
+    "vtable_address": 6445953904,
     "methods": [
       6444923600,
       6445034960,
@@ -42698,7 +42698,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flWetMix",
-    "vtable_address": 6445954344,
+    "vtable_address": 6445954336,
     "methods": [
       6444959616,
       6444955568,
@@ -42834,7 +42834,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbCompressionThreshold",
-    "vtable_address": 6445950888,
+    "vtable_address": 6445950880,
     "methods": [
       6444923600,
       6445034960,
@@ -43015,7 +43015,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbCompressionThreshold",
-    "vtable_address": 6445951320,
+    "vtable_address": 6445951312,
     "methods": [
       6444959616,
       6444955568,
@@ -43151,7 +43151,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbKneeWidth",
-    "vtable_address": 6445951392,
+    "vtable_address": 6445951384,
     "methods": [
       6444923600,
       6445034960,
@@ -43332,7 +43332,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbKneeWidth",
-    "vtable_address": 6445951824,
+    "vtable_address": 6445951816,
     "methods": [
       6444959616,
       6444955568,
@@ -43468,7 +43468,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbOutputGain",
-    "vtable_address": 6445950384,
+    "vtable_address": 6445950376,
     "methods": [
       6444923600,
       6445034960,
@@ -43649,7 +43649,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixDynamicsCompressorDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbOutputGain",
-    "vtable_address": 6445950816,
+    "vtable_address": 6445950808,
     "methods": [
       6444959616,
       6444955568,
@@ -43785,7 +43785,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixEffectChainDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flCrossfadeTime",
-    "vtable_address": 6445996656,
+    "vtable_address": 6445996648,
     "methods": [
       6444923600,
       6445034960,
@@ -43966,7 +43966,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixEffectChainDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flCrossfadeTime",
-    "vtable_address": 6445997088,
+    "vtable_address": 6445997080,
     "methods": [
       6444959616,
       6444955568,
@@ -44102,7 +44102,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_bEnabled",
-    "vtable_address": 6445946240,
+    "vtable_address": 6445946232,
     "methods": [
       6444923600,
       6445034960,
@@ -44283,7 +44283,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_bEnabled",
-    "vtable_address": 6445946672,
+    "vtable_address": 6445946664,
     "methods": [
       6444960048,
       6444955856,
@@ -44419,7 +44419,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flCutoffFreq",
-    "vtable_address": 6445948232,
+    "vtable_address": 6445948224,
     "methods": [
       6444923600,
       6445034960,
@@ -44600,7 +44600,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flCutoffFreq",
-    "vtable_address": 6445948664,
+    "vtable_address": 6445948656,
     "methods": [
       6444959616,
       6444955568,
@@ -44736,7 +44736,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flQ",
-    "vtable_address": 6445948736,
+    "vtable_address": 6445948728,
     "methods": [
       6444923600,
       6445034960,
@@ -44917,7 +44917,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flQ",
-    "vtable_address": 6445949168,
+    "vtable_address": 6445949160,
     "methods": [
       6444959616,
       6444955568,
@@ -45053,7 +45053,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbGain",
-    "vtable_address": 6445947728,
+    "vtable_address": 6445947720,
     "methods": [
       6444923600,
       6445034960,
@@ -45234,7 +45234,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbGain",
-    "vtable_address": 6445948160,
+    "vtable_address": 6445948152,
     "methods": [
       6444959616,
       6444955568,
@@ -45370,7 +45370,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_nFilterSlope",
-    "vtable_address": 6445944752,
+    "vtable_address": 6445944744,
     "methods": [
       6444923600,
       6445034960,
@@ -45551,7 +45551,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_nFilterSlope",
-    "vtable_address": 6445945184,
+    "vtable_address": 6445945176,
     "methods": [
       6444959760,
       6444955664,
@@ -45687,7 +45687,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_nFilterType",
-    "vtable_address": 6445943264,
+    "vtable_address": 6445943256,
     "methods": [
       6444923600,
       6445034960,
@@ -45868,7 +45868,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixFilterDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_nFilterType",
-    "vtable_address": 6445943696,
+    "vtable_address": 6445943688,
     "methods": [
       6444959904,
       6444955760,
@@ -46004,7 +46004,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixOscDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flPhase",
-    "vtable_address": 6445995048,
+    "vtable_address": 6445995040,
     "methods": [
       6444923600,
       6445034960,
@@ -46185,7 +46185,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixOscDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flPhase",
-    "vtable_address": 6445995480,
+    "vtable_address": 6445995472,
     "methods": [
       6444959616,
       6444955568,
@@ -46321,7 +46321,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixOscDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_freq",
-    "vtable_address": 6445994544,
+    "vtable_address": 6445994536,
     "methods": [
       6444923600,
       6445034960,
@@ -46502,7 +46502,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixOscDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_freq",
-    "vtable_address": 6445994976,
+    "vtable_address": 6445994968,
     "methods": [
       6444959616,
       6444955568,
@@ -46638,7 +46638,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixOscDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_oscType",
-    "vtable_address": 6445993056,
+    "vtable_address": 6445993048,
     "methods": [
       6444923600,
       6445034960,
@@ -46819,7 +46819,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixOscDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_oscType",
-    "vtable_address": 6445993488,
+    "vtable_address": 6445993480,
     "methods": [
       6444959472,
       6444955488,
@@ -46955,7 +46955,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixShaperDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flWetMix",
-    "vtable_address": 6445977528,
+    "vtable_address": 6445977520,
     "methods": [
       6444923600,
       6445034960,
@@ -47136,7 +47136,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixShaperDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flWetMix",
-    "vtable_address": 6445977960,
+    "vtable_address": 6445977952,
     "methods": [
       6444959616,
       6444955568,
@@ -47272,7 +47272,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixShaperDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbDrive",
-    "vtable_address": 6445976520,
+    "vtable_address": 6445976512,
     "methods": [
       6444923600,
       6445034960,
@@ -47453,7 +47453,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixShaperDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbDrive",
-    "vtable_address": 6445976952,
+    "vtable_address": 6445976944,
     "methods": [
       6444959616,
       6444955568,
@@ -47589,7 +47589,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixShaperDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbOutputGain",
-    "vtable_address": 6445977024,
+    "vtable_address": 6445977016,
     "methods": [
       6444923600,
       6445034960,
@@ -47770,7 +47770,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixShaperDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbOutputGain",
-    "vtable_address": 6445977456,
+    "vtable_address": 6445977448,
     "methods": [
       6444959616,
       6444955568,
@@ -47906,7 +47906,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixShaperDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_nOversampleFactor",
-    "vtable_address": 6445978032,
+    "vtable_address": 6445978024,
     "methods": [
       6444923600,
       6445034960,
@@ -48087,7 +48087,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixShaperDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_nOversampleFactor",
-    "vtable_address": 6445978464,
+    "vtable_address": 6445978456,
     "methods": [
       6444959472,
       6444955488,
@@ -48223,7 +48223,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixShaperDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_nShape",
-    "vtable_address": 6445975032,
+    "vtable_address": 6445975024,
     "methods": [
       6444923600,
       6445034960,
@@ -48404,7 +48404,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixShaperDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_nShape",
-    "vtable_address": 6445975464,
+    "vtable_address": 6445975456,
     "methods": [
       6444959472,
       6444955488,
@@ -48540,7 +48540,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixUtilityDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_bBassMono",
-    "vtable_address": 6445983632,
+    "vtable_address": 6445983624,
     "methods": [
       6444923600,
       6445034960,
@@ -48721,7 +48721,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixUtilityDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_bBassMono",
-    "vtable_address": 6445984064,
+    "vtable_address": 6445984056,
     "methods": [
       6444960048,
       6444955856,
@@ -48857,7 +48857,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixUtilityDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flBassFreq",
-    "vtable_address": 6445984136,
+    "vtable_address": 6445984128,
     "methods": [
       6444923600,
       6445034960,
@@ -49038,7 +49038,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixUtilityDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flBassFreq",
-    "vtable_address": 6445984568,
+    "vtable_address": 6445984560,
     "methods": [
       6444959616,
       6444955568,
@@ -49174,7 +49174,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixUtilityDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flInputPan",
-    "vtable_address": 6445981136,
+    "vtable_address": 6445981128,
     "methods": [
       6444923600,
       6445034960,
@@ -49355,7 +49355,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixUtilityDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flInputPan",
-    "vtable_address": 6445981568,
+    "vtable_address": 6445981560,
     "methods": [
       6444959616,
       6444955568,
@@ -49491,7 +49491,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixUtilityDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flOutputBalance",
-    "vtable_address": 6445981640,
+    "vtable_address": 6445981632,
     "methods": [
       6444923600,
       6445034960,
@@ -49672,7 +49672,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixUtilityDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_flOutputBalance",
-    "vtable_address": 6445982072,
+    "vtable_address": 6445982064,
     "methods": [
       6444959616,
       6444955568,
@@ -49808,7 +49808,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixUtilityDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbOutputGain",
-    "vtable_address": 6445982144,
+    "vtable_address": 6445982136,
     "methods": [
       6444923600,
       6445034960,
@@ -49989,7 +49989,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixUtilityDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_fldbOutputGain",
-    "vtable_address": 6445982576,
+    "vtable_address": 6445982568,
     "methods": [
       6444959616,
       6444955568,
@@ -50125,7 +50125,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixUtilityDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_nOp",
-    "vtable_address": 6445979648,
+    "vtable_address": 6445979640,
     "methods": [
       6444923600,
       6445034960,
@@ -50306,7 +50306,7 @@
   },
   {
     "type_name": "`public: static void __cdecl VMixUtilityDesc_t::GetAttributeTable_Impl(class CUtlVector<class IBaseToolAttr *,int,class CUtlVectorMemory_Growable<class IBaseToolAttr *,int,0> > *)'::`2'::CAttr_m_nOp",
-    "vtable_address": 6445980080,
+    "vtable_address": 6445980072,
     "methods": [
       6444959472,
       6444955488,

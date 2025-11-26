@@ -28,7 +28,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445837808,
+        "complete_object_locator": 6445837680,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -74,7 +74,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445830960,
+        "complete_object_locator": 6445830832,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -120,7 +120,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445830864,
+        "complete_object_locator": 6445830736,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -129,7 +129,7 @@
   },
   {
     "type_name": "CColorizedLoggingListener",
-    "vtable_address": 6445721528,
+    "vtable_address": 6445721496,
     "methods": [
       6443641792,
       6443641776,
@@ -169,7 +169,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445839712,
+        "complete_object_locator": 6445839584,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -224,7 +224,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445831912,
+        "complete_object_locator": 6445831784,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -297,7 +297,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445833840,
+        "complete_object_locator": 6445833712,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 1
@@ -370,7 +370,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445834232,
+        "complete_object_locator": 6445834104,
         "offset": 8,
         "constructor_displacement": 0,
         "class_attributes": 1
@@ -379,14 +379,14 @@
   },
   {
     "type_name": "CCountedStringPool_CI",
-    "vtable_address": 6445746016,
+    "vtable_address": 6445745920,
     "methods": [
       6443904752
     ],
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445842008,
+        "complete_object_locator": 6445841880,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -506,7 +506,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445833096,
+        "complete_object_locator": 6445832968,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -539,7 +539,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445838680,
+        "complete_object_locator": 6445838552,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -548,7 +548,7 @@
   },
   {
     "type_name": "CDefaultLoggingResponsePolicy",
-    "vtable_address": 6445721576,
+    "vtable_address": 6445721544,
     "methods": [
       6443642352
     ],
@@ -570,7 +570,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445840144,
+        "complete_object_locator": 6445840016,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -579,7 +579,7 @@
   },
   {
     "type_name": "CDisposableKeyValuesSystem",
-    "vtable_address": 6445663536,
+    "vtable_address": 6445663528,
     "methods": [
       6443349136,
       6443185744,
@@ -637,7 +637,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445839392,
+        "complete_object_locator": 6445839264,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -676,7 +676,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445834504,
+        "complete_object_locator": 6445834376,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -755,7 +755,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445836672,
+        "complete_object_locator": 6445836544,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 1
@@ -791,7 +791,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445835416,
+        "complete_object_locator": 6445835288,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -899,7 +899,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445838288,
+        "complete_object_locator": 6445838160,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 1
@@ -908,7 +908,7 @@
   },
   {
     "type_name": "CHeapMemAlloc",
-    "vtable_address": 6445724784,
+    "vtable_address": 6445724776,
     "methods": [
       6443690608,
       6443692160,
@@ -987,7 +987,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445840336,
+        "complete_object_locator": 6445840208,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1023,7 +1023,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445836752,
+        "complete_object_locator": 6445836624,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1072,7 +1072,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445833416,
+        "complete_object_locator": 6445833288,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1121,7 +1121,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445833288,
+        "complete_object_locator": 6445833160,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1170,7 +1170,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445834144,
+        "complete_object_locator": 6445834016,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1179,7 +1179,7 @@
   },
   {
     "type_name": "CKeyValuesSystem",
-    "vtable_address": 6445663136,
+    "vtable_address": 6445663128,
     "methods": [
       6443341600,
       6443341792,
@@ -1237,7 +1237,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445839000,
+        "complete_object_locator": 6445838872,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1246,7 +1246,7 @@
   },
   {
     "type_name": "CKeyValuesSystemBase",
-    "vtable_address": 6445663328,
+    "vtable_address": 6445663320,
     "methods": [
       6443329760,
       6445178616,
@@ -1290,7 +1290,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445839240,
+        "complete_object_locator": 6445839112,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1326,7 +1326,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445838792,
+        "complete_object_locator": 6445838664,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1335,7 +1335,7 @@
   },
   {
     "type_name": "CMemPassAllocT<struct LLA_AddAlignedSelectors<struct LowLevelAllocationScheme_mimalloc> >",
-    "vtable_address": 6445727616,
+    "vtable_address": 6445727592,
     "methods": [
       6443690608,
       6443699472,
@@ -1414,7 +1414,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445840744,
+        "complete_object_locator": 6445840616,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1423,7 +1423,7 @@
   },
   {
     "type_name": "CMemStdPurePassThroughAlloc",
-    "vtable_address": 6445727200,
+    "vtable_address": 6445727192,
     "methods": [
       6443690608,
       6443699472,
@@ -1516,7 +1516,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445840896,
+        "complete_object_locator": 6445840768,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1525,7 +1525,7 @@
   },
   {
     "type_name": "CMiniDumpCommentBuilderBase",
-    "vtable_address": 6445721640,
+    "vtable_address": 6445721608,
     "methods": [
       6443642512,
       6442833824,
@@ -1534,7 +1534,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445839928,
+        "complete_object_locator": 6445839800,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1567,7 +1567,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445834840,
+        "complete_object_locator": 6445834712,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1599,7 +1599,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445838128,
+        "complete_object_locator": 6445838000,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1645,7 +1645,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445831664,
+        "complete_object_locator": 6445831536,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 1
@@ -1738,7 +1738,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445837952,
+        "complete_object_locator": 6445837824,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 1
@@ -1747,7 +1747,7 @@
   },
   {
     "type_name": "CProcess",
-    "vtable_address": 6445741800,
+    "vtable_address": 6445741720,
     "methods": [
       6443846992,
       6443847216,
@@ -1784,7 +1784,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445841872,
+        "complete_object_locator": 6445841744,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1793,7 +1793,7 @@
   },
   {
     "type_name": "CProcessPipeRead",
-    "vtable_address": 6445741528,
+    "vtable_address": 6445741448,
     "methods": [
       6443843328,
       6443843344,
@@ -1821,7 +1821,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445841320,
+        "complete_object_locator": 6445841192,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1830,7 +1830,7 @@
   },
   {
     "type_name": "CProcessUtils",
-    "vtable_address": 6445741592,
+    "vtable_address": 6445741512,
     "methods": [
       6442934400,
       6442934384,
@@ -1918,7 +1918,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445841912,
+        "complete_object_locator": 6445841784,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -1927,7 +1927,7 @@
   },
   {
     "type_name": "CSimpleLoggingListener",
-    "vtable_address": 6445721592,
+    "vtable_address": 6445721560,
     "methods": [
       6443641536,
       6443641776,
@@ -1953,7 +1953,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445839888,
+        "complete_object_locator": 6445839760,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2032,7 +2032,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445837440,
+        "complete_object_locator": 6445837312,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 1
@@ -2078,7 +2078,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445831088,
+        "complete_object_locator": 6445830960,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2087,7 +2087,7 @@
   },
   {
     "type_name": "CStdMemAlloc<struct MemConfig_t>",
-    "vtable_address": 6445726840,
+    "vtable_address": 6445726816,
     "methods": [
       6443690608,
       6443701456,
@@ -2166,7 +2166,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445840640,
+        "complete_object_locator": 6445840512,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2175,7 +2175,7 @@
   },
   {
     "type_name": "CTestScriptMgr",
-    "vtable_address": 6445749232,
+    "vtable_address": 6445749160,
     "methods": [
       6442934400,
       6442934384,
@@ -2256,7 +2256,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445842160,
+        "complete_object_locator": 6445842032,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2265,7 +2265,7 @@
   },
   {
     "type_name": "CThread",
-    "vtable_address": 6445750168,
+    "vtable_address": 6445750096,
     "methods": [
       6443937696,
       6443949872,
@@ -2277,7 +2277,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445842512,
+        "complete_object_locator": 6445842384,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2371,7 +2371,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445837480,
+        "complete_object_locator": 6445837352,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 1
@@ -2436,7 +2436,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445835696,
+        "complete_object_locator": 6445835568,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 1
@@ -2515,7 +2515,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445835736,
+        "complete_object_locator": 6445835608,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 1
@@ -2549,7 +2549,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445836072,
+        "complete_object_locator": 6445835944,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2595,7 +2595,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445831392,
+        "complete_object_locator": 6445831264,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2626,7 +2626,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445828712,
+        "complete_object_locator": 6445828584,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2642,7 +2642,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445828632,
+        "complete_object_locator": 6445828504,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2673,7 +2673,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445828752,
+        "complete_object_locator": 6445828624,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2682,7 +2682,7 @@
   },
   {
     "type_name": "CUtlNoEscConversion",
-    "vtable_address": 6445663120,
+    "vtable_address": 6445663112,
     "methods": [
       6443328560
     ],
@@ -2704,7 +2704,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445839432,
+        "complete_object_locator": 6445839304,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2713,7 +2713,7 @@
   },
   {
     "type_name": "CUtlStringTokenSystem",
-    "vtable_address": 6445761208,
+    "vtable_address": 6445761096,
     "methods": [
       6444134768,
       6442934384,
@@ -2789,7 +2789,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445844280,
+        "complete_object_locator": 6445844152,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2798,7 +2798,7 @@
   },
   {
     "type_name": "CUtlStringTokenSystem::CStringConstructor",
-    "vtable_address": 6445761192,
+    "vtable_address": 6445761080,
     "methods": [
       6444133344
     ],
@@ -2820,7 +2820,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445844144,
+        "complete_object_locator": 6445844016,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2829,7 +2829,7 @@
   },
   {
     "type_name": "CVBinaryModule",
-    "vtable_address": 6445790024,
+    "vtable_address": 6445789864,
     "methods": [
       6445178616,
       6445178616,
@@ -2839,7 +2839,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445845088,
+        "complete_object_locator": 6445844920,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2848,7 +2848,7 @@
   },
   {
     "type_name": "CVBreakpadSymbolModule",
-    "vtable_address": 6445789632,
+    "vtable_address": 6445789472,
     "methods": [
       6442859968,
       6444329600,
@@ -2890,7 +2890,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445844856,
+        "complete_object_locator": 6445844688,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2899,7 +2899,7 @@
   },
   {
     "type_name": "CVDbgHelpSymbolModule",
-    "vtable_address": 6445789808,
+    "vtable_address": 6445789648,
     "methods": [
       6444310560,
       6444299184,
@@ -2941,7 +2941,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445845240,
+        "complete_object_locator": 6445845112,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2950,7 +2950,7 @@
   },
   {
     "type_name": "CVDwarfBinaryModule",
-    "vtable_address": 6445789984,
+    "vtable_address": 6445789824,
     "methods": [
       6444351712,
       6444351984,
@@ -2975,7 +2975,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445844936,
+        "complete_object_locator": 6445844768,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -2984,7 +2984,7 @@
   },
   {
     "type_name": "CVDwarfSymbolModule",
-    "vtable_address": 6445790104,
+    "vtable_address": 6445789944,
     "methods": [
       6442859968,
       6444316720,
@@ -3026,7 +3026,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445844816,
+        "complete_object_locator": 6445844728,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3035,7 +3035,7 @@
   },
   {
     "type_name": "CVImageHlpBinaryModule",
-    "vtable_address": 6445790064,
+    "vtable_address": 6445789904,
     "methods": [
       6444350272,
       6444350368,
@@ -3060,7 +3060,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445845128,
+        "complete_object_locator": 6445845024,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3069,7 +3069,7 @@
   },
   {
     "type_name": "CVNullBinaryModule",
-    "vtable_address": 6445785600,
+    "vtable_address": 6445785464,
     "methods": [
       6444352464,
       6442859968,
@@ -3094,7 +3094,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445844384,
+        "complete_object_locator": 6445844256,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3103,7 +3103,7 @@
   },
   {
     "type_name": "CVProfileOutputColumn_AverageTimePerCall",
-    "vtable_address": 6445756640,
+    "vtable_address": 6445756536,
     "methods": [
       6444017840,
       6444017936
@@ -3126,7 +3126,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445843696,
+        "complete_object_locator": 6445843528,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3135,10 +3135,110 @@
   },
   {
     "type_name": "CVProfileOutputColumn_AverageTimePerFrame",
-    "vtable_address": 6445756616,
+    "vtable_address": 6445756560,
     "methods": [
       6444017296,
       6444017392
+    ],
+    "bases": [
+      {
+        "type_name": "CVProfileOutputColumn_Base",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6445842832,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVProfileOutputColumn_Count",
+    "vtable_address": 6445756584,
+    "methods": [
+      6444018432,
+      6444018480
+    ],
+    "bases": [
+      {
+        "type_name": "CVProfileOutputColumn_Base",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6445843192,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVProfileOutputColumn_Name",
+    "vtable_address": 6445756488,
+    "methods": [
+      6444018688,
+      6444018736
+    ],
+    "bases": [
+      {
+        "type_name": "CVProfileOutputColumn_Base",
+        "details": {
+          "Msvc": {
+            "attributes": 64,
+            "displacement": {
+              "mdisp": 0,
+              "pdisp": -1,
+              "vdisp": 0
+            },
+            "num_contained_bases": 0
+          }
+        }
+      }
+    ],
+    "model": {
+      "Msvc": {
+        "complete_object_locator": 6445843232,
+        "offset": 0,
+        "constructor_displacement": 0,
+        "class_attributes": 0
+      }
+    }
+  },
+  {
+    "type_name": "CVProfileOutputColumn_Peak",
+    "vtable_address": 6445756432,
+    "methods": [
+      6444018496,
+      6444018544,
+      6442485440,
+      6444004000,
+      6444003840,
+      6444004400
     ],
     "bases": [
       {
@@ -3166,79 +3266,11 @@
     }
   },
   {
-    "type_name": "CVProfileOutputColumn_Count",
-    "vtable_address": 6445756664,
-    "methods": [
-      6444018432,
-      6444018480
-    ],
-    "bases": [
-      {
-        "type_name": "CVProfileOutputColumn_Base",
-        "details": {
-          "Msvc": {
-            "attributes": 64,
-            "displacement": {
-              "mdisp": 0,
-              "pdisp": -1,
-              "vdisp": 0
-            },
-            "num_contained_bases": 0
-          }
-        }
-      }
-    ],
-    "model": {
-      "Msvc": {
-        "complete_object_locator": 6445843296,
-        "offset": 0,
-        "constructor_displacement": 0,
-        "class_attributes": 0
-      }
-    }
-  },
-  {
-    "type_name": "CVProfileOutputColumn_Name",
-    "vtable_address": 6445756568,
-    "methods": [
-      6444018688,
-      6444018736
-    ],
-    "bases": [
-      {
-        "type_name": "CVProfileOutputColumn_Base",
-        "details": {
-          "Msvc": {
-            "attributes": 64,
-            "displacement": {
-              "mdisp": 0,
-              "pdisp": -1,
-              "vdisp": 0
-            },
-            "num_contained_bases": 0
-          }
-        }
-      }
-    ],
-    "model": {
-      "Msvc": {
-        "complete_object_locator": 6445843360,
-        "offset": 0,
-        "constructor_displacement": 0,
-        "class_attributes": 0
-      }
-    }
-  },
-  {
-    "type_name": "CVProfileOutputColumn_Peak",
+    "type_name": "CVProfileOutputColumn_Sum",
     "vtable_address": 6445756512,
     "methods": [
-      6444018496,
-      6444018544,
-      6442485440,
-      6444004000,
-      6444003840,
-      6444004400
+      6444018160,
+      6444018256
     ],
     "bases": [
       {
@@ -3266,40 +3298,8 @@
     }
   },
   {
-    "type_name": "CVProfileOutputColumn_Sum",
-    "vtable_address": 6445756592,
-    "methods": [
-      6444018160,
-      6444018256
-    ],
-    "bases": [
-      {
-        "type_name": "CVProfileOutputColumn_Base",
-        "details": {
-          "Msvc": {
-            "attributes": 64,
-            "displacement": {
-              "mdisp": 0,
-              "pdisp": -1,
-              "vdisp": 0
-            },
-            "num_contained_bases": 0
-          }
-        }
-      }
-    ],
-    "model": {
-      "Msvc": {
-        "complete_object_locator": 6445843216,
-        "offset": 0,
-        "constructor_displacement": 0,
-        "class_attributes": 0
-      }
-    }
-  },
-  {
     "type_name": "CVSymbolModule",
-    "vtable_address": 6445789456,
+    "vtable_address": 6445789296,
     "methods": [
       6445178616,
       6445178616,
@@ -3326,7 +3326,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445845352,
+        "complete_object_locator": 6445845224,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3347,7 +3347,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445837400,
+        "complete_object_locator": 6445837272,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3373,7 +3373,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445832392,
+        "complete_object_locator": 6445832264,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3404,7 +3404,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445831288,
+        "complete_object_locator": 6445831160,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3439,7 +3439,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445833552,
+        "complete_object_locator": 6445833424,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3448,7 +3448,7 @@
   },
   {
     "type_name": "IKeyValuesSystem",
-    "vtable_address": 6445663728,
+    "vtable_address": 6445663720,
     "methods": [
       6443328256,
       6445178616,
@@ -3477,7 +3477,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445839040,
+        "complete_object_locator": 6445838912,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3486,7 +3486,7 @@
   },
   {
     "type_name": "IMemAlloc",
-    "vtable_address": 6445724456,
+    "vtable_address": 6445724448,
     "methods": [
       6443690608,
       6445178616,
@@ -3532,7 +3532,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445840600,
+        "complete_object_locator": 6445840448,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3551,7 +3551,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445836136,
+        "complete_object_locator": 6445836008,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3568,7 +3568,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445831824,
+        "complete_object_locator": 6445831696,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3577,7 +3577,7 @@
   },
   {
     "type_name": "IProcess",
-    "vtable_address": 6445741936,
+    "vtable_address": 6445741856,
     "methods": [
       6443843088,
       6445178616,
@@ -3599,7 +3599,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445841832,
+        "complete_object_locator": 6445841704,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3651,7 +3651,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445836352,
+        "complete_object_locator": 6445836224,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3660,7 +3660,7 @@
   },
   {
     "type_name": "TSListTests::CListOps",
-    "vtable_address": 6445751952,
+    "vtable_address": 6445751872,
     "methods": [
       6443969296,
       6443969712,
@@ -3685,7 +3685,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445842808,
+        "complete_object_locator": 6445842680,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3694,7 +3694,7 @@
   },
   {
     "type_name": "TSListTests::CQueueOps",
-    "vtable_address": 6445751912,
+    "vtable_address": 6445751832,
     "methods": [
       6443968736,
       6443969200,
@@ -3719,7 +3719,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445842656,
+        "complete_object_locator": 6445842528,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3798,7 +3798,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445838208,
+        "complete_object_locator": 6445838080,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 1
@@ -3839,7 +3839,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445832336,
+        "complete_object_locator": 6445832208,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3880,7 +3880,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445832192,
+        "complete_object_locator": 6445832064,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3921,7 +3921,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445832472,
+        "complete_object_locator": 6445832344,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3962,7 +3962,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445832640,
+        "complete_object_locator": 6445832512,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -3993,7 +3993,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445827192,
+        "complete_object_locator": 6445827064,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4025,7 +4025,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445835256,
+        "complete_object_locator": 6445835128,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4056,7 +4056,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445830624,
+        "complete_object_locator": 6445830496,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4087,7 +4087,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445830528,
+        "complete_object_locator": 6445830400,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4118,7 +4118,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445829264,
+        "complete_object_locator": 6445829136,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4149,7 +4149,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445829328,
+        "complete_object_locator": 6445829200,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4194,7 +4194,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445837216,
+        "complete_object_locator": 6445837088,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4225,7 +4225,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445837000,
+        "complete_object_locator": 6445836872,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4243,7 +4243,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445830360,
+        "complete_object_locator": 6445830232,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4279,7 +4279,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445838432,
+        "complete_object_locator": 6445838304,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4315,7 +4315,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445835144,
+        "complete_object_locator": 6445835016,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4351,7 +4351,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445828216,
+        "complete_object_locator": 6445828088,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4397,7 +4397,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445827936,
+        "complete_object_locator": 6445827808,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4429,7 +4429,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445830192,
+        "complete_object_locator": 6445830064,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4475,7 +4475,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445830488,
+        "complete_object_locator": 6445830360,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4507,7 +4507,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445830232,
+        "complete_object_locator": 6445830104,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4539,7 +4539,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445828464,
+        "complete_object_locator": 6445828336,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4571,7 +4571,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445827320,
+        "complete_object_locator": 6445827192,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4588,7 +4588,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445828992,
+        "complete_object_locator": 6445828864,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4634,7 +4634,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445827576,
+        "complete_object_locator": 6445827448,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4695,7 +4695,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445827712,
+        "complete_object_locator": 6445827584,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 1
@@ -4727,7 +4727,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445827448,
+        "complete_object_locator": 6445827320,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4793,7 +4793,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445830424,
+        "complete_object_locator": 6445830296,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 1
@@ -4825,7 +4825,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445829136,
+        "complete_object_locator": 6445829008,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4885,7 +4885,7 @@
     ],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445828072,
+        "complete_object_locator": 6445827944,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0
@@ -4903,7 +4903,7 @@
     "bases": [],
     "model": {
       "Msvc": {
-        "complete_object_locator": 6445828344,
+        "complete_object_locator": 6445828216,
         "offset": 0,
         "constructor_displacement": 0,
         "class_attributes": 0

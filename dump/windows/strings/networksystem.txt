@@ -34,7 +34,7 @@
   version max  : %u.%u
   version used : %u.%u
  !"#$$$$$$
- !"#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ !"#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$`~#
  !"#$%&'()*+,-./
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
@@ -530,7 +530,8 @@ $schemasystem/schema_enable_defines.h
 'NETWORK_DISCONNECT_REJECT_FAILEDCHANNEL
 'NETWORK_DISCONNECT_REJECT_SINGLE_PLAYER
 'SPAWN_GROUP_CREATE_CLIENT_ONLY_ENTITIES
-(!N%
+(!%%
+(!,%
 (#GameUI_Disconnect_LoopLevelLoadActivate
 (#GameUI_Disconnect_RemoteProblem_BadCert
 (#GameUI_Disconnect_RemoteProblem_Timeout
@@ -543,19 +544,22 @@ $schemasystem/schema_enable_defines.h
 (("**,
 ((6"8(:,<*>
 ()$^.*+?[]|\-{},:=!
-()E%
-(-+%
+()8%
+():%
+()M%
+(-!%
+(-3%
 (.*)\[(\d+)\]$
 (0`hpx
-(1@%
-(5=%
-(9!%
+(5(%
+(5*%
+(94%
+(=;%
 (>aI
-(E,%
-(EO%
+(AH%
+(I#%
 (IC%
-(ID%
-(M %
+(MA%
 (Message Info)
 (NETWORK_DISCONNECT_INVALID_MESSAGE_ERROR
 (NETWORK_DISCONNECT_KICKED_HOSTAGEKILLING
@@ -566,27 +570,30 @@ $schemasystem/schema_enable_defines.h
 (NETWORK_DISCONNECT_SERVER_REQUIRES_STEAM
 (NETWORK_DISCONNECT_STEAM_AUTHALREADYUSED
 (NULL)
-(Q#%
+(QI%
 (This list may include POPs without any gameservers)
-(U(%
-(U/%
-(Y7%
-(Y8%
-(]N%
-(aB%
+(U %
+(UD%
+(Y)%
+(YL%
+(]6%
+(]8%
+(a<%
+(a|$
 (cannot determine missing fields for lite message)
 (compressed)
-(eH%
-(m*%
+(e>%
+(i+%
+(m'%
+(mB%
 (merge 
-(mw%
 (null)
 (root)
 (stream: %s%s local: %s%s)
-(u4%
+(uF%
 (uM%
-(y+%
-(}9%
+(y/%
+(}=%
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 )#GameUI_Disconnect_PureServer_ClientExtra
 )#GameUI_Disconnect_RemoteProblem_BadCrypt
@@ -3163,11 +3170,13 @@ _class
 _hypot
 _logb
 _nextafter
+`1|$
 `207
 `2@'
 `2@i
 `2pe
 `:@'
+`Ay%
 `RTTI
 `anonymous namespace'
 `b@'
@@ -3192,6 +3201,7 @@ _nextafter
 `omni callsig'
 `placement delete closure'
 `placement delete[] closure'
+`q-%
 `scalar deleting destructor'
 `string'
 `typeof'

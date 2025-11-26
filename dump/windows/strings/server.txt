@@ -252,6 +252,7 @@
  = { <proto text format> }". To set fields within it, use syntax like "
  ?? 
  ACTIVE GROUP
+ AHX=
  Base Class Array'
  Base Class Descriptor at (
  C>TQ
@@ -2138,6 +2139,7 @@ $tH@T
 %s:  IGameSystem::LoopPostInitAllSystems(start)
 %s:  Invalid entity search name %s
 %s:  No entity at index %d
+%s:  No entity system!n
 %s:  Queue AsyncWrite (%s)
 %s:  ReadTick %d:%s : clamping rebased tick %s [baseTick %d] value %d to zero!
 %s:  ReleaseSpawnGroup
@@ -9474,7 +9476,6 @@ $tH@T
 @Aff
 @BH]f
 @BoneSetup
-@CNetworkOriginCellCoordQuantizedVector
 @EvaluateGraph
 @F(%
 @HPX
@@ -9483,6 +9484,7 @@ $tH@T
 @MfKZ
 @Pgl
 @Q~i
+@Set a secret string that will be hashed when using logaddress with explicit token hash.
 @The amount the gun should dip when the player lands after a jump.
 @WE]X
 @X!pf
@@ -9490,6 +9492,7 @@ $tH@T
 @Zs3
 @^8U)zj
 @b;zO]
+@baseplayerpawn
 @dKb]
 @fff>fff>fff>fff>
 @h!Aq8
@@ -9497,7 +9500,6 @@ $tH@T
 @i1V
 @jB+
 @n2w
-@observer
 @player_start_teleport_destination
 @workshop
 @{nZ
@@ -9573,7 +9575,7 @@ ACT_TRICK
 ACT_TURN_IN_PLACE
 ACT_UNDEFINED
 ACT_WALK
-ACUserMessageServerFrameTime_t
+ACUserMessageHapticsManagerEffect_t
 AD Time Stamping
 ADDED %s (%s) to transition.
 ADDED.
@@ -10297,7 +10299,6 @@ B %d : %s
 B!rA
 B"`b
 B#B)B/BCBSBUB[BaBsB}B
-B%s:  No entity system!n
 B*k@5
 B+N3
 B+Uk=
@@ -10336,6 +10337,7 @@ BC (default)
 BC?>6t9^
 BCBtActionMoveTo
 BCCS2ChickenGraphController
+BCPulseServerFuncs::TeleportEntity
 BC_DEFAULT
 BC_EMPTY
 BC_PARTICLE_SYSTEM_OVERRIDE
@@ -12551,6 +12553,7 @@ CNetworkFieldScratchData.m_MemoryStacks[ 0 ]
 CNetworkFieldScratchData::Alloc created buffer %s of size %s
 CNetworkFieldScratchData::Alloc, failed to add new CMemoryStack at slot %d of size %u bytes.
 CNetworkFieldScratchData::Init failed on buffer of %u bytes.
+CNetworkOriginCellCoordQuantizedVector
 CNetworkOriginCellCoordQuantizedVector m_cell%c cell %d is outside of cell bounds (0->%d) @(%f %f %f)
 CNetworkOriginQuantizedVector
 CNetworkSerializerBindingBuildFilter::GetFieldPriority
@@ -13287,7 +13290,6 @@ CPulseServerFuncs::SetDynamicAttributeString
 CPulseServerFuncs::SetEntityOrigin
 CPulseServerFuncs::SortEntityArrayByDistance
 CPulseServerFuncs::StringToEntityName
-CPulseServerFuncs::TeleportEntity
 CPulseServerFuncs_Sounds
 CPulseServerFuncs_Sounds::SoundEventSetParamFloat
 CPulseServerFuncs_Sounds::SoundEventSetParamStringToken
@@ -13870,7 +13872,6 @@ CUserMessageDesiredTimescale_t
 CUserMessageFade
 CUserMessageFade_t
 CUserMessageGameTitle"
-CUserMessageHapticsManagerEffect_t
 CUserMessageHapticsManagerPulse
 CUserMessageHapticsManagerPulse_t
 CUserMessageHudMsg
@@ -13905,6 +13906,7 @@ CUserMessageScreenTilt_t
 CUserMessageSendAudio
 CUserMessageSendAudio_t
 CUserMessageServerFrameTime
+CUserMessageServerFrameTime_t
 CUserMessageShake
 CUserMessageShakeDir
 CUserMessageShakeDir_t
@@ -24686,7 +24688,6 @@ Set System Inertia Scale
 Set URI of a listener to receive logs via http post. Wrap URI in double quotes.
 Set a String attribute value on the entity
 Set a delay and URI of a listener to receive logs via http post. Wrap URI in double quotes.
-Set a secret string that will be hashed when using logaddress with explicit token hash.
 Set a sound event parameter to a float value.
 Set a sound event parameter to a string_token value.
 Set a think function on this entity.
@@ -29431,7 +29432,6 @@ baseline_index
 baseline_nr
 baseline_tick
 basemodelentity
-baseplayerpawn
 basetypes.h
 basevelocity
 basicConstraints
@@ -42520,6 +42520,7 @@ objects_modified
 objsign
 obs_mode
 observable_listeners
+observer
 observer pawn
 observer.ventr
 observer_cursors

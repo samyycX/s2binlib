@@ -43,7 +43,7 @@ func_18    [ DIFF 0   ]                               []
 func_19    [ DIFF 0   ]                               []
     "55 B8 FF FF FF FF 48 89 E5 41 57 41 56 41 55 41"
 func_20    [ DIFF 0   ]                               []
-    "48 8B 05 39 2F 2F 00 48 8D 15 19 98 BE FF 48 85"
+    "48 8B 05 39 2F 2F 00 48 8D 15 0D 98 BE FF 48 85"
 func_21    [ DIFF 0   ]                               []
     "89 F0 C1 E0 1F C3 CC CC CC CC CC CC CC CC CC CC"
 func_22    [ DIFF 0   ]                               []

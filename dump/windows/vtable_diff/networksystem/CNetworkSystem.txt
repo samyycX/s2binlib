@@ -7,7 +7,7 @@ func_0     [ DIFF 0   ]                               []
 func_1     [ DIFF 0   ]                               []
     "40 53 48 83 EC 20 8B 51 08 48 8B D9 48 8B 49 10"
 func_2     [ DIFF 0   ]                               []
-    "40 53 48 83 EC 20 48 8B DA 48 8D 15 D0 FF 13 00"
+    "40 53 48 83 EC 20 48 8B DA 48 8D 15 68 00 14 00"
 func_3     [ DIFF 0   ]                               []
     "40 56 48 81 EC D0 01 00 00 48 83 3D F7 5C 1A 00"
 func_4     [ DIFF 0   ]                               []
