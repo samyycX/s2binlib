@@ -22,78 +22,46 @@ use anyhow::Result;
 #[cfg(target_arch = "x86_64")]
 use std::arch::x86_64::*;
 
-pub fn find_pattern_simd(
-    binary_data: &[u8],
-    pattern: &[u8],
-    pattern_wildcard: &[usize],
-) -> Result<u64> {
-    if pattern.is_empty() || binary_data.len() < pattern.len() {
+pub fn find_pattern_simd(binary: &[u8], pattern: &[u8], wildcards: &[usize]) -> Result<u64> {
+    let start_time = std::time::Instant::now();
+    if pattern.is_empty() || binary.len() < pattern.len() {
         return Err(anyhow::anyhow!("Pattern not found"));
     }
 
-    let mut wildcard_mask = vec![0xFFu8; pattern.len()];
-    for &idx in pattern_wildcard {
+    let mut mask = vec![0xFFu8; pattern.len()];
+    for &idx in wildcards {
         if idx < pattern.len() {
-            wildcard_mask[idx] = 0;
+            mask[idx] = 0;
         }
     }
+
+    let (first_idx, last_idx) = match get_bounds(pattern, &mask) {
+        Some(bounds) => bounds,
+        None => return find_scalar(binary, pattern, &mask),
+    };
 
     #[cfg(target_arch = "x86_64")]
-    {
-        if is_x86_feature_detected!("avx2") && pattern.len() > 16 {
-            return find_pattern_impl_avx2(binary_data, pattern, &wildcard_mask);
+    unsafe {
+        if is_x86_feature_detected!("avx512bw") {
+            return find_avx512(binary, pattern, &mask, first_idx, last_idx);
+        } else if is_x86_feature_detected!("avx2") {
+            return find_avx2(binary, pattern, &mask, first_idx, last_idx);
         } else if is_x86_feature_detected!("sse2") {
-            return find_pattern_impl_sse2(binary_data, pattern, &wildcard_mask);
+            return find_sse2(binary, pattern, &mask, first_idx, last_idx);
         }
     }
 
-    find_pattern_scalar(binary_data, pattern, &wildcard_mask)
+    find_scalar(binary, pattern, &mask)
 }
 
-#[cfg(target_arch = "x86_64")]
-fn find_pattern_impl_avx2(binary_data: &[u8], pattern: &[u8], wildcard_mask: &[u8]) -> Result<u64> {
-    unsafe {
-        for i in 0..=(binary_data.len() - pattern.len()) {
-            if wildcard_mask[0] == 0xFF && binary_data[i] != pattern[0] {
-                continue;
-            }
-            if matches_avx2(&binary_data[i..], pattern, wildcard_mask) {
-                return Ok(i as u64);
-            }
-        }
-    }
-    Err(anyhow::anyhow!("Pattern not found"))
+fn get_bounds(pattern: &[u8], mask: &[u8]) -> Option<(usize, usize)> {
+    let first = (0..pattern.len()).find(|&i| mask[i] == 0xFF)?;
+    let last = (0..pattern.len()).rev().find(|&i| mask[i] == 0xFF)?;
+    Some((first, last))
 }
 
-#[cfg(target_arch = "x86_64")]
-fn find_pattern_impl_sse2(binary_data: &[u8], pattern: &[u8], wildcard_mask: &[u8]) -> Result<u64> {
-    unsafe {
-        for i in 0..=(binary_data.len() - pattern.len()) {
-            if wildcard_mask[0] == 0xFF && binary_data[i] != pattern[0] {
-                continue;
-            }
-            if matches_sse2(&binary_data[i..], pattern, wildcard_mask) {
-                return Ok(i as u64);
-            }
-        }
-    }
-    Err(anyhow::anyhow!("Pattern not found"))
-}
-
-fn find_pattern_scalar(binary_data: &[u8], pattern: &[u8], wildcard_mask: &[u8]) -> Result<u64> {
-    for i in 0..=(binary_data.len() - pattern.len()) {
-        if wildcard_mask[0] == 0xFF && binary_data[i] != pattern[0] {
-            continue;
-        }
-        if matches_scalar(&binary_data[i..], pattern, wildcard_mask) {
-            return Ok(i as u64);
-        }
-    }
-    Err(anyhow::anyhow!("Pattern not found"))
-}
-
-#[inline]
-fn matches_scalar(data: &[u8], pattern: &[u8], mask: &[u8]) -> bool {
+#[inline(always)]
+fn check_match(data: &[u8], pattern: &[u8], mask: &[u8]) -> bool {
     for i in 0..pattern.len() {
         if mask[i] != 0 && data[i] != pattern[i] {
             return false;
@@ -102,69 +70,117 @@ fn matches_scalar(data: &[u8], pattern: &[u8], mask: &[u8]) -> bool {
     true
 }
 
-#[inline]
-#[target_feature(enable = "avx2")]
-#[cfg(target_arch = "x86_64")]
-pub unsafe fn matches_avx2(data: &[u8], pattern: &[u8], mask: &[u8]) -> bool {
-    let len = pattern.len();
-    let mut offset = 0;
-
-    while offset + 32 <= len {
-        unsafe {
-            let data_chunk = _mm256_loadu_si256(data.as_ptr().add(offset) as *const __m256i);
-            let pattern_chunk = _mm256_loadu_si256(pattern.as_ptr().add(offset) as *const __m256i);
-            let mask_chunk = _mm256_loadu_si256(mask.as_ptr().add(offset) as *const __m256i);
-
-            let xor = _mm256_xor_si256(data_chunk, pattern_chunk);
-            let masked = _mm256_and_si256(xor, mask_chunk);
-
-            if _mm256_testz_si256(masked, masked) == 0 {
-                return false;
-            }
-        }
-        offset += 32;
-    }
-
-    for i in offset..len {
-        if mask[i] != 0 && data[i] != pattern[i] {
-            return false;
+fn find_scalar(binary: &[u8], pattern: &[u8], mask: &[u8]) -> Result<u64> {
+    let end = binary.len() - pattern.len();
+    for i in 0..=end {
+        if check_match(&binary[i..], pattern, mask) {
+            return Ok(i as u64);
         }
     }
-
-    true
+    Err(anyhow::anyhow!("Pattern not found"))
 }
 
-#[inline]
+#[target_feature(enable = "avx512bw")]
+#[cfg(target_arch = "x86_64")]
+unsafe fn find_avx512(
+    bin: &[u8],
+    pat: &[u8],
+    mask: &[u8],
+    f_idx: usize,
+    l_idx: usize,
+) -> Result<u64> {
+    let f_char = _mm512_set1_epi8(pat[f_idx] as i8);
+    let l_char = _mm512_set1_epi8(pat[l_idx] as i8);
+    let mut i = 0;
+    let end_simd = bin.len().saturating_sub(pat.len()).saturating_sub(63);
+
+    while i <= end_simd {
+        let f_chunk = unsafe { _mm512_loadu_si512(bin.as_ptr().add(i + f_idx) as *const _) };
+        let l_chunk = unsafe { _mm512_loadu_si512(bin.as_ptr().add(i + l_idx) as *const _) };
+
+        let mut bits =
+            _mm512_cmpeq_epi8_mask(f_chunk, f_char) & _mm512_cmpeq_epi8_mask(l_chunk, l_char);
+
+        while bits != 0 {
+            let bit_pos = bits.trailing_zeros() as usize;
+            if check_match(&bin[i + bit_pos..], pat, mask) {
+                return Ok((i + bit_pos) as u64);
+            }
+            bits &= bits - 1;
+        }
+        i += 64;
+    }
+    find_scalar(&bin[i..], pat, mask).map(|off| off + i as u64)
+}
+
+#[target_feature(enable = "avx2")]
+#[cfg(target_arch = "x86_64")]
+unsafe fn find_avx2(
+    bin: &[u8],
+    pat: &[u8],
+    mask: &[u8],
+    f_idx: usize,
+    l_idx: usize,
+) -> Result<u64> {
+    let f_char = _mm256_set1_epi8(pat[f_idx] as i8);
+    let l_char = _mm256_set1_epi8(pat[l_idx] as i8);
+    let mut i = 0;
+    let end_simd = bin.len().saturating_sub(pat.len()).saturating_sub(31);
+
+    while i <= end_simd {
+        let f_chunk = unsafe { _mm256_loadu_si256(bin.as_ptr().add(i + f_idx) as *const _) };
+        let l_chunk = unsafe { _mm256_loadu_si256(bin.as_ptr().add(i + l_idx) as *const _) };
+
+        let match_mask = _mm256_and_si256(
+            _mm256_cmpeq_epi8(f_chunk, f_char),
+            _mm256_cmpeq_epi8(l_chunk, l_char),
+        );
+
+        let mut bits = _mm256_movemask_epi8(match_mask) as u32;
+        while bits != 0 {
+            let bit_pos = bits.trailing_zeros() as usize;
+            if check_match(&bin[i + bit_pos..], pat, mask) {
+                return Ok((i + bit_pos) as u64);
+            }
+            bits &= bits - 1;
+        }
+        i += 32;
+    }
+    find_scalar(&bin[i..], pat, mask).map(|off| off + i as u64)
+}
+
 #[target_feature(enable = "sse2")]
 #[cfg(target_arch = "x86_64")]
-pub unsafe fn matches_sse2(data: &[u8], pattern: &[u8], mask: &[u8]) -> bool {
-    let len = pattern.len();
-    let mut offset = 0;
+unsafe fn find_sse2(
+    bin: &[u8],
+    pat: &[u8],
+    mask: &[u8],
+    f_idx: usize,
+    l_idx: usize,
+) -> Result<u64> {
+    let f_char = _mm_set1_epi8(pat[f_idx] as i8);
+    let l_char = _mm_set1_epi8(pat[l_idx] as i8);
+    let mut i = 0;
+    let end_simd = bin.len().saturating_sub(pat.len()).saturating_sub(15);
 
-    while offset + 16 <= len {
-        unsafe {
-            let data_chunk = _mm_loadu_si128(data.as_ptr().add(offset) as *const __m128i);
-            let pattern_chunk = _mm_loadu_si128(pattern.as_ptr().add(offset) as *const __m128i);
-            let mask_chunk = _mm_loadu_si128(mask.as_ptr().add(offset) as *const __m128i);
+    while i <= end_simd {
+        let f_chunk = unsafe { _mm_loadu_si128(bin.as_ptr().add(i + f_idx) as *const _) };
+        let l_chunk = unsafe { _mm_loadu_si128(bin.as_ptr().add(i + l_idx) as *const _) };
 
-            let xor = _mm_xor_si128(data_chunk, pattern_chunk);
-            let masked = _mm_and_si128(xor, mask_chunk);
+        let match_mask = _mm_and_si128(
+            _mm_cmpeq_epi8(f_chunk, f_char),
+            _mm_cmpeq_epi8(l_chunk, l_char),
+        );
 
-            let cmp = _mm_cmpeq_epi8(masked, _mm_setzero_si128());
-            let mask_result = _mm_movemask_epi8(cmp);
-
-            if mask_result != 0xFFFF {
-                return false;
+        let mut bits = _mm_movemask_epi8(match_mask) as u32;
+        while bits != 0 {
+            let bit_pos = bits.trailing_zeros() as usize;
+            if check_match(&bin[i + bit_pos..], pat, mask) {
+                return Ok((i + bit_pos) as u64);
             }
+            bits &= bits - 1;
         }
-        offset += 16;
+        i += 16;
     }
-
-    for i in offset..len {
-        if mask[i] != 0 && data[i] != pattern[i] {
-            return false;
-        }
-    }
-
-    true
+    find_scalar(&bin[i..], pat, mask).map(|off| off + i as u64)
 }
