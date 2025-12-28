@@ -1429,7 +1429,9 @@ unsafe extern "C" fn FindNetworkvarVtableStatechanged(
 
     match s2binlib.find_networkvar_vtable_statechanged(vtable_mem_address) {
         Ok(index) => {
-            *result = index;
+            unsafe {
+                *result = index;
+            }
             0
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
