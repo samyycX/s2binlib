@@ -25,7 +25,7 @@ use std::arch::x86_64::*;
 pub fn find_pattern_simd(binary: &[u8], pattern: &[u8], wildcards: &[usize]) -> Result<u64> {
     if pattern.is_empty() || binary.len() < pattern.len() {
         return Err(anyhow::anyhow!("Pattern not found"));
-    }
+    } 
 
     let mut mask = vec![0xFFu8; pattern.len()];
     for &idx in wildcards {
