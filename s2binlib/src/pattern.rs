@@ -23,7 +23,6 @@ use anyhow::Result;
 use std::arch::x86_64::*;
 
 pub fn find_pattern_simd(binary: &[u8], pattern: &[u8], wildcards: &[usize]) -> Result<u64> {
-    let start_time = std::time::Instant::now();
     if pattern.is_empty() || binary.len() < pattern.len() {
         return Err(anyhow::anyhow!("Pattern not found"));
     }
