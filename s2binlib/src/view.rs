@@ -1,19 +1,19 @@
 use hashbrown::HashMap;
 
-use anyhow::Result;
-use object::{Object, ObjectSection, read::pe::ImageOptionalHeader};
+use anyhow::{Result, bail};
+use object::{BinaryFormat, Object, ObjectSection, read::pe::ImageOptionalHeader};
 
 use crate::{
     S2BinLib, is_executable,
-    memory::module_sections_from_slice,
+    memory::{get_module_base_from_pointer, module_from_pointer, module_sections_from_slice},
     module::get_module_info,
 };
 
 mod linux {
-    
-    
+    use super::SectionInfo;
+    use object::{BinaryFormat, Object, ObjectSection};
     use std::{
-        fs::File,
+        fs::{self, File},
         io::{BufRead, BufReader},
     };
 
