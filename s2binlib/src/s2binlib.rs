@@ -17,11 +17,11 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  ***********************************************************************************/
 
-use std::{cell::Cell, fs, path::PathBuf};
-use hashbrown::HashMap;
 use anyhow::{Result, bail};
+use hashbrown::HashMap;
 use iced_x86::{Code, Decoder, DecoderOptions, Instruction, Mnemonic, OpKind, Register};
 use object::{Object, ObjectSection, ObjectSymbol, read::pe::ImageOptionalHeader};
+use std::{cell::Cell, fs, path::PathBuf};
 
 use crate::{
     VTableInfo, find_pattern_simd, is_executable,
@@ -58,6 +58,7 @@ pub struct S2BinLib<'a> {
     pub(crate) name_to_vtables: HashMap<String, &'a VTableInfo>,
     /// Cached ASCII strings: binary_name -> (string_rva -> string)
     pub(crate) strings_cache: HashMap<String, HashMap<String, u64>>,
+    pub(crate) calls_targets_cache: HashMap<String, Vec<u64>>,
 }
 
 fn read_int32(data: &[u8], offset: u64) -> u32 {
@@ -208,6 +209,7 @@ impl<'a> S2BinLib<'a> {
             vtables: HashMap::new(),
             name_to_vtables: HashMap::new(),
             strings_cache: HashMap::new(),
+            calls_targets_cache: HashMap::new(),
         }
     }
 
@@ -870,6 +872,9 @@ impl<'a> S2BinLib<'a> {
         // Temporary storage for xrefs
         let mut xrefs_map: HashMap<u64, Vec<u64>> = HashMap::new();
 
+        // Call commands
+        let mut calls_targets_rva: Vec<u64> = Vec::new();
+
         // Determine bitness for decoder
         let bitness = match object {
             object::File::Pe64(_) | object::File::Elf64(_) => 64,
@@ -910,6 +915,8 @@ impl<'a> S2BinLib<'a> {
 
                 let instr_rva = instruction.ip();
 
+                let is_call = instruction.is_call_far() || instruction.is_call_near();
+
                 // Analyze instruction operands for memory references
                 for i in 0..instruction.op_count() {
                     let op_kind = instruction.op_kind(i);
@@ -924,6 +931,9 @@ impl<'a> S2BinLib<'a> {
                                     .entry(target_rva)
                                     .or_insert_with(Vec::new)
                                     .push(instr_rva);
+                                if is_call {
+                                    calls_targets_rva.push(target_rva);
+                                }
                             } else if instruction.memory_base() == Register::None
                                 && instruction.memory_index() == Register::None
                             {
@@ -934,6 +944,9 @@ impl<'a> S2BinLib<'a> {
                                         .entry(displacement)
                                         .or_insert_with(Vec::new)
                                         .push(instr_rva);
+                                    if is_call {
+                                        calls_targets_rva.push(displacement);
+                                    }
                                 }
                             }
                         }
@@ -945,6 +958,9 @@ impl<'a> S2BinLib<'a> {
                                 .entry(target_rva)
                                 .or_insert_with(Vec::new)
                                 .push(instr_rva);
+                            if is_call {
+                                calls_targets_rva.push(target_rva);
+                            }
                         }
 
                         // Immediate rvalues that might be addresses
@@ -969,6 +985,9 @@ impl<'a> S2BinLib<'a> {
                                     .entry(immediate)
                                     .or_insert_with(Vec::new)
                                     .push(instr_rva);
+                                if is_call {
+                                    calls_targets_rva.push(immediate);
+                                }
                             }
                         }
 
@@ -980,6 +999,10 @@ impl<'a> S2BinLib<'a> {
 
         // Store the collected xrefs in the cache
         self.xrefs_cache.insert(binary_name.to_string(), xrefs_map);
+
+        calls_targets_rva.sort();
+        self.calls_targets_cache
+            .insert(binary_name.to_string(), calls_targets_rva);
 
         Ok(())
     }
@@ -1310,5 +1333,125 @@ impl<'a> S2BinLib<'a> {
         }
 
         bail!("Signature not found");
+    }
+
+    pub fn find_xref_func_start_rva(&self, binary_name: &str, include_rva: u64) -> Result<u64> {
+        let mut nearest_rva = 0u64;
+        if let Some(cache) = self.calls_targets_cache.get(binary_name) {
+            let rva = match cache.binary_search(&include_rva) {
+                Ok(idx) => {
+                    if idx > 0 {
+                        Some(cache[idx - 1])
+                    } else {
+                        None
+                    }
+                }
+                Err(idx) => {
+                    if idx > 0 {
+                        Some(cache[idx - 1])
+                    } else {
+                        None
+                    }
+                }
+            };
+            if let Some(rva) = rva {
+                nearest_rva = rva;
+            }
+        };
+
+        Ok(nearest_rva)
+    }
+
+    pub fn find_vfunc_start_rva(
+        &self,
+        binary_name: &str,
+        include_rva: u64,
+    ) -> Option<(&VTableInfo, usize, u64)> {
+        let mut nearest_rva = 0u64;
+        let mut result: Option<(&VTableInfo, usize, u64)> = None;
+        if let Some(vtables) = self.vtables.get(binary_name) {
+            for vtable in vtables {
+                for (i, func) in vtable.methods.iter().enumerate() {
+                    let func = *func;
+                    if func > nearest_rva && func < include_rva {
+                        nearest_rva = func;
+                        result = Some((vtable, i, nearest_rva));
+                    }
+                }
+            }
+        };
+
+        result
+    }
+
+    pub fn find_func_start_rva(&self, binary_name: &str, include_rva: u64) -> Result<u64> {
+        Ok(std::cmp::max(
+            self.find_xref_func_start_rva(binary_name, include_rva)?,
+            self.find_vfunc_start_rva(binary_name, include_rva)
+                .unwrap()
+                .2,
+        ))
+    }
+
+    pub fn find_func_start(&self, binary_name: &str, include_rva: u64) -> Result<u64> {
+        self.rva_to_mem_address(
+            binary_name,
+            self.find_func_start_rva(binary_name, include_rva)?,
+        )
+    }
+
+    fn get_string_reference_xref(&self, binary_name: &str, string: &str) -> Result<u64> {
+        let str_rva = self.find_string_rva(binary_name, string)?;
+        let xref = self.find_xrefs_cached(binary_name, str_rva);
+
+        if xref.is_none() || xref.unwrap().iter().count() < 1 {
+            bail!("String reference not found.");
+        };
+
+        let xref = xref.unwrap();
+
+        if xref.iter().count() > 1 {
+            bail!("Multiple string references found.")
+        };
+
+        Ok(*xref.get(0).unwrap())
+    }
+
+    pub fn find_xref_func_with_string_rva(&self, binary_name: &str, string: &str) -> Result<u64> {
+        self.find_xref_func_start_rva(
+            binary_name,
+            self.get_string_reference_xref(binary_name, string)?,
+        )
+    }
+
+    pub fn find_vfunc_with_string_rva(
+        &self,
+        binary_name: &str,
+        string: &str,
+    ) -> Result<(&VTableInfo, usize, u64)> {
+        let result = self.find_vfunc_start_rva(
+            binary_name,
+            self.get_string_reference_xref(binary_name, string)?,
+        );
+
+        if result.is_none() {
+            bail!("No vfunc found.")
+        };
+
+        Ok(result.unwrap())
+    }
+
+    pub fn find_func_with_string_rva(&self, binary_name: &str, string: &str) -> Result<u64> {
+        self.find_func_start_rva(
+            binary_name,
+            self.get_string_reference_xref(binary_name, string)?,
+        )
+    }
+
+    pub fn find_func_with_string(&self, binary_name: &str, string: &str) -> Result<u64> {
+        self.find_func_start(
+            binary_name,
+            self.get_string_reference_xref(binary_name, string)?,
+        )
     }
 }

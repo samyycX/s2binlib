@@ -427,6 +427,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "s2binlib_test"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "s2binlib",
+]
+
+[[package]]
 name = "serde"
 version = "1.0.228"
 source = "registry+https://github.com/rust-lang/crates.io-index"
