@@ -566,6 +566,52 @@ wrap_method_mut!(
 );
 
 wrap_method_mut!(
+    s2binlib_find_vfunc_start_rva,
+    find_vfunc_start_rva,
+    binary_name: *const c_char,
+    include_rva: u64,
+    vtable_name_out: *mut c_char,
+    vtable_name_out_size: usize,
+    vfunc_index_out: *mut usize,
+    vfunc_rva_out: *mut u64
+);
+
+wrap_method_mut!(
+    s2binlib_find_vfunc_start,
+    find_vfunc_start,
+    binary_name: *const c_char,
+    include_rva: u64,
+    vtable_name_out: *mut c_char,
+    vtable_name_out_size: usize,
+    vfunc_index_out: *mut usize,
+    result: *mut *mut c_void
+);
+
+wrap_method_mut!(
+    s2binlib_find_xref_func_start_rva,
+    find_xref_func_start_rva,
+    binary_name: *const c_char,
+    include_rva: u64,
+    result: *mut u64
+);
+
+wrap_method_mut!(
+    s2binlib_find_xref_func_start,
+    find_xref_func_start,
+    binary_name: *const c_char,
+    include_rva: u64,
+    result: *mut *mut c_void
+);
+
+wrap_method_mut!(
+    s2binlib_find_xref_func_with_string,
+    find_xref_func_with_string,
+    binary_name: *const c_char,
+    string: *const c_char,
+    result: *mut *mut c_void
+);
+
+wrap_method_mut!(
     s2binlib_find_xref_func_with_string_rva,
     find_xref_func_with_string_rva,
     binary_name: *const c_char,
@@ -582,6 +628,17 @@ wrap_method_mut!(
     vtable_name_out_size: usize,
     vfunc_index_out: *mut usize,
     vfunc_rva_out: *mut u64
+);
+
+wrap_method_mut!(
+    s2binlib_find_vfunc_with_string,
+    find_vfunc_with_string,
+    binary_name: *const c_char,
+    string: *const c_char,
+    vtable_name_out: *mut c_char,
+    vtable_name_out_size: usize,
+    vfunc_index_out: *mut usize,
+    result: *mut *mut c_void
 );
 
 wrap_method_mut!(

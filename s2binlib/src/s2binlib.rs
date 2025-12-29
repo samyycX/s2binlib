@@ -605,7 +605,7 @@ impl<'a> S2BinLib<'a> {
         Ok(address - base_address + image_base)
     }
 
-    fn rva_to_mem_address(&self, binary_name: &str, address: u64) -> Result<u64> {
+    pub fn rva_to_mem_address(&self, binary_name: &str, address: u64) -> Result<u64> {
         let base_address = self.get_module_base_address(binary_name)?;
         let image_base = self.get_image_base(binary_name)?;
         Ok(address - image_base + base_address)
@@ -1362,6 +1362,13 @@ impl<'a> S2BinLib<'a> {
         Ok(nearest_rva)
     }
 
+    pub fn find_xref_func_start(&self, binary_name: &str, include_rva: u64) -> Result<u64> {
+        self.rva_to_mem_address(
+            binary_name,
+            self.find_xref_func_start_rva(binary_name, include_rva)?,
+        )
+    }
+
     pub fn find_vfunc_start_rva(
         &self,
         binary_name: &str,
@@ -1382,6 +1389,22 @@ impl<'a> S2BinLib<'a> {
         };
 
         result
+    }
+
+    pub fn find_vfunc_start(
+        &self,
+        binary_name: &str,
+        include_rva: u64,
+    ) -> Result<(&VTableInfo, usize, u64)> {
+        let result = self.find_vfunc_start_rva(binary_name, include_rva);
+        if result.is_none() {
+            bail!("No vfunc found.");
+        }
+        Ok((
+            result.unwrap().0,
+            result.unwrap().1,
+            self.rva_to_mem_address(binary_name, result.unwrap().2)?,
+        ))
     }
 
     pub fn find_func_start_rva(&self, binary_name: &str, include_rva: u64) -> Result<u64> {
@@ -1424,6 +1447,13 @@ impl<'a> S2BinLib<'a> {
         )
     }
 
+    pub fn find_xref_func_with_string(&self, binary_name: &str, string: &str) -> Result<u64> {
+        self.rva_to_mem_address(
+            binary_name,
+            self.find_xref_func_with_string_rva(binary_name, string)?,
+        )
+    }
+
     pub fn find_vfunc_with_string_rva(
         &self,
         binary_name: &str,
@@ -1439,6 +1469,19 @@ impl<'a> S2BinLib<'a> {
         };
 
         Ok(result.unwrap())
+    }
+
+    pub fn find_vfunc_with_string(
+        &self,
+        binary_name: &str,
+        string: &str,
+    ) -> Result<(&VTableInfo, usize, u64)> {
+        let result = self.find_vfunc_with_string_rva(binary_name, string)?;
+        Ok((
+            result.0,
+            result.1,
+            self.rva_to_mem_address(binary_name, result.2)?,
+        ))
     }
 
     pub fn find_func_with_string_rva(&self, binary_name: &str, string: &str) -> Result<u64> {

@@ -375,6 +375,42 @@ pub struct S2BinLib002VTable {
         include_rva: u64,
         result: *mut *mut c_void,
     ) -> i32,
+    pub find_vfunc_start_rva: unsafe extern "C" fn(
+        this: *mut S2BinLib002,
+        binary_name: *const c_char,
+        include_rva: u64,
+        vtable_name_out: *mut c_char,
+        vtable_name_out_size: usize,
+        vfunc_index_out: *mut usize,
+        vfunc_rva_out: *mut u64,
+    ) -> i32,
+    pub find_vfunc_start: unsafe extern "C" fn(
+        this: *mut S2BinLib002,
+        binary_name: *const c_char,
+        include_rva: u64,
+        vtable_name_out: *mut c_char,
+        vtable_name_out_size: usize,
+        vfunc_index_out: *mut usize,
+        result: *mut *mut c_void,
+    ) -> i32,
+    pub find_xref_func_start_rva: unsafe extern "C" fn(
+        this: *mut S2BinLib002,
+        binary_name: *const c_char,
+        include_rva: u64,
+        result: *mut u64,
+    ) -> i32,
+    pub find_xref_func_start: unsafe extern "C" fn(
+        this: *mut S2BinLib002,
+        binary_name: *const c_char,
+        include_rva: u64,
+        result: *mut *mut c_void,
+    ) -> i32,
+    pub find_xref_func_with_string: unsafe extern "C" fn(
+        this: *mut S2BinLib002,
+        binary_name: *const c_char,
+        string: *const c_char,
+        result: *mut *mut c_void,
+    ) -> i32,
     pub find_xref_func_with_string_rva: unsafe extern "C" fn(
         this: *mut S2BinLib002,
         binary_name: *const c_char,
@@ -389,6 +425,15 @@ pub struct S2BinLib002VTable {
         vtable_name_out_size: usize,
         vfunc_index_out: *mut usize,
         vfunc_rva_out: *mut u64,
+    ) -> i32,
+    pub find_vfunc_with_string: unsafe extern "C" fn(
+        this: *mut S2BinLib002,
+        binary_name: *const c_char,
+        string: *const c_char,
+        vtable_name_out: *mut c_char,
+        vtable_name_out_size: usize,
+        vfunc_index_out: *mut usize,
+        result: *mut *mut c_void,
     ) -> i32,
     pub find_func_with_string_rva: unsafe extern "C" fn(
         this: *mut S2BinLib002,
@@ -462,8 +507,14 @@ static VTABLE: S2BinLib002VTable = S2BinLib002VTable {
     dump_vtables: DumpVtables,
     find_func_start_rva: FindFuncStartRva,
     find_func_start: FindFuncStart,
+    find_vfunc_start_rva: FindVfuncStartRva,
+    find_vfunc_start: FindVfuncStart,
+    find_xref_func_start_rva: FindXrefFuncStartRva,
+    find_xref_func_start: FindXrefFuncStart,
+    find_xref_func_with_string: FindXrefFuncWithString,
     find_xref_func_with_string_rva: FindXrefFuncWithStringRva,
     find_vfunc_with_string_rva: FindVfuncWithStringRva,
+    find_vfunc_with_string: FindVfuncWithString,
     find_func_with_string_rva: FindFuncWithStringRva,
     find_func_with_string: FindFuncWithString,
     find_networkvar_vtable_statechanged_rva: FindNetworkvarVtableStatechangedRva,
@@ -1506,6 +1557,182 @@ unsafe extern "C" fn FindFuncStart(
     }
 }
 
+unsafe extern "C" fn FindVfuncStartRva(
+    this: *mut S2BinLib002,
+    binary_name: *const c_char,
+    include_rva: u64,
+    vtable_name_out: *mut c_char,
+    vtable_name_out_size: usize,
+    vfunc_index_out: *mut usize,
+    vfunc_rva_out: *mut u64,
+) -> i32 {
+    check_null!(
+        this,
+        binary_name,
+        vtable_name_out,
+        vfunc_index_out,
+        vfunc_rva_out
+    );
+    if vtable_name_out_size == 0 {
+        return_error!(-2, "invalid parameter: buffer_size is zero");
+    }
+
+    let binary_name_str = cstr_to_str!(binary_name);
+    let s2binlib = get_s2binlib_mut!(this);
+
+    ensure_binary_loaded!(s2binlib, binary_name_str);
+
+    match s2binlib.find_vfunc_start_rva(binary_name_str, include_rva) {
+        Some((vtable_info, index, rva)) => {
+            let name_bytes = vtable_info.type_name.as_bytes();
+            if name_bytes.len() + 1 > vtable_name_out_size {
+                return_error!(-3, "buffer too small to store vtable name");
+            }
+
+            unsafe {
+                std::ptr::copy_nonoverlapping(
+                    name_bytes.as_ptr(),
+                    vtable_name_out as *mut u8,
+                    name_bytes.len(),
+                );
+                *vtable_name_out.add(name_bytes.len()) = 0;
+            }
+
+            *vfunc_index_out = index;
+            *vfunc_rva_out = rva;
+            0
+        }
+        None => return_error!(-4, "Pattern not found or operation failed"),
+    }
+}
+
+unsafe extern "C" fn FindVfuncStart(
+    this: *mut S2BinLib002,
+    binary_name: *const c_char,
+    include_rva: u64,
+    vtable_name_out: *mut c_char,
+    vtable_name_out_size: usize,
+    vfunc_index_out: *mut usize,
+    result: *mut *mut c_void,
+) -> i32 {
+    check_null!(
+        this,
+        binary_name,
+        vtable_name_out,
+        vfunc_index_out,
+        result
+    );
+    if vtable_name_out_size == 0 {
+        return_error!(-2, "invalid parameter: buffer_size is zero");
+    }
+
+    let binary_name_str = cstr_to_str!(binary_name);
+    let s2binlib = get_s2binlib_mut!(this);
+
+    ensure_binary_loaded!(s2binlib, binary_name_str);
+
+    match s2binlib.find_vfunc_start_rva(binary_name_str, include_rva) {
+        Some((vtable_info, index, rva)) => {
+            let name_bytes = vtable_info.type_name.as_bytes();
+            if name_bytes.len() + 1 > vtable_name_out_size {
+                return_error!(-3, "buffer too small to store vtable name");
+            }
+
+            unsafe {
+                std::ptr::copy_nonoverlapping(
+                    name_bytes.as_ptr(),
+                    vtable_name_out as *mut u8,
+                    name_bytes.len(),
+                );
+                *vtable_name_out.add(name_bytes.len()) = 0;
+            }
+
+            *vfunc_index_out = index;
+            match s2binlib.rva_to_mem_address(binary_name_str, rva) {
+                Ok(addr) => {
+                    *result = addr as *mut c_void;
+                    0
+                }
+                Err(_) => return_error!(-4, "Pattern not found or operation failed"),
+            }
+        }
+        None => return_error!(-4, "Pattern not found or operation failed"),
+    }
+}
+
+unsafe extern "C" fn FindXrefFuncStartRva(
+    this: *mut S2BinLib002,
+    binary_name: *const c_char,
+    include_rva: u64,
+    result: *mut u64,
+) -> i32 {
+    check_null!(this, binary_name, result);
+
+    let binary_name_str = cstr_to_str!(binary_name);
+    let s2binlib = get_s2binlib_mut!(this);
+
+    ensure_binary_loaded!(s2binlib, binary_name_str);
+
+    match s2binlib.find_xref_func_start_rva(binary_name_str, include_rva) {
+        Ok(addr) => {
+            *result = addr;
+            0
+        }
+        Err(_) => return_error!(-4, "Pattern not found or operation failed"),
+    }
+}
+
+unsafe extern "C" fn FindXrefFuncStart(
+    this: *mut S2BinLib002,
+    binary_name: *const c_char,
+    include_rva: u64,
+    result: *mut *mut c_void,
+) -> i32 {
+    check_null!(this, binary_name, result);
+
+    let binary_name_str = cstr_to_str!(binary_name);
+    let s2binlib = get_s2binlib_mut!(this);
+
+    ensure_binary_loaded!(s2binlib, binary_name_str);
+
+    match s2binlib.find_xref_func_start_rva(binary_name_str, include_rva) {
+        Ok(addr) => match s2binlib.rva_to_mem_address(binary_name_str, addr) {
+            Ok(mem) => {
+                *result = mem as *mut c_void;
+                0
+            }
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
+        },
+        Err(_) => return_error!(-4, "Pattern not found or operation failed"),
+    }
+}
+
+unsafe extern "C" fn FindXrefFuncWithString(
+    this: *mut S2BinLib002,
+    binary_name: *const c_char,
+    string: *const c_char,
+    result: *mut *mut c_void,
+) -> i32 {
+    check_null!(this, binary_name, string, result);
+
+    let binary_name_str = cstr_to_str!(binary_name);
+    let string_str = cstr_to_str!(string);
+    let s2binlib = get_s2binlib_mut!(this);
+
+    ensure_binary_loaded!(s2binlib, binary_name_str);
+
+    match s2binlib.find_xref_func_with_string_rva(binary_name_str, string_str) {
+        Ok(rva) => match s2binlib.rva_to_mem_address(binary_name_str, rva) {
+            Ok(mem) => {
+                *result = mem as *mut c_void;
+                0
+            }
+            Err(_) => return_error!(-4, "Pattern not found or operation failed"),
+        },
+        Err(_) => return_error!(-4, "Pattern not found or operation failed"),
+    }
+}
+
 unsafe extern "C" fn FindXrefFuncWithStringRva(
     this: *mut S2BinLib002,
     binary_name: *const c_char,
@@ -1575,6 +1802,63 @@ unsafe extern "C" fn FindVfuncWithStringRva(
             *vfunc_index_out = index;
             *vfunc_rva_out = rva;
             0
+        }
+        Err(_) => return_error!(-4, "Pattern not found or operation failed"),
+    }
+}
+
+unsafe extern "C" fn FindVfuncWithString(
+    this: *mut S2BinLib002,
+    binary_name: *const c_char,
+    string: *const c_char,
+    vtable_name_out: *mut c_char,
+    vtable_name_out_size: usize,
+    vfunc_index_out: *mut usize,
+    result: *mut *mut c_void,
+) -> i32 {
+    check_null!(
+        this,
+        binary_name,
+        string,
+        vtable_name_out,
+        vfunc_index_out,
+        result
+    );
+    if vtable_name_out_size == 0 {
+        return_error!(-2, "invalid parameter: buffer_size is zero");
+    }
+
+    let binary_name_str = cstr_to_str!(binary_name);
+    let string_str = cstr_to_str!(string);
+    let s2binlib = get_s2binlib_mut!(this);
+
+    ensure_binary_loaded!(s2binlib, binary_name_str);
+
+    match s2binlib.find_vfunc_with_string_rva(binary_name_str, string_str) {
+        Ok((vtable_info, index, rva)) => {
+            let name_bytes = vtable_info.type_name.as_bytes();
+            if name_bytes.len() + 1 > vtable_name_out_size {
+                return_error!(-3, "buffer too small to store vtable name");
+            }
+
+            unsafe {
+                std::ptr::copy_nonoverlapping(
+                    name_bytes.as_ptr(),
+                    vtable_name_out as *mut u8,
+                    name_bytes.len(),
+                );
+                *vtable_name_out.add(name_bytes.len()) = 0;
+            }
+
+            *vfunc_index_out = index;
+
+            match s2binlib.rva_to_mem_address(binary_name_str, rva) {
+                Ok(addr) => {
+                    *result = addr as *mut c_void;
+                    0
+                }
+                Err(_) => return_error!(-4, "Pattern not found or operation failed"),
+            }
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }

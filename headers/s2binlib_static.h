@@ -57,20 +57,20 @@ typedef void (*PatternScanCallback)(size_t index, void* address, void* user_data
 // Lifecycle Functions
 // ============================================================================
 
-/// Initialize the global S2BinLib001 instance with auto-detected OS
+/// Initialize the global S2BinLib002 instance with auto-detected OS
 /// @param game_path Path to the game directory (null-terminated C string)
 /// @param game_type Game type identifier (null-terminated C string)
 /// @return 0 on success, negative error code on failure
 int s2binlib_initialize(const char* game_path, const char* game_type);
 
-/// Initialize the global S2BinLib001 instance with explicit OS
+/// Initialize the global S2BinLib002 instance with explicit OS
 /// @param game_path Path to the game directory (null-terminated C string)
 /// @param game_type Game type identifier (null-terminated C string)
 /// @param os Operating system ("windows" or "linux") (null-terminated C string)
 /// @return 0 on success, negative error code on failure
 int s2binlib_initialize_with_os(const char* game_path, const char* game_type, const char* os);
 
-/// Destroy the global S2BinLib001 instance
+/// Destroy the global S2BinLib002 instance
 /// @return 0 on success, negative error code on failure
 int s2binlib_destroy(void);
 
@@ -404,6 +404,121 @@ int s2binlib_follow_xref_rva_to_mem(const char* binary_name, uint64_t rva, void*
 /// @param target_rva_out Pointer to store the target RVA
 /// @return 0 on success, negative error code on failure
 int s2binlib_follow_xref_rva_to_rva(const char* binary_name, uint64_t rva, uint64_t* target_rva_out);
+
+// ============================================================================
+// Function Discovery Helpers
+// ============================================================================
+
+/// Find the virtual function start that contains the given RVA (returns name/index/RVA)
+/// @param binary_name Name of the binary
+/// @param include_rva RVA inside the virtual function
+/// @param vtable_name_out Buffer to store the vtable name
+/// @param vtable_name_out_size Size of vtable_name_out buffer
+/// @param vfunc_index_out Pointer to store vfunc index
+/// @param vfunc_rva_out Pointer to store vfunc RVA
+/// @return 0 on success, negative error code on failure
+int s2binlib_find_vfunc_start_rva(
+    const char* binary_name,
+    uint64_t include_rva,
+    char* vtable_name_out,
+    size_t vtable_name_out_size,
+    size_t* vfunc_index_out,
+    uint64_t* vfunc_rva_out);
+
+/// Find the virtual function start that contains the given RVA (returns name/index/memory address)
+/// @param binary_name Name of the binary
+/// @param include_rva RVA inside the virtual function
+/// @param vtable_name_out Buffer to store the vtable name
+/// @param vtable_name_out_size Size of vtable_name_out buffer
+/// @param vfunc_index_out Pointer to store vfunc index
+/// @param result Pointer to store the function start memory address
+/// @return 0 on success, negative error code on failure
+int s2binlib_find_vfunc_start(
+    const char* binary_name,
+    uint64_t include_rva,
+    char* vtable_name_out,
+    size_t vtable_name_out_size,
+    size_t* vfunc_index_out,
+    void** result);
+
+/// Dump and cache all vtables in a binary
+/// @param binary_name Name of the binary to analyze
+/// @return 0 on success, negative error code on failure
+int s2binlib_dump_vtables(const char* binary_name);
+
+/// Find the function start RVA containing the given RVA
+/// @param binary_name Name of the binary
+/// @param include_rva RVA inside the function
+/// @param result Pointer to store the function start RVA
+/// @return 0 on success, negative error code on failure
+int s2binlib_find_func_start_rva(const char* binary_name, uint64_t include_rva, uint64_t* result);
+
+/// Find the function start memory address containing the given RVA
+/// @param binary_name Name of the binary
+/// @param include_rva RVA inside the function
+/// @param result Pointer to store the function start memory address
+/// @return 0 on success, negative error code on failure
+int s2binlib_find_func_start(const char* binary_name, uint64_t include_rva, void** result);
+
+/// Find function start RVA via a unique string reference
+/// @param binary_name Name of the binary
+/// @param string String to search for
+/// @param result Pointer to store the function start RVA
+/// @return 0 on success, negative error code on failure
+int s2binlib_find_xref_func_with_string_rva(const char* binary_name, const char* string, uint64_t* result);
+
+/// Find function start memory address via a unique string reference (xref-based)
+/// @param binary_name Name of the binary
+/// @param string String to search for
+/// @param result Pointer to store the function start memory address
+/// @return 0 on success, negative error code on failure
+int s2binlib_find_xref_func_with_string(const char* binary_name, const char* string, void** result);
+
+/// Find virtual function info via a unique string reference
+/// @param binary_name Name of the binary
+/// @param string String to search for
+/// @param vtable_name_out Buffer to store the vtable name
+/// @param vtable_name_out_size Size of vtable_name_out buffer
+/// @param vfunc_index_out Pointer to store vfunc index
+/// @param vfunc_rva_out Pointer to store vfunc RVA
+/// @return 0 on success, negative error code on failure
+int s2binlib_find_vfunc_with_string_rva(
+    const char* binary_name,
+    const char* string,
+    char* vtable_name_out,
+    size_t vtable_name_out_size,
+    size_t* vfunc_index_out,
+    uint64_t* vfunc_rva_out);
+
+/// Find virtual function info via a unique string reference (memory address)
+/// @param binary_name Name of the binary
+/// @param string String to search for
+/// @param vtable_name_out Buffer to store the vtable name
+/// @param vtable_name_out_size Size of vtable_name_out buffer
+/// @param vfunc_index_out Pointer to store vfunc index
+/// @param result Pointer to store the function start memory address
+/// @return 0 on success, negative error code on failure
+int s2binlib_find_vfunc_with_string(
+    const char* binary_name,
+    const char* string,
+    char* vtable_name_out,
+    size_t vtable_name_out_size,
+    size_t* vfunc_index_out,
+    void** result);
+
+/// Find function start RVA via a unique string reference
+/// @param binary_name Name of the binary
+/// @param string String to search for
+/// @param result Pointer to store the function start RVA
+/// @return 0 on success, negative error code on failure
+int s2binlib_find_func_with_string_rva(const char* binary_name, const char* string, uint64_t* result);
+
+/// Find function start memory address via a unique string reference
+/// @param binary_name Name of the binary
+/// @param string String to search for
+/// @param result Pointer to store the function start memory address
+/// @return 0 on success, negative error code on failure
+int s2binlib_find_func_with_string(const char* binary_name, const char* string, void** result);
 
 // ============================================================================
 // JIT and Trampoline Functions
