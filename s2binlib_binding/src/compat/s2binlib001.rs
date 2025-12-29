@@ -427,7 +427,7 @@ unsafe extern "C" fn Initialize(
     this: *mut S2BinLib001,
     game_path: *const c_char,
     game_type: *const c_char,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, game_path, game_type);
 
     let game_path_str = cstr_to_str!(game_path);
@@ -443,14 +443,14 @@ unsafe extern "C" fn Initialize(
 
     (*this).s2binlib = Some(S2BinLib::new(game_path_str, game_type_str, os_str));
     0
-}
+}}
 
 unsafe extern "C" fn InitializeWithOs(
     this: *mut S2BinLib001,
     game_path: *const c_char,
     game_type: *const c_char,
     os: *const c_char,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, game_path, game_type, os);
 
     let game_path_str = cstr_to_str!(game_path);
@@ -459,14 +459,14 @@ unsafe extern "C" fn InitializeWithOs(
 
     (*this).s2binlib = Some(S2BinLib::new(game_path_str, game_type_str, os_str));
     0
-}
+}}
 
 unsafe extern "C" fn PatternScan(
     this: *mut S2BinLib001,
     binary_name: *const c_char,
     pattern: *const c_char,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, pattern, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -482,14 +482,14 @@ unsafe extern "C" fn PatternScan(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FindVtable(
     this: *mut S2BinLib001,
     binary_name: *const c_char,
     vtable_name: *const c_char,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, vtable_name, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -505,14 +505,14 @@ unsafe extern "C" fn FindVtable(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FindSymbol(
     this: *mut S2BinLib001,
     binary_name: *const c_char,
     symbol_name: *const c_char,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, symbol_name, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -528,7 +528,7 @@ unsafe extern "C" fn FindSymbol(
         }
         Err(_) => return_error!(-3, "Failed to load binary or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn SetModuleBaseFromPointer(
     this: *mut S2BinLib001,
@@ -580,7 +580,7 @@ unsafe extern "C" fn GetModuleBaseAddress(
     this: *const S2BinLib001,
     binary_name: *const c_char,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -593,7 +593,7 @@ unsafe extern "C" fn GetModuleBaseAddress(
         }
         Err(_) => return_error!(-3, "Failed to load binary or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn IsBinaryLoaded(this: *const S2BinLib001, binary_name: *const c_char) -> i32 {
     check_null!(this, binary_name);
@@ -623,7 +623,7 @@ unsafe extern "C" fn GetBinaryPath(
     binary_name: *const c_char,
     buffer: *mut c_char,
     buffer_size: usize,
-) -> i32 {
+) -> i32 { unsafe {
     if this.is_null() || binary_name.is_null() || buffer.is_null() || buffer_size == 0 {
         return -2;
     }
@@ -646,14 +646,14 @@ unsafe extern "C" fn GetBinaryPath(
     *(buffer.add(path_bytes.len())) = 0;
 
     0
-}
+}}
 
 unsafe extern "C" fn FindVtableRva(
     this: *mut S2BinLib001,
     binary_name: *const c_char,
     vtable_name: *const c_char,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, vtable_name, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -669,14 +669,14 @@ unsafe extern "C" fn FindVtableRva(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FindVtableMangledRva(
     this: *mut S2BinLib001,
     binary_name: *const c_char,
     vtable_name: *const c_char,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, vtable_name, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -692,14 +692,14 @@ unsafe extern "C" fn FindVtableMangledRva(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FindVtableMangled(
     this: *mut S2BinLib001,
     binary_name: *const c_char,
     vtable_name: *const c_char,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, vtable_name, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -715,7 +715,7 @@ unsafe extern "C" fn FindVtableMangled(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FindVtableNested2Rva(
     this: *mut S2BinLib001,
@@ -723,7 +723,7 @@ unsafe extern "C" fn FindVtableNested2Rva(
     class1_name: *const c_char,
     class2_name: *const c_char,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, class1_name, class2_name, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -740,7 +740,7 @@ unsafe extern "C" fn FindVtableNested2Rva(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FindVtableNested2(
     this: *mut S2BinLib001,
@@ -748,7 +748,7 @@ unsafe extern "C" fn FindVtableNested2(
     class1_name: *const c_char,
     class2_name: *const c_char,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, class1_name, class2_name, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -765,14 +765,14 @@ unsafe extern "C" fn FindVtableNested2(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn GetVtableVfuncCount(
     this: *mut S2BinLib001,
     binary_name: *const c_char,
     vtable_name: *const c_char,
     result: *mut usize,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, vtable_name, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -788,14 +788,14 @@ unsafe extern "C" fn GetVtableVfuncCount(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn GetVtableVfuncCountByRva(
     this: *mut S2BinLib001,
     binary_name: *const c_char,
     vtable_rva: u64,
     result: *mut usize,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -810,14 +810,14 @@ unsafe extern "C" fn GetVtableVfuncCountByRva(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn PatternScanRva(
     this: *mut S2BinLib001,
     binary_name: *const c_char,
     pattern: *const c_char,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, pattern, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -833,7 +833,7 @@ unsafe extern "C" fn PatternScanRva(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn PatternScanAllRva(
     this: *mut S2BinLib001,
@@ -841,7 +841,7 @@ unsafe extern "C" fn PatternScanAllRva(
     pattern: *const c_char,
     callback: PatternScanCallback,
     user_data: *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, pattern);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -857,7 +857,7 @@ unsafe extern "C" fn PatternScanAllRva(
         Ok(_) => 0,
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn PatternScanAll(
     this: *mut S2BinLib001,
@@ -865,7 +865,7 @@ unsafe extern "C" fn PatternScanAll(
     pattern: *const c_char,
     callback: PatternScanCallback,
     user_data: *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, pattern);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -881,14 +881,14 @@ unsafe extern "C" fn PatternScanAll(
         Ok(_) => 0,
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FindExportRva(
     this: *mut S2BinLib001,
     binary_name: *const c_char,
     export_name: *const c_char,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, export_name, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -904,14 +904,14 @@ unsafe extern "C" fn FindExportRva(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FindExport(
     this: *mut S2BinLib001,
     binary_name: *const c_char,
     export_name: *const c_char,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, export_name, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -927,14 +927,14 @@ unsafe extern "C" fn FindExport(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FindSymbolRva(
     this: *mut S2BinLib001,
     binary_name: *const c_char,
     symbol_name: *const c_char,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, symbol_name, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -950,7 +950,7 @@ unsafe extern "C" fn FindSymbolRva(
         }
         Err(_) => return_error!(-3, "Failed to load binary or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn ReadByFileOffset(
     this: *mut S2BinLib001,
@@ -1045,7 +1045,7 @@ unsafe extern "C" fn FindVfuncByVtbnameRva(
     vtable_name: *const c_char,
     vfunc_index: usize,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, vtable_name, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -1061,7 +1061,7 @@ unsafe extern "C" fn FindVfuncByVtbnameRva(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FindVfuncByVtbname(
     this: *mut S2BinLib001,
@@ -1069,7 +1069,7 @@ unsafe extern "C" fn FindVfuncByVtbname(
     vtable_name: *const c_char,
     vfunc_index: usize,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, vtable_name, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -1085,14 +1085,14 @@ unsafe extern "C" fn FindVfuncByVtbname(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FindVfuncByVtbptrRva(
     this: *const S2BinLib001,
     vtable_ptr: *mut c_void,
     vfunc_index: usize,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, result);
 
     let s2binlib = get_s2binlib!(this);
@@ -1104,14 +1104,14 @@ unsafe extern "C" fn FindVfuncByVtbptrRva(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FindVfuncByVtbptr(
     this: *const S2BinLib001,
     vtable_ptr: *mut c_void,
     vfunc_index: usize,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, result);
 
     let s2binlib = get_s2binlib!(this);
@@ -1123,7 +1123,7 @@ unsafe extern "C" fn FindVfuncByVtbptr(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn GetObjectPtrVtableName(
     this: *const S2BinLib001,
@@ -1197,7 +1197,7 @@ unsafe extern "C" fn FindStringRva(
     binary_name: *const c_char,
     string: *const c_char,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, string, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -1213,14 +1213,14 @@ unsafe extern "C" fn FindStringRva(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FindString(
     this: *mut S2BinLib001,
     binary_name: *const c_char,
     string: *const c_char,
     result: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, string, result);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -1236,7 +1236,7 @@ unsafe extern "C" fn FindString(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn DumpXrefs(this: *mut S2BinLib001, binary_name: *const c_char) -> i32 {
     check_null!(this, binary_name);
@@ -1324,7 +1324,7 @@ unsafe extern "C" fn InstallTrampoline(
     this: *mut S2BinLib001,
     mem_address: *mut c_void,
     trampoline_address_out: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this);
 
     let s2binlib = get_s2binlib_mut!(this);
@@ -1336,13 +1336,13 @@ unsafe extern "C" fn InstallTrampoline(
         }
         Err(_) => return_error!(-3, "Failed to install trampoline"),
     }
-}
+}}
 
 unsafe extern "C" fn FollowXrefMemToMem(
     this: *const S2BinLib001,
     mem_address: *const c_void,
     target_address_out: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, mem_address, target_address_out);
 
     let s2binlib = get_s2binlib!(this);
@@ -1354,14 +1354,14 @@ unsafe extern "C" fn FollowXrefMemToMem(
         }
         Err(_) => return_error!(-3, "No valid xref found or invalid instruction"),
     }
-}
+}}
 
 unsafe extern "C" fn FollowXrefRvaToMem(
     this: *mut S2BinLib001,
     binary_name: *const c_char,
     rva: u64,
     target_address_out: *mut *mut c_void,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, target_address_out);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -1376,14 +1376,14 @@ unsafe extern "C" fn FollowXrefRvaToMem(
         }
         Err(_) => return_error!(-3, "Failed to load binary or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FollowXrefRvaToRva(
     this: *mut S2BinLib001,
     binary_name: *const c_char,
     rva: u64,
     target_rva_out: *mut u64,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, binary_name, target_rva_out);
 
     let binary_name_str = cstr_to_str!(binary_name);
@@ -1398,13 +1398,13 @@ unsafe extern "C" fn FollowXrefRvaToRva(
         }
         Err(_) => return_error!(-3, "Failed to load binary or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FindNetworkvarVtableStatechangedRva(
     this: *const S2BinLib001,
     vtable_rva: u64,
     result: *mut u64,
-) -> i32 {
+) -> i32 { unsafe {
     check_null!(this, result);
 
     let s2binlib = get_s2binlib!(this);
@@ -1416,7 +1416,7 @@ unsafe extern "C" fn FindNetworkvarVtableStatechangedRva(
         }
         Err(_) => return_error!(-4, "Pattern not found or operation failed"),
     }
-}
+}}
 
 unsafe extern "C" fn FindNetworkvarVtableStatechanged(
     this: *const S2BinLib001,
